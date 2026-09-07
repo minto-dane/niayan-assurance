@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "roles": [
+    {
+      "role": "pkgcore-maintainers",
+      "scope": [
+        "pkgcore"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "statecore-maintainers",
+      "scope": [
+        "statecore"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "assurance-maintainers",
+      "scope": [
+        "assurance"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "independent-security-review",
+      "scope": [
+        "authentication",
+        "persistence",
+        "fencing",
+        "release"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "site-qualification",
+      "scope": [
+        "hardware",
+        "backup",
+        "operations"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "controlcore-maintainers",
+      "scope": [
+        "controlcore"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "configcore-maintainers",
+      "scope": [
+        "configcore"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "distribution-maintainers",
+      "scope": [
+        "distribution"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "resolvercore-maintainers",
+      "scope": [
+        "resolvercore",
+        "native-projection-contracts"
+      ],
+      "assigned_people": []
+    },
+    {
+      "role": "capsulecore-maintainers",
+      "scope": [
+        "capsulecore",
+        "application-confinement-contracts"
+      ],
+      "assigned_people": []
+    }
+  ],
+  "unassigned_is_approved": false
+}

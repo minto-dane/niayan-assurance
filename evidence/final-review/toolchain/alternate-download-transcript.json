@@ -1,0 +1,19 @@
+{
+  "kind": "tool-response-transcript",
+  "not_a_shell_probe": true,
+  "attempts": [
+    {
+      "tool": "container.download",
+      "url": "https://api.github.com/repos/alire-project/GNAT-FSF-builds/releases/tags/gnatprove-16.1.0-1",
+      "result": "url not viewed; later web open failed",
+      "artifact_received": false
+    },
+    {
+      "tool": "container.download",
+      "url": "https://github.com/alire-project/GNAT-FSF-builds/releases/tag/gnatprove-16.1.0-1",
+      "result": "ERROR: download failed",
+      "artifact_received": false
+    }
+  ],
+  "installed": false
+}

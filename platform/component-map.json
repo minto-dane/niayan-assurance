@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "edition": "distro-foundation",
+  "bootable_image_produced": false,
+  "production_qualified": false,
+  "platform": {
+    "kernel": "supported distribution-signed stable or longterm kernel",
+    "architecture": "Linux x86_64",
+    "base": "one selected supported RPM distribution release; do not mix vendors",
+    "mutable_root": true,
+    "pid1": "systemd",
+    "network_manager": "NetworkManager",
+    "cgroup": "v2",
+    "lsm_profile": "SELinux enforcing; unknown does not pass"
+  },
+  "components": [
+    {
+      "name": "host_admission",
+      "implementation": "statecore/src/state_host_admission.*",
+      "runtime": "statecore/app/hostctl.adb",
+      "state": "implemented source; local observations only"
+    },
+    {
+      "name": "service_catalogue",
+      "implementation": "statecore/src/state_service_catalogue.*",
+      "state": "validated planner and unit renderer; site activation adapter required"
+    },
+    {
+      "name": "network_transaction",
+      "implementation": "statecore/src/state_network_change.*",
+      "runtime": "statecore/runtime/state_network_controller.*,state_nm_checkpoint.*",
+      "state": "durable controller and actual checkpoint calls; site policy and authenticated observation required"
+    },
+    {
+      "name": "boot_assessment",
+      "implementation": "statecore/src/state_boot_assessment.*",
+      "state": "assessment predicate; boot image writer, systemd-boot/grub integration and attestation not supplied"
+    },
+    {
+      "name": "system_composition",
+      "implementation": "pkgcore/src/pkg_system_composition.*",
+      "state": "authenticated composition checker; not whole-native-RPMDB executor"
+    },
+    {
+      "name": "qualification",
+      "implementation": "assurance/src/mc_qualification.*,runtime/mc_qualification_auth.*",
+      "state": "signature verifier bound to exact subjects; no real qualifying attestations supplied"
+    },
+    {
+      "name": "bootloader_and_recovery_image",
+      "implementation": "reuse signed distro shim/GRUB or qualified systemd-boot chain",
+      "state": "integration required"
+    },
+    {
+      "name": "accounts_and_credentials",
+      "implementation": "reuse NSS/PAM and site secret provider",
+      "state": "provisioning, rotation and policy adapter required; no fixture trust"
+    },
+    {
+      "name": "audit_and_diagnostics",
+      "implementation": "reuse auditd/journald/rasdaemon/kdump with restricted external retention",
+      "state": "site retention, redaction and crash-dump access policy required"
+    },
+    {
+      "name": "cluster_and_fencing",
+      "implementation": "existing statecore + Pacemaker/Corosync + independent fencing",
+      "state": "hardware and data-path integration and partition testing required"
+    },
+    {
+      "name": "backup_and_data",
+      "implementation": "existing admission/retention policy + application-specific backup engine",
+      "state": "restore execution and measured recovery tests required"
+    },
+    {
+      "name": "installer_and_repository",
+      "implementation": "existing distribution installer and signed binary repository",
+      "state": "custom ISO, native root/RPMDB migration, release service not completed"
+    }
+  ],
+  "forbidden_defaults": [
+    "disable_secure_boot",
+    "disable_tls_verification",
+    "disable_lsm",
+    "disable_audit",
+    "automatic_infinite_retry",
+    "automatic_fencing_success",
+    "auto_enroll_test_keys",
+    "concurrent_uncoordinated_RPMDB_writers"
+  ]
+}

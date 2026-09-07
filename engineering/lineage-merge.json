@@ -1,0 +1,850 @@
+{
+  "format": 1,
+  "source_archive": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+  "source_sha256": "0f7abaee8a747ddfe2f9d0700870d1c7190a39b924b40d8b7a2a3b726db8fd07",
+  "restored": [
+    {
+      "path": "assurance/app/platformctl.adb",
+      "sha256": "54f8a8e09dcd4778ddd309d8eff6b0410830d05b6b7ed9a2dbf176518ab1ffb1",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/app/platformctl.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/runtime/mc_fault_auth.adb",
+      "sha256": "88fce0bbb7ae934d1fc1f52aebd0724f3729d7f90258a331f4b4ef2db4a6fd94",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/runtime/mc_fault_auth.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/runtime/mc_fault_auth.ads",
+      "sha256": "ab45134cf7e2755b69dd1baa9fd4cff73a5abd3832b2788f517a3b50e21d83f7",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/runtime/mc_fault_auth.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_accounting.adb",
+      "sha256": "c1c25dfe692e44362c265ff41deda24dfd8648feba0ad94c9db823871e3c797d",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_accounting.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_accounting.ads",
+      "sha256": "b291defe00d07a3c48daaae458b33ed31f21e1183f1f041762b7f10fd2d6e051",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_accounting.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_attestation.adb",
+      "sha256": "16782519f3f00fb8f7dac4c051a6dcfbeeab9b7d62800fdcfc1eec182629862b",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_attestation.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_attestation.ads",
+      "sha256": "b531a1a64174bd34defa48c7a963f5ad8e4adb785a6ea27e448b049585c8ab31",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_attestation.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_breakglass.adb",
+      "sha256": "b225535b081cd883d8954deb84b6e69733bca4d3867900353f3c0668eaf7fa5d",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_breakglass.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_breakglass.ads",
+      "sha256": "224ab28f3f9d1d0a1c8f0d536e16e17bce0c185fe03a931e410728d2815a282a",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_breakglass.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_commissioning.adb",
+      "sha256": "eaa0f8d77e8c0f38718fd8ed3a317c592972ee02fdf1aa0e0bb26dd4ad3ae936",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_commissioning.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_commissioning.ads",
+      "sha256": "3cf7c192cabde385d588e98613755c6cdea179d782fb7bde52d7b65159805332",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_commissioning.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_diagnostic_bundle.adb",
+      "sha256": "3b8ecb0d7197420a135d13bca56d85eea8081e40cd736d884e6e53a3fbd590ab",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_diagnostic_bundle.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_diagnostic_bundle.ads",
+      "sha256": "3043930a771280b13046c2020390acafe2f62f2b335caddc0917945471e33f09",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_diagnostic_bundle.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_fault_report.adb",
+      "sha256": "6eb0cfa6bcdd382e4c0e5f7d20cf345545449e5220c29493f052e7da5284c61c",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_fault_report.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_fault_report.ads",
+      "sha256": "801ddf752b92ecb55fc638c5c711bc448922a0824f0aa412c6c54ecb913c5d5e",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_fault_report.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_faults.adb",
+      "sha256": "2bb4cce922a800e23de292830d308c6fd7a0c970ea22f57bbe4c8fa948bb6a6b",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_faults.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_faults.ads",
+      "sha256": "287a49d397c868ad71dd84a7ecee28559ed29a5821554d57cabd1a50591fc4b1",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_faults.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_generation.adb",
+      "sha256": "6dcbb9a71640f77c605d6c4ddd11fd590886872f1d393c52b3a68e5802fdfbc3",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_generation.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_generation.ads",
+      "sha256": "ec0bc20872c67ae86ed064f5047ece7b81cad772f3e60918fdc4d75d172729a6",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_generation.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_incidents.adb",
+      "sha256": "a8ad7864c98d2db5f9a68179e51d9b79c25bead4937cab8ca267de3e169c3d36",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_incidents.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_incidents.ads",
+      "sha256": "1df793c982b59650eddfd0b4078f8fa2853a322c2318b50e2d381d7f13d6e5cc",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_incidents.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_maintenance.adb",
+      "sha256": "56ff8534859213ac93b57780fcc8f7eb1c297980e9cb9bc6717ce10710b6046e",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_maintenance.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_maintenance.ads",
+      "sha256": "efd9440d42b0a997a9b26727aa61baaab00d1ba1b1eabe10fe9ff1e78ee26408",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_maintenance.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_platform_profile.adb",
+      "sha256": "0ab187ac3a8cf706dc97efe5c6e030ba46461ba7aac52f09f660c02b0676d5d0",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_platform_profile.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_platform_profile.ads",
+      "sha256": "d4e4a19c2874efb8efbb501c416cc45092be2428a9d8469e347e73a3f7430094",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_platform_profile.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_system_baseline.adb",
+      "sha256": "471c1ccc08b552cdbf2e6e319a2cac4f7db4d188c55b84185b3940f8a8be89d9",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_system_baseline.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/src/mc_system_baseline.ads",
+      "sha256": "90229e5bb01a6a985b6ca5395bc66a01ba3b85bf53bd35f06d08e7bda7af2845",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/src/mc_system_baseline.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "assurance/tests/run_platform_assurance_tests.adb",
+      "sha256": "aa4114d0f302d0e61614316ba52831fabb4e925b1752048293042c540f870359",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/assurance/tests/run_platform_assurance_tests.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_acceptance.adb",
+      "sha256": "9bb0b307008761ad55c1ca00d929e54efa872ca031bc0a5843cb2175af702697",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_acceptance.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_acceptance.ads",
+      "sha256": "4e547d5ae345c9143e2c9fe0feeab9b0ed3b2be7c9281363a8d45cd1471042bf",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_acceptance.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_activation.adb",
+      "sha256": "c5ecef60f1c0f2f378cc554d62a6ceec76e8ed0d28f26f230107d69acf3a3fca",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_activation.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_activation.ads",
+      "sha256": "efec8f8c60d990f7e39415edf0cb81b84bd16d8496335a80104a29bba79035ed",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_activation.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_advisory.adb",
+      "sha256": "8f52748bf8c354f5240fbe579b2504517f648c766ac579fe3f4883b8f7535f7b",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_advisory.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_advisory.ads",
+      "sha256": "8ed0b5e8c1d70234513a102e6de909e3ba3e67548cdcc0fa28160c9374c8b553",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_advisory.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_change_set.adb",
+      "sha256": "8a7859c69399100679eb7c5e131828c4ca28242936e78d5e07dd6ea20cc61caf",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_change_set.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_change_set.ads",
+      "sha256": "7a259adbb816559506721a37c681a632a2f965001744471430b06a09b5032c59",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_change_set.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_exposure_policy.adb",
+      "sha256": "24611ce9d45be802d8ba4154274e13e9fb9238f53a63fedd756a1ce6368c2ff1",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_exposure_policy.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_exposure_policy.ads",
+      "sha256": "04fc760c7af11f6ae03c94a047b26d2f86038f1688863104ff09853a2fac2a02",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_exposure_policy.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_holds.adb",
+      "sha256": "294a1036212c9351827badaeff94120059aaa7e0d588c55886b1a9727f10e0ae",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_holds.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_holds.ads",
+      "sha256": "4abf4ce8640d709df5d083479d6360f388af4bb38fc69fc38a3273aab5351d3e",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_holds.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_incorporation.adb",
+      "sha256": "978edc51d474ffe686edddf9b9a4a17f21096c433ead583decc59917854bd71d",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_incorporation.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_incorporation.ads",
+      "sha256": "6721193657493a6a246ed12f5e8a45ebca68028b39681e2571c5a73362bb585d",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_incorporation.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_maintenance_bundle.adb",
+      "sha256": "ebe97ec3d142ad9c7fa3c2fc4376ecd8578e0882e722cedde9902e43cb0aedcc",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_maintenance_bundle.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_maintenance_bundle.ads",
+      "sha256": "4604b9252948866d12ace0a4e5f0da7053afc40fa3b6e67fd03ea798ec6e4bc6",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_maintenance_bundle.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_provenance.adb",
+      "sha256": "54fc59bb12fc16c2fe332b92a674346c088dc6302e9ab806135a9f854edbb7cc",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_provenance.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_provenance.ads",
+      "sha256": "f58dbac0b34841bd8134a52d06ed576b1edeb80a1f1013c980e5ce7635ee4b85",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_provenance.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_repository_trust.adb",
+      "sha256": "d8630c82375d8a320eed21bef4597ffdcdf7d26835670c99b9f6efb3899f16a3",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_repository_trust.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_repository_trust.ads",
+      "sha256": "ee0ee84a65b845cf169525af56f0833b8d42e322e9c3a44e4e8077a8e0f892d1",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_repository_trust.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_rollback_contract.adb",
+      "sha256": "d33f3e38731be47785ce5bdb5aa8db90992667027215902aed79e358224faaf9",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_rollback_contract.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/src/pkg_rollback_contract.ads",
+      "sha256": "9ca07f65e5b6971d829a9f79c73bde0e486d993aa0685d63cd188875382a5956",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/src/pkg_rollback_contract.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "pkgcore/tests/run_enterprise_pkg_tests.adb",
+      "sha256": "4b25d46c384138a52a0c8367147f75047860a558d86df5ba6a9e0867e19a48e1",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/pkgcore/tests/run_enterprise_pkg_tests.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_authority.adb",
+      "sha256": "d14736a1a1c64be5f30d54d438aa3eaa90cafd186b75072f81ec19fb767e3568",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_authority.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_authority.ads",
+      "sha256": "6f162d78e08140a7bdaf2d8cbd50376a9bf6ab0904dbbd5fdb7467a19f355663",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_authority.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_boot_acceptance.adb",
+      "sha256": "7919a976cd17f613f8dbdbb3d2d7339a9ac9e0a9a4c426402fc06731626ecd59",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_boot_acceptance.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_boot_acceptance.ads",
+      "sha256": "24be61c15f0452ff8818f164ad1d11a775912096a7ca066f4a395c7252112d67",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_boot_acceptance.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_capacity_guard.adb",
+      "sha256": "1aa7ff43956c16dba8d5ae81f3f2ee0f2215a0775c9dfde5f1f20d3684749f9b",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_capacity_guard.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_capacity_guard.ads",
+      "sha256": "4d5347775fa8af037f49e8e4ee306a07498c2714aeeb43cfb877c5b158a8a2ae",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_capacity_guard.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_crash_evidence.adb",
+      "sha256": "e2ea6ea9d8a4ab69cb1497858ae1d1009d5a9b33e80bef3ae9110bbf66b530b8",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_crash_evidence.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_crash_evidence.ads",
+      "sha256": "eb5b94e0ea79c137446274457808a7225753f60518d91d4b7b93100a7a99c131",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_crash_evidence.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_degraded_mode.adb",
+      "sha256": "9e31f5544322bcab71f69b5fcff8479b93979cb2febe8367b6c99567f206510c",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_degraded_mode.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_degraded_mode.ads",
+      "sha256": "f1be28beacc2c30f88edefd067893fd0e023791fc295ffa0bf0484a77090b5b7",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_degraded_mode.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_fault_correlation.adb",
+      "sha256": "829da4fb75eacc37076fb81ab6e573f415f8339a0e3f22645caafc0d202e9a50",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_fault_correlation.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_fault_correlation.ads",
+      "sha256": "8f567cb95482acdca7b5c59574645900ab2d1c5fcdfcaf2430730fcfa34a9923",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_fault_correlation.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_fru_health.adb",
+      "sha256": "334077a6b5e8610c5c8bbc67b134a62287c7a756f1a1b55cbf2d75af9accaa1e",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_fru_health.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_fru_health.ads",
+      "sha256": "284820f76cfda795af416350db1083560b9defcda6cdc275ff224f7ec10633ff",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_fru_health.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_inventory.adb",
+      "sha256": "c1f029bc8bfd432e782dca5ced3a0d62e995e100fed1e113006779b0d2265836",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_inventory.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_inventory.ads",
+      "sha256": "49b222b5beae909aeabedd6614f0c7b27f987a890dabf04657d69ce10461abbe",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_inventory.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_kernel_health.adb",
+      "sha256": "ec148163858eff7b585c3b1052e83f6160db07d60cd28d9beec9c7ae9ab8c0be",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_kernel_health.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_kernel_health.ads",
+      "sha256": "891afc0073bd50b1bd10300eb104a15b5b9a2bad4d073de03f917a91b296e5e4",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_kernel_health.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_kernel_maintenance.adb",
+      "sha256": "c2f55eb3da2eaa53f3c8f08a29a0361a31a590e4f51cb8c311809910f9c38564",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_kernel_maintenance.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_kernel_maintenance.ads",
+      "sha256": "2eef458264c1ee5f6498e4314345bc07eaee0ba7e643a77b59832a4086ba9383",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_kernel_maintenance.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_network_integrity.adb",
+      "sha256": "812c2255a91491a910e63a57ac0a707cdb9a750c7cdd91203b5718387fd9b077",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_network_integrity.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_network_integrity.ads",
+      "sha256": "9c3a9f5608643447b95959684718a84dbb9be5fd3e616c3e7fc8468164de67c6",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_network_integrity.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_node_lifecycle.adb",
+      "sha256": "f4c464ec7d173c113e6da51f4e86827858bcb8c3eba5c87c3600d719e4316639",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_node_lifecycle.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_node_lifecycle.ads",
+      "sha256": "04eacb85e580cfe4f3b4fba39d8934cbe5f593521841f2f9b45ef976d889625c",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_node_lifecycle.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_platform_health.adb",
+      "sha256": "725ba4a798fe3f98b279c04849da9f255da7e55544006483a03c014f260221c4",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_platform_health.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_platform_health.ads",
+      "sha256": "1f45692f4840ee53291d8391597a3ecbac273efce2d5061c6247bf958e896c53",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_platform_health.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_power_integrity.adb",
+      "sha256": "502d2236c65753af4400df2db7f769a5b4cd94a939870eb6414319eda92b8fe7",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_power_integrity.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_power_integrity.ads",
+      "sha256": "9d117333ce71a4c774ed27c10a6f99c2d5f19c2547c3cdd0a90cdf9d88ca7ba1",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_power_integrity.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_ras.adb",
+      "sha256": "ba288f69586b629321aa504715d3c25229ab5cb039a312332ae59b152ab90e4f",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_ras.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_ras.ads",
+      "sha256": "88cb8282b234f655b5a63a9c89ace37c2c73c8fc50fe9cb6fcbba7f77a154c1b",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_ras.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_recovery_objective.adb",
+      "sha256": "76f048c3c32902c93ccea7dbcd4045402bf0f6236e71dc17e179415558b8c67d",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_recovery_objective.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_recovery_objective.ads",
+      "sha256": "ba7330f673da4f14a32b1efaa878a62b347720466b1a5434ca7716c9e5222c42",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_recovery_objective.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_resilience_controller.adb",
+      "sha256": "a6c027690df711ca9330076d79452dc0283644f45c5ed7108aa0a75da74c9aa9",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_resilience_controller.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_resilience_controller.ads",
+      "sha256": "a008ad118ae03b9a4337aea9a0becf16a9df0fc85ec4853f6232a313ae6d22d1",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_resilience_controller.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_self_test.adb",
+      "sha256": "35aa53a59de7e9897c9e6f82237b4f80b89c661828e8949c2e7e2b9890bcf82f",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_self_test.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_self_test.ads",
+      "sha256": "1797770919e076a4b43fba340162bd96d2fed49322dd997905f034971c845f78",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_self_test.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_serviceability.adb",
+      "sha256": "4e8fd9d187cc7289a3e86d93eb043bbc866b3167f39731d33c68982a8b8d4867",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_serviceability.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_serviceability.ads",
+      "sha256": "203483dccf2526e38a1a1ffa98da04d574831450b16d0a604f4e6014298e7f7e",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_serviceability.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_storage_integrity.adb",
+      "sha256": "f4e347501014aacabba6c04b506089763228592ad6cce9a8ee1eb18534f2ef84",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_storage_integrity.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_storage_integrity.ads",
+      "sha256": "f6de94aa2ee066a88d31701826bddfa2e9e4900255121f1bedec7a94fd837293",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_storage_integrity.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_time_integrity.adb",
+      "sha256": "90038f0629319fc63cd516d2a0cd41f0ad1ea091c36cff22f7ce73dbf70bdd84",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_time_integrity.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_time_integrity.ads",
+      "sha256": "6bd4a94d1df33454719b2ec811a1e3d7db0fd2d42ee12768c5d93dfbf2b2339a",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_time_integrity.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_wlm.adb",
+      "sha256": "131542b84af6be42685016fd0a1dab34fe62598b52deb664262b08b0fc77f89a",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_wlm.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_wlm.ads",
+      "sha256": "757c0090935558821a8c7f038f1d99af01ab42a88d86672daa84ae52f2bb64b5",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_wlm.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_workload_safety.adb",
+      "sha256": "5eb345180e7344186db3fa829de1a7c06923db06775ae1d9754d8017b1f2a692",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_workload_safety.adb",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/src/state_workload_safety.ads",
+      "sha256": "239444e9cb9fdb662db363d36ece975fcc35a4cd2f219114d74a7891131bdc74",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/src/state_workload_safety.ads",
+      "review_status": "restored-uncompiled"
+    },
+    {
+      "path": "statecore/tests/run_ras_platform_tests.adb",
+      "sha256": "0c667de708decea700d6fe0af2cb6f772bd60acc155c01dda211e10dd1f82a6c",
+      "origin": "mission-core-mission-critical-distro-source-2026-09-06.zip",
+      "origin_member": "mission-core-linux/statecore/tests/run_ras_platform_tests.adb",
+      "review_status": "restored-uncompiled"
+    }
+  ],
+  "retained_newer_conflicts": [
+    {
+      "path": "assurance/app/contract_lock.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "0f6031404c63d49dc807979f444c4f087119d27b842f6a9263219b42ac1b48ac",
+      "retained_at_merge_sha256": "f2228427facd7dc179e055aad1872f8042b118d46e9a96636223780c12883c80",
+      "delivered_sha256": "237b1a95c76336a6715ed56cb71e5e381b274538f1a8f46033c6025905aceb03",
+      "modified_after_merge": true
+    },
+    {
+      "path": "assurance/app/contract_lock.ads",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "56b275135d2aedccccf519c70fb3f90436e4523db44ae754a8e1d6d45cae4dc5",
+      "retained_at_merge_sha256": "3abf07bb0a22f328c46cbc35ded3728537ee4d5cb7c77545b1ce4f00ac65ebfb",
+      "delivered_sha256": "e85580a7affd0258bc298e6ee6a72fcbfab4b32aff385e66ccf141ffe4f6221a",
+      "modified_after_merge": true
+    },
+    {
+      "path": "assurance/runtime/mc_admin.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "a69b0eab3322d486df219a87e30814f937d0b9136a8c45e85177c07b15564b6c",
+      "retained_at_merge_sha256": "d08f67cad3ba00f44f281faf398f2c090ad51094d607ef8fe9efd78de95bde06",
+      "delivered_sha256": "d08f67cad3ba00f44f281faf398f2c090ad51094d607ef8fe9efd78de95bde06",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_atomic.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "3be44634b9d1dcfb14ab3778138ec1163ced82a189a4194cd07c225f72af3247",
+      "retained_at_merge_sha256": "008283cdf3be0c215a36ecd21a71f34c90dbc3510bf4417693e1292d6d4e84af",
+      "delivered_sha256": "008283cdf3be0c215a36ecd21a71f34c90dbc3510bf4417693e1292d6d4e84af",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_cli.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "e42bdc036e984d680781f6f9ba53102187fbe7a44507be5dff2b1df5ff045c03",
+      "retained_at_merge_sha256": "6de08c08d46a7202403c58e4337ab618bfca4794179145e5845b4151c1a4b2ab",
+      "delivered_sha256": "6de08c08d46a7202403c58e4337ab618bfca4794179145e5845b4151c1a4b2ab",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_clock.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "528a35a39f2d1f9cfbe640d149164ddce04e8929cb659b663dd32c17b5a01940",
+      "retained_at_merge_sha256": "06a86876046ee3adfd5478a7a174c6f9fc776588c67fcaf0f27d39e684342e0d",
+      "delivered_sha256": "06a86876046ee3adfd5478a7a174c6f9fc776588c67fcaf0f27d39e684342e0d",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_fs.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "c51c329c70ee340c0f2e63c525e1b946b9606afc17b58e4160f891a16d6852ef",
+      "retained_at_merge_sha256": "489e430ad1c12e65135ef0a07f619a5269fb4fa56fea102f9554a7e9b611e482",
+      "delivered_sha256": "489e430ad1c12e65135ef0a07f619a5269fb4fa56fea102f9554a7e9b611e482",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_fs.ads",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "85e2fcbdb3d469909546efe2f562b02c0214830674b6c6e653947cec400e8b14",
+      "retained_at_merge_sha256": "aa2704c540ae19d89ae4090dc633f2eb791ec1d69c78c8dbd9540b1eaa2f017b",
+      "delivered_sha256": "aa2704c540ae19d89ae4090dc633f2eb791ec1d69c78c8dbd9540b1eaa2f017b",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_gate.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "276216f5349168f7cb721ab4fce7b68a9ee26a364d50f18818f2c597f526910f",
+      "retained_at_merge_sha256": "72cd3eedb929e3c22f009c4a0e153a0fe955f277a91a47bfcf04b5ababe0418e",
+      "delivered_sha256": "72cd3eedb929e3c22f009c4a0e153a0fe955f277a91a47bfcf04b5ababe0418e",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_log.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "52917e3c53cf20f680dd00940bde8b80d8f05ebcff891b6a96dd273a880aa7f1",
+      "retained_at_merge_sha256": "05e6327708b1bdd2f5998ebd9b5d1aac992889b4cd889569e9e51f7f566d1ed7",
+      "delivered_sha256": "05e6327708b1bdd2f5998ebd9b5d1aac992889b4cd889569e9e51f7f566d1ed7",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_log.ads",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "974629c859f1abe2e3a1cae02d2dda72a12995a5350ccfa070db2cf355fe42d2",
+      "retained_at_merge_sha256": "8feeea8e4575af97cd46aa6b293c16cad672a2ea6b4c83be1d9509064099439a",
+      "delivered_sha256": "8feeea8e4575af97cd46aa6b293c16cad672a2ea6b4c83be1d9509064099439a",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/runtime/mc_store.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "eb4d7e39ab636609f5bf4208709436cf32d84352661d674cf9b7e946edd6623a",
+      "retained_at_merge_sha256": "2f5b7dec6cf62786cb5da8d37fee4cc94c4216330191ff05a7746fc98cad879f",
+      "delivered_sha256": "2f5b7dec6cf62786cb5da8d37fee4cc94c4216330191ff05a7746fc98cad879f",
+      "modified_after_merge": false
+    },
+    {
+      "path": "assurance/src/mc_contract_profile.ads",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "1948454157da43d4bbbb45c810de3784138626b406c2e970381ab6bb644f43e7",
+      "retained_at_merge_sha256": "41cb81fc8a5f0075967a7b37693fd06a3309ef42dbaf960561513022af3ba603",
+      "delivered_sha256": "6555c41d83a4a598930bb199477fa6fbeabbf849bff2cf3a6446a0014ec0b1b7",
+      "modified_after_merge": true
+    },
+    {
+      "path": "assurance/src/mc_release.ads",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "47e0e16c571e56f5f791072beafc06d8454ac9e03cd5aca6f875d7165a757e7f",
+      "retained_at_merge_sha256": "1a4c3ac88da86a9ab712f96cd5e8f54f2402d309021bdc1463a6328b145783d5",
+      "delivered_sha256": "1a4c3ac88da86a9ab712f96cd5e8f54f2402d309021bdc1463a6328b145783d5",
+      "modified_after_merge": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_file_engine.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "4821718eef2ab41b3bb92691b599e92b1ceda2cded8ec47e3f1a83a752a86531",
+      "retained_at_merge_sha256": "671f0cf2fdc849169e998ded60662b4aaacdeefaf98ff5760b194b462768a868",
+      "delivered_sha256": "671f0cf2fdc849169e998ded60662b4aaacdeefaf98ff5760b194b462768a868",
+      "modified_after_merge": false
+    },
+    {
+      "path": "pkgcore/src/pkg_file_plan.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "704a16955c882888d84841450ee0c177655206c6e2e5e1253d3f150dde3d6a40",
+      "retained_at_merge_sha256": "4c96eb1e87559ca416ccde72b901ba24d6550530f6e6ba15d618e90e6e5fa08a",
+      "delivered_sha256": "4c96eb1e87559ca416ccde72b901ba24d6550530f6e6ba15d618e90e6e5fa08a",
+      "modified_after_merge": false
+    },
+    {
+      "path": "pkgcore/tests/run_file_engine_tests.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "bdf857f7d34fc6bf425071af2fec9a669304163400a7f129c462a2fea9352ba3",
+      "retained_at_merge_sha256": "07849235f7d133c38dec71c208461b07422149e501f3bce9cf36f0972f26a0d6",
+      "delivered_sha256": "07849235f7d133c38dec71c208461b07422149e501f3bce9cf36f0972f26a0d6",
+      "modified_after_merge": false
+    },
+    {
+      "path": "statecore/runtime/state_executor.adb",
+      "decision": "retain-latest-recovery-engineering-or-reviewed-current",
+      "old_sha256": "7d3113e6427ec9cbbc629ad3f329487cd2b5b8da8de573677233faf28b2295db",
+      "retained_at_merge_sha256": "3640225f8f5573212c5dbac8f979250078b28d48b3aee2fd0e15ef1aae5ec6e2",
+      "delivered_sha256": "3640225f8f5573212c5dbac8f979250078b28d48b3aee2fd0e15ef1aae5ec6e2",
+      "modified_after_merge": false
+    }
+  ],
+  "restored_docs": [
+    "assurance/docs/mission-critical-linux.ja.md",
+    "assurance/docs/platform-qualification.ja.md",
+    "assurance/docs/trusted-computing-base.ja.md",
+    "pkgcore/docs/enterprise-maintenance-model.ja.md",
+    "statecore/docs/kernel-and-boot-maintenance.ja.md",
+    "statecore/docs/ras-and-workload.ja.md"
+  ],
+  "ada_compile": "not-run",
+  "production_qualification": false,
+  "meaning": "restored hashes name the preserved old source; retained_at_merge is historical; delivered is this reviewed edition. No compile/proof assertion."
+}

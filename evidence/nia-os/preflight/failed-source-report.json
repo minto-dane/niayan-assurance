@@ -1,0 +1,324 @@
+{
+  "format": 1,
+  "mode": "source",
+  "created_utc": "2026-09-07T05:04:20.688054+00:00",
+  "production_approval": false,
+  "ada_execution": "not-run",
+  "formal_proof": "not-run",
+  "temporary_io_tree": "/tmp/mission-engineering-tests-sjd_vzhi",
+  "checks": [
+    {
+      "name": "traceability",
+      "result": "pass",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assurance/tests/engineering",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 8826,
+      "seconds": 4.943,
+      "log_sha256": "07a7130526372edc9d81394e189bc6bac8585450eca063a57a1a87b2f0cc53aa",
+      "name": "engineering-unittests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "controlcore/tests/reference",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "fail",
+      "returncode": 1,
+      "log_bytes": 5735,
+      "seconds": 0.705,
+      "log_sha256": "10afd176f716ddbcb6a9a5963b824ff11ad88a79880c0ac222dd4c06cd5d3cd0",
+      "name": "manager-reference-tests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "configcore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3229,
+      "seconds": 0.697,
+      "log_sha256": "c093b98a670bbfbfe83c79eba751b71bd7ab08026b11256ad2abb45f85f75298",
+      "name": "configuration-reference-tests",
+      "layer": "reference-and-limited-native-probe"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "resolvercore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 6707,
+      "seconds": 0.735,
+      "log_sha256": "f12cc357d43ede7f1b4a184e7da5d77828a004c7279c039636dc53630c75ee25",
+      "name": "resolution-reference-tests",
+      "layer": "reference-and-untrusted-proposal-tool-tests"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/profile.py"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 146,
+      "seconds": 0.643,
+      "log_sha256": "8da6b4ad4a01820b0fb0725218407ed2381d484ac6a8d3353d57098c545b4da6",
+      "name": "resolver-source-profile",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/check-neutral.py"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 1527,
+      "seconds": 0.594,
+      "log_sha256": "9924a0e4760c31c44af6d27b6aeb0921e82fce58ec82e233c686c8eaa7aad157",
+      "name": "resolver-neutral-boundary",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/check-resolver.py"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 124,
+      "seconds": 0.566,
+      "log_sha256": "e196e6e8df6f3edb40e4bfcc582d86e93b04f295b306fa3556b3402602e82d88",
+      "name": "native-resolver-lock",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "distribution/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 6817,
+      "seconds": 1.017,
+      "log_sha256": "f2ee787d13ce6b0dd5a46b56aeaa899ac2e72fb1a96cc1d80334202e6cf24c6e",
+      "name": "distribution-tool-tests",
+      "layer": "actual-build-tool-tests"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/nia-product-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 1227,
+      "seconds": 0.75,
+      "log_sha256": "43ddb25d5a8c637c834ac198524ad649de08e27367b27618f25a072d94243edd",
+      "name": "nia-product-audit",
+      "layer": "source-product-coherence"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/unified-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 190784,
+      "seconds": 0.744,
+      "log_sha256": "fd9dd10324aad71db2756d62a84b3f2de387b57718d31a67cc770d01a6735513",
+      "name": "unified-architecture-audit",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/engineering.py",
+        "lint"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 138296,
+      "seconds": 0.842,
+      "log_sha256": "f4903a8e10ed60b3c796ec8c2509302bab339c90c494b7b82d76ba259eb224fd",
+      "name": "syntax-and-doc-links",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.019,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "assurance-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.016,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "pkgcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.015,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "statecore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.014,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "controlcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.015,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "configcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.015,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "resolvercore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/manager-profile.py"
+      ],
+      "cwd": "/mnt/data/nia-validation-tree/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 129,
+      "seconds": 0.646,
+      "log_sha256": "762a11faf74b2baf07779845633fda613f3c4ca109da2c380246252dfadcce05",
+      "name": "manager-implementation-profile",
+      "layer": "source"
+    }
+  ],
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "kernel": "6.18.35",
+    "architecture": "x86_64",
+    "gprbuild": null,
+    "gnatprove": null
+  },
+  "source_subject_before": "cb7a4e89ae0d35b425095690eb66d90c10d3f11219f7182f72a7b58a51da4af7",
+  "result": "fail",
+  "error": "source checks failed; build/proof not attempted",
+  "temporary_io_tree_removed": true,
+  "ended_utc": "2026-09-07T05:04:33.931362+00:00"
+}

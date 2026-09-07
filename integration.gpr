@@ -1,0 +1,15 @@
+-- SPDX-License-Identifier: MIT
+project Integration is
+   for Languages use ("Ada");
+   for Source_Dirs use ("src", "runtime", "tests", "integration", "../pkgcore/src", "../statecore/src");
+   for Object_Dir use "build/integration-obj";
+   for Exec_Dir use "build/integration-bin";
+   for Main use ("run_integration_tests.adb");
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat2022", "-gnata", "-gnato", "-gnatVa", "-gnatwe", "-fstack-protector-strong", "-fPIE", "-g", "-O1");
+   end Compiler;
+   package Linker is
+      for Default_Switches ("Ada") use
+        ("-lsodium", "-larchive", "-lcurl", "-lxml2", "-pie", "-Wl,-z,relro,-z,now,-z,noexecstack");
+   end Linker;
+end Integration;

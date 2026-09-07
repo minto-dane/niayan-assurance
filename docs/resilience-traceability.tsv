@@ -1,0 +1,18 @@
+id	requirement	implementation	evidence_target	status
+REC-01	no command before durable intent	statecore/runtime/state_healing_engine.adb	run_healing_io_tests	Ada test NOT RUN
+REC-02	no blind replay after ambiguous outcome	statecore/src/state_healing.adb	run_healing_tests;run_healing_io_tests	Ada tests NOT RUN
+REC-03	same invocation stable health and preserved debt	statecore/src/state_healing.adb	run_healing_tests	Ada test NOT RUN
+REC-04	boot rebind preserves cumulative/window budget	assurance/src/mc_retry_budget.adb	run_resilience_contract_tests;run_healing_tests	Ada tests NOT RUN
+REC-05	partial tail exact preservation, not full-record deletion	statecore/runtime/state_healing_journal.adb	run_healing_io_tests	Ada I/O test NOT RUN
+CL-01	old AND new weighted quorum plus replica/domain budget	statecore/src/state_cluster_safety.adb	run_cluster_resilience_tests	Ada test NOT RUN
+CL-02	fresh view each real reservation CAS attempt	statecore/runtime/state_strict_coordinator.adb	site-etcd-concurrency-tests	SITE TEST REQUIRED
+CL-03	slot retained on timeout/unknown	statecore/src/state_rollout.adb	run_cluster_resilience_tests	Ada test NOT RUN
+CL-04	canary soak plus post-acceptance regression freeze	statecore/src/state_rollout.adb	run_cluster_resilience_tests	Ada test NOT RUN
+CL-05	new boot requires old-incarnation retirement proof	statecore/src/state_rollout.adb	run_cluster_resilience_tests	Ada test NOT RUN
+CL-06	no writer promotion on lease timeout alone	statecore/src/state_failover.adb	run_cluster_resilience_tests;site-fencing	Ada and SITE tests NOT RUN
+PK-01	exact authenticated baseline and excluded data/secrets/critical	pkgcore/src/pkg_self_repair.adb	run_repair_tests	Ada test NOT RUN
+PK-02	real scrub generation/file identity recheck	pkgcore/runtime/pkg_scrubber.adb	site-filesystem-concurrency-tests	SITE TEST REQUIRED
+IF-01	request and observer keys distinct	assurance/runtime/mc_site_policy.adb	run_resilience_contract_tests	Ada test NOT RUN
+IF-02	strict shared source set before build	assurance/ci/check-contract.sh	source-checks.json	POSIX CHECKS RUN
+IF-03	domain-separated canonical health contract	assurance/src/mc_health_report.adb	reference-checks.json;cross-repository.sh	REFERENCE RUN; Ada NOT RUN
+IF-04	runtime compiled profile mismatch denied	assurance/runtime/mc_gate.adb	cross-repository.sh	Ada executable test NOT RUN

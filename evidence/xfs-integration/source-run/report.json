@@ -1,0 +1,324 @@
+{
+  "format": 1,
+  "mode": "source",
+  "created_utc": "2026-09-07T07:22:27.370800+00:00",
+  "production_approval": false,
+  "ada_execution": "not-run",
+  "formal_proof": "not-run",
+  "temporary_io_tree": "/tmp/mission-engineering-tests-jf_3eoz_",
+  "checks": [
+    {
+      "name": "traceability",
+      "result": "pass",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assurance/tests/engineering",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 9892,
+      "seconds": 5.385,
+      "log_sha256": "896034afc38a6e45cf47f65d92a8ea92709fe5e6fffc81dc37f17459359a1108",
+      "name": "engineering-unittests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "controlcore/tests/reference",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 4879,
+      "seconds": 0.613,
+      "log_sha256": "80a06539e85ee89862218d3df632db6c4b490556d45027ee504ed11bc6ba82db",
+      "name": "manager-reference-tests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "configcore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3229,
+      "seconds": 0.684,
+      "log_sha256": "db566a2a9fbb5ce7aaf8c8db4adcda991361b550c695adf74de56083c7aef25b",
+      "name": "configuration-reference-tests",
+      "layer": "reference-and-limited-native-probe"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "resolvercore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 6707,
+      "seconds": 0.788,
+      "log_sha256": "f18aaa3946898a1ae34dfc54f9cf80e1b5de7ccf6f62bfda4328799c43139a9c",
+      "name": "resolution-reference-tests",
+      "layer": "reference-and-untrusted-proposal-tool-tests"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/profile.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 146,
+      "seconds": 0.65,
+      "log_sha256": "8da6b4ad4a01820b0fb0725218407ed2381d484ac6a8d3353d57098c545b4da6",
+      "name": "resolver-source-profile",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/check-neutral.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 1527,
+      "seconds": 0.649,
+      "log_sha256": "9924a0e4760c31c44af6d27b6aeb0921e82fce58ec82e233c686c8eaa7aad157",
+      "name": "resolver-neutral-boundary",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/check-resolver.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 124,
+      "seconds": 0.658,
+      "log_sha256": "e196e6e8df6f3edb40e4bfcc582d86e93b04f295b306fa3556b3402602e82d88",
+      "name": "native-resolver-lock",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "distribution/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 11358,
+      "seconds": 1.163,
+      "log_sha256": "15d157c7c1009adbb0ecc19206682a47f979bbc0e79f614413d435c70c1a47e9",
+      "name": "distribution-tool-tests",
+      "layer": "actual-build-tool-tests"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/nia-product-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 1227,
+      "seconds": 0.766,
+      "log_sha256": "7cef2991ecba44efc9d2ede0916e3bff89991bb292398433fa046a89ae2cccee",
+      "name": "nia-product-audit",
+      "layer": "source-product-coherence"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/unified-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 194402,
+      "seconds": 0.788,
+      "log_sha256": "730e2340a6b4a7a15904de4fcb1bd8432b355b218246f8967073cc4e26e5171c",
+      "name": "unified-architecture-audit",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/engineering.py",
+        "lint"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 139573,
+      "seconds": 0.867,
+      "log_sha256": "61c458328678ca4a515d876f5481eedb602dd0d1e66ebc1ca49325e022f70f99",
+      "name": "syntax-and-doc-links",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.018,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "assurance-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.016,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "pkgcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.015,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "statecore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.016,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "controlcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.014,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "configcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.017,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "resolvercore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/manager-profile.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 129,
+      "seconds": 0.647,
+      "log_sha256": "762a11faf74b2baf07779845633fda613f3c4ca109da2c380246252dfadcce05",
+      "name": "manager-implementation-profile",
+      "layer": "source"
+    }
+  ],
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "kernel": "6.18.35",
+    "architecture": "x86_64",
+    "gprbuild": null,
+    "gnatprove": null
+  },
+  "source_subject_before": "f82f8a5ca3efdae87be5875941b31d1aaff36824343aaeaf6d6973f6bfcd315d",
+  "source_subject_after": "f82f8a5ca3efdae87be5875941b31d1aaff36824343aaeaf6d6973f6bfcd315d",
+  "result": "pass-for-requested-layer-only",
+  "temporary_io_tree_removed": true,
+  "ended_utc": "2026-09-07T07:22:41.453526+00:00"
+}

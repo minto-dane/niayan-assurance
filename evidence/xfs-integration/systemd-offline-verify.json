@@ -1,0 +1,17 @@
+{
+  "result": "PASS-offline-syntax-only",
+  "exit_code": 0,
+  "arguments": [
+    "systemd-analyze",
+    "--root=/tmp/nia-xfs-unit-4tfy0yro",
+    "--man=no",
+    "verify",
+    "nia-xfs-observe@-.service",
+    "nia-xfs-scrub@-.service",
+    "nia-xfs-scrub@-.timer"
+  ],
+  "native_tools_executed": false,
+  "services_started": false,
+  "temporary_stubs": "path existence only; not shipped",
+  "service_runtime_qualified": false
+}

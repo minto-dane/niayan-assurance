@@ -1,0 +1,14 @@
+{
+  "format": 1,
+  "qualification": "NOT_CONFIGURED",
+  "automatic_mutation_enabled": false,
+  "target_platform": null,
+  "filesystem_profile": null,
+  "independent_recovery_authority": null,
+  "fencing_adapter_qualification": null,
+  "backup_restore_trial": null,
+  "rto_seconds": null,
+  "rpo_confirmed_transactions": null,
+  "reviewers": [],
+  "note": "Example requirements only; null is not satisfied and is never authorization."
+}

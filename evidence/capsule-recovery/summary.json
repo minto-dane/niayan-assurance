@@ -1,0 +1,27 @@
+{
+  "schema": "org.niaos.capsule-recovery-evidence/v1",
+  "source_subject": "22c051ee820110da608e8f7e96128ff0b5ea53cc2f0b3a1c9794cd4cf25d790d",
+  "python_tests": {
+    "engineering": 110,
+    "management": 44,
+    "configuration": 31,
+    "resolver": 70,
+    "distribution": 128,
+    "cohort_recovery": 50,
+    "capsule": 53
+  },
+  "unique_total": 486,
+  "unprivileged_pass": 485,
+  "root_only_pass": 1,
+  "duplicate_runs_counted": false,
+  "ada_compile": "NOT_RUN",
+  "ada_execution": "NOT_RUN",
+  "gnatprove": "NOT_RUN",
+  "live_repair": "NOT_RUN",
+  "bubblewrap_portal_vm": "NOT_RUN",
+  "sandbox_launch_implemented": false,
+  "live_recovery_publisher_implemented": false,
+  "production_qualified": false,
+  "current_report": "current/report.json",
+  "new_ada_sources": "SPARK-intended source; no proof success claimed"
+}

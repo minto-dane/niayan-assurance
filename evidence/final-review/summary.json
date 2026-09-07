@@ -1,0 +1,45 @@
+{
+  "edition": "nia-os-final-review-2026-09-07",
+  "source_subject": "91c8d1c377ab512ad28f9e89b6f1c0b911c0d7a74b593b4c8c701d76d080eea6",
+  "source_tests": {
+    "engineering": 110,
+    "management": 44,
+    "configuration": 31,
+    "resolver": 70,
+    "distribution": 128,
+    "unique_total": 383,
+    "nonroot_passed": 382,
+    "nonroot_skipped": 1,
+    "root_refusal_separately_passed": 1,
+    "ada_implementation_executed": false
+  },
+  "structure": {
+    "format": 1,
+    "checks": "traceability-and-source-inventory",
+    "result": "pass",
+    "requirements": 76,
+    "decisions": 49,
+    "hazards": 62,
+    "fault_cases": 70,
+    "canonical_ada_files": 468,
+    "registered_ada_tests": 53,
+    "source_subject": "91c8d1c377ab512ad28f9e89b6f1c0b911c0d7a74b593b4c8c701d76d080eea6",
+    "ada_executed": false,
+    "formal_proof": false,
+    "production_approval": false
+  },
+  "proof": "NOT_RUN",
+  "ada_build": "NOT_RUN",
+  "ada_tests": "NOT_RUN",
+  "bootable_image": false,
+  "production_qualified": false,
+  "toolchain_installed": false,
+  "full_native_integrations_complete": false,
+  "evidence_reports": {
+    "source": "current/engineering-8xy5mnku/report.json",
+    "build": "current/engineering-6blgu4q6/report.json",
+    "proof": "current/engineering-wopjc52l/report.json",
+    "rebind": "current/development-rebind-tlcw8t0g/report.json"
+  },
+  "source_diff": "source-diff.json"
+}

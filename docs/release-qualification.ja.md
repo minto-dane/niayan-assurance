@@ -1,0 +1,15 @@
+# ソースとバイナリに結び付けた資格証拠
+
+`MC_Qualification`は31種類の証拠を要求します。コンパイル、Ada単体、統合、通信契約、flow/safety/functional proof、暗号審査、RPM corpus、crash/powercut/partition、物理fencing、Secure Boot、backup/restore、独立審査・運用承認に加え、今回のhost/service/network/boot/composition/native RPMの検査を含みます。
+
+各証拠はexact Source_Set、Binary_Set、Contract、Platform、Policy_ID、Report digest、trust epoch、開始時刻、終了時刻へ結び付きます。320byteのcanonical binaryを専用domainでEd25519署名します。未確認項目を省略する、MissingやFailedをPassedと同じに扱う、異なるbinaryへ古い試験を転用することは認めません。
+
+署名検査は`MC_Qualification_Auth`がlibsodium経由で行います。コンパイルされたshared contract profileとの一致も必要です。ビルド、独立security審査、運用承認は別principalかつ別domainを要求します。鍵が複数あるだけでは独立性になりません。
+
+時刻は署名方針が定めた信頼できる時刻系です。host/networkのローカルboottimeと混在させません。期限はexclusiveです。未知／未信頼の時刻でfreshnessを満たしたとは判定しません。
+
+この機構は署名と適用対象の一致を検査します。試験の真実性、審査者の独立性、鍵保護、clock freshness、report digestが指す報告の保存と再検証は別の保証です。任意の署名報告を作れば形式証明が成立するわけではありません。
+
+`fixtures/qualification-v1`は全項目Passedの**人工的試験fixture**です。これは本ソースの実際の資格証拠ではありません。fixtureキーは本番trust storeに登録してはいけません。RPM配備にも含めません。実際のGNATprove/コンパイルは未実施でBuild_QualifiedはFalseです。
+
+source setは選択した検査対象ファイル集合、binary setは実際に配る全バイナリ・ランタイム・必要設定のmanifest、platformは実機/仮想機種・kernel・libraries・toolchain・LSM・boot/fence/data条件を含むmanifestのdigestとして定義してください。ここではその集計器や署名サービスを常駐配備していません。

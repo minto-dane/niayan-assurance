@@ -1,0 +1,360 @@
+{
+  "format": 1,
+  "mode": "build",
+  "created_utc": "2026-09-07T07:22:42.105837+00:00",
+  "production_approval": false,
+  "ada_execution": "requested-not-completed",
+  "formal_proof": "not-run",
+  "temporary_io_tree": "/tmp/mission-engineering-tests-y_j7gsxz",
+  "checks": [
+    {
+      "name": "traceability",
+      "result": "pass",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assurance/tests/engineering",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 9892,
+      "seconds": 5.689,
+      "log_sha256": "c2e108a62220e00c2de1c6053585cdfb1599592de06751e35a9633b29ff44a59",
+      "name": "engineering-unittests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "controlcore/tests/reference",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 4879,
+      "seconds": 0.725,
+      "log_sha256": "71d53725b381fe07f2783759aa5390ac9e3a74287060039469b6ecec214952af",
+      "name": "manager-reference-tests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "configcore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3229,
+      "seconds": 0.705,
+      "log_sha256": "96d6dc86b4409ac0e896ef93d3a5c8ac7add4b19d72e7f2f19e2de9903eb5ae6",
+      "name": "configuration-reference-tests",
+      "layer": "reference-and-limited-native-probe"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "resolvercore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 6707,
+      "seconds": 0.846,
+      "log_sha256": "42b82ae8e42c7d97ce8e02a29b9518c445d23b5911c9ce608bc025667359a2c7",
+      "name": "resolution-reference-tests",
+      "layer": "reference-and-untrusted-proposal-tool-tests"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/profile.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 146,
+      "seconds": 0.647,
+      "log_sha256": "8da6b4ad4a01820b0fb0725218407ed2381d484ac6a8d3353d57098c545b4da6",
+      "name": "resolver-source-profile",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/check-neutral.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 1527,
+      "seconds": 0.655,
+      "log_sha256": "9924a0e4760c31c44af6d27b6aeb0921e82fce58ec82e233c686c8eaa7aad157",
+      "name": "resolver-neutral-boundary",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/check-resolver.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 124,
+      "seconds": 0.705,
+      "log_sha256": "e196e6e8df6f3edb40e4bfcc582d86e93b04f295b306fa3556b3402602e82d88",
+      "name": "native-resolver-lock",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "distribution/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 11358,
+      "seconds": 1.262,
+      "log_sha256": "912cd78c0e7b8bc9208a44aac82de9fed1d9680b1f61e800e90d7aac7cb4a117",
+      "name": "distribution-tool-tests",
+      "layer": "actual-build-tool-tests"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/nia-product-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 1227,
+      "seconds": 0.707,
+      "log_sha256": "7cef2991ecba44efc9d2ede0916e3bff89991bb292398433fa046a89ae2cccee",
+      "name": "nia-product-audit",
+      "layer": "source-product-coherence"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/unified-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 194402,
+      "seconds": 0.777,
+      "log_sha256": "730e2340a6b4a7a15904de4fcb1bd8432b355b218246f8967073cc4e26e5171c",
+      "name": "unified-architecture-audit",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "-B",
+        "assurance/ci/engineering.py",
+        "lint"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 139573,
+      "seconds": 0.843,
+      "log_sha256": "61c458328678ca4a515d876f5481eedb602dd0d1e66ebc1ca49325e022f70f99",
+      "name": "syntax-and-doc-links",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.02,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "assurance-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.017,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "pkgcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.017,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "statecore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.016,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "controlcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.014,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "configcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 3985,
+      "seconds": 0.015,
+      "log_sha256": "1c1e5969032e7dfd5c6376583462d0b68c10477cfa9917b038eaf3264501036b",
+      "name": "resolvercore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/opt/pyvenv/bin/python3",
+        "ci/manager-profile.py"
+      ],
+      "cwd": "/mnt/data/nia-xfs-validation-7gnk_1nu/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "log_bytes": 129,
+      "seconds": 0.589,
+      "log_sha256": "762a11faf74b2baf07779845633fda613f3c4ca109da2c380246252dfadcce05",
+      "name": "manager-implementation-profile",
+      "layer": "source"
+    },
+    {
+      "name": "assurance-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "pkgcore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "statecore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "controlcore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "configcore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "resolvercore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    }
+  ],
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "kernel": "6.18.35",
+    "architecture": "x86_64",
+    "gprbuild": null,
+    "gnatprove": null
+  },
+  "source_subject_before": "f82f8a5ca3efdae87be5875941b31d1aaff36824343aaeaf6d6973f6bfcd315d",
+  "source_subject_after": "f82f8a5ca3efdae87be5875941b31d1aaff36824343aaeaf6d6973f6bfcd315d",
+  "result": "incomplete-or-failed",
+  "temporary_io_tree_removed": true,
+  "ended_utc": "2026-09-07T07:22:56.694972+00:00"
+}

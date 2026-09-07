@@ -1,0 +1,8 @@
+# NON-RUNNABLE TEMPLATE. Independent Operations + Security signatures required.
+scope=REPLACE_WITH_32_HEX_SCOPE
+mode=running
+trust-epoch=REPLACE_WITH_STRICTLY_HIGHER_INTEGER
+request-id=REPLACE_WITH_FRESH_32_HEX_ID
+reason=REPLACE_WITH_64_HEX_REASON_HASH
+recovery-receipt=REPLACE_WITH_VERIFIED_RECOVERY_EVIDENCE_HASH
+ttl-ms=300000

@@ -1,0 +1,274 @@
+{
+  "schema": "org.niaos.development-rebind/v1",
+  "production_authority": false,
+  "source_before": "cc8de4dfb597d5ceb33953039ebf69883c58dc39d9a1be7e16a5b1a6e096ef43",
+  "started": "2026-09-07T09:35:22.914793+00:00",
+  "commands": [
+    {
+      "name": "shared-contract",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/refresh-contract.py",
+        "--write",
+        "--acknowledge-interface-change",
+        "--sync-sibling-vendors"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 252,
+      "seconds": 0.207,
+      "log_sha256": "93908435f86cfdd75fcae67fea70760181eb040b5eef278a0ff41865180d7560"
+    },
+    {
+      "name": "resolver-profile",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "resolvercore/ci/profile.py",
+        "--write",
+        "--acknowledge-incompatible-change",
+        "--sync-pkgcore"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 146,
+      "seconds": 0.033,
+      "log_sha256": "5a12391acbe4ad2592e83ce1254142ac672d3dd13c31f7a7b0eb9534ec502292"
+    },
+    {
+      "name": "manager-profile",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "controlcore/ci/manager-profile.py",
+        "--write",
+        "--acknowledge-interface-change"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 129,
+      "seconds": 0.029,
+      "log_sha256": "3c56c459ecf9d753669a58dc41467fa7abec5938ca1f8ddc13651425de9aaa99"
+    },
+    {
+      "name": "public-shared-fixtures",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/regenerate-public-fixtures.py",
+        "--public-test-only"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 97,
+      "seconds": 0.069,
+      "log_sha256": "10e329e234a75adbab1231d3de34e1911080e0f9458db013e125f83173d44a4c"
+    },
+    {
+      "name": "public-manager-fixtures",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "controlcore/ci/generate-test-fixtures.py",
+        "--public-test-only"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 52,
+      "seconds": 0.057,
+      "log_sha256": "f99aebf22898749530735b980b8160c6925927cf52d95e8677b9a1895ee7552b"
+    },
+    {
+      "name": "source-inventory",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/engineering.py",
+        "inventory",
+        "--write"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.28,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "traceability",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/engineering.py",
+        "check"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 396,
+      "seconds": 0.246,
+      "log_sha256": "ae10d094d831262d6ceff01e3f86d6580597d89932aa7c769387f511f33b1f3b"
+    },
+    {
+      "name": "resolver-check",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "resolvercore/ci/profile.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 146,
+      "seconds": 0.029,
+      "log_sha256": "5a12391acbe4ad2592e83ce1254142ac672d3dd13c31f7a7b0eb9534ec502292"
+    },
+    {
+      "name": "native-resolver-check",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "pkgcore/ci/check-resolver.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 124,
+      "seconds": 0.022,
+      "log_sha256": "d44a939b611aab4dce4dbf9834a7c3b10b00f65ff22e95feb0ffd99efa6a5249"
+    },
+    {
+      "name": "manager-check",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "controlcore/ci/manager-profile.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 129,
+      "seconds": 0.027,
+      "log_sha256": "3c56c459ecf9d753669a58dc41467fa7abec5938ca1f8ddc13651425de9aaa99"
+    },
+    {
+      "name": "assurance-contract",
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.017,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7"
+    },
+    {
+      "name": "pkgcore-contract",
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.015,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7"
+    },
+    {
+      "name": "statecore-contract",
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.015,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7"
+    },
+    {
+      "name": "controlcore-contract",
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.015,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7"
+    },
+    {
+      "name": "configcore-contract",
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.015,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7"
+    },
+    {
+      "name": "resolvercore-contract",
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.014,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7"
+    }
+  ],
+  "result": "development-locks-only-pass",
+  "source_after": "91c8d1c377ab512ad28f9e89b6f1c0b911c0d7a74b593b4c8c701d76d080eea6",
+  "ended": "2026-09-07T09:35:24.063976+00:00"
+}

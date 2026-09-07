@@ -1,0 +1,29 @@
+{
+  "schema": "org.niaos.firstparty-artifact/v1",
+  "component": "assurance",
+  "transport": "deb",
+  "origin": "nia-firstparty",
+  "sources": "assurance.gpr",
+  "executables": [
+    {
+      "source": "build/bin/assure",
+      "destination": "usr/libexec/nia/assure",
+      "mode": "0755"
+    },
+    {
+      "source": "build/bin/controlctl",
+      "destination": "usr/libexec/nia/controlctl",
+      "mode": "0755"
+    },
+    {
+      "source": "build/bin/platformctl",
+      "destination": "usr/libexec/nia/platformctl",
+      "mode": "0755"
+    }
+  ],
+  "dependency_derivation": "ELF-interpreter-needed-SONAME-plus-reviewed-effect-contract",
+  "dependency_set_qualified": false,
+  "automatic_hooks": [],
+  "native_database_writer": false,
+  "production_qualified": false
+}

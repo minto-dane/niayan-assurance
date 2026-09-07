@@ -1,0 +1,2671 @@
+{
+  "format": 1,
+  "qualification": "unqualified",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "履歴の厳格な束縛",
+      "shall": "すべての再生recordをroot/transaction/plan/epoch/token/generation/連続sequence/hashへ束縛し、異なるものを拒否しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0003"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/recovery-protocol.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_file_replay.ads#Consume",
+        "pkgcore/runtime/pkg_file_engine.adb#Read_Log"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_replay_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-001"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "title": "判断receiptの不変性",
+      "shall": "一度記録した確定または逆順復旧の判断receiptを、同じtransactionの途中で別receiptへ変更してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0005"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/recovery-protocol.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_file_replay.adb#Consume",
+        "pkgcore/runtime/pkg_file_engine.adb#Commit"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_replay_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-002"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "title": "実像と進行段階の一致",
+      "shall": "forwardの完了prefixはafter、未intent suffixはbefore、pendingのみ両方を許容し、未知または逸脱した像を拒否しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0006"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/recovery-protocol.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_file_replay.adb#Image_Allowed",
+        "pkgcore/runtime/pkg_file_engine.adb#Inspect"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_replay_tests.adb",
+        "pkgcore/tests/run_file_engine_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-003"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-004",
+      "title": "欠落記録の非初期化",
+      "shall": "復旧で既存journalを開くときに、欠落journalを新規の空ファイルへ置換してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0004"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/recovery-protocol.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_fs.adb#Open_Locked",
+        "assurance/runtime/mc_log.adb#Open",
+        "pkgcore/runtime/pkg_file_engine.adb#Resume"
+      ],
+      "tests": [
+        "assurance/tests/run_recovery_storage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-004"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-005",
+      "title": "読み取り専用診断",
+      "shall": "診断処理は元媒体へ書込み・新規log作成・復旧を行わず、限定metadata検査を実行許可と表現してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0008"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/storage-formats.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_recovery_audit.adb#Inspect",
+        "pkgcore/app/pkg_recoveryctl.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_engine_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-004"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-006",
+      "title": "完全破損と部分末尾の区別",
+      "shall": "不正な完全recordを自動的に切り詰めず、部分末尾のみ原本と監査の永続保全後に扱わなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0007"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/recovery-protocol.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_log.adb#Repair_Tail",
+        "pkgcore/runtime/pkg_file_engine.adb#Repair_Torn_Journal"
+      ],
+      "tests": [
+        "assurance/tests/run_recovery_storage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-001"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-007",
+      "title": "冪等pinの容量保護",
+      "shall": "同一pinが存在することを確認した再送では、その呼出しの未公開tempだけを除去し、不明結果や他のpinを削除してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0009"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/storage-formats.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_store.adb#Pin"
+      ],
+      "tests": [
+        "assurance/tests/run_recovery_storage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-005"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-008",
+      "title": "保護rootの排除",
+      "shall": "監査・信頼・管理状態rootそのものと子を一般ファイル変更から除外しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0001"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/security.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_file_plan.adb#Allowed_Path"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_replay_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-006"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations"
+      ]
+    },
+    {
+      "id": "REQ-009",
+      "title": "状態読取の安定性",
+      "shall": "状態ファイルの読取り前後でinode情報とサイズ等を比較し、観測中の変化を成功と解釈してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0008"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/storage-formats.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_atomic.adb#Read",
+        "pkgcore/runtime/pkg_recovery_audit.adb#Inspect"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_engine_tests.adb",
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-007"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-010",
+      "title": "永続化後の成功",
+      "shall": "副作用前のintent、file/parent fsync、完了記録、世代公開の順を保ち、永続化不明を未実行と断定してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0001"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/acid-contract.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_fs.adb#Sync",
+        "pkgcore/runtime/pkg_file_engine.adb#Emit"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_engine_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-008"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-011",
+      "title": "Isolationの範囲",
+      "shall": "writer排他とreader停止を実効的に接続しない構成を、全ファイルまたはOS全体のserializable updateと認定してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0001"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/acid-contract.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_quiescent_engine.ads"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_engine_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-009"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-012",
+      "title": "外部効果の結果不明",
+      "shall": "外部commandの応答喪失を失敗と同一視せず、同じoperation IDの結果を照合してから進めなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0010"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/connector-contracts.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_operation.ads",
+        "statecore/runtime/state_executor.ads"
+      ],
+      "tests": [
+        "statecore/tests/run_v2_state_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-010"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-013",
+      "title": "独立アンカー",
+      "shall": "復旧時には正確な世代とdigestの独立した受入状態を検査し、ローカルにある最新ファイルを無条件に採用してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0012"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/release-migration.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_checkpoint_store.ads"
+      ],
+      "tests": [
+        "assurance/tests/run_checkpoint_io_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-011"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-014",
+      "title": "全対象停止の確認",
+      "shall": "多数決や一部応答だけで全対象停止と判定せず、完全inventoryと持続する停止/隔離根拠を要求しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0011"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/connector-contracts.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_stop_barrier.ads",
+        "statecore/runtime/state_barrier_store.ads"
+      ],
+      "tests": [
+        "assurance/tests/run_stop_barrier_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-012"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-015",
+      "title": "クラスタの所有権",
+      "shall": "quorum、fencing、データ追随、予約とtokenを別の条件で検査し、期限切れだけで新writerを昇格させてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0011"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/connector-contracts.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_cluster_safety.ads",
+        "statecore/src/state_failover.ads"
+      ],
+      "tests": [
+        "statecore/tests/run_cluster_resilience_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-012"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-016",
+      "title": "復旧予算",
+      "shall": "時間窓・累積・連続の復旧予算を永続化し、再起動やcontroller交代だけで上限を復活させてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0014"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/failure-model.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_healing.ads",
+        "statecore/runtime/state_healing_journal.ads"
+      ],
+      "tests": [
+        "statecore/tests/run_healing_tests.adb",
+        "statecore/tests/run_healing_io_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-013"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-017",
+      "title": "設定/ネットワークの回復",
+      "shall": "対象に結び付いたcheckpointと独立経路確認を持たずに、ネットワーク変更を自動確定してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0019"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/connector-contracts.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_network_change.ads",
+        "statecore/runtime/state_network_controller.ads"
+      ],
+      "tests": [
+        "statecore/tests/run_platform_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-014"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-018",
+      "title": "起動候補",
+      "shall": "署名・互換性・exact image/bootの実検査なしに、起動候補の評価コードを起動チェーン全体の完成と扱ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0019"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/connector-contracts.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_boot_assessment.ads"
+      ],
+      "tests": [
+        "statecore/tests/run_platform_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-014"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-019",
+      "title": "業務データの復元",
+      "shall": "package rollbackと業務データの復元を分離し、データ系統・鍵・backup chain・復元試験を検査しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0013"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/acid-contract.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_backups.ads",
+        "pkgcore/src/pkg_retention_batch.ads"
+      ],
+      "tests": [
+        "assurance/tests/run_backup_contract_tests.adb",
+        "pkgcore/tests/run_retention_batch_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-015"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-020",
+      "title": "署名と作用範囲",
+      "shall": "署名を正確なrole/subject/plan/profile/epochへ束縛し、healthy値や署名成功だけで実世界の安全を推論してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0012"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/security.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_authorization.ads",
+        "assurance/runtime/mc_ingress.ads"
+      ],
+      "tests": [
+        "assurance/tests/run_ingress_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-006"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-021",
+      "title": "証拠の層と鮮度",
+      "shall": "source/model/Ada/proof/target/運用承認を分け、現在のsource/binary subjectへ実行証拠を束縛しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0016"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/verification.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_qualification.ads",
+        "assurance/ci/run-engineering-checks.py"
+      ],
+      "tests": [
+        "assurance/tests/run_qualification_tests.adb",
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-016"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations"
+      ]
+    },
+    {
+      "id": "REQ-022",
+      "title": "要求からの追跡",
+      "shall": "要求、仕様、ADR、コード、試験、hazardの参照切れ・重複・未知fieldを開発検査で検出しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0017"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/development.ja.md"
+      ],
+      "code": [
+        "assurance/ci/engineering.py#validate"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-016"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests"
+      ]
+    },
+    {
+      "id": "REQ-023",
+      "title": "全テストmain登録",
+      "shall": "GPRへ登録された全テストmainに実行tierと引数計画を割り当て、未登録のままリリース準備を進めてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0017"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/verification.ja.md"
+      ],
+      "code": [
+        "assurance/ci/engineering.py#validate"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-016"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests"
+      ]
+    },
+    {
+      "id": "REQ-024",
+      "title": "正確なソース在庫",
+      "shall": "canonical Ada sourceを全件在庫化し、変更・欠落・追加後に古いcatalogを成功扱いしてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0017"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/development.ja.md"
+      ],
+      "code": [
+        "assurance/ci/engineering.py#inventory"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-016"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests"
+      ]
+    },
+    {
+      "id": "REQ-025",
+      "title": "共有profile移行",
+      "shall": "共有ソース変更でprofileとfixtureを明示更新し、旧保留操作のreaderを無条件に削除してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0015"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/release-migration.ja.md"
+      ],
+      "code": [
+        "assurance/ci/refresh-contract.py",
+        "assurance/ci/check-contract.sh"
+      ],
+      "tests": [
+        "assurance/ci/cross-repository.sh",
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-017"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-026",
+      "title": "証明境界",
+      "shall": "SPARKの契約、Off境界、コンパイラ/FS/外部観測の前提を記録し、証明予定を証明済みと表現してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0003"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/proof-plan.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_file_replay.ads",
+        "assurance/proof.gpr"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_replay_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-016"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-027",
+      "title": "緊急制御",
+      "shall": "緊急操作でも監査と認証の保護を維持し、制御状態の緩和を独立した複数の主体へ割り当てなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0012"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/security.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_control.ads",
+        "assurance/runtime/mc_control_io.ads"
+      ],
+      "tests": [
+        "assurance/tests/run_control_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-006"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-028",
+      "title": "境界付き入力",
+      "shall": "未認識形式・余剰field・上限外の入力を拒否し、特殊ファイルを属性検査前にブロックして待ち続けてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0018"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/security.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_fs.adb#Open_New_Or_Lock",
+        "assurance/ci/engineering.py#read_regular"
+      ],
+      "tests": [
+        "assurance/tests/run_recovery_storage_tests.adb",
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-007"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-029",
+      "title": "秘密と診断",
+      "shall": "本番秘密をsource/fixture/一般ログへ含めず、診断は必要なID・digest・phase・outcomeを中心にしなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0018"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/observability.ja.md"
+      ],
+      "code": [
+        "pkgcore/app/pkg_recoveryctl.adb"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_engineering.py"
+      ],
+      "hazards": [
+        "HAZ-018"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-030",
+      "title": "RTO/RPO",
+      "shall": "サイトごとの故障条件と復元試験の測定なしに、RTO/RPOまたは全故障への自動復旧を保証してはならない。",
+      "status": "specification-only",
+      "adr": [
+        "ADR-0020"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/failure-model.ja.md"
+      ],
+      "code": [],
+      "tests": [],
+      "hazards": [
+        "HAZ-015"
+      ],
+      "required_evidence": [
+        "independent-design-review"
+      ]
+    },
+    {
+      "id": "REQ-031",
+      "title": "restart authority",
+      "shall": "systemdと独自復旧とclusterが同じサービスの再起動を独立に決定する構成を受け入れてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0036"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/connector-contracts.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_service_catalogue.ads"
+      ],
+      "tests": [
+        "statecore/tests/run_platform_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-013"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "qualified-site-adapter",
+        "operational-acceptance"
+      ]
+    },
+    {
+      "id": "REQ-032",
+      "title": "ディストリビューション全面管理の完了条件",
+      "shall": "Nia root/catalogの実変更接続、効果closure、署名boot/installer、実復元/適格observerが未完なら本番完成を宣言してはならない。native DB handoffと任意script互換は新規製品目標から除外する。",
+      "status": "specification-only",
+      "adr": [
+        "ADR-0043"
+      ],
+      "spec": [
+        "distribution/docs/ownership-and-effects.ja.md"
+      ],
+      "code": [],
+      "tests": [],
+      "hazards": [
+        "HAZ-017"
+      ],
+      "required_evidence": [
+        "independent-design-review"
+      ]
+    },
+    {
+      "id": "REQ-033",
+      "title": "統一署名plan",
+      "shall": "四repoの所有権を分離した管理入口は、exactな署名workflowと固定route以外を実行してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0036"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "controlcore/runtime/ctl_config.adb",
+        "controlcore/runtime/ctl_dispatch.adb"
+      ],
+      "tests": [
+        "controlcore/tests/run_manager_vector_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-019"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-034",
+      "title": "意図先行と結果照合",
+      "shall": "管理器はworker起動より前にintentを永続化し、終了値やtimeoutではなくexact receiver台帳を照合しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0022"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "controlcore/runtime/ctl_dispatch.adb",
+        "controlcore/runtime/ctl_store.adb"
+      ],
+      "tests": [
+        "controlcore/tests/run_manager_storage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-020"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-035",
+      "title": "空/欠落再送台帳の拒否",
+      "shall": "既存receiverまたはhealingの復旧Openは欠落logを生成せず、空logを正常な初期状態とみなしてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0023"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_gate.adb",
+        "assurance/runtime/mc_receiver_ledger.adb",
+        "statecore/runtime/state_healing_journal.adb"
+      ],
+      "tests": [
+        "assurance/tests/run_receiver_ledger_tests.adb",
+        "assurance/tests/run_request_replay_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-021"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-036",
+      "title": "予約を全資源について保持",
+      "shall": "復旧planは親と同一clusterかつ完全同一資源集合を要求し、受入れ以前に親の予約を解除してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0024"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "controlcore/src/ctl_plan.adb",
+        "controlcore/runtime/ctl_store.adb"
+      ],
+      "tests": [
+        "controlcore/tests/run_manager_model_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-022"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-037",
+      "title": "Exact部分末尾修復",
+      "shall": "完全prefixを検査し、head/count/tail/report/policy/期限に三役署名を検証し、証拠を保存後だけ部分tailを修復しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0025"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "controlcore/runtime/ctl_store.adb",
+        "controlcore/runtime/ctl_log_repair.adb"
+      ],
+      "tests": [
+        "controlcore/tests/run_manager_storage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-023"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-038",
+      "title": "二つのprofile拘束",
+      "shall": "共有契約と管理器実装を別々にpolicyへ固定し、変更・欠落・未知fileを無視して署名対象を流用してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0026"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "controlcore/runtime/ctl_config.adb",
+        "controlcore/ci/manager-profile.py"
+      ],
+      "tests": [
+        "controlcore/tests/reference/test_management.py"
+      ],
+      "hazards": [
+        "HAZ-024"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-039",
+      "title": "分岐在庫の保存",
+      "shall": "分岐ZIPの復元/同名優先を在庫化し、追加テストを登録し、過去のPASSを現版のAda実行結果へ昇格してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0027"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "assurance/ci/unified-audit.py",
+        "assurance/ci/engineering.py"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_unified_audit.py"
+      ],
+      "hazards": [
+        "HAZ-025"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-040",
+      "title": "業務受入れと操作結果の分離",
+      "shall": "receiver completionだけで業務復旧と予約解放を承認せず、exact reportと現在head/revisionへ三役closureを要求しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0022"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/unified-management.ja.md"
+      ],
+      "code": [
+        "controlcore/runtime/ctl_closure.adb",
+        "controlcore/src/ctl_workflow.adb"
+      ],
+      "tests": [
+        "controlcore/tests/run_manager_vector_tests.adb",
+        "controlcore/tests/run_manager_model_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-026"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "gnatprove-obligations",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-041",
+      "title": "完全な設定入力と不明の分離",
+      "shall": "入力不足や未知のキー・native意味を正常なAbsentへ補完せず、対象schemaのすべての必要条件を検査しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0029"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "configcore/src/config_semantics.adb"
+      ],
+      "tests": [
+        "configcore/tests/run_config_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-027"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-042",
+      "title": "追加削除を含む三方向merge",
+      "shall": "旧既定値・local意図・新既定値の完全集合を使い、衝突時には部分的な適用提案を返してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0029"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "configcore/src/config_merge.adb"
+      ],
+      "tests": [
+        "configcore/tests/run_config_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-028"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-043",
+      "title": "優先順位と派生依存の検査",
+      "shall": "native優先順位の完全なsource集合から、影響する生成物と稼働構成を推移的に再検査しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0029"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "configcore/src/config_dependencies.adb"
+      ],
+      "tests": [
+        "configcore/tests/run_config_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-029"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-044",
+      "title": "NVIDIAのexact power capability",
+      "shall": "対象driver/module flavor/validator/電源意図/保存経路/署名条件を正確に照合し、不明なら新しい変更を拒否しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0030"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "configcore/src/config_nvidia.adb"
+      ],
+      "tests": [
+        "configcore/tests/run_config_nvidia_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-030"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-045",
+      "title": "独立署名した設定承認",
+      "shall": "設定証拠を二つの独立した鍵・roleと現在の期待subject・共有profile・最低sequenceへ結び付け、再利用の条件を検査しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0033"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_config_auth.adb"
+      ],
+      "tests": [
+        "configcore/tests/run_config_binding_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-031"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-046",
+      "title": "設定状態の再起動継続",
+      "shall": "boot変更を暗黙に承認せず、旧実行停止と正確な対象を確認した明示遷移の後に新しい正常観測を要求しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0033"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "configcore/src/config_lifecycle.adb"
+      ],
+      "tests": [
+        "configcore/tests/run_config_binding_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-032"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-047",
+      "title": "安全なdirect configuration inventory",
+      "shall": "一覧・属性・内容・xattrを有界に照合し、範囲外・未対応・競合を完全検査済みと表示してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0034"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "configcore/runtime/config_inventory.adb"
+      ],
+      "tests": [
+        "configcore/tests/run_config_io_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-033"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-048",
+      "title": "Nia OS Forky固定供給元",
+      "shall": "Niaの単一供給元をDebian14 Forkyの認証した固定snapshotに限定し、Leap/SLES/Almaやrolling alias、native writerの再投入を拒否しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0042"
+      ],
+      "spec": [
+        "distribution/docs/base-decision.ja.md"
+      ],
+      "code": [
+        "distribution/tools/nia_policy.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-034"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "actual-tool-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-049",
+      "title": "DEB入力の独立source期待値",
+      "shall": "pinされた鍵とInRelease、Packages、DEB、Sourcesの正確なdigestを照合し、期限・出所・scopeが一致しない入力を受け入れてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0044"
+      ],
+      "spec": [
+        "distribution/docs/build-release.ja.md"
+      ],
+      "code": [
+        "distribution/tools/debian_archive_auth.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-035"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "actual-tool-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-050",
+      "title": "非実行DEB読み取り境界",
+      "shall": "DEB/ar/tarの範囲外参照・特殊ファイル・重複・未知extension・bomb・不完全末尾を拒否し、maintainer scriptを実行せず内容と効果をinventory化しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0044"
+      ],
+      "spec": [
+        "distribution/docs/ownership-and-effects.ja.md"
+      ],
+      "code": [
+        "distribution/tools/deb_archive.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-036"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "actual-tool-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-051",
+      "title": "全5repoの開発整合性",
+      "shall": "configcoreと組立て工具を在庫・試験・固定契約・RPM配布・文書照合の対象に含めなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0036"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "assurance/ci/engineering.py"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_unified_audit.py"
+      ],
+      "hazards": [
+        "HAZ-037"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-052",
+      "title": "意味変更と単一変更owner",
+      "shall": "設定証拠と元の認可を合成し、署名付き診断だけで既存writer予約やWAL・受信認可を迂回してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0033"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/suse-config.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_configuration_engine.adb"
+      ],
+      "tests": [
+        "configcore/tests/test_reference.py"
+      ],
+      "hazards": [
+        "HAZ-038"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "ada-runtime-tests",
+        "target-integration-tests"
+      ]
+    },
+    {
+      "id": "REQ-053",
+      "title": "形式非依存の認証対象モデル",
+      "shall": "native形式の版比較やdatabase前提をneutral coreへ持ち込まず、正規化した有限Universeをexact sourceとbindingへ束縛しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0036"
+      ],
+      "spec": [
+        "resolvercore/docs/neutral-spec.ja.md"
+      ],
+      "code": [
+        "resolvercore/src/resolver_model.adb"
+      ],
+      "tests": [
+        "resolvercore/tests/run_resolver_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-039"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-054",
+      "title": "不信な候補の直接再検査",
+      "shall": "候補集合の全rule、pin、許可、所有権、数値予算をsolver状態に依存せず再評価し、無効候補や資源上限超過を実行許可にしてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0037"
+      ],
+      "spec": [
+        "resolvercore/docs/neutral-spec.ja.md"
+      ],
+      "code": [
+        "resolvercore/src/resolver_verify.adb"
+      ],
+      "tests": [
+        "resolvercore/tests/run_resolver_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-040"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-055",
+      "title": "順序と操作境界の整合",
+      "shall": "初期状態から一回ずつ正確なactionを再生し、各前後条件・連続rule・所有権・再導入・最終一致を検査しなければならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0037"
+      ],
+      "spec": [
+        "resolvercore/docs/neutral-spec.ja.md"
+      ],
+      "code": [
+        "resolvercore/src/resolver_verify.adb"
+      ],
+      "tests": [
+        "resolvercore/tests/run_resolver_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-041"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-056",
+      "title": "独立CNFとUNSAT根拠",
+      "shall": "UNSAT判断はexpected Universeから再生成したCNFに対する完全な証明列検査を必要とし、外部CNF・終了値・hintsだけを信用してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0038"
+      ],
+      "spec": [
+        "resolvercore/docs/proof-boundary.ja.md"
+      ],
+      "code": [
+        "resolvercore/src/resolver_lrat.adb"
+      ],
+      "tests": [
+        "resolvercore/tests/run_resolver_proof_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-042"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-057",
+      "title": "研究用RPMアダプターの提供者意味（Nia非採用）",
+      "shall": "将来比較用のRPM adapterを残す場合with/withoutの意味を保ち、Nia製品のDEB入力またはhost実行へ暗黙転用してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0039"
+      ],
+      "spec": [
+        "pkgcore/docs/rpm-resolution.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_rpm_resolution.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_pkg_resolution_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-043"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-058",
+      "title": "完全coverageと現在の認可",
+      "shall": "実変更前にnative全効果・exact physical plan・全coverage・最新binding・排他予約・期限を検査し、検査開始後の変更で旧承認を流用してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0041"
+      ],
+      "spec": [
+        "resolvercore/docs/integration.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_resolution_engine.adb"
+      ],
+      "tests": [
+        "resolvercore/tests/run_resolver_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-044"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-059",
+      "title": "未信頼ソルバーの副作用禁止",
+      "shall": "提案器を非特権の限定入力で実行し、問題ありtransaction、未知ID、壊れた出力、timeoutを成功計画や確定UNSATとして扱ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0037",
+        "ADR-0044"
+      ],
+      "spec": [
+        "resolvercore/docs/integration.ja.md"
+      ],
+      "code": [
+        "resolvercore/tools/propose_libsolv_deb.py"
+      ],
+      "tests": [
+        "resolvercore/tests/test_deb_proposer.py"
+      ],
+      "hazards": [
+        "HAZ-045"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-060",
+      "title": "証明と参照検査の区別",
+      "shall": "source検査・有限参照モデルとAda実行・GNATproveの結果を分離し、未実施の証明または本番資格化を完了として記録してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0040"
+      ],
+      "spec": [
+        "resolvercore/docs/proof-boundary.ja.md"
+      ],
+      "code": [
+        "resolvercore/src/resolver_proof.adb"
+      ],
+      "tests": [
+        "resolvercore/tests/run_resolver_proof_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-046"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-native-review",
+        "ada-execution",
+        "gnatprove-obligations",
+        "site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-061",
+      "title": "Nia単独書込主体",
+      "shall": "未検証native writerと複数DBの競合を作らず新規Nia catalogだけを候補正本にする。root実行器未完成を明示する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0043"
+      ],
+      "spec": [
+        "distribution/docs/ownership-and-effects.ja.md"
+      ],
+      "code": [
+        "distribution/tools/nia_catalog.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-047"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-design-review",
+        "native-target-validation",
+        "formal-obligations-and-site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-062",
+      "title": "DEB version/relationship",
+      "shall": "Debian versionを独立に比較し、versioned Provides/PreDepends/同名architecture競合を扱い、最終集合検査だけをphase完全証明にしてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0044"
+      ],
+      "spec": [
+        "distribution/docs/ownership-and-effects.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_deb_versions.adb"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-048"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-design-review",
+        "native-target-validation",
+        "formal-obligations-and-site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-063",
+      "title": "正確な再現証拠",
+      "shall": "原本DEBとsource/buildinfo/Release/policyを独立署名へ拘束し、失効/期限切れ/同一domain/別binaryの証拠を拒否する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0046"
+      ],
+      "spec": [
+        "distribution/docs/build-release.ja.md"
+      ],
+      "code": [
+        "distribution/tools/reproducibility.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-049"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-design-review",
+        "native-target-validation",
+        "formal-obligations-and-site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-064",
+      "title": "回復ドメイン不変条件",
+      "shall": "OS世代とcatalogは対応させ、正当な業務data/独立trust/監査/秘密情報をroot rollbackへ含めてはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0048"
+      ],
+      "spec": [
+        "distribution/docs/storage-boot.ja.md"
+      ],
+      "code": [
+        "distribution/tools/nia_layout.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-050"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-design-review",
+        "native-target-validation",
+        "formal-obligations-and-site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-065",
+      "title": "製品規範の一意性",
+      "shall": "現行profileは一つだけとし、historyの構成や人工証拠から起動可能・本番資格の宣言を生成してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0047"
+      ],
+      "spec": [
+        "distribution/docs/architecture.ja.md"
+      ],
+      "code": [
+        "distribution/tools/nia_policy.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_intake.py"
+      ],
+      "hazards": [
+        "HAZ-051"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "independent-design-review",
+        "native-target-validation",
+        "formal-obligations-and-site-qualification"
+      ]
+    },
+    {
+      "id": "REQ-066",
+      "title": "XFS能力の実行時拘束",
+      "shall": "kernel版だけからrepair/healthmonを認定せず、正確なcohort/FS/boot/namespaceと能力を確認する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0048"
+      ],
+      "spec": [
+        "distribution/docs/xfs-health.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_xfs_health.adb#Assess"
+      ],
+      "tests": [
+        "statecore/tests/run_xfs_health_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-052"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-067",
+      "title": "metadataと内容の分離",
+      "shall": "HEALTHY/scrub完了によってmedia/contentの故障ラッチを解除してはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0048"
+      ],
+      "spec": [
+        "distribution/docs/xfs-health.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_xfs_health.adb#Accept_Scrub"
+      ],
+      "tests": [
+        "statecore/tests/run_xfs_health_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-053"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-068",
+      "title": "失われたイベントと再試行",
+      "shall": "欠落sequence、unknown、結果不明を保持し、同一操作を無条件に再送しない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0048"
+      ],
+      "spec": [
+        "distribution/docs/xfs-health.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_xfs_health.adb#Observe"
+      ],
+      "tests": [
+        "statecore/tests/run_xfs_health_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-054"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-069",
+      "title": "XFS復旧領域の分離",
+      "shall": "catalogはrootと同一世代とし、control/trust等は独立必須mountとする。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0048"
+      ],
+      "spec": [
+        "distribution/docs/xfs-health.ja.md"
+      ],
+      "code": [
+        "distribution/tools/nia_layout.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_xfs.py"
+      ],
+      "hazards": [
+        "HAZ-055"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-070",
+      "title": "非修復の初期運用",
+      "shall": "監視と定期scrubは暗黙修復・強制操作を起動せず、診断は実行許可を発行しない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0048"
+      ],
+      "spec": [
+        "distribution/docs/xfs-health.ja.md"
+      ],
+      "code": [
+        "distribution/tools/nia_xfs.py"
+      ],
+      "tests": [
+        "distribution/tests/test_nia_xfs.py"
+      ],
+      "hazards": [
+        "HAZ-056"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-071",
+      "title": "helper所有権と回収順",
+      "shall": "leaderを回収する前にcleanupし、stdout/leader終了順に依存せず期限・出力上限を守る。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0049"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/execution-safety.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_command.adb",
+        "assurance/runtime/mc_runtime.adb"
+      ],
+      "tests": [
+        "assurance/tests/run_command_lifecycle_tests.adb",
+        "assurance/tests/engineering/test_final_runtime.py"
+      ],
+      "hazards": [
+        "HAZ-057"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-072",
+      "title": "観測FD・ctimeの照合",
+      "shall": "パスとFDの事前事後を照合し、mtimeだけ復元した変更も観測差異として拒否する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0049"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/execution-safety.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_fs.adb",
+        "pkgcore/runtime/pkg_file_engine.adb"
+      ],
+      "tests": [
+        "assurance/tests/run_fs_observation_tests.adb",
+        "assurance/tests/engineering/test_final_runtime.py"
+      ],
+      "hazards": [
+        "HAZ-058"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-073",
+      "title": "intent前の完了記録余力",
+      "shall": "未完計画の予約と新規計画の終了記録余力を確保してから新たなintentを記録する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0049"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/execution-safety.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_journal_budget.ads",
+        "assurance/runtime/mc_gate.adb",
+        "controlcore/src/ctl_workflow.adb",
+        "controlcore/runtime/ctl_store.adb"
+      ],
+      "tests": [
+        "assurance/tests/run_journal_budget_tests.adb",
+        "controlcore/tests/run_manager_model_tests.adb",
+        "assurance/tests/engineering/test_final_runtime.py"
+      ],
+      "hazards": [
+        "HAZ-059"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-074",
+      "title": "既存lockの欠落拒否",
+      "shall": "既存状態の復旧と新規bootstrapを分け、失われたlock inodeを通常アクセスで再作成しない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0049"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/execution-safety.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_file_engine.adb",
+        "assurance/runtime/mc_checkpoint_store.adb",
+        "statecore/runtime/state_network_controller.adb",
+        "assurance/runtime/mc_store.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_file_engine_tests.adb",
+        "assurance/tests/engineering/test_final_runtime.py",
+        "assurance/tests/run_recovery_storage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-060"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-075",
+      "title": "複合検査経路の必須化",
+      "shall": "合成SDKは停止・設定・元の認可・独立solver・native意味・現在の予約を必須とし、弱い下位Engineを公開しない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0049"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/execution-safety.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_managed_engine.ads",
+        "pkgcore/runtime/pkg_managed_engine.adb"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_final_runtime.py"
+      ],
+      "hazards": [
+        "HAZ-061"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-076",
+      "title": "世代namespaceの分離",
+      "shall": "catalog/model世代とcluster membership epochを等号で結び付けず、それぞれ対応する証拠へ束縛する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0049"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/execution-safety.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_resolution_engine.ads",
+        "pkgcore/runtime/pkg_resolution_engine.adb"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_final_runtime.py"
+      ],
+      "hazards": [
+        "HAZ-062"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-077",
+      "title": "外部anchorと独立quorum",
+      "shall": "復旧は外部でpinした完全なanchorと現在のtrust floorへ一致し、別principal・鍵・domainとrecovery/witness役の署名を要求する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0050"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/cohort-recovery.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_recovery_cohort.adb",
+        "assurance/tools/nia_recovery.py"
+      ],
+      "tests": [
+        "assurance/tests_py/test_recovery_cohort.py"
+      ],
+      "hazards": [
+        "HAZ-063"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-078",
+      "title": "完全inventoryの破損検出",
+      "shall": "認証されたcohortの内容、mode、owner、xattr、directory集合を検査し、追加・欠落・改変を正常な空状態と解釈しない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0050"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/recovery-wire.ja.md"
+      ],
+      "code": [
+        "assurance/tools/nia_recovery.py"
+      ],
+      "tests": [
+        "assurance/tests_py/test_recovery_cohort.py"
+      ],
+      "hazards": [
+        "HAZ-064"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-079",
+      "title": "候補への再構成と証拠保全",
+      "shall": "複数の破損複製から正しいchunkだけを選び、新しい私有candidateへ再構成し、証拠I/O失敗では完了扱いしない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0050"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/cohort-recovery.ja.md"
+      ],
+      "code": [
+        "assurance/tools/nia_recovery.py",
+        "assurance/tools/recovery_io.py"
+      ],
+      "tests": [
+        "assurance/tests_py/test_recovery_cohort.py"
+      ],
+      "hazards": [
+        "HAZ-065"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-080",
+      "title": "historyと外部効果の継続",
+      "shall": "復旧でpending要求を消さず、候補のbyte一致後もnative journalを検査し、外部結果を照合するまでOperationalへ進めない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0050"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/cohort-recovery.ja.md"
+      ],
+      "code": [
+        "assurance/src/mc_recovery_cohort.ads",
+        "assurance/src/mc_recovery_cohort.adb"
+      ],
+      "tests": [
+        "assurance/tests/run_cohort_recovery_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-066"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-081",
+      "title": "Capsule能力の非昇格",
+      "shall": "Capsuleの能力は要求とOS・管理者・利用者方針の積集合とし、必須能力不足、未知の能力、host全体の権限を拒否する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0051"
+      ],
+      "spec": [
+        "capsulecore/docs/confinement.ja.md"
+      ],
+      "code": [
+        "capsulecore/src/capsule_policy.adb",
+        "capsulecore/tools/capsule_plan.py"
+      ],
+      "tests": [
+        "capsulecore/tests_py/test_capsule.py"
+      ],
+      "hazards": [
+        "HAZ-067"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-082",
+      "title": "世代とデータの独立管理",
+      "shall": "runtimeとapp世代をdigestで固定し、旧実行個体・復旧pinを保持し、データ契約の変更に明示的な移行を要求する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0051"
+      ],
+      "spec": [
+        "capsulecore/docs/architecture.ja.md"
+      ],
+      "code": [
+        "capsulecore/src/capsule_lifecycle.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_capsule_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-068"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-083",
+      "title": "Flatpak入力の要求化",
+      "shall": "Flatpak metadataは許可ではなく要求として扱い、raw network/audio/deviceの意味を狭く偽装せず、未対応条件やextensionを拒否する。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0051"
+      ],
+      "spec": [
+        "capsulecore/docs/flatpak-input.ja.md"
+      ],
+      "code": [
+        "capsulecore/tools/capsule_metadata.py"
+      ],
+      "tests": [
+        "capsulecore/tests_py/test_capsule.py"
+      ],
+      "hazards": [
+        "HAZ-069"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-084",
+      "title": "brokerとmountの実行個体束縛",
+      "shall": "brokerとmountはapp・世代・policy・boot・cgroup・userの実際のidentityへ束縛し、既存FDの失効をDB操作だけで保証しない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0051"
+      ],
+      "spec": [
+        "capsulecore/docs/confinement.ja.md"
+      ],
+      "code": [
+        "capsulecore/src/capsule_broker.adb",
+        "capsulecore/src/capsule_mounts.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_capsule_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-070"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-085",
+      "title": "candidate treeの独立検査",
+      "shall": "正確な原本digestと完全inventoryを再検査し、元のinodeを共有せず、新しい候補に限ってmaterializeし、診断を実行許可にしない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0051"
+      ],
+      "spec": [
+        "capsulecore/docs/architecture.ja.md"
+      ],
+      "code": [
+        "capsulecore/tools/capsule_tree.py"
+      ],
+      "tests": [
+        "capsulecore/tests_py/test_capsule.py"
+      ],
+      "hazards": [
+        "HAZ-071"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-086",
+      "title": "統一診断と形式版の拘束",
+      "shall": "Capsule診断はNiaの固定tool policy経由で行い、未知bit・不正長・reserved・classを拒否し、自己申告の条件を本番証拠にしない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0051"
+      ],
+      "spec": [
+        "capsulecore/docs/wire.ja.md"
+      ],
+      "code": [
+        "capsulecore/src/capsule_wire.adb",
+        "controlcore/runtime/ctl_capsule.adb",
+        "capsulecore/app/capsulectl.adb"
+      ],
+      "tests": [
+        "capsulecore/tests_py/test_capsule.py"
+      ],
+      "hazards": [
+        "HAZ-072"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-087",
+      "title": "Kernel由来peerの要求受信",
+      "shall": "要求はkernel credentialsと登録済み実行個体から認証し、wireの自己申告で本人・許可を決めてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/runtime/capsule_consent_channel.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py"
+      ],
+      "hazards": [
+        "HAZ-073"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-088",
+      "title": "同意と資源の分離",
+      "shall": "同意は正確な質問と資源へ束縛し、同意だけで資源を与えず、反映の直前直後に現在の認可を照合しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/src/capsule_consent.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py"
+      ],
+      "hazards": [
+        "HAZ-074"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-089",
+      "title": "native Portalの先行intent",
+      "shall": "native PortalがUIと同時に資源を作る場合はpossible-effectを永続化してから呼び出し、応答喪失時に要求を再送してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/runtime/capsule_consent_engine.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py"
+      ],
+      "hazards": [
+        "HAZ-075"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-090",
+      "title": "UI backendの本人・形式検査",
+      "shall": "UI backendのunique ownerと独立した本人確認、正確な質問digest、返答の署名型と期限を検査しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/runtime/capsule_access_ui.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py",
+        "capsulecore/tests_py/test_native_access.py"
+      ],
+      "hazards": [
+        "HAZ-076"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-091",
+      "title": "失効の実効性",
+      "shall": "取消と資源遮断を区別し、実際のgrant/FD/sessionが遮断された証拠なしに失効完了を記録してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/src/capsule_consent.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py"
+      ],
+      "hazards": [
+        "HAZ-077"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-092",
+      "title": "保存・anchor・終端予算",
+      "shall": "ログは独立anchorと一致することを要求し、欠落を初期化せず、既存ticketの終端記録の枠を新規要求へ使わせてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/runtime/capsule_consent_store.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py"
+      ],
+      "hazards": [
+        "HAZ-078"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-093",
+      "title": "要求洪水とbroker再起動",
+      "shall": "prompt budgetをuser+appへ固定し、再起動・世代更新による予算リセットや旧grantの自動復活を許可してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/src/capsule_consent.adb"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py"
+      ],
+      "hazards": [
+        "HAZ-079"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-094",
+      "title": "引き継ぎ・未完範囲の明示",
+      "shall": "診断、模擬peer試験、未検証のAda、未接続adapterを区別し、現在の実装と残る出荷条件を機械台帳と文書へ記録しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0052"
+      ],
+      "spec": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "code": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "tests": [
+        "capsulecore/tests/run_consent_tests.adb",
+        "capsulecore/tests_py/test_consent.py"
+      ],
+      "hazards": [
+        "HAZ-080"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "gnatprove-obligations",
+        "ada-runtime-tests",
+        "target-fault-tests"
+      ]
+    }
+  ]
+}

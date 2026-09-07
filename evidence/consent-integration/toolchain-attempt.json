@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-09-07T20:57:07.981422+00:00",
+  "kernel": "6.18.35",
+  "platform": "x86_64",
+  "uid": 1000,
+  "commands": [
+    {
+      "argv": [
+        "gcc",
+        "-c",
+        "-x",
+        "ada",
+        "check.adb"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "gcc: fatal error: cannot execute ‘gnat1’: posix_spawnp: Permission denied\ncompilation terminated.\n"
+    },
+    {
+      "argv": [
+        "curl",
+        "--proto",
+        "=https",
+        "--max-time",
+        "8",
+        "--head",
+        "https://deb.debian.org/debian/dists/trixie/InRelease"
+      ],
+      "returncode": 6,
+      "stdout": "",
+      "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: deb.debian.org\n"
+    },
+    {
+      "argv": [
+        "curl",
+        "--proto",
+        "=https",
+        "--max-time",
+        "8",
+        "--head",
+        "https://github.com/alire-project/GNAT-FSF-builds/releases"
+      ],
+      "returncode": 6,
+      "stdout": "",
+      "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0curl: (6) Could not resolve host: github.com\n"
+    }
+  ],
+  "ada_compiled": false,
+  "spark_proved": false,
+  "installed_anything": false,
+  "tools": {
+    "gcc": "/usr/bin/gcc",
+    "gnatmake": null,
+    "gprbuild": null,
+    "gnatprove": null,
+    "alr": null,
+    "dbus-run-session": "/usr/bin/dbus-run-session",
+    "curl": "/usr/local/bin/curl"
+  },
+  "gnat1_candidates": []
+}

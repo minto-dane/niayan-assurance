@@ -1,0 +1,39 @@
+{
+  "format": 1,
+  "not_live_capture": true,
+  "artificial_fixture": true,
+  "test_keys_never_authorize_production": true,
+  "profile": "04d27a1c24234da0f3a894de8b770e15acde50c9883b98f9976b58886f8f5299",
+  "now": 200,
+  "expires": 1000,
+  "node_count": 3,
+  "source_evidence_domain": "MISSION-CORE-STOP-ACK-v1",
+  "private_key_files_included": false,
+  "expected_signature_valid_but_stale": [
+    "old-guard-evidence.bin"
+  ],
+  "files": {
+    "evidence-boolean.bin": "b9d3066d15e003a2c9b2c8c43e1ab60c8950cf05088b0971634b855fe383e56b",
+    "evidence-boolean.bin.sig": "7a5b694aa9a995550a406052a718c274187ec268490b73d7c9ed4266045c7730",
+    "evidence-reserved.bin": "32a78994fd92afbd768d79a4bd09264e74c92af9174370feb20cc37d894a5459",
+    "evidence-reserved.bin.sig": "1634ccf5969e9689e5983d4aadb32437fb2d634eef12b14ca49ccbe9f664c479",
+    "fence-1.bin": "c4864c6ab1ae6a1cd118ffe941bed5fe4ca3f6effa7bf014d01f492ea36a98bf",
+    "fence-1.sig": "47e5979e7d7497d26cb54e6d652d63f0773e07b0cf4a25602c792d6f00e01c71",
+    "node-1.bin": "4e6b296508d9d702533b81919173af81e3a62f600b61ecf25852667f3cc7ab01",
+    "node-1.sig": "e26b91eef8dcc933adc8ec156b4be69dae34aa88defd18b72162a4efc0d3a4fd",
+    "node-2.bin": "c21417faded546b46104fbe58e329d821bd289cf62f0860115032e1f33024d84",
+    "node-2.sig": "6de5d79b14ef6210b9296725895482690592f24148981767aa8061b9e3e9a7e1",
+    "node-3.bin": "86b80a9c3303fca41421b4234c0ecbad6680f82f6f9f279736d0137df9fe60e7",
+    "node-3.sig": "4fd6e33db7033bcebbcc7289fdce973ec82741f7e15da0efe541b347dbae4b24",
+    "old-guard-evidence.bin": "43c62ef8b031db9f34651fcf7a8e3cea53c5835582f306aa1e2e537fe904a7f1",
+    "old-guard-evidence.sig": "bb2f606f05e3719084f7393cef05873046ebfea2035c25d1059a97d8ac208574",
+    "policy-reserved.bin": "c7f477a9cf2299828f152ff9e364748cc555980f7439336139ea1a160ef75ca5",
+    "policy.bin": "99f859c8b606f097ff06ddf9ef17da760587e31181cc1018d0da96efc40c7c19",
+    "sealed-state.bin": "057d36e746ca422c0f8e7a29cd4994a430d36fdc4b88175bcceada8402b7441f",
+    "state-reserved.bin": "a4f0d2ace81f4b63ff1fa000e6fe64e32765f748b08b06cae2123243e202001d",
+    "truncated-evidence.bin": "2a9f529df91e745e37772bde61883979e9d5bf7f9ea7480ba93fc41db40e5a47",
+    "wrong-domain.sig": "4b89d9613833fe90562483eecd24c9bec7368f6f18442aa6195baa8c18557273",
+    "wrong-role.sig": "ddc35db7480f44579e769ea04c02afd93503a5287c29bb4ae0554b101def7c0c"
+  },
+  "edition": "distro-foundation"
+}

@@ -1,0 +1,9 @@
+# NON-RUNNABLE TEMPLATE. Supply independently provisioned production public keys.
+scope=REPLACE_WITH_32_HEX_SCOPE
+serial=1
+operations-key=REPLACE_WITH_64_HEX_PUBLIC_KEY
+operations-principal=REPLACE_WITH_32_HEX_PRINCIPAL
+operations-domain=1
+security-key=REPLACE_WITH_DIFFERENT_64_HEX_PUBLIC_KEY
+security-principal=REPLACE_WITH_DIFFERENT_32_HEX_PRINCIPAL
+security-domain=2

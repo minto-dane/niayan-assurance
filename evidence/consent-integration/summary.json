@@ -1,0 +1,39 @@
+{
+  "schema": "org.niaos.consent-evidence/v1",
+  "created_utc": "2026-09-07T21:01:23.419250+00:00",
+  "source_subject": "8cf2d12b73eb972bc61ff2a56f85ceb23dfcddca26c623336030c3aff4c9f603",
+  "input_zip": "nia-os-capsule-recovery-source-2026-09-07.zip",
+  "input_sha256": "2eaf780e5a6a25eb8656621bd50e71a6376d11a29ea58ce3cabd646f3060a5ba",
+  "groups": {
+    "engineering": 110,
+    "management": 44,
+    "configuration": 31,
+    "resolver": 70,
+    "cohort_recovery": 50,
+    "capsule_including_private_bus": 95,
+    "distribution": 132
+  },
+  "unique_tests": 532,
+  "normal_nonprivileged_pass": 521,
+  "normal_skipped": 11,
+  "private_bus_separate_pass": 10,
+  "root_refusal_separate_pass": 1,
+  "ada_compile": "not-run",
+  "ada_execution": "not-run",
+  "GNATprove": "not-run",
+  "desktop_ui": "not-run",
+  "live_repair": "not-run",
+  "production_qualified": false,
+  "source_result": "pass-for-source-layer",
+  "traceability": {
+    "requirements": 94,
+    "decisions": 52,
+    "hazards": 80,
+    "fault_cases": 88,
+    "canonical_ada_files": 499,
+    "registered_ada_tests": 57
+  },
+  "new_native_probe": "Python ctypes real libsystemd/private dbus-daemon/test-only backend, NOT Ada FFI or GTK/KDE execution",
+  "intermediate_failure": "release gate list mismatch fixed; failed evidence retained",
+  "interrupted_runner": "one proof runner interrupted by external tool timeout; repeated run reached GNATprove-not-found; not evidence of proof"
+}

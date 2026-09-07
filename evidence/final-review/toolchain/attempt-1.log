@@ -1,0 +1,2 @@
+gcc: fatal error: cannot execute ‘gnat1’: posix_spawnp: No such file or directory
+compilation terminated.

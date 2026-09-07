@@ -1,0 +1,13 @@
+# 今回の検査方法と限界
+
+source runnerは非特権の私有作業域で実行。通常の検査群にはsource照合、独立した有限モデル、実ファイル・暗号・Linux syscallの限定試験が混在する。Adaの本体実行やモデルとの同値性証明ではない。
+
+private D-Bus試験は実dbus-daemon、libsystemd、ctypesによるテスト専用peerを使用。ホストsession busには接続しない。Allow/cancel/その他、不正signature、予期しないresult、owner変更・消失、timeoutとCloseを検査する。GTK/KDE UIそのものもAdaコネクタも動かしていない。
+
+一般source runの11skipは、private D-Bus限定10とroot拒否1。別の限定contextでその11件を実行した。32件の同意参照モデルを専用scriptでも再実行するが、新しい試験数として数えない。
+
+中間runでrelease-gatesと中央GATES定義が不一致となりFAIL。検査を無効化せず修正し、回帰を追加。途中の外部toolタイムアウトで終了したproof runnerもあり、証明完了と扱わず再試行した。再試行ではソース検査を通過後、GNATprove不在をNOT_RUNとして記録した。
+
+ソース監査ではconsent台帳の部分tail拒否が不足していた点を修正。新しいAda I/O試験は、test-onlyメモリanchorを使い、MC_FS/MC_Logを実行して欠落・古いanchor・snapshot欠落・部分tailを確認するためのコードである。今回は実行していない。状態の予約数は物理容量・任意の破損修復を保証しない。
+
+SOURCE-SETとMANIFESTは配布ファイルの識別情報。署名済みのproduction認定証ではない。人工試験鍵とfixtureは本番信頼へ追加しない。

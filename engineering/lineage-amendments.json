@@ -1,0 +1,23 @@
+{
+  "format": 1,
+  "production_qualification": false,
+  "independent_review": "pending",
+  "amendments": [
+    {
+      "path": "statecore/src/state_storage_integrity.adb",
+      "from_sha256": "f4e347501014aacabba6c04b506089763228592ad6cce9a8ee1eb18534f2ef84",
+      "to_sha256": "109bcbd9766a69ad54136e9554d15d4177b130e660e474a45da99e459b0edb5e",
+      "adr": "assurance/docs/engineering/adr/ADR-0048.ja.md",
+      "scope": "Add an explicit XFS capability/evidence gate alongside the retained generic storage assessment; no native repair execution.",
+      "validation": "source-inspected; ada-not-run; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_storage_integrity.ads",
+      "from_sha256": "f6de94aa2ee066a88d31701826bddfa2e9e4900255121f1bedec7a94fd837293",
+      "to_sha256": "027ac632f72b4c1f1be7747fb69b768ec9354a9cd9fa9a724c2e7a40b8090ed5",
+      "adr": "assurance/docs/engineering/adr/ADR-0048.ja.md",
+      "scope": "Add an explicit XFS capability/evidence gate alongside the retained generic storage assessment; no native repair execution.",
+      "validation": "source-inspected; ada-not-run; independent-review-pending"
+    }
+  ]
+}

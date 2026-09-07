@@ -1,0 +1,100 @@
+{
+  "format": 2,
+  "resolution_status": "UNRESOLVED_FOR_TARGET_BUILD",
+  "dependencies": [
+    {
+      "name": "GNAT/Ada runtime",
+      "role": "build/runtime",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "GPRbuild",
+      "role": "build",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "GNATprove and supported solvers",
+      "role": "proof",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "libsodium",
+      "role": "Ed25519 native TCB",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "libarchive",
+      "role": "bounded payload native TCB",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "libcurl/TLS stack",
+      "role": "HTTPS native TCB",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "libxml2",
+      "role": "XML native TCB",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "glibc/Linux x86-64 ABI",
+      "role": "runtime TCB",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "rpmkeys",
+      "role": "optional pinned executable",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "systemctl",
+      "role": "optional pinned executable",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "crm_mon/crm_standby",
+      "role": "optional pinned executables",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "etcdctl v3",
+      "role": "optional pinned executable",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "busctl/systemd",
+      "role": "optional pinned local D-Bus executable and unit execution TCB",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "NetworkManager",
+      "role": "optional checkpoint-capable network daemon; exact version/device coverage must be qualified",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    },
+    {
+      "name": "Python3/cryptography",
+      "role": "build-maintenance and independent-test tools only, not production SPARK runtime",
+      "bundled": false,
+      "version": "record exact deployed version/hash during qualification"
+    }
+  ],
+  "rpm_packages_bundled": false,
+  "compiler_bundled": false,
+  "production_private_keys_bundled": false,
+  "test_fixtures_have_publicly_known_test_seed": true
+}

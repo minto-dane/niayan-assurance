@@ -1,0 +1,14 @@
+# NOT an attested toolchain lock. Empty artifacts cannot qualify a release.
+format = 1
+status = "UNQUALIFIED"
+implementation_language = "Ada 2022 / SPARK"
+target_abi = "Linux x86-64 LP64 little-endian"
+compiler_artifact_sha256 = ""
+gprbuild_artifact_sha256 = ""
+gnatprove_artifact_sha256 = ""
+solver_artifact_sha256 = ""
+libsodium_artifact_sha256 = ""
+compiler_version_observed = "NOT_INSTALLED"
+gnatprove_version_observed = "NOT_INSTALLED"
+network_fetch_during_build = false
+production_qualified = false

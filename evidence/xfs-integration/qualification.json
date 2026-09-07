@@ -1,0 +1,22 @@
+{
+  "edition": "nia-os-xfs-storage-2026-09-07",
+  "source_subject": "be1d4858c62c23771f22e04273f2043553344c28da975a249c30f5f8cdb40e00",
+  "authoritative_source_run": "final-source-run/report.json",
+  "python_unique_cases": 356,
+  "unprivileged_pass": 355,
+  "unprivileged_skip": 1,
+  "separate_root_refusal_pass": 1,
+  "ada_compilation": "NOT_RUN-tool-unavailable",
+  "ada_tests": "NOT_RUN",
+  "gnatprove": "NOT_RUN-tool-unavailable",
+  "native_xfs_execution": "NOT_RUN",
+  "native_xfs_repair": "NOT_RUN",
+  "power_loss": "NOT_RUN",
+  "bootable_image": false,
+  "host_kernel": "6.18.35",
+  "host_machine": "x86_64",
+  "production_qualified": false,
+  "semantic_equivalence_proved": false,
+  "source_runs_before_final": "intermediate source subjects only; not substituted for final run",
+  "unit_validation": "offline syntax with path-only placeholders; no service or native tool execution"
+}

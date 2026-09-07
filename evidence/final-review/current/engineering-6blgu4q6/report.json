@@ -1,0 +1,396 @@
+{
+  "format": 1,
+  "mode": "build",
+  "created_utc": "2026-09-07T09:36:40.197248+00:00",
+  "production_approval": false,
+  "ada_execution": "requested-not-completed",
+  "formal_proof": "not-run",
+  "temporary_io_tree": "/tmp/mission-engineering-tests-35j6t6z_",
+  "checks": [
+    {
+      "name": "traceability",
+      "result": "pass",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assurance/tests/engineering",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 13503,
+      "seconds": 4.091,
+      "log_sha256": "b355112054f27a7ec6b33eac0e2109d27dd2a8874406933164cfe7dd10239383",
+      "name": "engineering-unittests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "controlcore/tests/reference",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4879,
+      "seconds": 0.087,
+      "log_sha256": "80a06539e85ee89862218d3df632db6c4b490556d45027ee504ed11bc6ba82db",
+      "name": "manager-reference-tests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "configcore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 3229,
+      "seconds": 0.082,
+      "log_sha256": "777072a32e3449bdeeabbf38606108fa35e464f64ea2e647701d603152865e57",
+      "name": "configuration-reference-tests",
+      "layer": "reference-and-limited-native-probe"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "resolvercore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 6707,
+      "seconds": 0.184,
+      "log_sha256": "05490b4ba02384b0f9e274bc3d7edee12ca485ccbde9118dee9a4faafffec2a4",
+      "name": "resolution-reference-tests",
+      "layer": "reference-and-untrusted-proposal-tool-tests"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/profile.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 146,
+      "seconds": 0.031,
+      "log_sha256": "5a12391acbe4ad2592e83ce1254142ac672d3dd13c31f7a7b0eb9534ec502292",
+      "name": "resolver-source-profile",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/check-neutral.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 1527,
+      "seconds": 0.036,
+      "log_sha256": "9924a0e4760c31c44af6d27b6aeb0921e82fce58ec82e233c686c8eaa7aad157",
+      "name": "resolver-neutral-boundary",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/check-resolver.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 124,
+      "seconds": 0.029,
+      "log_sha256": "d44a939b611aab4dce4dbf9834a7c3b10b00f65ff22e95feb0ffd99efa6a5249",
+      "name": "native-resolver-lock",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "distribution/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 11358,
+      "seconds": 0.562,
+      "log_sha256": "b4290cf473737a925d72e91d67df594e059d0f31bdb47bb2059ad977ec747e05",
+      "name": "distribution-tool-tests",
+      "layer": "actual-build-tool-tests"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/nia-product-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 1227,
+      "seconds": 0.113,
+      "log_sha256": "1914c95c178825e8458b40547937a41bafacc00ec0260ad1ee344c5dd3c5eac7",
+      "name": "nia-product-audit",
+      "layer": "source-product-coherence"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/unified-audit.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 200341,
+      "seconds": 0.172,
+      "log_sha256": "8546e8535e055469e8152fab38b916ec1d29cbc43d794ede0130f8da657b1b6c",
+      "name": "unified-architecture-audit",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/engineering.py",
+        "lint"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 144561,
+      "seconds": 0.187,
+      "log_sha256": "3b7ac61d41238067ce226aa07aafa5fa5d9c13a78ff032792046fe04930e9e48",
+      "name": "syntax-and-doc-links",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.019,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7",
+      "name": "assurance-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.016,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7",
+      "name": "pkgcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.019,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7",
+      "name": "statecore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.016,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7",
+      "name": "controlcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.016,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7",
+      "name": "configcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/mnt/data/nia-final-work/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4015,
+      "seconds": 0.016,
+      "log_sha256": "dbe4738b74c98f3e92d442ea4ad2f729a96a7a91642806fa9128fb4907225ea7",
+      "name": "resolvercore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/manager-profile.py"
+      ],
+      "cwd": "/mnt/data/nia-final-work/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 129,
+      "seconds": 0.03,
+      "log_sha256": "3c56c459ecf9d753669a58dc41467fa7abec5938ca1f8ddc13651425de9aaa99",
+      "name": "manager-implementation-profile",
+      "layer": "source"
+    },
+    {
+      "name": "assurance-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "pkgcore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "statecore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "controlcore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "configcore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    },
+    {
+      "name": "resolvercore-ada-build",
+      "result": "not-run",
+      "layer": "ada-build",
+      "reason": "gprbuild unavailable"
+    }
+  ],
+  "environment": {
+    "python": "3.13.5 (main, Jun 25 2025, 18:55:22) [GCC 14.2.0]",
+    "kernel": "6.18.35",
+    "architecture": "x86_64",
+    "gprbuild": null,
+    "gnatprove": null
+  },
+  "source_subject_before": "91c8d1c377ab512ad28f9e89b6f1c0b911c0d7a74b593b4c8c701d76d080eea6",
+  "source_subject_after": "91c8d1c377ab512ad28f9e89b6f1c0b911c0d7a74b593b4c8c701d76d080eea6",
+  "result": "incomplete-or-failed",
+  "temporary_io_tree_removed": true,
+  "ended_utc": "2026-09-07T09:36:46.265437+00:00"
+}

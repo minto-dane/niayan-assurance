@@ -1,0 +1,13 @@
+Mon Sep  7 19:10:15 UTC 2026
+Linux localhost 6.18.35 #1 SMP Mon Aug 31 18:10:37 UTC 2026 x86_64 GNU/Linux
+/usr/bin/gcc
+Ada front end: gnat1
+
+HTTPS HEAD (official Debian origin)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: deb.debian.org
+curl exit=6
+gcc: fatal error: cannot execute 'gnat1': posix_spawnp: No such file or directory
+compilation terminated.
+compiler_exit=1

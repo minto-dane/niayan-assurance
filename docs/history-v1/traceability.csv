@@ -1,0 +1,19 @@
+id,requirement,source,test,evidence
+R01,canonical frame with strict version,mc_protocol,run_contract_tests,Ada NOT_RUN
+R02,authenticated body and header,mc_signatures,run_ingress_tests,Ada NOT_RUN; native reference separated
+R03,scoped boot-bound authority,mc_authorization and mc_ingress,run_ingress_tests,Ada NOT_RUN
+R04,replay no repeated side effect,mc_replay,run_contract_tests,Ada NOT_RUN; durable executor missing
+R05,rejected transitions preserve state,pkg_transactions,run_pkg_tests,Ada NOT_RUN
+R06,write proposals require durable intent,pkg_transactions,run_pkg_tests,Ada NOT_RUN
+R07,journal chain and exact independent head,pkg_journal and pkg_journal_io,run_journal_io_tests,Ada NOT_RUN
+R08,no blind rollback of external effects,pkg_recovery,run_pkg_tests,Ada NOT_RUN
+R09,bounded RPM header structure,pkg_rpm,run_rpm_tests,Ada NOT_RUN; real RPM corpus missing
+R10,no full RPM semantic claim,pkg_inventory,run_pkg_tests,Ada NOT_RUN; normalizer missing
+R11,quorum after drain,state_topology,run_state_tests,Ada NOT_RUN; live adapter missing
+R12,semantic health separate from liveness,state_service,run_state_tests,Ada NOT_RUN
+R13,cluster rejoin after package commit,state_changes,run_integration_tests,Ada NOT_RUN
+R14,revoke unsafe boot fallback,state_boot,run_state_tests,Ada NOT_RUN; boot adapter missing
+R15,strict config denies security weakening,state_config,run_state_tests,Ada NOT_RUN
+R16,independent repo contract drift,contract_lock and assure,cross-repository.sh,Ada NOT_RUN; source hash audit separated
+R17,missing proof is failure,ci/verify.sh and Makefile,environment probes,missing tools confirmed
+R18,unqualified mutation is blocked,pkgctl and statectl and assure,cross-repository.sh,Ada NOT_RUN; source audit only

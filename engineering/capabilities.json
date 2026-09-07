@@ -1,0 +1,628 @@
+{
+  "format": 1,
+  "production_qualified": false,
+  "ada_executed": false,
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "統一ローカル管理CLI",
+      "level": "runtime-unvalidated",
+      "code": [
+        "controlcore/app/missionctl.adb",
+        "controlcore/runtime/ctl_dispatch.adb"
+      ],
+      "implemented_scope": "署名plan、WAL、固定native worker起動",
+      "remaining": "local-only; remote fleet daemon/manager HA未実装"
+    },
+    {
+      "id": "CAP-002",
+      "name": "署名計画・受入れ・部分tail修復",
+      "level": "runtime-unvalidated",
+      "code": [
+        "controlcore/runtime/ctl_config.adb",
+        "controlcore/runtime/ctl_closure.adb",
+        "controlcore/runtime/ctl_log_repair.adb"
+      ],
+      "implemented_scope": "役割分離・exact subject・fresh期限",
+      "remaining": "reportの意味は独立観測者とsite資格化が必要"
+    },
+    {
+      "id": "CAP-003",
+      "name": "管理WAL/CASと復旧系譜",
+      "level": "runtime-unvalidated",
+      "code": [
+        "controlcore/runtime/ctl_store.adb"
+      ],
+      "implemented_scope": "exact資源集合、再生、保全、reservation",
+      "remaining": "全volume巻戻しanchor/GC/長期移行は未接続"
+    },
+    {
+      "id": "CAP-004",
+      "name": "receiver台帳とgenesis",
+      "level": "runtime-unvalidated",
+      "code": [
+        "assurance/runtime/mc_receiver_ledger.adb",
+        "assurance/runtime/mc_gate.adb"
+      ],
+      "implemented_scope": "空/欠落拒否、明示provision、exact receipt",
+      "remaining": "既存現場台帳の移行審査が必要"
+    },
+    {
+      "id": "CAP-005",
+      "name": "独立rootのRPM展開/ファイル復旧",
+      "level": "runtime-unvalidated",
+      "code": [
+        "pkgcore/runtime/pkg_file_engine.adb",
+        "pkgcore/runtime/pkg_recovery_audit.adb"
+      ],
+      "implemented_scope": "署名・限定意味・前後像・WAL",
+      "remaining": "Nia full-root/catalog-WAL接続ではない。独立root file engineの継承SDK。"
+    },
+    {
+      "id": "CAP-006",
+      "name": "systemd/Pacemakerローカル連携",
+      "level": "runtime-unvalidated",
+      "code": [
+        "statecore/runtime/state_executor.adb"
+      ],
+      "implemented_scope": "固定command、永続intent、再観測",
+      "remaining": "現場設定/独立業務観測は未資格化"
+    },
+    {
+      "id": "CAP-007",
+      "name": "service autoheal",
+      "level": "runtime-unvalidated",
+      "code": [
+        "statecore/runtime/state_healing_journal.adb"
+      ],
+      "implemented_scope": "予算永続化・明示初期化・結果不明保護",
+      "remaining": "管理者/観測器との実接続試験未実施"
+    },
+    {
+      "id": "CAP-008",
+      "name": "etcd / cluster / rollout",
+      "level": "sdk-unvalidated",
+      "code": [
+        "statecore/runtime/state_rollout_store.adb"
+      ],
+      "implemented_scope": "mTLS比較更新、予算・段階展開",
+      "remaining": "遠隔配送/監視常駐/実partition試験なし"
+    },
+    {
+      "id": "CAP-009",
+      "name": "停止確認と隔離署名",
+      "level": "sdk-unvalidated",
+      "code": [
+        "assurance/src/mc_stop_barrier.adb"
+      ],
+      "implemented_scope": "全対象停止・外部隔離確認集約",
+      "remaining": "physical fencing hardware adapter未完成"
+    },
+    {
+      "id": "CAP-010",
+      "name": "network checkpoint",
+      "level": "sdk-unvalidated",
+      "code": [
+        "statecore/runtime/state_network_controller.adb"
+      ],
+      "implemented_scope": "NM呼出し・意図・checkpoint",
+      "remaining": "現場経路確認・OOBと統合試験が必要"
+    },
+    {
+      "id": "CAP-011",
+      "name": "ホスト観測・試験起動判定",
+      "level": "sdk-unvalidated",
+      "code": [
+        "statecore/app/hostctl.adb"
+      ],
+      "implemented_scope": "proc/sys観測と条件判定",
+      "remaining": "boot image書込/署名/installer未接続"
+    },
+    {
+      "id": "CAP-012",
+      "name": "RAS/FMA/FRU/WLM",
+      "level": "restored-model",
+      "code": [
+        "statecore/src/state_wlm.adb",
+        "statecore/src/state_ras.adb"
+      ],
+      "implemented_scope": "旧分岐の判定モデル復元",
+      "remaining": "実telemetry ingestion/automatic cgroup tuning未接続"
+    },
+    {
+      "id": "CAP-013",
+      "name": "HOLD / incorporation / acceptance",
+      "level": "restored-model",
+      "code": [
+        "pkgcore/src/pkg_holds.adb",
+        "pkgcore/src/pkg_incorporation.adb"
+      ],
+      "implemented_scope": "旧分岐の型/判定を復元",
+      "remaining": "全RPMsolver/scriptlet意味への統合は未完成"
+    },
+    {
+      "id": "CAP-014",
+      "name": "platform/attestation/commissioning",
+      "level": "restored-model",
+      "code": [
+        "assurance/src/mc_attestation.adb",
+        "assurance/src/mc_commissioning.adb"
+      ],
+      "implemented_scope": "証拠・基準・信頼判定",
+      "remaining": "TPM quote verifier/IMA collector現場統合未完成"
+    },
+    {
+      "id": "CAP-015",
+      "name": "backup保持/復元可能性",
+      "level": "sdk-unvalidated",
+      "code": [
+        "pkgcore/src/pkg_retention_batch.adb"
+      ],
+      "implemented_scope": "祖先/鍵/復元試験/保持集合の検査",
+      "remaining": "実backup取得・削除・DB restore adapter未完成"
+    },
+    {
+      "id": "CAP-016",
+      "name": "six-repo開発・適合検査",
+      "level": "tooling",
+      "code": [
+        "assurance/ci/engineering.py",
+        "assurance/ci/unified-audit.py",
+        "controlcore/ci/manager-profile.py"
+      ],
+      "implemented_scope": "ADR/要求/索引/在庫/fixtureの検査",
+      "remaining": "source検査はAda実行・意味証明ではない"
+    },
+    {
+      "id": "CAP-017",
+      "name": "ネイティブRPMDB/dpkg移行（対象外）",
+      "level": "not-promised",
+      "code": [],
+      "implemented_scope": "新規Nia imageであり既存OSの管理DB移行はしない",
+      "remaining": "代わりにNia catalog+root bootstrap実行器を完成させる必要がある"
+    },
+    {
+      "id": "CAP-018",
+      "name": "起動可能なISO/installer",
+      "level": "not-implemented",
+      "code": [],
+      "implemented_scope": "未提供",
+      "remaining": "Secure Boot含むbuild/install/recovery mediaが必要"
+    },
+    {
+      "id": "CAP-019",
+      "name": "データ復元・鍵災害復旧",
+      "level": "not-implemented",
+      "code": [],
+      "implemented_scope": "判定SDK以上のbackend未提供",
+      "remaining": "アプリ固有移行、RPO/RTO、独立鍵復旧が必要"
+    },
+    {
+      "id": "CAP-020",
+      "name": "完全OS/cluster ACID",
+      "level": "not-promised",
+      "code": [],
+      "implemented_scope": "原子的全OS transactionとは呼ばない",
+      "remaining": "複数状態領域を補償/照合で管理。全故障・exactly onceを保証しない"
+    },
+    {
+      "id": "CAP-021",
+      "name": "設定の意味・merge・migration・依存",
+      "level": "sdk-unvalidated",
+      "code": [
+        "configcore/src/config_semantics.adb",
+        "configcore/src/config_merge.adb",
+        "configcore/src/config_dependencies.adb"
+      ],
+      "implemented_scope": "exact typed schema, tri-state and guarded predicates",
+      "remaining": "全native adapter/serializer、Ada実行/証明は未完"
+    },
+    {
+      "id": "CAP-022",
+      "name": "設定観測と診断CLI",
+      "level": "runtime-unvalidated",
+      "code": [
+        "configcore/app/configctl.adb",
+        "configcore/runtime/config_inventory.adb"
+      ],
+      "implemented_scope": "有界native directoryとstrict input診断",
+      "remaining": "署名された完全native観測を自動収集するdaemonではない"
+    },
+    {
+      "id": "CAP-023",
+      "name": "NVIDIA exact電源互換性",
+      "level": "sdk-unvalidated",
+      "code": [
+        "configcore/src/config_nvidia.adb"
+      ],
+      "implemented_scope": "module flavor/notification/backing/target/running",
+      "remaining": "実機collector・suspend試験・全driverルールpack未完"
+    },
+    {
+      "id": "CAP-024",
+      "name": "二者署名設定gate",
+      "level": "sdk-unvalidated",
+      "code": [
+        "assurance/runtime/mc_config_auth.adb",
+        "pkgcore/runtime/pkg_configuration_engine.adb"
+      ],
+      "implemented_scope": "正規形receipt、exact scope、認可合成",
+      "remaining": "全既存workerへ必須接続は未完、投影adapterが必要"
+    },
+    {
+      "id": "CAP-025",
+      "name": "旧Leap配布入力・KIWI生成（履歴）",
+      "level": "tooling",
+      "code": [
+        "distribution/history/leap16/tools/distroctl.py",
+        "distribution/history/leap16/tools/repo_metadata.py"
+      ],
+      "implemented_scope": "inactive history/leap16に保存。現行Nia出荷toolではない",
+      "remaining": "旧試験成功はNiaの資格ではない"
+    },
+    {
+      "id": "CAP-026",
+      "name": "統一設定診断入口",
+      "level": "runtime-unvalidated",
+      "code": [
+        "controlcore/runtime/ctl_configuration.adb",
+        "controlcore/app/missionctl.adb"
+      ],
+      "implemented_scope": "固定hash configctlへのread-only起動",
+      "remaining": "local-only、監視daemon/全fleet配布ではない"
+    },
+    {
+      "id": "CAP-027",
+      "name": "独立selection/schedule検査",
+      "level": "sdk-unvalidated",
+      "code": [
+        "resolvercore/src/resolver_verify.adb"
+      ],
+      "implemented_scope": "形式非依存AST/所有権/順序/予算の直接検査",
+      "remaining": "native完全closure、Ada実行と証明未完"
+    },
+    {
+      "id": "CAP-028",
+      "name": "CNF/独立RUP-RAT証明検査",
+      "level": "sdk-unvalidated",
+      "code": [
+        "resolvercore/src/resolver_cnf.adb",
+        "resolvercore/src/resolver_proof.adb",
+        "resolvercore/src/resolver_lrat.adb"
+      ],
+      "implemented_scope": "決定的Boolean緩和、bounded text proof再計算",
+      "remaining": "formal proof未完、extension variable/binary/無制限proof未対応"
+    },
+    {
+      "id": "CAP-029",
+      "name": "RPM native意味投影",
+      "level": "sdk-unvalidated",
+      "code": [
+        "pkgcore/src/pkg_rpm_resolution.adb"
+      ],
+      "implemented_scope": "EVR、集合with/without、guarded依存/競合、直接再検査",
+      "remaining": "元headerから全Universe、全phase/scriptlet/triggerは未完"
+    },
+    {
+      "id": "CAP-030",
+      "name": "libsolv/CaDiCaL提案helper",
+      "level": "tooling",
+      "code": [
+        "resolvercore/tools/propose_libsolv.py",
+        "resolvercore/tools/propose_cadical.py"
+      ],
+      "implemented_scope": "非特権cache入力、候補/未検証proofのみ出力",
+      "remaining": "実solver版で未実行。外部sandboxとsource認証が必要"
+    },
+    {
+      "id": "CAP-031",
+      "name": "統一resolver診断と実変更gate",
+      "level": "runtime-unvalidated",
+      "code": [
+        "controlcore/runtime/ctl_resolution.adb",
+        "pkgcore/runtime/pkg_resolution_engine.adb"
+      ],
+      "implemented_scope": "固定CLI、元認可/native/currentの合成SDK",
+      "remaining": "opt-in、全worker必須接続やnative観測は未完"
+    },
+    {
+      "id": "CAP-032",
+      "name": "DEB/source非実行取り込み",
+      "level": "tooling",
+      "code": [
+        "distribution/tools/debian_archive_auth.py",
+        "distribution/tools/deb_archive.py"
+      ],
+      "implemented_scope": "署名chainとexact metadataの検査",
+      "remaining": "実Forky corpus/native privilege boundary"
+    },
+    {
+      "id": "CAP-033",
+      "name": "Nia候補catalogと配置",
+      "level": "tooling",
+      "code": [
+        "distribution/tools/nia_catalog.py",
+        "distribution/tools/nia_layout.py"
+      ],
+      "implemented_scope": "候補構造と回復domainの検査",
+      "remaining": "root writer/WAL/boot integration未完"
+    },
+    {
+      "id": "CAP-034",
+      "name": "DEB比較・提案",
+      "level": "sdk-unvalidated",
+      "code": [
+        "pkgcore/src/pkg_deb_versions.adb",
+        "resolvercore/tools/propose_libsolv_deb.py"
+      ],
+      "implemented_scope": "Ada比較と非特権DEB proposal経路",
+      "remaining": "Ada未実行、native libsolv未試験、全phase lowering未完"
+    },
+    {
+      "id": "CAP-035",
+      "name": "exact再現receipt",
+      "level": "tooling",
+      "code": [
+        "distribution/tools/reproducibility.py"
+      ],
+      "implemented_scope": "独立principal/domainの署名付き一致証拠",
+      "remaining": "実issuerとbuildinfo供給未接続"
+    },
+    {
+      "id": "CAP-036",
+      "name": "helper所有権と回収順",
+      "level": "runtime-unvalidated",
+      "code": [
+        "assurance/runtime/mc_command.adb",
+        "assurance/runtime/mc_runtime.adb"
+      ],
+      "implemented_scope": "leaderを回収する前にcleanupし、stdout/leader終了順に依存せず期限・出力上限を守る。",
+      "remaining": "Ada execution/proof and target integration not validated; see execution-safety specification."
+    },
+    {
+      "id": "CAP-037",
+      "name": "観測FD・ctimeの照合",
+      "level": "runtime-unvalidated",
+      "code": [
+        "assurance/runtime/mc_fs.adb",
+        "pkgcore/runtime/pkg_file_engine.adb"
+      ],
+      "implemented_scope": "パスとFDの事前事後を照合し、mtimeだけ復元した変更も観測差異として拒否する。",
+      "remaining": "Ada execution/proof and target integration not validated; see execution-safety specification."
+    },
+    {
+      "id": "CAP-038",
+      "name": "intent前の完了記録余力",
+      "level": "runtime-unvalidated",
+      "code": [
+        "assurance/src/mc_journal_budget.ads",
+        "assurance/runtime/mc_gate.adb",
+        "controlcore/src/ctl_workflow.adb",
+        "controlcore/runtime/ctl_store.adb"
+      ],
+      "implemented_scope": "未完計画の予約と新規計画の終了記録余力を確保してから新たなintentを記録する。",
+      "remaining": "Ada execution/proof and target integration not validated; see execution-safety specification."
+    },
+    {
+      "id": "CAP-039",
+      "name": "既存lockの欠落拒否",
+      "level": "runtime-unvalidated",
+      "code": [
+        "pkgcore/runtime/pkg_file_engine.adb",
+        "assurance/runtime/mc_checkpoint_store.adb",
+        "statecore/runtime/state_network_controller.adb"
+      ],
+      "implemented_scope": "既存状態の復旧と新規bootstrapを分け、失われたlock inodeを通常アクセスで再作成しない。",
+      "remaining": "Ada execution/proof and target integration not validated; see execution-safety specification."
+    },
+    {
+      "id": "CAP-040",
+      "name": "複合検査経路の必須化",
+      "level": "sdk-unvalidated",
+      "code": [
+        "pkgcore/runtime/pkg_managed_engine.ads",
+        "pkgcore/runtime/pkg_managed_engine.adb"
+      ],
+      "implemented_scope": "合成SDKは停止・設定・元の認可・独立solver・native意味・現在の予約を必須とし、弱い下位Engineを公開しない。",
+      "remaining": "Ada execution/proof and target integration not validated; see execution-safety specification."
+    },
+    {
+      "id": "CAP-041",
+      "name": "世代namespaceの分離",
+      "level": "runtime-unvalidated",
+      "code": [
+        "pkgcore/runtime/pkg_resolution_engine.ads",
+        "pkgcore/runtime/pkg_resolution_engine.adb"
+      ],
+      "implemented_scope": "catalog/model世代とcluster membership epochを等号で結び付けず、それぞれ対応する証拠へ束縛する。",
+      "remaining": "Ada execution/proof and target integration not validated; see execution-safety specification."
+    },
+    {
+      "id": "CAP-042",
+      "name": "外部anchorと独立quorum",
+      "level": "sdk-unvalidated",
+      "code": [
+        "assurance/src/mc_recovery_cohort.adb",
+        "assurance/tools/nia_recovery.py"
+      ],
+      "implemented_scope": "復旧は外部でpinした完全なanchorと現在のtrust floorへ一致し、別principal・鍵・domainとrecovery/witness役の署名を要求する。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-043",
+      "name": "完全inventoryの破損検出",
+      "level": "tooling",
+      "code": [
+        "assurance/tools/nia_recovery.py"
+      ],
+      "implemented_scope": "認証されたcohortの内容、mode、owner、xattr、directory集合を検査し、追加・欠落・改変を正常な空状態と解釈しない。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-044",
+      "name": "候補への再構成と証拠保全",
+      "level": "tooling",
+      "code": [
+        "assurance/tools/nia_recovery.py",
+        "assurance/tools/recovery_io.py"
+      ],
+      "implemented_scope": "複数の破損複製から正しいchunkだけを選び、新しい私有candidateへ再構成し、証拠I/O失敗では完了扱いしない。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-045",
+      "name": "historyと外部効果の継続",
+      "level": "sdk-unvalidated",
+      "code": [
+        "assurance/src/mc_recovery_cohort.ads",
+        "assurance/src/mc_recovery_cohort.adb"
+      ],
+      "implemented_scope": "復旧でpending要求を消さず、候補のbyte一致後もnative journalを検査し、外部結果を照合するまでOperationalへ進めない。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-046",
+      "name": "Capsule能力の非昇格",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/src/capsule_policy.adb",
+        "capsulecore/tools/capsule_plan.py"
+      ],
+      "implemented_scope": "Capsuleの能力は要求とOS・管理者・利用者方針の積集合とし、必須能力不足、未知の能力、host全体の権限を拒否する。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-047",
+      "name": "世代とデータの独立管理",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/src/capsule_lifecycle.adb"
+      ],
+      "implemented_scope": "runtimeとapp世代をdigestで固定し、旧実行個体・復旧pinを保持し、データ契約の変更に明示的な移行を要求する。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-048",
+      "name": "Flatpak入力の要求化",
+      "level": "tooling",
+      "code": [
+        "capsulecore/tools/capsule_metadata.py"
+      ],
+      "implemented_scope": "Flatpak metadataは許可ではなく要求として扱い、raw network/audio/deviceの意味を狭く偽装せず、未対応条件やextensionを拒否する。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-049",
+      "name": "brokerとmountの実行個体束縛",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/src/capsule_broker.adb",
+        "capsulecore/src/capsule_mounts.adb"
+      ],
+      "implemented_scope": "brokerとmountはapp・世代・policy・boot・cgroup・userの実際のidentityへ束縛し、既存FDの失効をDB操作だけで保証しない。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-050",
+      "name": "candidate treeの独立検査",
+      "level": "tooling",
+      "code": [
+        "capsulecore/tools/capsule_tree.py"
+      ],
+      "implemented_scope": "正確な原本digestと完全inventoryを再検査し、元のinodeを共有せず、新しい候補に限ってmaterializeし、診断を実行許可にしない。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-051",
+      "name": "統一診断と形式版の拘束",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/src/capsule_wire.adb",
+        "controlcore/runtime/ctl_capsule.adb",
+        "capsulecore/app/capsulectl.adb"
+      ],
+      "implemented_scope": "Capsule診断はNiaの固定tool policy経由で行い、未知bit・不正長・reserved・classを拒否し、自己申告の条件を本番証拠にしない。",
+      "remaining": "Independent target integration, native Ada execution and formal proof; see referenced specification. No live repair or sandbox launch qualification."
+    },
+    {
+      "id": "CAP-052",
+      "name": "Kernel由来peerの要求受信",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/runtime/capsule_consent_channel.adb"
+      ],
+      "implemented_scope": "要求はkernel credentialsと登録済み実行個体から認証し、wireの自己申告で本人・許可を決めてはならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    },
+    {
+      "id": "CAP-053",
+      "name": "同意と資源の分離",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/src/capsule_consent.adb"
+      ],
+      "implemented_scope": "同意は正確な質問と資源へ束縛し、同意だけで資源を与えず、反映の直前直後に現在の認可を照合しなければならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    },
+    {
+      "id": "CAP-054",
+      "name": "native Portalの先行intent",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/runtime/capsule_consent_engine.adb"
+      ],
+      "implemented_scope": "native PortalがUIと同時に資源を作る場合はpossible-effectを永続化してから呼び出し、応答喪失時に要求を再送してはならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    },
+    {
+      "id": "CAP-055",
+      "name": "UI backendの本人・形式検査",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/runtime/capsule_access_ui.adb"
+      ],
+      "implemented_scope": "UI backendのunique ownerと独立した本人確認、正確な質問digest、返答の署名型と期限を検査しなければならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    },
+    {
+      "id": "CAP-056",
+      "name": "失効の実効性",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/src/capsule_consent.adb"
+      ],
+      "implemented_scope": "取消と資源遮断を区別し、実際のgrant/FD/sessionが遮断された証拠なしに失効完了を記録してはならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    },
+    {
+      "id": "CAP-057",
+      "name": "保存・anchor・終端予算",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/runtime/capsule_consent_store.adb"
+      ],
+      "implemented_scope": "ログは独立anchorと一致することを要求し、欠落を初期化せず、既存ticketの終端記録の枠を新規要求へ使わせてはならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    },
+    {
+      "id": "CAP-058",
+      "name": "要求洪水とbroker再起動",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/src/capsule_consent.adb"
+      ],
+      "implemented_scope": "prompt budgetをuser+appへ固定し、再起動・世代更新による予算リセットや旧grantの自動復活を許可してはならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    },
+    {
+      "id": "CAP-059",
+      "name": "引き継ぎ・未完範囲の明示",
+      "level": "sdk-unvalidated",
+      "code": [
+        "capsulecore/docs/consent.ja.md"
+      ],
+      "implemented_scope": "診断、模擬peer試験、未検証のAda、未接続adapterを区別し、現在の実装と残る出荷条件を機械台帳と文書へ記録しなければならない。",
+      "remaining": "Ada/FFI/proof execution, real desktop resource adapters and broker integration."
+    }
+  ]
+}

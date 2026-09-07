@@ -1,0 +1,557 @@
+{
+  "format": 1,
+  "ada_tests": [
+    {
+      "main": "assurance/tests/run_recovery_storage_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/state",
+        "$TEMP/store"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "fresh isolated dirs; inspect driver preconditions before execution"
+    },
+    {
+      "main": "assurance/tests/run_qualification_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_contract_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_ingress_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_v2_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_resilience_contract_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_control_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_backup_contract_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_control_io_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/policy",
+        "$TEMP/ops",
+        "$TEMP/security"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "fresh isolated dirs; inspect driver preconditions before execution"
+    },
+    {
+      "main": "assurance/tests/run_checkpoint_io_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/private"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "fresh isolated dirs; inspect driver preconditions before execution"
+    },
+    {
+      "main": "assurance/tests/run_control_vector_tests.adb",
+      "tier": "unit",
+      "arguments": [
+        "tests/fixtures/control-v1"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_stop_barrier_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_stop_vector_tests.adb",
+      "tier": "unit",
+      "arguments": [
+        "fixtures/stop-v1"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "pkgcore/tests/run_file_replay_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "pkgcore/tests/run_composition_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "pkgcore/tests/run_pkg_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "pkgcore/tests/run_rpm_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "pkgcore/tests/run_journal_io_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/private"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "fresh isolated dirs; inspect driver preconditions before execution"
+    },
+    {
+      "main": "pkgcore/tests/run_v2_pkg_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "pkgcore/tests/run_file_engine_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/root",
+        "$TEMP/state",
+        "$TEMP/store"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/root/usr"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "fresh isolated dirs; inspect driver preconditions before execution"
+    },
+    {
+      "main": "pkgcore/tests/run_repair_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "pkgcore/tests/run_retention_batch_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_platform_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_host_io_tests.adb",
+      "tier": "host-read-only",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_state_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_v2_state_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_healing_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_cluster_resilience_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_healing_io_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/state",
+        "$TEMP/store"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "fresh isolated dirs; inspect driver preconditions before execution"
+    },
+    {
+      "main": "statecore/tests/run_readmission_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_disaster_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_etcd_limit_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "statecore/tests/run_etcd_wire_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "does not install or start services"
+    },
+    {
+      "main": "assurance/tests/run_receiver_ledger_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/private"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "assurance/tests/run_request_replay_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "assurance/tests/run_platform_assurance_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "pkgcore/tests/run_enterprise_pkg_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "statecore/tests/run_ras_platform_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "controlcore/tests/run_manager_model_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "controlcore-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "controlcore/tests/run_manager_vector_tests.adb",
+      "tier": "unit",
+      "arguments": [
+        "tests/fixtures"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "controlcore-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "controlcore/tests/run_manager_storage_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "tests/fixtures",
+        "$TEMP/private"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "controlcore-maintainers",
+      "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
+    },
+    {
+      "main": "configcore/tests/run_config_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "configcore-maintainers",
+      "note": "No native service changes; private new directory only for IO test. Unexecuted Ada source."
+    },
+    {
+      "main": "configcore/tests/run_config_nvidia_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "configcore-maintainers",
+      "note": "No native service changes; private new directory only for IO test. Unexecuted Ada source."
+    },
+    {
+      "main": "configcore/tests/run_config_binding_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "configcore-maintainers",
+      "note": "No native service changes; private new directory only for IO test. Unexecuted Ada source."
+    },
+    {
+      "main": "configcore/tests/run_config_io_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/inventory"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "configcore-maintainers",
+      "note": "No native service changes; private new directory only for IO test. Unexecuted Ada source."
+    },
+    {
+      "main": "resolvercore/tests/run_resolver_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "resolvercore-maintainers",
+      "note": "Independent model/proof/native projection assertions; no host mutation. Ada execution not performed."
+    },
+    {
+      "main": "resolvercore/tests/run_resolver_proof_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "resolvercore-maintainers",
+      "note": "Independent model/proof/native projection assertions; no host mutation. Ada execution not performed."
+    },
+    {
+      "main": "pkgcore/tests/run_pkg_resolution_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "Independent model/proof/native projection assertions; no host mutation. Ada execution not performed."
+    },
+    {
+      "main": "pkgcore/tests/run_deb_semantics_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "native DEB semantics test; GNAT execution not performed"
+    },
+    {
+      "main": "statecore/tests/run_xfs_health_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "statecore-maintainers",
+      "note": "pure XFS health and repair-policy tests; no live filesystem mutation"
+    },
+    {
+      "main": "assurance/tests/run_journal_budget_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "logical slot arithmetic"
+    },
+    {
+      "main": "assurance/tests/run_fs_observation_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/private"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "fresh private directory; own finite-lived children only; no services or devices"
+    },
+    {
+      "main": "assurance/tests/run_command_lifecycle_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/private"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "fresh private directory; own finite-lived children only; no services or devices"
+    },
+    {
+      "main": "assurance/tests/run_cohort_recovery_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "assurance-maintainers",
+      "note": "pure state/contract tests; does not install or launch services"
+    },
+    {
+      "main": "capsulecore/tests/run_capsule_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "capsulecore-maintainers",
+      "note": "pure state/contract tests; does not install or launch services"
+    },
+    {
+      "main": "capsulecore/tests/run_consent_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "capsulecore-maintainers",
+      "note": "Consent state/codec/negative tests; no UI or device side effects. Ada execution pending."
+    },
+    {
+      "main": "capsulecore/tests/run_consent_store_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/private"
+      ],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "capsulecore-maintainers",
+      "note": "Real MC_FS/MC_Log IO; memory anchor is an explicit test double, not production trust storage. Ada not run."
+    }
+  ]
+}

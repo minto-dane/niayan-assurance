@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "not_a_fault_injection_result": true,
+  "entries": [
+    {
+      "fault": "stale-or-replayed-health",
+      "response": "reject, no side effect",
+      "evidence_required": "health timestamp, sequence, boot, policy, scope",
+      "recovery": "signed fresh observation"
+    },
+    {
+      "fault": "systemd-automatic-restart-already-owned",
+      "response": "inhibit local recovery; do not disable existing manager",
+      "evidence_required": "restart policy and jobs",
+      "recovery": "reviewed single-owner configuration"
+    },
+    {
+      "fault": "dependency-unhealthy",
+      "response": "reset failure streak; no cascade restart",
+      "evidence_required": "dependency graph/qualified observer",
+      "recovery": "dependency recovery plus fresh observations"
+    },
+    {
+      "fault": "command-reply-lost",
+      "response": "persist Outcome_Unknown; no blind replay",
+      "evidence_required": "durable intent and actual unit",
+      "recovery": "qualified reconciliation"
+    },
+    {
+      "fault": "partial-wal-tail",
+      "response": "fail closed pending exact scoped repair",
+      "evidence_required": "signed high-water + prefix/head/tail",
+      "recovery": "preserve receipt/tail, fsync truncate, reconcile effect"
+    },
+    {
+      "fault": "whole-record-corruption-or-missing-log",
+      "response": "deny normal worker; no auto reset",
+      "evidence_required": "marker/hash chain",
+      "recovery": "qualified offline disaster recovery"
+    },
+    {
+      "fault": "worker-or-node-reboot",
+      "response": "rebind clock; retain pending/debt/holds",
+      "evidence_required": "boot id and signed same-plan request",
+      "recovery": "fresh local boot scoped observations"
+    },
+    {
+      "fault": "etcd-timeout-or-leader-loss",
+      "response": "unknown remains; reservation not implicitly freed",
+      "evidence_required": "linearizable reread and CAS",
+      "recovery": "qualified slot reconciliation"
+    },
+    {
+      "fault": "network-partition",
+      "response": "do not promote writers without quorum/data/fence proof",
+      "evidence_required": "independent physical isolation and data",
+      "recovery": "existing cluster recovery authority"
+    },
+    {
+      "fault": "canary-regression",
+      "response": "pause next rollout nodes",
+      "evidence_required": "accepted cohort and fresh observation",
+      "recovery": "site-approved recovery/change plan"
+    },
+    {
+      "fault": "planned-node-reboot",
+      "response": "retain reservation; reset health soak",
+      "evidence_required": "expected boot plan and old incarnation retirement",
+      "recovery": "Accept_Node_Boot qualified proof"
+    },
+    {
+      "fault": "package-drift",
+      "response": "bounded repair only for explicitly allowed regular files",
+      "evidence_required": "signed inventory exact preimage",
+      "recovery": "normal package gate/WAL path"
+    },
+    {
+      "fault": "intrusion-or-hardware-error",
+      "response": "inhibit repair to preserve evidence",
+      "evidence_required": "qualified incident facts",
+      "recovery": "separate incident response/diagnosis"
+    },
+    {
+      "fault": "retry-exhaustion",
+      "response": "cooldown for window; latched circuit for cumulative debt",
+      "evidence_required": "persistent policy budget",
+      "recovery": "do not erase state; qualified maintenance API remains gap"
+    },
+    {
+      "fault": "capacity-exhaustion",
+      "response": "deny unsafe progress, preserve existing evidence",
+      "evidence_required": "headroom/record limits",
+      "recovery": "capacity planning and qualified recovery; no destructive auto GC"
+    }
+  ]
+}

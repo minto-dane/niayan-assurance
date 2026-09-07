@@ -1,0 +1,899 @@
+{
+  "format": 1,
+  "hazards": [
+    {
+      "id": "HAZ-001",
+      "title": "破損・切断した履歴の採用",
+      "severity": "critical",
+      "mitigation": "不正historyから書き込まない",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-001",
+        "REQ-006"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-001.ja.md"
+    },
+    {
+      "id": "HAZ-002",
+      "title": "途中で判断根拠が変わる",
+      "severity": "critical",
+      "mitigation": "decisionのscopeと履歴を固定する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-002"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-003.ja.md"
+    },
+    {
+      "id": "HAZ-003",
+      "title": "実像と完了記録の乖離",
+      "severity": "critical",
+      "mitigation": "before/after所属だけでなく進行phaseを照合する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-003"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-012.ja.md"
+    },
+    {
+      "id": "HAZ-004",
+      "title": "欠落状態の自動初期化",
+      "severity": "critical",
+      "mitigation": "欠落の証拠を保全し新規作成しない",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-004",
+        "REQ-005"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-002.ja.md"
+    },
+    {
+      "id": "HAZ-005",
+      "title": "再送による回復領域枯渇",
+      "severity": "high",
+      "mitigation": "局所冪等cleanupと未解決資産保持を両立する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-007"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-007.ja.md"
+    },
+    {
+      "id": "HAZ-006",
+      "title": "認可・信頼・保護領域の迂回",
+      "severity": "critical",
+      "mitigation": "scopeと役割を固定し一般計画で変更させない",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-008",
+        "REQ-020",
+        "REQ-027"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-008.ja.md"
+    },
+    {
+      "id": "HAZ-007",
+      "title": "読取競合や特殊fileによる停止",
+      "severity": "high",
+      "mitigation": "型/境界/同一性確認とprivate領域を維持する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-009",
+        "REQ-028"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-012.ja.md"
+    },
+    {
+      "id": "HAZ-008",
+      "title": "ACK済み変更の不確かな永続化",
+      "severity": "critical",
+      "mitigation": "永続化境界を定義し実装/装置を試験する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-010"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-007.ja.md"
+    },
+    {
+      "id": "HAZ-009",
+      "title": "停止していないreader/writerへの混在公開",
+      "severity": "critical",
+      "mitigation": "実効的な所有権/停止範囲を契約に含める",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-011"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-005.ja.md"
+    },
+    {
+      "id": "HAZ-010",
+      "title": "結果不明operationの二重実行",
+      "severity": "critical",
+      "mitigation": "操作IDと権威ある再観測で照合する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-012"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-004.ja.md"
+    },
+    {
+      "id": "HAZ-011",
+      "title": "古い媒体で信頼/世代が巻き戻る",
+      "severity": "critical",
+      "mitigation": "独立アンカー・新制御世代を維持する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-013"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-006.ja.md"
+    },
+    {
+      "id": "HAZ-012",
+      "title": "分断時の二重writer",
+      "severity": "critical",
+      "mitigation": "quorumと物理/保存先fencingを分離する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-014",
+        "REQ-015"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-005.ja.md"
+    },
+    {
+      "id": "HAZ-013",
+      "title": "復旧暴走・責任者競合",
+      "severity": "high",
+      "mitigation": "永続予算と単一の再起動責任者",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-016",
+        "REQ-031"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-004.ja.md"
+    },
+    {
+      "id": "HAZ-014",
+      "title": "管理経路と起動候補を同時に喪失",
+      "severity": "critical",
+      "mitigation": "独立OOB/回復imageと正確な切替",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-017",
+        "REQ-018"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-009.ja.md"
+    },
+    {
+      "id": "HAZ-015",
+      "title": "データ損失・戻らないスキーマ",
+      "severity": "critical",
+      "mitigation": "別のdata/backup/鍵契約と復元試験",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-019",
+        "REQ-030"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-010.ja.md"
+    },
+    {
+      "id": "HAZ-016",
+      "title": "未実行・古い証跡を合格と表示",
+      "severity": "critical",
+      "mitigation": "exact subjectと層別実証を管理",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-021",
+        "REQ-022",
+        "REQ-023",
+        "REQ-024",
+        "REQ-026"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-017",
+      "title": "未完の対応範囲で本番更新",
+      "severity": "critical",
+      "mitigation": "未対応拒否と移行審査を維持する",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-025",
+        "REQ-032"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-018",
+      "title": "診断/CIに秘密が混入",
+      "severity": "high",
+      "mitigation": "秘密分離・redaction・保護された保存",
+      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "requirements": [
+        "REQ-029"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-012.ja.md"
+    },
+    {
+      "id": "HAZ-019",
+      "title": "統一署名planの逸脱",
+      "severity": "critical",
+      "mitigation": "四repoの所有権を分離した管理入口は、exactな署名workflowと固定route以外を実行してはならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-033"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-020",
+      "title": "意図先行と結果照合の逸脱",
+      "severity": "critical",
+      "mitigation": "管理器はworker起動より前にintentを永続化し、終了値やtimeoutではなくexact receiver台帳を照合しなければならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-034"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-021",
+      "title": "空/欠落再送台帳の拒否の逸脱",
+      "severity": "critical",
+      "mitigation": "既存receiverまたはhealingの復旧Openは欠落logを生成せず、空logを正常な初期状態とみなしてはならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-035"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-022",
+      "title": "予約を全資源について保持の逸脱",
+      "severity": "critical",
+      "mitigation": "復旧planは親と同一clusterかつ完全同一資源集合を要求し、受入れ以前に親の予約を解除してはならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-036"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-023",
+      "title": "Exact部分末尾修復の逸脱",
+      "severity": "critical",
+      "mitigation": "完全prefixを検査し、head/count/tail/report/policy/期限に三役署名を検証し、証拠を保存後だけ部分tailを修復しなければならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-037"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-024",
+      "title": "二つのprofile拘束の逸脱",
+      "severity": "critical",
+      "mitigation": "共有契約と管理器実装を別々にpolicyへ固定し、変更・欠落・未知fileを無視して署名対象を流用してはならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-038"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-025",
+      "title": "分岐在庫の保存の逸脱",
+      "severity": "critical",
+      "mitigation": "分岐ZIPの復元/同名優先を在庫化し、追加テストを登録し、過去のPASSを現版のAda実行結果へ昇格してはならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-039"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-026",
+      "title": "業務受入れと操作結果の分離の逸脱",
+      "severity": "critical",
+      "mitigation": "receiver completionだけで業務復旧と予約解放を承認せず、exact reportと現在head/revisionへ三役closureを要求しなければならない。",
+      "residual_risk": "Ada実行/証明/現場TCB資格化は未実施。外部証拠の意味と独立回復経路が必要。",
+      "requirements": [
+        "REQ-040"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-013.ja.md"
+    },
+    {
+      "id": "HAZ-027",
+      "title": "完全な設定入力と不明の分離の条件を省略した変更",
+      "severity": "high",
+      "mitigation": "入力不足や未知のキー・native意味を正常なAbsentへ補完せず、対象schemaのすべての必要条件を検査しなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-041"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-028",
+      "title": "追加削除を含む三方向mergeの条件を省略した変更",
+      "severity": "high",
+      "mitigation": "旧既定値・local意図・新既定値の完全集合を使い、衝突時には部分的な適用提案を返してはならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-042"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-029",
+      "title": "優先順位と派生依存の検査の条件を省略した変更",
+      "severity": "high",
+      "mitigation": "native優先順位の完全なsource集合から、影響する生成物と稼働構成を推移的に再検査しなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-043"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-030",
+      "title": "NVIDIAのexact power capabilityの条件を省略した変更",
+      "severity": "critical",
+      "mitigation": "対象driver/module flavor/validator/電源意図/保存経路/署名条件を正確に照合し、不明なら新しい変更を拒否しなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-044"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-031",
+      "title": "独立署名した設定承認の条件を省略した変更",
+      "severity": "critical",
+      "mitigation": "設定証拠を二つの独立した鍵・roleと現在の期待subject・共有profile・最低sequenceへ結び付け、再利用の条件を検査しなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-045"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-032",
+      "title": "設定状態の再起動継続の条件を省略した変更",
+      "severity": "critical",
+      "mitigation": "boot変更を暗黙に承認せず、旧実行停止と正確な対象を確認した明示遷移の後に新しい正常観測を要求しなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-046"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-033",
+      "title": "安全なdirect configuration inventoryの条件を省略した変更",
+      "severity": "high",
+      "mitigation": "一覧・属性・内容・xattrを有界に照合し、範囲外・未対応・競合を完全検査済みと表示してはならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-047"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-034",
+      "title": "SUSE familyと安全基盤の固定の条件を省略した変更",
+      "severity": "critical",
+      "mitigation": "SLES16とLeap16の入力を混ぜず、署名/Secure Boot/SELinux/boot方式を明示した別profileに結び付けなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-048"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-035",
+      "title": "配布入力の独立source期待値の条件を省略した変更",
+      "severity": "critical",
+      "mitigation": "二者署名と完全snapshotを検査し、外部で承認されたsource/contract/profile期待値に一致しない入力を受け入れてはならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-049"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-036",
+      "title": "RPM-MDの範囲外参照拒否の条件を省略した変更",
+      "severity": "high",
+      "mitigation": "metadataのDTD/外部path/重複/弱いhashを拒否し、採用RPMのNEVRAと内容digestをcatalogと照合しなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-050"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-037",
+      "title": "全5repoの開発整合性の条件を省略した変更",
+      "severity": "high",
+      "mitigation": "configcoreと組立て工具を在庫・試験・固定契約・RPM配布・文書照合の対象に含めなければならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-051"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-038",
+      "title": "意味変更と単一変更ownerの条件を省略した変更",
+      "severity": "critical",
+      "mitigation": "設定証拠と元の認可を合成し、署名付き診断だけで既存writer予約やWAL・受信認可を迂回してはならない。",
+      "residual_risk": "実adapter/観測/資格化または独立設計レビューが未完。入力の自己申告は物理的証拠ではない。",
+      "requirements": [
+        "REQ-052"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-configuration.ja.md"
+    },
+    {
+      "id": "HAZ-039",
+      "title": "誤った形式変換を正しいSATで正当化",
+      "severity": "critical",
+      "mitigation": "原データ/adapter/coverageを別に検証",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-053"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-040",
+      "title": "最終集合だけ合っている危険計画",
+      "severity": "critical",
+      "mitigation": "直接評価・exact入力・上限拒否",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-054"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-041",
+      "title": "過渡的な依存欠落と重複操作",
+      "severity": "critical",
+      "mitigation": "境界ごとの再計算と操作IDの一意性",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-055"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-042",
+      "title": "偽証明や別問題の証明を受理",
+      "severity": "critical",
+      "mitigation": "全opposing clausesを再計算し原式を独立生成",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-056"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-043",
+      "title": "rich dependenciesの意味落ち",
+      "severity": "critical",
+      "mitigation": "集合の交差/差、native再検査と未知拒否",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-057"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-044",
+      "title": "検査中の失効やsource省略",
+      "severity": "critical",
+      "mitigation": "必須native/current callbacksと元認可の再検査",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-058"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-045",
+      "title": "solverの提案をroot変更へ直結",
+      "severity": "critical",
+      "mitigation": "候補出力のみ・問題拒否・独立gate",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-059"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-046",
+      "title": "未証明コードを形式検証済みと誤認",
+      "severity": "high",
+      "mitigation": "proof境界と実行結果の明示、資格化gate",
+      "residual_risk": "Open: native closure, runtime integration, compiler and formal proof qualification are incomplete.",
+      "requirements": [
+        "REQ-060"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/solver-rejection.ja.md"
+    },
+    {
+      "id": "HAZ-047",
+      "title": "catalogとrootの別世代復元",
+      "severity": "critical",
+      "mitigation": "未検証native writerと複数DBの競合を作らず新規Nia catalogだけを候補正本にする。root実行器未完成を明示する。",
+      "residual_risk": "native/root/site execution and independent review remain incomplete",
+      "requirements": [
+        "REQ-061"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-048",
+      "title": "RPM比較の誤用/配置前の依存違反",
+      "severity": "critical",
+      "mitigation": "Debian versionを独立に比較し、versioned Provides/PreDepends/同名architecture競合を扱い、最終集合検査だけをphase完全証明にしてはならない。",
+      "residual_risk": "native/root/site execution and independent review remain incomplete",
+      "requirements": [
+        "REQ-062"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-049",
+      "title": "同名別binaryの再現性を流用",
+      "severity": "critical",
+      "mitigation": "原本DEBとsource/buildinfo/Release/policyを独立署名へ拘束し、失効/期限切れ/同一domain/別binaryの証拠を拒否する。",
+      "residual_risk": "native/root/site execution and independent review remain incomplete",
+      "requirements": [
+        "REQ-063"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-050",
+      "title": "正当dataや失効情報の巻き戻し",
+      "severity": "critical",
+      "mitigation": "OS世代とcatalogは対応させ、正当な業務data/独立trust/監査/秘密情報をroot rollbackへ含めてはならない。",
+      "residual_risk": "native/root/site execution and independent review remain incomplete",
+      "requirements": [
+        "REQ-064"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-051",
+      "title": "複数base/古いPASSの混在",
+      "severity": "critical",
+      "mitigation": "現行profileは一つだけとし、historyの構成や人工証拠から起動可能・本番資格の宣言を生成してはならない。",
+      "residual_risk": "native/root/site execution and independent review remain incomplete",
+      "requirements": [
+        "REQ-065"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-052",
+      "title": "XFS能力の実行時拘束",
+      "severity": "critical",
+      "mitigation": "kernel版だけからrepair/healthmonを認定せず、正確なcohort/FS/boot/namespaceと能力を確認する。",
+      "residual_risk": "native collector/runtime binding, actual hardware qualification and formal proof remain unverified",
+      "requirements": [
+        "REQ-066"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-053",
+      "title": "metadataと内容の分離",
+      "severity": "critical",
+      "mitigation": "HEALTHY/scrub完了によってmedia/contentの故障ラッチを解除してはならない。",
+      "residual_risk": "native collector/runtime binding, actual hardware qualification and formal proof remain unverified",
+      "requirements": [
+        "REQ-067"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-054",
+      "title": "失われたイベントと再試行",
+      "severity": "critical",
+      "mitigation": "欠落sequence、unknown、結果不明を保持し、同一操作を無条件に再送しない。",
+      "residual_risk": "native collector/runtime binding, actual hardware qualification and formal proof remain unverified",
+      "requirements": [
+        "REQ-068"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-055",
+      "title": "XFS復旧領域の分離",
+      "severity": "critical",
+      "mitigation": "catalogはrootと同一世代とし、control/trust等は独立必須mountとする。",
+      "residual_risk": "native collector/runtime binding, actual hardware qualification and formal proof remain unverified",
+      "requirements": [
+        "REQ-069"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-056",
+      "title": "非修復の初期運用",
+      "severity": "critical",
+      "mitigation": "監視と定期scrubは暗黙修復・強制操作を起動せず、診断は実行許可を発行しない。",
+      "residual_risk": "native collector/runtime binding, actual hardware qualification and formal proof remain unverified",
+      "requirements": [
+        "REQ-070"
+      ],
+      "runbook": "distribution/docs/recovery-runbook.ja.md"
+    },
+    {
+      "id": "HAZ-057",
+      "title": "helper所有権と回収順",
+      "severity": "critical",
+      "mitigation": "leaderを回収する前にcleanupし、stdout/leader終了順に依存せず期限・出力上限を守る。",
+      "residual_risk": "Ada execution/proof and real target integration are not validated; authenticated writers, storage, kernel and adapters remain explicit trust assumptions.",
+      "requirements": [
+        "REQ-071"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-014.ja.md"
+    },
+    {
+      "id": "HAZ-058",
+      "title": "観測FD・ctimeの照合",
+      "severity": "critical",
+      "mitigation": "パスとFDの事前事後を照合し、mtimeだけ復元した変更も観測差異として拒否する。",
+      "residual_risk": "Ada execution/proof and real target integration are not validated; authenticated writers, storage, kernel and adapters remain explicit trust assumptions.",
+      "requirements": [
+        "REQ-072"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-014.ja.md"
+    },
+    {
+      "id": "HAZ-059",
+      "title": "intent前の完了記録余力",
+      "severity": "critical",
+      "mitigation": "未完計画の予約と新規計画の終了記録余力を確保してから新たなintentを記録する。",
+      "residual_risk": "Ada execution/proof and real target integration are not validated; authenticated writers, storage, kernel and adapters remain explicit trust assumptions.",
+      "requirements": [
+        "REQ-073"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-014.ja.md"
+    },
+    {
+      "id": "HAZ-060",
+      "title": "既存lockの欠落拒否",
+      "severity": "critical",
+      "mitigation": "既存状態の復旧と新規bootstrapを分け、失われたlock inodeを通常アクセスで再作成しない。",
+      "residual_risk": "Ada execution/proof and real target integration are not validated; authenticated writers, storage, kernel and adapters remain explicit trust assumptions.",
+      "requirements": [
+        "REQ-074"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-014.ja.md"
+    },
+    {
+      "id": "HAZ-061",
+      "title": "複合検査経路の必須化",
+      "severity": "critical",
+      "mitigation": "合成SDKは停止・設定・元の認可・独立solver・native意味・現在の予約を必須とし、弱い下位Engineを公開しない。",
+      "residual_risk": "Ada execution/proof and real target integration are not validated; authenticated writers, storage, kernel and adapters remain explicit trust assumptions.",
+      "requirements": [
+        "REQ-075"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-014.ja.md"
+    },
+    {
+      "id": "HAZ-062",
+      "title": "世代namespaceの分離",
+      "severity": "critical",
+      "mitigation": "catalog/model世代とcluster membership epochを等号で結び付けず、それぞれ対応する証拠へ束縛する。",
+      "residual_risk": "Ada execution/proof and real target integration are not validated; authenticated writers, storage, kernel and adapters remain explicit trust assumptions.",
+      "requirements": [
+        "REQ-076"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-014.ja.md"
+    },
+    {
+      "id": "HAZ-063",
+      "title": "外部anchorと独立quorum",
+      "severity": "critical",
+      "mitigation": "復旧は外部でpinした完全なanchorと現在のtrust floorへ一致し、別principal・鍵・domainとrecovery/witness役の署名を要求する。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-077"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-015.ja.md"
+    },
+    {
+      "id": "HAZ-064",
+      "title": "完全inventoryの破損検出",
+      "severity": "critical",
+      "mitigation": "認証されたcohortの内容、mode、owner、xattr、directory集合を検査し、追加・欠落・改変を正常な空状態と解釈しない。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-078"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-015.ja.md"
+    },
+    {
+      "id": "HAZ-065",
+      "title": "候補への再構成と証拠保全",
+      "severity": "critical",
+      "mitigation": "複数の破損複製から正しいchunkだけを選び、新しい私有candidateへ再構成し、証拠I/O失敗では完了扱いしない。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-079"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-015.ja.md"
+    },
+    {
+      "id": "HAZ-066",
+      "title": "historyと外部効果の継続",
+      "severity": "critical",
+      "mitigation": "復旧でpending要求を消さず、候補のbyte一致後もnative journalを検査し、外部結果を照合するまでOperationalへ進めない。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-080"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-015.ja.md"
+    },
+    {
+      "id": "HAZ-067",
+      "title": "Capsule能力の非昇格",
+      "severity": "critical",
+      "mitigation": "Capsuleの能力は要求とOS・管理者・利用者方針の積集合とし、必須能力不足、未知の能力、host全体の権限を拒否する。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-081"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-016.ja.md"
+    },
+    {
+      "id": "HAZ-068",
+      "title": "世代とデータの独立管理",
+      "severity": "critical",
+      "mitigation": "runtimeとapp世代をdigestで固定し、旧実行個体・復旧pinを保持し、データ契約の変更に明示的な移行を要求する。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-082"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-016.ja.md"
+    },
+    {
+      "id": "HAZ-069",
+      "title": "Flatpak入力の要求化",
+      "severity": "critical",
+      "mitigation": "Flatpak metadataは許可ではなく要求として扱い、raw network/audio/deviceの意味を狭く偽装せず、未対応条件やextensionを拒否する。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-083"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-016.ja.md"
+    },
+    {
+      "id": "HAZ-070",
+      "title": "brokerとmountの実行個体束縛",
+      "severity": "critical",
+      "mitigation": "brokerとmountはapp・世代・policy・boot・cgroup・userの実際のidentityへ束縛し、既存FDの失効をDB操作だけで保証しない。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-084"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-016.ja.md"
+    },
+    {
+      "id": "HAZ-071",
+      "title": "candidate treeの独立検査",
+      "severity": "critical",
+      "mitigation": "正確な原本digestと完全inventoryを再検査し、元のinodeを共有せず、新しい候補に限ってmaterializeし、診断を実行許可にしない。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-085"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-016.ja.md"
+    },
+    {
+      "id": "HAZ-072",
+      "title": "統一診断と形式版の拘束",
+      "severity": "critical",
+      "mitigation": "Capsule診断はNiaの固定tool policy経由で行い、未知bit・不正長・reserved・classを拒否し、自己申告の条件を本番証拠にしない。",
+      "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
+      "requirements": [
+        "REQ-086"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-016.ja.md"
+    },
+    {
+      "id": "HAZ-073",
+      "title": "Kernel由来peerの要求受信",
+      "severity": "critical",
+      "mitigation": "要求はkernel credentialsと登録済み実行個体から認証し、wireの自己申告で本人・許可を決めてはならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-087"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-074",
+      "title": "同意と資源の分離",
+      "severity": "critical",
+      "mitigation": "同意は正確な質問と資源へ束縛し、同意だけで資源を与えず、反映の直前直後に現在の認可を照合しなければならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-088"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-075",
+      "title": "native Portalの先行intent",
+      "severity": "critical",
+      "mitigation": "native PortalがUIと同時に資源を作る場合はpossible-effectを永続化してから呼び出し、応答喪失時に要求を再送してはならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-089"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-076",
+      "title": "UI backendの本人・形式検査",
+      "severity": "critical",
+      "mitigation": "UI backendのunique ownerと独立した本人確認、正確な質問digest、返答の署名型と期限を検査しなければならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-090"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-077",
+      "title": "失効の実効性",
+      "severity": "critical",
+      "mitigation": "取消と資源遮断を区別し、実際のgrant/FD/sessionが遮断された証拠なしに失効完了を記録してはならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-091"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-078",
+      "title": "保存・anchor・終端予算",
+      "severity": "critical",
+      "mitigation": "ログは独立anchorと一致することを要求し、欠落を初期化せず、既存ticketの終端記録の枠を新規要求へ使わせてはならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-092"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-079",
+      "title": "要求洪水とbroker再起動",
+      "severity": "critical",
+      "mitigation": "prompt budgetをuser+appへ固定し、再起動・世代更新による予算リセットや旧grantの自動復活を許可してはならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-093"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-080",
+      "title": "引き継ぎ・未完範囲の明示",
+      "severity": "critical",
+      "mitigation": "診断、模擬peer試験、未検証のAda、未接続adapterを区別し、現在の実装と残る出荷条件を機械台帳と文書へ記録しなければならない。",
+      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "requirements": [
+        "REQ-094"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "result": "NOT_COMPLETED",
+  "phase": "source-prechecks-of-proof-run",
+  "reason": "outer tool execution timeout; no proof tool available",
+  "ada_executed": false,
+  "formal_proof": false,
+  "replacement": "ada-tool-attempts.json records direct tool-gated entry attempts"
+}

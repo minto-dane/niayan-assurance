@@ -1,0 +1,100 @@
+{
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "tools": {
+    "gcc": "/usr/bin/gcc",
+    "gnatmake": null,
+    "gprbuild": null,
+    "gnatprove": null,
+    "alr": null
+  },
+  "attempts": [
+    {
+      "command": [
+        "gcc",
+        "-c",
+        "-gnat2022",
+        "/mnt/data/nia-toolchain/probe.adb",
+        "-o",
+        "/mnt/data/nia-toolchain/probe.o"
+      ],
+      "returncode": 1,
+      "seconds": 0.003,
+      "log": "attempt-1.log"
+    },
+    {
+      "command": [
+        "apt-cache",
+        "policy",
+        "gnat",
+        "gprbuild",
+        "gnatprove",
+        "alire"
+      ],
+      "returncode": 0,
+      "seconds": 0.021,
+      "log": "attempt-2.log"
+    },
+    {
+      "command": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/mnt/data/nia-toolchain/debian-InRelease",
+        "https://deb.debian.org/debian/dists/trixie/InRelease"
+      ],
+      "returncode": 6,
+      "seconds": 0.009,
+      "log": "attempt-3.log"
+    },
+    {
+      "command": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/mnt/data/nia-toolchain/releases.json",
+        "https://api.github.com/repos/alire-project/GNAT-FSF-builds/releases"
+      ],
+      "returncode": 6,
+      "seconds": 5.013,
+      "log": "attempt-4.log"
+    },
+    {
+      "command": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--range",
+        "0-1023",
+        "--output",
+        "/mnt/data/nia-toolchain/gnatprove-prefix",
+        "https://github.com/alire-project/GNAT-FSF-builds/releases/download/gnatprove-16.1.0-1/gnatprove-x86_64-linux-16.1.0-1.tar.gz"
+      ],
+      "returncode": 6,
+      "seconds": 0.008,
+      "log": "attempt-5.log"
+    }
+  ],
+  "installed": false,
+  "ada_compiled": false,
+  "proof_executed": false
+}

@@ -1,0 +1,15 @@
+# Nia OS 今回の検査方法
+
+対象は現行source subjectに結び付けた非特権作業コピー。source/build/proofは同じソースで実行し、開始前後のdigest一致を確認。build/proofもsource検査を繰返すが件数を二重計上しない。
+
+非特権スイート: 296件中295成功、root拒否probe1件skip。root拒否probeは別のrootコンテキストで独立実行して成功（native helperがrootを拒否することだけを検査、特権変更なし）。固有296件を確認した。内訳はsummary.json。
+
+新しい取り込み試験では本物のdpkg-debで人工パッケージを作成し、人工鍵を一時生成して実gpgvを呼ぶ。xz/zstd/control/data/Sourcesを検査する。preinst/postinst等は実行しない。128組のDebian versionを実dpkg --compare-versionsと照合した。これをAda比較器の実行や本物のDebianリポジトリ受入と呼ばない。
+
+libsolvのDEB提案器はmock API検査8件を含む。実libsolv/CaDiCaLやコンパイル済みAda検査器を動かした試験ではない。reproduction receiptは人工鍵であり、本物の独立再構築者から受け取った証拠ではない。
+
+GPRbuild/GNATproveが不在なので全6repoのbuildとproofをnot-runに記録。成功扱いしない。実Secure Boot/TPM/encryption/installer/電源断/fencing/DB restoreは未実施。
+
+preflight/には修正前の実失敗を残す。追加したnia wrapperでmanager実装profileが変わり、古い人工fixtureのprofile一致試験が失敗した。generatorで現在の人工fixtureを再生成し再試験した。これは本番鍵や承認を発行する操作でない。実行が中断した初回buildは最終結果として採用せず、完了した再実行をbuild/へ収録した。
+
+syntax/リンク照合は意味的同値や形式証明ではない。archiveの再展開後も同じsource/契約/製品/試験を確認する。過去のevidenceはhistory-evidenceに分離し、この版のPASSへ転用していない。

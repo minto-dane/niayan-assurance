@@ -1,0 +1,310 @@
+{
+  "commands": [
+    {
+      "name": "all-build-checks",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python3",
+        "assurance/ci/run-engineering-checks.py",
+        "--mode",
+        "build",
+        "--timeout",
+        "120"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "returncode": 1,
+      "seconds": 6.131,
+      "log": "all-build-checks.log"
+    },
+    {
+      "name": "all-proof-checks",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python3",
+        "assurance/ci/run-engineering-checks.py",
+        "--mode",
+        "proof",
+        "--timeout",
+        "120"
+      ],
+      "cwd": "/mnt/data/nia-final-work",
+      "returncode": 1,
+      "seconds": 6.182,
+      "log": "all-proof-checks.log"
+    },
+    {
+      "name": "assurance-compile-all",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/mnt/data/nia-final-work/assurance",
+      "returncode": 2,
+      "seconds": 0.008,
+      "log": "assurance-compile-all.log"
+    },
+    {
+      "name": "assurance-flow",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "flow"
+      ],
+      "cwd": "/mnt/data/nia-final-work/assurance",
+      "returncode": 2,
+      "seconds": 0.035,
+      "log": "assurance-flow.log"
+    },
+    {
+      "name": "pkgcore-compile-all",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/mnt/data/nia-final-work/pkgcore",
+      "returncode": 2,
+      "seconds": 0.008,
+      "log": "pkgcore-compile-all.log"
+    },
+    {
+      "name": "pkgcore-flow",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "flow"
+      ],
+      "cwd": "/mnt/data/nia-final-work/pkgcore",
+      "returncode": 2,
+      "seconds": 0.064,
+      "log": "pkgcore-flow.log"
+    },
+    {
+      "name": "statecore-compile-all",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/mnt/data/nia-final-work/statecore",
+      "returncode": 2,
+      "seconds": 0.008,
+      "log": "statecore-compile-all.log"
+    },
+    {
+      "name": "statecore-flow",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "flow"
+      ],
+      "cwd": "/mnt/data/nia-final-work/statecore",
+      "returncode": 2,
+      "seconds": 0.032,
+      "log": "statecore-flow.log"
+    },
+    {
+      "name": "controlcore-compile-all",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/mnt/data/nia-final-work/controlcore",
+      "returncode": 2,
+      "seconds": 0.008,
+      "log": "controlcore-compile-all.log"
+    },
+    {
+      "name": "controlcore-flow",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "flow"
+      ],
+      "cwd": "/mnt/data/nia-final-work/controlcore",
+      "returncode": 2,
+      "seconds": 0.064,
+      "log": "controlcore-flow.log"
+    },
+    {
+      "name": "configcore-compile-all",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/mnt/data/nia-final-work/configcore",
+      "returncode": 2,
+      "seconds": 0.016,
+      "log": "configcore-compile-all.log"
+    },
+    {
+      "name": "configcore-flow",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "flow"
+      ],
+      "cwd": "/mnt/data/nia-final-work/configcore",
+      "returncode": 2,
+      "seconds": 0.033,
+      "log": "configcore-flow.log"
+    },
+    {
+      "name": "resolvercore-compile-all",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/mnt/data/nia-final-work/resolvercore",
+      "returncode": 2,
+      "seconds": 0.008,
+      "log": "resolvercore-compile-all.log"
+    },
+    {
+      "name": "resolvercore-flow",
+      "argv": [
+        "runuser",
+        "-u",
+        "nobody",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "HOME=/mnt/data/nia-final-home",
+        "LANG=C.UTF-8",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "make",
+        "flow"
+      ],
+      "cwd": "/mnt/data/nia-final-work/resolvercore",
+      "returncode": 2,
+      "seconds": 0.117,
+      "log": "resolvercore-flow.log"
+    }
+  ],
+  "ada_compilation_executed": false,
+  "ada_tests_executed": false,
+  "gnatprove_executed": false,
+  "production_qualification": false
+}

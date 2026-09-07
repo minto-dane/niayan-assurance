@@ -1,0 +1,104 @@
+-- SPDX-License-Identifier: MIT
+with MC_Types; use MC_Types; with MC_Stop_Barrier; use MC_Stop_Barrier;
+with MC_Contract_Profile; with MC_SHA256; with Test_Support; use Test_Support;
+procedure Run_Stop_Barrier_Tests with SPARK_Mode => Off is
+   P, Other : Policy; S, Saved, Parsed : State; E, Parsed_E : Evidence;
+   Status : Outcome; B : State_Frame; PB : Policy_Frame; EB : Evidence_Frame;
+   procedure Ack (I : Positive; Source_Kind : Channel := Node_Agent) is
+   begin
+      E := (others => <>); E.Policy_Hash := Fingerprint (P);
+      E.Node_ID := P.Members (I).Node_ID; E.Resource_ID := P.Members (I).Resource_ID;
+      E.Subject_Boot := P.Members (I).Boot_ID;
+      E.Stamp := (P.Receiver_Boot,1,100,1_000);
+      E.Epoch := P.Epoch; E.Applied_Guard_Revision := P.Guard_Revision;
+      E.Durable_Receipt := (others => 21); E.Audit_Head := (others => 22);
+      E.Last_Dispatched := 7; E.Last_Completed := 7;
+      E.Durable_Stop_Latch := True; E.Queue_Closed := True;
+      E.Source := Source_Kind;
+      E.Kind := (if Source_Kind = Node_Agent then Drained else Fenced);
+      E.Retirement_Durable := Source_Kind = Fence_Observer;
+      E.Isolation_Paths := P.Members (I).Required_Isolation_Paths;
+   end Ack;
+begin
+   P.Cluster_ID := (others => 1); P.Barrier_ID := (others => 2);
+   P.Receiver_Boot := (others => 3); P.Contract := MC_Contract_Profile.Fingerprint;
+   P.Change_Plan := (others => 4); P.Inventory := (others => 5); P.Guard_Value := (others => 6);
+   P.Epoch := 8; P.Guard_Revision := 10; P.Maximum_Age := 1_000; P.Count := 3;
+   for I in 1..P.Count loop
+      P.Members (I).Node_ID := (others => Byte (10+I));
+      P.Members (I).Resource_ID := (others => Byte (20+I));
+      P.Members (I).Boot_ID := (others => Byte (30+I));
+      P.Members (I).Stop_Key := (others => Byte (40+I));
+      P.Members (I).Fence_Key := (others => Byte (50+I));
+      P.Members (I).Required_Isolation_Paths := 3;
+   end loop;
+   Expect (Valid (P),"valid-fixed-consumer-roster");
+   Other := P; Other.Members (2).Resource_ID := P.Members (1).Resource_ID;
+   Expect (Valid (Other),"same-resource-on-distinct-nodes-needs-two-receipts");
+   Other.Members (2) := P.Members (1);
+   Expect (not Valid (Other),"same-node-resource-cannot-count-twice");
+   Other := P; Other.Members (2).Node_ID := P.Members (1).Node_ID;
+   Expect (not Valid (Other),"one-node-cannot-have-two-live-boots-in-roster");
+   Other := P; Other.Members (2).Stop_Key := P.Members (1).Fence_Key;
+   Expect (not Valid (Other),"stop-observer-cannot-be-fencing-observer");
+   for Mask in 0..7 loop
+      Initialize (P,S,Status); Expect (Status = OK,"barrier-initialize");
+      for I in 1..3 loop
+         if (Mask / (2**(I-1))) mod 2 = 1 then
+            Ack (I); Observe (P,S,E,True,200,Status); Expect (Status = OK,"authenticated-ack");
+         end if;
+      end loop;
+      Expect (Ready (P,S,200) = (Mask = 7),"all-participants-not-majority");
+   end loop;
+   Seal (P,S,200,Status); Expect (Status = OK and then Usable (P,S,200),"seal-complete-barrier");
+   Expect (not Usable (P,S,1_000),"sealed-barrier-still-has-freshness-limit");
+   Saved := S; Ack (1); E.Stamp.Sequence := 2; E.Unknown_Effects := 1;
+   Observe (P,S,E,True,201,Status);
+   Expect (Status = OK and then S.Current = Blocked and then not Usable (P,S,201),"fresh-contradiction-revokes-old-seal");
+   Ack (1); E.Stamp.Sequence := 3; Observe (P,S,E,True,202,Status);
+   Expect (Status = Denied and then S.Current = Blocked,"blocked-does-not-auto-clear");
+   S := Saved; Ack (1); E.Stamp.Sequence := 2; E.Queue_Closed := False;
+   Observe (P,S,E,True,201,Status); Expect (Status = OK and then S.Current = Blocked,"open-queue-is-not-quiescence");
+   Initialize (P,S,Status); Saved := S; Ack (1);
+   Observe (P,S,E,False,200,Status); Expect (Status = Denied and then S = Saved,"unsigned-ack-no-transition");
+   E.Subject_Boot := (others => 91); Observe (P,S,E,True,200,Status);
+   Expect (Status = Denied and then S = Saved,"different-node-incarnation-refused");
+   Ack (1); E.Stamp.Boot_ID := (others => 92); Observe (P,S,E,True,200,Status);
+   Expect (Status = Denied and then S = Saved,"foreign-monotonic-clock-refused");
+   Ack (1); E.Applied_Guard_Revision := P.Guard_Revision-1;
+   Observe (P,S,E,True,200,Status); Expect (Status = Denied and then S = Saved,"old-stop-generation-refused");
+   Ack (1); E.Stamp.Observed_At := 201; Observe (P,S,E,True,200,Status);
+   Expect (Status = Denied and then S = Saved,"future-sample-refused");
+   Ack (1); Observe (P,S,E,True,200,Status); Saved := S;
+   Observe (P,S,E,True,200,Status); Expect (Status = Stale and then S = Saved,"replayed-ack-does-not-refresh-expiry");
+   Ack (2,Fence_Observer); Observe (P,S,E,True,200,Status);
+   Expect (Status = OK and then S.Members (2).Current = Isolated,"independent-fence-may-cover-unreachable-node");
+   Ack (3); Observe (P,S,E,True,200,Status); Seal (P,S,200,Status);
+   Expect (Status = OK,"drained-and-fenced-roster-can-seal");
+   Saved := S; Ack (2); E.Stamp.Sequence := 20;
+   Observe (P,S,E,True,200,Status); Expect (Status = Denied and then S = Saved,"node-cannot-undo-its-isolation");
+   Ack (2,Fence_Observer); E.Stamp.Sequence := 2; E.Isolation_Paths := 1;
+   Observe (P,S,E,True,201,Status); Expect (Status = OK and then S.Current = Blocked,"lost-fence-path-blocks-sealed-result");
+   PB := Encode (P); Decode (PB,Other,Status); Expect (Status = OK and then Other = P,"policy-roundtrip");
+   PB (210) := 1; PB (4_577..4_608) := MC_SHA256.Hash (PB (1..4_576));
+   Decode (PB,Other,Status); Expect (Status /= OK,"policy-reserved-byte-even-with-new-checksum-denied");
+   B := Encode (Saved); Decode (B,Parsed,Status); Expect (Status = OK and then Parsed = Saved,"state-roundtrip");
+   B (107) := 1; B (4_577..4_608) := MC_SHA256.Hash (B (1..4_576));
+   Decode (B,Parsed,Status); Expect (Status /= OK,"state-reserved-byte-denied");
+   Ack (1); EB := Encode (E); Decode (EB,Parsed_E,Status);
+   Expect (Status = OK and then Parsed_E = E,"evidence-roundtrip");
+   EB (247) := 2; EB (289..320) := MC_SHA256.Hash (EB (1..288));
+   Decode (EB,Parsed_E,Status); Expect (Status /= OK,"noncanonical-boolean-denied");
+   EB := Encode (E); Decode (EB (1..319),Parsed_E,Status); Expect (Status /= OK,"truncated-evidence-denied");
+   Other := P; P.Count := 1;
+   Initialize (P,S,Status); Expect (Status = OK,"single-node-initialize");
+   Expect (not Ready (P,S,200),"single-node-still-needs-evidence");
+   Ack (1); Observe (P,S,E,True,200,Status); Seal (P,S,200,Status);
+   Expect (Status = OK and then Usable (P,S,200),"single-node-seal-with-same-conditions");
+   Ack (1); E.Stamp.Sequence := 2; E.In_Flight := 1;
+   Observe (P,S,E,True,201,Status);
+   Expect (Status = OK and then S.Current = Blocked,"single-node-no-quorum-shortcut");
+   P := Other;
+   P.Receiver_Boot := (others => 90); Expect (not Usable (P,Saved,200),"controller-reboot-requires-new-barrier");
+   Report;
+end Run_Stop_Barrier_Tests;

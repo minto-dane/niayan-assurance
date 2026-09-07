@@ -1,0 +1,329 @@
+{
+  "format": 1,
+  "decisions": [
+    {
+      "id": "ADR-0001",
+      "path": "assurance/docs/engineering/adr/ADR-0001.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0002",
+      "path": "assurance/docs/engineering/adr/ADR-0002.ja.md",
+      "status": "superseded",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0003",
+      "path": "assurance/docs/engineering/adr/ADR-0003.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0004",
+      "path": "assurance/docs/engineering/adr/ADR-0004.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0005",
+      "path": "assurance/docs/engineering/adr/ADR-0005.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0006",
+      "path": "assurance/docs/engineering/adr/ADR-0006.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0007",
+      "path": "assurance/docs/engineering/adr/ADR-0007.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0008",
+      "path": "assurance/docs/engineering/adr/ADR-0008.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0009",
+      "path": "assurance/docs/engineering/adr/ADR-0009.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0010",
+      "path": "assurance/docs/engineering/adr/ADR-0010.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0011",
+      "path": "assurance/docs/engineering/adr/ADR-0011.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0012",
+      "path": "assurance/docs/engineering/adr/ADR-0012.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0013",
+      "path": "assurance/docs/engineering/adr/ADR-0013.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0014",
+      "path": "assurance/docs/engineering/adr/ADR-0014.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0015",
+      "path": "assurance/docs/engineering/adr/ADR-0015.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0016",
+      "path": "assurance/docs/engineering/adr/ADR-0016.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0017",
+      "path": "assurance/docs/engineering/adr/ADR-0017.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0018",
+      "path": "assurance/docs/engineering/adr/ADR-0018.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0019",
+      "path": "assurance/docs/engineering/adr/ADR-0019.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0020",
+      "path": "assurance/docs/engineering/adr/ADR-0020.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0021",
+      "path": "assurance/docs/engineering/adr/ADR-0021.ja.md",
+      "status": "superseded",
+      "supersedes": [
+        "ADR-0002"
+      ]
+    },
+    {
+      "id": "ADR-0022",
+      "path": "assurance/docs/engineering/adr/ADR-0022.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0023",
+      "path": "assurance/docs/engineering/adr/ADR-0023.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0024",
+      "path": "assurance/docs/engineering/adr/ADR-0024.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0025",
+      "path": "assurance/docs/engineering/adr/ADR-0025.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0026",
+      "path": "assurance/docs/engineering/adr/ADR-0026.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0027",
+      "path": "assurance/docs/engineering/adr/ADR-0027.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0028",
+      "path": "assurance/docs/engineering/adr/ADR-0028.ja.md",
+      "status": "superseded",
+      "supersedes": [
+        "ADR-0021"
+      ]
+    },
+    {
+      "id": "ADR-0029",
+      "path": "assurance/docs/engineering/adr/ADR-0029.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0030",
+      "path": "assurance/docs/engineering/adr/ADR-0030.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0031",
+      "path": "assurance/docs/engineering/adr/ADR-0031.ja.md",
+      "status": "superseded",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0032",
+      "path": "assurance/docs/engineering/adr/ADR-0032.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0033",
+      "path": "assurance/docs/engineering/adr/ADR-0033.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0034",
+      "path": "assurance/docs/engineering/adr/ADR-0034.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0035",
+      "path": "assurance/docs/engineering/adr/ADR-0035.ja.md",
+      "status": "superseded",
+      "supersedes": [
+        "ADR-0031"
+      ]
+    },
+    {
+      "id": "ADR-0036",
+      "path": "assurance/docs/engineering/adr/ADR-0036.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": [
+        "ADR-0028"
+      ]
+    },
+    {
+      "id": "ADR-0037",
+      "path": "assurance/docs/engineering/adr/ADR-0037.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0038",
+      "path": "assurance/docs/engineering/adr/ADR-0038.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0039",
+      "path": "assurance/docs/engineering/adr/ADR-0039.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0040",
+      "path": "assurance/docs/engineering/adr/ADR-0040.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0041",
+      "path": "assurance/docs/engineering/adr/ADR-0041.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0042",
+      "path": "assurance/docs/engineering/adr/ADR-0042.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": [
+        "ADR-0035"
+      ]
+    },
+    {
+      "id": "ADR-0043",
+      "path": "assurance/docs/engineering/adr/ADR-0043.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0044",
+      "path": "assurance/docs/engineering/adr/ADR-0044.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0045",
+      "path": "assurance/docs/engineering/adr/ADR-0045.ja.md",
+      "status": "superseded",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0046",
+      "path": "assurance/docs/engineering/adr/ADR-0046.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0047",
+      "path": "assurance/docs/engineering/adr/ADR-0047.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0048",
+      "path": "assurance/docs/engineering/adr/ADR-0048.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": [
+        "ADR-0045"
+      ]
+    },
+    {
+      "id": "ADR-0049",
+      "path": "assurance/docs/engineering/adr/ADR-0049.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0050",
+      "path": "assurance/docs/engineering/adr/ADR-0050.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0051",
+      "path": "assurance/docs/engineering/adr/ADR-0051.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    },
+    {
+      "id": "ADR-0052",
+      "path": "assurance/docs/engineering/adr/ADR-0052.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
+    }
+  ]
+}

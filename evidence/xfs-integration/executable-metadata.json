@@ -1,0 +1,91 @@
+{
+  "changes": [
+    {
+      "path": "assurance/ci/recovery-storage-test.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "assurance/ci/verify.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "assurance/ci/check-contract.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "assurance/ci/cross-repository.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "assurance/ci/control-io-test.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "pkgcore/ci/verify.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "pkgcore/ci/journal-test.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "pkgcore/ci/check-contract.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "pkgcore/ci/file-engine-test.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "statecore/ci/verify.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "statecore/ci/healing-io-test.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "statecore/ci/check-contract.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "controlcore/ci/verify.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "controlcore/ci/check-contract.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "controlcore/ci/storage-test.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "configcore/ci/verify.sh",
+      "before": "0o644",
+      "after": "0o755"
+    },
+    {
+      "path": "configcore/ci/check-contract.sh",
+      "before": "0o644",
+      "after": "0o755"
+    }
+  ],
+  "automatic_execution": false,
+  "rationale": "build-referenced shebang tools must retain executable permissions when unpacked"
+}

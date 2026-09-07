@@ -1,0 +1,6 @@
+test_unprivileged_helpers_refuse_root (test_resolution_reference.ToolTests.test_unprivileged_helpers_refuse_root) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.210s
+
+OK

@@ -1,0 +1,50 @@
+{
+  "schema": "org.niaos.validation-summary/v1",
+  "date": "2026-09-07",
+  "product": "Nia OS",
+  "version": "0.1-dev",
+  "source_subject": "91feb4c9e3bc0ffd5b8aae78d08b2f2f8e4016d517a0e316c356e8e7ef2b5ae5",
+  "source_unchanged_during_tests": true,
+  "unprivileged_test_counts": {
+    "engineering": {
+      "run": 74,
+      "passed": 74,
+      "skipped": 0
+    },
+    "management": {
+      "run": 44,
+      "passed": 44,
+      "skipped": 0
+    },
+    "configuration": {
+      "run": 31,
+      "passed": 31,
+      "skipped": 0
+    },
+    "resolver": {
+      "run": 70,
+      "passed": 69,
+      "skipped": 1
+    },
+    "nia_intake_product": {
+      "run": 77,
+      "passed": 77,
+      "skipped": 0
+    }
+  },
+  "separate_root_refusal_test": {
+    "run": 1,
+    "passed": 1,
+    "executes_privileged_changes": false
+  },
+  "unique_tests_passed_across_contexts": 296,
+  "ada_compile": "not-run",
+  "ada_execution": "not-run",
+  "gnatprove": "not-run",
+  "native_libsolv": "not-run",
+  "official_debian_corpus": "not-run",
+  "real_boot": "not-run",
+  "real_cluster_recovery": "not-run",
+  "production_qualified": false,
+  "network_or_host_changes_performed": false
+}

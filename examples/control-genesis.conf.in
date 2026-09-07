@@ -1,0 +1,8 @@
+# NON-RUNNABLE TEMPLATE; no default trusted key or fallback authority.
+scope=REPLACE_WITH_32_HEX_SCOPE
+mode=quarantine
+trust-epoch=1
+request-id=REPLACE_WITH_FRESH_32_HEX_ID
+reason=REPLACE_WITH_64_HEX_REASON_HASH
+recovery-receipt=0000000000000000000000000000000000000000000000000000000000000000
+ttl-ms=300000

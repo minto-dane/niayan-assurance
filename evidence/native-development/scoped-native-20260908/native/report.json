@@ -1,0 +1,1685 @@
+{
+  "format": 1,
+  "mode": "build",
+  "created_utc": "2026-09-08T04:52:23.333470+00:00",
+  "production_approval": false,
+  "ada_execution": "all-registered-tests-pass",
+  "formal_proof": "not-run",
+  "temporary_io_tree": "/tmp/mission-engineering-tests-dehfymd1",
+  "checks": [
+    {
+      "name": "traceability",
+      "result": "pass",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "gprbuild",
+        "--version"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 369,
+      "seconds": 0.012,
+      "log_sha256": "580b7d8d6b27ce742268f9fa3342c978e0240a050fb3ec9fb44ea3f063b5e8ca",
+      "name": "gprbuild-version",
+      "layer": "tool-identification"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assurance/tests/engineering",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 16113,
+      "seconds": 9.265,
+      "log_sha256": "7db94bb3a8a9efdfd2d80c2ea03cc36007f985f0a0de4f06646b5f3ddc4ecc13",
+      "name": "engineering-unittests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/sync-component-ci.py"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 71,
+      "seconds": 0.368,
+      "log_sha256": "e46a10320f07874e9bf758914c1cea6f1cde6ed4e70b81a989379528d1c3812f",
+      "name": "component-ci-generated",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "controlcore/tests/reference",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4879,
+      "seconds": 0.083,
+      "log_sha256": "2d7252e59b9463ddb0494cf67611a52bd422a5ade050275fb2771b2a9b2004a6",
+      "name": "manager-reference-tests",
+      "layer": "source-and-reference"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "configcore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 3229,
+      "seconds": 0.072,
+      "log_sha256": "9dcbb98e5d08c3376741b71791c4f9f529fee963313f4d89f38fbdb5b3b93ba5",
+      "name": "configuration-reference-tests",
+      "layer": "reference-and-limited-native-probe"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "resolvercore/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 6707,
+      "seconds": 0.153,
+      "log_sha256": "07bed58b3730f2efc1a65442b0406296deb8db1219f4913807aa95157a53e45a",
+      "name": "resolution-reference-tests",
+      "layer": "reference-and-untrusted-proposal-tool-tests"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "assurance/tests_py",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 5151,
+      "seconds": 0.269,
+      "log_sha256": "c3243e9197185e11fb9ce62f632d3d37f8aa5d2362e0ed66d6703dd9d71bd646",
+      "name": "cohort-recovery-tests",
+      "layer": "actual-nonprivileged-cryptography-and-io"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "capsulecore/tests_py",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 8739,
+      "seconds": 0.13,
+      "log_sha256": "6c294ead79c2c7fd4e415c18f7d12e5530063cac375096378ecfb9153c3e48bd",
+      "name": "capsule-policy-tree-tests",
+      "layer": "reference-and-actual-candidate-tree-io"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/profile.py"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 146,
+      "seconds": 0.03,
+      "log_sha256": "d20516e36c781b18a0702dbd98ab8969ebb69c5f076558f497a888e4cf5e62b2",
+      "name": "resolver-source-profile",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/check-neutral.py"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 1527,
+      "seconds": 0.028,
+      "log_sha256": "9924a0e4760c31c44af6d27b6aeb0921e82fce58ec82e233c686c8eaa7aad157",
+      "name": "resolver-neutral-boundary",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/check-resolver.py"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 124,
+      "seconds": 0.031,
+      "log_sha256": "e40adfcec7696f7f8117e538efe7e131aa99fef55ba2547468edc807fc208366",
+      "name": "native-resolver-lock",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "distribution/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 12134,
+      "seconds": 0.552,
+      "log_sha256": "fe371379370ffef5779906a81da8bdf605686a33cba7cbccc3bece5856fa550b",
+      "name": "distribution-tool-tests",
+      "layer": "actual-build-tool-tests"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/nia-product-audit.py"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 1259,
+      "seconds": 0.159,
+      "log_sha256": "8cb8f463313d1c717351509531fb69cdb0c59c10673e72c09e65b440c48759f0",
+      "name": "nia-product-audit",
+      "layer": "source-product-coherence"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/unified-audit.py"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 212845,
+      "seconds": 0.27,
+      "log_sha256": "ddfb1e9aed3633be1bf9a99c06ddd7a271040650dc2d6e827c3b99d3998cea6a",
+      "name": "unified-architecture-audit",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "assurance/ci/engineering.py",
+        "lint"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 157640,
+      "seconds": 0.277,
+      "log_sha256": "689731842acace1d102dabe3574ed679ecea7cc11d595e0dd2b0295502ca190d",
+      "name": "syntax-and-doc-links",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4077,
+      "seconds": 0.02,
+      "log_sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6",
+      "name": "assurance-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4077,
+      "seconds": 0.018,
+      "log_sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6",
+      "name": "pkgcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4077,
+      "seconds": 0.015,
+      "log_sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6",
+      "name": "statecore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4077,
+      "seconds": 0.016,
+      "log_sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6",
+      "name": "controlcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4077,
+      "seconds": 0.017,
+      "log_sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6",
+      "name": "configcore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4077,
+      "seconds": 0.019,
+      "log_sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6",
+      "name": "resolvercore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/bin/sh",
+        "ci/check-contract.sh"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4077,
+      "seconds": 0.031,
+      "log_sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6",
+      "name": "capsulecore-contract",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "ci/manager-profile.py"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 129,
+      "seconds": 0.028,
+      "log_sha256": "8e6503258bf0c12b82bcd750e52f16e350fbf7b3651488a01f41bf2f4a57dedc",
+      "name": "manager-implementation-profile",
+      "layer": "source"
+    },
+    {
+      "argv": [
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4661,
+      "seconds": 1.991,
+      "log_sha256": "f17b4aa6700284eb560c0e5b9d5d2e26ec34f31c1efb413338fb4eb9c5658b0f",
+      "name": "assurance-compile-all",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4371,
+      "seconds": 0.578,
+      "log_sha256": "29caab1964238521f0041d8abcb1a6d823945cb2d2e428f93ecd922448185819",
+      "name": "assurance-application-links",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "test-build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 6349,
+      "seconds": 2.66,
+      "log_sha256": "bcedb038aec02385d36d0983f77ce034124ef7172840bc17a3c0f11cfa87001c",
+      "name": "assurance-tests-build",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_recovery_storage_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_recovery_storage_tests-q4cunl62/state",
+        "/tmp/mission-engineering-tests-dehfymd1/run_recovery_storage_tests-q4cunl62/store"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.005,
+      "log_sha256": "0616121470d6e909433ba8bde56b50c773b06a1f60c93baa52a9cdcbe33ce630",
+      "name": "assurance-run_recovery_storage_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_qualification_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.009,
+      "log_sha256": "d892a7c3d4abf0eb3282a56b943dc0eae62c76a3935b609df68783c241307bc5",
+      "name": "assurance-run_qualification_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_contract_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.011,
+      "log_sha256": "0c781debb52f97abaa2b01b781d3103e8271be8578edbccc293ba13924686e3c",
+      "name": "assurance-run_contract_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_ingress_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.009,
+      "log_sha256": "593ed774199fa8d1699f4a69842299c832c27f60e1aa828b4890312e5baf64a4",
+      "name": "assurance-run_ingress_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_v2_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.004,
+      "log_sha256": "020d07a15d1c1c6c5ab771ed0388b87fe9a9fe1b31e4410e028af8a07325fcfc",
+      "name": "assurance-run_v2_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_resilience_contract_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.002,
+      "log_sha256": "47a5d7624ccce6a7e86e8f36f6f30fbc6c81e60e94a3e9681a4c67618cdeef6d",
+      "name": "assurance-run_resilience_contract_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_control_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "1a096b41ff92810aa2b3f8e22cb8ccc642ad856a815daf19b748dee7064f50cc",
+      "name": "assurance-run_control_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_backup_contract_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "0dee2b2a3279d63fff09fb89d34a67643abc6ba11ec2d2feb7dd6f0abeecef46",
+      "name": "assurance-run_backup_contract_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_control_io_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_control_io_tests-z8freses/policy",
+        "/tmp/mission-engineering-tests-dehfymd1/run_control_io_tests-z8freses/ops",
+        "/tmp/mission-engineering-tests-dehfymd1/run_control_io_tests-z8freses/security"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.003,
+      "log_sha256": "ad15b5577d91e969f1dc6ded7ec211ca7a1dfa40ea7cc241f971cbdc5eeaaf9b",
+      "name": "assurance-run_control_io_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_checkpoint_io_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_checkpoint_io_tests-ksegovry/private"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.014,
+      "log_sha256": "ab10f03e00266142a8f1b886f346702c866c0dd55f266471a26f1a0b6c38d136",
+      "name": "assurance-run_checkpoint_io_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_control_vector_tests",
+        "tests/fixtures/control-v1"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.014,
+      "log_sha256": "c0e6d46da7812d5f2fa929a89fe85a4dad128495b60bd94ac019e1956957f658",
+      "name": "assurance-run_control_vector_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_stop_barrier_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.007,
+      "log_sha256": "99dff4567698f16fde335bd215da8035ed9c1088b073e92d06522ce714d10e5c",
+      "name": "assurance-run_stop_barrier_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_stop_vector_tests",
+        "fixtures/stop-v1"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.003,
+      "log_sha256": "e5ca429570a0012ffbeb3b0772e8362647f445bf89025bba8de6e27340075744",
+      "name": "assurance-run_stop_vector_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_receiver_ledger_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_receiver_ledger_tests-dl1x115t/private"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.003,
+      "log_sha256": "6918d581e318e957ca2649807bdcd11027512b7a6ee1e4b54c7393881bf77ac5",
+      "name": "assurance-run_receiver_ledger_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_request_replay_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "35f44008ec4bf24ccfd20caa06f0a93483bf11797d4f9690d27024f07a4ad7c8",
+      "name": "assurance-run_request_replay_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_platform_assurance_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "5316e6c4541a8a5ffb9f9fda385f57ac69606cdf7bcd17f034d87239d28d20e1",
+      "name": "assurance-run_platform_assurance_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_journal_budget_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 23,
+      "seconds": 0.002,
+      "log_sha256": "4433aee98f07cd650c308276b90954fb2eb6d19b6e169286d429a479087d2b97",
+      "name": "assurance-run_journal_budget_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_fs_observation_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_fs_observation_tests-l3xn0yly/private"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.023,
+      "log_sha256": "2e5c4aa45841278ad370310d88e2c63c4b89eccc66ec56437860919d6c1e3d98",
+      "name": "assurance-run_fs_observation_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_command_lifecycle_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_command_lifecycle_tests-28s2myxb/private"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.563,
+      "log_sha256": "12729b1a28f6495ced0431b477f38ee08da685259f04485ac671958a558f1eb4",
+      "name": "assurance-run_command_lifecycle_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/assurance/build/test-bin/run_cohort_recovery_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/assurance",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.005,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "assurance-run_cohort_recovery_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 9232,
+      "seconds": 12.087,
+      "log_sha256": "b701ef5d9d9a2c438e6e5ed78896db7f9a7c62b94f48df4ac36c8d44cef06461",
+      "name": "pkgcore-compile-all",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4710,
+      "seconds": 0.952,
+      "log_sha256": "00bac843231707ef7769e1f28dd43972b6d075452b2d9379ead6023048f0a4a6",
+      "name": "pkgcore-application-links",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "test-build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 8441,
+      "seconds": 8.285,
+      "log_sha256": "7d4118c593d6680e7d5a3c070b43bbbff2384d87ad599b7a107775c963628d8a",
+      "name": "pkgcore-tests-build",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_file_replay_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "7b5a504d38f9e8cff67f392a51477c7642771e752b65b9538df2ba179cb9ac17",
+      "name": "pkgcore-run_file_replay_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_composition_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.003,
+      "log_sha256": "35f44008ec4bf24ccfd20caa06f0a93483bf11797d4f9690d27024f07a4ad7c8",
+      "name": "pkgcore-run_composition_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_pkg_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.003,
+      "log_sha256": "246081383ec572317a50fd52074f5a6dd5cb9d3577ddd1ace434fbb9dd2edc67",
+      "name": "pkgcore-run_pkg_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_rpm_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.011,
+      "log_sha256": "3203a0fdccfb4ecdb27cd1c8da4c7205a76735c2747834bdb025a1e8d09532cb",
+      "name": "pkgcore-run_rpm_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_journal_io_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_journal_io_tests-mcp_16sb/private"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "e5ca429570a0012ffbeb3b0772e8362647f445bf89025bba8de6e27340075744",
+      "name": "pkgcore-run_journal_io_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_v2_pkg_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.024,
+      "log_sha256": "6c8ff480a6097c831fff7e9d13afb117f5c14b9e9925f71e35654e29d7b22daf",
+      "name": "pkgcore-run_v2_pkg_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_file_engine_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_file_engine_tests-ydm3jdo_/root",
+        "/tmp/mission-engineering-tests-dehfymd1/run_file_engine_tests-ydm3jdo_/state",
+        "/tmp/mission-engineering-tests-dehfymd1/run_file_engine_tests-ydm3jdo_/store"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.029,
+      "log_sha256": "729d75a995c9bd05cfb28e043009bcef13ed28de2880c701a452a2ddd2676cd9",
+      "name": "pkgcore-run_file_engine_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_repair_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.135,
+      "log_sha256": "1aac0c9b7dcd1287250a81617bb97de84d862fcfcb674e89d9f5eeec5884f4fc",
+      "name": "pkgcore-run_repair_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_retention_batch_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.003,
+      "log_sha256": "e8671347d1dce64344301585343997170b6f96249e804baa4b719545247dc89f",
+      "name": "pkgcore-run_retention_batch_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_enterprise_pkg_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "1db479bef9972ac9ca4f8f0e5fcd647f694724962d3711fce33333b7bd9ffc38",
+      "name": "pkgcore-run_enterprise_pkg_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_pkg_resolution_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.037,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "pkgcore-run_pkg_resolution_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/pkgcore/build/test-bin/run_deb_semantics_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/pkgcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 63,
+      "seconds": 0.002,
+      "log_sha256": "974babddde2e16c3b7fcf63805ab0fd47c1a1745653247a52b7c55c648471da3",
+      "name": "pkgcore-run_deb_semantics_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 9818,
+      "seconds": 12.291,
+      "log_sha256": "3d24fdba6095514fbeba55866496233ff053fe6b25281b59419ba61b61311f7c",
+      "name": "statecore-compile-all",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4702,
+      "seconds": 0.95,
+      "log_sha256": "c06145b8f4e1350e05892cde5f2cbed5e61f0d34665a15b5f83a5dcdf711bf2e",
+      "name": "statecore-application-links",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "test-build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 9305,
+      "seconds": 10.595,
+      "log_sha256": "61a290adb4aea0b28d56ce36a84c0ed4b5d06935bba628c7cf2d4086914b7c35",
+      "name": "statecore-tests-build",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_platform_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.004,
+      "log_sha256": "6156d30c0f933e332bf79c404f7131c76cda34fb51178e20d0a9c0c46ff7e93c",
+      "name": "statecore-run_platform_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_host_io_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 19,
+      "seconds": 0.013,
+      "log_sha256": "dcbdd8bf77892cf9ade8b315ad4b4e5cc676249925753458e81fe9068caa5150",
+      "name": "statecore-run_host_io_tests",
+      "layer": "ada-host-read-only"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_state_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 21,
+      "seconds": 0.002,
+      "log_sha256": "bf2eec73edf40d9fb8e2a043389eb9714285b54026b23bcde417e0cef705e33f",
+      "name": "statecore-run_state_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_v2_state_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 22,
+      "seconds": 0.069,
+      "log_sha256": "eee199da1863a830cdc38c93dc9be23e19a48c0df9af5a568626c97cc126a496",
+      "name": "statecore-run_v2_state_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_healing_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 22,
+      "seconds": 0.016,
+      "log_sha256": "f308f184d7bc397e4c88bbc81cbbc580623698a70546ba0b19f16ff82e288fab",
+      "name": "statecore-run_healing_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_cluster_resilience_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "16dd5cd6415f751a3791e7f420941d73c1eca3b1c330eafe7ca05f4fac1d00dc",
+      "name": "statecore-run_cluster_resilience_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_healing_io_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_healing_io_tests-da36tfzq/state",
+        "/tmp/mission-engineering-tests-dehfymd1/run_healing_io_tests-da36tfzq/store"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.004,
+      "log_sha256": "12729b1a28f6495ced0431b477f38ee08da685259f04485ac671958a558f1eb4",
+      "name": "statecore-run_healing_io_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_readmission_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "6918d581e318e957ca2649807bdcd11027512b7a6ee1e4b54c7393881bf77ac5",
+      "name": "statecore-run_readmission_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_disaster_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.012,
+      "log_sha256": "e5ca429570a0012ffbeb3b0772e8362647f445bf89025bba8de6e27340075744",
+      "name": "statecore-run_disaster_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_etcd_limit_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.004,
+      "log_sha256": "7f8bf16ab67c3f332081cb89a1a4fbd63fc5479c5dbe24d314d3f0959512530b",
+      "name": "statecore-run_etcd_limit_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_etcd_wire_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.002,
+      "log_sha256": "32bfee698b1dc16169ca2cfd2b7fd3657e5acbc91e52a67bc1447b73811cf0bd",
+      "name": "statecore-run_etcd_wire_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_ras_platform_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.001,
+      "log_sha256": "e92377301f047c299999d140d63d3e66d928a200949ad4c9b085716b1ad5ed02",
+      "name": "statecore-run_ras_platform_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/statecore/build/test-bin/run_xfs_health_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/statecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.002,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "statecore-run_xfs_health_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 7556,
+      "seconds": 8.02,
+      "log_sha256": "9c52c8918e940e391e98220ac764805a1f3397a2dc0aea736ad608f362dcea5c",
+      "name": "controlcore-compile-all",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4595,
+      "seconds": 0.742,
+      "log_sha256": "beb267a37d4a1ac433ad7681bd93c6589f6895142d728f9a326689a299b6d7ae",
+      "name": "controlcore-application-links",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "test-build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 6147,
+      "seconds": 4.331,
+      "log_sha256": "7416b6ef768255f98e35c83045fd2bae4d23e3ea9c375a11555fea3c29f1f555",
+      "name": "controlcore-tests-build",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/controlcore/build/test-bin/run_manager_model_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.003,
+      "log_sha256": "b75f296de58a2338123a34cf73408a27117bc0e5d064279564f47b8d1dd8ae39",
+      "name": "controlcore-run_manager_model_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/controlcore/build/test-bin/run_manager_vector_tests",
+        "tests/fixtures"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.005,
+      "log_sha256": "7b1cdd5d93cf29d102a15eab348d2ec773e2f478334639b8b4350e138c82005f",
+      "name": "controlcore-run_manager_vector_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/controlcore/build/test-bin/run_manager_storage_tests",
+        "tests/fixtures",
+        "/tmp/mission-engineering-tests-dehfymd1/run_manager_storage_tests-0fc0q5rd/private"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/controlcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 20,
+      "seconds": 0.057,
+      "log_sha256": "650e938aa420f74ca52cfb0180fcaca873b3c7dadc814689ae41f6aed51b4ef2",
+      "name": "controlcore-run_manager_storage_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 7457,
+      "seconds": 7.774,
+      "log_sha256": "c16c0c97752c32662477422bafae5d51318ec0e6204ecc28f3d50f53950aec2c",
+      "name": "configcore-compile-all",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4245,
+      "seconds": 0.393,
+      "log_sha256": "5cf0ad2205e45718afc82548faeb35777d517a73d11feb210c22b2cd0416589b",
+      "name": "configcore-application-links",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "test-build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 5736,
+      "seconds": 3.591,
+      "log_sha256": "ca65b055195229e49a8b7d4d76649a378b0da630bf77291b97a500d2658cd1a0",
+      "name": "configcore-tests-build",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/configcore/build/test-bin/run_config_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 48,
+      "seconds": 0.012,
+      "log_sha256": "92d09ef91e537ea921427f6aaddc350c32046c5056c0bf26227786dc2648483a",
+      "name": "configcore-run_config_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/configcore/build/test-bin/run_config_nvidia_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 67,
+      "seconds": 0.002,
+      "log_sha256": "6235b55c1befa357d7f66a30c896a9375a9ec1954a9689b881f990e99c94dae6",
+      "name": "configcore-run_config_nvidia_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/configcore/build/test-bin/run_config_binding_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 65,
+      "seconds": 0.002,
+      "log_sha256": "91abaaed287d6ba0419c1fc793779fa59ce9020a512695f116a2b73d6927b919",
+      "name": "configcore-run_config_binding_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/configcore/build/test-bin/run_config_io_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_config_io_tests-eovlu8wh/inventory"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/configcore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 51,
+      "seconds": 0.004,
+      "log_sha256": "6737512c60097cf419ef8db89f911e4a6a417bdc1fbe4c89a38b3f07080b9fb5",
+      "name": "configcore-run_config_io_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 8981,
+      "seconds": 7.539,
+      "log_sha256": "536ced5516b10e9446c15d18c460b9717545529607ae13a9385077d0bbd995e8",
+      "name": "resolvercore-compile-all",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 5976,
+      "seconds": 0.49,
+      "log_sha256": "0cd3a8c49f67e3892a148418c6f046f802a5cc1ace6c06e9a6a4c4d815557f22",
+      "name": "resolvercore-application-links",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "test-build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 6662,
+      "seconds": 1.924,
+      "log_sha256": "ec8139ea8214debced213df8fc0c40399bd42086a77da967d1c70ae89ec70f42",
+      "name": "resolvercore-tests-build",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/resolvercore/build/test-bin/run_resolver_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.015,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "resolvercore-run_resolver_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/resolvercore/build/test-bin/run_resolver_proof_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/resolvercore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.025,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "resolvercore-run_resolver_proof_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "make",
+        "compile-all"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 7076,
+      "seconds": 6.473,
+      "log_sha256": "ab367951b94ee9c55a31232e52c773ffaf6822922385159e9e74ae99b3ae875e",
+      "name": "capsulecore-compile-all",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4249,
+      "seconds": 0.403,
+      "log_sha256": "bf3d00b9603651f9d1c8913964a49c43b7366c67d6c2b08676668ebe84a9381c",
+      "name": "capsulecore-application-links",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "make",
+        "test-build"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 4310,
+      "seconds": 0.27,
+      "log_sha256": "cf4a66c3889886ec87038f2fa7a74e7d598a5eda5f2d9551b085ecb780e52746",
+      "name": "capsulecore-tests-build",
+      "layer": "ada-build"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/capsulecore/build/test-bin/run_capsule_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.002,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "capsulecore-run_capsule_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/capsulecore/build/test-bin/run_consent_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.002,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "capsulecore-run_consent_tests",
+      "layer": "ada-unit"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/capsulecore/build/test-bin/run_consent_store_tests",
+        "/tmp/mission-engineering-tests-dehfymd1/run_consent_store_tests-g3yxn4_a/private"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 0,
+      "seconds": 0.003,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "capsulecore-run_consent_store_tests",
+      "layer": "ada-isolated-io"
+    },
+    {
+      "argv": [
+        "/home/nia/devbox/niaos/nia-os-consent/capsulecore/build/test-bin/run_consent_channel_tests"
+      ],
+      "cwd": "/home/nia/devbox/niaos/nia-os-consent/capsulecore",
+      "result": "pass",
+      "returncode": 0,
+      "leader_reaped": true,
+      "external_effects_checked": false,
+      "log_bytes": 57,
+      "seconds": 0.103,
+      "log_sha256": "831044df415a9405e7606d321efb2a037cfe26b1858fb75fa26230a5788081ae",
+      "name": "capsulecore-run_consent_channel_tests",
+      "layer": "ada-isolated-io"
+    }
+  ],
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "kernel": "6.12.107+deb13-amd64",
+    "architecture": "x86_64",
+    "gprbuild": "/usr/bin/gprbuild",
+    "gnatprove": null
+  },
+  "source_subject_before": "091ce3fc116c93462e9aa47810c913a42c8f6d78b2578d1810e6e3a8c5a95945",
+  "source_subject_after": "091ce3fc116c93462e9aa47810c913a42c8f6d78b2578d1810e6e3a8c5a95945",
+  "result": "pass-for-requested-layer-only",
+  "temporary_io_tree_removed": true,
+  "ended_utc": "2026-09-08T04:54:09.380466+00:00"
+}

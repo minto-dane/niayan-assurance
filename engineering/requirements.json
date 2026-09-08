@@ -442,14 +442,16 @@
       "shall": "時間窓・累積・連続の復旧予算を永続化し、再起動やcontroller交代だけで上限を復活させてはならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0014"
+        "ADR-0014",
+        "ADR-0053"
       ],
       "spec": [
         "assurance/docs/engineering/specs/failure-model.ja.md"
       ],
       "code": [
         "statecore/src/state_healing.ads",
-        "statecore/runtime/state_healing_journal.ads"
+        "statecore/runtime/state_healing_journal.ads",
+        "assurance/src/mc_retry_budget.ads"
       ],
       "tests": [
         "statecore/tests/run_healing_tests.adb",
@@ -800,14 +802,34 @@
         "assurance/ci/engineering.py#read_regular",
         "assurance/src/mc_properties.adb",
         "pkgcore/src/pkg_file_plan.adb",
-        "statecore/src/state_unit.adb"
+        "statecore/src/state_unit.adb",
+        "assurance/src/mc_json.adb",
+        "assurance/src/mc_base64.adb",
+        "assurance/src/mc_dirents.adb",
+        "pkgcore/src/pkg_artifact_grant.adb",
+        "configcore/src/config_document_codec.adb",
+        "configcore/src/config_modprobe.adb",
+        "configcore/src/config_schema_codec.adb",
+        "configcore/src/config_values.adb",
+        "pkgcore/src/pkg_inventory.adb",
+        "pkgcore/src/pkg_rpm_fields.adb",
+        "pkgcore/src/pkg_deb_versions.adb",
+        "pkgcore/src/pkg_versions.adb",
+        "statecore/src/state_config_merge.adb",
+        "capsulecore/src/capsule_consent_wire.adb"
       ],
       "tests": [
         "assurance/tests/run_recovery_storage_tests.adb",
         "assurance/tests/engineering/test_engineering.py",
         "assurance/tests/run_v2_tests.adb",
         "pkgcore/tests/run_v2_pkg_tests.adb",
-        "statecore/tests/run_v2_state_tests.adb"
+        "statecore/tests/run_v2_state_tests.adb",
+        "configcore/tests/run_config_tests.adb",
+        "pkgcore/tests/run_repair_tests.adb",
+        "pkgcore/tests/run_deb_semantics_tests.adb",
+        "pkgcore/tests/run_pkg_tests.adb",
+        "statecore/tests/run_state_tests.adb",
+        "capsulecore/tests/run_consent_tests.adb"
       ],
       "hazards": [
         "HAZ-007"
@@ -2365,7 +2387,8 @@
       "shall": "brokerとmountはapp・世代・policy・boot・cgroup・userの実際のidentityへ束縛し、既存FDの失効をDB操作だけで保証しない。",
       "status": "implemented-unvalidated",
       "adr": [
-        "ADR-0051"
+        "ADR-0051",
+        "ADR-0053"
       ],
       "spec": [
         "capsulecore/docs/confinement.ja.md"
@@ -2679,6 +2702,35 @@
         "gnatprove-obligations",
         "ada-runtime-tests",
         "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-095",
+      "title": "開発証明の資源制限と中断の記録",
+      "shall": "証明の前処理を含む子孫へ資源制限を適用し、重複起動と低メモリ時の起動を拒否する。制限超過と中断を成功にせず、制限を外した自動再実行を行ってはならない。",
+      "status": "implemented-unvalidated",
+      "adr": [
+        "ADR-0054"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0054.ja.md"
+      ],
+      "code": [
+        "assurance/ci/proof-guard.py",
+        "assurance/ci/sync-component-ci.py",
+        "assurance/ci/run-engineering-checks.py"
+      ],
+      "tests": [
+        "assurance/tests/engineering/test_proof_guard.py"
+      ],
+      "hazards": [
+        "HAZ-081",
+        "HAZ-016"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "linux-process-limit-tests"
       ]
     }
   ]

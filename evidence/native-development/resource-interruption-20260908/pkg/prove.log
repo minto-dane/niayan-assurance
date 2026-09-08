@@ -1,0 +1,2382 @@
+./ci/check-contract.sh
+runtime/mc_admin.adb: OK
+runtime/mc_admin.ads: OK
+runtime/mc_atomic.adb: OK
+runtime/mc_atomic.ads: OK
+runtime/mc_authentic.adb: OK
+runtime/mc_authentic.ads: OK
+runtime/mc_checkpoint_store.adb: OK
+runtime/mc_checkpoint_store.ads: OK
+runtime/mc_cli.adb: OK
+runtime/mc_cli.ads: OK
+runtime/mc_clock.adb: OK
+runtime/mc_clock.ads: OK
+runtime/mc_command.adb: OK
+runtime/mc_command.ads: OK
+runtime/mc_config_auth.adb: OK
+runtime/mc_config_auth.ads: OK
+runtime/mc_control_io.adb: OK
+runtime/mc_control_io.ads: OK
+runtime/mc_durable.adb: OK
+runtime/mc_durable.ads: OK
+runtime/mc_fault_auth.adb: OK
+runtime/mc_fault_auth.ads: OK
+runtime/mc_file_io.adb: OK
+runtime/mc_file_io.ads: OK
+runtime/mc_fs.adb: OK
+runtime/mc_fs.ads: OK
+runtime/mc_gate.adb: OK
+runtime/mc_gate.ads: OK
+runtime/mc_https.adb: OK
+runtime/mc_https.ads: OK
+runtime/mc_ingress.adb: OK
+runtime/mc_ingress.ads: OK
+runtime/mc_kernel_read.adb: OK
+runtime/mc_kernel_read.ads: OK
+runtime/mc_keys.adb: OK
+runtime/mc_keys.ads: OK
+runtime/mc_layout.adb: OK
+runtime/mc_layout.ads: OK
+runtime/mc_log.adb: OK
+runtime/mc_log.ads: OK
+runtime/mc_posix.ads: OK
+runtime/mc_qualification_auth.adb: OK
+runtime/mc_qualification_auth.ads: OK
+runtime/mc_receiver_ledger.adb: OK
+runtime/mc_receiver_ledger.ads: OK
+runtime/mc_request_files.adb: OK
+runtime/mc_request_files.ads: OK
+runtime/mc_runtime.adb: OK
+runtime/mc_runtime.ads: OK
+runtime/mc_signatures.adb: OK
+runtime/mc_signatures.ads: OK
+runtime/mc_site_policy.adb: OK
+runtime/mc_site_policy.ads: OK
+runtime/mc_stop_barrier_auth.adb: OK
+runtime/mc_stop_barrier_auth.ads: OK
+runtime/mc_store.adb: OK
+runtime/mc_store.ads: OK
+runtime/mc_tools.adb: OK
+runtime/mc_tools.ads: OK
+runtime/mc_xml.adb: OK
+runtime/mc_xml.ads: OK
+src/mc_accounting.adb: OK
+src/mc_accounting.ads: OK
+src/mc_attestation.adb: OK
+src/mc_attestation.ads: OK
+src/mc_authorization.adb: OK
+src/mc_authorization.ads: OK
+src/mc_backups.adb: OK
+src/mc_backups.ads: OK
+src/mc_base64.adb: OK
+src/mc_base64.ads: OK
+src/mc_breakglass.adb: OK
+src/mc_breakglass.ads: OK
+src/mc_checkpoint.adb: OK
+src/mc_checkpoint.ads: OK
+src/mc_codec.adb: OK
+src/mc_codec.ads: OK
+src/mc_commissioning.adb: OK
+src/mc_commissioning.ads: OK
+src/mc_compatibility.adb: OK
+src/mc_compatibility.ads: OK
+src/mc_config_receipt.adb: OK
+src/mc_config_receipt.ads: OK
+src/mc_contract_profile.ads: OK
+src/mc_control.adb: OK
+src/mc_control.ads: OK
+src/mc_control_codec.adb: OK
+src/mc_control_codec.ads: OK
+src/mc_diagnostic_bundle.adb: OK
+src/mc_diagnostic_bundle.ads: OK
+src/mc_dirents.adb: OK
+src/mc_dirents.ads: OK
+src/mc_fault_report.adb: OK
+src/mc_fault_report.ads: OK
+src/mc_faults.adb: OK
+src/mc_faults.ads: OK
+src/mc_generation.adb: OK
+src/mc_generation.ads: OK
+src/mc_golden.adb: OK
+src/mc_golden.ads: OK
+src/mc_health_golden.adb: OK
+src/mc_health_golden.ads: OK
+src/mc_health_report.adb: OK
+src/mc_health_report.ads: OK
+src/mc_hex.adb: OK
+src/mc_hex.ads: OK
+src/mc_incidents.adb: OK
+src/mc_incidents.ads: OK
+src/mc_journal_budget.ads: OK
+src/mc_json.adb: OK
+src/mc_json.ads: OK
+src/mc_log_format.adb: OK
+src/mc_log_format.ads: OK
+src/mc_maintenance.adb: OK
+src/mc_maintenance.ads: OK
+src/mc_numbers.adb: OK
+src/mc_numbers.ads: OK
+src/mc_paths.adb: OK
+src/mc_paths.ads: OK
+src/mc_platform_profile.adb: OK
+src/mc_platform_profile.ads: OK
+src/mc_properties.adb: OK
+src/mc_properties.ads: OK
+src/mc_protocol.adb: OK
+src/mc_protocol.ads: OK
+src/mc_qualification.adb: OK
+src/mc_qualification.ads: OK
+src/mc_recovery_cohort.adb: OK
+src/mc_recovery_cohort.ads: OK
+src/mc_release.adb: OK
+src/mc_release.ads: OK
+src/mc_replay.adb: OK
+src/mc_replay.ads: OK
+src/mc_request_replay.adb: OK
+src/mc_request_replay.ads: OK
+src/mc_requests.adb: OK
+src/mc_requests.ads: OK
+src/mc_retry_budget.adb: OK
+src/mc_retry_budget.ads: OK
+src/mc_sha256.adb: OK
+src/mc_sha256.ads: OK
+src/mc_stop_barrier.adb: OK
+src/mc_stop_barrier.ads: OK
+src/mc_system_baseline.adb: OK
+src/mc_system_baseline.ads: OK
+src/mc_text.adb: OK
+src/mc_text.ads: OK
+src/mc_time_guard.adb: OK
+src/mc_time_guard.ads: OK
+src/mc_types.adb: OK
+src/mc_types.ads: OK
+src/mc_witness.adb: OK
+src/mc_witness.ads: OK
+python3 ci/check-resolver.py
+{"result": "source-lock-only-pass", "resolver_profile": "fba913ea6953e9833e55d4cce77ea032f865efdbf0c3a7f3c4eb4ba7aa09ed8a"}
+mkdir -p build/proof-obj
+/home/nia/devbox/niaos/.work/toolchains/gnatprove-x86_64-linux-16.1.0-1/bin/gnatprove -j1 -P proof.gpr -U --mode=all --level=4 --checks-as-errors=on --warnings=error --proof-warnings=on --report=statistics
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:9:48
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_backups.adb:13:25
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:14:16
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:14:53
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:15:23
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:15:61
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:16:23
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:16:59
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:16:81
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:18:16
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:18:31
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:19:24
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:19:44
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_backups.adb:20:26
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:20:37
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:20:54
+
+ info: initialization of "Here" proved
+--> mc_backups.adb:26:07
+
+ info: initialization of "Parent" proved
+--> mc_backups.adb:26:21
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:32:15
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:35:48
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:35:58
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_backups.adb:38:28
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:39:19
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:39:64
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:41:35
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:42:23
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:42:70
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:43:23
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:44:23
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:46:18
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_backups.adb:49:33
+
+ info: precondition proved (CVC5: 1 VC in max 0.1 seconds and 58 steps)
+--> mc_backups.adb:51:33
+
+ info: initialization of "Distinct" proved
+--> mc_backups.adb:56:38
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_backups.adb:64:27
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_backups.adb:66:29
+
+ info: overflow check proved (CVC5: 16 VC in max 0.4 seconds and 1379 steps)
+--> mc_backups.adb:75:68
+
+ info: overflow check proved (CVC5: 16 VC in max 0.3 seconds and 1322 steps)
+--> mc_backups.adb:77:49
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_backups.adb:78:29
+
+ info: overflow check proved (CVC5: 16 VC in max 0.3 seconds and 1355 steps)
+--> mc_backups.adb:82:48
+
+ info: initialization of "D" proved
+--> mc_backups.adb:89:07
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:93:35
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:94:20
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:95:20
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:95:45
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:96:20
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:97:29
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:97:34
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_backups.adb:99:25
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:99:42
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:99:71
+
+ info: initialization of "Candidate" proved
+--> mc_backups.adb:104:07
+
+ info: initialization of "S" proved
+--> mc_backups.adb:104:30
+
+ info: loop invariant initialization proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:109:32
+
+ info: loop invariant preservation proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:109:32
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:112:23
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_backups.adb:112:48
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:113:24
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:113:49
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:114:26
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_backups.adb:114:44
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_backups.ads:34:13
+
+ info: data dependencies proved
+--> mc_backups.ads:34:52
+
+ info: implicit aspect Always_Terminates on "Valid_Catalog" has been proved, subprogram will terminate
+--> mc_backups.ads:35:13
+
+ info: data dependencies proved
+--> mc_backups.ads:36:11
+
+ info: postcondition proved (CVC5: 2 VC in max 0.1 seconds and 1 step; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> mc_backups.ads:36:35
+
+ info: initialization of "Members" proved
+--> mc_backups.ads:37:61
+
+ info: initialization of "Commitment" proved
+--> mc_backups.ads:38:07
+
+ info: initialization of "Status" proved
+--> mc_backups.ads:38:32
+
+ info: data dependencies proved
+--> mc_backups.ads:38:59
+
+ info: postcondition proved (CVC5: 4 VC in max 0.1 seconds and 20 steps; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> mc_backups.ads:39:17
+
+ info: implicit aspect Always_Terminates on "Usable" has been proved, subprogram will terminate
+--> mc_backups.ads:40:13
+
+ info: data dependencies proved
+--> mc_backups.ads:40:65
+
+ info: initialization of "Members" proved
+--> mc_backups.ads:42:07
+
+ info: initialization of "Status" proved
+--> mc_backups.ads:42:32
+
+ info: data dependencies proved
+--> mc_backups.ads:42:59
+
+ info: initialization of "Terminal" proved
+--> mc_backups.ads:44:07
+
+ info: initialization of "Members" proved
+--> mc_backups.ads:44:31
+
+ info: initialization of "Status" proved
+--> mc_backups.ads:44:56
+
+ info: data dependencies proved
+--> mc_backups.ads:44:83
+ info: implicit aspect Always_Terminates on "Value" has been proved, subprogram will terminate
+--> mc_health_golden.ads:4:13
+
+ info: data dependencies proved
+--> mc_health_golden.ads:4:55
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_maintenance.ads:21:13
+
+ info: data dependencies proved
+--> mc_maintenance.ads:21:50
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_maintenance.ads:22:13
+
+ info: data dependencies proved
+--> mc_maintenance.ads:22:52
+
+ info: implicit aspect Always_Terminates on "Permits" has been proved, subprogram will terminate
+--> mc_maintenance.ads:23:13
+
+ info: data dependencies proved
+--> mc_maintenance.ads:23:89
+
+ info: implicit aspect Always_Terminates on "Blocks" has been proved, subprogram will terminate
+--> mc_maintenance.ads:24:13
+
+ info: data dependencies proved
+--> mc_maintenance.ads:24:109
+ info: length check proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_witness.adb:8:16
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_witness.adb:11:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_witness.adb:11:52
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_witness.adb:12:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_witness.adb:12:53
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_witness.adb:18:51
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_witness.adb:18:84
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_witness.adb:19:23
+
+ info: index check proved (CVC5: 14 VC in max 0.0 seconds and 1 step)
+--> mc_witness.adb:19:33
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_witness.adb:20:25
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_witness.adb:20:35
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_witness.adb:21:22
+
+ info: precondition proved (CVC5: 12 VC in max 0.1 seconds and 30 steps)
+--> mc_witness.adb:21:38
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 17 steps)
+--> mc_witness.adb:22:24
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_witness.adb:22:26
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 31 steps)
+--> mc_witness.adb:22:45
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 64 steps)
+--> mc_witness.adb:22:67
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 93 steps)
+--> mc_witness.adb:22:89
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 122 steps)
+--> mc_witness.adb:23:25
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 152 steps)
+--> mc_witness.adb:23:47
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 182 steps)
+--> mc_witness.adb:23:66
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 213 steps)
+--> mc_witness.adb:23:90
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 244 steps)
+--> mc_witness.adb:24:32
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 515 steps)
+--> mc_witness.adb:24:32
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 274 steps)
+--> mc_witness.adb:24:71
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 581 steps)
+--> mc_witness.adb:24:71
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 305 steps)
+--> mc_witness.adb:25:33
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 648 steps)
+--> mc_witness.adb:25:33
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 337 steps)
+--> mc_witness.adb:25:74
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 715 steps)
+--> mc_witness.adb:25:74
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_witness.adb:32:72
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_witness.ads:13:13
+
+ info: data dependencies proved
+--> mc_witness.ads:13:53
+
+ info: initialization of "S" proved
+--> mc_witness.ads:14:32
+
+ info: initialization of "Status" proved
+--> mc_witness.ads:14:51
+
+ info: data dependencies proved
+--> mc_witness.ads:14:78
+
+ info: implicit aspect Always_Terminates on "Matches" has been proved, subprogram will terminate
+--> mc_witness.ads:15:13
+
+ info: data dependencies proved
+--> mc_witness.ads:15:94
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:11:19
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:12:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:12:56
+
+ info: precondition proved (CVC5: 1 VC in max 0.2 seconds and 597 steps)
+--> mc_control_codec.adb:15:68
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:15:75
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:21:19
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:22:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:22:65
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:26:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:26:59
+
+ info: precondition proved (CVC5: 1 VC in max 0.2 seconds and 1199 steps)
+--> mc_control_codec.adb:27:32
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:27:39
+
+ info: initialization of "O" proved
+--> mc_control_codec.adb:30:45
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:32:19
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:33:15
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_control_codec.adb:35:27
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 152 steps)
+--> mc_control_codec.adb:36:18
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 150 steps)
+--> mc_control_codec.adb:36:25
+
+ info: range check proved (CVC5: 32 VC in max 0.1 seconds and 158 steps)
+--> mc_control_codec.adb:37:10
+
+ info: index check proved (CVC5: 16 VC in max 0.1 seconds and 154 steps)
+--> mc_control_codec.adb:37:13
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 156 steps)
+--> mc_control_codec.adb:37:17
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 154 steps)
+--> mc_control_codec.adb:37:17
+
+ info: index check proved (CVC5: 16 VC in max 0.1 seconds and 154 steps)
+--> mc_control_codec.adb:37:17
+
+ info: length check proved (CVC5: 24 VC in max 0.1 seconds and 153 steps)
+--> mc_control_codec.adb:37:22
+
+ info: length check proved (CVC5: 24 VC in max 0.1 seconds and 150 steps)
+--> mc_control_codec.adb:37:35
+
+ info: range check proved (CVC5: 32 VC in max 0.1 seconds and 169 steps)
+--> mc_control_codec.adb:37:48
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 167 steps)
+--> mc_control_codec.adb:37:52
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 161 steps)
+--> mc_control_codec.adb:37:52
+
+ info: index check proved (CVC5: 16 VC in max 0.1 seconds and 161 steps)
+--> mc_control_codec.adb:37:52
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 165 steps)
+--> mc_control_codec.adb:37:58
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 161 steps)
+--> mc_control_codec.adb:37:58
+
+ info: index check proved (CVC5: 16 VC in max 0.1 seconds and 161 steps)
+--> mc_control_codec.adb:37:58
+
+ info: length check proved (CVC5: 24 VC in max 0.1 seconds and 161 steps)
+--> mc_control_codec.adb:37:63
+
+ info: length check proved (CVC5: 24 VC in max 0.1 seconds and 157 steps)
+--> mc_control_codec.adb:37:76
+
+ info: precondition proved (CVC5: 32 VC in max 0.4 seconds and 1860 steps)
+--> mc_control_codec.adb:38:18
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 181 steps)
+--> mc_control_codec.adb:38:29
+
+ info: overflow check proved (CVC5: 16 VC in max 0.1 seconds and 203 steps)
+--> mc_control_codec.adb:39:14
+
+ info: index check proved (CVC5: 16 VC in max 0.1 seconds and 207 steps)
+--> mc_control_codec.adb:39:14
+
+ info: precondition proved (CVC5: 1 VC in max 0.5 seconds and 1943 steps)
+--> mc_control_codec.adb:41:34
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 356 steps)
+--> mc_control_codec.adb:41:41
+
+ info: initialization of "T" proved
+--> mc_control_codec.adb:44:07
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:48:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:48:36
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:49:25
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:50:25
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:51:18
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:51:43
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:52:38
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 16 steps)
+--> mc_control_codec.adb:52:38
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:52:86
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 42 steps)
+--> mc_control_codec.adb:52:86
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 60 steps)
+--> mc_control_codec.adb:53:41
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:53:44
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:53:64
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:54:25
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:54:52
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:54:78
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:55:29
+
+ info: initialization of "T" proved
+--> mc_control_codec.adb:60:07
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:66:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:66:36
+
+ info: precondition proved (CVC5: 6 VC in max 0.1 seconds and 105 steps)
+--> mc_control_codec.adb:68:21
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:68:35
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 55 steps)
+--> mc_control_codec.adb:70:13
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 333 steps)
+--> mc_control_codec.adb:70:13
+
+ info: precondition proved (CVC5: 6 VC in max 0.1 seconds and 168 steps)
+--> mc_control_codec.adb:70:55
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:70:69
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:72:18
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:72:43
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:73:47
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 137 steps)
+--> mc_control_codec.adb:73:47
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:73:99
+
+ info: range check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:73:99
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 104 steps)
+--> mc_control_codec.adb:74:41
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:74:44
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:74:63
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:74:91
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:75:27
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 7 steps)
+--> mc_control_codec.adb:75:53
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 25 steps)
+--> mc_control_codec.adb:75:89
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 43 steps)
+--> mc_control_codec.adb:76:29
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 62 steps)
+--> mc_control_codec.adb:76:76
+
+ info: range check proved (CVC5: 1 VC in max 0.0 seconds and 78 steps; Z3: 1 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:76:76
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 80 steps)
+--> mc_control_codec.adb:77:37
+
+ info: range check proved (CVC5: 1 VC in max 0.0 seconds and 97 steps; Z3: 1 VC in max 0.2 seconds and 24 steps)
+--> mc_control_codec.adb:77:37
+
+ info: initialization of "T" proved
+--> mc_control_codec.adb:81:07
+
+ info: initialization of "O" proved
+--> mc_control_codec.adb:81:33
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:85:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:85:36
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:85:55
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:86:20
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:86:52
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:88:18
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:88:43
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:88:84
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 51 steps)
+--> mc_control_codec.adb:88:84
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 67 steps)
+--> mc_control_codec.adb:89:18
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:89:30
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 85 steps)
+--> mc_control_codec.adb:89:59
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:89:71
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 105 steps)
+--> mc_control_codec.adb:89:99
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:89:111
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:91:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:91:32
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:91:50
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 111 steps)
+--> mc_control_codec.adb:92:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 106 steps)
+--> mc_control_codec.adb:92:25
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 116 steps)
+--> mc_control_codec.adb:92:37
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 127 steps)
+--> mc_control_codec.adb:92:37
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 36 steps)
+--> mc_control_codec.adb:93:35
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:93:35
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:93:42
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 59 steps)
+--> mc_control_codec.adb:93:72
+
+ info: length check proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_control_codec.adb:93:72
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:93:76
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:93:82
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 75 steps)
+--> mc_control_codec.adb:94:39
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:94:39
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:94:48
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 329 steps)
+--> mc_control_codec.adb:94:94
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:94:98
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_control_codec.adb:94:98
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_control_codec.ads:7:13
+
+ info: data dependencies proved
+--> mc_control_codec.ads:7:67
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_control_codec.ads:8:13
+
+ info: data dependencies proved
+--> mc_control_codec.ads:8:73
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_control_codec.ads:9:13
+
+ info: data dependencies proved
+--> mc_control_codec.ads:9:75
+
+ info: initialization of "S" proved
+--> mc_control_codec.ads:10:33
+
+ info: initialization of "Status" proved
+--> mc_control_codec.ads:10:59
+
+ info: data dependencies proved
+--> mc_control_codec.ads:11:11
+
+ info: initialization of "P" proved
+--> mc_control_codec.ads:12:33
+
+ info: initialization of "Status" proved
+--> mc_control_codec.ads:12:62
+
+ info: data dependencies proved
+--> mc_control_codec.ads:13:11
+
+ info: initialization of "A" proved
+--> mc_control_codec.ads:14:33
+
+ info: initialization of "Status" proved
+--> mc_control_codec.ads:14:63
+
+ info: data dependencies proved
+--> mc_control_codec.ads:15:11
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_retry_budget.adb:12:60
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_retry_budget.adb:18:56
+
+ info: division check proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_retry_budget.adb:19:45
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_retry_budget.adb:22:31
+
+ info: initialization of "Delay_Ms" proved
+--> mc_retry_budget.adb:31:07
+
+ info: overflow check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:40:17
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:41:26
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:41:37
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:43:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:43:32
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:44:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 41 steps)
+--> mc_retry_budget.adb:44:32
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:44:64
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:44:79
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:45:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 19 steps)
+--> mc_retry_budget.adb:45:32
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:45:64
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:46:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 74 steps)
+--> mc_retry_budget.adb:46:32
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:46:64
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:46:75
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:47:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 46 steps)
+--> mc_retry_budget.adb:47:32
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:47:73
+
+ info: precondition proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:50:19
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:51:30
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:52:20
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:52:31
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 29 steps)
+--> mc_retry_budget.adb:54:38
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 57 steps)
+--> mc_retry_budget.adb:54:62
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:55:27
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:73:30
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:77:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:77:32
+
+ info: index check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:77:64
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_retry_budget.adb:79:27
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_retry_budget.ads:23:13
+
+ info: data dependencies proved
+--> mc_retry_budget.ads:23:52
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_retry_budget.ads:24:13
+
+ info: data dependencies proved
+--> mc_retry_budget.ads:24:51
+
+ info: implicit aspect Always_Terminates on "Backoff" has been proved, subprogram will terminate
+--> mc_retry_budget.ads:25:13
+
+ info: data dependencies proved
+--> mc_retry_budget.ads:26:28
+
+ info: postcondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_retry_budget.ads:27:16
+
+ info: initialization of "Status" proved
+--> mc_retry_budget.ads:29:22
+
+ info: data dependencies proved
+--> mc_retry_budget.ads:30:11
+
+ info: postcondition proved (CVC5: 6 VC in max 0.3 seconds and 357 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps)
+--> mc_retry_budget.ads:31:16
+
+ info: initialization of "Status" proved
+--> mc_retry_budget.ads:35:63
+
+ info: data dependencies proved
+--> mc_retry_budget.ads:36:11
+
+ info: postcondition proved (CVC5: 8 VC in max 0.1 seconds and 1 step; Trivial: 2 VC in max 0.0 seconds and 2 steps)
+--> mc_retry_budget.ads:37:16
+
+ info: initialization of "Status" proved
+--> mc_retry_budget.ads:43:22
+
+ info: data dependencies proved
+--> mc_retry_budget.ads:44:11
+
+ info: postcondition proved (CVC5: 7 VC in max 0.1 seconds and 70 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps)
+--> mc_retry_budget.ads:45:16
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:5:07
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:5:33
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:5:41
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:5:49
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:9:33
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:9:33
+
+ info: overflow check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:9:39
+
+ info: overflow check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_hex.adb:9:44
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:10:20
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:10:20
+
+ info: division check proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:10:54
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:11:20
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_hex.adb:11:20
+
+ info: division check proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:11:54
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:12:17
+
+ info: implicit aspect Always_Terminates on "Nibble" has been proved, subprogram will terminate
+--> mc_hex.adb:16:13
+
+ info: local subprogram "Nibble" only analyzed in the context of calls [info-unrolling-inlining]
+--> mc_hex.adb:16:13
+      + add a contract to analyze it separately from calling contexts
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step), in call inlined at mc_hex.adb:32
+--> mc_hex.adb:18:54
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step), in call inlined at mc_hex.adb:33
+--> mc_hex.adb:18:54
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step), in call inlined at mc_hex.adb:32
+--> mc_hex.adb:19:73
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step), in call inlined at mc_hex.adb:33
+--> mc_hex.adb:19:73
+
+ info: initialization of "A" proved
+--> mc_hex.adb:23:07
+
+ info: initialization of "B" proved
+--> mc_hex.adb:23:09
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:26:12
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:27:14
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:31:33
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:31:33
+
+ info: overflow check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:31:39
+
+ info: overflow check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_hex.adb:31:44
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:32:15
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:32:40
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_hex.adb:32:40
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:33:15
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:33:40
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:33:44
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:33:44
+
+ info: length check proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_hex.adb:34:43
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:35:30
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.adb:35:35
+
+ info: range check proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> mc_hex.adb:35:35
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_hex.adb:36:17
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_hex.ads:4:13
+
+ info: data dependencies proved
+--> mc_hex.ads:5:11
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_hex.ads:5:38
+
+ info: postcondition proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_hex.ads:6:16
+
+ info: initialization of "Data" proved
+--> mc_hex.ads:7:37
+
+ info: initialization of "Status" proved
+--> mc_hex.ads:7:55
+
+ info: data dependencies proved
+--> mc_hex.ads:8:11
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_authorization.adb:14:27
+
+ info: implicit aspect Always_Terminates on "Within_Scope" has been proved, subprogram will terminate
+--> mc_authorization.ads:12:13
+
+ info: data dependencies proved
+--> mc_authorization.ads:14:11
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_system_baseline.ads:21:13
+
+ info: data dependencies proved
+--> mc_system_baseline.ads:21:54
+
+ info: implicit aspect Always_Terminates on "Assess" has been proved, subprogram will terminate
+--> mc_system_baseline.ads:22:13
+
+ info: data dependencies proved
+--> mc_system_baseline.ads:22:77
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:18:53
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:32:19
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:35:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:35:59
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:36:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:36:60
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:37:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:37:61
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:38:15
+
+ info: precondition proved (CVC5: 1 VC in max 0.4 seconds and 2046 steps)
+--> mc_checkpoint.adb:39:32
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:39:39
+
+ info: initialization of "T" proved
+--> mc_checkpoint.adb:42:07
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:46:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:46:39
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_checkpoint.adb:47:21
+
+ info: precondition proved (CVC5: 21 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:48:21
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:50:20
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:50:46
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:50:72
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:51:21
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:51:47
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_checkpoint.adb:51:75
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:52:26
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:52:73
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 327 steps)
+--> mc_checkpoint.adb:52:73
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 17 steps)
+--> mc_checkpoint.adb:53:45
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 362 steps)
+--> mc_checkpoint.adb:53:45
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 35 steps)
+--> mc_checkpoint.adb:53:94
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 397 steps)
+--> mc_checkpoint.adb:53:94
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 54 steps)
+--> mc_checkpoint.adb:54:42
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 433 steps)
+--> mc_checkpoint.adb:54:42
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 74 steps)
+--> mc_checkpoint.adb:54:92
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 470 steps)
+--> mc_checkpoint.adb:54:92
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 94 steps)
+--> mc_checkpoint.adb:55:45
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 507 steps)
+--> mc_checkpoint.adb:55:45
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 115 steps)
+--> mc_checkpoint.adb:55:95
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 545 steps)
+--> mc_checkpoint.adb:55:95
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_checkpoint.adb:56:25
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_checkpoint.ads:13:13
+
+ info: data dependencies proved
+--> mc_checkpoint.ads:13:56
+
+ info: implicit aspect Always_Terminates on "Follows" has been proved, subprogram will terminate
+--> mc_checkpoint.ads:14:13
+
+ info: data dependencies proved
+--> mc_checkpoint.ads:15:11
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_checkpoint.ads:16:13
+
+ info: data dependencies proved
+--> mc_checkpoint.ads:16:55
+
+ info: initialization of "D" proved
+--> mc_checkpoint.ads:17:33
+
+ info: initialization of "Status" proved
+--> mc_checkpoint.ads:17:53
+
+ info: data dependencies proved
+--> mc_checkpoint.ads:17:80
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_accounting.adb:10:93
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_accounting.ads:21:13
+
+ info: data dependencies proved
+--> mc_accounting.ads:21:51
+
+ info: implicit aspect Always_Terminates on "Chain_Extends" has been proved, subprogram will terminate
+--> mc_accounting.ads:22:13
+
+ info: data dependencies proved
+--> mc_accounting.ads:22:114
+
+ info: implicit aspect Always_Terminates on "Required_Remote_Preservation" has been proved, subprogram will terminate
+--> mc_accounting.ads:23:13
+
+ info: data dependencies proved
+--> mc_accounting.ads:23:74
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_stop_barrier.adb:16:27
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_stop_barrier.adb:22:26
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:23:51
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:24:58
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:25:62
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:26:63
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_stop_barrier.adb:31:30
+
+ info: implicit aspect Always_Terminates on "Valid_Receipt" has been proved, subprogram will terminate
+--> mc_stop_barrier.adb:37:13
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:51:70
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:52:65
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:59:19
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:60:28
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:60:64
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:61:28
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:61:38
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:61:49
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:62:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:62:32
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:63:29
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:64:22
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:64:55
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:65:24
+
+ info: initialization of "R" proved
+--> mc_stop_barrier.adb:81:23
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 80 steps)
+--> mc_stop_barrier.adb:96:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 153 steps)
+--> mc_stop_barrier.adb:96:32
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 91 steps)
+--> mc_stop_barrier.adb:98:48
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:99:46
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:100:50
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:101:20
+
+ info: assertion proved (CVC5: 1 VC in max 0.2 seconds and 372 steps)
+--> mc_stop_barrier.adb:102:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:104:44
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:107:44
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:122:27
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:123:46
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:129:57
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:130:31
+
+ info: precondition proved (CVC5: 1 VC in max 0.2 seconds and 695 steps)
+--> mc_stop_barrier.adb:137:27
+
+ info: overflow check proved (CVC5: 2 VC in max 0.2 seconds and 665 steps)
+--> mc_stop_barrier.adb:142:32
+
+ info: assertion proved (CVC5: 1 VC in max 0.4 seconds and 1221 steps)
+--> mc_stop_barrier.adb:143:21
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 137 steps)
+--> mc_stop_barrier.adb:144:17
+
+ info: assertion proved (CVC5: 1 VC in max 0.2 seconds and 661 steps)
+--> mc_stop_barrier.adb:145:21
+
+ info: assertion proved (CVC5: 1 VC in max 0.2 seconds and 860 steps; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> mc_stop_barrier.adb:146:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 55 steps)
+--> mc_stop_barrier.adb:146:74
+
+ info: index check proved (CVC5: 2 VC in max 0.2 seconds and 679 steps)
+--> mc_stop_barrier.adb:146:87
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:153:72
+
+ info: initialization of "O" proved
+--> mc_stop_barrier.adb:156:42
+
+ info: length check proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:158:19
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:161:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:161:54
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:162:15
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_stop_barrier.adb:163:27
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:164:19
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:164:26
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:165:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:13
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:165:17
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:17
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:17
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:22
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:38
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:48
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:52
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:52
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:58
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:58
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:63
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:165:79
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:10
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:14
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:14
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:20
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:20
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:25
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:41
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:51
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:55
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:55
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:61
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:61
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:66
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:166:82
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:167:10
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:167:14
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:167:14
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:167:20
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:167:20
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:167:26
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:167:42
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 97 steps)
+--> mc_stop_barrier.adb:168:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:168:29
+
+ info: precondition proved (CVC5: 1 VC in max 0.3 seconds and 1244 steps)
+--> mc_stop_barrier.adb:170:36
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:170:43
+
+ info: initialization of "O" proved
+--> mc_stop_barrier.adb:173:41
+
+ info: length check proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:175:19
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:177:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:177:56
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_stop_barrier.adb:179:27
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:180:19
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:180:26
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:180:35
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:181:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:181:29
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:182:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:182:29
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:183:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:183:29
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 35 steps)
+--> mc_stop_barrier.adb:184:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:184:29
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:185:10
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:14
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:14
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:20
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:20
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:25
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:41
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:185:49
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:53
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:53
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:185:59
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:59
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:59
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:65
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:185:81
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 161 steps)
+--> mc_stop_barrier.adb:186:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:186:29
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 201 steps)
+--> mc_stop_barrier.adb:187:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:187:29
+
+ info: precondition proved (CVC5: 1 VC in max 0.5 seconds and 2396 steps)
+--> mc_stop_barrier.adb:189:36
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 16 steps)
+--> mc_stop_barrier.adb:189:43
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:194:19
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:197:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:197:63
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:198:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:198:65
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:199:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:200:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:200:64
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:201:15
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 19 steps)
+--> mc_stop_barrier.adb:201:58
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 51 steps)
+--> mc_stop_barrier.adb:202:15
+
+ info: precondition proved (CVC5: 1 VC in max 0.5 seconds and 2873 steps)
+--> mc_stop_barrier.adb:206:32
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:206:39
+
+ info: initialization of "T" proved
+--> mc_stop_barrier.adb:209:07
+
+ info: initialization of "O" proved
+--> mc_stop_barrier.adb:209:19
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:213:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:213:36
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_stop_barrier.adb:214:21
+
+ info: precondition proved (CVC5: 9 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:214:37
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:215:23
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:215:50
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:215:81
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:216:21
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:216:50
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:216:78
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:217:24
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:217:66
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 193 steps)
+--> mc_stop_barrier.adb:217:66
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:218:44
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 224 steps)
+--> mc_stop_barrier.adb:218:44
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 2 steps)
+--> mc_stop_barrier.adb:218:93
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 256 steps)
+--> mc_stop_barrier.adb:218:93
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 281 steps)
+--> mc_stop_barrier.adb:219:18
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:219:30
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_stop_barrier.adb:220:27
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 281 steps)
+--> mc_stop_barrier.adb:221:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 275 steps)
+--> mc_stop_barrier.adb:221:24
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 298 steps)
+--> mc_stop_barrier.adb:221:55
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:221:55
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:221:62
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 204 steps)
+--> mc_stop_barrier.adb:222:39
+
+ info: length check proved (CVC5: 3 VC in max 0.1 seconds and 1 step)
+--> mc_stop_barrier.adb:222:39
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:222:43
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:222:49
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 225 steps)
+--> mc_stop_barrier.adb:222:80
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:222:80
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:222:84
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:222:90
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 246 steps)
+--> mc_stop_barrier.adb:223:36
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:223:36
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:223:40
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:223:46
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 269 steps)
+--> mc_stop_barrier.adb:223:79
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:223:79
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:223:83
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:223:89
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 289 steps)
+--> mc_stop_barrier.adb:224:60
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:224:69
+
+ info: initialization of "T" proved
+--> mc_stop_barrier.adb:229:07
+
+ info: initialization of "O" proved
+--> mc_stop_barrier.adb:229:18
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:233:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:233:36
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:233:56
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:234:25
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:235:25
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:236:24
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:236:51
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:236:79
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:237:26
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:237:69
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 107 steps)
+--> mc_stop_barrier.adb:237:69
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:238:38
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 135 steps)
+--> mc_stop_barrier.adb:238:38
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 154 steps)
+--> mc_stop_barrier.adb:238:76
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:238:79
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 175 steps)
+--> mc_stop_barrier.adb:239:18
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:239:30
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_stop_barrier.adb:240:27
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 162 steps)
+--> mc_stop_barrier.adb:241:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 157 steps)
+--> mc_stop_barrier.adb:241:24
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 176 steps)
+--> mc_stop_barrier.adb:241:36
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_stop_barrier.adb:242:24
+
+ info: precondition proved (CVC5: 12 VC in max 0.1 seconds and 121 steps)
+--> mc_stop_barrier.adb:242:40
+
+ info: overflow check proved (CVC5: 8 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:242:49
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 134 steps)
+--> mc_stop_barrier.adb:243:21
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:243:30
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 574 steps)
+--> mc_stop_barrier.adb:244:58
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:244:61
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 169 steps)
+--> mc_stop_barrier.adb:245:58
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 617 steps)
+--> mc_stop_barrier.adb:245:58
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:245:67
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 189 steps)
+--> mc_stop_barrier.adb:246:59
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 656 steps)
+--> mc_stop_barrier.adb:246:59
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:246:68
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 211 steps)
+--> mc_stop_barrier.adb:247:53
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 696 steps)
+--> mc_stop_barrier.adb:247:53
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:247:62
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 232 steps)
+--> mc_stop_barrier.adb:248:52
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 736 steps)
+--> mc_stop_barrier.adb:248:52
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:248:61
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 265 steps)
+--> mc_stop_barrier.adb:249:33
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:249:33
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:249:37
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:249:43
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 303 steps)
+--> mc_stop_barrier.adb:249:77
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:249:77
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:249:81
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:249:87
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 332 steps)
+--> mc_stop_barrier.adb:250:54
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 854 steps)
+--> mc_stop_barrier.adb:250:54
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:250:63
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 360 steps)
+--> mc_stop_barrier.adb:251:51
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 42 steps)
+--> mc_stop_barrier.adb:251:60
+
+ info: initialization of "T" proved
+--> mc_stop_barrier.adb:256:07
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:260:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:260:36
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:260:56
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:261:20
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:261:40
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:261:60
+
+ info: unrolling loop [info-unrolling-inlining]
+--> mc_stop_barrier.adb:262:21
+
+ info: precondition proved (CVC5: 27 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:262:37
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_stop_barrier.adb:263:24
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 5 steps)
+--> mc_stop_barrier.adb:263:56
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 27 steps)
+--> mc_stop_barrier.adb:263:84
+
+ info: range check proved (CVC5: 4 VC in max 0.1 seconds and 50 steps)
+--> mc_stop_barrier.adb:264:20
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 73 steps)
+--> mc_stop_barrier.adb:264:51
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 97 steps)
+--> mc_stop_barrier.adb:264:83
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 121 steps)
+--> mc_stop_barrier.adb:265:26
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 146 steps)
+--> mc_stop_barrier.adb:265:77
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 567 steps)
+--> mc_stop_barrier.adb:265:77
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 168 steps)
+--> mc_stop_barrier.adb:266:47
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 606 steps)
+--> mc_stop_barrier.adb:266:47
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 190 steps)
+--> mc_stop_barrier.adb:266:101
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 646 steps)
+--> mc_stop_barrier.adb:266:101
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 214 steps)
+--> mc_stop_barrier.adb:267:35
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 686 steps)
+--> mc_stop_barrier.adb:267:35
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 237 steps)
+--> mc_stop_barrier.adb:267:95
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 726 steps)
+--> mc_stop_barrier.adb:267:95
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 261 steps)
+--> mc_stop_barrier.adb:268:45
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 767 steps)
+--> mc_stop_barrier.adb:268:45
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 286 steps)
+--> mc_stop_barrier.adb:268:97
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 809 steps)
+--> mc_stop_barrier.adb:268:97
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 311 steps)
+--> mc_stop_barrier.adb:269:39
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 852 steps)
+--> mc_stop_barrier.adb:269:39
+
+ info: precondition proved (CVC5: 3 VC in max 0.0 seconds and 337 steps)
+--> mc_stop_barrier.adb:269:92
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 895 steps)
+--> mc_stop_barrier.adb:269:92
+
+ info: precondition proved (CVC5: 3 VC in max 0.1 seconds and 364 steps)
+--> mc_stop_barrier.adb:270:36
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 964 steps)
+--> mc_stop_barrier.adb:270:74
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 165 steps)
+--> mc_stop_barrier.adb:270:77
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 1008 steps)
+--> mc_stop_barrier.adb:271:32
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 200 steps)
+--> mc_stop_barrier.adb:271:35
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 236 steps)
+--> mc_stop_barrier.adb:271:69
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 254 steps)
+--> mc_stop_barrier.adb:272:28
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 273 steps)
+--> mc_stop_barrier.adb:272:65
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:54:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:54:52
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:55:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:55:51
+
+ info: implicit aspect Always_Terminates on "Fingerprint" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:56:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:56:57
+
+ info: implicit aspect Always_Terminates on "Ready" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:57:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:57:78
+
+ info: implicit aspect Always_Terminates on "Usable" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:58:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:58:79
+
+ info: initialization of "S" proved
+--> mc_stop_barrier.ads:59:38
+
+ info: initialization of "Status" proved
+--> mc_stop_barrier.ads:59:53
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:59:80
+
+ info: initialization of "Status" proved
+--> mc_stop_barrier.ads:61:52
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:62:12
+
+ info: postcondition proved (CVC5: 8 VC in max 0.9 seconds and 2321 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps)
+--> mc_stop_barrier.ads:62:36
+
+ info: overflow check proved (CVC5: 2 VC in max 0.2 seconds and 420 steps)
+--> mc_stop_barrier.ads:63:86
+
+ info: initialization of "Status" proved
+--> mc_stop_barrier.ads:64:65
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:65:12
+
+ info: postcondition proved (CVC5: 4 VC in max 0.4 seconds and 916 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps)
+--> mc_stop_barrier.ads:65:36
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:67:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:67:58
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:68:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:68:56
+
+ info: implicit aspect Always_Terminates on "Encode" has been proved, subprogram will terminate
+--> mc_stop_barrier.ads:69:13
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:69:62
+
+ info: initialization of "P" proved
+--> mc_stop_barrier.ads:70:33
+
+ info: initialization of "Status" proved
+--> mc_stop_barrier.ads:70:49
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:70:76
+
+ info: initialization of "S" proved
+--> mc_stop_barrier.ads:71:33
+
+ info: initialization of "Status" proved
+--> mc_stop_barrier.ads:71:48
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:71:75
+
+ info: initialization of "E" proved
+--> mc_stop_barrier.ads:72:33
+
+ info: initialization of "Status" proved
+--> mc_stop_barrier.ads:72:51
+
+ info: data dependencies proved
+--> mc_stop_barrier.ads:72:78

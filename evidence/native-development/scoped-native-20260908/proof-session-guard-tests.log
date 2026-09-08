@@ -1,0 +1,20 @@
+test_aggregate_accounts_for_two_small_children (test_proof_guard.ProofGuardTests.test_aggregate_accounts_for_two_small_children) ... ok
+test_all_component_make_targets_use_guard_even_with_build_jobs_override (test_proof_guard.ProofGuardTests.test_all_component_make_targets_use_guard_even_with_build_jobs_override) ... ok
+test_excess_allocation_is_refused_without_allocating_it (test_proof_guard.ProofGuardTests.test_excess_allocation_is_refused_without_allocating_it) ... ok
+test_existing_child_is_not_adopted_or_killed (test_proof_guard.ProofGuardTests.test_existing_child_is_not_adopted_or_killed) ... ok
+test_exit_status_is_preserved (test_proof_guard.ProofGuardTests.test_exit_status_is_preserved) ... ok
+test_invalid_or_relaxed_limits_are_refused (test_proof_guard.ProofGuardTests.test_invalid_or_relaxed_limits_are_refused) ... ok
+test_limits_and_priority_reach_grandchild (test_proof_guard.ProofGuardTests.test_limits_and_priority_reach_grandchild) ... ok
+test_low_starting_memory_launches_nothing (test_proof_guard.ProofGuardTests.test_low_starting_memory_launches_nothing) ... ok
+test_memory_drop_stops_running_child (test_proof_guard.ProofGuardTests.test_memory_drop_stops_running_child) ... ok
+test_normal_leader_exit_reaps_solver_in_another_group (test_proof_guard.ProofGuardTests.test_normal_leader_exit_reaps_solver_in_another_group) ... ok
+test_outer_runner_timeout_allows_guard_to_clean_its_group (test_proof_guard.ProofGuardTests.test_outer_runner_timeout_allows_guard_to_clean_its_group) ... ok
+test_shared_lock_refuses_second_run (test_proof_guard.ProofGuardTests.test_shared_lock_refuses_second_run) ... ok
+test_term_cleans_descendant_and_releases_lock (test_proof_guard.ProofGuardTests.test_term_cleans_descendant_and_releases_lock) ... ok
+test_timeout_cleans_descendant (test_proof_guard.ProofGuardTests.test_timeout_cleans_descendant) ... ok
+test_timeout_reaps_multiple_generations_of_separate_groups (test_proof_guard.ProofGuardTests.test_timeout_reaps_multiple_generations_of_separate_groups) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 4.224s
+
+OK

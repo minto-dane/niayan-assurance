@@ -1,0 +1,724 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: initialization of "I" proved
+--> mc_json.adb:6:07
+
+ info: initialization of "B" proved
+--> mc_json.adb:6:20
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:8:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:9:48
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:9:90
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:10:25
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:10:59
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:10:76
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:11:23
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:11:25
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:11:58
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:11:60
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:12:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:12:26
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:13:23
+
+ info: loop variant proved (CVC5: 1 VC in max 0.0 seconds and 31 steps)
+--> mc_json.adb:14:30
+
+ info: loop invariant initialization proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:15:32
+
+ info: loop invariant preservation proved (CVC5: 2 VC in max 0.0 seconds and 34 steps)
+--> mc_json.adb:15:32
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:15:45
+
+ info: overflow check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:15:53
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:15:67
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:16:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 27 steps)
+--> mc_json.adb:16:32
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:16:45
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:17:18
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:17:26
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:19:27
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:20:23
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:21:39
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:24:27
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:27:23
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:28:20
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:28:41
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 4 steps)
+--> mc_json.adb:28:41
+
+ info: initialization of "I" proved
+--> mc_json.adb:32:07
+
+ info: initialization of "B" proved
+--> mc_json.adb:32:45
+
+ info: initialization of "Used" proved
+--> mc_json.adb:32:64
+
+ info: initialization of "S" proved
+--> mc_json.adb:32:80
+
+ info: initialization of "Equal" proved
+--> mc_json.adb:32:93
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:34:70
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:35:18
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:37:24
+
+ info: loop variant proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:38:30
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:39:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:39:32
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:40:43
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:41:28
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:41:69
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:42:29
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:43:29
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:43:51
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:44:30
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:45:25
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_json.adb:46:43
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:46:54
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:46:64
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:46:64
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:47:32
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:48:30
+
+ info: initialization of "I" proved
+--> mc_json.adb:52:07
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:54:68
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:55:18
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:57:24
+
+ info: loop variant proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:58:30
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:59:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:59:32
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:60:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:60:60
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:61:28
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:61:49
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:62:36
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:63:29
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:63:50
+
+ info: initialization of "Pos" proved
+--> mc_json.adb:67:07
+
+ info: implicit aspect Always_Terminates on "Cursor_Valid" has been proved, subprogram will terminate
+--> mc_json.adb:68:16
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:70:49
+
+ info: postcondition proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:72:17
+
+ info: index check proved (Z3: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:74:45
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:75:35
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:75:35
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:76:35
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:76:35
+
+ info: loop variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:77:33
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:78:21
+
+ info: initialization of "N" proved
+--> mc_json.adb:81:47
+
+ info: postcondition proved (Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 6 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:83:19
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:86:32
+
+ info: range check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:90:26
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:90:50
+
+ info: initialization of "N" proved
+--> mc_json.adb:92:50
+
+ info: postcondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 6 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:94:19
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:99:10
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:100:40
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:100:89
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:102:35
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:102:35
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:103:35
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:103:35
+
+ info: loop invariant initialization proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:104:35
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:104:35
+
+ info: loop variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:105:33
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:107:24
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:109:24
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:110:24
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:110:45
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:110:67
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:111:24
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:111:45
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:112:21
+
+ info: initialization of "N" proved
+--> mc_json.adb:115:61
+
+ info: postcondition proved (Trivial: 1 VC in max 0.0 seconds and 2 steps; Z3: 6 VC in max 0.1 seconds and 1 step)
+--> mc_json.adb:117:19
+
+ info: initialization of "K" proved
+--> mc_json.adb:121:10
+
+ info: initialization of "Value_Node" proved
+--> mc_json.adb:121:12
+
+ info: initialization of "Earlier" proved
+--> mc_json.adb:121:32
+
+ info: initialization of "Object_Form" proved
+--> mc_json.adb:121:76
+
+ info: initialization of "Close_Byte" proved
+--> mc_json.adb:121:99
+
+ info: initialization of "Key" proved
+--> mc_json.adb:122:10
+
+ info: initialization of "Other" proved
+--> mc_json.adb:122:14
+
+ info: initialization of "KN" proved
+--> mc_json.adb:122:37
+
+ info: initialization of "ON" proved
+--> mc_json.adb:122:40
+
+ info: initialization of "S" proved
+--> mc_json.adb:122:54
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:124:16
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:126:18
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:126:31
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:127:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:128:31
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:129:13
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:130:21
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:130:25
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:131:45
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:131:74
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:131:96
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:133:38
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:133:38
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:134:38
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:134:38
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:135:38
+
+ info: loop invariant preservation proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:135:38
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:136:38
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:136:38
+
+ info: loop variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:137:36
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:139:19
+
+ info: range check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:143:42
+
+ info: range check proved (CVC5: 3 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:144:55
+
+ info: range check proved (CVC5: 3 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:144:66
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:145:54
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 42 steps)
+--> mc_json.adb:147:19
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:147:56
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 53 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:147:105
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:149:16
+
+ info: subprogram variant proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:149:16
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:149:34
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:150:16
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:151:24
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:151:53
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:151:75
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:151:106
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:152:27
+
+ info: overflow check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:153:29
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:153:33
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:155:21
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:156:13
+
+ info: index check proved (CVC5: 3 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:157:48
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:158:38
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:158:38
+
+ info: loop invariant preservation proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:159:38
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:159:38
+
+ info: loop variant proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:160:36
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:161:24
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:163:21
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:164:19
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:164:28
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:164:52
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:164:61
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:164:94
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:164:96
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:166:57
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:166:89
+
+ info: index check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:167:46
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:167:81
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:169:16
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:170:26
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:170:43
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:170:47
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:172:41
+
+ info: loop invariant initialization proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:172:41
+
+ info: overflow check proved (CVC5: 3 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:172:59
+
+ info: overflow check proved (CVC5: 3 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:172:62
+
+ info: index check proved (Z3: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:173:27
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:173:60
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:174:27
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:176:24
+
+ info: initialization of "N" proved
+--> mc_json.adb:180:07
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:184:16
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:185:07
+
+ info: precondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:185:26
+
+ info: overflow check proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:186:40
+
+ info: initialization of "Used" proved
+--> mc_json.adb:189:40
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:193:18
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:194:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:195:21
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:195:64
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:195:87
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:196:28
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:196:35
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:196:44
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:197:24
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:197:31
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:197:40
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:197:48
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:197:48
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:10
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:12
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:15
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:20
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:22
+
+ info: length check proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:22
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:35
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:198:53
+
+ info: initialization of "S" proved
+--> mc_json.adb:200:50
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> mc_json.adb:200:50
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_json.adb:201:27
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 18 steps)
+--> mc_json.adb:201:54
+
+ info: initialization of "D" proved
+--> mc_json.ads:10:34
+
+ info: initialization of "Status" proved
+--> mc_json.ads:10:52
+
+ info: data dependencies proved
+--> mc_json.ads:10:79
+
+ info: implicit aspect Always_Terminates on "Member" has been proved, subprogram will terminate
+--> mc_json.ads:11:13
+
+ info: data dependencies proved
+--> mc_json.ads:11:102
+
+ info: implicit aspect Always_Terminates on "Element" has been proved, subprogram will terminate
+--> mc_json.ads:12:13
+
+ info: data dependencies proved
+--> mc_json.ads:12:95
+
+ info: aspect Always_Terminates on "String_Bytes" has been proved, subprogram will terminate
+--> mc_json.ads:13:14
+
+ info: initialization of "Value" proved
+--> mc_json.ads:13:66
+
+ info: initialization of "Used" proved
+--> mc_json.ads:13:85
+
+ info: initialization of "Status" proved
+--> mc_json.ads:13:105
+
+ info: data dependencies proved
+--> mc_json.ads:13:132
+
+ info: postcondition proved (Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.ads:13:173
+
+ info: range check proved (CVC5: 1 VC in max 0.0 seconds and 85 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> mc_json.ads:13:186
+
+ info: initialization of "Value" proved
+--> mc_json.ads:14:68
+
+ info: initialization of "Status" proved
+--> mc_json.ads:14:89
+
+ info: data dependencies proved
+--> mc_json.ads:14:116
+Success: all checks proved (613 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/assurance/build/proof-obj/gnatprove/gnatprove.out

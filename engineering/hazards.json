@@ -778,7 +778,7 @@
       "id": "HAZ-070",
       "title": "brokerとmountの実行個体束縛",
       "severity": "critical",
-      "mitigation": "brokerとmountはapp・世代・policy・boot・cgroup・userの実際のidentityへ束縛し、既存FDの失効をDB操作だけで保証しない。",
+      "mitigation": "brokerとmountはapp・世代・policy・boot・cgroup・userの実際のidentityへ束縛し、既存FDの失効をDB操作だけで保証しない。 各mountのorigin・保護フラグと全pairのobject共有条件を分けて検証し、read-only以外の同じ非零object共有を拒否する。",
       "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
       "requirements": [
         "REQ-084"
@@ -894,6 +894,17 @@
         "REQ-094"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md"
+    },
+    {
+      "id": "HAZ-081",
+      "title": "開発証明によるPCの資源枯渇",
+      "severity": "high",
+      "mitigation": "前処理にも継承するhard limit、単一実行ロック、RSSと空きメモリ監視、時間制限、子孫停止を適用する。制限到達を失敗と記録する。",
+      "residual_risk": "Sampled RSS is not a kernel aggregate limit; other users, namespaces, escaped sessions and SIGKILL require separate containment. Current Distrobox does not delegate writable cgroups.",
+      "requirements": [
+        "REQ-095"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

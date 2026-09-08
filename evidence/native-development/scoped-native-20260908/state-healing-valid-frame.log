@@ -1,0 +1,165 @@
+proof-guard: {"command": ["/home/nia/devbox/niaos/.work/toolchains/gnatprove-x86_64-linux-16.1.0-1/bin/gnatprove", "-j1", "-P", "proof.gpr", "--subdirs=recovery-healing", "-u", "state_healing.adb", "--mode=all", "--level=1", "--timeout=2", "--checks-as-errors=on", "--warnings=error", "--report=statistics"], "address_mib_per_process": 1536, "sampled_group_rss_mib": 2048, "minimum_available_mib": 2048, "seconds": 300}
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: postcondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> state_healing.adb:24:14
+
+ info: initialization of "R" proved
+--> state_healing.adb:36:07
+
+ info: initialization of "Good" proved
+--> state_healing.adb:37:07
+
+ info: initialization of "Effect_Settled" proved
+--> state_healing.adb:37:13
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_healing.adb:41:84
+
+ info: postcondition proved (CVC5: 22 VC in max 0.0 seconds and 8 steps)
+--> state_healing.adb:42:17
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_healing.adb:44:88
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_healing.adb:48:83
+
+ info: postcondition proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> state_healing.adb:52:17
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 174 steps)
+--> state_healing.adb:68:56
+
+ info: precondition proved (CVC5: 21 VC in max 0.1 seconds and 644 steps)
+--> state_healing.adb:75:39
+
+ info: precondition proved (CVC5: 21 VC in max 0.1 seconds and 618 steps)
+--> state_healing.adb:78:69
+
+ info: precondition proved (CVC5: 21 VC in max 0.0 seconds and 220 steps)
+--> state_healing.adb:82:10
+
+ info: precondition proved (CVC5: 21 VC in max 0.1 seconds and 669 steps)
+--> state_healing.adb:86:39
+
+ info: precondition proved (CVC5: 20 VC in max 0.1 seconds and 642 steps; Z3: 1 VC in max 0.0 seconds and 1 step)
+--> state_healing.adb:89:64
+
+ info: precondition proved (CVC5: 21 VC in max 0.1 seconds and 657 steps)
+--> state_healing.adb:93:62
+
+ info: precondition proved (CVC5: 21 VC in max 0.1 seconds and 664 steps)
+--> state_healing.adb:96:66
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 60 steps)
+--> state_healing.adb:98:56
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 772 steps)
+--> state_healing.adb:113:30
+
+ info: precondition proved (CVC5: 20 VC in max 1.9 seconds and 7058 steps; Z3: 1 VC in max 0.1 seconds and 1 step)
+--> state_healing.adb:123:10
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 1015 steps)
+--> state_healing.adb:127:30
+
+ info: precondition proved (CVC5: 21 VC in max 0.3 seconds and 1806 steps)
+--> state_healing.adb:142:10
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 980 steps)
+--> state_healing.adb:145:49
+
+ info: range check proved (CVC5: 2 VC in max 0.1 seconds and 630 steps)
+--> state_healing.adb:147:26
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 1020 steps)
+--> state_healing.adb:148:69
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 1033 steps)
+--> state_healing.adb:150:48
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 1042 steps)
+--> state_healing.adb:152:70
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 1079 steps)
+--> state_healing.adb:155:35
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 359 steps)
+--> state_healing.adb:156:64
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 1371 steps)
+--> state_healing.adb:165:10
+
+ info: overflow check proved (CVC5: 2 VC in max 0.2 seconds and 864 steps)
+--> state_healing.adb:168:53
+
+ info: precondition proved (CVC5: 21 VC in max 0.2 seconds and 1318 steps)
+--> state_healing.adb:170:07
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 229 steps)
+--> state_healing.adb:188:46
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_healing.adb:196:59
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 32 steps)
+--> state_healing.adb:207:52
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 461 steps)
+--> state_healing.adb:209:29
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> state_healing.ads:57:13
+
+ info: data dependencies proved
+--> state_healing.ads:57:52
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> state_healing.ads:58:13
+
+ info: initialization of "S" proved
+--> state_healing.ads:75:22
+
+ info: initialization of "Status" proved
+--> state_healing.ads:75:37
+
+ info: data dependencies proved
+--> state_healing.ads:75:64
+
+ info: initialization of "Effect" proved
+--> state_healing.ads:77:32
+
+ info: initialization of "Status" proved
+--> state_healing.ads:77:53
+
+ info: data dependencies proved
+--> state_healing.ads:78:11
+
+ info: postcondition proved (CVC5: 30 VC in max 1.7 seconds and 6742 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps; Z3: 3 VC in max 0.4 seconds and 6808 steps)
+--> state_healing.ads:79:16
+
+ info: overflow check proved (CVC5: 2 VC in max 0.8 seconds and 3213 steps)
+--> state_healing.ads:80:86
+
+ info: initialization of "Status" proved
+--> state_healing.ads:89:48
+
+ info: data dependencies proved
+--> state_healing.ads:90:11
+
+ info: postcondition proved (CVC5: 2 VC in max 0.0 seconds and 199 steps; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> state_healing.ads:91:16
+
+ info: initialization of "Status" proved
+--> state_healing.ads:94:22
+
+ info: data dependencies proved
+--> state_healing.ads:95:11
+
+ info: postcondition proved (CVC5: 2 VC in max 0.0 seconds and 474 steps; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> state_healing.ads:96:16
+Success: all checks proved (53 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/statecore/build/proof-obj/recovery-healing/gnatprove/gnatprove.out
+proof-guard: {"limits": {"address_mib_per_process": 1536, "minimum_available_mib": 2048, "nice_increment": 15, "sample_interval_seconds": 0.1, "sampled_group_rss_mib": 2048, "seconds": 300}, "peak_group_rss_bytes": 417415168, "reason": null, "result": "pass", "returncode": 0, "seconds": 93.774}

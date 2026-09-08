@@ -1,0 +1,136 @@
+Running as unit: run-p18613-i18913.scope; invocation ID: b2f62cf4c9ca4e9290edbfe1c32551e6
+proof-guard: {"command": ["/home/nia/devbox/niaos/.work/toolchains/gnatprove-x86_64-linux-16.1.0-1/bin/gnatprove", "-j1", "-P", "proof.gpr", "--subdirs=recovery-wire", "-u", "capsule_wire.adb", "--mode=all", "--level=4", "--timeout=10", "--prover=cvc5,z3", "--checks-as-errors=on", "--warnings=error", "--report=statistics"], "address_mib_per_process": 1536, "sampled_session_rss_mib": 2048, "minimum_available_mib": 2048, "seconds": 180}
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: initialization of "M" proved
+--> capsule_wire.adb:8:07
+
+ info: implicit aspect Always_Terminates on "Item" has been proved, subprogram will terminate
+--> capsule_wire.adb:10:16
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:10:63
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:10:63
+
+ info: initialization of "D" proved
+--> capsule_wire.adb:12:42
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> capsule_wire.adb:16:27
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:16:41
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:16:49
+
+ info: initialization of "D" proved
+--> capsule_wire.adb:18:37
+
+ info: postcondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> capsule_wire.adb:20:17
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:24:26
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> capsule_wire.adb:24:30
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:25:92
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:25:98
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> capsule_wire.adb:27:30
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_wire.adb:35:28
+
+ info: precondition proved (CVC5: 16 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:36:13
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:38:07
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:38:37
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:39:07
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:39:42
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_wire.adb:40:27
+
+ info: overflow check proved (CVC5: 16 VC in max 0.0 seconds and 414 steps)
+--> capsule_wire.adb:41:31
+
+ info: precondition proved (CVC5: 16 VC in max 0.0 seconds and 549 steps)
+--> capsule_wire.adb:41:42
+
+ info: division check proved (CVC5: 8 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:41:53
+
+ info: overflow check proved (CVC5: 7 VC in max 0.1 seconds and 841 steps; Z3: 9 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:42:17
+
+ info: overflow check proved (CVC5: 9 VC in max 0.0 seconds and 575 steps; Z3: 7 VC in max 0.0 seconds and 1 step)
+--> capsule_wire.adb:42:23
+
+ info: precondition proved (CVC5: 16 VC in max 0.0 seconds and 603 steps)
+--> capsule_wire.adb:42:34
+
+ info: precondition proved (CVC5: 2 VC in max 0.2 seconds and 698 steps)
+--> capsule_wire.adb:45:10
+
+ info: precondition proved (CVC5: 2 VC in max 0.1 seconds and 711 steps)
+--> capsule_wire.adb:46:13
+
+ info: precondition proved (CVC5: 2 VC in max 0.2 seconds and 725 steps)
+--> capsule_wire.adb:48:07
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 738 steps)
+--> capsule_wire.adb:48:32
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 751 steps)
+--> capsule_wire.adb:48:61
+
+ info: precondition proved (CVC5: 2 VC in max 0.1 seconds and 764 steps)
+--> capsule_wire.adb:49:07
+
+ info: precondition proved (CVC5: 2 VC in max 0.2 seconds and 778 steps)
+--> capsule_wire.adb:49:36
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_wire.adb:51:27
+
+ info: precondition proved (CVC5: 8 VC in max 0.2 seconds and 814 steps)
+--> capsule_wire.adb:51:93
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> capsule_wire.adb:52:21
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_wire.adb:54:34
+
+ info: precondition proved (CVC5: 14 VC in max 0.3 seconds and 1067 steps)
+--> capsule_wire.adb:54:42
+
+ info: initialization of "I" proved
+--> capsule_wire.ads:7:33
+
+ info: initialization of "R" proved
+--> capsule_wire.ads:8:07
+
+ info: data dependencies proved
+--> capsule_wire.ads:8:42
+Success: all checks proved (35 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/capsulecore/build/proof-obj/recovery-wire/gnatprove/gnatprove.out
+proof-guard: {"limits": {"address_mib_per_process": 1536, "minimum_available_mib": 2048, "nice_increment": 15, "sample_interval_seconds": 0.1, "sampled_session_rss_mib": 2048, "seconds": 180}, "peak_session_rss_bytes": 336388096, "reason": null, "result": "pass", "returncode": 0, "seconds": 21.423}

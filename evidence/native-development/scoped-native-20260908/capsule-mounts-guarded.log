@@ -1,0 +1,18 @@
+proof-guard: {"command": ["/home/nia/devbox/niaos/.work/toolchains/gnatprove-x86_64-linux-16.1.0-1/bin/gnatprove", "-j1", "-P", "proof.gpr", "--subdirs=recovery-mounts", "-u", "capsule_mounts.adb", "--mode=all", "--level=1", "--timeout=2", "--checks-as-errors=on", "--warnings=error", "--report=statistics"], "address_mib_per_process": 1536, "sampled_group_rss_mib": 2048, "minimum_available_mib": 2048, "seconds": 120}
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: implicit aspect Always_Terminates on "Entry_Valid" has been proved, subprogram will terminate
+--> capsule_mounts.adb:6:13
+
+ info: implicit aspect Always_Terminates on "Compatible" has been proved, subprogram will terminate
+--> capsule_mounts.adb:24:13
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> capsule_mounts.ads:16:13
+
+ info: data dependencies proved
+--> capsule_mounts.ads:16:75
+Success: all checks proved (4 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/capsulecore/build/proof-obj/recovery-mounts/gnatprove/gnatprove.out
+proof-guard: {"limits": {"address_mib_per_process": 1536, "minimum_available_mib": 2048, "nice_increment": 15, "sample_interval_seconds": 0.1, "sampled_group_rss_mib": 2048, "seconds": 120}, "peak_group_rss_bytes": 66641920, "reason": null, "result": "pass", "returncode": 0, "seconds": 0.904}

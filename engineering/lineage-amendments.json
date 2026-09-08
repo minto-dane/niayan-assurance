@@ -172,11 +172,27 @@
       "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
     },
     {
+      "path": "statecore/src/state_authority.adb",
+      "from_sha256": "d14736a1a1c64be5f30d54d438aa3eaa90cafd186b75072f81ec19fb767e3568",
+      "to_sha256": "430baa40f39f36d73d8a5f9dd40e3a344fb03f9c11c71ada1344b101f3f15c89",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Proven parser boundaries, fixed-frame cursor contracts, retry-state guarantees, bounded topology and service plans with native regression coverage",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
       "path": "statecore/src/state_boot_acceptance.ads",
       "from_sha256": "24be61c15f0452ff8818f164ad1d11a775912096a7ca066f4a395c7252112d67",
       "to_sha256": "c043b19115abd20762be4945f84cb983e53eaf3e968645b3a6e229945c3cd782",
       "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
       "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_capacity_guard.adb",
+      "from_sha256": "1aa7ff43956c16dba8d5ae81f3f2ee0f2215a0775c9dfde5f1f20d3684749f9b",
+      "to_sha256": "e187b01fac733b132d947e59e9d7e67935b139a871812b567fba407ef3672335",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Proven parser boundaries, fixed-frame cursor contracts, retry-state guarantees, bounded topology and service plans with native regression coverage",
       "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
     },
     {

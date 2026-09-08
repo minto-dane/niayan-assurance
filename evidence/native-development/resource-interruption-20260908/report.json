@@ -1,0 +1,277 @@
+{
+  "schema": "org.niaos.interrupted-development-proof/v1",
+  "recorded_utc": "2026-09-08T04:15:49.502910+00:00",
+  "result": "interrupted-no-completion",
+  "formal_proof": "not-established",
+  "production_approval": false,
+  "event": "User reported PC freeze and forced reboot during concurrent proof runs. Earlier agent observation: GNATwhy3 approximately 5.6 GB RSS and exhausted RAM/swap headroom. Kernel crash diagnosis was not performed.",
+  "source_subject_at_start": null,
+  "source_subject_at_end": null,
+  "runs": [
+    {
+      "component": "capsulecore",
+      "result": "interrupted",
+      "completion_report_present": false,
+      "logs": [
+        {
+          "path": "capsule/flow-summary.txt",
+          "bytes": 42918,
+          "sha256": "0748e9a2e059bbd71aeb8ef309a47802d09942007955c9717e9beeb4579f9b84"
+        },
+        {
+          "path": "capsule/flow.log",
+          "bytes": 8101,
+          "sha256": "83a9377363a3951c25624684b0bdd931321718eaa6568a8da2d796df2a0661cf"
+        },
+        {
+          "path": "capsule/prove.log",
+          "bytes": 200901,
+          "sha256": "8f02ab10f37ef4de1bb136baf79383658d65b0cec6d46125af72cccd97cbb92a"
+        }
+      ]
+    },
+    {
+      "component": "resolvercore",
+      "result": "interrupted",
+      "completion_report_present": false,
+      "logs": [
+        {
+          "path": "resolver/flow-summary.txt",
+          "bytes": 42684,
+          "sha256": "a25a019c429aca87cbc23eab3bfc1310b031a25f883a7b11d8b51a67f0068fd7"
+        },
+        {
+          "path": "resolver/flow.log",
+          "bytes": 10678,
+          "sha256": "bb37bb293489e0774d793cd8019f7ec6dd7b4a5ecde28e25715890d9bdf50361"
+        },
+        {
+          "path": "resolver/prove.log",
+          "bytes": 192665,
+          "sha256": "0a376dafe9b28ef5f12a2751551df5d8214f156efe54015cc93a808d8ac9e4d0"
+        }
+      ]
+    },
+    {
+      "component": "pkgcore",
+      "result": "interrupted",
+      "completion_report_present": false,
+      "logs": [
+        {
+          "path": "pkg/flow-summary.txt",
+          "bytes": 64606,
+          "sha256": "fe7baf16b3817f0bb10995a17e7a451624ccc93e20ad1b661a535a3739f1e359"
+        },
+        {
+          "path": "pkg/flow.log",
+          "bytes": 10304,
+          "sha256": "024d4e70c511cd42ac42959351a4f667b8c8c6ea6aeba805dac2eed1c5bb0d3e"
+        },
+        {
+          "path": "pkg/prove.log",
+          "bytes": 77814,
+          "sha256": "8f214b93f0b69db5022c9d571cced229db33099c2afabefe121c263df96681d4"
+        }
+      ]
+    },
+    {
+      "component": "statecore",
+      "scope": "selected-unit diagnostic",
+      "result": "interrupted",
+      "log": "state-healing-lemma-diagnostic.log",
+      "sha256": "627664f3cb492b19909ccdd2ff1a14ccf1176a6e92d2a965ebcfcb83d082105d",
+      "bytes": 64
+    }
+  ],
+  "recovery_git_checks": [
+    {
+      "repository": ".",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": ".",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "assurance",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "assurance",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "pkgcore",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "pkgcore",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "statecore",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "statecore",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "controlcore",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "controlcore",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "configcore",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "configcore",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "resolvercore",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "resolvercore",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "capsulecore",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "capsulecore",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "distribution",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "repository": "distribution",
+      "argv": [
+        "git",
+        "fsck",
+        "--full",
+        "--no-dangling"
+      ],
+      "returncode": 0,
+      "output": ""
+    }
+  ]
+}

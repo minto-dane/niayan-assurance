@@ -1,0 +1,109 @@
+{
+  "scope": "source checks and small Linux development-tool tests only; no Ada build or formal proof after reboot",
+  "files": [
+    {
+      "path": "assurance-contract.log",
+      "sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6"
+    },
+    {
+      "path": "capsule-policy-tree-tests.log",
+      "sha256": "b304ba1df640f1b7a4d5057699202dbebd51d0429df6878679cc30122dbb940c"
+    },
+    {
+      "path": "capsulecore-contract.log",
+      "sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6"
+    },
+    {
+      "path": "cohort-recovery-tests.log",
+      "sha256": "7bfc9bd1f18b79e196c504b62d98fb148e2c1b6d8c3966ed27f394b01b516e82"
+    },
+    {
+      "path": "component-ci-generated.log",
+      "sha256": "e46a10320f07874e9bf758914c1cea6f1cde6ed4e70b81a989379528d1c3812f"
+    },
+    {
+      "path": "configcore-contract.log",
+      "sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6"
+    },
+    {
+      "path": "configuration-reference-tests.log",
+      "sha256": "5f930b1b51ce5c23c4ae0e8bf8301ba588b3a1112496d1140b2de01b3e8aefa9"
+    },
+    {
+      "path": "controlcore-contract.log",
+      "sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6"
+    },
+    {
+      "path": "distribution-tool-tests.log",
+      "sha256": "a63681f50ccbe6612b362e2655b937c9d80f02f10d3c0a240d14e46635133fe6"
+    },
+    {
+      "path": "engineering-unittests.log",
+      "sha256": "5e45a1fe42cbea7cf68bd0e2ea97ff2dbc6c72af8eb7e9a110f0105723816a91"
+    },
+    {
+      "path": "evidence-manifest.sha256",
+      "sha256": "7e5d67b044935c632348049560524e5949eb69f3d0e3c257f7c795885711d5d6"
+    },
+    {
+      "path": "gprbuild-version.log",
+      "sha256": "580b7d8d6b27ce742268f9fa3342c978e0240a050fb3ec9fb44ea3f063b5e8ca"
+    },
+    {
+      "path": "manager-implementation-profile.log",
+      "sha256": "1d4a9981c83e26f6ddbef174c5059ef88b9b6c13500b6eeae8e7fa5b45c4b045"
+    },
+    {
+      "path": "manager-reference-tests.log",
+      "sha256": "ef3a34983bbf0c7080a1767ab99466a3e3ba9fb29066ef4293769ae145c78611"
+    },
+    {
+      "path": "native-resolver-lock.log",
+      "sha256": "c52f27fbf06699ff503580205e31cbe07de2871409c2c3f3125a134c9f4036ee"
+    },
+    {
+      "path": "nia-product-audit.log",
+      "sha256": "c31ed9515140892848d581302db1f3c4d4924a6d3fde09fb1d5b75eafa0303c8"
+    },
+    {
+      "path": "pkgcore-contract.log",
+      "sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6"
+    },
+    {
+      "path": "report.json",
+      "sha256": "fa7abdb162d23f695fa70c4a730047d7f6b5c7734789a314d0c1225e030f0064"
+    },
+    {
+      "path": "resolution-reference-tests.log",
+      "sha256": "92c07248620a2f1efae1c0ba9458b5833083185d2ebf5219fc5da4cd374dc2d9"
+    },
+    {
+      "path": "resolver-neutral-boundary.log",
+      "sha256": "9924a0e4760c31c44af6d27b6aeb0921e82fce58ec82e233c686c8eaa7aad157"
+    },
+    {
+      "path": "resolver-source-profile.log",
+      "sha256": "4106624d578550da63123c1deee445ba569026581ee3e19cd054fda87198e0ad"
+    },
+    {
+      "path": "resolvercore-contract.log",
+      "sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6"
+    },
+    {
+      "path": "statecore-contract.log",
+      "sha256": "dffdd38a2ccdecf862f520d15641f99d953272091cd5a46733c8456084d54ba6"
+    },
+    {
+      "path": "syntax-and-doc-links.log",
+      "sha256": "106b494556666986d050003a6d4bf0aec3f93f9acc1056e7b1c86f72d19c080f"
+    },
+    {
+      "path": "traceability.json",
+      "sha256": "a635face242e5586fd1a9164028537961560f98838fc4a13774f1916eaf88953"
+    },
+    {
+      "path": "unified-architecture-audit.log",
+      "sha256": "70c95b2e247bfb2adf1c9549eef64387c790b1042c1a29fc3ce419c32ffa4b43"
+    }
+  ]
+}

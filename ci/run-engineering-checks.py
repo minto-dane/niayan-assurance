@@ -33,13 +33,25 @@ def clean_env(home: Path) -> dict[str,str]:
     return {'PATH':path,'HOME':str(home),'TMPDIR':str(home),'LANG':'C.UTF-8',
             'LC_ALL':'C.UTF-8','PYTHONDONTWRITEBYTECODE':'1','PYTHONNOUSERSITE':'1'}
 
-def run_command(argv: list[str], cwd: Path, log: Path, env: dict[str,str], timeout: int) -> dict:
+def run_command(argv: list[str], cwd: Path, log: Path, env: dict[str,str], timeout: int,
+                termination_grace: float = 0) -> dict:
+    if not 0 <= termination_grace <= 6:
+        raise eng.Invalid('termination grace must be 0..6 seconds')
     start = time.monotonic()
     record = {'argv':argv, 'cwd':str(cwd), 'result':'not-run', 'returncode':None,
               'leader_reaped':False, 'external_effects_checked':False}
     child = None
     owns_pid = False
     sel = None
+    def stop_owned_group():
+        # Proof guards own a separate child group. Let them clean it before the
+        # outer runner kills this group. The leader stays unreaped throughout.
+        if termination_grace:
+            try: os.killpg(child.pid,signal.SIGTERM)
+            except ProcessLookupError: pass
+            time.sleep(termination_grace)
+        try: os.killpg(child.pid,signal.SIGKILL)
+        except ProcessLookupError: pass
     try:
         if signal.getsignal(signal.SIGCHLD) is not signal.SIG_DFL and signal.getsignal(signal.SIGCHLD) != signal.SIG_DFL:
             raise eng.Invalid('test runner requires exclusive child ownership and default SIGCHLD')
@@ -78,8 +90,7 @@ def run_command(argv: list[str], cwd: Path, log: Path, env: dict[str,str], timeo
             sel.close(); sel=None
             # Group signals occur ONLY while its leader remains our unreaped child.
             # This is not confinement of a test that deliberately changes session.
-            try: os.killpg(child.pid,signal.SIGKILL)
-            except ProcessLookupError: pass
+            stop_owned_group()
             rc=child.wait(timeout=5)
             owns_pid=False
             record.update(returncode=rc,leader_reaped=True,log_bytes=total)
@@ -97,8 +108,7 @@ def run_command(argv: list[str], cwd: Path, log: Path, env: dict[str,str], timeo
             # Do not signal a PID after child.wait() or any external reap.
             try:
                 pending=os.waitid(os.P_PID,child.pid,os.WEXITED|os.WNOHANG|os.WNOWAIT)
-                try: os.killpg(child.pid,signal.SIGKILL)
-                except ProcessLookupError: pass
+                stop_owned_group()
                 child.wait(timeout=5)
                 record['leader_reaped']=True
             except (ChildProcessError,subprocess.TimeoutExpired,OSError):
@@ -153,7 +163,8 @@ def main() -> int:
         (output/'traceability.json').write_text(json.dumps(val,ensure_ascii=False,indent=2)+'\n')
         checks.append({'name':'traceability','result':'pass','layer':'source'})
         def invoke(name,argv,cwd,layer):
-            r=run_command(argv,cwd,output/(name+'.log'),env,a.timeout)
+            r=run_command(argv,cwd,output/(name+'.log'),env,a.timeout,
+                          termination_grace=6 if layer=='proof' else 0)
             r.update(name=name,layer=layer);checks.append(r);return r['result']=='pass'
         for tool in ('gprbuild','gnatprove'):
             if shutil.which(tool,path=env['PATH']):
@@ -210,8 +221,8 @@ def main() -> int:
                 checks.append({'name':'gnatprove','result':'not-run','layer':'proof','reason':'GNATprove unavailable'})
             else:
                 for repo in eng.REPOS:
-                    invoke(repo+'-flow',['make','flow'],root/repo,'proof')
-                    invoke(repo+'-prove',['make','prove'],root/repo,'proof')
+                    if not invoke(repo+'-flow',['make','flow'],root/repo,'proof'): break
+                    if not invoke(repo+'-prove',['make','prove'],root/repo,'proof'): break
                 report['formal_proof']='commands-passed-review-proof-boundary' if all(c['result']=='pass' for c in checks) else 'failed-or-incomplete'
         after=eng.source_subject(root); report['source_subject_after']=after
         if before!=after: raise eng.Invalid('sources changed while checks were running')

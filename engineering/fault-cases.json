@@ -1025,6 +1025,18 @@
       "expected": "入力を拒否して受信したFDを閉じ、試験自身のFD数が増えない。",
       "execution": "not-run",
       "reference_tests": "capsulecore/tests/run_consent_channel_tests.adb"
+    },
+    {
+      "id": "FAULT-092",
+      "scenario": "証明子孫の過大割当・同時起動・timeout・中断",
+      "requirements": [
+        "REQ-095",
+        "REQ-021"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "小さい人工上限で起動拒否・割当拒否・子孫停止を確認し、中断を形式証明の成功にしない。",
+      "execution": "not-run",
+      "reference_tests": "assurance/tests/engineering/test_proof_guard.py"
     }
   ]
 }

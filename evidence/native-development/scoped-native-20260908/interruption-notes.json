@@ -1,0 +1,4 @@
+{
+  "capsule-guarded-full-proof": "Stopped after observing that Why3 solvers use separate process groups; guard accounting and child reaping were corrected before restart.",
+  "capsule-session-full-proof": "Stopped after identifying a high-origin frame-index overflow by source inspection; Capsule_Wire and its native regressions were corrected before restart."
+}

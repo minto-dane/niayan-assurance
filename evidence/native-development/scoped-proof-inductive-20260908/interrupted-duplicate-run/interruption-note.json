@@ -1,0 +1,5 @@
+{
+  "result": "interrupted-not-pass",
+  "reason": "Unchanged pkgcore duplicate proof stopped through its guard after source hashing confirmed every mathematical proof input equals the earlier accepted 3943-check run. Assurance completed again; statecore and subsequent four repositories are run separately. No child prover processes remained after cleanup.",
+  "reused_pkgcore_evidence": "../../scoped-proof-3015db9/pkgcore/report.json"
+}

@@ -418,7 +418,7 @@ SPARK-intentはソース上の意図であり、未指定コードや外部依�
 |[statecore/src/state_capacity_guard.ads](../../../statecore/src/state_capacity_guard.ads)|src / SPARK-intent-not-proof|State_Capacity_Guard:3<br>Safe:18|
 |[statecore/src/state_changes.adb](../../../statecore/src/state_changes.adb)|src / SPARK-intent-not-proof|State_Changes:2<br>Authorized:5<br>Advance:14|
 |[statecore/src/state_changes.ads](../../../statecore/src/state_changes.ads)|src / SPARK-intent-not-proof|State_Changes:3<br>Authorized:38<br>Advance:39|
-|[statecore/src/state_cluster_safety.adb](../../../statecore/src/state_cluster_safety.adb)|src / SPARK-intent-not-proof|State_Cluster_Safety:2<br>Valid:3<br>Survives:50<br>Admit:89|
+|[statecore/src/state_cluster_safety.adb](../../../statecore/src/state_cluster_safety.adb)|src / SPARK-intent-not-proof|State_Cluster_Safety:2<br>Valid:3<br>Survives:50<br>Admit:93|
 |[statecore/src/state_cluster_safety.ads](../../../statecore/src/state_cluster_safety.ads)|src / SPARK-intent-not-proof|State_Cluster_Safety:3<br>Valid:46<br>Admit:49|
 |[statecore/src/state_config.adb](../../../statecore/src/state_config.adb)|src / SPARK-intent-not-proof|State_Config:3<br>Decimal:10<br>Identify:24<br>Parse:41|
 |[statecore/src/state_config.ads](../../../statecore/src/state_config.ads)|src / SPARK-intent-not-proof|State_Config:3<br>Parse:16|

@@ -14391,7 +14391,7 @@
     },
     {
       "path": "statecore/src/state_cluster_safety.adb",
-      "sha256": "e0c617d885f62c233065a18f8ad422ad2c0036597d2efd6959622e335c7a2d8a",
+      "sha256": "23aa9dc9b6dae8249a9d8db3e2a4514c868094c1861a4d8c0ce8e255ec19ab06",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -14410,7 +14410,7 @@
         },
         {
           "name": "Admit",
-          "line": 89
+          "line": 93
         }
       ],
       "with_dependencies": [],

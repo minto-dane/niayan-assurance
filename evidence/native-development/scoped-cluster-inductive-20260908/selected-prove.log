@@ -1,0 +1,182 @@
+Running as unit: run-p63335-i63635.scope; invocation ID: 8fe847dc325845538c105efcd1a648f1
+limited-exec: {"scope": "run-p63335-i63635.scope", "kernel_limits": {"memory.max": "3221225472", "memory.swap.max": "0", "cpu.max": "100000 100000", "pids.max": "128"}}
+proof-guard: {"command": ["/home/nia/devbox/niaos/.work/toolchains/gnatprove-x86_64-linux-16.1.0-1/bin/gnatprove", "-j1", "-P", "proof.gpr", "--subdirs=cluster-inductive", "-u", "state_cluster_safety.adb", "--mode=all", "--level=4", "--timeout=10", "--checks-as-errors=on", "--warnings=error", "--proof-warnings=on", "--report=statistics"], "address_mib_per_process": 1536, "sampled_session_rss_mib": 2048, "minimum_available_mib": 2048, "seconds": 600}
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: initialization of "Replica_Count" proved
+--> state_cluster_safety.adb:5:07
+
+ info: loop invariant initialization proved (CVC5: 3 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:9:32
+
+ info: loop invariant preservation proved (CVC5: 3 VC in max 0.1 seconds and 18 steps)
+--> state_cluster_safety.adb:9:32
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> state_cluster_safety.adb:11:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 80 steps; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> state_cluster_safety.adb:11:32
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:12:24
+
+ info: index check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:12:47
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:14:25
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:18:33
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:18:77
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> state_cluster_safety.adb:19:44
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:29:32
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 71 steps)
+--> state_cluster_safety.adb:29:32
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:32:31
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> state_cluster_safety.adb:33:47
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 49 steps)
+--> state_cluster_safety.adb:38:35
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:38:35
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:41:44
+
+ info: implicit aspect Always_Terminates on "Survives" has been proved, subprogram will terminate
+--> state_cluster_safety.adb:50:13
+
+ info: initialization of "Available" proved
+--> state_cluster_safety.adb:54:07
+
+ info: initialization of "Unavailable" proved
+--> state_cluster_safety.adb:54:18
+
+ info: initialization of "Domains" proved
+--> state_cluster_safety.adb:54:31
+
+ info: initialization of "Seen" proved
+--> state_cluster_safety.adb:55:07
+
+ info: loop invariant preservation proved (CVC5: 4 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:58:32
+
+ info: loop invariant initialization proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:58:32
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:60:30
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:60:74
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:63:33
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:63:77
+
+ info: division check proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:66:30
+
+ info: division check proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:66:61
+
+ info: loop invariant initialization proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:71:13
+
+ info: loop invariant preservation proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:71:13
+
+ info: division check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:71:32
+
+ info: division check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:71:63
+
+ info: loop invariant initialization proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:76:38
+
+ info: loop invariant preservation proved (CVC5: 2 VC in max 0.1 seconds and 4 steps)
+--> state_cluster_safety.adb:76:38
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:79:42
+
+ info: index check proved (CVC5: 2 VC in max 0.1 seconds and 78 steps)
+--> state_cluster_safety.adb:79:61
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:80:48
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> state_cluster_safety.adb:84:38
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 75 steps)
+--> state_cluster_safety.adb:84:38
+
+ info: overflow check proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> state_cluster_safety.adb:85:48
+
+ info: initialization of "D" proved
+--> state_cluster_safety.adb:94:07
+
+ info: initialization of "Removed" proved
+--> state_cluster_safety.adb:94:21
+
+ info: initialization of "Has_Domain" proved
+--> state_cluster_safety.adb:95:07
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> state_cluster_safety.adb:103:27
+
+ info: precondition proved (CVC5: 1 VC in max 0.1 seconds and 1 step; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> state_cluster_safety.adb:107:10
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> state_cluster_safety.adb:109:30
+
+ info: precondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> state_cluster_safety.adb:112:19
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> state_cluster_safety.adb:117:36
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> state_cluster_safety.adb:119:33
+
+ info: precondition proved (CVC5: 1 VC in max 0.1 seconds and 1 step; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> state_cluster_safety.adb:125:36
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> state_cluster_safety.ads:46:13
+
+ info: data dependencies proved
+--> state_cluster_safety.ads:46:49
+
+ info: postcondition proved (CVC5: 1 VC in max 0.2 seconds and 418 steps; Trivial: 2 VC in max 0.0 seconds and 2 steps)
+--> state_cluster_safety.ads:47:14
+
+ info: implicit aspect Always_Terminates on "Admit" has been proved, subprogram will terminate
+--> state_cluster_safety.ads:49:13
+
+ info: data dependencies proved
+--> state_cluster_safety.ads:49:83
+Success: all checks proved (52 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/statecore/build/proof-obj/cluster-inductive/gnatprove/gnatprove.out
+proof-guard: {"limits": {"address_mib_per_process": 1536, "minimum_available_mib": 2048, "nice_increment": 15, "sample_interval_seconds": 0.1, "sampled_session_rss_mib": 2048, "seconds": 600}, "peak_session_rss_bytes": 299864064, "reason": null, "result": "pass", "returncode": 0, "seconds": 27.929}

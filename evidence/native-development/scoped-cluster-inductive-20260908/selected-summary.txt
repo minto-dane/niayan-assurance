@@ -1,0 +1,39 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+---------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow                      Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------------
+Data Dependencies                 2           2                            .           .          .
+Flow Dependencies                 .           .                            .           .          .
+Initialization                    8           8                            .           .          .
+Non-Aliasing                      .           .                            .           .          .
+Run-time Checks                  19           .                    19 (CVC5)           .          .
+Assertions                       16           .    16 (CVC5 94%, Trivial 6%)           .          .
+Functional Contracts              4           .    4 (CVC5 44%, Trivial 56%)           .          .
+LSP Verification                  .           .                            .           .          .
+Termination                       3           3                            .           .          .
+Concurrency                       .           .                            .           .          .
+---------------------------------------------------------------------------------------------------
+Total                            52    13 (25%)                     39 (75%)           .          .
+
+
+max steps used for successful proof: 418
+
+============================
+Most difficult proved checks
+============================
+
+No check found with max time greater than 1 second
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 1 unit
+in unit state_cluster_safety, 4 subprograms and packages out of 4 analyzed
+  State_Cluster_Safety at state_cluster_safety.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  State_Cluster_Safety.Admit at state_cluster_safety.ads:49 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  State_Cluster_Safety.Survives at state_cluster_safety.adb:50 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (20 checks)
+  State_Cluster_Safety.Valid at state_cluster_safety.ads:46 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (16 checks)

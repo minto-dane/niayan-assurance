@@ -158,6 +158,12 @@ def main() -> int:
         env=clean_env(temporary)
         report['environment']={'python':sys.version,'kernel':platform.release(),'architecture':platform.machine(),
             'gprbuild':shutil.which('gprbuild',path=env['PATH']), 'gnatprove':shutil.which('gnatprove',path=env['PATH'])}
+        fixture_tools = {name: shutil.which(name, path=env['PATH']) for name in
+                         ('gpg', 'gpgv', 'gpg-agent', 'gpgconf', 'dpkg-deb')}
+        report['environment']['native_fixture_tools'] = fixture_tools
+        missing = [name for name, executable in fixture_tools.items() if executable is None]
+        if missing:
+            raise eng.Invalid('required native fixture tools unavailable: ' + ', '.join(missing))
         before=eng.source_subject(root); report['source_subject_before']=before
         val=eng.validate(root)
         (output/'traceability.json').write_text(json.dumps(val,ensure_ascii=False,indent=2)+'\n')

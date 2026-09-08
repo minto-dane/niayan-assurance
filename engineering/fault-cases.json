@@ -1037,6 +1037,17 @@
       "expected": "小さい人工上限で起動拒否・割当拒否・子孫停止を確認し、中断を形式証明の成功にしない。",
       "execution": "not-run",
       "reference_tests": "assurance/tests/engineering/test_proof_guard.py"
+    },
+    {
+      "id": "FAULT-093",
+      "scenario": "署名付きDEB人工fixtureに必要な工具がPATHに存在しない",
+      "requirements": [
+        "REQ-021"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "統合runnerが試験開始前に不足工具を記録して失敗し、Ada実行と形式証明を未実行のまま保持する。",
+      "execution": "not-run",
+      "reference_tests": "assurance/tests/engineering/test_native_dependencies.py"
     }
   ]
 }

@@ -413,14 +413,16 @@
       "shall": "quorum、fencing、データ追随、予約とtokenを別の条件で検査し、期限切れだけで新writerを昇格させてはならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0011"
+        "ADR-0011",
+        "ADR-0053"
       ],
       "spec": [
         "assurance/docs/engineering/specs/connector-contracts.ja.md"
       ],
       "code": [
         "statecore/src/state_cluster_safety.ads",
-        "statecore/src/state_failover.ads"
+        "statecore/src/state_failover.ads",
+        "statecore/src/state_cluster_safety.adb"
       ],
       "tests": [
         "statecore/tests/run_cluster_resilience_tests.adb"
@@ -593,7 +595,7 @@
     {
       "id": "REQ-021",
       "title": "証拠の層と鮮度",
-      "shall": "source/model/Ada/proof/target/運用承認を分け、現在のsource/binary subjectへ実行証拠を束縛しなければならない。",
+      "shall": "source/model/Ada/proof/target/運用承認を分け、現在のsource/binary subjectへ実行証拠を束縛しなければならない。統合検査に必須のnative fixture工具が不足する場合、省略を成功とせず実行開始前に失敗させなければならない。",
       "status": "implemented-unvalidated",
       "adr": [
         "ADR-0016",
@@ -608,7 +610,8 @@
       ],
       "tests": [
         "assurance/tests/run_qualification_tests.adb",
-        "assurance/tests/engineering/test_engineering.py"
+        "assurance/tests/engineering/test_engineering.py",
+        "assurance/tests/engineering/test_native_dependencies.py"
       ],
       "hazards": [
         "HAZ-016"

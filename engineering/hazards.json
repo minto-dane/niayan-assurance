@@ -179,8 +179,8 @@
       "id": "HAZ-016",
       "title": "未実行・古い証跡を合格と表示",
       "severity": "critical",
-      "mitigation": "exact subjectと層別実証を管理",
-      "residual_risk": "Open: target execution, proof and/or site validation incomplete.",
+      "mitigation": "source subject、toolchain、終了値、log hashを層別に記録し、独立repoの全試験runnerと統合台帳を照合する。再現性を別実行で比較する。",
+      "residual_risk": "Native tests do not discharge remaining proof obligations, independent review or production integration gates.",
       "requirements": [
         "REQ-021",
         "REQ-022",
@@ -811,8 +811,8 @@
       "id": "HAZ-073",
       "title": "Kernel由来peerの要求受信",
       "severity": "critical",
-      "mitigation": "要求はkernel credentialsと登録済み実行個体から認証し、wireの自己申告で本人・許可を決めてはならない。",
-      "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
+      "mitigation": "要求はkernel credentialsと登録済み実行個体から認証し、wireの自己申告で本人・許可を決めてはならない。所有するsocketpairを使うAda試験で実SCM_CREDENTIALSと受信FD解放を検査する。",
+      "residual_risk": "Kernel channel ABI is exercised locally; launcher identity, native resource enforcement, independent anchors and real desktop integration remain unqualified.",
       "requirements": [
         "REQ-087"
       ],

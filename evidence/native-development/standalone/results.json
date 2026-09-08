@@ -1,0 +1,30 @@
+[
+  {
+    "repository": "assurance",
+    "returncode": 0
+  },
+  {
+    "repository": "pkgcore",
+    "returncode": 0
+  },
+  {
+    "repository": "statecore",
+    "returncode": 0
+  },
+  {
+    "repository": "controlcore",
+    "returncode": 0
+  },
+  {
+    "repository": "configcore",
+    "returncode": 0
+  },
+  {
+    "repository": "resolvercore",
+    "returncode": 0
+  },
+  {
+    "repository": "capsulecore",
+    "returncode": 0
+  }
+]

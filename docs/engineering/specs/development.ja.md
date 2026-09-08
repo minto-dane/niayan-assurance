@@ -2,8 +2,8 @@
 
 ## 開始
 
-四つのrepoを兄弟directoryへ置き、各repoのREADME、GPR、SECURITY.mdを確認します。
-通常ビルドは一つのrepoだけで可能です。cross-repository/engineering検査には固定した四つが必要です。
+七つのrepoを兄弟directoryへ置き、各repoのREADME、GPR、SECURITY.mdを確認します。
+通常ビルドは一つのrepoだけで可能です。cross-repository/engineering検査には固定した七つが必要です。
 本番資格情報を持たない非特権の作業環境を用い、hostサービスの起動・ネットワーク変更をCIへ混ぜません。
 
 ```sh
@@ -21,7 +21,7 @@ python3 assurance/ci/run-engineering-checks.py --mode build
 python3 assurance/ci/run-engineering-checks.py --mode proof
 ```
 
-buildはcompile-allとtest-buildの後、test-planのunit/隔離I/O mainを一つずつ実行します。
+buildはcompile-all、アプリケーションのリンク、test-buildの後、test-planのunit/隔離I/O mainを一つずつ実行します。
 ホスト読取テストは`--include-host-observers`による明示選択が必要で、未選択の場合はNOT_RUNとして残ります。
 全層で成功を求めるリリース検査と、通常の開発source検査を混同しません。
 実行ごとに新しいevidenceディレクトリを作り、終了値・時間・log hash・source subject・tool識別を記録します。
@@ -32,9 +32,9 @@ source/code inventoryを実行前後に束縛し、更新されていたら失�
 このCI JSONとhash manifestには本番承認の署名はありません。
 
 個別repoでは引き続き`make compile-all`、`make test`、`make flow`、`make prove`を使えます。
-`make test`だけで全隔離I/Oテストが実行されたとは扱わず、test-planとの照合を行います。
-`assurance/engineering/test-plan.json`に、通常make test以外の隔離I/O試験も含めて全mainを登録します。
-現時点の結果はNOT_RUNです。実行後の結果は計画ではなく別のevidenceに残します。
+`make test`は中央test-planから生成したci/test-all.shで全登録mainを実行します。生成物と台帳の一致をCIで検査します。
+`assurance/engineering/test-plan.json`に、隔離I/O試験も含めて全mainを登録します。
+計画台帳は実行結果ではありません。実行後の結果は計画ではなく別のevidenceに残します。
 
 ## 変更の単位
 
@@ -103,3 +103,7 @@ python3 assurance/ci/rebind-development.py --write \
 ```
 
 これは公開された人工鍵を使うtest fixtureだけを再生成する。productionの鍵・証拠・認可は生成しない。全手順と変更前後source subjectをevidenceへ記録する。途中失敗したcheckoutを正常とせず停止し、人間の変更を自動rollbackしない。再生成が成功しても、意味互換性や形式証明が成立したことにはならない。
+
+## 固定環境と独立CI
+
+workspaceの`dev/README.ja.md`を開発手順の入口とする。ContainerfileでDebian image digestと署名済みsnapshotを固定し、GNATproveはassurance/ci/gnatprove.lock.jsonでarchive checksumを固定する。各repoのCIと全Ada試験runnerはassurance/ci/sync-component-ci.pyから生成する。gprbuild -sによりcompiler switch変更時にも再コンパイルする。workspaceのmake reproducibleは異なる2作業パスで18のCLIを作り、デバッグ情報込みのhashを比較する。

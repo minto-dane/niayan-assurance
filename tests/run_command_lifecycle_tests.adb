@@ -70,11 +70,14 @@ begin
       MC_Command.Run(Command,Input,Result,S);
       Restore_Standard_Streams;
       if Mode=1 then Expect(Result.State=MC_Command.Timed_Out,"inherited stdout bounded after leader exit");
-      else Expect(Result.State=MC_Command.Exited and then S=OK,"normal leader cleanup"); end if;
+      else
+         Expect((Result.State=MC_Command.Exited and then S=OK),"normal leader cleanup");
+      end if;
       Expect(Result.Used>0 and then Result.Used<32,"single child pid result");
       declare Text : String(1..Result.Used); Reaped : Boolean:=False; begin
          for I in Text'Range loop Text(I):=Character'Val(Result.Output(I)); end loop;
-         Child:=int'Value(Text); Expect(Child>0,"known test descendant");
+         Expect(Text'Length>1 and then Text(Text'Last)=ASCII.LF,"child pid line");
+         Child:=int'Value(Text(Text'First..Text'Last-1)); Expect(Child>0,"known test descendant");
          for Attempt in 1..200 loop
             RC:=Waitpid(Child,WS'Access,1);
             if RC=Child then Reaped:=True; exit; end if;

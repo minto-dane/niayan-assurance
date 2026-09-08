@@ -1,0 +1,44 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+----------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow     Provers   Justified   Unproved
+----------------------------------------------------------------------------------
+Data Dependencies                 5           5           .           .          .
+Flow Dependencies                 .           .           .           .          .
+Initialization                   12          12           .           .          .
+Non-Aliasing                      .           .           .           .          .
+Run-time Checks                  60           .     60 (Z3)           .          .
+Assertions                       12           .     12 (Z3)           .          .
+Functional Contracts              .           .           .           .          .
+LSP Verification                  .           .           .           .          .
+Termination                       3           3           .           .          .
+Concurrency                       .           .           .           .          .
+----------------------------------------------------------------------------------
+Total                            92    20 (22%)    72 (78%)           .          .
+
+
+max steps used for successful proof: 1
+
+============================
+Most difficult proved checks
+============================
+
+No check found with max time greater than 1 second
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 2 units
+in unit mc_hex, 4 subprograms and packages out of 4 analyzed
+  MC_Hex at mc_hex.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Hex.Decode at mc_hex.ads:6 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (20 checks)
+  MC_Hex.Encode at mc_hex.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (16 checks)
+  MC_Hex.Nibble at mc_hex.adb:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_properties, 4 subprograms and packages out of 4 analyzed
+  MC_Properties at mc_properties.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Properties.Get at mc_properties.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Properties.Has_Exactly at mc_properties.ads:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (11 checks)
+  MC_Properties.Parse at mc_properties.ads:8 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (25 checks)

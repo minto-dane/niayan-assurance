@@ -6,6 +6,8 @@ with MC_Types; use MC_Types;
 with MC_FS; with MC_Atomic; with MC_Runtime; with MC_Posix;
 with Test_Support; use Test_Support;
 procedure Run_FS_Observation_Tests with SPARK_Mode => Off is
+   use type MC_Types.Wide;
+   use type MC_Types.Word;
    R : MC_FS.Root; F : MC_FS.File; S : Outcome;
    First, Changed, Final : MC_FS.Entry_Info;
    Times : aliased MC_Posix.Timespec_Pair;

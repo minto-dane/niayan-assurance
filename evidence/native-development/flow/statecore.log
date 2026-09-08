@@ -1,0 +1,450 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: analysis of data and information flow ...
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:32:15
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:33:15
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:9:56
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:15:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:19:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:24:43
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:27:86
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:31:87
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:34:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:38:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:41:47
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:42:99
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:45:43
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:10:73
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:12:109
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:18:58
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:20:125
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:24:184
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:27:60
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:30:61
+ info: analyzing call to "Value" in context
+--> mc_base64.adb:32:22
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:38:10
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:39:25
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:40:25
+ info: analyzing call to "Add" in context
+--> mc_json.adb:66:10
+
+ info: no contextual analysis of "Value_Read" (object renaming)
+--> mc_json.adb:79:07
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:83:16
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:85:31
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:88:13
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:89:25
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:93:19
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:101:19
+
+ info: analyzing call to "Value_Read" in context
+--> mc_json.adb:103:16
+
+ info: no contextual analysis of call to recursive subprogram
+--> mc_json.adb:103:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:104:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:107:33
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:110:13
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:118:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:128:26
+ info: analyzing call to "Magic" in context
+--> state_healing_codec.adb:19:07
+
+ info: analyzing call to "Correct_Magic" in context
+--> state_healing_codec.adb:35:14
+
+ info: analyzing call to "Magic" in context
+--> state_healing_codec.adb:65:07
+
+ info: analyzing call to "Correct_Magic" in context
+--> state_healing_codec.adb:85:14
+ info: no contextual analysis of "Header" (nested subprogram)
+--> state_etcd_wire.adb:72:07
+
+ info: analyzing call to "Unsigned_Number" in context
+--> state_etcd_wire.adb:75:10
+
+ info: analyzing call to "Number" in context
+--> state_etcd_wire.adb:82:07
+
+ info: analyzing call to "Number" in context
+--> state_etcd_wire.adb:83:07
+
+ info: analyzing call to "Number" in context
+--> state_etcd_wire.adb:84:07
+
+ info: analyzing call to "Number" in context
+--> state_etcd_wire.adb:85:07
+
+ info: analyzing call to "B64" in context
+--> state_etcd_wire.adb:152:07
+
+ info: analyzing call to "Number" in context
+--> state_etcd_wire.adb:159:07
+
+ info: analyzing call to "Number" in context
+--> state_etcd_wire.adb:160:07
+
+ info: analyzing call to "Number" in context
+--> state_etcd_wire.adb:161:07
+
+ info: analyzing call to "Unsigned_Number" in context
+--> state_etcd_wire.adb:166:10
+
+ info: analyzing call to "B64" in context
+--> state_etcd_wire.adb:171:07
+
+ info: analyzing call to "Single_Member" in context
+--> state_etcd_wire.adb:229:17
+
+ info: analyzing call to "Single_Member" in context
+--> state_etcd_wire.adb:231:17
+
+ info: analyzing call to "Single_Member" in context
+--> state_etcd_wire.adb:233:17
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:78:25
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:78:39
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:81:55
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:81:69
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:85:10
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:89:25
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:89:39
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:92:50
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:92:64
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:96:48
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:96:62
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:99:52
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:99:66
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:102:10
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:111:83
+
+ info: analyzing call to "Clear_Pending" in context
+--> state_healing.adb:122:13
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:126:10
+
+ info: analyzing call to "Clear_Health" in context
+--> state_healing.adb:128:07
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:130:30
+
+ info: analyzing call to "Clear_Pending" in context
+--> state_healing.adb:140:13
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:145:10
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:148:49
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:151:69
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:153:48
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:155:70
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:158:35
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:168:10
+
+ info: analyzing call to "Publish" in context
+--> state_healing.adb:173:07
+
+ info: analyzing call to "Clear_Pending" in context
+--> state_healing.adb:187:13
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:145:26
+
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:149:52
+
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:154:51
+
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:158:50
+
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:165:103
+
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:174:87
+
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:175:78
+
+ info: analyzing call to "Clear_Health" in context
+--> state_rollout.adb:185:111
+ info: analyzing call to "Ordering" in context
+--> state_service_catalogue.adb:76:14
+
+ info: analyzing call to "Sort" in context
+--> state_service_catalogue.adb:122:07
+
+ info: analyzing call to "Sort" in context
+--> state_service_catalogue.adb:137:07
+
+ info: no contextual analysis of "Number" (unconstrained return type)
+--> state_service_catalogue.adb:139:04
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:159:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:160:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:161:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:161:23
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:163:41
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:164:64
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:165:42
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:167:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:167:42
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:168:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:168:26
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:169:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:169:50
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:170:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:170:58
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:171:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:171:63
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:172:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:172:53
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:173:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:174:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:175:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:175:30
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:175:59
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:176:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:176:36
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:176:68
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:177:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:177:37
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:177:62
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:178:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:178:35
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:178:70
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:179:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:179:41
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:179:71
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:180:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:180:37
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:181:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:182:38
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:183:07
+
+ info: analyzing call to "Add" in context
+--> state_service_catalogue.adb:183:39
+ info: no contextual analysis of "Decimal" (object renaming)
+--> state_config.adb:8:04
+
+ info: analyzing call to "Identify" in context
+--> state_config.adb:55:13
+ info: no contextual analysis of "Enough" (in potentially unevaluated context)
+--> state_capacity_guard.adb:19:16
+
+ info: no contextual analysis of "Enough" (in potentially unevaluated context)
+--> state_capacity_guard.adb:21:16
+
+ info: no contextual analysis of "Enough" (in potentially unevaluated context)
+--> state_capacity_guard.adb:23:16
+
+ info: no contextual analysis of "Enough" (in potentially unevaluated context)
+--> state_capacity_guard.adb:25:16
+ info: analyzing call to "Send" in context
+--> state_network_change.adb:84:16
+
+ info: analyzing call to "Send" in context
+--> state_network_change.adb:101:16
+
+ info: analyzing call to "Send" in context
+--> state_network_change.adb:133:16
+
+ info: analyzing call to "Send" in context
+--> state_network_change.adb:147:19
+ info: no contextual analysis of "Survives" (object renaming)
+--> state_cluster_safety.adb:44:04
+
+ info: no contextual analysis of "Survives" (in potentially unevaluated context)
+--> state_cluster_safety.adb:107:36
+Success: all checks proved (888 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/statecore/build/proof-obj/gnatprove/gnatprove.out

@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "started_utc": "2026-09-08T00:24:50.379265+00:00",
+  "source_subject": "9ad1cc1f6da803cb8503d71aa106f0b6b17ed10fc7feb8025cbcaae04dea14e7",
+  "source_scope": "seven components and distribution",
+  "workspace_inputs": {
+    "Makefile": "f76492743600918779c96c4a4798dfeafb0ac8efc27239353bcdb74f1455e870",
+    ".github/workflows/ci.yml": "347c174751325df694acb5c82f400a29bbd7dac5da604802d387a0d2951288c1",
+    "dev/Containerfile": "e0de03ac93dfb3bb652ce9661b610fc0a51c90590d73d369c3fba9705118b6db",
+    "dev/PUBLISHING.ja.md": "4fa6f9b53ec39633644d4c5d4036a6a364226d1f1e521e20f0bc8a1a835d239c",
+    "dev/README.ja.md": "da79a509165b949ef1c7353e4ae42a22787fc77129d337c1f64d4bdb32315ef3",
+    "dev/packages.txt": "3e27131865d81c29422a856370401d6fb7c06e632b3615aa158e5cae90030805",
+    "dev/reproducible-build.py": "2698db9514ce7e3ea7071ff4c5d3f4651ba361b95c1cafb3f5f5d676b7e86945",
+    "dev/setup-debian.sh": "d2423d2b1186f5b9d3976ebdf04b2cb6243555d19b74d1041d195f3031633844"
+  },
+  "tool_versions": {
+    "gcc": "gcc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "gprbuild": "GPRBUILD Pro 18.0w (19940713) (x86_64-linux-gnu)\nCopyright (C) 2004-2016, AdaCore\nThis is free software; see the source for copying conditions.\nSee your AdaCore support agreement for details of warranty and support.\nIf you do not have a current support agreement, then there is absolutely\nno warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR\nPURPOSE.",
+    "dpkg-query": "binutils\t2.44-3\ngnat-14\t14.2.0-19\ngprbuild\t2025.0.0-4\nlibc6:amd64\t2.41-12+deb13u3"
+  },
+  "production_qualified": false,
+  "builds": [
+    {
+      "tree": "first",
+      "returncode": 0,
+      "binaries": {
+        "assurance/build/bin/assure": "33b61b2a318afa6276b42b6756325ad76fbbe2e470536656eb7f16af4035ee15",
+        "assurance/build/bin/controlctl": "a455f820e0a758dbfbef9eff68d08dbee8e83b687b1009f3682480dac2babcde",
+        "assurance/build/bin/platformctl": "370444fc235341ff8515c93241b43cb9708a41e4f75bd0e03e58db180d6d87d9",
+        "pkgcore/build/bin/pkg_recoveryctl": "fe30c2963887c09768a659128d3f51fa427900bf16931aced4753ecf9b7a4cb9",
+        "pkgcore/build/bin/pkgctl": "794f3e8c93e66ac369b99510efff7c6f8c1bab0cc3c6be31fd2372dd7a880ef0",
+        "pkgcore/build/bin/pkg_worker": "5fc176ffbac77902894e4d8cda2bf0472aeefccc622ff81f59b11e6604361008",
+        "pkgcore/build/bin/pkg_scrubctl": "f9b8664f74cf70c6e4dc8a06fd7c6a1218b86afa44e0a1b575a884a8b5cf633d",
+        "statecore/build/bin/hostctl": "3213e80110203ca35d19e8354c367fb591f9b0392ec21d9ab40cc0a0cd4a168b",
+        "statecore/build/bin/statectl": "91d0ea1efb5142b7f4a2ff3929c81703abaa8002642be78f3e9834f2dae1887c",
+        "statecore/build/bin/state_worker": "63616784bf2911d111f7f30603a43b01ba5933be78dc6332a5f868a24b0fcc42",
+        "statecore/build/bin/state_recovery_worker": "be66d73de78efe2449197f3e5bfc46ae72d62ffd9f536e6b7d26c026fdd6749f",
+        "statecore/build/bin/state_healing_admin": "5e1b36586936af6dc4141cfe4eed02aed2a1b2ee5b190f5894684965a73a8c33",
+        "controlcore/build/bin/nia": "d6905add80219162470aa0ab6ec7c8550b2c3294617c4b814e90bc1cf6e5093e",
+        "controlcore/build/bin/missionctl": "f100d3dc934b5f0471c35cec45eb88994600296764d9a3e91292e0afdd60af0b",
+        "controlcore/build/bin/mission_sign": "44010199d0839e6bd1f3592ee4d66721cc9098eea1c08e8d12ddbe2d47f703ca",
+        "configcore/build/bin/configctl": "54e6df2998a90b6de52aad3097613960cc2a1716c79b31275751167f3f1a4fd5",
+        "resolvercore/build/bin/resolverctl": "2edf063a4dc9881293cd5ee04d3bee43b1fb9476fb0bf2491d207d99bfd00881",
+        "capsulecore/build/bin/capsulectl": "0f0bd0cb71773d845e78f68299df24ef3a692a3e56416a8ec31bf14abc854f44"
+      }
+    },
+    {
+      "tree": "second-with-a-different-path-length",
+      "returncode": 0,
+      "binaries": {
+        "assurance/build/bin/assure": "33b61b2a318afa6276b42b6756325ad76fbbe2e470536656eb7f16af4035ee15",
+        "assurance/build/bin/controlctl": "a455f820e0a758dbfbef9eff68d08dbee8e83b687b1009f3682480dac2babcde",
+        "assurance/build/bin/platformctl": "370444fc235341ff8515c93241b43cb9708a41e4f75bd0e03e58db180d6d87d9",
+        "pkgcore/build/bin/pkg_recoveryctl": "fe30c2963887c09768a659128d3f51fa427900bf16931aced4753ecf9b7a4cb9",
+        "pkgcore/build/bin/pkgctl": "794f3e8c93e66ac369b99510efff7c6f8c1bab0cc3c6be31fd2372dd7a880ef0",
+        "pkgcore/build/bin/pkg_worker": "5fc176ffbac77902894e4d8cda2bf0472aeefccc622ff81f59b11e6604361008",
+        "pkgcore/build/bin/pkg_scrubctl": "f9b8664f74cf70c6e4dc8a06fd7c6a1218b86afa44e0a1b575a884a8b5cf633d",
+        "statecore/build/bin/hostctl": "3213e80110203ca35d19e8354c367fb591f9b0392ec21d9ab40cc0a0cd4a168b",
+        "statecore/build/bin/statectl": "91d0ea1efb5142b7f4a2ff3929c81703abaa8002642be78f3e9834f2dae1887c",
+        "statecore/build/bin/state_worker": "63616784bf2911d111f7f30603a43b01ba5933be78dc6332a5f868a24b0fcc42",
+        "statecore/build/bin/state_recovery_worker": "be66d73de78efe2449197f3e5bfc46ae72d62ffd9f536e6b7d26c026fdd6749f",
+        "statecore/build/bin/state_healing_admin": "5e1b36586936af6dc4141cfe4eed02aed2a1b2ee5b190f5894684965a73a8c33",
+        "controlcore/build/bin/nia": "d6905add80219162470aa0ab6ec7c8550b2c3294617c4b814e90bc1cf6e5093e",
+        "controlcore/build/bin/missionctl": "f100d3dc934b5f0471c35cec45eb88994600296764d9a3e91292e0afdd60af0b",
+        "controlcore/build/bin/mission_sign": "44010199d0839e6bd1f3592ee4d66721cc9098eea1c08e8d12ddbe2d47f703ca",
+        "configcore/build/bin/configctl": "54e6df2998a90b6de52aad3097613960cc2a1716c79b31275751167f3f1a4fd5",
+        "resolvercore/build/bin/resolverctl": "2edf063a4dc9881293cd5ee04d3bee43b1fb9476fb0bf2491d207d99bfd00881",
+        "capsulecore/build/bin/capsulectl": "0f0bd0cb71773d845e78f68299df24ef3a692a3e56416a8ec31bf14abc854f44"
+      }
+    }
+  ],
+  "result": "identical-binaries",
+  "binary_count": 18,
+  "ended_utc": "2026-09-08T00:27:17.324227+00:00"
+}

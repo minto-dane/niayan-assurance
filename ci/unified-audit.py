@@ -53,7 +53,8 @@ def lineage(root:Path):
             or row['from_sha256']==row['to_sha256']):
             raise eng.Invalid('amendment must identify a unique exact original')
         if (not isinstance(row['scope'],str) or not row['scope'].strip()
-            or row['validation']!='source-inspected; ada-not-run; independent-review-pending'
+            or row['validation'] not in ('source-inspected; ada-not-run; independent-review-pending',
+                'source-inspected; native-validation-recorded-separately; independent-review-pending')
             or not isinstance(row['adr'],str)
             or not re.fullmatch(r'assurance/docs/engineering/adr/ADR-[0-9]{4}\.ja\.md',row['adr'])):
             raise eng.Invalid('amendment scope/review reference invalid')

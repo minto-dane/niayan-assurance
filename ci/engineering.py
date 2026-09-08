@@ -62,7 +62,7 @@ def regular_tree(root: Path):
                     raise Invalid(f'directory link: {d}')
             for f in sorted(fs):
                 p = Path(parent) / f
-                if f.endswith('.pyc'):
+                if f in EXCLUDED or f.endswith('.pyc'):
                     continue
                 yield p, read_regular(p)
 

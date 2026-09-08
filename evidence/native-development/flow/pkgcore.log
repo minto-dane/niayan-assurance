@@ -1,0 +1,598 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: analysis of data and information flow ...
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:32:15
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:33:15
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:9:56
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:15:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:19:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:24:43
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:27:86
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:31:87
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:34:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:38:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:41:47
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:42:99
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:45:43
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:10:73
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:12:109
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:18:58
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:20:125
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:24:184
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:27:60
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:30:61
+ info: analyzing call to "Value" in context
+--> mc_base64.adb:32:22
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:38:10
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:39:25
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:40:25
+ info: analyzing call to "Add" in context
+--> mc_json.adb:66:10
+
+ info: no contextual analysis of "Value_Read" (object renaming)
+--> mc_json.adb:79:07
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:83:16
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:85:31
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:88:13
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:89:25
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:93:19
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:101:19
+
+ info: analyzing call to "Value_Read" in context
+--> mc_json.adb:103:16
+
+ info: no contextual analysis of call to recursive subprogram
+--> mc_json.adb:103:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:104:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:107:33
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:110:13
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:118:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:128:26
+ info: no contextual analysis of "Normalize" (object renaming)
+--> resolver_proof.adb:12:04
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:20:10
+
+ info: no contextual analysis of "Append" (object renaming)
+--> resolver_proof.adb:34:04
+
+ info: no contextual analysis of "RUP" (object renaming)
+--> resolver_proof.adb:64:04
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:71:10
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:80:13
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:84:19
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:130:10
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:134:16
+
+ info: analyzing call to "Insert" in context
+--> resolver_proof.adb:139:41
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:141:19
+
+ info: analyzing call to "Insert" in context
+--> resolver_proof.adb:143:42
+
+ info: analyzing call to "Spend" in context
+--> resolver_proof.adb:162:10
+ info: analyzing call to "Spend" in context
+--> resolver_verify.adb:12:10
+
+ info: analyzing call to "Spend" in context
+--> resolver_verify.adb:23:10
+
+ info: analyzing call to "Spend" in context
+--> resolver_verify.adb:33:16
+
+ info: analyzing call to "Check_State" in context
+--> resolver_verify.adb:47:07
+
+ info: analyzing call to "Check_State" in context
+--> resolver_verify.adb:78:25
+
+ info: analyzing call to "Check_State" in context
+--> resolver_verify.adb:107:13
+ info: analyzing call to "Append" in context
+--> resolver_builder.adb:9:10
+
+ info: analyzing call to "Append" in context
+--> resolver_builder.adb:13:07
+
+ info: analyzing call to "Append" in context
+--> resolver_builder.adb:18:07
+
+ info: analyzing call to "Append" in context
+--> resolver_builder.adb:25:07
+ info: analyzing call to "Spaces" in context
+--> resolver_lrat.adb:18:32
+
+ info: analyzing call to "Number" in context
+--> resolver_lrat.adb:48:13
+
+ info: analyzing call to "Spaces" in context
+--> resolver_lrat.adb:50:13
+
+ info: analyzing call to "Number" in context
+--> resolver_lrat.adb:55:19
+
+ info: analyzing call to "Number" in context
+--> resolver_lrat.adb:63:19
+
+ info: analyzing call to "Number" in context
+--> resolver_lrat.adb:72:19
+
+ info: analyzing call to "Spaces" in context
+--> resolver_lrat.adb:81:13
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:20:07
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:20:27
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:20:47
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:20:71
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:21:07
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:21:34
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:21:66
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:21:95
+
+ info: analyzing call to "C" in context
+--> resolver_wire.adb:22:07
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:22:33
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:22:51
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:22:69
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:22:87
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:23:07
+
+ info: analyzing call to "C" in context
+--> resolver_wire.adb:23:30
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:26:13
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:26:32
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:26:53
+
+ info: analyzing call to "C" in context
+--> resolver_wire.adb:29:13
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:29:35
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:29:50
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:29:66
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:29:84
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:33:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:33:45
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:33:70
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:33:92
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:36:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:36:37
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:36:77
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:39:10
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:39:37
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:39:63
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:40:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:40:34
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:81:07
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:81:27
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:81:47
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:81:71
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:82:07
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:82:34
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:83:07
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:83:36
+
+ info: analyzing call to "C" in context
+--> resolver_wire.adb:84:07
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:84:33
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:84:61
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:85:07
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:85:35
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:86:07
+
+ info: analyzing call to "C" in context
+--> resolver_wire.adb:86:40
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:89:10
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:89:39
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:89:70
+
+ info: analyzing call to "Byte_Value" in context
+--> resolver_wire.adb:90:10
+
+ info: analyzing call to "Byte_Value" in context
+--> resolver_wire.adb:91:10
+
+ info: analyzing call to "Byte_Value" in context
+--> resolver_wire.adb:92:10
+
+ info: analyzing call to "Byte_Value" in context
+--> resolver_wire.adb:93:10
+
+ info: analyzing call to "C" in context
+--> resolver_wire.adb:93:72
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:94:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:94:45
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:95:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:95:48
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:98:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:98:62
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:99:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:99:42
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:102:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:102:47
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:102:104
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:105:10
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:105:37
+
+ info: analyzing call to "D" in context
+--> resolver_wire.adb:105:63
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:106:10
+
+ info: analyzing call to "N" in context
+--> resolver_wire.adb:106:44
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:18:44
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:21:32
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:22:37
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:23:36
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:25:50
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:31:36
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:32:35
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:33:29
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:33:61
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:34:28
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:34:43
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:35:28
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:35:42
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:35:56
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:36:27
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:36:41
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:36:55
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:39:39
+
+ info: analyzing call to "Emit" in context
+--> resolver_cnf.adb:45:16
+
+ info: analyzing call to "Val" in context
+--> resolver_cnf.adb:70:63
+ info: no contextual analysis of "Supported" (object renaming)
+--> pkg_rpm_resolution.adb:10:04
+
+ info: analyzing call to "Spend" in context
+--> pkg_rpm_resolution.adb:43:10
+
+ info: no contextual analysis of "Build_Matches" (call returns unconstrained type)
+--> pkg_rpm_resolution.adb:46:35
+
+ info: analyzing call to "Spend" in context
+--> pkg_rpm_resolution.adb:56:19
+
+ info: analyzing call to "Spend" in context
+--> pkg_rpm_resolution.adb:76:19
+
+ info: analyzing call to "Spend" in context
+--> pkg_rpm_resolution.adb:108:22
+
+ info: analyzing call to "Spend" in context
+--> pkg_rpm_resolution.adb:141:22
+
+ info: analyzing call to "Join" in context
+--> pkg_rpm_resolution.adb:144:25
+
+ info: analyzing call to "Join" in context
+--> pkg_rpm_resolution.adb:148:31
+
+ info: analyzing call to "Join" in context
+--> pkg_rpm_resolution.adb:149:30
+
+ info: analyzing call to "Join" in context
+--> pkg_rpm_resolution.adb:157:22
+
+ info: analyzing call to "Join" in context
+--> pkg_rpm_resolution.adb:159:22
+
+ info: analyzing call to "Join" in context
+--> pkg_rpm_resolution.adb:160:22
+
+ info: analyzing call to "Join" in context
+--> pkg_rpm_resolution.adb:161:22
+ info: analyzing call to "Spaces" in context
+--> pkg_dependency.adb:34:10
+
+ info: analyzing call to "Spaces" in context
+--> pkg_dependency.adb:38:16
+
+ info: analyzing call to "Read_Word" in context
+--> pkg_dependency.adb:43:16
+
+ info: no contextual analysis of "Operand" (call returns unconstrained type)
+--> pkg_dependency.adb:44:52
+
+ info: analyzing call to "Spaces" in context
+--> pkg_dependency.adb:52:22
+
+ info: analyzing call to "Read_Word" in context
+--> pkg_dependency.adb:55:22
+
+ info: analyzing call to "Spaces" in context
+--> pkg_dependency.adb:59:42
+
+ info: analyzing call to "Add" in context
+--> pkg_dependency.adb:63:72
+
+ info: analyzing call to "Read_Word" in context
+--> pkg_dependency.adb:68:13
+
+ info: analyzing call to "Spaces" in context
+--> pkg_dependency.adb:73:13
+
+ info: analyzing call to "Read_Word" in context
+--> pkg_dependency.adb:75:16
+
+ info: analyzing call to "Spaces" in context
+--> pkg_dependency.adb:81:16
+
+ info: analyzing call to "Read_Word" in context
+--> pkg_dependency.adb:82:16
+
+ info: analyzing call to "Add" in context
+--> pkg_dependency.adb:89:13
+
+ info: analyzing call to "Spaces" in context
+--> pkg_dependency.adb:96:52
+
+ info: analyzing call to "Boolean_Value" in context
+--> pkg_dependency.adb:161:53
+
+ info: analyzing call to "Boolean_Value" in context
+--> pkg_dependency.adb:165:32
+ info: analyzing call to "Weight" in context
+--> pkg_deb_versions.adb:84:19
+
+ info: analyzing call to "Weight" in context
+--> pkg_deb_versions.adb:84:40
+
+ info: analyzing call to "Part_Order" in context
+--> pkg_deb_versions.adb:112:17
+
+ info: analyzing call to "Part_Order" in context
+--> pkg_deb_versions.adb:115:17
+
+ info: analyzing call to "Part_Order" in context
+--> pkg_deb_versions.adb:116:40
+
+ info: analyzing call to "Part_Order" in context
+--> pkg_deb_versions.adb:117:40
+ info: analyzing call to "Zeros" in context
+--> pkg_inventory.adb:88:14
+ info: analyzing call to "Valid_Set" in context
+--> pkg_recovery_catalog.adb:25:14
+
+ info: analyzing call to "Valid_Set" in context
+--> pkg_recovery_catalog.adb:36:14
+Success: all checks proved (936 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/pkgcore/build/proof-obj/gnatprove/gnatprove.out

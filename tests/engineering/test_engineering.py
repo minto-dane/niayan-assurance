@@ -55,11 +55,15 @@ class SafeInputTests(unittest.TestCase):
         with self.assertRaises(eng.Invalid):eng.resolve_ref(self.root,'assurance/l/x')
     def test_exact_temporary_arguments(self):
         t={'arguments':['$TEMP/root','$TEMP/state','fixtures/example'],
-           'prepare_directories':['$TEMP/root/usr']}
+           'prepare_directories':['$TEMP/root/usr','$TEMP/state']}
         args=runner.expand_test_args(t,self.root)
         self.assertEqual(args,[str(self.root/'root'),str(self.root/'state'),'fixtures/example'])
         self.assertTrue((self.root/'root/usr').is_dir())
         self.assertEqual((self.root/'state').stat().st_mode&0o777,0o700)
+    def test_absent_temporary_argument(self):
+        args=runner.expand_test_args({'arguments':['$TEMP/new'],'prepare_directories':[]},self.root)
+        self.assertEqual(args,[str(self.root/'new')])
+        self.assertFalse((self.root/'new').exists())
     def test_unsafe_temporary_argument_refused(self):
         for value in ('$TEMP/../../etc','/etc/passwd','${OTHER}/x'):
             with self.subTest(value=value):
@@ -157,6 +161,11 @@ class TraceabilityTests(unittest.TestCase):
             (e/'test-report.json').write_text('{"test":"new"}')
             self.assertEqual(a,eng.source_subject(self.root))
         finally:shutil.rmtree(e)
+    def test_submodule_gitfile_is_not_source(self):
+        a=eng.source_subject(self.root);p=self.root/'assurance/.git'
+        p.write_text('gitdir: ../.git/modules/assurance\n')
+        try:self.assertEqual(a,eng.source_subject(self.root))
+        finally:p.unlink()
     def test_document_change_changes_source_subject(self):
         p=self.root/'assurance/docs/engineering/README.ja.md';original=p.read_bytes()
         try:

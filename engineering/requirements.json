@@ -594,7 +594,8 @@
       "shall": "source/model/Ada/proof/target/運用承認を分け、現在のsource/binary subjectへ実行証拠を束縛しなければならない。",
       "status": "implemented-unvalidated",
       "adr": [
-        "ADR-0016"
+        "ADR-0016",
+        "ADR-0053"
       ],
       "spec": [
         "assurance/docs/engineering/specs/verification.ja.md"
@@ -644,16 +645,18 @@
     {
       "id": "REQ-023",
       "title": "全テストmain登録",
-      "shall": "GPRへ登録された全テストmainに実行tierと引数計画を割り当て、未登録のままリリース準備を進めてはならない。",
+      "shall": "GPRへ登録された全テストmainに実行tierと引数計画を割り当て、未登録のままリリース準備を進めてはならない。独立repoのmake testも同じ計画を生成元とし、全mainを実行しなければならない。",
       "status": "implemented-unvalidated",
       "adr": [
-        "ADR-0017"
+        "ADR-0017",
+        "ADR-0053"
       ],
       "spec": [
         "assurance/docs/engineering/specs/verification.ja.md"
       ],
       "code": [
-        "assurance/ci/engineering.py#validate"
+        "assurance/ci/engineering.py#validate",
+        "assurance/ci/sync-component-ci.py"
       ],
       "tests": [
         "assurance/tests/engineering/test_engineering.py"
@@ -783,21 +786,28 @@
     {
       "id": "REQ-028",
       "title": "境界付き入力",
-      "shall": "未認識形式・余剰field・上限外の入力を拒否し、特殊ファイルを属性検査前にブロックして待ち続けてはならない。",
+      "shall": "未認識形式・余剰field・上限外の入力を拒否し、特殊ファイルを属性検査前にブロックして待ち続けてはならない。部分解析で得た成功値を後続の切断・重複fieldの結果として返してはならない。",
       "status": "implemented-unvalidated",
       "adr": [
-        "ADR-0018"
+        "ADR-0018",
+        "ADR-0053"
       ],
       "spec": [
         "assurance/docs/engineering/specs/security.ja.md"
       ],
       "code": [
         "assurance/runtime/mc_fs.adb#Open_New_Or_Lock",
-        "assurance/ci/engineering.py#read_regular"
+        "assurance/ci/engineering.py#read_regular",
+        "assurance/src/mc_properties.adb",
+        "pkgcore/src/pkg_file_plan.adb",
+        "statecore/src/state_unit.adb"
       ],
       "tests": [
         "assurance/tests/run_recovery_storage_tests.adb",
-        "assurance/tests/engineering/test_engineering.py"
+        "assurance/tests/engineering/test_engineering.py",
+        "assurance/tests/run_v2_tests.adb",
+        "pkgcore/tests/run_v2_pkg_tests.adb",
+        "statecore/tests/run_v2_state_tests.adb"
       ],
       "hazards": [
         "HAZ-007"
@@ -1411,14 +1421,16 @@
     },
     {
       "id": "REQ-051",
-      "title": "全5repoの開発整合性",
-      "shall": "configcoreと組立て工具を在庫・試験・固定契約・RPM配布・文書照合の対象に含めなければならない。",
+      "title": "全7repoの開発整合性",
+      "shall": "全7repoとdistributionを在庫・試験・固定契約・Nia配布定義・文書照合の対象に含め、独立repoと固定workspaceの双方で再構築できなければならない。",
       "status": "implemented-unvalidated",
       "adr": [
-        "ADR-0036"
+        "ADR-0036",
+        "ADR-0053"
       ],
       "spec": [
-        "assurance/docs/engineering/specs/suse-config.ja.md"
+        "assurance/docs/engineering/specs/suse-config.ja.md",
+        "assurance/docs/engineering/specs/development.ja.md"
       ],
       "code": [
         "assurance/ci/engineering.py"
@@ -2440,7 +2452,8 @@
       "shall": "要求はkernel credentialsと登録済み実行個体から認証し、wireの自己申告で本人・許可を決めてはならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0052"
+        "ADR-0052",
+        "ADR-0053"
       ],
       "spec": [
         "capsulecore/docs/consent.ja.md"
@@ -2450,7 +2463,8 @@
       ],
       "tests": [
         "capsulecore/tests/run_consent_tests.adb",
-        "capsulecore/tests_py/test_consent.py"
+        "capsulecore/tests_py/test_consent.py",
+        "capsulecore/tests/run_consent_channel_tests.adb"
       ],
       "hazards": [
         "HAZ-073"

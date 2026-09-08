@@ -1,0 +1,117 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: analysis of data and information flow ...
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:32:15
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:33:15
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:9:56
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:15:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:19:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:24:43
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:27:86
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:31:87
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:34:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:38:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:41:47
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:42:99
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:45:43
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:10:73
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:12:109
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:18:58
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:20:125
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:24:184
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:27:60
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:30:61
+ info: analyzing call to "Value" in context
+--> mc_base64.adb:32:22
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:38:10
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:39:25
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:40:25
+ info: analyzing call to "Add" in context
+--> mc_json.adb:66:10
+
+ info: no contextual analysis of "Value_Read" (object renaming)
+--> mc_json.adb:79:07
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:83:16
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:85:31
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:88:13
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:89:25
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:93:19
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:101:19
+
+ info: analyzing call to "Value_Read" in context
+--> mc_json.adb:103:16
+
+ info: no contextual analysis of call to recursive subprogram
+--> mc_json.adb:103:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:104:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:107:33
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:110:13
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:118:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:128:26
+Success: all checks proved (449 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/controlcore/build/proof-obj/gnatprove/gnatprove.out

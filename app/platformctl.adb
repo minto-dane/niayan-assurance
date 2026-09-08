@@ -18,7 +18,7 @@ procedure Platformctl with SPARK_Mode => Off is
       S := (others=>Character'Val(0)); Used:=0; if O/=OK then return; end if;
       MC_Properties.Get(D,Name,V,O); if O=OK then
          declare X : constant String := MC_Text.Image(V); begin
-            if X'Length>S'Length then O:=Invalid_Input; else Used:=X'Length; S(1..Used):=X; end if;
+            if X'Length>S'Length then O:=Invalid_Input; else Used:=X'Length; S(S'First..S'First+Used-1):=X; end if;
          end;
       end if;
    end Get_Text;

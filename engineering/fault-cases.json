@@ -989,9 +989,42 @@
         "REQ-094"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md",
-      "expected": "診断、模擬peer試験、未検証のAda、未接続adapterを区別し、現在の実装と残る出荷条件を機械台帳と文書へ記録しなければならない。",
+      "expected": "診断、模擬peer試験、Ada実行・flow・proveの各結果、未接続adapterを区別し、現在の実装と残る出荷条件を機械台帳と文書へ記録しなければならない。",
       "execution": "not-run",
       "reference_tests": "capsulecore/tests_py/test_consent.py"
+    },
+    {
+      "id": "FAULT-089",
+      "scenario": "計画2件目の欠落・プロパティの重複",
+      "requirements": [
+        "REQ-028"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md",
+      "expected": "前のfieldのOKを伝播せず全体を拒否する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_v2_pkg_tests.adb"
+    },
+    {
+      "id": "FAULT-090",
+      "scenario": "試験引数が存在しないディレクトリを要求する",
+      "requirements": [
+        "REQ-023"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md",
+      "expected": "prepare_directoriesで明示されたものだけを作り、未作成を前提にした実試験を維持する。",
+      "execution": "not-run",
+      "reference_tests": "assurance/tests/engineering/test_engineering.py"
+    },
+    {
+      "id": "FAULT-091",
+      "scenario": "要求に余分な権利FDが付く",
+      "requirements": [
+        "REQ-087"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-017.ja.md",
+      "expected": "入力を拒否して受信したFDを閉じ、試験自身のFD数が増えない。",
+      "execution": "not-run",
+      "reference_tests": "capsulecore/tests/run_consent_channel_tests.adb"
     }
   ]
 }

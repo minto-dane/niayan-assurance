@@ -1,0 +1,28 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: local subprogram "Nibble" only analyzed in the context of calls [info-unrolling-inlining]
+--> mc_hex.adb:16:13
+      + add a contract to analyze it separately from calling contexts
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:32:15
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:33:15
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_properties.adb:20:35
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_properties.adb:21:37
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_properties.adb:23:36
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_properties.adb:37:27
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> mc_properties.adb:54:33
+Success: all checks proved (92 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/assurance/build/proof-obj/gnatprove/gnatprove.out

@@ -37,6 +37,19 @@ begin
    MC_Numbers.Parse("01",N,S); Expect(S/=OK,"counter-noncanonical");
    MC_Properties.Parse(B("key=a" & ASCII.LF & "key=b" & ASCII.LF),P,S); Expect(S/=OK,"properties-duplicate");
    MC_Properties.Parse(B("key=a"),P,S); Expect(S/=OK,"properties-missing-terminator");
+   MC_Properties.Parse(B("first=a" & ASCII.LF & "second=b" & ASCII.LF),P,S);
+   Expect(S=OK and then MC_Properties.Has_Exactly(P,"second,first"),"properties-exact-keys");
+   Expect(not MC_Properties.Has_Exactly(P,"first,first"),"properties-repeated-key-not-exact");
+   declare
+      Last_Byte : Bytes(Integer'Last .. Integer'Last) := (others => 10);
+      Last_Key : constant String(Integer'Last .. Integer'Last) := "k";
+      Empty_Bytes : Bytes(1..0);
+   begin
+      MC_Properties.Parse(Last_Byte,P,S); Expect(S/=OK,"properties-last-index-rejected");
+      MC_Properties.Parse(Empty_Bytes,P,S); Expect(S/=OK,"properties-empty-rejected");
+      Expect(not MC_Properties.Has_Exactly(P,Last_Key),"properties-key-last-index-rejected");
+      Expect(not MC_Properties.Has_Exactly(P,""),"properties-empty-key-list-rejected");
+   end;
    R.Transaction_ID:=(others=>1); R.Plan_Digest:=(others=>2); R.Contract_Digest:=(others=>3);
    R.Stage_Set_Digest:=(others=>4); R.Evidence_Digest:=(others=>5);
    for A in MC_Requests.Requested_Action loop

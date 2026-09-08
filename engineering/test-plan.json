@@ -9,7 +9,10 @@
         "$TEMP/store"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/state",
+        "$TEMP/store"
+      ],
       "execution_owner": "assurance-maintainers",
       "note": "fresh isolated dirs; inspect driver preconditions before execution"
     },
@@ -85,7 +88,11 @@
         "$TEMP/security"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/policy",
+        "$TEMP/ops",
+        "$TEMP/security"
+      ],
       "execution_owner": "assurance-maintainers",
       "note": "fresh isolated dirs; inspect driver preconditions before execution"
     },
@@ -96,7 +103,9 @@
         "$TEMP/private"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/private"
+      ],
       "execution_owner": "assurance-maintainers",
       "note": "fresh isolated dirs; inspect driver preconditions before execution"
     },
@@ -174,7 +183,9 @@
         "$TEMP/private"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/private"
+      ],
       "execution_owner": "pkgcore-maintainers",
       "note": "fresh isolated dirs; inspect driver preconditions before execution"
     },
@@ -197,6 +208,9 @@
       ],
       "result": "not-run",
       "prepare_directories": [
+        "$TEMP/root",
+        "$TEMP/state",
+        "$TEMP/store",
         "$TEMP/root/usr"
       ],
       "execution_owner": "pkgcore-maintainers",
@@ -282,7 +296,10 @@
         "$TEMP/store"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/state",
+        "$TEMP/store"
+      ],
       "execution_owner": "statecore-maintainers",
       "note": "fresh isolated dirs; inspect driver preconditions before execution"
     },
@@ -329,7 +346,9 @@
         "$TEMP/private"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/private"
+      ],
       "execution_owner": "assurance-maintainers",
       "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
     },
@@ -397,7 +416,9 @@
         "$TEMP/private"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/private"
+      ],
       "execution_owner": "controlcore-maintainers",
       "note": "Uncompiled Ada test. Artificial fixtures; isolated filesystem tests do not start real package/service workers."
     },
@@ -500,7 +521,9 @@
         "$TEMP/private"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/private"
+      ],
       "execution_owner": "assurance-maintainers",
       "note": "fresh private directory; own finite-lived children only; no services or devices"
     },
@@ -511,7 +534,9 @@
         "$TEMP/private"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/private"
+      ],
       "execution_owner": "assurance-maintainers",
       "note": "fresh private directory; own finite-lived children only; no services or devices"
     },
@@ -549,9 +574,20 @@
         "$TEMP/private"
       ],
       "result": "not-run",
-      "prepare_directories": [],
+      "prepare_directories": [
+        "$TEMP/private"
+      ],
       "execution_owner": "capsulecore-maintainers",
       "note": "Real MC_FS/MC_Log IO; memory anchor is an explicit test double, not production trust storage. Ada not run."
+    },
+    {
+      "main": "capsulecore/tests/run_consent_channel_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "capsulecore-maintainers",
+      "note": "Actual Linux Ada/C ABI, private anonymous socketpair, own child credentials and descriptor cleanup. No launcher identity claim or host bus."
     }
   ]
 }

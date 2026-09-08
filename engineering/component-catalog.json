@@ -35,7 +35,7 @@
     },
     {
       "path": "assurance/app/contract_lock.adb",
-      "sha256": "883ee114ea04133914f787ca587b80007c67ef3d9155f52258abcf39f976f36a",
+      "sha256": "063c49d979c0fd9e2864f75cb8d3ebaabe2d6cb83eafdce971fd8e1e90ba47fe",
       "repository": "assurance",
       "layer": "app",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -142,7 +142,7 @@
     },
     {
       "path": "assurance/app/platformctl.adb",
-      "sha256": "54f8a8e09dcd4778ddd309d8eff6b0410830d05b6b7ed9a2dbf176518ab1ffb1",
+      "sha256": "74585deacbb8ee7a700fffba4b15bfd8f973cdf257ddd7bc669fca7c859040ca",
       "repository": "assurance",
       "layer": "app",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -525,7 +525,7 @@
     },
     {
       "path": "assurance/runtime/mc_clock.adb",
-      "sha256": "06a86876046ee3adfd5478a7a174c6f9fc776588c67fcaf0f27d39e684342e0d",
+      "sha256": "c4129ce22dc3db064ad1535f94b1a48354a52148996c27fa3fcdad273ff38a26",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -536,19 +536,19 @@
         },
         {
           "name": "Get",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Boottime_Milliseconds",
-          "line": 17
+          "line": 18
         },
         {
           "name": "Realtime_Seconds",
-          "line": 19
+          "line": 20
         },
         {
           "name": "Read_Boot_ID",
-          "line": 22
+          "line": 23
         }
       ],
       "with_dependencies": [
@@ -590,7 +590,7 @@
     },
     {
       "path": "assurance/runtime/mc_command.adb",
-      "sha256": "bcb6f648382ddf6d3d1aad091d1e39fd0be31984d899b2e6b1ce3074996711de",
+      "sha256": "e6ab68a725694d4412e5f55aad7192d8352d526755531c2dac05ec722ed6aa7a",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -661,15 +661,15 @@
         },
         {
           "name": "Close_FD",
-          "line": 54
+          "line": 53
         },
         {
           "name": "Cleanup",
-          "line": 56
+          "line": 55
         },
         {
           "name": "Terminate_Child",
-          "line": 64
+          "line": 63
         }
       ],
       "with_dependencies": [
@@ -683,7 +683,7 @@
     },
     {
       "path": "assurance/runtime/mc_command.ads",
-      "sha256": "ff0b54a932fc537d91354e0c7395d326ce315e385d7fae7a9d24c10b6d1cd8f2",
+      "sha256": "256c9771f89cd16f03f875690195c7c1ba8ebd487866ab0b9b0400039d755afe",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -694,7 +694,7 @@
         },
         {
           "name": "Run",
-          "line": 25
+          "line": 26
         }
       ],
       "with_dependencies": [
@@ -1579,7 +1579,7 @@
     },
     {
       "path": "assurance/runtime/mc_https.adb",
-      "sha256": "13afe6edf6dd06a45839425da7fd981c4afc19b23310d4603436c53d3418a612",
+      "sha256": "c80607f5b13c31b9a2d7f0ab0528043c74095ce43ef6fc38abe54a4df3547f9a",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -1626,23 +1626,23 @@
         },
         {
           "name": "Receive",
-          "line": 17
+          "line": 18
         },
         {
           "name": "Receive",
-          "line": 19
+          "line": 20
         },
         {
           "name": "Fetch",
-          "line": 34
+          "line": 35
         },
         {
           "name": "L",
-          "line": 41
+          "line": 42
         },
         {
           "name": "P",
-          "line": 43
+          "line": 44
         }
       ],
       "with_dependencies": [
@@ -2329,7 +2329,7 @@
     },
     {
       "path": "assurance/runtime/mc_runtime.adb",
-      "sha256": "1ed07d5809e3ce1d7434788a79ebbeea927c023f47aec291042555cca9949459",
+      "sha256": "90665d188b6e4dc7558f197b0c3a88f4e7ddfc30f498bc8f5236a15007922313",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -2458,7 +2458,7 @@
     },
     {
       "path": "assurance/runtime/mc_site_policy.adb",
-      "sha256": "0a7a137190e7e9d26816dc844f139f9454bb8c75efe72648a5ccab54c646871a",
+      "sha256": "d5fd28c031a6395ae9ff942d0f9b06dbcb9360b36c58ecc4a8828a2642681771",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -2469,15 +2469,15 @@
         },
         {
           "name": "Encode",
-          "line": 6
+          "line": 7
         },
         {
           "name": "Decode",
-          "line": 19
+          "line": 20
         },
         {
           "name": "Load",
-          "line": 47
+          "line": 48
         }
       ],
       "with_dependencies": [
@@ -2734,7 +2734,7 @@
     },
     {
       "path": "assurance/runtime/mc_tools.adb",
-      "sha256": "7915d87ea1614e313b5bbb0d4346cd5b294e8f4b73ed150c762dae9f11e0dd17",
+      "sha256": "b256b39ca989a2f217558ea7a09267dd7f84021e7733748211e3c9108e289c7a",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -2745,15 +2745,15 @@
         },
         {
           "name": "Set_Argument",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Invoke",
-          "line": 11
+          "line": 12
         },
         {
           "name": "Load",
-          "line": 21
+          "line": 22
         }
       ],
       "with_dependencies": [
@@ -2797,7 +2797,7 @@
     },
     {
       "path": "assurance/runtime/mc_xml.adb",
-      "sha256": "1780ad8c56f716820daf171ea476ceb06a29192abe7199405ec2588e88862880",
+      "sha256": "2bc71178870008286adfc7ce7b539426fe770aab8d5b4b0cb02ac2b3a1cdcb69",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -2808,75 +2808,75 @@
         },
         {
           "name": "Create",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Read_Node",
-          "line": 7
-        },
-        {
-          "name": "N_Type",
           "line": 8
         },
         {
-          "name": "N_Depth",
+          "name": "N_Type",
           "line": 9
         },
         {
-          "name": "N_Name",
+          "name": "N_Depth",
           "line": 10
         },
         {
-          "name": "N_NS",
+          "name": "N_Name",
           "line": 11
         },
         {
-          "name": "N_Value",
+          "name": "N_NS",
           "line": 12
         },
         {
-          "name": "Move_Attr",
+          "name": "N_Value",
           "line": 13
         },
         {
-          "name": "Move_Element",
+          "name": "Move_Attr",
           "line": 14
         },
         {
-          "name": "Release",
+          "name": "Move_Element",
           "line": 15
         },
         {
-          "name": "Len",
+          "name": "Release",
           "line": 16
         },
         {
-          "name": "As_Ptr",
+          "name": "Len",
           "line": 17
         },
         {
-          "name": "Free",
+          "name": "As_Ptr",
           "line": 18
         },
         {
-          "name": "Copy",
+          "name": "Free",
           "line": 19
         },
         {
+          "name": "Copy",
+          "line": 20
+        },
+        {
           "name": "Open",
-          "line": 26
+          "line": 27
         },
         {
           "name": "Next",
-          "line": 43
+          "line": 44
         },
         {
           "name": "Attribute",
-          "line": 73
+          "line": 74
         },
         {
           "name": "Close",
-          "line": 82
+          "line": 83
         }
       ],
       "with_dependencies": [
@@ -3159,7 +3159,7 @@
     },
     {
       "path": "assurance/src/mc_base64.adb",
-      "sha256": "169b9956def6369c4271649b2f3cf7ac6574e90be375fd96e74fe3debb695bb8",
+      "sha256": "d96aa4217a1922a288bb88f801fd3c2c9ab8b2be70f0ab85bf4e3e2a4715bf97",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -3174,15 +3174,15 @@
         },
         {
           "name": "Decode",
-          "line": 17
+          "line": 18
         },
         {
           "name": "Value",
-          "line": 19
+          "line": 20
         },
         {
           "name": "Emit",
-          "line": 21
+          "line": 22
         }
       ],
       "with_dependencies": [],
@@ -3363,7 +3363,7 @@
     },
     {
       "path": "assurance/src/mc_codec.ads",
-      "sha256": "e4d7d4c2001b4986c11be26255375a74eb3a3aa39391071c9f5e26fe42c58e74",
+      "sha256": "3a543fe4b1bd23eb1d7852b11101482c20e7d99d7d72fbb2651a5ff4118ec478",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -3374,27 +3374,27 @@
         },
         {
           "name": "U16",
-          "line": 4
+          "line": 5
         },
         {
           "name": "U32",
-          "line": 7
+          "line": 8
         },
         {
           "name": "U64",
-          "line": 10
+          "line": 11
         },
         {
           "name": "Put16",
-          "line": 13
+          "line": 14
         },
         {
           "name": "Put32",
-          "line": 17
+          "line": 18
         },
         {
           "name": "Put64",
-          "line": 20
+          "line": 21
         }
       ],
       "with_dependencies": [
@@ -3558,7 +3558,7 @@
     },
     {
       "path": "assurance/src/mc_contract_profile.ads",
-      "sha256": "48d2fea8387150d3041df43a89fdc1c15ef4a8efafa8290c9e5b2522ee7fc015",
+      "sha256": "99d08ce7d8af6d36f96394feb4b9ddcdc567e764c1683c9a6088a81c743f96d9",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -3951,7 +3951,7 @@
     },
     {
       "path": "assurance/src/mc_generation.adb",
-      "sha256": "6dcbb9a71640f77c605d6c4ddd11fd590886872f1d393c52b3a68e5802fdfbc3",
+      "sha256": "1b5e98da3f4776df87b557b19b914a032066bd7d1d5cf0ab622b7203d38c6b90",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -3974,7 +3974,7 @@
     },
     {
       "path": "assurance/src/mc_generation.ads",
-      "sha256": "ec0bc20872c67ae86ed064f5047ece7b81cad772f3e60918fdc4d75d172729a6",
+      "sha256": "d5b864b7c48a0a12cda68cee592d41ccf6729f2b2b9c3cc8f2174a8511473c4b",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -3995,7 +3995,7 @@
     },
     {
       "path": "assurance/src/mc_golden.adb",
-      "sha256": "1a4000d3ee9d2b06f466882b24ab7ed1d7c20a35a70fa5f54ff56b6d8971c206",
+      "sha256": "b633fb4485b62c77cf83742492486fc0933b6c97ade7dcdc7bbd6514d8906868",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4142,7 +4142,7 @@
     },
     {
       "path": "assurance/src/mc_hex.adb",
-      "sha256": "f04e8910fbaaf7197b466a251599df0c77cecdca2801fa2d5286e394b2ce5599",
+      "sha256": "026e8a2193358decbd1ca464a40b938f26d9f17e7effb9bff52bb3b1e6849355",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4157,11 +4157,11 @@
         },
         {
           "name": "Nibble",
-          "line": 15
+          "line": 16
         },
         {
           "name": "Decode",
-          "line": 21
+          "line": 22
         }
       ],
       "with_dependencies": [],
@@ -4264,7 +4264,7 @@
     },
     {
       "path": "assurance/src/mc_json.adb",
-      "sha256": "e5b51263ed2b7746e1a55b8d41b78d956515329ff7838692fe3004469d2981c0",
+      "sha256": "4cb1b26accb649596c4ab7372cda21d68a4e08f33683d0ee23328d335b0a00f1",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4275,43 +4275,43 @@
         },
         {
           "name": "String_Bytes",
-          "line": 4
+          "line": 5
         },
         {
           "name": "Member",
-          "line": 25
+          "line": 27
         },
         {
           "name": "Element",
-          "line": 40
+          "line": 43
         },
         {
           "name": "Parse",
-          "line": 51
+          "line": 55
         },
         {
           "name": "Space",
-          "line": 53
+          "line": 57
         },
         {
           "name": "Add",
-          "line": 54
+          "line": 58
         },
         {
           "name": "String_Node_Read",
-          "line": 59
+          "line": 63
         },
         {
           "name": "Value_Read",
-          "line": 74
+          "line": 78
         },
         {
           "name": "Value_Read",
-          "line": 75
+          "line": 79
         },
         {
           "name": "Natural_Number",
-          "line": 127
+          "line": 131
         }
       ],
       "with_dependencies": [
@@ -4321,7 +4321,7 @@
     },
     {
       "path": "assurance/src/mc_json.ads",
-      "sha256": "b37d883e47d5d77a59fc13fd7ba3ef8c40ffc19332b59e2c0b141fee544493db",
+      "sha256": "d2899cfd5e987cb0e4858669bcba6b4669c02920cfeb24609650fb18fc5a6b3a",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4358,7 +4358,7 @@
     },
     {
       "path": "assurance/src/mc_log_format.adb",
-      "sha256": "ca30786b493d145acebb44a0c73b22b343863b66bd9d951a9db2f16733dca7f4",
+      "sha256": "080098a282c0d3cd5adf416734bf66b2db5efea5d7e70ebb56d7d8ecc77f9cf8",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4369,11 +4369,11 @@
         },
         {
           "name": "Encode",
-          "line": 6
+          "line": 7
         },
         {
           "name": "Decode",
-          "line": 16
+          "line": 17
         }
       ],
       "with_dependencies": [
@@ -4409,7 +4409,7 @@
     },
     {
       "path": "assurance/src/mc_maintenance.adb",
-      "sha256": "56ff8534859213ac93b57780fcc8f7eb1c297980e9cb9bc6717ce10710b6046e",
+      "sha256": "71b09bad37a2c910254d08f3a6d7c70831064a1a1375cb07d626195c6781bb46",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4440,7 +4440,7 @@
     },
     {
       "path": "assurance/src/mc_maintenance.ads",
-      "sha256": "efd9440d42b0a997a9b26727aa61baaab00d1ba1b1eabe10fe9ff1e78ee26408",
+      "sha256": "5745458be27d6d2242d536843390a2136da60e2d9ead584c77b4618cc1339fc6",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4607,7 +4607,7 @@
     },
     {
       "path": "assurance/src/mc_properties.adb",
-      "sha256": "eb7caecbb5d25589aa4ee63e129de66d2f32bca8154bad504c9352735da614d2",
+      "sha256": "72c795a93b6ea42ba13e906bd45e9c3e2c01edced5f84276fefec4ead5f5dc9b",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -4618,15 +4618,15 @@
         },
         {
           "name": "Parse",
-          "line": 3
+          "line": 4
         },
         {
           "name": "Get",
-          "line": 27
+          "line": 34
         },
         {
           "name": "Has_Exactly",
-          "line": 34
+          "line": 41
         }
       ],
       "with_dependencies": [],
@@ -4664,7 +4664,7 @@
     },
     {
       "path": "assurance/src/mc_protocol.adb",
-      "sha256": "bda8cb6679c32a45646459f7d06a085405a4ea10c5fb9e1b7e32cf944dc8081c",
+      "sha256": "af0d10b15e428561acc75889e60bdf04c30aae9278f2646c47a133af78d0bcaa",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -5601,7 +5601,7 @@
     },
     {
       "path": "assurance/src/mc_witness.adb",
-      "sha256": "5f205e6ae1399fc7fc3f038c37216163a69f6a95ffdb0a7a8ecc785088e1742b",
+      "sha256": "b670677fa2e99a5c4d09d037b1b4f686328889a01f7c0690d265f66b83c566f3",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -5612,15 +5612,15 @@
         },
         {
           "name": "Encode",
-          "line": 6
+          "line": 7
         },
         {
           "name": "Decode",
-          "line": 13
+          "line": 14
         },
         {
           "name": "Matches",
-          "line": 26
+          "line": 27
         }
       ],
       "with_dependencies": [
@@ -5685,7 +5685,7 @@
     },
     {
       "path": "capsulecore/runtime/capsule_access_ui.adb",
-      "sha256": "d1928c0e6414158002f42645e096ffc5faed8da67f8c52861f3c090a7e6590e4",
+      "sha256": "125cbb23a6f43756ea29b661e237438b3085111b5979dae02d18d7c9bc3d8c3f",
       "repository": "capsulecore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -6013,7 +6013,7 @@
     },
     {
       "path": "capsulecore/runtime/capsule_consent_store.adb",
-      "sha256": "5e1ee496171fbef60c354667fb68b7c17472a3e2e19b4e43731e255ff681740f",
+      "sha256": "9457114e8fb45b4564c0f01dc6263f8c3e35aa33eaf508ccfcc1634ff07c2f67",
       "repository": "capsulecore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -6366,7 +6366,7 @@
     },
     {
       "path": "capsulecore/src/capsule_consent_wire.adb",
-      "sha256": "5d0f5808f463a0e5e0c87c5b4f05e7448c1975e97dc6c162dfedab723238ae54",
+      "sha256": "dd6aa4ace1b37d93ff1afd0b34b885de3bd879f9c6db8c955942f96fa3adafca",
       "repository": "capsulecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -6377,39 +6377,39 @@
         },
         {
           "name": "Decode",
-          "line": 3
+          "line": 4
         },
         {
           "name": "Encode_Ticket",
-          "line": 20
+          "line": 21
         },
         {
           "name": "Octet",
-          "line": 24
-        },
-        {
-          "name": "Number",
           "line": 25
         },
         {
+          "name": "Number",
+          "line": 26
+        },
+        {
           "name": "Hash",
-          "line": 31
+          "line": 32
         },
         {
           "name": "Decode_Ticket",
-          "line": 49
+          "line": 52
         },
         {
           "name": "Octet",
-          "line": 54
+          "line": 57
         },
         {
           "name": "Number",
-          "line": 56
+          "line": 59
         },
         {
           "name": "Hash",
-          "line": 63
+          "line": 69
         }
       ],
       "with_dependencies": [],
@@ -6561,7 +6561,7 @@
     },
     {
       "path": "capsulecore/src/capsule_policy.adb",
-      "sha256": "49834d11a436b0372b5dcba4d0aa94d544e62674df39ea76e65b753fbbec1024",
+      "sha256": "e5c3733a23025fb5748ec92f1437e97f05b9fccf70ea4ae9cd9d0152812ac5b3",
       "repository": "capsulecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -6713,7 +6713,7 @@
     },
     {
       "path": "capsulecore/src/capsule_wire.adb",
-      "sha256": "7c79b96ef53021a74de48e086390eef6cefbf0ae934a5ef819e133f22fcc67d2",
+      "sha256": "d7137f6011b359cc827c0b3022f72c6dbf66e656c5a4b40e6c01eaf89e6fce3b",
       "repository": "capsulecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -6998,7 +6998,7 @@
     },
     {
       "path": "configcore/src/config_document_codec.adb",
-      "sha256": "72957811c34f25d6dc21d5b55cc0c4bb9bcf764819f98e49c0441c09ec0d05c5",
+      "sha256": "988be9a96fe5a1ffc5e08430561276b0a9eace360acc2456600f683d19c5f5be",
       "repository": "configcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -7013,15 +7013,15 @@
         },
         {
           "name": "Encode",
-          "line": 28
+          "line": 32
         },
         {
           "name": "Emit",
-          "line": 31
+          "line": 35
         },
         {
           "name": "Emit_Value",
-          "line": 36
+          "line": 40
         }
       ],
       "with_dependencies": [
@@ -7099,7 +7099,7 @@
     },
     {
       "path": "configcore/src/config_lifecycle.adb",
-      "sha256": "86d323d36612082bbf064a456238338fd98899ba60089deedf77471d1c399f81",
+      "sha256": "7505f70cbc6b3736232bd0ff44e71d964692b804b51d9aba61aa8f02bbed6701",
       "repository": "configcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -7147,7 +7147,7 @@
     },
     {
       "path": "configcore/src/config_merge.adb",
-      "sha256": "3815629dad8a04f5df979520c4f1c5db23f0356ad3702d121dfee78c1e099b00",
+      "sha256": "38db56d1164f6a31ee12d35d178b4a436d759f3ab64760fbee2b37ef38aa28c4",
       "repository": "configcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -7166,7 +7166,7 @@
         },
         {
           "name": "Lookup",
-          "line": 16
+          "line": 17
         }
       ],
       "with_dependencies": [
@@ -7360,7 +7360,7 @@
     },
     {
       "path": "configcore/src/config_nvidia.adb",
-      "sha256": "552dd1a447fccc892e54843239c2a30ca2f5f8786d40f4ccfa2bef2c5f3362d2",
+      "sha256": "e77eb7ff6e24e2cbd119553efd6b62bef57c0581becfb8f8761dc7bb65699ab2",
       "repository": "configcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -7405,7 +7405,7 @@
     },
     {
       "path": "configcore/src/config_schema_codec.adb",
-      "sha256": "cbd6aceee2dea434899bf75993fd00d27fa9f8e200c583380ab4a1079b243820",
+      "sha256": "97c485932c953764c24eb2aa9ca2312582e10d8c6fbb8bf6c0b24bc081e224c6",
       "repository": "configcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -7428,19 +7428,19 @@
         },
         {
           "name": "Lookup",
-          "line": 19
+          "line": 20
         },
         {
           "name": "Number",
-          "line": 21
+          "line": 22
         },
         {
           "name": "Flag",
-          "line": 23
+          "line": 25
         },
         {
           "name": "Pred",
-          "line": 25
+          "line": 27
         }
       ],
       "with_dependencies": [
@@ -7475,7 +7475,7 @@
     },
     {
       "path": "configcore/src/config_semantics.adb",
-      "sha256": "8531a06605aa57fc94f3413cc004233d5a7cc6740e901df73da7c1728f62f6a5",
+      "sha256": "38b5c13907e38373100fc286699612619c5fea19b35c6ebe3ed8cd2a0200a8db",
       "repository": "configcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -7595,7 +7595,7 @@
     },
     {
       "path": "configcore/src/config_values.ads",
-      "sha256": "5c7c5ce7fe3584f12031d3eb6365058a5da999c43862f1b3f2f10a89c999bd40",
+      "sha256": "78a27ffc7d7d75e5d15b38f4c1fca2f6b9b8b46ce0a8a4deba4d226825f5c20a",
       "repository": "configcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -7869,7 +7869,7 @@
     },
     {
       "path": "controlcore/runtime/ctl_config.adb",
-      "sha256": "094fcc29d6c234c134ba32db1b0a2744ac711fc571bb9857298f8a6f55854ed9",
+      "sha256": "139fc2d3ff41d9305c98c8d9cbb210e40a2c83e2f84ca2a2e0919c28c6c9eaf5",
       "repository": "controlcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -7880,31 +7880,31 @@
         },
         {
           "name": "Encode",
-          "line": 6
+          "line": 7
         },
         {
           "name": "Decode",
-          "line": 24
+          "line": 25
         },
         {
           "name": "Encode",
-          "line": 59
+          "line": 60
         },
         {
           "name": "Decode",
-          "line": 82
+          "line": 83
         },
         {
           "name": "Load",
-          "line": 121
+          "line": 122
         },
         {
           "name": "Read_Protected",
-          "line": 125
+          "line": 126
         },
         {
           "name": "Verify_Bundle",
-          "line": 147
+          "line": 148
         }
       ],
       "with_dependencies": [
@@ -8486,7 +8486,7 @@
     },
     {
       "path": "controlcore/src/ctl_profile.ads",
-      "sha256": "e7308048e76ce0d1c47b4331e0f9ce60b8a29370d019e25d8221c165ea2ce026",
+      "sha256": "c59a2b1a8d467f3697fa5af4503b15c3e4644619b121b6556e83fb14e4419b69",
       "repository": "controlcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -9066,7 +9066,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_file_engine.adb",
-      "sha256": "23263dbcb3de543282ff251eff77233718a0581722260d8dd8eecca7c533bf0e",
+      "sha256": "7d856dbc62036d4994ad949320f20d91b7b9104b563bd0e33f6264bc5f33e42b",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9132,64 +9132,72 @@
           "line": 224
         },
         {
-          "name": "Resume",
+          "name": "Load_Plan",
           "line": 227
         },
         {
+          "name": "Free_Buffer",
+          "line": 229
+        },
+        {
+          "name": "Resume",
+          "line": 241
+        },
+        {
           "name": "Resume_Recorded",
-          "line": 248
+          "line": 260
         },
         {
           "name": "Loaded_Plan",
-          "line": 274
+          "line": 285
         },
         {
           "name": "Inspect",
-          "line": 275
+          "line": 286
         },
         {
           "name": "Safe_Link",
-          "line": 290
+          "line": 301
         },
         {
           "name": "Materialize",
-          "line": 308
+          "line": 319
         },
         {
           "name": "Apply",
-          "line": 381
+          "line": 392
         },
         {
           "name": "Commit",
-          "line": 409
+          "line": 420
         },
         {
           "name": "Restore",
-          "line": 437
+          "line": 448
         },
         {
           "name": "Reconcile_Terminal",
-          "line": 470
+          "line": 481
         },
         {
           "name": "Repair_Torn_Journal",
-          "line": 498
+          "line": 509
         },
         {
           "name": "Generation",
-          "line": 518
+          "line": 529
         },
         {
           "name": "Accepted_Plan",
-          "line": 519
+          "line": 530
         },
         {
           "name": "Has_Active_Change",
-          "line": 520
+          "line": 531
         },
         {
           "name": "Close",
-          "line": 521
+          "line": 532
         }
       ],
       "with_dependencies": [
@@ -9592,33 +9600,42 @@
     },
     {
       "path": "pkgcore/runtime/pkg_recovery_audit.adb",
-      "sha256": "c29c12d0878acec9234c6cf4545bd011a3f1615158b6e2af05629bd50394cf98",
+      "sha256": "74a38fb224c424d8f29c111fc89cc72178a72f0189be072d9257b84e6397ae29",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Recovery_Audit",
-          "line": 4
+          "line": 5
         },
         {
           "name": "Inspect",
-          "line": 8
+          "line": 9
+        },
+        {
+          "name": "Free",
+          "line": 17
+        },
+        {
+          "name": "Free",
+          "line": 18
         },
         {
           "name": "Close_All",
-          "line": 24
+          "line": 29
         },
         {
           "name": "Fail",
-          "line": 26
+          "line": 31
         },
         {
           "name": "Read_Present",
-          "line": 28
+          "line": 33
         }
       ],
       "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
         "MC_Atomic",
         "MC_FS",
         "MC_Hex",
@@ -9725,25 +9742,26 @@
     },
     {
       "path": "pkgcore/runtime/pkg_rpm_auth.adb",
-      "sha256": "14fb392a00759b7d64c98d55487f77f86ec394c08b830d79c6ec3b6b8ada1a79",
+      "sha256": "e8ba9d8cc72ecf30bc431ae305d2fe1b5c8e317db77fcf9f396e8ded1f089fa6",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_RPM_Auth",
-          "line": 4
-        },
-        {
-          "name": "Verify",
           "line": 5
         },
         {
+          "name": "Verify",
+          "line": 6
+        },
+        {
           "name": "Add",
-          "line": 10
+          "line": 11
         }
       ],
       "with_dependencies": [
+        "Interfaces.C",
         "MC_Command",
         "MC_FS",
         "MC_Text",
@@ -9942,7 +9960,7 @@
     },
     {
       "path": "pkgcore/src/pkg_acceptance.adb",
-      "sha256": "9bb0b307008761ad55c1ca00d929e54efa872ca031bc0a5843cb2175af702697",
+      "sha256": "f2ea02b4dc444c08d47442ee263eb7caf1ac3bdad9fcbac566d81e45391e1f62",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -9965,7 +9983,7 @@
     },
     {
       "path": "pkgcore/src/pkg_acceptance.ads",
-      "sha256": "4e547d5ae345c9143e2c9fe0feeab9b0ed3b2be7c9281363a8d45cd1471042bf",
+      "sha256": "83607a237e612b7546a10d39872ab58debc7c493218c504d1aa8e70cd8115b2f",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -9990,7 +10008,7 @@
     },
     {
       "path": "pkgcore/src/pkg_activation.adb",
-      "sha256": "c5ecef60f1c0f2f378cc554d62a6ceec76e8ed0d28f26f230107d69acf3a3fca",
+      "sha256": "db9961b08d677c6dbd1be6e78653d0ac64404a6c95e0887c260deac8e68f08b8",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10001,7 +10019,7 @@
         },
         {
           "name": "Evaluate",
-          "line": 3
+          "line": 4
         }
       ],
       "with_dependencies": [],
@@ -10071,7 +10089,7 @@
     },
     {
       "path": "pkgcore/src/pkg_advisory.adb",
-      "sha256": "8f52748bf8c354f5240fbe579b2504517f648c766ac579fe3f4883b8f7535f7b",
+      "sha256": "3fd7d808d605722cdcbc26f033f9814172dad5496c95dfaa928d5c02f6aa846a",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10094,7 +10112,7 @@
     },
     {
       "path": "pkgcore/src/pkg_advisory.ads",
-      "sha256": "8ed0b5e8c1d70234513a102e6de909e3ba3e67548cdcc0fa28160c9374c8b553",
+      "sha256": "8d3fa93ca07888658fc0f405fd9e5a3390acd6e4e055455245d486a69e7865d2",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10119,7 +10137,7 @@
     },
     {
       "path": "pkgcore/src/pkg_artifact_grant.adb",
-      "sha256": "acee9b1b3b3f73fd98767ee67fb287ec5af299d31fe45b868a36ab0e3eac8432",
+      "sha256": "2a916813fdcc01e869f2cfe6d901cad095cd107ddd72a3cbe445fb1b9649dfb5",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10170,7 +10188,7 @@
     },
     {
       "path": "pkgcore/src/pkg_change_set.adb",
-      "sha256": "8a7859c69399100679eb7c5e131828c4ca28242936e78d5e07dd6ea20cc61caf",
+      "sha256": "fa9c861e1056ab3cae1ac983230df85882f719dd294a70b1bff914cae5eb4fbd",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10193,7 +10211,7 @@
     },
     {
       "path": "pkgcore/src/pkg_change_set.ads",
-      "sha256": "7a259adbb816559506721a37c681a632a2f965001744471430b06a09b5032c59",
+      "sha256": "65e995fd352d7f7226dd31e8825a07f70e80ffbe80c52c7901833f3a355abb17",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10270,7 +10288,7 @@
     },
     {
       "path": "pkgcore/src/pkg_deb_versions.adb",
-      "sha256": "ba6ba66d6499ec971b547128ecc2b7361e4772a5612c40e9ee7fc5e5d1dc6500",
+      "sha256": "a427ee14e9a37ab17023bbab243db9ecc14132c6b484a2a56f4d6c691bc26bdc",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10293,19 +10311,19 @@
         },
         {
           "name": "Valid",
-          "line": 55
+          "line": 57
         },
         {
           "name": "Weight",
-          "line": 60
+          "line": 66
         },
         {
           "name": "Part_Order",
-          "line": 68
+          "line": 74
         },
         {
           "name": "Compare",
-          "line": 96
+          "line": 105
         }
       ],
       "with_dependencies": [],
@@ -10336,7 +10354,7 @@
     },
     {
       "path": "pkgcore/src/pkg_dependency.adb",
-      "sha256": "6e58a9a52419dc1e2eb7f2f5e9382575e3ab0547c4e0fcb838e874968d5cf5e8",
+      "sha256": "bd091a5b11b87e516db9a15d75a7a9e59e15045d880e2aef261884dd72c0439e",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10350,36 +10368,36 @@
           "line": 4
         },
         {
-          "name": "Word_At",
+          "name": "Read_Word",
           "line": 7
         },
         {
           "name": "Spaces",
-          "line": 20
-        },
-        {
-          "name": "Add",
           "line": 21
         },
         {
-          "name": "Operand",
-          "line": 26
+          "name": "Add",
+          "line": 22
         },
         {
           "name": "Operand",
-          "line": 27
+          "line": 28
+        },
+        {
+          "name": "Operand",
+          "line": 29
         },
         {
           "name": "Well_Formed",
-          "line": 90
+          "line": 99
         },
         {
           "name": "Evaluate",
-          "line": 105
+          "line": 114
         },
         {
           "name": "Boolean_Value",
-          "line": 114
+          "line": 123
         }
       ],
       "with_dependencies": [
@@ -10470,7 +10488,7 @@
     },
     {
       "path": "pkgcore/src/pkg_exposure_policy.adb",
-      "sha256": "24611ce9d45be802d8ba4154274e13e9fb9238f53a63fedd756a1ce6368c2ff1",
+      "sha256": "0b1ce0dae15671c581a3743c39af5925c98b78d888515fede886026c5a54d9a4",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10511,7 +10529,7 @@
     },
     {
       "path": "pkgcore/src/pkg_file_plan.adb",
-      "sha256": "ad2cf8fe7a6907c24ff44d26ba6a4a0a0770741179025fae5253952ee7c8f67c",
+      "sha256": "62e8c4120c23f9d8bc9fdcc4b0c99fdfd6919d934a59c261c575da33accd0f11",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10522,39 +10540,43 @@
         },
         {
           "name": "Valid",
-          "line": 6
+          "line": 7
         },
         {
           "name": "Equal",
-          "line": 19
-        },
-        {
-          "name": "Allowed_Path",
           "line": 20
         },
         {
+          "name": "Allowed_Path",
+          "line": 21
+        },
+        {
           "name": "Ancestor",
-          "line": 55
+          "line": 56
         },
         {
           "name": "Layout_Valid",
-          "line": 58
+          "line": 59
         },
         {
           "name": "Encode",
-          "line": 86
+          "line": 87
         },
         {
           "name": "Decode_Shape",
-          "line": 95
+          "line": 96
         },
         {
           "name": "Encode",
-          "line": 109
+          "line": 110
+        },
+        {
+          "name": "Clear",
+          "line": 131
         },
         {
           "name": "Decode",
-          "line": 130
+          "line": 138
         }
       ],
       "with_dependencies": [
@@ -10565,7 +10587,7 @@
     },
     {
       "path": "pkgcore/src/pkg_file_plan.ads",
-      "sha256": "8d9894a4785b21b9d7090c401e6766bf1db42d2e234947f77352a4221382b427",
+      "sha256": "12bccaf701b006cf921fb06e246f95d6c2805393b6d2f095f0365d1bcfa5a926",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10575,36 +10597,40 @@
           "line": 4
         },
         {
-          "name": "Valid",
-          "line": 33
+          "name": "Clear",
+          "line": 30
         },
         {
-          "name": "Allowed_Path",
+          "name": "Valid",
           "line": 34
         },
         {
-          "name": "Layout_Valid",
+          "name": "Allowed_Path",
           "line": 35
         },
         {
-          "name": "Equal",
+          "name": "Layout_Valid",
           "line": 36
         },
         {
-          "name": "Encode",
+          "name": "Equal",
           "line": 37
         },
         {
-          "name": "Decode_Shape",
+          "name": "Encode",
           "line": 38
         },
         {
-          "name": "Encode",
+          "name": "Decode_Shape",
           "line": 39
         },
         {
-          "name": "Decode",
+          "name": "Encode",
           "line": 40
+        },
+        {
+          "name": "Decode",
+          "line": 41
         }
       ],
       "with_dependencies": [
@@ -10683,7 +10709,7 @@
     },
     {
       "path": "pkgcore/src/pkg_holds.adb",
-      "sha256": "294a1036212c9351827badaeff94120059aaa7e0d588c55886b1a9727f10e0ae",
+      "sha256": "7596a659084eaa82de70d4f21cd10872efae4783ce3b7800a300dfa25f7ec94d",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10706,7 +10732,7 @@
     },
     {
       "path": "pkgcore/src/pkg_holds.ads",
-      "sha256": "4abf4ce8640d709df5d083479d6360f388af4bb38fc69fc38a3273aab5351d3e",
+      "sha256": "185770615aed0a3ef25845d0f29025a07712054478178e8742bfaf0460a5f845",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10780,7 +10806,7 @@
     },
     {
       "path": "pkgcore/src/pkg_inventory.adb",
-      "sha256": "884360c83f299cb5d484207072818c821b81a767d03b71f179c1f292d8f50363",
+      "sha256": "076f0cbc8a1f7fa428c55f47d5e7a1a17df8bb65931b7844ae571e98e6ed32c6",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10925,7 +10951,7 @@
     },
     {
       "path": "pkgcore/src/pkg_maintenance_bundle.adb",
-      "sha256": "ebe97ec3d142ad9c7fa3c2fc4376ecd8578e0882e722cedde9902e43cb0aedcc",
+      "sha256": "9ed9167d8c633702c9a9c57d6685595d68225f2e72b14e9161f1479dc1f0ece1",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10948,7 +10974,7 @@
     },
     {
       "path": "pkgcore/src/pkg_maintenance_bundle.ads",
-      "sha256": "4604b9252948866d12ace0a4e5f0da7053afc40fa3b6e67fd03ea798ec6e4bc6",
+      "sha256": "d18dc60221d4a9de677a77c099526fa9138bfe5f5524d9e814645c23401457f5",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -10973,7 +10999,7 @@
     },
     {
       "path": "pkgcore/src/pkg_payload_map.adb",
-      "sha256": "de6b1dc220261f7bc1f26c9cf2a5fa68fc955fa9ac81d90476158ceeed03ca31",
+      "sha256": "6888030e8150f2917faa186e408df701372021ca10151295e937408c14440e6a",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11029,7 +11055,7 @@
     },
     {
       "path": "pkgcore/src/pkg_provenance.adb",
-      "sha256": "54fc59bb12fc16c2fe332b92a674346c088dc6302e9ab806135a9f854edbb7cc",
+      "sha256": "d41bd66da01b13ecca0ca007d6125849ef851e6afbae1fb34f5e58623fc7ce40",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11052,7 +11078,7 @@
     },
     {
       "path": "pkgcore/src/pkg_provenance.ads",
-      "sha256": "f58dbac0b34841bd8134a52d06ed576b1edeb80a1f1013c980e5ce7635ee4b85",
+      "sha256": "11e7f96f88979bfb0a4225db4aa681573a0aa57fdfb7bbb12b7a35f276a4d931",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11217,7 +11243,7 @@
     },
     {
       "path": "pkgcore/src/pkg_retention_batch.adb",
-      "sha256": "81fa3d1798d9765388e84509f4da3d35045e3fc043b9773c5ddfdf6bf23c10d1",
+      "sha256": "3692724f57133e4205d604b2acd85975f929d82ee4a5f440beae55f49a2050c9",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11236,7 +11262,7 @@
     },
     {
       "path": "pkgcore/src/pkg_retention_batch.ads",
-      "sha256": "85d6b33b163ecaddd0577e1364bc7650deb303b2974fef7830bcb355bf5daf07",
+      "sha256": "944f24fea10fcd1174f21f9b8f7cf38257a1a6d5f9b74c093e5994789e3570c9",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11247,7 +11273,7 @@
         },
         {
           "name": "Plan",
-          "line": 17
+          "line": 18
         }
       ],
       "with_dependencies": [
@@ -11298,7 +11324,7 @@
     },
     {
       "path": "pkgcore/src/pkg_root_state.adb",
-      "sha256": "8832f2637123017e48206dfdb0086ca216029313308c5d180c661691dbb21abd",
+      "sha256": "8ade924a3c1cd6a571a107890f4490acd6755907f42f83d5438e3f949fbdabf3",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11309,11 +11335,11 @@
         },
         {
           "name": "Encode",
-          "line": 6
+          "line": 7
         },
         {
           "name": "Decode",
-          "line": 14
+          "line": 15
         }
       ],
       "with_dependencies": [
@@ -11349,7 +11375,7 @@
     },
     {
       "path": "pkgcore/src/pkg_rpm.adb",
-      "sha256": "b9a80ac068a80639abb62e32609d674bbfc4ffe0a90ec4d05089a4bddaa5e0b8",
+      "sha256": "aaf1de2490489b198796ab781a47ab10f657a5d71a9ec9fc7ae113b4d3aed1a5",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11411,7 +11437,7 @@
     },
     {
       "path": "pkgcore/src/pkg_rpm_fields.adb",
-      "sha256": "693000b6d13601a7366ebb4f8ae553d81d555831d958d5c524775d14c3ccec19",
+      "sha256": "998a8f3641ee54ac771152b78f3f904ff414bfaca40c33b97e2ebf8bd12b6e1d",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11422,15 +11448,15 @@
         },
         {
           "name": "Count",
-          "line": 4
+          "line": 5
         },
         {
           "name": "Text",
-          "line": 7
+          "line": 8
         },
         {
           "name": "Number",
-          "line": 28
+          "line": 29
         }
       ],
       "with_dependencies": [
@@ -11471,7 +11497,7 @@
     },
     {
       "path": "pkgcore/src/pkg_rpm_resolution.adb",
-      "sha256": "5d9b3938612c737f1245370896fc016a45b5a7b87190862aa3af75face9bc581",
+      "sha256": "9144d56252e57e227157ec2091b474170311feadb60643f0e2dc52b675df5707",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11494,23 +11520,23 @@
         },
         {
           "name": "Check_Native",
-          "line": 93
+          "line": 94
         },
         {
           "name": "Lower",
-          "line": 119
+          "line": 120
         },
         {
           "name": "Join",
-          "line": 126
+          "line": 127
         },
         {
           "name": "Check_Rule",
-          "line": 171
+          "line": 172
         },
         {
           "name": "Add_Rule",
-          "line": 192
+          "line": 193
         }
       ],
       "with_dependencies": [
@@ -11559,7 +11585,7 @@
     },
     {
       "path": "pkgcore/src/pkg_self_repair.adb",
-      "sha256": "6159decc16f9d0650ede1cf2b1da3e0d98efc17ca3552b17be8d573b69539df0",
+      "sha256": "e88b9dea2e4e5033ffec7ca4cc50db1bff639ddbeeb9db5f4c05ca633c973bdc",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11698,7 +11724,7 @@
     },
     {
       "path": "pkgcore/src/pkg_versions.adb",
-      "sha256": "d4503757f2ecb1194bee455bd90063190b38fd784de08d36c405a1766f5d2e5a",
+      "sha256": "c20f775903662b0cfa2c9953470ee53f7d8f0eccbf97c02a770ebd0bc75bbd95",
       "repository": "pkgcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -12107,7 +12133,7 @@
     },
     {
       "path": "resolvercore/src/resolver_model.adb",
-      "sha256": "41b5ec30dd1450a12351f98ea60b8525eaeeac6ce5bacc7f967e23969d7f96f1",
+      "sha256": "a78be4a93445a11a04e0ea11fe56bace8e32186688f6cf6d3bb444f8c290886e",
       "repository": "resolvercore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -12203,7 +12229,7 @@
     },
     {
       "path": "resolvercore/src/resolver_proof.adb",
-      "sha256": "cc65674d9f539cf8fb0d83747fd618ce236935a21966563f6028ba8c5b8e8892",
+      "sha256": "39aa35a53b4d2944ac1f9c83f19ba03d26bdec358703ff0670fdc9384f741486",
       "repository": "resolvercore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -12234,27 +12260,27 @@
         },
         {
           "name": "RUP",
-          "line": 61
+          "line": 64
         },
         {
           "name": "Add",
-          "line": 102
+          "line": 105
         },
         {
           "name": "Insert",
-          "line": 107
+          "line": 111
         },
         {
           "name": "Delete",
-          "line": 151
+          "line": 155
         },
         {
           "name": "Refuted",
-          "line": 167
+          "line": 171
         },
         {
           "name": "Last_ID",
-          "line": 168
+          "line": 172
         }
       ],
       "with_dependencies": [],
@@ -12300,7 +12326,7 @@
     },
     {
       "path": "resolvercore/src/resolver_verify.adb",
-      "sha256": "59ce62ad8fa111c246649092a5e953461a71c44b4f4962840230ef5f75e04afc",
+      "sha256": "012b09c97adadf911e76a47ecff717bba39e903a753b9defb1ab87c5e2370811",
       "repository": "resolvercore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -12357,7 +12383,7 @@
     },
     {
       "path": "resolvercore/src/resolver_wire.adb",
-      "sha256": "218dd00605791b76c6aad53471de6851384d0751e99d8f4668f2ba66d3bf619b",
+      "sha256": "b3c24eba2c194cf21d56ec472a8e59a863f8148087f9cba3e0c3f60621fce6ae",
       "repository": "resolvercore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -12396,23 +12422,23 @@
         },
         {
           "name": "C",
-          "line": 53
+          "line": 54
         },
         {
           "name": "D",
-          "line": 60
+          "line": 62
         },
         {
           "name": "Byte_Value",
-          "line": 66
+          "line": 68
         },
         {
           "name": "Encode_Proposal",
-          "line": 106
+          "line": 110
         },
         {
           "name": "Decode_Proposal",
-          "line": 125
+          "line": 129
         }
       ],
       "with_dependencies": [
@@ -12956,7 +12982,7 @@
     },
     {
       "path": "statecore/runtime/state_etcd.adb",
-      "sha256": "6770435c7db6a44ba9ab483b2ddd3d3c6e855b9f6f30b478252ea9a1ddf337a1",
+      "sha256": "54dd14add692b2a2c3b58ae6c725b8872c7481dd02206cd859b68382a2937e71",
       "repository": "statecore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12967,23 +12993,23 @@
         },
         {
           "name": "Build",
-          "line": 5
-        },
-        {
-          "name": "Add",
           "line": 6
         },
         {
-          "name": "Protect",
+          "name": "Add",
           "line": 7
         },
         {
+          "name": "Protect",
+          "line": 8
+        },
+        {
           "name": "Read",
-          "line": 33
+          "line": 34
         },
         {
           "name": "Compare_And_Swap",
-          "line": 47
+          "line": 48
         }
       ],
       "with_dependencies": [
@@ -13292,7 +13318,7 @@
     },
     {
       "path": "statecore/runtime/state_host_probe.adb",
-      "sha256": "f1445c924ef05a5005baa943e01222f5c766f31ac06e8fd75012abecdb238184",
+      "sha256": "f50e9ad28b4b1b45c0be0fdc781e084abaf1dc586daafa06ce7df7c3361b1e72",
       "repository": "statecore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13303,23 +13329,23 @@
         },
         {
           "name": "Text",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Has_Token",
-          "line": 11
+          "line": 12
         },
         {
           "name": "Collect",
-          "line": 22
+          "line": 23
         },
         {
           "name": "Equal",
-          "line": 24
+          "line": 25
         },
         {
           "name": "EFI_Bit",
-          "line": 41
+          "line": 42
         }
       ],
       "with_dependencies": [
@@ -13449,7 +13475,7 @@
     },
     {
       "path": "statecore/runtime/state_nm_checkpoint.adb",
-      "sha256": "1e7ea9e8d979b6b35997deab03fb65d2afe584fa6263448e05a214cd486554ba",
+      "sha256": "25fe3fab09e5b141f519b35103d468f900bc9495026a18780499ff3d7a524b58",
       "repository": "statecore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13460,55 +13486,55 @@
         },
         {
           "name": "Numeric_Path",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Valid_Manager",
-          "line": 12
+          "line": 13
         },
         {
           "name": "Valid_Device",
-          "line": 23
+          "line": 24
         },
         {
           "name": "Valid_Checkpoint",
-          "line": 25
+          "line": 26
         },
         {
           "name": "Prefix",
-          "line": 27
-        },
-        {
-          "name": "Add",
           "line": 28
         },
         {
+          "name": "Add",
+          "line": 29
+        },
+        {
           "name": "Create",
-          "line": 37
+          "line": 38
         },
         {
           "name": "Add",
-          "line": 42
+          "line": 43
         },
         {
           "name": "Call_One",
-          "line": 75
+          "line": 76
         },
         {
           "name": "Rollback",
-          "line": 86
+          "line": 87
         },
         {
           "name": "Destroy",
-          "line": 89
+          "line": 90
         },
         {
           "name": "Activate_Staged_Wired",
-          "line": 92
+          "line": 93
         },
         {
           "name": "Add",
-          "line": 96
+          "line": 97
         }
       ],
       "with_dependencies": [
@@ -14065,7 +14091,7 @@
     },
     {
       "path": "statecore/src/state_boot_acceptance.ads",
-      "sha256": "24be61c15f0452ff8818f164ad1d11a775912096a7ca066f4a395c7252112d67",
+      "sha256": "c043b19115abd20762be4945f84cb983e53eaf3e968645b3a6e229945c3cd782",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -14157,7 +14183,7 @@
     },
     {
       "path": "statecore/src/state_budget.adb",
-      "sha256": "957e01bd7b5ca79524e83ac86c86829d86ff9fb4617d41dee58e3ce6d1eac35d",
+      "sha256": "b91cbb10d0030e9f17584b50252b0f7f8567c18ca25a462c91aae9f0e177f91e",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -14168,23 +14194,23 @@
         },
         {
           "name": "Valid",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Encode",
-          "line": 23
+          "line": 24
         },
         {
           "name": "Decode",
-          "line": 38
+          "line": 39
         },
         {
           "name": "Acquire",
-          "line": 56
+          "line": 57
         },
         {
           "name": "Release_Reservation",
-          "line": 95
+          "line": 96
         }
       ],
       "with_dependencies": [
@@ -14574,7 +14600,7 @@
     },
     {
       "path": "statecore/src/state_dependency_graph.adb",
-      "sha256": "2131b4fb4e099557c72e2055a59ad6abef7e510c765815fe3ee7d51d092e38d1",
+      "sha256": "149eab8d016df9e8b527a17648130ad8f27d8c60635f2b99cdd4d7b38e4d50b5",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -14614,7 +14640,7 @@
     },
     {
       "path": "statecore/src/state_disaster.adb",
-      "sha256": "46eff540e5272a6b8386b696c84298bf82cfd0a305c05f25f64a656ecdaccfd7",
+      "sha256": "7e492fe4e7b89c2df97b419819b7d23cc2ec6401a22d1711d85f142bcf33f725",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -14641,15 +14667,15 @@
         },
         {
           "name": "Observe",
-          "line": 57
+          "line": 59
         },
         {
           "name": "Encode",
-          "line": 133
+          "line": 135
         },
         {
           "name": "Decode",
-          "line": 148
+          "line": 150
         }
       ],
       "with_dependencies": [
@@ -14726,7 +14752,7 @@
     },
     {
       "path": "statecore/src/state_etcd_wire.adb",
-      "sha256": "c145b740e9e0bd55f34e1fdab11d1d2e96a24ec49c6eaf7667add283b5a6e9c9",
+      "sha256": "6973fd364c7bd786408e4faef951ea738cdc06809ba45a80f567d314842fc348",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -14857,7 +14883,7 @@
     },
     {
       "path": "statecore/src/state_fault_correlation.adb",
-      "sha256": "829da4fb75eacc37076fb81ab6e573f415f8339a0e3f22645caafc0d202e9a50",
+      "sha256": "6b116d1c912a7778ecc62782f29a780956223c7b560ad19d72bffcb509997ddb",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -14946,7 +14972,7 @@
     },
     {
       "path": "statecore/src/state_healing.adb",
-      "sha256": "a95c18764939382b89e9a8e0acb2a76defcc778ee15be00aa1ef7af955b193b1",
+      "sha256": "dc611decc25e5612cb2ebbd637f7e4f4a21a64d7e8a5dfc22230650535737ffe",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -15597,7 +15623,7 @@
     },
     {
       "path": "statecore/src/state_operation.adb",
-      "sha256": "b05e7aa51c5480585453b14c388aa57d78c895c985bfed2cb15ebf0d80ab8fe8",
+      "sha256": "d69f3538335568b5331601441110f3f218510a165229b6fc6ef643860ab32a20",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -15657,7 +15683,7 @@
     },
     {
       "path": "statecore/src/state_platform_health.adb",
-      "sha256": "725ba4a798fe3f98b279c04849da9f255da7e55544006483a03c014f260221c4",
+      "sha256": "7016d166413250e35a8fa900180280e48d02e566b0d74e0e9640f8d7769eee63",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -15668,7 +15694,7 @@
         },
         {
           "name": "Decide",
-          "line": 3
+          "line": 9
         }
       ],
       "with_dependencies": [],
@@ -15742,7 +15768,7 @@
     },
     {
       "path": "statecore/src/state_ras.adb",
-      "sha256": "ba288f69586b629321aa504715d3c25229ab5cb039a312332ae59b152ab90e4f",
+      "sha256": "f7daa02b31d94fe56ca467aa3f83b012435aebb96300d538dc1d764d41cc2608",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -15753,15 +15779,15 @@
         },
         {
           "name": "Valid",
-          "line": 3
+          "line": 4
         },
         {
           "name": "Valid",
-          "line": 6
+          "line": 7
         },
         {
           "name": "Observe",
-          "line": 9
+          "line": 10
         }
       ],
       "with_dependencies": [],
@@ -15973,7 +15999,7 @@
     },
     {
       "path": "statecore/src/state_resilience_controller.adb",
-      "sha256": "a6c027690df711ca9330076d79452dc0283644f45c5ed7108aa0a75da74c9aa9",
+      "sha256": "1f3bcc70dee280211e257fd76b318b472bd528140376d09474a31b8e44c6e454",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -15984,7 +16010,7 @@
         },
         {
           "name": "Decide",
-          "line": 3
+          "line": 4
         }
       ],
       "with_dependencies": [],
@@ -16450,7 +16476,7 @@
     },
     {
       "path": "statecore/src/state_time_integrity.adb",
-      "sha256": "90038f0629319fc63cd516d2a0cd41f0ad1ea091c36cff22f7ce73dbf70bdd84",
+      "sha256": "25d7aec09e25743552a060ff09c91f0eaa1a9de3961eb66fd452244533e44dc2",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -16477,7 +16503,7 @@
     },
     {
       "path": "statecore/src/state_time_integrity.ads",
-      "sha256": "6bd4a94d1df33454719b2ec811a1e3d7db0fd2d42ee12768c5d93dfbf2b2339a",
+      "sha256": "673a0e324efebbe027f9b737d24edbbfc95b38ced635c0430f0dabd1c2dd1409",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -16570,7 +16596,7 @@
     },
     {
       "path": "statecore/src/state_unit.adb",
-      "sha256": "89bd1432e6b3f29bfe925e4c171a18108b7704485909aea8c4bc2e14dc820184",
+      "sha256": "679386026d143e2fd1093c50597f2c655825a67677f4ac85f89cac3a1ecfeb62",
       "repository": "statecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -16581,15 +16607,15 @@
         },
         {
           "name": "Valid_Name",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Parse",
-          "line": 10
+          "line": 11
         },
         {
           "name": "Meets_Postcondition",
-          "line": 65
+          "line": 70
         }
       ],
       "with_dependencies": [

@@ -4,6 +4,214 @@
   "independent_review": "pending",
   "amendments": [
     {
+      "path": "assurance/app/platformctl.adb",
+      "from_sha256": "54f8a8e09dcd4778ddd309d8eff6b0410830d05b6b7ed9a2dbf176518ab1ffb1",
+      "to_sha256": "74585deacbb8ee7a700fffba4b15bfd8f973cdf257ddd7bc669fca7c859040ca",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "assurance/src/mc_generation.adb",
+      "from_sha256": "6dcbb9a71640f77c605d6c4ddd11fd590886872f1d393c52b3a68e5802fdfbc3",
+      "to_sha256": "1b5e98da3f4776df87b557b19b914a032066bd7d1d5cf0ab622b7203d38c6b90",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "assurance/src/mc_generation.ads",
+      "from_sha256": "ec0bc20872c67ae86ed064f5047ece7b81cad772f3e60918fdc4d75d172729a6",
+      "to_sha256": "d5b864b7c48a0a12cda68cee592d41ccf6729f2b2b9c3cc8f2174a8511473c4b",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "assurance/src/mc_maintenance.adb",
+      "from_sha256": "56ff8534859213ac93b57780fcc8f7eb1c297980e9cb9bc6717ce10710b6046e",
+      "to_sha256": "71b09bad37a2c910254d08f3a6d7c70831064a1a1375cb07d626195c6781bb46",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "assurance/src/mc_maintenance.ads",
+      "from_sha256": "efd9440d42b0a997a9b26727aa61baaab00d1ba1b1eabe10fe9ff1e78ee26408",
+      "to_sha256": "5745458be27d6d2242d536843390a2136da60e2d9ead584c77b4618cc1339fc6",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "assurance/tests/run_platform_assurance_tests.adb",
+      "from_sha256": "aa4114d0f302d0e61614316ba52831fabb4e925b1752048293042c540f870359",
+      "to_sha256": "d7c00a888a275de61c755665704cf6f6ecd22b706585ddd13b38c4b2d3d13217",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_acceptance.adb",
+      "from_sha256": "9bb0b307008761ad55c1ca00d929e54efa872ca031bc0a5843cb2175af702697",
+      "to_sha256": "f2ea02b4dc444c08d47442ee263eb7caf1ac3bdad9fcbac566d81e45391e1f62",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_acceptance.ads",
+      "from_sha256": "4e547d5ae345c9143e2c9fe0feeab9b0ed3b2be7c9281363a8d45cd1471042bf",
+      "to_sha256": "83607a237e612b7546a10d39872ab58debc7c493218c504d1aa8e70cd8115b2f",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_activation.adb",
+      "from_sha256": "c5ecef60f1c0f2f378cc554d62a6ceec76e8ed0d28f26f230107d69acf3a3fca",
+      "to_sha256": "db9961b08d677c6dbd1be6e78653d0ac64404a6c95e0887c260deac8e68f08b8",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_advisory.adb",
+      "from_sha256": "8f52748bf8c354f5240fbe579b2504517f648c766ac579fe3f4883b8f7535f7b",
+      "to_sha256": "3fd7d808d605722cdcbc26f033f9814172dad5496c95dfaa928d5c02f6aa846a",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_advisory.ads",
+      "from_sha256": "8ed0b5e8c1d70234513a102e6de909e3ba3e67548cdcc0fa28160c9374c8b553",
+      "to_sha256": "8d3fa93ca07888658fc0f405fd9e5a3390acd6e4e055455245d486a69e7865d2",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_change_set.adb",
+      "from_sha256": "8a7859c69399100679eb7c5e131828c4ca28242936e78d5e07dd6ea20cc61caf",
+      "to_sha256": "fa9c861e1056ab3cae1ac983230df85882f719dd294a70b1bff914cae5eb4fbd",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_change_set.ads",
+      "from_sha256": "7a259adbb816559506721a37c681a632a2f965001744471430b06a09b5032c59",
+      "to_sha256": "65e995fd352d7f7226dd31e8825a07f70e80ffbe80c52c7901833f3a355abb17",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_exposure_policy.adb",
+      "from_sha256": "24611ce9d45be802d8ba4154274e13e9fb9238f53a63fedd756a1ce6368c2ff1",
+      "to_sha256": "0b1ce0dae15671c581a3743c39af5925c98b78d888515fede886026c5a54d9a4",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "実コンパイルと厳格flowで見つかった型・初期化・codec境界を修正し実行試験へ束縛する",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_holds.adb",
+      "from_sha256": "294a1036212c9351827badaeff94120059aaa7e0d588c55886b1a9727f10e0ae",
+      "to_sha256": "7596a659084eaa82de70d4f21cd10872efae4783ce3b7800a300dfa25f7ec94d",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_holds.ads",
+      "from_sha256": "4abf4ce8640d709df5d083479d6360f388af4bb38fc69fc38a3273aab5351d3e",
+      "to_sha256": "185770615aed0a3ef25845d0f29025a07712054478178e8742bfaf0460a5f845",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_maintenance_bundle.adb",
+      "from_sha256": "ebe97ec3d142ad9c7fa3c2fc4376ecd8578e0882e722cedde9902e43cb0aedcc",
+      "to_sha256": "9ed9167d8c633702c9a9c57d6685595d68225f2e72b14e9161f1479dc1f0ece1",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_maintenance_bundle.ads",
+      "from_sha256": "4604b9252948866d12ace0a4e5f0da7053afc40fa3b6e67fd03ea798ec6e4bc6",
+      "to_sha256": "d18dc60221d4a9de677a77c099526fa9138bfe5f5524d9e814645c23401457f5",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_provenance.adb",
+      "from_sha256": "54fc59bb12fc16c2fe332b92a674346c088dc6302e9ab806135a9f854edbb7cc",
+      "to_sha256": "d41bd66da01b13ecca0ca007d6125849ef851e6afbae1fb34f5e58623fc7ce40",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/src/pkg_provenance.ads",
+      "from_sha256": "f58dbac0b34841bd8134a52d06ed576b1edeb80a1f1013c980e5ce7635ee4b85",
+      "to_sha256": "11e7f96f88979bfb0a4225db4aa681573a0aa57fdfb7bbb12b7a35f276a4d931",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "pkgcore/tests/run_enterprise_pkg_tests.adb",
+      "from_sha256": "4b25d46c384138a52a0c8367147f75047860a558d86df5ba6a9e0867e19a48e1",
+      "to_sha256": "34d0faa0ff2253766190c50680ebf3121eb9478a4c419b29b548e9f34057e32f",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_boot_acceptance.ads",
+      "from_sha256": "24be61c15f0452ff8818f164ad1d11a775912096a7ca066f4a395c7252112d67",
+      "to_sha256": "c043b19115abd20762be4945f84cb983e53eaf3e968645b3a6e229945c3cd782",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_fault_correlation.adb",
+      "from_sha256": "829da4fb75eacc37076fb81ab6e573f415f8339a0e3f22645caafc0d202e9a50",
+      "to_sha256": "6b116d1c912a7778ecc62782f29a780956223c7b560ad19d72bffcb509997ddb",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_platform_health.adb",
+      "from_sha256": "725ba4a798fe3f98b279c04849da9f255da7e55544006483a03c014f260221c4",
+      "to_sha256": "7016d166413250e35a8fa900180280e48d02e566b0d74e0e9640f8d7769eee63",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_ras.adb",
+      "from_sha256": "ba288f69586b629321aa504715d3c25229ab5cb039a312332ae59b152ab90e4f",
+      "to_sha256": "f7daa02b31d94fe56ca467aa3f83b012435aebb96300d538dc1d764d41cc2608",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_resilience_controller.adb",
+      "from_sha256": "a6c027690df711ca9330076d79452dc0283644f45c5ed7108aa0a75da74c9aa9",
+      "to_sha256": "1f3bcc70dee280211e257fd76b318b472bd528140376d09474a31b8e44c6e454",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
       "path": "statecore/src/state_storage_integrity.adb",
       "from_sha256": "f4e347501014aacabba6c04b506089763228592ad6cce9a8ee1eb18534f2ef84",
       "to_sha256": "109bcbd9766a69ad54136e9554d15d4177b130e660e474a45da99e459b0edb5e",
@@ -18,6 +226,30 @@
       "adr": "assurance/docs/engineering/adr/ADR-0048.ja.md",
       "scope": "Add an explicit XFS capability/evidence gate alongside the retained generic storage assessment; no native repair execution.",
       "validation": "source-inspected; ada-not-run; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_time_integrity.adb",
+      "from_sha256": "90038f0629319fc63cd516d2a0cd41f0ad1ea091c36cff22f7ce73dbf70bdd84",
+      "to_sha256": "25d7aec09e25743552a060ff09c91f0eaa1a9de3961eb66fd452244533e44dc2",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/src/state_time_integrity.ads",
+      "from_sha256": "6bd4a94d1df33454719b2ec811a1e3d7db0fd2d42ee12768c5d93dfbf2b2339a",
+      "to_sha256": "673a0e324efebbe027f9b737d24edbbfc95b38ced635c0430f0dabd1c2dd1409",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
+    },
+    {
+      "path": "statecore/tests/run_ras_platform_tests.adb",
+      "from_sha256": "0c667de708decea700d6fe0af2cb6f772bd60acc155c01dda211e10dd1f82a6c",
+      "to_sha256": "e3eff55772d2dca7df640262a6b6993d85b463b4e69bcc8f2d07691dcfa8c975",
+      "adr": "assurance/docs/engineering/adr/ADR-0053.ja.md",
+      "scope": "Native compiler/type corrections and execution-test repairs; see ADR-0053 and Git diff from imported source.",
+      "validation": "source-inspected; native-validation-recorded-separately; independent-review-pending"
     }
   ]
 }

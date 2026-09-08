@@ -56,7 +56,11 @@ class LineageAmendmentTests(unittest.TestCase):
         def load(p):return self.data if p.name=='lineage-amendments.json' else original(p)
         with patch.object(audit.eng,'load_json',side_effect=load):return audit.lineage(ROOT)
     def test_exact_source_successors(self):
-        self.assertEqual(self.run_value()['amended_restored_files'],2)
+        history=json.loads((ROOT/'assurance/engineering/lineage-merge.json').read_text())
+        import hashlib
+        changed=sum(hashlib.sha256((ROOT/r['path']).read_bytes()).hexdigest()!=r['sha256'] for r in history['restored'])
+        self.assertGreaterEqual(changed,2)
+        self.assertEqual(self.run_value()['amended_restored_files'],changed)
     def test_missing_amendments_reject_changed_files(self):
         self.data['amendments']=[]
         with self.assertRaises(audit.eng.Invalid):self.run_value()

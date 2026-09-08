@@ -119,7 +119,7 @@ def expand_test_args(test: dict, temp: Path) -> list[str]:
             raise eng.Invalid('unsupported test argument')
         return v
     # Registered temporary arguments are private directories, not arbitrary files.
-    for value in test['arguments']+test.get('prepare_directories',[]):
+    for value in test.get('prepare_directories',[]):
         if value.startswith('$TEMP/'):
             Path(expand(value)).mkdir(mode=0o700,parents=True,exist_ok=True)
     return [expand(v) for v in test['arguments']]
@@ -160,6 +160,7 @@ def main() -> int:
                 invoke(tool+'-version',[tool,'--version'],root,'tool-identification')
         source_ok=invoke('engineering-unittests',[sys.executable,'-B','-m','unittest','discover',
              '-s','assurance/tests/engineering','-p','test_*.py','-v'],root,'source-and-reference')
+        source_ok=invoke('component-ci-generated',[sys.executable,'-B','assurance/ci/sync-component-ci.py'],root,'source') and source_ok
         source_ok=invoke('manager-reference-tests',[sys.executable,'-B','-m','unittest','discover',
              '-s','controlcore/tests/reference','-p','test_*.py','-v'],root,'source-and-reference') and source_ok
         source_ok=invoke('configuration-reference-tests',[sys.executable,'-B','-m','unittest','discover',
@@ -190,7 +191,8 @@ def main() -> int:
                     checks.append({'name':repo+'-ada-build','result':'not-run','layer':'ada-build','reason':'gprbuild unavailable'})
                     continue
                 compiled=invoke(repo+'-compile-all',['make','compile-all'],root/repo,'ada-build')
-                built=invoke(repo+'-tests-build',['make','test-build'],root/repo,'ada-build') if compiled else False
+                linked=invoke(repo+'-application-links',['make','build'],root/repo,'ada-build') if compiled else False
+                built=invoke(repo+'-tests-build',['make','test-build'],root/repo,'ada-build') if linked else False
                 if not built: continue
                 plan=eng.load_json(root/'assurance/engineering/test-plan.json')['ada_tests']
                 for test in plan:

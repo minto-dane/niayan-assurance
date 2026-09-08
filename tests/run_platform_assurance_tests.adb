@@ -5,6 +5,11 @@ with MC_Faults; with MC_Incidents; with MC_Attestation; with MC_Platform_Profile
 with MC_Commissioning; with MC_Breakglass; with MC_Diagnostic_Bundle;
 with MC_System_Baseline; with MC_Generation; with MC_Accounting;
 procedure Run_Platform_Assurance_Tests with SPARK_Mode => Off is
+   use type mc_attestation.Trust;
+   use type mc_faults.Disposition;
+   use type mc_generation.Phase;
+   use type mc_incidents.Phase;
+   use type mc_system_baseline.Assessment;
    F : MC_Faults.Fault;
    I : MC_Incidents.State; X : MC_Incidents.Evidence; S : Outcome;
    AP : MC_Attestation.Policy; AE : MC_Attestation.Evidence;

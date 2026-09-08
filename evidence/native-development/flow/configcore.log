@@ -1,0 +1,282 @@
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: analysis of data and information flow ...
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:32:15
+
+ info: analyzing call to "Nibble" in context
+--> mc_hex.adb:33:15
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:9:56
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:15:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:19:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:24:43
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:27:86
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:31:87
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:34:73
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:38:48
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:41:47
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:42:99
+
+ info: analyzing call to "Commit" in context
+--> mc_commissioning.adb:45:43
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:10:73
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:12:109
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:18:58
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:20:125
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:24:184
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:27:60
+
+ info: analyzing call to "Done" in context
+--> mc_generation.adb:30:61
+ info: analyzing call to "Value" in context
+--> mc_base64.adb:32:22
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:38:10
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:39:25
+
+ info: analyzing call to "Emit" in context
+--> mc_base64.adb:40:25
+ info: analyzing call to "Add" in context
+--> mc_json.adb:66:10
+
+ info: no contextual analysis of "Value_Read" (object renaming)
+--> mc_json.adb:79:07
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:83:16
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:85:31
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:88:13
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:89:25
+
+ info: analyzing call to "String_Node_Read" in context
+--> mc_json.adb:93:19
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:101:19
+
+ info: analyzing call to "Value_Read" in context
+--> mc_json.adb:103:16
+
+ info: no contextual analysis of call to recursive subprogram
+--> mc_json.adb:103:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:104:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:107:33
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:110:13
+
+ info: analyzing call to "Add" in context
+--> mc_json.adb:118:16
+
+ info: analyzing call to "Space" in context
+--> mc_json.adb:128:26
+ info: no contextual analysis of "Emit" (object renaming)
+--> config_document_codec.adb:35:07
+
+ info: no contextual analysis of "Emit_Value" (call returns unconstrained type)
+--> config_document_codec.adb:46:57
+ info: no contextual analysis of "Union_Of" (call returns unconstrained type)
+--> config_merge.adb:11:54
+
+ info: analyzing call to "Lookup" in context
+--> config_merge.adb:31:18
+
+ info: analyzing call to "Lookup" in context
+--> config_merge.adb:32:18
+
+ info: analyzing call to "Lookup" in context
+--> config_merge.adb:33:18
+ info: no contextual analysis of "Line" (nested subprogram)
+--> config_modprobe.adb:10:10
+
+ info: no contextual analysis of "Slice" (unconstrained return type)
+--> config_modprobe.adb:12:10
+
+ info: analyzing call to "Spaces" in context
+--> config_modprobe.adb:16:10
+
+ info: analyzing call to "Spaces" in context
+--> config_modprobe.adb:19:10
+
+ info: no contextual analysis of "Slice" (in potentially unevaluated context)
+--> config_modprobe.adb:21:13
+
+ info: no contextual analysis of "Slice" (in potentially unevaluated context)
+--> config_modprobe.adb:22:86
+
+ info: analyzing call to "Spaces" in context
+--> config_modprobe.adb:24:10
+
+ info: analyzing call to "Spaces" in context
+--> config_modprobe.adb:38:13
+ info: no contextual analysis of "Record_Line" (nested subprogram)
+--> config_schema_codec.adb:13:10
+
+ info: no contextual analysis of "Get" (unconstrained return type)
+--> config_schema_codec.adb:13:10
+
+ info: no contextual analysis of "Lookup" (call returns unconstrained type)
+--> config_schema_codec.adb:21:43
+
+ info: no contextual analysis of "Number" (call returns unconstrained type)
+--> config_schema_codec.adb:24:33
+
+ info: no contextual analysis of "Get" (in potentially unevaluated context)
+--> config_schema_codec.adb:24:108
+
+ info: no contextual analysis of "Flag" (call returns unconstrained type)
+--> config_schema_codec.adb:26:19
+
+ info: no contextual analysis of "Get" (in potentially unevaluated context)
+--> config_schema_codec.adb:26:34
+
+ info: no contextual analysis of "Pred" (call returns unconstrained type)
+--> config_schema_codec.adb:30:44
+
+ info: no contextual analysis of "Get" (in potentially unevaluated context)
+--> config_schema_codec.adb:58:33
+
+ info: no contextual analysis of "Get" (in potentially unevaluated context)
+--> config_schema_codec.adb:58:58
+
+ info: no contextual analysis of "Lookup" (in potentially unevaluated context)
+--> config_schema_codec.adb:64:72
+
+ info: no contextual analysis of "Get" (in potentially unevaluated context)
+--> config_schema_codec.adb:64:79
+
+ info: no contextual analysis of "Get" (in potentially unevaluated context)
+--> config_schema_codec.adb:79:39
+ info: no contextual analysis of "Pred_Valid" (in potentially unevaluated context)
+--> config_semantics.adb:35:65
+
+ info: no contextual analysis of "Pred_Valid" (in potentially unevaluated context)
+--> config_semantics.adb:36:57
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:14:77
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:16:128
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:17:40
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:18:39
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:19:52
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:20:88
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:21:68
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:22:40
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:23:47
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:24:75
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:25:87
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:30:10
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:33:85
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:36:46
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:39:86
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:40:86
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:41:85
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:43:48
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:47:44
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:49:78
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:50:43
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:53:86
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:55:61
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:56:77
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:57:70
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:60:93
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:63:67
+
+ info: analyzing call to "Add" in context
+--> config_nvidia.adb:66:79
+Success: all checks proved (539 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/configcore/build/proof-obj/gnatprove/gnatprove.out

@@ -43,7 +43,7 @@ RPM を入力形式とし、外部ディストリビューションの既存 bin
 
 - RPM admission/provenance/file plan/CAS/WAL/recovery。
 - `Pkg_Holds`: SMP/E HOLDDATA に相当する既知障害・運用 hold。
-- `Pkg_Acceptance`: AIX installp 型 APPLY/VERIFY/ACCEPT/COMMIT/REJECT。
+- `Pkg_Acceptance`: installp 型 APPLY/VERIFY/ACCEPT/COMMIT/REJECT。
 - `Pkg_Incorporation`: Solaris IPS incorporation 型の exact tested composition。
 - `Pkg_Repository_Trust`: repository epoch/snapshot/timestamp の rollback/freeze 防止用 anchor。
 - `Pkg_Exposure_Policy`: exploited/critical fix の最大露出時間を policy 化。
@@ -67,22 +67,20 @@ running state、service semantics、HA、RAS、resource safety、自動復旧を
 - `State_Serviceability`: out-of-band recovery、dump、audit、restore を含む serviceability grade。
 - `State_Platform_Health`: subsystem の失敗を availability より integrity 優先で集約。
 
-## IBM / Solaris から取り込む考え方
+## 管理モデルとして採用する概念
 
-これは API 互換実装ではない。
-
-| 系統 | 取り込む概念 | Mission Core |
-|---|---|---|
-| z/OS SMP/E | RECEIVE/APPLY/ACCEPT、HOLDDATA | holds, package acceptance, generation |
-| z/OS WLM | workload goal と重要度 | `State_WLM` |
-| z/OS SMF | 変更/障害の会計・監査 | `MC_Accounting` |
-| Sysplex | quorum、fencing、rolling maintenance | cluster safety / rollout / authority |
-| AIX installp | APPLY→COMMIT/REJECT | `Pkg_Acceptance` |
-| AIX RAS | hardware fault/serviceability | RAS/FRU/serviceability |
-| Solaris IPS | exact image constraint | incorporation/system baseline |
-| Solaris FMA | fault correlation, diagnosis, repair lifecycle | fault/incident/correlation |
-| Solaris SMF | service contract/recovery | `State_Service` + systemd adapter |
-| ZFS BE | known-good bootable recovery generation | generation/checkpoint/boot acceptance; actual FS adapter external |
+| 概念 | Mission Core |
+|---|---|
+| 適用・検証・受入・確定の分離と保留条件 | holds, package acceptance, generation |
+| workload goal と重要度 | `State_WLM` |
+| 変更・障害の会計と監査 | `MC_Accounting` |
+| quorum、fencing、rolling maintenance | cluster safety / rollout / authority |
+| APPLY→COMMIT/REJECT | `Pkg_Acceptance` |
+| hardware fault と serviceability | RAS/FRU/serviceability |
+| exact image constraint | incorporation/system baseline |
+| fault correlation、diagnosis、repair lifecycle | fault/incident/correlation |
+| service contract と recovery | `State_Service` + systemd adapter |
+| 起動可能な既知正常世代 | generation/checkpoint/boot acceptance; actual FS adapter external |
 
 ## systemd を再実装しない理由
 

@@ -16,4 +16,4 @@ These document external APIs, not successful integration tests for this source.
 - SPARK proof scope and external assumptions.
   https://docs.adacore.com/spark2014-docs/html/ug/en/usage_scenarios.html
 
-No external source code or proprietary IBM implementation was copied. The three source repositories retain MIT licenses. Distribution binary licensing remains that of its respective publisher.
+No external source code or proprietary implementation was copied. The three source repositories retain MIT licenses. Distribution binary licensing remains that of its respective publisher.

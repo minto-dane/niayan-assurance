@@ -1,0 +1,16 @@
+{
+  "scope": "workspace CI and command documentation only, after component acceptance",
+  "changes": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "as_run_sha256": "9d47218392455b80de5c5bd448fa7b8bf1cd0bab960ffe6e1c4f309feca98203",
+      "current_sha256": "12913b1ec7b51dff9864c7fe4da6b9e5138492335bbce1dfa5bcee54471e901e"
+    },
+    {
+      "path": "dev/README.ja.md",
+      "as_run_sha256": "bfba9bef4e83d2da5879c666be1e6d7a591790513a6da8db045ca26cb2f2b6f0",
+      "current_sha256": "693dca87723234a6129f4354e35d7a47cf043e202f3e7c170163233299a042dd"
+    }
+  ],
+  "reason": "Wire the root-only refusal probe, which already passed in the fixed container, into GitHub Actions and document its portable container invocation. Runtime/proof sources, build recipes, toolchain and package inputs are unchanged. GitHub-hosted execution itself has not been performed."
+}

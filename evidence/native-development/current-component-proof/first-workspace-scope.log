@@ -1,0 +1,5 @@
+Running as unit: run-p24433-i24733.scope; invocation ID: 9c827728c6294a2c87922310d904bcef
+limited-exec: {"scope": "run-p24433-i24733.scope", "kernel_limits": {"memory.max": "3221225472", "memory.swap.max": "0", "cpu.max": "100000 100000", "pids.max": "128"}}
+PATH="/home/nia/devbox/niaos/.work/toolchains/gnatprove-x86_64-linux-16.1.0-1/bin/:$PATH" python3 assurance/ci/run-engineering-checks.py --mode proof --timeout 7200
+/home/nia/devbox/niaos/nia-os-consent/assurance/evidence/engineering-97xmkveu/report.json
+make: *** [Makefile:28: proof] Error 1

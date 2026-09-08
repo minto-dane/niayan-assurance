@@ -1,0 +1,49 @@
+{
+  "result": "all-fixed-container-acceptance-stages-pass",
+  "production_qualified": false,
+  "scope": "component native/source tests, private test bus, root refusal, same-toolchain binary reproducibility, and seven independent component native builds; no OS boot or real desktop acceptance",
+  "source_subject": "2d5b48e6fa437795af02df4943ea1b365ddad62185a88a5d394d201a45958c3d",
+  "image": "localhost/niaos-dev:20260908-gpg",
+  "image_id": "0c04329a1343a0f1ae82ab931ffc7a7e5cbfdccbf18948e0576366fbf5bb249a",
+  "native_checks": 103,
+  "canonical_ada_files": 499,
+  "ada_test_mains": 58,
+  "distinct_python_tests": 555,
+  "standard_python_passed": 544,
+  "separate_root_refusal_passed": 1,
+  "separate_private_dbus_passed": 10,
+  "signed_deb_fixture_skipped": false,
+  "identical_debug_elf_binaries": 18,
+  "standalone_repositories": [
+    "assurance",
+    "pkgcore",
+    "statecore",
+    "controlcore",
+    "configcore",
+    "resolvercore",
+    "capsulecore"
+  ],
+  "kernel_limits": {
+    "memory.max": "3221225472",
+    "memory.swap.max": "0",
+    "cpu.max": "100000 100000",
+    "pids.max": "128"
+  },
+  "workspace_inputs": {
+    "Makefile": "f76492743600918779c96c4a4798dfeafb0ac8efc27239353bcdb74f1455e870",
+    ".github/workflows/ci.yml": "9d47218392455b80de5c5bd448fa7b8bf1cd0bab960ffe6e1c4f309feca98203",
+    "dev/Containerfile": "e0de03ac93dfb3bb652ce9661b610fc0a51c90590d73d369c3fba9705118b6db",
+    "dev/PUBLISHING.ja.md": "4fa6f9b53ec39633644d4c5d4036a6a364226d1f1e521e20f0bc8a1a835d239c",
+    "dev/README.ja.md": "bfba9bef4e83d2da5879c666be1e6d7a591790513a6da8db045ca26cb2f2b6f0",
+    "dev/limited-exec.py": "175957bd20a22b0c5b4f1b0a00229c726bb60799cdec4e8999d9a156aa560dd6",
+    "dev/packages.txt": "6308f3ff1e9466a58e624b14e3e08238f29fe5dc51626658e62cc4f3fb1a4645",
+    "dev/reproducible-build.py": "97c7f4515bb5e175f0fe030aa6bcd4b1adbd3cb31f64a7391818b75ddbd75812",
+    "dev/run-limited.sh": "0e364b98c24151260a4e964d73f5d2b0b97b09b092aa77fa9c97192c23ecaff8",
+    "dev/setup-debian.sh": "d2423d2b1186f5b9d3976ebdf04b2cb6243555d19b74d1041d195f3031633844"
+  },
+  "binding_notes": [
+    "Every native stage used a fresh source snapshot with no prior build products. Each standalone component was mounted alone.",
+    "The local orchestrator is archived as execution provenance and contains machine-local paths; portable commands are documented in dev/README.ja.md.",
+    "Podman nested cgroup creation is unavailable here; every container inherited the verified outer user scope, with exact values asserted inside the image."
+  ]
+}

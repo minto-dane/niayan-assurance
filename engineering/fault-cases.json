@@ -1048,6 +1048,28 @@
       "expected": "統合runnerが試験開始前に不足工具を記録して失敗し、Ada実行と形式証明を未実行のまま保持する。",
       "execution": "not-run",
       "reference_tests": "assurance/tests/engineering/test_native_dependencies.py"
+    },
+    {
+      "id": "FAULT-094",
+      "scenario": "能力に対する要求・OS・管理者・利用者の四方針のいずれかが欠ける",
+      "requirements": [
+        "REQ-081"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "全能力の16組合せについて、四つが揃った場合だけ積集合に能力が残り、別能力へ広がらない。",
+      "execution": "not-run",
+      "reference_tests": "capsulecore/tests/run_capsule_tests.adb"
+    },
+    {
+      "id": "FAULT-095",
+      "scenario": "promptが最大長・整数上限の配列添字、または各入力制約を越える値を持つ",
+      "requirements": [
+        "REQ-088"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "有効な最大長は独立したdigest基準値と一致し、無効入力はZeroを返し、fieldの境界を変えるとdigestが変わる。",
+      "execution": "not-run",
+      "reference_tests": "capsulecore/tests/run_capsule_tests.adb"
     }
   ]
 }

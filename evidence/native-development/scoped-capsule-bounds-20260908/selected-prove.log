@@ -1,0 +1,208 @@
+Running as unit: run-p106100-i106400.scope; invocation ID: 9cb2a0f6a0ba4cbf82f0d387329cf381
+limited-exec: {"scope": "run-p106100-i106400.scope", "kernel_limits": {"memory.max": "3221225472", "memory.swap.max": "0", "cpu.max": "100000 100000", "pids.max": "128"}}
+proof-guard: {"command": ["/home/nia/devbox/niaos/.work/toolchains/gnatprove-x86_64-linux-16.1.0-1/bin/gnatprove", "-j1", "-P", "proof.gpr", "--subdirs=prompt-policy-bounds", "-u", "capsule_prompt.adb", "capsule_policy.adb", "--mode=all", "--level=4", "--timeout=10", "--checks-as-errors=on", "--warnings=error", "--proof-warnings=on", "--report=statistics"], "address_mib_per_process": 1536, "sampled_session_rss_mib": 2048, "minimum_available_mib": 2048, "seconds": 600}
+Phase 1 of 3: generation of data representation information ...
+Phase 2 of 3: generation of Global contracts ...
+Phase 3 of 3: flow analysis and proof ...
+ info: initialization of "H" proved
+--> capsule_prompt.adb:10:07
+
+ info: initialization of "D" proved
+--> capsule_prompt.adb:10:28
+
+ info: postcondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:13:17
+
+ info: index check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:14:18
+
+ info: range check proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:14:36
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:14:43
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:16:63
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:16:70
+
+ info: postcondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:17:17
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:17:24
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:17:26
+
+ info: overflow check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:17:33
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:20:10
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:20:17
+
+ info: division check proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:20:24
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:20:30
+
+ info: range check proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:20:37
+
+ info: division check proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:20:45
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:23:38
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.1 seconds and 1 step)
+--> capsule_prompt.adb:23:38
+
+ info: overflow check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:23:45
+
+ info: overflow check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:23:48
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:24:16
+
+ info: postcondition proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:30:17
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:35:35
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:35:35
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:36:13
+
+ info: initialization of "U" proved
+--> capsule_prompt.adb:39:28
+
+ info: precondition proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> capsule_prompt.adb:46:07
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:46:36
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:46:48
+
+ info: precondition proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> capsule_prompt.adb:46:61
+
+ info: precondition proved (CVC5: 2 VC in max 0.1 seconds and 1 step)
+--> capsule_prompt.adb:47:07
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:47:19
+
+ info: precondition proved (CVC5: 2 VC in max 0.1 seconds and 21 steps)
+--> capsule_prompt.adb:47:34
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 37 steps)
+--> capsule_prompt.adb:47:50
+
+ info: precondition proved (CVC5: 2 VC in max 0.0 seconds and 53 steps)
+--> capsule_prompt.adb:48:07
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_prompt.adb:49:32
+
+ info: division check proved (CVC5: 8 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:49:59
+
+ info: range check proved (CVC5: 8 VC in max 0.1 seconds and 173 steps)
+--> capsule_prompt.adb:49:59
+
+ info: division check proved (CVC5: 8 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:49:72
+
+ info: loop invariant initialization proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:52:35
+
+ info: loop invariant preservation proved (CVC5: 1 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:52:35
+
+ info: precondition proved (CVC5: 2 VC in max 0.1 seconds and 675 steps)
+--> capsule_prompt.adb:53:13
+
+ info: precondition proved (CVC5: 1 VC in max 0.1 seconds and 710 steps)
+--> capsule_prompt.adb:56:07
+
+ info: precondition proved (CVC5: 1 VC in max 0.2 seconds and 727 steps)
+--> capsule_prompt.adb:56:21
+
+ info: precondition proved (CVC5: 1 VC in max 0.1 seconds and 751 steps)
+--> capsule_prompt.adb:56:38
+
+ info: precondition proved (CVC5: 1 VC in max 0.2 seconds and 882 steps)
+--> capsule_prompt.adb:57:19
+
+ info: range check proved (CVC5: 4 VC in max 0.0 seconds and 1 step)
+--> capsule_prompt.adb:57:25
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> capsule_prompt.adb:57:53
+
+ info: implicit aspect Always_Terminates on "Digest_Of" has been proved, subprogram will terminate
+--> capsule_prompt.ads:5:13
+
+ info: data dependencies proved
+--> capsule_prompt.ads:7:64
+ info: loop invariant initialization proved (CVC5: 5 VC in max 0.0 seconds and 1 step)
+--> capsule_policy.adb:9:13
+
+ info: loop invariant preservation proved (CVC5: 5 VC in max 0.0 seconds and 1 step)
+--> capsule_policy.adb:9:13
+
+ info: initialization of "R" proved
+--> capsule_policy.adb:15:07
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_policy.adb:26:50
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_policy.adb:41:56
+
+ info: unrolling loop [info-unrolling-inlining]
+--> capsule_policy.adb:45:51
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> capsule_policy.adb:61:21
+
+ info: implicit aspect Always_Terminates on "Subset" has been proved, subprogram will terminate
+--> capsule_policy.ads:34:13
+
+ info: data dependencies proved
+--> capsule_policy.ads:35:66
+
+ info: implicit aspect Always_Terminates on "Intersection" has been proved, subprogram will terminate
+--> capsule_policy.ads:36:13
+
+ info: data dependencies proved
+--> capsule_policy.ads:36:71
+
+ info: postcondition proved (CVC5: 9 VC in max 0.0 seconds and 1 step)
+--> capsule_policy.ads:37:15
+
+ info: implicit aspect Always_Terminates on "Evaluate" has been proved, subprogram will terminate
+--> capsule_policy.ads:43:13
+
+ info: data dependencies proved
+--> capsule_policy.ads:43:61
+
+ info: postcondition proved (CVC5: 7 VC in max 0.1 seconds and 304 steps; Trivial: 1 VC in max 0.0 seconds and 2 steps)
+--> capsule_policy.ads:44:15
+Success: all checks proved (61 checks).
+Summary logged in /home/nia/devbox/niaos/nia-os-consent/capsulecore/build/proof-obj/prompt-policy-bounds/gnatprove/gnatprove.out
+proof-guard: {"limits": {"address_mib_per_process": 1536, "minimum_available_mib": 2048, "nice_increment": 15, "sample_interval_seconds": 0.1, "sampled_session_rss_mib": 2048, "seconds": 600}, "peak_session_rss_bytes": 245395456, "reason": null, "result": "pass", "returncode": 0, "seconds": 22.697}

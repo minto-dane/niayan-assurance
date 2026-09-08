@@ -1,0 +1,110 @@
+Running as unit: run-p107763-i108063.scope; invocation ID: 9789f1af368c49dd9b914a64573de3d2
+limited-exec: {"scope": "run-p107763-i108063.scope", "kernel_limits": {"memory.max": "3221225472", "memory.swap.max": "0", "cpu.max": "100000 100000", "pids.max": "128"}}
+[
+     {
+          "Id": "0c04329a1343a0f1ae82ab931ffc7a7e5cbfdccbf18948e0576366fbf5bb249a",
+          "Digest": "sha256:341ba857be99f3ff8f23e59ef6032622df78ebe8a2c18a823c1fc4f2b893f383",
+          "RepoTags": [
+               "localhost/niaos-dev:20260908-gpg"
+          ],
+          "RepoDigests": [
+               "localhost/niaos-dev@sha256:341ba857be99f3ff8f23e59ef6032622df78ebe8a2c18a823c1fc4f2b893f383"
+          ],
+          "Parent": "f592de34630e1908f42e45be7bd88b1114ae433b4f74e946547c1c311a7bbe11",
+          "Comment": "debuerreotype 0.17",
+          "Created": "2026-09-08T08:10:33.01937073Z",
+          "Config": {
+               "User": "builder",
+               "Env": [
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                    "LANG=C.UTF-8",
+                    "LC_ALL=C.UTF-8",
+                    "PYTHONDONTWRITEBYTECODE=1"
+               ],
+               "Cmd": [
+                    "make",
+                    "check"
+               ],
+               "WorkingDir": "/workspace",
+               "Labels": {
+                    "io.buildah.version": "1.39.3"
+               }
+          },
+          "Version": "",
+          "Author": "",
+          "Architecture": "amd64",
+          "Os": "linux",
+          "Size": 671159058,
+          "VirtualSize": 671159058,
+          "GraphDriver": {
+               "Name": "vfs",
+               "Data": null
+          },
+          "RootFS": {
+               "Type": "layers",
+               "Layers": [
+                    "sha256:411a86676185cb54d695a805b238194a64e9b77e0c723f3802fbb87d333ea0b3",
+                    "sha256:789a6d11b8361b394262955d32ea0a746c79aa741f9ec041f1a4e30456cea244",
+                    "sha256:e8c7a4c0b8594ee798fe73ed489ba2a3a3933acaa60f1d6eac69c86026dfac8d",
+                    "sha256:92e8f10eff7b86164107dd72a0ea4dc468369f03e297df5738c7db95d6d230e0"
+               ]
+          },
+          "Labels": {
+               "io.buildah.version": "1.39.3"
+          },
+          "Annotations": {
+               "org.opencontainers.image.base.digest": "sha256:abc9cb88a5587630d7f915f47b23b0668fe250fbfc6457aa4d52b534c1bbf73f",
+               "org.opencontainers.image.base.name": "docker.io/library/debian@sha256:abc9cb88a5587630d7f915f47b23b0668fe250fbfc6457aa4d52b534c1bbf73f"
+          },
+          "ManifestType": "application/vnd.oci.image.manifest.v1+json",
+          "User": "builder",
+          "History": [
+               {
+                    "created": "2026-08-24T00:00:00Z",
+                    "created_by": "# debian.sh --arch 'amd64' out/ 'trixie' '@1787529600'",
+                    "comment": "debuerreotype 0.17"
+               },
+               {
+                    "created": "2026-09-07T23:40:37.026606523Z",
+                    "created_by": "/bin/sh -c #(nop) ARG DEBIAN_FRONTEND",
+                    "comment": "FROM docker.io/library/debian@sha256:abc9cb88a5587630d7f915f47b23b0668fe250fbfc6457aa4d52b534c1bbf73f",
+                    "empty_layer": true
+               },
+               {
+                    "created": "2026-09-07T23:44:11.000847199Z",
+                    "created_by": "|1 DEBIAN_FRONTEND=noninteractive /bin/sh -c rm /etc/apt/sources.list.d/debian.sources &&     printf '%s\\n'       'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20260907T000000Z trixie main'       'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20260907T000000Z trixie-updates main'       'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian-security/20260907T000000Z trixie-security main'       > /etc/apt/sources.list"
+               },
+               {
+                    "created": "2026-09-08T08:09:47.000755283Z",
+                    "created_by": "/bin/sh -c #(nop) COPY file:b71d004083b6f51bea2b5c449586226c25b1b86205cabd83b65444ebc28ea86d in /tmp/nia-build-packages.txt "
+               },
+               {
+                    "created": "2026-09-08T08:10:18.655418201Z",
+                    "created_by": "|1 DEBIAN_FRONTEND=noninteractive /bin/sh -c apt-get update &&     xargs -r apt-get install -y --no-install-recommends < /tmp/nia-build-packages.txt &&     rm -rf /var/lib/apt/lists/* &&     useradd --create-home --uid 1000 --shell /bin/sh builder"
+               },
+               {
+                    "created": "2026-09-08T08:10:25.414938053Z",
+                    "created_by": "/bin/sh -c #(nop) ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONDONTWRITEBYTECODE=1",
+                    "empty_layer": true
+               },
+               {
+                    "created": "2026-09-08T08:10:27.171671765Z",
+                    "created_by": "/bin/sh -c #(nop) USER builder",
+                    "empty_layer": true
+               },
+               {
+                    "created": "2026-09-08T08:10:29.950102695Z",
+                    "created_by": "/bin/sh -c #(nop) WORKDIR /workspace",
+                    "empty_layer": true
+               },
+               {
+                    "created": "2026-09-08T08:10:33.019596082Z",
+                    "created_by": "/bin/sh -c #(nop) CMD [\"make\", \"check\"]",
+                    "empty_layer": true
+               }
+          ],
+          "NamesHistory": [
+               "localhost/niaos-dev:20260908-gpg"
+          ]
+     }
+]

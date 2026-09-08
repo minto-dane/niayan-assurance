@@ -745,7 +745,7 @@
       "id": "HAZ-067",
       "title": "Capsule能力の非昇格",
       "severity": "critical",
-      "mitigation": "Capsuleの能力は要求とOS・管理者・利用者方針の積集合とし、必須能力不足、未知の能力、host全体の権限を拒否する。",
+      "mitigation": "Capsuleの能力は要求とOS・管理者・利用者方針の積集合とし、必須能力不足、未知の能力、host全体の権限を拒否する。能力ごとの正確な四方針の積集合を契約にし、各能力の16組合せを実行試験で確認する。",
       "residual_risk": "Kernel, trusted recovery channel, authenticated observations and live adapters remain outside completed verification.",
       "requirements": [
         "REQ-081"
@@ -822,7 +822,7 @@
       "id": "HAZ-074",
       "title": "同意と資源の分離",
       "severity": "critical",
-      "mitigation": "同意は正確な質問と資源へ束縛し、同意だけで資源を与えず、反映の直前直後に現在の認可を照合しなければならない。",
+      "mitigation": "同意は正確な質問と資源へ束縛し、同意だけで資源を与えず、反映の直前直後に現在の認可を照合しなければならない。promptのlength-prefixed符号化に容量・cursor進行の契約を置き、最大長と独立したdigest基準値で表示内容の束縛を確認する。",
       "residual_risk": "Native enforcement, authenticated registry/anchor/portal bindings and Ada verification remain unqualified.",
       "requirements": [
         "REQ-088"

@@ -183,9 +183,9 @@ SPARK-intentはソース上の意図であり、未指定コードや外部依�
 |[capsulecore/src/capsule_lifecycle.ads](../../../capsulecore/src/capsule_lifecycle.ads)|src / SPARK-intent-not-proof|Capsule_Lifecycle:3<br>Can_Collect:12<br>Seal:14<br>Verify:17<br>Activate:20<br>Record_Corruption:24|
 |[capsulecore/src/capsule_mounts.adb](../../../capsulecore/src/capsule_mounts.adb)|src / SPARK-intent-not-proof|Capsule_Mounts:2<br>Entry_Valid:6<br>Compatible:24<br>Valid:28|
 |[capsulecore/src/capsule_mounts.ads](../../../capsulecore/src/capsule_mounts.ads)|src / SPARK-intent-not-proof|Capsule_Mounts:3<br>Valid:16|
-|[capsulecore/src/capsule_policy.adb](../../../capsulecore/src/capsule_policy.adb)|src / SPARK-intent-not-proof|Capsule_Policy:2<br>Subset:3<br>Intersection:10<br>Evaluate:18|
-|[capsulecore/src/capsule_policy.ads](../../../capsulecore/src/capsule_policy.ads)|src / SPARK-intent-not-proof|Capsule_Policy:3<br>Subset:34<br>Intersection:35<br>Evaluate:36|
-|[capsulecore/src/capsule_prompt.adb](../../../capsulecore/src/capsule_prompt.adb)|src / SPARK-intent-not-proof|Capsule_Prompt:3<br>Digest_Of:4<br>Octet:9<br>Text:10<br>Hash:15|
+|[capsulecore/src/capsule_policy.adb](../../../capsulecore/src/capsule_policy.adb)|src / SPARK-intent-not-proof|Capsule_Policy:2<br>Intersection:3<br>Evaluate:14|
+|[capsulecore/src/capsule_policy.ads](../../../capsulecore/src/capsule_policy.ads)|src / SPARK-intent-not-proof|Capsule_Policy:3<br>Subset:34<br>Intersection:36<br>Evaluate:43|
+|[capsulecore/src/capsule_prompt.adb](../../../capsulecore/src/capsule_prompt.adb)|src / SPARK-intent-not-proof|Capsule_Prompt:3<br>Digest_Of:4<br>Octet:11<br>Text:15<br>Hash:28|
 |[capsulecore/src/capsule_prompt.ads](../../../capsulecore/src/capsule_prompt.ads)|src / SPARK-intent-not-proof|Capsule_Prompt:4<br>Digest_Of:5|
 |[capsulecore/src/capsule_types.adb](../../../capsulecore/src/capsule_types.adb)|src / SPARK-intent-not-proof|Capsule_Types:2<br>Valid:3|
 |[capsulecore/src/capsule_types.ads](../../../capsulecore/src/capsule_types.ads)|src / SPARK-intent-not-proof|Capsule_Types:3<br>Valid:12|

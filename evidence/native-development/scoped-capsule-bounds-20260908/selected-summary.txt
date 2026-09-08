@@ -1,0 +1,45 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+---------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow                      Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------------
+Data Dependencies                 4           4                            .           .          .
+Flow Dependencies                 .           .                            .           .          .
+Initialization                    4           4                            .           .          .
+Non-Aliasing                      .           .                            .           .          .
+Run-time Checks                  18           .                    18 (CVC5)           .          .
+Assertions                        8           .                     8 (CVC5)           .          .
+Functional Contracts             23           .    23 (CVC5 98%, Trivial 2%)           .          .
+LSP Verification                  .           .                            .           .          .
+Termination                       4           4                            .           .          .
+Concurrency                       .           .                            .           .          .
+---------------------------------------------------------------------------------------------------
+Total                            61    12 (20%)                     49 (80%)           .          .
+
+
+max steps used for successful proof: 882
+
+============================
+Most difficult proved checks
+============================
+
+No check found with max time greater than 1 second
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 2 units
+in unit capsule_policy, 4 subprograms and packages out of 4 analyzed
+  Capsule_Policy at capsule_policy.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Policy.Evaluate at capsule_policy.ads:43 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Policy.Intersection at capsule_policy.ads:36 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Capsule_Policy.Subset at capsule_policy.ads:34 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit capsule_prompt, 5 subprograms and packages out of 5 analyzed
+  Capsule_Prompt at capsule_prompt.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Prompt.Digest_Of at capsule_prompt.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (20 checks)
+  Capsule_Prompt.Digest_Of.Hash at capsule_prompt.adb:28 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  Capsule_Prompt.Digest_Of.Octet at capsule_prompt.adb:11 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  Capsule_Prompt.Digest_Of.Text at capsule_prompt.adb:15 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (17 checks)

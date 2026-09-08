@@ -6577,7 +6577,7 @@
     },
     {
       "path": "capsulecore/src/capsule_policy.adb",
-      "sha256": "e5c3733a23025fb5748ec92f1437e97f05b9fccf70ea4ae9cd9d0152812ac5b3",
+      "sha256": "d286209f28f72b0b677a3913c37093ca06697a37cdc91637cd6f9489736d20c9",
       "repository": "capsulecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -6587,16 +6587,12 @@
           "line": 2
         },
         {
-          "name": "Subset",
+          "name": "Intersection",
           "line": 3
         },
         {
-          "name": "Intersection",
-          "line": 10
-        },
-        {
           "name": "Evaluate",
-          "line": 18
+          "line": 14
         }
       ],
       "with_dependencies": [],
@@ -6604,7 +6600,7 @@
     },
     {
       "path": "capsulecore/src/capsule_policy.ads",
-      "sha256": "af192dcc1ee9d0b43d324bd718cd9997929e94e80ea6741618183744aff03432",
+      "sha256": "3d2deb5c7c112f8589fa196f174e63c3fa9a94cfa874aead7bd660be93613ff1",
       "repository": "capsulecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -6619,11 +6615,11 @@
         },
         {
           "name": "Intersection",
-          "line": 35
+          "line": 36
         },
         {
           "name": "Evaluate",
-          "line": 36
+          "line": 43
         }
       ],
       "with_dependencies": [
@@ -6633,7 +6629,7 @@
     },
     {
       "path": "capsulecore/src/capsule_prompt.adb",
-      "sha256": "8f4568f4bb20dafc708561ab138c3e064320cea63c78cd0c32f18834c5109022",
+      "sha256": "5a5e64ca9b7711cdeb58afb1491b94b8c3f9793dc7db3d9a3ec89baf8f9d78ce",
       "repository": "capsulecore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -6648,15 +6644,15 @@
         },
         {
           "name": "Octet",
-          "line": 9
+          "line": 11
         },
         {
           "name": "Text",
-          "line": 10
+          "line": 15
         },
         {
           "name": "Hash",
-          "line": 15
+          "line": 28
         }
       ],
       "with_dependencies": [

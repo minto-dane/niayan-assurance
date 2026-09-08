@@ -1,0 +1,4 @@
+Running as unit: run-p107821-i108121.scope; invocation ID: 21ae9b2a4bc1407faa0a153ca6be8fdf
+limited-exec: {"scope": "run-p107821-i108121.scope", "kernel_limits": {"memory.max": "3221225472", "memory.swap.max": "0", "cpu.max": "100000 100000", "pids.max": "128"}}
+python3 assurance/ci/run-engineering-checks.py --mode build --include-host-observers
+/workspace/assurance/evidence/engineering-2p4_pdbu/report.json

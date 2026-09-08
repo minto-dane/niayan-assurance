@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "started_utc": "2026-09-08T08:23:29.557522+00:00",
+  "source_subject": "2d5b48e6fa437795af02df4943ea1b365ddad62185a88a5d394d201a45958c3d",
+  "source_scope": "seven components and distribution",
+  "workspace_inputs": {
+    "Makefile": "f76492743600918779c96c4a4798dfeafb0ac8efc27239353bcdb74f1455e870",
+    ".github/workflows/ci.yml": "9d47218392455b80de5c5bd448fa7b8bf1cd0bab960ffe6e1c4f309feca98203",
+    "dev/Containerfile": "e0de03ac93dfb3bb652ce9661b610fc0a51c90590d73d369c3fba9705118b6db",
+    "dev/PUBLISHING.ja.md": "4fa6f9b53ec39633644d4c5d4036a6a364226d1f1e521e20f0bc8a1a835d239c",
+    "dev/README.ja.md": "bfba9bef4e83d2da5879c666be1e6d7a591790513a6da8db045ca26cb2f2b6f0",
+    "dev/limited-exec.py": "175957bd20a22b0c5b4f1b0a00229c726bb60799cdec4e8999d9a156aa560dd6",
+    "dev/packages.txt": "6308f3ff1e9466a58e624b14e3e08238f29fe5dc51626658e62cc4f3fb1a4645",
+    "dev/reproducible-build.py": "97c7f4515bb5e175f0fe030aa6bcd4b1adbd3cb31f64a7391818b75ddbd75812",
+    "dev/run-limited.sh": "0e364b98c24151260a4e964d73f5d2b0b97b09b092aa77fa9c97192c23ecaff8",
+    "dev/setup-debian.sh": "d2423d2b1186f5b9d3976ebdf04b2cb6243555d19b74d1041d195f3031633844"
+  },
+  "tool_versions": {
+    "gcc": "gcc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "gprbuild": "GPRBUILD Pro 18.0w (19940713) (x86_64-linux-gnu)\nCopyright (C) 2004-2016, AdaCore\nThis is free software; see the source for copying conditions.\nSee your AdaCore support agreement for details of warranty and support.\nIf you do not have a current support agreement, then there is absolutely\nno warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR\nPURPOSE.",
+    "dpkg-query": "binutils\t2.44-3\ngnat-14\t14.2.0-19\ngprbuild\t2025.0.0-4\nlibc6:amd64\t2.41-12+deb13u3"
+  },
+  "production_qualified": false,
+  "builds": [
+    {
+      "tree": "first",
+      "returncode": 0,
+      "binaries": {
+        "assurance/build/bin/assure": "f5f54372640d5b02f091b3af347de87a146f7acd0abc7145e798b09fba91f3bf",
+        "assurance/build/bin/controlctl": "6aac8fd639693b8ae0c59c919d26e79d87e176fca666544e8fcc864ec2917239",
+        "assurance/build/bin/platformctl": "744079c3f66b5624fc1085128d88a0f51c1b41ca7d8042fb101c1e2e37c4faae",
+        "pkgcore/build/bin/pkg_recoveryctl": "9d0ea3352ddeba4c2a6501f5806ea375c0c7d6474578761e7b11b2894f86ac8f",
+        "pkgcore/build/bin/pkgctl": "0dfa1516f3b2e2aeeb64d59fc70ad06c1fb456403c54e833b72429aef6bb232d",
+        "pkgcore/build/bin/pkg_worker": "a117cfb1072add7c3fe47e5f8c4fa354584d8654fd73a74fbf407b0d5ae0fa5f",
+        "pkgcore/build/bin/pkg_scrubctl": "b17cc6886463430a76f6f6ceefbe07dc70f610aec7b08e67e95792f8265ad174",
+        "statecore/build/bin/hostctl": "5308deda4dd28f9774d23ee0e5be0ba0bf79f5d856487f52fbad2d8be2d14324",
+        "statecore/build/bin/statectl": "f365fffe4efd3a5ba4f122412ee4b06dd1308a15390f9b546a71ec2b24d66d29",
+        "statecore/build/bin/state_worker": "471e989e4bec21ccab7a7f3feb62323d88c10a8955305d45b7d21e0eba57a329",
+        "statecore/build/bin/state_recovery_worker": "fcdd8a386623819ede00a350ca185e224c219734d8235befffca61f16ec5eea2",
+        "statecore/build/bin/state_healing_admin": "f49acc16646ab7423b0ac1d854f733fd37e93d31ffc89a88d97e404721009c2c",
+        "controlcore/build/bin/nia": "d23382f670de1820b44ed06442e257a22cbf409f9271b2798e559f2ddf571775",
+        "controlcore/build/bin/missionctl": "220ad7602161e8597fdd6c3d2b4e7d0181638f84206630564d80e279da7f42fd",
+        "controlcore/build/bin/mission_sign": "a020884a55bc956b5276c9ccfa5b57b96ddd418da8c6d81659995fe4a9aa7a2e",
+        "configcore/build/bin/configctl": "66f8e257137f8f8d822ae364ee46af974503d79ffabeb2403d9a449811f8d023",
+        "resolvercore/build/bin/resolverctl": "a495cbb2e2d02bbcf8e67a56d4b1a722d57b2b246d6f2e398df210c68dd3db13",
+        "capsulecore/build/bin/capsulectl": "7622ec53d426ef75dd4ee5d94904fd7b7cf7ff71fac6b01e6906185967a30048"
+      },
+      "source_mtime_epoch": 1788739200,
+      "jobs": "1",
+      "timezone": "UTC0"
+    },
+    {
+      "tree": "second-with-a-different-path-length",
+      "returncode": 0,
+      "binaries": {
+        "assurance/build/bin/assure": "f5f54372640d5b02f091b3af347de87a146f7acd0abc7145e798b09fba91f3bf",
+        "assurance/build/bin/controlctl": "6aac8fd639693b8ae0c59c919d26e79d87e176fca666544e8fcc864ec2917239",
+        "assurance/build/bin/platformctl": "744079c3f66b5624fc1085128d88a0f51c1b41ca7d8042fb101c1e2e37c4faae",
+        "pkgcore/build/bin/pkg_recoveryctl": "9d0ea3352ddeba4c2a6501f5806ea375c0c7d6474578761e7b11b2894f86ac8f",
+        "pkgcore/build/bin/pkgctl": "0dfa1516f3b2e2aeeb64d59fc70ad06c1fb456403c54e833b72429aef6bb232d",
+        "pkgcore/build/bin/pkg_worker": "a117cfb1072add7c3fe47e5f8c4fa354584d8654fd73a74fbf407b0d5ae0fa5f",
+        "pkgcore/build/bin/pkg_scrubctl": "b17cc6886463430a76f6f6ceefbe07dc70f610aec7b08e67e95792f8265ad174",
+        "statecore/build/bin/hostctl": "5308deda4dd28f9774d23ee0e5be0ba0bf79f5d856487f52fbad2d8be2d14324",
+        "statecore/build/bin/statectl": "f365fffe4efd3a5ba4f122412ee4b06dd1308a15390f9b546a71ec2b24d66d29",
+        "statecore/build/bin/state_worker": "471e989e4bec21ccab7a7f3feb62323d88c10a8955305d45b7d21e0eba57a329",
+        "statecore/build/bin/state_recovery_worker": "fcdd8a386623819ede00a350ca185e224c219734d8235befffca61f16ec5eea2",
+        "statecore/build/bin/state_healing_admin": "f49acc16646ab7423b0ac1d854f733fd37e93d31ffc89a88d97e404721009c2c",
+        "controlcore/build/bin/nia": "d23382f670de1820b44ed06442e257a22cbf409f9271b2798e559f2ddf571775",
+        "controlcore/build/bin/missionctl": "220ad7602161e8597fdd6c3d2b4e7d0181638f84206630564d80e279da7f42fd",
+        "controlcore/build/bin/mission_sign": "a020884a55bc956b5276c9ccfa5b57b96ddd418da8c6d81659995fe4a9aa7a2e",
+        "configcore/build/bin/configctl": "66f8e257137f8f8d822ae364ee46af974503d79ffabeb2403d9a449811f8d023",
+        "resolvercore/build/bin/resolverctl": "a495cbb2e2d02bbcf8e67a56d4b1a722d57b2b246d6f2e398df210c68dd3db13",
+        "capsulecore/build/bin/capsulectl": "7622ec53d426ef75dd4ee5d94904fd7b7cf7ff71fac6b01e6906185967a30048"
+      },
+      "source_mtime_epoch": 1788825600,
+      "jobs": "2",
+      "timezone": "HST10"
+    }
+  ],
+  "result": "identical-binaries",
+  "binary_count": 18,
+  "ended_utc": "2026-09-08T08:25:51.313238+00:00"
+}

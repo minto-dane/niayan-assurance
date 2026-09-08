@@ -1,0 +1,8 @@
+Running as unit: run-p113109-i113409.scope; invocation ID: 9fd0f2f88335428186f0be69730a93d9
+limited-exec: {"scope": "run-p113109-i113409.scope", "kernel_limits": {"memory.max": "3221225472", "memory.swap.max": "0", "cpu.max": "100000 100000", "pids.max": "128"}}
+test_unprivileged_helpers_refuse_root (test_resolution_reference.ToolTests.test_unprivileged_helpers_refuse_root) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.086s
+
+OK

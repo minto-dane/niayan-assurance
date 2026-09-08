@@ -2305,17 +2305,20 @@
       "shall": "Capsuleの能力は要求とOS・管理者・利用者方針の積集合とし、必須能力不足、未知の能力、host全体の権限を拒否する。",
       "status": "implemented-unvalidated",
       "adr": [
-        "ADR-0051"
+        "ADR-0051",
+        "ADR-0053"
       ],
       "spec": [
         "capsulecore/docs/confinement.ja.md"
       ],
       "code": [
         "capsulecore/src/capsule_policy.adb",
-        "capsulecore/tools/capsule_plan.py"
+        "capsulecore/tools/capsule_plan.py",
+        "capsulecore/src/capsule_policy.ads"
       ],
       "tests": [
-        "capsulecore/tests_py/test_capsule.py"
+        "capsulecore/tests_py/test_capsule.py",
+        "capsulecore/tests/run_capsule_tests.adb"
       ],
       "hazards": [
         "HAZ-067"
@@ -2509,17 +2512,20 @@
       "shall": "同意は正確な質問と資源へ束縛し、同意だけで資源を与えず、反映の直前直後に現在の認可を照合しなければならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0052"
+        "ADR-0052",
+        "ADR-0053"
       ],
       "spec": [
         "capsulecore/docs/consent.ja.md"
       ],
       "code": [
-        "capsulecore/src/capsule_consent.adb"
+        "capsulecore/src/capsule_consent.adb",
+        "capsulecore/src/capsule_prompt.adb"
       ],
       "tests": [
         "capsulecore/tests/run_consent_tests.adb",
-        "capsulecore/tests_py/test_consent.py"
+        "capsulecore/tests_py/test_consent.py",
+        "capsulecore/tests/run_capsule_tests.adb"
       ],
       "hazards": [
         "HAZ-074"

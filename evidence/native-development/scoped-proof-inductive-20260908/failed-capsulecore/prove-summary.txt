@@ -1,0 +1,364 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+-----------------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total         Flow                                   Provers   Justified   Unproved
+-----------------------------------------------------------------------------------------------------------------
+Data Dependencies               183          183                                         .           .          .
+Flow Dependencies                 .            .                                         .           .          .
+Initialization                  213          213                                         .           .          .
+Non-Aliasing                      .            .                                         .           .          .
+Run-time Checks                1105            .                   1096 (CVC5 100%, Z3 0%)           .          9
+Assertions                      113            .    113 (CVC5 97%, Trivial 2%, altergo 1%)           .          .
+Functional Contracts            366            .         365 (CVC5 96%, Trivial 4%, Z3 0%)           .          1
+LSP Verification                  .            .                                         .           .          .
+Termination                     138          125                                 13 (CVC5)           .          .
+Concurrency                       .            .                                         .           .          .
+-----------------------------------------------------------------------------------------------------------------
+Total                          2118    521 (25%)                                1587 (75%)           .    10 (0%)
+
+
+max steps used for successful proof: 501855
+
+============================
+Most difficult proved checks
+============================
+
+capsule_wire.adb:42:17: overflow check proved in max 6 seconds
+capsule_wire.adb:42:23: overflow check proved in max 5 seconds
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 56 units
+in unit capsule_broker, 3 subprograms and packages out of 3 analyzed
+  Capsule_Broker at capsule_broker.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Broker.Permit at capsule_broker.ads:18 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Broker.Permit_Consent at capsule_broker.ads:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit capsule_consent, 24 subprograms and packages out of 24 analyzed
+  Capsule_Consent at capsule_consent.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Begin_Request at capsule_consent.ads:66 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Begin_Revoke at capsule_consent.ads:88 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Broker_Restart at capsule_consent.ads:94 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Bump at capsule_consent.adb:71 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Cancel at capsule_consent.ads:83 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Consent.Confirm_Revoked at capsule_consent.ads:91 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Consent.Correlated at capsule_consent.adb:116 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Invalidate at capsule_consent.ads:86 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Live at capsule_consent.ads:60 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Observe_Effect at capsule_consent.ads:76 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Observe_Portal at capsule_consent.ads:81 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Ready at capsule_consent.ads:56 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Reserve_Prompt at capsule_consent.ads:103 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  Capsule_Consent.Reserved_Records at capsule_consent.ads:90 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Resolve at capsule_consent.ads:69 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Consent.Routing at capsule_consent.ads:23 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Start_Effect at capsule_consent.ads:73 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Consent.Start_Portal at capsule_consent.ads:79 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Successor at capsule_consent.ads:59 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Usable at capsule_consent.ads:62 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Consent.Valid at capsule_consent.ads:55 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent.Valid at capsule_consent.ads:57 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Consent.Valid at capsule_consent.ads:58 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit capsule_consent_wire, 10 subprograms and packages out of 10 analyzed
+  Capsule_Consent_Wire at capsule_consent_wire.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Consent_Wire.Decode at capsule_consent_wire.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Consent_Wire.Decode_Ticket at capsule_consent_wire.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (37 checks)
+  Capsule_Consent_Wire.Decode_Ticket.Hash at capsule_consent_wire.adb:99 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  Capsule_Consent_Wire.Decode_Ticket.Number at capsule_consent_wire.adb:84 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (12 checks)
+  Capsule_Consent_Wire.Decode_Ticket.Octet at capsule_consent_wire.adb:80 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  Capsule_Consent_Wire.Encode_Ticket at capsule_consent_wire.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (37 checks)
+  Capsule_Consent_Wire.Encode_Ticket.Hash at capsule_consent_wire.adb:39 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  Capsule_Consent_Wire.Encode_Ticket.Number at capsule_consent_wire.adb:28 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+  Capsule_Consent_Wire.Encode_Ticket.Octet at capsule_consent_wire.adb:25 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+in unit capsule_lifecycle, 6 subprograms and packages out of 6 analyzed
+  Capsule_Lifecycle at capsule_lifecycle.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Lifecycle.Activate at capsule_lifecycle.ads:20 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Lifecycle.Can_Collect at capsule_lifecycle.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Lifecycle.Record_Corruption at capsule_lifecycle.ads:24 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Capsule_Lifecycle.Seal at capsule_lifecycle.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Lifecycle.Verify at capsule_lifecycle.ads:17 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit capsule_mounts, 4 subprograms and packages out of 4 analyzed
+  Capsule_Mounts at capsule_mounts.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Mounts.Compatible at capsule_mounts.adb:24 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Mounts.Entry_Valid at capsule_mounts.adb:6 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Mounts.Valid at capsule_mounts.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit capsule_policy, 4 subprograms and packages out of 4 analyzed
+  Capsule_Policy at capsule_policy.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Policy.Evaluate at capsule_policy.ads:36 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and not proved, 0 checks out of 1 proved
+  Capsule_Policy.Intersection at capsule_policy.ads:35 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Policy.Subset at capsule_policy.ads:34 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit capsule_prompt, 5 subprograms and packages out of 5 analyzed
+  Capsule_Prompt at capsule_prompt.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Prompt.Digest_Of at capsule_prompt.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and not proved, 10 checks out of 14 proved
+  Capsule_Prompt.Digest_Of.Hash at capsule_prompt.adb:15 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and not proved, 2 checks out of 3 proved
+  Capsule_Prompt.Digest_Of.Octet at capsule_prompt.adb:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Prompt.Digest_Of.Text at capsule_prompt.adb:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and not proved, 9 checks out of 13 proved
+in unit capsule_types, 2 subprograms and packages out of 2 analyzed
+  Capsule_Types at capsule_types.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Types.Valid at capsule_types.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit capsule_wire, 5 subprograms and packages out of 5 analyzed
+  Capsule_Wire at capsule_wire.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Capsule_Wire.Decode at capsule_wire.ads:7 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (20 checks)
+  Capsule_Wire.Decode.Digest_At at capsule_wire.adb:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Wire.Decode.Item at capsule_wire.adb:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Capsule_Wire.Decode.Mask at capsule_wire.adb:18 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+in unit mc_accounting, 4 subprograms and packages out of 4 analyzed
+  MC_Accounting at mc_accounting.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Accounting.Chain_Extends at mc_accounting.ads:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Accounting.Required_Remote_Preservation at mc_accounting.ads:23 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Accounting.Valid at mc_accounting.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_attestation, 4 subprograms and packages out of 4 analyzed
+  MC_Attestation at mc_attestation.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Attestation.Evaluate at mc_attestation.ads:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Attestation.Valid at mc_attestation.ads:20 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Attestation.Valid at mc_attestation.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_authorization, 2 subprograms and packages out of 2 analyzed
+  MC_Authorization at mc_authorization.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Authorization.Within_Scope at mc_authorization.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit mc_backups, 7 subprograms and packages out of 7 analyzed
+  MC_Backups at mc_backups.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Backups.Chain at mc_backups.ads:37 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (13 checks)
+  MC_Backups.Choose at mc_backups.ads:43 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  MC_Backups.Restore_Set at mc_backups.ads:41 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+  MC_Backups.Usable at mc_backups.ads:40 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  MC_Backups.Valid at mc_backups.ads:34 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Backups.Valid_Catalog at mc_backups.ads:35 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (14 checks)
+in unit mc_base64, 5 subprograms and packages out of 5 analyzed
+  MC_Base64 at mc_base64.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Base64.Decode at mc_base64.ads:6 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (41 checks)
+  MC_Base64.Decode.Emit at mc_base64.adb:25 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  MC_Base64.Decode.Value at mc_base64.adb:23 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Base64.Encode at mc_base64.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (54 checks)
+in unit mc_breakglass, 2 subprograms and packages out of 2 analyzed
+  MC_Breakglass at mc_breakglass.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Breakglass.Permitted at mc_breakglass.ads:15 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_checkpoint, 5 subprograms and packages out of 5 analyzed
+  MC_Checkpoint at mc_checkpoint.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Checkpoint.Decode at mc_checkpoint.ads:17 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (25 checks)
+  MC_Checkpoint.Encode at mc_checkpoint.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (10 checks)
+  MC_Checkpoint.Follows at mc_checkpoint.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Checkpoint.Valid at mc_checkpoint.ads:13 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_codec, 7 subprograms and packages out of 7 analyzed
+  MC_Codec at mc_codec.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Codec.Put16 at mc_codec.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (10 checks)
+  MC_Codec.Put32 at mc_codec.ads:18 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  MC_Codec.Put64 at mc_codec.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  MC_Codec.U16 at mc_codec.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  MC_Codec.U32 at mc_codec.ads:8 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  MC_Codec.U64 at mc_codec.ads:11 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (16 checks)
+in unit mc_commissioning, 3 subprograms and packages out of 3 analyzed
+  MC_Commissioning at mc_commissioning.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Commissioning.Step at mc_commissioning.ads:29 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (12 checks)
+  MC_Commissioning.Step.Commit at mc_commissioning.adb:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_compatibility, 2 subprograms and packages out of 2 analyzed
+  MC_Compatibility at mc_compatibility.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Compatibility.Compatible at mc_compatibility.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_config_receipt, 6 subprograms and packages out of 6 analyzed
+  MC_Config_Receipt at mc_config_receipt.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Config_Receipt.Check at mc_config_receipt.ads:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  MC_Config_Receipt.Decode at mc_config_receipt.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (24 checks)
+  MC_Config_Receipt.Decode.Count at mc_config_receipt.adb:40 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  MC_Config_Receipt.Encode at mc_config_receipt.ads:20 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  MC_Config_Receipt.Valid at mc_config_receipt.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_contract_profile, 1 subprograms and packages out of 1 analyzed
+  MC_Contract_Profile at mc_contract_profile.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_control, 5 subprograms and packages out of 5 analyzed
+  MC_Control at mc_control.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Control.Decide at mc_control.ads:50 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  MC_Control.Permits at mc_control.ads:48 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Control.Valid at mc_control.ads:43 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  MC_Control.Valid at mc_control.ads:47 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_control_codec, 7 subprograms and packages out of 7 analyzed
+  MC_Control_Codec at mc_control_codec.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Control_Codec.Decode at mc_control_codec.ads:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (17 checks)
+  MC_Control_Codec.Decode at mc_control_codec.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (26 checks)
+  MC_Control_Codec.Decode at mc_control_codec.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (35 checks)
+  MC_Control_Codec.Encode at mc_control_codec.ads:7 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  MC_Control_Codec.Encode at mc_control_codec.ads:8 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  MC_Control_Codec.Encode at mc_control_codec.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (26 checks)
+in unit mc_diagnostic_bundle, 4 subprograms and packages out of 4 analyzed
+  MC_Diagnostic_Bundle at mc_diagnostic_bundle.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Diagnostic_Bundle.Base_OK at mc_diagnostic_bundle.adb:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Diagnostic_Bundle.Sufficient_For_Change_Incident at mc_diagnostic_bundle.ads:17 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Diagnostic_Bundle.Sufficient_For_Kernel_Incident at mc_diagnostic_bundle.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_dirents, 4 subprograms and packages out of 4 analyzed
+  MC_Dirents at mc_dirents.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Dirents.Append_Linux64_LE at mc_dirents.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (36 checks)
+  MC_Dirents.Image at mc_dirents.ads:8 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Dirents.Sort at mc_dirents.ads:11 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+in unit mc_fault_report, 4 subprograms and packages out of 4 analyzed
+  MC_Fault_Report at mc_fault_report.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Fault_Report.Decode at mc_fault_report.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (25 checks)
+  MC_Fault_Report.Encode at mc_fault_report.ads:7 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  MC_Fault_Report.Encode.Bit at mc_fault_report.adb:8 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_faults, 5 subprograms and packages out of 5 analyzed
+  MC_Faults at mc_faults.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Faults.Automatic_Disposition at mc_faults.ads:29 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Faults.Isolation_Required at mc_faults.ads:28 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Faults.Valid at mc_faults.ads:26 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Faults.Worse at mc_faults.ads:27 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_generation, 3 subprograms and packages out of 3 analyzed
+  MC_Generation at mc_generation.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Generation.Step at mc_generation.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (10 checks)
+  MC_Generation.Step.Done at mc_generation.adb:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_golden, 2 subprograms and packages out of 2 analyzed
+  MC_Golden at mc_golden.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Golden.Header at mc_golden.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit mc_health_golden, 2 subprograms and packages out of 2 analyzed
+  MC_Health_Golden at mc_health_golden.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Health_Golden.Value at mc_health_golden.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_health_report, 5 subprograms and packages out of 5 analyzed
+  MC_Health_Report at mc_health_report.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Health_Report.Decode at mc_health_report.ads:17 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (20 checks)
+  MC_Health_Report.Encode at mc_health_report.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  MC_Health_Report.Encode.Bit at mc_health_report.adb:13 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Health_Report.Valid at mc_health_report.ads:15 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_hex, 4 subprograms and packages out of 4 analyzed
+  MC_Hex at mc_hex.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Hex.Decode at mc_hex.ads:7 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (20 checks)
+  MC_Hex.Encode at mc_hex.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (17 checks)
+  MC_Hex.Nibble at mc_hex.adb:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_incidents, 3 subprograms and packages out of 3 analyzed
+  MC_Incidents at mc_incidents.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Incidents.Step at mc_incidents.ads:33 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  MC_Incidents.Valid at mc_incidents.ads:32 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_journal_budget, 2 subprograms and packages out of 2 analyzed
+  MC_Journal_Budget at mc_journal_budget.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Journal_Budget.Fits at mc_journal_budget.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+in unit mc_json, 11 subprograms and packages out of 11 analyzed
+  MC_JSON at mc_json.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_JSON.Element at mc_json.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (13 checks)
+  MC_JSON.Member at mc_json.ads:11 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (19 checks)
+  MC_JSON.Natural_Number at mc_json.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (23 checks)
+  MC_JSON.Parse at mc_json.ads:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  MC_JSON.Parse.Add at mc_json.adb:81 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  MC_JSON.Parse.Cursor_Valid at mc_json.adb:68 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_JSON.Parse.Space at mc_json.adb:71 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  MC_JSON.Parse.String_Node_Read at mc_json.adb:92 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (19 checks)
+  MC_JSON.Parse.Value_Read at mc_json.adb:115 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (72 checks)
+  MC_JSON.String_Bytes at mc_json.ads:13 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (34 checks)
+in unit mc_log_format, 3 subprograms and packages out of 3 analyzed
+  MC_Log_Format at mc_log_format.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Log_Format.Decode at mc_log_format.ads:15 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (26 checks)
+  MC_Log_Format.Encode at mc_log_format.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+in unit mc_maintenance, 5 subprograms and packages out of 5 analyzed
+  MC_Maintenance at mc_maintenance.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Maintenance.Blocks at mc_maintenance.ads:24 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Maintenance.Permits at mc_maintenance.ads:23 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Maintenance.Valid at mc_maintenance.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Maintenance.Valid at mc_maintenance.ads:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_numbers, 3 subprograms and packages out of 3 analyzed
+  MC_Numbers at mc_numbers.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Numbers.Image at mc_numbers.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  MC_Numbers.Parse at mc_numbers.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+in unit mc_paths, 3 subprograms and packages out of 3 analyzed
+  MC_Paths at mc_paths.ads:2 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Paths.Safe_Component at mc_paths.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Paths.Safe_Relative at mc_paths.ads:6 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+in unit mc_platform_profile, 2 subprograms and packages out of 2 analyzed
+  MC_Platform_Profile at mc_platform_profile.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Platform_Profile.Ready at mc_platform_profile.ads:18 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_properties, 4 subprograms and packages out of 4 analyzed
+  MC_Properties at mc_properties.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Properties.Get at mc_properties.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Properties.Has_Exactly at mc_properties.ads:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (11 checks)
+  MC_Properties.Parse at mc_properties.ads:8 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (25 checks)
+in unit mc_protocol, 4 subprograms and packages out of 4 analyzed
+  MC_Protocol at mc_protocol.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Protocol.Decode at mc_protocol.ads:31 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (26 checks)
+  MC_Protocol.Encode at mc_protocol.ads:30 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+  MC_Protocol.Valid_Identity at mc_protocol.ads:35 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_qualification, 5 subprograms and packages out of 5 analyzed
+  MC_Qualification at mc_qualification.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Qualification.Decode at mc_qualification.ads:34 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (18 checks)
+  MC_Qualification.Encode at mc_qualification.ads:33 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  MC_Qualification.Evaluate at mc_qualification.ads:35 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (16 checks)
+  MC_Qualification.Valid at mc_qualification.ads:32 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit mc_recovery_cohort, 7 subprograms and packages out of 7 analyzed
+  MC_Recovery_Cohort at mc_recovery_cohort.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Recovery_Cohort.Accept_Operational at mc_recovery_cohort.ads:42 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  MC_Recovery_Cohort.Check_Candidate at mc_recovery_cohort.ads:38 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Recovery_Cohort.Prepare at mc_recovery_cohort.ads:36 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  MC_Recovery_Cohort.Publish at mc_recovery_cohort.ads:40 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  MC_Recovery_Cohort.Quorum at mc_recovery_cohort.ads:17 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  MC_Recovery_Cohort.Usable at mc_recovery_cohort.ads:35 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_release, 2 subprograms and packages out of 2 analyzed
+  MC_Release at mc_release.ads:2 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Release.Qualified at mc_release.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+in unit mc_replay, 3 subprograms and packages out of 3 analyzed
+  MC_Replay at mc_replay.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Replay.Check at mc_replay.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Replay.Record_Request at mc_replay.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit mc_request_replay, 2 subprograms and packages out of 2 analyzed
+  MC_Request_Replay at mc_request_replay.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Request_Replay.Consume at mc_request_replay.ads:18 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+in unit mc_requests, 4 subprograms and packages out of 4 analyzed
+  MC_Requests at mc_requests.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Requests.Decode at mc_requests.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (16 checks)
+  MC_Requests.Encode at mc_requests.ads:18 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  MC_Requests.Header_Binds at mc_requests.ads:20 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit mc_retry_budget, 7 subprograms and packages out of 7 analyzed
+  MC_Retry_Budget at mc_retry_budget.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Retry_Budget.Backoff at mc_retry_budget.ads:25 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  MC_Retry_Budget.Confirm_Stable at mc_retry_budget.ads:36 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Retry_Budget.Rebind_Boot at mc_retry_budget.ads:43 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  MC_Retry_Budget.Reserve at mc_retry_budget.ads:28 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (27 checks)
+  MC_Retry_Budget.Valid at mc_retry_budget.ads:23 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Retry_Budget.Valid at mc_retry_budget.ads:24 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit mc_sha256, 9 subprograms and packages out of 9 analyzed
+  MC_SHA256 at mc_sha256.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_SHA256.Compress at mc_sha256.adb:24 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  MC_SHA256.Context at mc_sha256.ads:20 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_SHA256.Finish at mc_sha256.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  MC_SHA256.Hash at mc_sha256.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  MC_SHA256.Initialize at mc_sha256.ads:7 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_SHA256.Length at mc_sha256.ads:6 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_SHA256.R at mc_sha256.adb:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_SHA256.Update at mc_sha256.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+in unit mc_stop_barrier, 16 subprograms and packages out of 16 analyzed
+  MC_Stop_Barrier at mc_stop_barrier.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Stop_Barrier.Decode at mc_stop_barrier.ads:70 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (41 checks)
+  MC_Stop_Barrier.Decode at mc_stop_barrier.ads:71 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (51 checks)
+  MC_Stop_Barrier.Decode at mc_stop_barrier.ads:72 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (40 checks)
+  MC_Stop_Barrier.Encode at mc_stop_barrier.ads:67 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (53 checks)
+  MC_Stop_Barrier.Encode at mc_stop_barrier.ads:68 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (38 checks)
+  MC_Stop_Barrier.Encode at mc_stop_barrier.ads:69 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (13 checks)
+  MC_Stop_Barrier.Fingerprint at mc_stop_barrier.ads:56 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Stop_Barrier.Initialize at mc_stop_barrier.ads:59 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Stop_Barrier.Observe at mc_stop_barrier.ads:60 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (23 checks)
+  MC_Stop_Barrier.Ready at mc_stop_barrier.ads:57 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (12 checks)
+  MC_Stop_Barrier.Seal at mc_stop_barrier.ads:64 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  MC_Stop_Barrier.Usable at mc_stop_barrier.ads:58 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Stop_Barrier.Valid at mc_stop_barrier.ads:54 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  MC_Stop_Barrier.Valid at mc_stop_barrier.ads:55 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Stop_Barrier.Valid_Receipt at mc_stop_barrier.adb:37 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_system_baseline, 3 subprograms and packages out of 3 analyzed
+  MC_System_Baseline at mc_system_baseline.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_System_Baseline.Assess at mc_system_baseline.ads:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_System_Baseline.Valid at mc_system_baseline.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_text, 8 subprograms and packages out of 8 analyzed
+  MC_Text at mc_text.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Text.Equal at mc_text.ads:13 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Text.HTTPS_URL at mc_text.ads:15 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (17 checks)
+  MC_Text.Identifier at mc_text.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  MC_Text.Image at mc_text.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  MC_Text.Length at mc_text.ads:7 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Text.Set at mc_text.ads:11 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  MC_Text.Value at mc_text.ads:17 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+in unit mc_time_guard, 4 subprograms and packages out of 4 analyzed
+  MC_Time_Guard at mc_time_guard.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Time_Guard.Add_Bounded at mc_time_guard.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  MC_Time_Guard.Elapsed at mc_time_guard.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  MC_Time_Guard.Fresh at mc_time_guard.ads:8 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+in unit mc_types, 3 subprograms and packages out of 3 analyzed
+  MC_Types at mc_types.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Types.Is_Zero at mc_types.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Types.Same_Bytes at mc_types.ads:21 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+in unit mc_witness, 4 subprograms and packages out of 4 analyzed
+  MC_Witness at mc_witness.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  MC_Witness.Decode at mc_witness.ads:14 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (22 checks)
+  MC_Witness.Encode at mc_witness.ads:13 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  MC_Witness.Matches at mc_witness.ads:15 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)

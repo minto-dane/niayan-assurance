@@ -1015,6 +1015,17 @@
         "REQ-105"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-092",
+      "title": "tar属性の欠落・リンク競合・表示localeによる取り違え",
+      "severity": "critical",
+      "mitigation": "framing・原本hash・CASを照合し、属性・有界byte名を保持する。全hardlink graphと祖先を検査し、呼出側localeを復元する。未対応拡張と不正ACLを拒否し、観測を導入権限へ昇格しない。",
+      "residual_risk": "Accepted-profile observation only. Global PAX, sparse, other ACL dialects, complete cross-package ownership and generation execution remain unqualified. Production authorization, effects and boot are separate requirements.",
+      "requirements": [
+        "REQ-106"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

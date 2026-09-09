@@ -688,6 +688,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "bounded codec fragments and original-data stream CAS retention; no tar extraction or installation"
+    },
+    {
+      "main": "pkgcore/tests/run_deb_payload_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/deb-payload"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "private original-payload observation, complete CAS content and bounded metadata; no extraction, effects or installation"
     }
   ]
 }

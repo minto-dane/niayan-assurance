@@ -3028,6 +3028,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-106",
+      "title": "原本tarの内容・属性とリンクの有界保持",
+      "shall": "元DEBの展開tarを独立framingと照合し、採用profileの内容・属性・リンクを保持した完全inventoryだけを返さなければならない。未対応拡張を無視し、古い世代形式へ属性を削って渡してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0065"
+      ],
+      "spec": [
+        "distribution/native/deb-payload.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_tar_framing.ads",
+        "pkgcore/runtime/pkg_tar_framing.adb",
+        "pkgcore/runtime/pkg_deb_payload.ads",
+        "pkgcore/runtime/pkg_deb_payload.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_payload_tests.adb",
+        "pkgcore/tests/compare_deb_payload.py"
+      ],
+      "hazards": [
+        "HAZ-092"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

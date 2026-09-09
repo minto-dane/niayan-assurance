@@ -1180,6 +1180,17 @@
       "expected": "すべての圧縮byteを照合して完全消費し、失敗時に展開digestとサイズを成功として返さない。展開量に比例する入力/出力bufferを確保せず、原本と二回目の出力をCASへ束縛する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_data_stream_tests.adb"
+    },
+    {
+      "id": "FAULT-106",
+      "scenario": "重複・非directory祖先・危険path/link・hardlink欠落/循環、未知拡張、不正ACL、属性上限、tar破損・終端・padding、日本語名と呼出側locale、負の小数時刻、UID0と期限超過",
+      "requirements": [
+        "REQ-106"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "部分inventoryを返さず、完全CAS blobと稼働状態を区別する。対応属性・内容を原本から保持し、呼出側localeを復元する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_payload_tests.adb"
     }
   ]
 }

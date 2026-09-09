@@ -9668,6 +9668,371 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_deb_payload.adb",
+      "sha256": "3a6936e55e97a3e817b0256279efcaf11f87c66a8acad15fe0f6e2cfc072ecfa",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Payload",
+          "line": 7
+        },
+        {
+          "name": "Entry_Vectors",
+          "line": 14
+        },
+        {
+          "name": "Positions",
+          "line": 15
+        },
+        {
+          "name": "Names",
+          "line": 16
+        },
+        {
+          "name": "Free",
+          "line": 23
+        },
+        {
+          "name": "Clear",
+          "line": 24
+        },
+        {
+          "name": "Finalize",
+          "line": 26
+        },
+        {
+          "name": "Count",
+          "line": 28
+        },
+        {
+          "name": "Original_Hash",
+          "line": 30
+        },
+        {
+          "name": "Tar_Hash",
+          "line": 32
+        },
+        {
+          "name": "Find",
+          "line": 34
+        },
+        {
+          "name": "Read_Entry",
+          "line": 36
+        },
+        {
+          "name": "New_Archive",
+          "line": 48
+        },
+        {
+          "name": "Free_Archive",
+          "line": 49
+        },
+        {
+          "name": "Format_Tar",
+          "line": 50
+        },
+        {
+          "name": "New_Locale",
+          "line": 51
+        },
+        {
+          "name": "Use_Locale",
+          "line": 53
+        },
+        {
+          "name": "Free_Locale",
+          "line": 55
+        },
+        {
+          "name": "Open_FD",
+          "line": 57
+        },
+        {
+          "name": "Next_Header",
+          "line": 58
+        },
+        {
+          "name": "Read_Data",
+          "line": 59
+        },
+        {
+          "name": "Filter_Count",
+          "line": 60
+        },
+        {
+          "name": "Filter_Code",
+          "line": 61
+        },
+        {
+          "name": "Filter_Bytes",
+          "line": 62
+        },
+        {
+          "name": "Archive_Format",
+          "line": 63
+        },
+        {
+          "name": "Pathname",
+          "line": 64
+        },
+        {
+          "name": "Uname",
+          "line": 65
+        },
+        {
+          "name": "Gname",
+          "line": 66
+        },
+        {
+          "name": "Symlink",
+          "line": 67
+        },
+        {
+          "name": "Hardlink",
+          "line": 68
+        },
+        {
+          "name": "Mode",
+          "line": 69
+        },
+        {
+          "name": "Entry_Size",
+          "line": 70
+        },
+        {
+          "name": "UID",
+          "line": 71
+        },
+        {
+          "name": "GID",
+          "line": 72
+        },
+        {
+          "name": "Rdevmajor",
+          "line": 73
+        },
+        {
+          "name": "Rdevminor",
+          "line": 74
+        },
+        {
+          "name": "Fflags",
+          "line": 75
+        },
+        {
+          "name": "Copy_Fflags",
+          "line": 76
+        },
+        {
+          "name": "Mtime",
+          "line": 78
+        },
+        {
+          "name": "Mtime_Nsec",
+          "line": 79
+        },
+        {
+          "name": "Mtime_Set",
+          "line": 80
+        },
+        {
+          "name": "Atime",
+          "line": 81
+        },
+        {
+          "name": "Atime_Nsec",
+          "line": 82
+        },
+        {
+          "name": "Atime_Set",
+          "line": 83
+        },
+        {
+          "name": "Ctime",
+          "line": 84
+        },
+        {
+          "name": "Ctime_Nsec",
+          "line": 85
+        },
+        {
+          "name": "Ctime_Set",
+          "line": 86
+        },
+        {
+          "name": "Btime",
+          "line": 87
+        },
+        {
+          "name": "Btime_Nsec",
+          "line": 88
+        },
+        {
+          "name": "Btime_Set",
+          "line": 89
+        },
+        {
+          "name": "Sparse_Count",
+          "line": 90
+        },
+        {
+          "name": "Encrypted",
+          "line": 91
+        },
+        {
+          "name": "Xattr_Reset",
+          "line": 92
+        },
+        {
+          "name": "Xattr_Next",
+          "line": 93
+        },
+        {
+          "name": "ACL_Reset",
+          "line": 95
+        },
+        {
+          "name": "ACL_Next",
+          "line": 96
+        },
+        {
+          "name": "Strnlen",
+          "line": 98
+        },
+        {
+          "name": "Memcpy",
+          "line": 99
+        },
+        {
+          "name": "Bounded",
+          "line": 100
+        },
+        {
+          "name": "Path",
+          "line": 109
+        },
+        {
+          "name": "Link_Contained",
+          "line": 127
+        },
+        {
+          "name": "Clock_Value",
+          "line": 143
+        },
+        {
+          "name": "Stage",
+          "line": 154
+        },
+        {
+          "name": "Release_Resources",
+          "line": 167
+        },
+        {
+          "name": "Cleanup",
+          "line": 180
+        },
+        {
+          "name": "Check_Time",
+          "line": 182
+        },
+        {
+          "name": "Attributes_To_CAS",
+          "line": 187
+        },
+        {
+          "name": "Content_To_CAS",
+          "line": 236
+        },
+        {
+          "name": "Resolve_Links",
+          "line": 262
+        },
+        {
+          "name": "Free",
+          "line": 265
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Indefinite_Ordered_Maps",
+        "Ada.Containers.Vectors",
+        "Ada.Strings.Unbounded",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "Interfaces.C.Strings",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Deb_Container",
+        "Pkg_Deb_Data_Stream",
+        "Pkg_Tar_Framing",
+        "System"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_payload.ads",
+      "sha256": "bffce1c9afdd1b0af40c2932b22bfd9727b3ad33d000739afcf3417c27a3699e",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Payload",
+          "line": 7
+        },
+        {
+          "name": "Byte_Strings",
+          "line": 9
+        },
+        {
+          "name": "Stage",
+          "line": 28
+        },
+        {
+          "name": "Clear",
+          "line": 30
+        },
+        {
+          "name": "Count",
+          "line": 31
+        },
+        {
+          "name": "Original_Hash",
+          "line": 32
+        },
+        {
+          "name": "Tar_Hash",
+          "line": 33
+        },
+        {
+          "name": "Find",
+          "line": 34
+        },
+        {
+          "name": "Read_Entry",
+          "line": 35
+        },
+        {
+          "name": "Finalize",
+          "line": 51
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "Ada.Strings.Bounded",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Tar_Framing",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_deb_relations.adb",
       "sha256": "af6f7768bc39bc48ba9b05178d123ba1e65cbcf60bb58a410328eb5d961066fe",
       "repository": "pkgcore",
@@ -11221,6 +11586,138 @@
       "with_dependencies": [
         "MC_Signatures",
         "MC_Store",
+        "MC_Types"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_tar_framing.adb",
+      "sha256": "17725ee0b5637837b1c86ca833c648fafe637f24b820f0df396cf7f21e06f68e",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Tar_Framing",
+          "line": 5
+        },
+        {
+          "name": "Count",
+          "line": 9
+        },
+        {
+          "name": "At_Index",
+          "line": 10
+        },
+        {
+          "name": "Terminator",
+          "line": 12
+        },
+        {
+          "name": "Scan",
+          "line": 13
+        },
+        {
+          "name": "Free",
+          "line": 27
+        },
+        {
+          "name": "Check_Time",
+          "line": 29
+        },
+        {
+          "name": "Read",
+          "line": 34
+        },
+        {
+          "name": "Number",
+          "line": 42
+        },
+        {
+          "name": "Signed_Number",
+          "line": 65
+        },
+        {
+          "name": "All_Zero",
+          "line": 74
+        },
+        {
+          "name": "Zeroes",
+          "line": 76
+        },
+        {
+          "name": "Pax",
+          "line": 86
+        },
+        {
+          "name": "Keys",
+          "line": 87
+        },
+        {
+          "name": "Text",
+          "line": 91
+        },
+        {
+          "name": "Decimal",
+          "line": 96
+        },
+        {
+          "name": "Parse_Clock",
+          "line": 108
+        },
+        {
+          "name": "Valid_ACL",
+          "line": 133
+        },
+        {
+          "name": "Keys",
+          "line": 134
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Indefinite_Ordered_Sets",
+        "Ada.Unchecked_Deallocation",
+        "MC_Clock"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_tar_framing.ads",
+      "sha256": "0b7f917dbdf322711462174771d12ec52323b09d943ded240bc8af26bbd33627",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Tar_Framing",
+          "line": 7
+        },
+        {
+          "name": "Scan",
+          "line": 26
+        },
+        {
+          "name": "Count",
+          "line": 28
+        },
+        {
+          "name": "At_Index",
+          "line": 29
+        },
+        {
+          "name": "Terminator",
+          "line": 30
+        },
+        {
+          "name": "Frame_Vectors",
+          "line": 36
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Vectors",
+        "Ada.Strings.Unbounded",
+        "Interfaces",
+        "MC_FS",
         "MC_Types"
       ],
       "semantic_analysis": false

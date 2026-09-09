@@ -3257,6 +3257,39 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-114",
+      "title": "版付き世代マニフェストとnative保持閉包の同一予約内検査",
+      "shall": "旧世代形式の予約領域を維持し、新版へcatalog保持hashを束縛しなければならない。組立て・公開・現世代native観測で欠落検査を再構築より先に行い、既存pinを別用途で上書きせず、有限期限と認可後の期限を検査する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0074"
+      ],
+      "spec": [
+        "distribution/native/generation-retention.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_manifest.ads",
+        "pkgcore/runtime/pkg_generation_manifest.adb",
+        "pkgcore/runtime/pkg_generation_stage.ads",
+        "pkgcore/runtime/pkg_generation_stage.adb",
+        "pkgcore/runtime/pkg_generation_publisher.ads",
+        "pkgcore/runtime/pkg_generation_publisher.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_stage_tests.adb",
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/compare_current_catalog.py"
+      ],
+      "hazards": [
+        "HAZ-100"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

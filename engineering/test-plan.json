@@ -624,7 +624,7 @@
         "$TEMP/bank"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "composed generation publication, recovery and native accepted-catalog observation under reservations; fixture catalog is real, staged tree and authorities remain synthetic"
+      "note": "composed generation publication/recovery, versioned retention binding and every fixture member loss at five boundaries; finite and callback-expired deadlines; fixture catalog is real, staged tree and authorities remain synthetic"
     },
     {
       "main": "pkgcore/tests/run_deb_container_tests.adb",

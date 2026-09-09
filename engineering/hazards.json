@@ -1103,6 +1103,17 @@
         "REQ-113"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-100",
+      "title": "世代と保持hashの切断・旧形式によるnative検査迂回・期限後の認可",
+      "severity": "critical",
+      "mitigation": "NIAGEN02に正確な閉包を束縛し、公開とnative観測は新形式を必須とする。既存世代pinから参照し、全掲載objectを再構築前に検査する。認可callbackの前後で期限を照合する。",
+      "residual_risk": "Catalog retention linked to synthetic generation publication only. Full history/effect/trust/recovery roots, safe GC, production authenticated admission, complete native payload execution and physical boot remain unqualified.",
+      "requirements": [
+        "REQ-114"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

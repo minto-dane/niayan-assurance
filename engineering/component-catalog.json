@@ -11068,58 +11068,66 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.adb",
-      "sha256": "be8d6aca4ebe9310485bd57c43aa32b64d1bb4dfffd476e52bed3438a30c23c3",
+      "sha256": "4262cb1fca52cbe9190ee90a62f89d8a2a8920da2fa76477e466f78b83315c47",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Generation_Manifest",
-          "line": 4
+          "line": 5
+        },
+        {
+          "name": "Magic",
+          "line": 9
         },
         {
           "name": "Valid",
-          "line": 8
+          "line": 11
         },
         {
           "name": "Encode",
-          "line": 24
+          "line": 29
         },
         {
           "name": "Decode",
-          "line": 40
+          "line": 46
+        },
+        {
+          "name": "Check_Retention",
+          "line": 70
         },
         {
           "name": "Transaction",
-          "line": 61
+          "line": 77
         },
         {
           "name": "Load_Plan",
-          "line": 68
+          "line": 84
         },
         {
           "name": "Free",
-          "line": 71
+          "line": 87
         },
         {
           "name": "Earlier",
-          "line": 92
+          "line": 108
         },
         {
           "name": "Rank",
-          "line": 93
+          "line": 109
         },
         {
           "name": "Contained_Link",
-          "line": 103
+          "line": 119
         },
         {
           "name": "Check",
-          "line": 128
+          "line": 144
         },
         {
           "name": "Free",
-          "line": 130
+          "line": 146
         }
       ],
       "with_dependencies": [
@@ -11127,13 +11135,14 @@
         "MC_Codec",
         "MC_FS",
         "MC_SHA256",
-        "MC_Text"
+        "MC_Text",
+        "Pkg_Catalog_Retention"
       ],
       "semantic_analysis": false
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.ads",
-      "sha256": "69eb6f32c3eb206b589c0ee0f7f4c9e0ba628691d2c48a0bc13d31e9910dfcc0",
+      "sha256": "7ba7eda8b9f5fc25d7ce22dfd579a28154e7e68b1e3945cbeaafdc27d1d543b3",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11144,27 +11153,31 @@
         },
         {
           "name": "Valid",
-          "line": 21
-        },
-        {
-          "name": "Encode",
-          "line": 22
-        },
-        {
-          "name": "Decode",
-          "line": 23
-        },
-        {
-          "name": "Transaction",
           "line": 24
         },
         {
-          "name": "Load_Plan",
+          "name": "Encode",
           "line": 25
         },
         {
-          "name": "Check",
+          "name": "Decode",
+          "line": 26
+        },
+        {
+          "name": "Transaction",
           "line": 27
+        },
+        {
+          "name": "Load_Plan",
+          "line": 28
+        },
+        {
+          "name": "Check",
+          "line": 30
+        },
+        {
+          "name": "Check_Retention",
+          "line": 31
         }
       ],
       "with_dependencies": [
@@ -11176,7 +11189,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.adb",
-      "sha256": "f516ae19023663da2de81f6c489b03953776f235367eddfe59fdf85ebb5a2535",
+      "sha256": "1535cf368c3628229ae83947274f00ec77e6c216880178bba0001106be7ce9e1",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11227,43 +11240,47 @@
         },
         {
           "name": "Close_Observation",
-          "line": 81
+          "line": 82
         },
         {
           "name": "Observe_And_Lock",
-          "line": 86
+          "line": 87
         },
         {
           "name": "Read_Current",
-          "line": 113
+          "line": 114
         },
         {
           "name": "Read_Current_Catalog",
-          "line": 122
+          "line": 123
         },
         {
           "name": "Clear_Result",
-          "line": 127
+          "line": 128
         },
         {
           "name": "Check_Time",
-          "line": 129
+          "line": 130
         },
         {
           "name": "Publish",
-          "line": 146
+          "line": 149
+        },
+        {
+          "name": "Time_Left",
+          "line": 155
         },
         {
           "name": "Guard",
-          "line": 152
+          "line": 162
         },
         {
           "name": "Engine",
-          "line": 163
+          "line": 175
         },
         {
           "name": "Done",
-          "line": 165
+          "line": 177
         }
       ],
       "with_dependencies": [
@@ -11289,7 +11306,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.ads",
-      "sha256": "7d783ecc21ffecd90edd7eeeab6e1b95ed6255d9c786fefbba3a168632a3bc25",
+      "sha256": "ce3651e17f6c31b5844c3de44ec796bc50ccf4296ef2c5920f5cb1edb22590e3",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11326,104 +11343,113 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.adb",
-      "sha256": "1cc9e7c3cdd73da70789f9ba453ec48d0a49509dea59ca825cf23b55afae6014",
+      "sha256": "328220998c03e920ff4f68662d051879dc6e3f74b14d4e163d209d615d2c7fc1",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Generation_Stage",
-          "line": 7
-        },
-        {
-          "name": "GM",
           "line": 8
         },
         {
-          "name": "Free",
-          "line": 14
+          "name": "GM",
+          "line": 9
         },
         {
-          "name": "Gate",
+          "name": "Free",
           "line": 15
         },
         {
+          "name": "Time_Left",
+          "line": 16
+        },
+        {
+          "name": "Gate",
+          "line": 23
+        },
+        {
+          "name": "Check_Content",
+          "line": 30
+        },
+        {
           "name": "Read_Binding",
-          "line": 20
+          "line": 37
         },
         {
           "name": "Provision",
-          "line": 29
+          "line": 46
         },
         {
           "name": "Deny_Unused",
-          "line": 34
+          "line": 51
         },
         {
           "name": "Engine",
-          "line": 38
+          "line": 55
         },
         {
           "name": "Done",
-          "line": 39
+          "line": 56
         },
         {
           "name": "Advance",
-          "line": 75
-        },
-        {
-          "name": "Batch_Gate",
-          "line": 81
-        },
-        {
-          "name": "Engine",
           "line": 93
         },
         {
+          "name": "Batch_Gate",
+          "line": 99
+        },
+        {
+          "name": "Engine",
+          "line": 113
+        },
+        {
           "name": "Free_Buffer",
-          "line": 96
+          "line": 116
         },
         {
           "name": "Done",
-          "line": 98
+          "line": 118
         },
         {
           "name": "Count_Children",
-          "line": 161
+          "line": 182
         },
         {
           "name": "Getdents64",
-          "line": 162
+          "line": 183
         },
         {
           "name": "Close",
-          "line": 197
+          "line": 218
         },
         {
           "name": "Held",
-          "line": 203
+          "line": 224
         },
         {
           "name": "Manifest",
-          "line": 204
+          "line": 225
         },
         {
           "name": "Verify_And_Hold",
-          "line": 205
+          "line": 226
         },
         {
           "name": "Done",
-          "line": 217
+          "line": 238
         },
         {
           "name": "Inspect",
-          "line": 287
+          "line": 309
         }
       ],
       "with_dependencies": [
         "Ada.Unchecked_Deallocation",
         "Interfaces.C",
         "MC_Atomic",
+        "MC_Clock",
         "MC_Dirents",
         "MC_FS",
         "MC_Hex",
@@ -11446,7 +11472,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.ads",
-      "sha256": "3799d4096c79b08fde061cbb90739d5cbdafe14f163e06aec3f54dc101fb17d1",
+      "sha256": "d549e693e430216ec2ccd7febd28b8c8a6c639c5fc2ccecfa5c433c5a0d7a8fb",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",

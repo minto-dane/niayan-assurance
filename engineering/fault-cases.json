@@ -1268,6 +1268,17 @@
       "expected": "正確なcatalog由来集合だけを認め、欠落した掲載オブジェクトは検査時に再生成せず拒否する。Prepareで明示再生成後は同じhashを復元し、pin衝突は既存対象を保つ。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_catalog_store_tests.adb"
+    },
+    {
+      "id": "FAULT-114",
+      "scenario": "v1/v2形式・独立transaction vector、旧形式公開拒否、五境界で閉包と全member欠落、空/無期限・認可中の期限切れ、不正manifest hash、復旧行列と独立原本reader",
+      "requirements": [
+        "REQ-114"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "保持欠落を再生成せず失敗し、未組立てrootと確定済み状態を保つ。旧形式は構造検査を維持するがnative公開へ使えず、遅延認可は受け入れない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

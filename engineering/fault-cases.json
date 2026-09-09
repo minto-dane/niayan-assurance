@@ -1092,6 +1092,17 @@
       "expected": "候補を現行として返さず、全gateを通して同じ記録を再開する。root/catalogの対を一緒に確定し、結果不明・欠落を自動修復しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-098",
+      "scenario": "スクリプトを持たない変更元による発火、await/noawaitの混在、旧新版と同一batchの重複、未知命令と非正規パス",
+      "requirements": [
+        "REQ-098"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "受信者と待機関係を落とさず保持し、未対応の意味を拒否する。原本hashを維持し、handlerの実行や完了を捏造しない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/tests/test_debian_triggers.py"
     }
   ]
 }

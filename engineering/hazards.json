@@ -927,6 +927,17 @@
         "REQ-097"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-084",
+      "title": "暗黙のトリガー効果と待機関係の欠落",
+      "severity": "critical",
+      "mitigation": "全受信宣言の成分prefixと状態変化を有界に照合し、両者のawait条件を保持する。生成物を独立検査してから同じnative transactionで完了する。",
+      "residual_risk": "Routing only; handler execution, cyclic activation, live package states and pending-state recovery remain unqualified.",
+      "requirements": [
+        "REQ-098"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

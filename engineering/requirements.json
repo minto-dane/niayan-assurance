@@ -2803,6 +2803,36 @@
         "target-power-loss-tests",
         "target-boot-recovery-tests"
       ]
+    },
+    {
+      "id": "REQ-098",
+      "title": "元DEBのトリガー発火と待機条件を保持する",
+      "shall": "interestとactivateの待機条件、旧新宣言、ファイル変更による発火を原本hashとともに保持する。発火の観測をhandler実行や全効果の完了と扱ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0057"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0057.ja.md",
+        "distribution/native/deb-triggers.ja.md"
+      ],
+      "code": [
+        "distribution/tools/debian_triggers.py",
+        "distribution/tools/deb_archive.py",
+        "distribution/tools/nia_catalog.py"
+      ],
+      "tests": [
+        "distribution/tests/test_debian_triggers.py"
+      ],
+      "hazards": [
+        "HAZ-084"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "original-deb-corpus-tests",
+        "native-lifecycle-and-wal-integration",
+        "independent-adapter-review"
+      ]
     }
   ]
 }

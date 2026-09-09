@@ -3229,6 +3229,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-113",
+      "title": "Native catalog由来の正確なCAS保持閉包",
+      "shall": "catalogと全原本・control内容・data・payload内容と属性の正確な集合を再観測して正規CAS一覧に束縛し、既存immutable pinへ保存しなければならない。検査では再生成の前に全掲載オブジェクトを検査し、省略・余剰と欠落を成功にしない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0073"
+      ],
+      "spec": [
+        "distribution/native/catalog-retention.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_catalog_retention.ads",
+        "pkgcore/runtime/pkg_catalog_retention.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_catalog_store_tests.adb",
+        "pkgcore/tests/compare_catalog_retention.py"
+      ],
+      "hazards": [
+        "HAZ-099"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -24,6 +24,7 @@ def generated():
         if repo == 'pkgcore':
             lines.append('python3 "$PWD/tests/make_deb_final_set_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_deb_transition_fixtures.py" --check')
+            lines.append('python3 "$PWD/tests/make_selected_catalog_fixtures.py" --check')
         for test in tests:
             if not test['main'].startswith(repo+'/'):
                 continue
@@ -52,7 +53,8 @@ def generated():
                 lines.extend(['if '+command+' > "$D/catalog-store-native.log" 2>&1; then',
                               '  cat "$D/catalog-store-native.log"', 'else',
                               '  cat "$D/catalog-store-native.log"', '  exit 1', 'fi',
-                              'python3 "$PWD/tests/compare_catalog_store.py" --media "$PWD/tests/fixtures/selected-catalog" --native "$D/catalog-store-native.log" --cas "$D/run_catalog_store_tests/store" --output "$D/catalog-store-oracle.json"'])
+                              'python3 "$PWD/tests/compare_catalog_store.py" --media "$PWD/tests/fixtures/selected-catalog" --native "$D/catalog-store-native.log" --cas "$D/run_catalog_store_tests/store" --output "$D/catalog-store-oracle.json"',
+                              'python3 "$PWD/tests/compare_catalog_retention.py" --media "$PWD/tests/fixtures/selected-catalog" --native "$D/catalog-store-native.log" --cas "$D/run_catalog_store_tests/store" --output "$D/catalog-retention-oracle.json"'])
             elif repo == 'pkgcore' and name == 'run_generation_publication_tests':
                 lines.extend(['if '+command+' > "$D/current-catalog-native.log" 2>&1; then',
                               '  cat "$D/current-catalog-native.log"', 'else',

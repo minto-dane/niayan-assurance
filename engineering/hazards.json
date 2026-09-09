@@ -1092,6 +1092,17 @@
         "REQ-112"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-099",
+      "title": "保持一覧の参照欠落・pinの型混同・欠落の再生成による隠蔽",
+      "severity": "critical",
+      "mitigation": "元DEBから正確な重複なし集合を再構築して比較し、先に掲載オブジェクトを全検査する。pin identityを既存の別用途から奪わず、期限・失敗出力と不確定な永続化を区別する。",
+      "residual_risk": "Catalog-derived materialized closure only. Whole-generation/trust/effect/recovery roots, retention policy, authenticated root reservation and safe GC deletion remain unqualified. No objects or pins are deleted.",
+      "requirements": [
+        "REQ-113"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

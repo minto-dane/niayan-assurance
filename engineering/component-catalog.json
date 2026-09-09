@@ -9038,6 +9038,133 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_catalog_retention.adb",
+      "sha256": "81e68e02bd78827d404c941a738ab15a7b740754c4c6f883cab8d8773bf4b7fc",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Catalog_Retention",
+          "line": 5
+        },
+        {
+          "name": "C",
+          "line": 6
+        },
+        {
+          "name": "DC",
+          "line": 7
+        },
+        {
+          "name": "Objects",
+          "line": 8
+        },
+        {
+          "name": "Time_Left",
+          "line": 12
+        },
+        {
+          "name": "Prepare",
+          "line": 18
+        },
+        {
+          "name": "Free",
+          "line": 26
+        },
+        {
+          "name": "Check",
+          "line": 29
+        },
+        {
+          "name": "Tick",
+          "line": 31
+        },
+        {
+          "name": "Cleanup",
+          "line": 33
+        },
+        {
+          "name": "Include",
+          "line": 35
+        },
+        {
+          "name": "Verify",
+          "line": 91
+        },
+        {
+          "name": "Check",
+          "line": 97
+        },
+        {
+          "name": "Tick",
+          "line": 99
+        },
+        {
+          "name": "Cleanup",
+          "line": 101
+        },
+        {
+          "name": "Pin",
+          "line": 140
+        },
+        {
+          "name": "Verify_Pin",
+          "line": 155
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Ordered_Sets",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Catalog_Store",
+        "Pkg_Deb_Container"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_catalog_retention.ads",
+      "sha256": "7ebca64da41f41b301f1044ea900169af372ef5bae17c40d048656b5125eee9f",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Catalog_Retention",
+          "line": 5
+        },
+        {
+          "name": "Prepare",
+          "line": 10
+        },
+        {
+          "name": "Verify",
+          "line": 12
+        },
+        {
+          "name": "Pin",
+          "line": 14
+        },
+        {
+          "name": "Verify_Pin",
+          "line": 16
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Deb_Control",
+        "Pkg_Payload_Index",
+        "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_catalog_store.adb",
       "sha256": "74db3593c6fa4df39e8383673e4e9feec44ca510cb703cd0af6e70427db6cfd7",
       "repository": "pkgcore",

@@ -773,7 +773,7 @@
         "$TEMP/store"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "canonical catalog CAS persistence, native reobservation, retained metadata/claims, malformed framing and missing originals; no current-generation authority"
+      "note": "fresh private CAS; persisted catalog plus exact native retention closure, immutable pins, two independent fixture oracles; no extraction or installation"
     }
   ]
 }

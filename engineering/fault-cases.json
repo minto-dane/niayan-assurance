@@ -1257,6 +1257,17 @@
       "expected": "受理済みの正確なdescriptor/catalog/payloadだけを返し、不明/欠落/期限切れ/排他失敗は全出力を消す。旧観測のplanは現世代を上書きしない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-113",
+      "scenario": "二catalogの正規保持一覧、全掲載オブジェクトの単独省略/欠落、余剰/重複/順序/形式不正、圧縮control/data・script内容・七payload種・xattr/ACL、破損byte、pin再open/衝突/欠落、再生成の明示的区別、期限とUID0",
+      "requirements": [
+        "REQ-113"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "正確なcatalog由来集合だけを認め、欠落した掲載オブジェクトは検査時に再生成せず拒否する。Prepareで明示再生成後は同じhashを復元し、pin衝突は既存対象を保つ。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_catalog_store_tests.adb"
     }
   ]
 }

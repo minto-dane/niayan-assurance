@@ -444,6 +444,12 @@
       "path": "assurance/docs/engineering/adr/ADR-0072.ja.md",
       "status": "proposed-for-review",
       "supersedes": []
+    },
+    {
+      "id": "ADR-0073",
+      "path": "assurance/docs/engineering/adr/ADR-0073.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
     }
   ]
 }

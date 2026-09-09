@@ -2833,6 +2833,33 @@
         "native-lifecycle-and-wal-integration",
         "independent-adapter-review"
       ]
+    },
+    {
+      "id": "REQ-099",
+      "title": "媒体索引と原本の再照合",
+      "shall": "媒体索引は元DEBの識別子とhashを保持し、一覧でも原本を再検査しなければならない。古い索引と部分的な書込みを拒否し、供給認証・導入済み状態・実行許可へ昇格させてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0058"
+      ],
+      "spec": [
+        "distribution/native/media.ja.md"
+      ],
+      "code": [
+        "distribution/native/media.py",
+        "distribution/native/package_cli.py"
+      ],
+      "tests": [
+        "distribution/native/test_media.py"
+      ],
+      "hazards": [
+        "HAZ-085"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

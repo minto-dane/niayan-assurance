@@ -938,6 +938,17 @@
         "REQ-098"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-085",
+      "title": "古い媒体索引または不完全な書込みの信用",
+      "severity": "high",
+      "mitigation": "原本の有界読取と前後属性確認、毎回の再検査、directory予約、一時索引のfsync/renameを使う。索引の成功を供給認証・導入許可にしない。",
+      "residual_risk": "Unsigned local cache only; noncooperating writers, runtime admission, complete response compatibility and actual power loss remain unqualified.",
+      "requirements": [
+        "REQ-099"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

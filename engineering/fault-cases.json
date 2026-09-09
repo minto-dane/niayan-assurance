@@ -1103,6 +1103,17 @@
       "expected": "受信者と待機関係を落とさず保持し、未対応の意味を拒否する。原本hashを維持し、handlerの実行や完了を捏造しない。",
       "execution": "not-run",
       "reference_tests": "distribution/tests/test_debian_triggers.py"
+    },
+    {
+      "id": "FAULT-099",
+      "scenario": "媒体の途中変更、古い索引、同一識別子の重複、リンク・非通常ファイル、書込み・fsync・renameの失敗",
+      "requirements": [
+        "REQ-099"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "原本と既存の完全な索引を保持する。rename後の同期失敗は完了不明として失敗し、署名済みや導入済みと偽らない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/test_media.py"
     }
   ]
 }

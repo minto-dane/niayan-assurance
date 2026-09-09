@@ -1081,6 +1081,17 @@
       "expected": "非公開状態だけを変更し、全体の不一致と欠落を拒否する。記録された確定境界を再開し、結果不明の末尾を保持して自動修復しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_stage_tests.adb"
+    },
+    {
+      "id": "FAULT-097",
+      "scenario": "認可・barrier・構成署名・解決証拠の不成立、候補適用後の確定拒否、確定窓での中断、公開journal/lock欠落",
+      "requirements": [
+        "REQ-097"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "候補を現行として返さず、全gateを通して同じ記録を再開する。root/catalogの対を一緒に確定し、結果不明・欠落を自動修復しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

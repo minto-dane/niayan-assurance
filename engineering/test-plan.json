@@ -605,6 +605,25 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "synthetic inactive generations and test-only authorization in fresh unprivileged directories; no active root publication"
+    },
+    {
+      "main": "pkgcore/tests/run_generation_publication_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/root",
+        "$TEMP/state",
+        "$TEMP/store",
+        "$TEMP/bank"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/root",
+        "$TEMP/state",
+        "$TEMP/store",
+        "$TEMP/bank"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "fresh private directories; synthetic stages, mandatory composed guard and test-only two-role signatures; no native boot or production authority"
     }
   ]
 }

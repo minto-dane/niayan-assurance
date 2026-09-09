@@ -916,6 +916,17 @@
         "REQ-096"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-083",
+      "title": "検査後の変更または未確定候補の公開",
+      "severity": "critical",
+      "mitigation": "stageの二つの予約を全体検査後も保持し、publication予約と全managed gateを接続する。Active要求がないaccepted planと終端journalから単一descriptorを読む。",
+      "residual_risk": "Logical publication SDK only; actual boot/mount activation, native effects, independent trust floors, noncooperating privileged writers and hardware faults remain unqualified.",
+      "requirements": [
+        "REQ-097"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

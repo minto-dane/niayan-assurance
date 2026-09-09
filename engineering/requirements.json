@@ -2771,6 +2771,38 @@
         "target-power-loss-tests",
         "atomic-root-catalog-publication"
       ]
+    },
+    {
+      "id": "REQ-097",
+      "title": "検査済み世代とcatalogの単一確定",
+      "shall": "全体検査の予約を公開完了まで保持し、全managed gateを通す。現行rootとcatalogは同じaccepted descriptorから取得し、進行中の候補や欠落履歴を確定として扱ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0056"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0056.ja.md",
+        "distribution/native/generation-publication.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_descriptor.adb",
+        "pkgcore/runtime/pkg_generation_publisher.adb",
+        "pkgcore/runtime/pkg_generation_stage.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/run_generation_stage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-083"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "isolated-native-restart-tests",
+        "independent-adapter-review",
+        "target-power-loss-tests",
+        "target-boot-recovery-tests"
+      ]
     }
   ]
 }

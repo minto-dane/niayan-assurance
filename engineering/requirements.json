@@ -2971,6 +2971,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-104",
+      "title": "原本binary関係項目のnative構文と順序保持",
+      "shall": "binary関係項目を原本controlへ束縛し、項目別の選択肢・版条件・ソース保持規則を検査しなければならない。アーキテクチャ指定や選択肢の順序を削らず、構文成功を充足・phase・実行認可と扱ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0063"
+      ],
+      "spec": [
+        "distribution/native/deb-relations.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_relations.ads",
+        "pkgcore/runtime/pkg_deb_relations.adb",
+        "pkgcore/runtime/pkg_deb_metadata.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_relations_tests.adb",
+        "pkgcore/tests/run_deb_metadata_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-090"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

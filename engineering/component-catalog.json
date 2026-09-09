@@ -9522,22 +9522,18 @@
     },
     {
       "path": "pkgcore/runtime/pkg_deb_metadata.adb",
-      "sha256": "cd1f038053392aacc02ce9d21ab1f6bb38424fdd685e4db86b1e7c383f3a0d20",
+      "sha256": "0a340387652d575d7f876953cc9fd674e9191a38f193a8acfb90eb5e017d3aad",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Deb_Metadata",
-          "line": 5
+          "line": 6
         },
         {
           "name": "Inspect",
-          "line": 7
-        },
-        {
-          "name": "Free",
-          "line": 13
+          "line": 8
         },
         {
           "name": "Free",
@@ -9548,12 +9544,16 @@
           "line": 15
         },
         {
+          "name": "Free",
+          "line": 16
+        },
+        {
           "name": "Done",
-          "line": 17
+          "line": 18
         },
         {
           "name": "Check_Time",
-          "line": 19
+          "line": 20
         }
       ],
       "with_dependencies": [
@@ -9562,13 +9562,14 @@
         "MC_Clock",
         "MC_Posix",
         "Pkg_Deb_Container",
-        "Pkg_Deb_Control"
+        "Pkg_Deb_Control",
+        "Pkg_Deb_Relations"
       ],
       "semantic_analysis": false
     },
     {
       "path": "pkgcore/runtime/pkg_deb_metadata.ads",
-      "sha256": "eefc0c54f6e6eb26dc7e8409ac33d0741c0065e73d8f67da1cd9aab6a88a7119",
+      "sha256": "779fdb54c45cf621358ecefa53d7702a76a3f3934452817bfd9ce1887ac4ef02",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9586,6 +9587,148 @@
         "MC_Store",
         "MC_Types",
         "Pkg_Deb_Fields"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_relations.adb",
+      "sha256": "af6f7768bc39bc48ba9b05178d123ba1e65cbcf60bb58a410328eb5d961066fe",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Relations",
+          "line": 3
+        },
+        {
+          "name": "Field_Name",
+          "line": 5
+        },
+        {
+          "name": "Count",
+          "line": 21
+        },
+        {
+          "name": "Groups",
+          "line": 22
+        },
+        {
+          "name": "Kind_Of",
+          "line": 23
+        },
+        {
+          "name": "Control_Hash",
+          "line": 24
+        },
+        {
+          "name": "White",
+          "line": 25
+        },
+        {
+          "name": "Alnum",
+          "line": 26
+        },
+        {
+          "name": "Name_Char",
+          "line": 27
+        },
+        {
+          "name": "Parse",
+          "line": 28
+        },
+        {
+          "name": "At_End",
+          "line": 32
+        },
+        {
+          "name": "Ch",
+          "line": 33
+        },
+        {
+          "name": "Skip",
+          "line": 34
+        },
+        {
+          "name": "Part",
+          "line": 36
+        },
+        {
+          "name": "Read_Field",
+          "line": 109
+        },
+        {
+          "name": "Validate_All",
+          "line": 134
+        },
+        {
+          "name": "Read_Atom",
+          "line": 141
+        },
+        {
+          "name": "Get",
+          "line": 142
+        }
+      ],
+      "with_dependencies": [
+        "MC_SHA256",
+        "Pkg_Deb_Versions"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_relations.ads",
+      "sha256": "1eef0e1a3f1af43f6dd5d28e7496dc1e1e9780cfc501c48e506a7946cdae3fc2",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Relations",
+          "line": 4
+        },
+        {
+          "name": "Field_Name",
+          "line": 15
+        },
+        {
+          "name": "Parse",
+          "line": 16
+        },
+        {
+          "name": "Read_Field",
+          "line": 18
+        },
+        {
+          "name": "Validate_All",
+          "line": 20
+        },
+        {
+          "name": "Count",
+          "line": 21
+        },
+        {
+          "name": "Groups",
+          "line": 22
+        },
+        {
+          "name": "Kind_Of",
+          "line": 23
+        },
+        {
+          "name": "Control_Hash",
+          "line": 24
+        },
+        {
+          "name": "Read_Atom",
+          "line": 25
+        }
+      ],
+      "with_dependencies": [
+        "MC_Text",
+        "MC_Types",
+        "Pkg_Deb_Fields",
+        "Pkg_Deb_Semantics"
       ],
       "semantic_analysis": false
     },

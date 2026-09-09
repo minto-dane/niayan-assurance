@@ -1158,6 +1158,17 @@
       "expected": "無効入力で部分結果を返さず、未知項目を原本に保持する。大きな中間結果の寿命を管理し、制限を増やさずに元DEB経路を実行できる。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_metadata_tests.adb"
+    },
+    {
+      "id": "FAULT-104",
+      "scenario": "空の選択肢・末尾separator・不正な版演算子・source専用制約・折返し・Providesの不正演算子・Built-Usingの版欠落・原本取り違え・有界atom数超過",
+      "requirements": [
+        "REQ-104"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "失敗時に部分式や原本digestを返さず、未知architectureを別の意味へ変換しない。原本経路でもすべての採用binary関係項目の構文を検査する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_relations_tests.adb"
     }
   ]
 }

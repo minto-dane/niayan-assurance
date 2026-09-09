@@ -665,6 +665,15 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "raw UTF-8 binary control fields and original DEB identity observation; no execution or installed-state publication"
+    },
+    {
+      "main": "pkgcore/tests/run_deb_relations_tests.adb",
+      "tier": "unit",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "bounded binary relationship grammar and exact control binding; no installation"
     }
   ]
 }

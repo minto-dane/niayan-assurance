@@ -993,6 +993,17 @@
         "REQ-103"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-090",
+      "title": "関係項目の平坦化と不正な充足判定",
+      "severity": "critical",
+      "mitigation": "privateな有界式に項目種別・選択肢group・版条件・architecture labelを保持する。Providesとソース保持の制約を検査し、不正なbinary折返しや原本の取り違えを拒否する。",
+      "residual_risk": "Grammar observation only. Architecture qualification, dependency satisfaction and lifecycle, source retention fulfillment, catalog ownership and execution authorization remain separate requirements.",
+      "requirements": [
+        "REQ-104"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

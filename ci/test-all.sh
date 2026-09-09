@@ -14,25 +14,25 @@ echo 'Running run_recovery_storage_tests'
 timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_recovery_storage_tests" "$D/"run_recovery_storage_tests/state "$D/"run_recovery_storage_tests/store
 mkdir -p "$D/run_qualification_tests"
 echo 'Running run_qualification_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_qualification_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_qualification_tests"
 mkdir -p "$D/run_contract_tests"
 echo 'Running run_contract_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_contract_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_contract_tests"
 mkdir -p "$D/run_ingress_tests"
 echo 'Running run_ingress_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_ingress_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_ingress_tests"
 mkdir -p "$D/run_v2_tests"
 echo 'Running run_v2_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_v2_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_v2_tests"
 mkdir -p "$D/run_resilience_contract_tests"
 echo 'Running run_resilience_contract_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_resilience_contract_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_resilience_contract_tests"
 mkdir -p "$D/run_control_tests"
 echo 'Running run_control_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_control_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_control_tests"
 mkdir -p "$D/run_backup_contract_tests"
 echo 'Running run_backup_contract_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_backup_contract_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_backup_contract_tests"
 mkdir -p "$D/run_control_io_tests"
 mkdir -p "$D/"run_control_io_tests/policy
 mkdir -p "$D/"run_control_io_tests/ops
@@ -48,7 +48,7 @@ echo 'Running run_control_vector_tests'
 timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_control_vector_tests" "$PWD/"tests/fixtures/control-v1
 mkdir -p "$D/run_stop_barrier_tests"
 echo 'Running run_stop_barrier_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_stop_barrier_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_stop_barrier_tests"
 mkdir -p "$D/run_stop_vector_tests"
 echo 'Running run_stop_vector_tests'
 timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_stop_vector_tests" "$PWD/"fixtures/stop-v1
@@ -58,13 +58,13 @@ echo 'Running run_receiver_ledger_tests'
 timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_receiver_ledger_tests" "$D/"run_receiver_ledger_tests/private
 mkdir -p "$D/run_request_replay_tests"
 echo 'Running run_request_replay_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_request_replay_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_request_replay_tests"
 mkdir -p "$D/run_platform_assurance_tests"
 echo 'Running run_platform_assurance_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_platform_assurance_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_platform_assurance_tests"
 mkdir -p "$D/run_journal_budget_tests"
 echo 'Running run_journal_budget_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_journal_budget_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_journal_budget_tests"
 mkdir -p "$D/run_fs_observation_tests"
 mkdir -p "$D/"run_fs_observation_tests/private
 echo 'Running run_fs_observation_tests'
@@ -75,4 +75,4 @@ echo 'Running run_command_lifecycle_tests'
 timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_command_lifecycle_tests" "$D/"run_command_lifecycle_tests/private
 mkdir -p "$D/run_cohort_recovery_tests"
 echo 'Running run_cohort_recovery_tests'
-timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_cohort_recovery_tests" 
+timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 "$PWD/build/test-bin/run_cohort_recovery_tests"

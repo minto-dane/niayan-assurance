@@ -34,7 +34,7 @@ def generated():
                 lines.append('mkdir -p '+arg(directory))
             lines.append('echo '+shlex.quote('Running '+name))
             lines.append('timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 '+
-                         '"$PWD/build/test-bin/'+name+'" '+ ' '.join(map(arg,test['arguments'])))
+                         '"$PWD/build/test-bin/'+name+'"'+ ''.join(' '+arg(value) for value in test['arguments']))
         yield ROOT/repo/'ci/test-all.sh', ('\n'.join(lines)+'\n').encode(), 0o755
         for name in ('gnatprove.lock.json','install-gnatprove.py','proof-guard.py'):
             if repo != 'assurance':

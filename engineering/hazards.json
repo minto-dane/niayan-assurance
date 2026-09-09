@@ -1081,6 +1081,17 @@
         "REQ-111"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-098",
+      "title": "世代記録とnative原本の別時点観測・旧成功結果の流用",
+      "severity": "critical",
+      "mitigation": "共通の観測処理で同じpublication/root予約を取り、CASとjournalを照合してから全原本を再検査する。最後に状態と期限を再検査し、失敗時はdescriptor/catalog/payloadを消す。",
+      "residual_risk": "Consistent planning observation only. Locks are released on return. Production adapters must preserve exact predecessor checks, authenticated reservation and full phase/effect/ownership/CAS retention/boot closure.",
+      "requirements": [
+        "REQ-112"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -613,7 +613,8 @@
         "$TEMP/root",
         "$TEMP/state",
         "$TEMP/store",
-        "$TEMP/bank"
+        "$TEMP/bank",
+        "tests/fixtures/selected-catalog"
       ],
       "result": "not-run",
       "prepare_directories": [
@@ -623,7 +624,7 @@
         "$TEMP/bank"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "fresh private directories; synthetic stages, mandatory composed guard and test-only two-role signatures; no native boot or production authority"
+      "note": "composed generation publication, recovery and native accepted-catalog observation under reservations; fixture catalog is real, staged tree and authorities remain synthetic"
     },
     {
       "main": "pkgcore/tests/run_deb_container_tests.adb",

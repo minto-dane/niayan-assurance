@@ -53,6 +53,11 @@ def generated():
                               '  cat "$D/catalog-store-native.log"', 'else',
                               '  cat "$D/catalog-store-native.log"', '  exit 1', 'fi',
                               'python3 "$PWD/tests/compare_catalog_store.py" --media "$PWD/tests/fixtures/selected-catalog" --native "$D/catalog-store-native.log" --cas "$D/run_catalog_store_tests/store" --output "$D/catalog-store-oracle.json"'])
+            elif repo == 'pkgcore' and name == 'run_generation_publication_tests':
+                lines.extend(['if '+command+' > "$D/current-catalog-native.log" 2>&1; then',
+                              '  cat "$D/current-catalog-native.log"', 'else',
+                              '  cat "$D/current-catalog-native.log"', '  exit 1', 'fi',
+                              'python3 "$PWD/tests/compare_current_catalog.py" --root "$D/run_generation_publication_tests/root" --state "$D/run_generation_publication_tests/state" --cas "$D/run_generation_publication_tests/store" --bank "$D/run_generation_publication_tests/bank" --media "$PWD/tests/fixtures/selected-catalog" --native "$D/current-catalog-native.log" --output "$D/current-catalog-oracle.json"'])
             else:
                 lines.append(command)
         if repo == 'pkgcore':

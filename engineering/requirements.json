@@ -3201,6 +3201,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-112",
+      "title": "受理済み世代とnativeカタログの同一排他区間での観測",
+      "shall": "publication/root/CASの予約を保ちながらaccepted plan・descriptor・manifest・journalと元DEBから再構築したcatalogを結び付けなければならない。失敗時は全出力を消し、観測を長時間の更新認可として流用しない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0072"
+      ],
+      "spec": [
+        "distribution/native/current-catalog.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_publisher.ads",
+        "pkgcore/runtime/pkg_generation_publisher.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/compare_current_catalog.py"
+      ],
+      "hazards": [
+        "HAZ-098"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

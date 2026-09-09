@@ -1246,6 +1246,17 @@
       "expected": "同じfingerprintで正規CAS原本を保存し、完全再観測時だけcatalogとpayloadを返す。失敗は旧成功両出力を消し、Save失敗は入力を保つ。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_catalog_store_tests.adb"
+    },
+    {
+      "id": "FAULT-112",
+      "scenario": "二世代のnative catalog観測、未確定commitと復旧、stale scratch、欠落/破損journal/lock/descriptor、原本/catalog欠落、root/CAS競合、期限/別root、旧世代plan再適用",
+      "requirements": [
+        "REQ-112"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "受理済みの正確なdescriptor/catalog/payloadだけを返し、不明/欠落/期限切れ/排他失敗は全出力を消す。旧観測のplanは現世代を上書きしない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

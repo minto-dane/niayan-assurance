@@ -1026,6 +1026,17 @@
         "REQ-106"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-093",
+      "title": "所有者の追加順による上書き・属性切捨て・原本外hardlinkへの取り違え",
+      "severity": "critical",
+      "mitigation": "完全なprivate inventoryだけを取り込み、原本digestとsource ordinalでhardlinkを区別する。全claimをbyte pathと原本の順に保持し、未完・失敗候補は公開しない。directory共有と祖先の問題を明示し、catalog認可やnamespace解決を代替しない。",
+      "residual_risk": "Candidate source-claim index only. Package identity/version selection, Multi-Arch/Replaces, aliases, effective ownership, configuration/effects, CAS pin closure, real root/boot and authorization remain separate unqualified paths.",
+      "requirements": [
+        "REQ-107"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

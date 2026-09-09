@@ -702,6 +702,21 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "private original-payload observation, complete CAS content and bounded metadata; no extraction, effects or installation"
+    },
+    {
+      "main": "pkgcore/tests/run_payload_index_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/deb-payload",
+        "tests/fixtures/payload-index"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "complete original-source claims, deterministic ordering and explicit overlap/ancestor observations; no installed catalog or filesystem execution"
     }
   ]
 }

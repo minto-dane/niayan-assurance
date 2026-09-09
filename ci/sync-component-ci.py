@@ -120,7 +120,7 @@ jobs:
 '''
         if repo == 'pkgcore':
             workflow = workflow.replace('  proof:\n',
-                '      - name: Verify generation staging and publication refuse root\n'
+                '      - name: Verify generation, payload and index root refusal\n'
                 '        run: sh ci/generation-root-refusal-test.sh\n'
                 '  proof:\n', 1)
         yield ROOT/repo/'.github/workflows/ci.yml',workflow.encode(),0o644

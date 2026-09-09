@@ -3060,6 +3060,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-107",
+      "title": "全原本に束縛した所有権主張の索引",
+      "shall": "元DEBごとの完全payloadからすべての所有権主張と属性を保持し、入力順に依存しない索引とfingerprintを返さなければならない。共有pathの所有者を追加順で選択せず、非directory祖先と暗黙parentを原本情報から区別する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0067"
+      ],
+      "spec": [
+        "distribution/native/payload-index.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_payload_index.ads",
+        "pkgcore/runtime/pkg_payload_index.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_payload_index_tests.adb",
+        "pkgcore/tests/compare_payload_index.py"
+      ],
+      "hazards": [
+        "HAZ-093"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

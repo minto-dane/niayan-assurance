@@ -1191,6 +1191,17 @@
       "expected": "部分inventoryを返さず、完全CAS blobと稼働状態を区別する。対応属性・内容を原本から保持し、呼出側localeを復元する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_payload_tests.adb"
+    },
+    {
+      "id": "FAULT-107",
+      "scenario": "入力順反転、同一原本重複、属性の異なる共有directory、同一内容の別owner、非directory祖先、暗黙parent、別原本の同名path、source破棄、未sealと境界外読取、期限超過とUID0",
+      "requirements": [
+        "REQ-107"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "全claimと原本内inode identityを保持し、部分候補や最後のownerを確定結果として返さない。原本inventoryの破棄後も索引の内容は変わらず、失敗時はcandidate全体を破棄する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_payload_index_tests.adb"
     }
   ]
 }

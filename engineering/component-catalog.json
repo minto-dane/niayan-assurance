@@ -11101,6 +11101,229 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_payload_index.adb",
+      "sha256": "4a00c91756d015c1de34d0f47ec2eba824f0316b0348d7ce3496d50fa2b4ac24",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Payload_Index",
+          "line": 5
+        },
+        {
+          "name": "P",
+          "line": 6
+        },
+        {
+          "name": "Claims",
+          "line": 18
+        },
+        {
+          "name": "Packages",
+          "line": 19
+        },
+        {
+          "name": "Positions",
+          "line": 20
+        },
+        {
+          "name": "Sources",
+          "line": 21
+        },
+        {
+          "name": "Free",
+          "line": 31
+        },
+        {
+          "name": "Clear",
+          "line": 32
+        },
+        {
+          "name": "Finalize",
+          "line": 34
+        },
+        {
+          "name": "Sealed",
+          "line": 36
+        },
+        {
+          "name": "Package_Count",
+          "line": 38
+        },
+        {
+          "name": "Claim_Count",
+          "line": 40
+        },
+        {
+          "name": "Path_Count",
+          "line": 42
+        },
+        {
+          "name": "Fingerprint",
+          "line": 44
+        },
+        {
+          "name": "Time_Left",
+          "line": 46
+        },
+        {
+          "name": "Add",
+          "line": 52
+        },
+        {
+          "name": "Inode_Position",
+          "line": 103
+        },
+        {
+          "name": "Expand",
+          "line": 111
+        },
+        {
+          "name": "Read_Package",
+          "line": 122
+        },
+        {
+          "name": "Read_Claim",
+          "line": 130
+        },
+        {
+          "name": "Read_Inode",
+          "line": 137
+        },
+        {
+          "name": "Seal",
+          "line": 144
+        },
+        {
+          "name": "Less",
+          "line": 149
+        },
+        {
+          "name": "Sorter",
+          "line": 161
+        },
+        {
+          "name": "Number",
+          "line": 162
+        },
+        {
+          "name": "Text",
+          "line": 165
+        },
+        {
+          "name": "Clock",
+          "line": 172
+        },
+        {
+          "name": "Inspect_Path",
+          "line": 228
+        },
+        {
+          "name": "Path_At",
+          "line": 230
+        },
+        {
+          "name": "Lower",
+          "line": 232
+        },
+        {
+          "name": "Directory_Only",
+          "line": 242
+        },
+        {
+          "name": "Ancestor",
+          "line": 249
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Indefinite_Ordered_Maps",
+        "Ada.Containers.Vectors",
+        "Ada.Strings.Unbounded",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Hex",
+        "MC_Posix",
+        "MC_SHA256"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_payload_index.ads",
+      "sha256": "50a8d1daa7c078fa4a97ac4bc04f4dcae46a93f9057b9113e1d48ab38f9f9151",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Payload_Index",
+          "line": 5
+        },
+        {
+          "name": "Add",
+          "line": 26
+        },
+        {
+          "name": "Seal",
+          "line": 28
+        },
+        {
+          "name": "Clear",
+          "line": 29
+        },
+        {
+          "name": "Sealed",
+          "line": 30
+        },
+        {
+          "name": "Package_Count",
+          "line": 31
+        },
+        {
+          "name": "Claim_Count",
+          "line": 32
+        },
+        {
+          "name": "Path_Count",
+          "line": 33
+        },
+        {
+          "name": "Fingerprint",
+          "line": 34
+        },
+        {
+          "name": "Read_Package",
+          "line": 35
+        },
+        {
+          "name": "Read_Claim",
+          "line": 37
+        },
+        {
+          "name": "Read_Inode",
+          "line": 39
+        },
+        {
+          "name": "Inspect_Path",
+          "line": 41
+        },
+        {
+          "name": "Finalize",
+          "line": 64
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Types",
+        "Pkg_Deb_Payload",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_plan_compiler.adb",
       "sha256": "320cfffd923c612f5738fdd399871e3f5f7649b6c8e0af5b5640817df6b44aa1",
       "repository": "pkgcore",

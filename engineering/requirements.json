@@ -3035,10 +3035,12 @@
       "shall": "元DEBの展開tarを独立framingと照合し、採用profileの内容・属性・リンクを保持した完全inventoryだけを返さなければならない。未対応拡張を無視し、古い世代形式へ属性を削って渡してはならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0065"
+        "ADR-0065",
+        "ADR-0066"
       ],
       "spec": [
-        "distribution/native/deb-payload.ja.md"
+        "distribution/native/deb-payload.ja.md",
+        "distribution/native/generation-image.ja.md"
       ],
       "code": [
         "pkgcore/runtime/pkg_tar_framing.ads",

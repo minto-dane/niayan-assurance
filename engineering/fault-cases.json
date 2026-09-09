@@ -1288,6 +1288,17 @@
       "expected": "同一予約で検査した前後世代とpolicyだけへ計画を束縛する。失敗では全成功出力を消し、欠落の再生成や確定済み状態の書換えを行わない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-116",
+      "scenario": "三世代形式の正規性と降格拒否、保持する検査記録の欠落、policy順序・重複・追加、26不正記録、組立て済み候補の結果/root/初期構築偽装、独立Binding照合",
+      "requirements": [
+        "REQ-116"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "基準と候補に束縛されたnative結果だけを認める。構造的に正しい不正候補でも公開前に止め、実root.stateとgeneration.nextを変えず、失敗した検査の旧Bindingを消す。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

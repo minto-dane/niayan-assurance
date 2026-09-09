@@ -1123,6 +1123,17 @@
       "residual_risk": "Consistent planning evidence only. Reservations end on return. Production supply/policy authentication and admission, execution phases, effective ownership, full effects, protection migration and physical root/boot remain unqualified.",
       "requirements": ["REQ-115"],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-102",
+      "title": "公開計画とnative検査の切断・検査記録改変・初期構築の偽装",
+      "severity": "critical",
+      "mitigation": "NIAGEN03から正確な検査記録を参照し、既存物理計画の認可へ束縛する。実際の基準と保持閉包を予約下で照合し、記録内policyで元DEBから再検査する。旧版公開や不正なnative結果を成功callbackで置換しない。",
+      "residual_risk": "Internal publication SDK with synthetic stages. Production supply/policy adapters, complete phase/effect/ownership interpretation, legacy recovery migration, whole-generation attributes and actual root/boot remain unqualified. CAS reservation handover is retained.",
+      "requirements": [
+        "REQ-116"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

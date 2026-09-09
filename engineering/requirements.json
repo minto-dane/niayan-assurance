@@ -3302,6 +3302,38 @@
       "tests": ["pkgcore/tests/run_generation_publication_tests.adb", "pkgcore/tests/compare_current_catalog.py"],
       "hazards": ["HAZ-101"],
       "required_evidence": ["independent-design-review", "source-bound-tests", "target-fault-tests"]
+    },
+    {
+      "id": "REQ-116",
+      "title": "公開計画へ束縛したnative検査記録と公開前の再検査",
+      "shall": "基準descriptor、候補catalog/保持閉包、architecture policyとnative結果を世代manifest経由で物理公開計画へ束縛しなければならない。公開時に実際の基準と原本から再検査し、初期構築の偽装、記録欠落、改変、不正policyを認可callbackで置き換えてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0076"
+      ],
+      "spec": [
+        "distribution/native/publication-intent.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_intent.ads",
+        "pkgcore/runtime/pkg_generation_intent.adb",
+        "pkgcore/runtime/pkg_generation_manifest.ads",
+        "pkgcore/runtime/pkg_generation_manifest.adb",
+        "pkgcore/runtime/pkg_generation_publisher.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_stage_tests.adb",
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/compare_current_catalog.py"
+      ],
+      "hazards": [
+        "HAZ-102"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

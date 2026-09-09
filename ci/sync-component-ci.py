@@ -118,6 +118,11 @@ jobs:
           name: spark-results
           path: build/proof-obj/gnatprove/
 '''
+        if repo == 'pkgcore':
+            workflow = workflow.replace('  proof:\n',
+                '      - name: Verify inactive staging refuses root\n'
+                '        run: sh ci/generation-root-refusal-test.sh\n'
+                '  proof:\n', 1)
         yield ROOT/repo/'.github/workflows/ci.yml',workflow.encode(),0o644
 
 

@@ -905,6 +905,17 @@
         "REQ-095"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-082",
+      "title": "分割組立ての途中公開または不完全な全体検査",
+      "severity": "critical",
+      "mitigation": "空の非公開rootへ必須認可と排他予約を保って作成のみを行い、全分割のidentity/hash/順序と親を検査する。最終検査で全形状・子数・全journal/pinを照合する。公開器を別の未完条件として維持する。",
+      "residual_risk": "No active root publication, production authority adapter, full DEB effect closure, independent trust floor or hardware power-loss qualification. Out-of-band privileged mutation is outside the model.",
+      "requirements": [
+        "REQ-096"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

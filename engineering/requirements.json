@@ -2741,6 +2741,36 @@
         "source-bound-tests",
         "linux-process-limit-tests"
       ]
+    },
+    {
+      "id": "REQ-096",
+      "title": "非公開世代の有界な組立てと全体検査",
+      "shall": "一つのマニフェストに全分割プランとcatalogを束縛し、非公開rootだけへ分割適用する。全項目・全終端journal・pinと余分な項目を検査し、進捗を稼働rootの公開や実行許可として扱ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0055"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0055.ja.md",
+        "distribution/native/generation-stage.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_manifest.adb",
+        "pkgcore/runtime/pkg_generation_stage.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_stage_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-082"
+      ],
+      "required_evidence": [
+        "source-bound-tests",
+        "isolated-native-restart-tests",
+        "independent-adapter-review",
+        "target-power-loss-tests",
+        "atomic-root-catalog-publication"
+      ]
     }
   ]
 }

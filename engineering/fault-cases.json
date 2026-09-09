@@ -1034,7 +1034,7 @@
         "REQ-021"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
-      "expected": "小さい人工上限で起動拒否・割当拒否・子孫停止を確認し、中断を形式証明の成功にしない。",
+      "expected": "小さい人工上限で起動拒否・割当拒否・子孫停止を確認し、中断を形式証明の成功にしない。128 MiBの試験枠にも2048 MiBの予備メモリを要求し、既定の実証明は4096 MiB未満で起動しない。",
       "execution": "not-run",
       "reference_tests": "assurance/tests/engineering/test_proof_guard.py"
     },

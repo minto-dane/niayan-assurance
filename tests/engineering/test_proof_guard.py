@@ -16,6 +16,7 @@ GUARD = Path(__file__).resolve().parents[2] / 'ci/proof-guard.py'
 spec = importlib.util.spec_from_file_location('proof_guard', GUARD)
 guard = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(guard)
+TEST_SESSION_MIB = 128
 
 
 class ProofGuardTests(unittest.TestCase):
@@ -27,6 +28,9 @@ class ProofGuardTests(unittest.TestCase):
         self.temporary.cleanup()
 
     def run_small(self, source, **limits):
+        # Tighten the aggregate fixture limit as well as RLIMIT_AS. Keep the
+        # real host reserve and the production prover defaults unchanged.
+        limits = {'session_mib': TEST_SESSION_MIB, **limits}
         return guard.supervise([sys.executable, '-I', '-c', source],
                                address_mib=128, seconds=5, **limits)
 
@@ -36,6 +40,8 @@ class ProofGuardTests(unittest.TestCase):
                 r = self.run_small(f'raise SystemExit({code})')
                 self.assertEqual(r['returncode'], code, r)
                 self.assertEqual(r['result'], 'pass' if code == 0 else 'fail', r)
+                self.assertEqual(r['limits']['sampled_session_rss_mib'], TEST_SESSION_MIB)
+                self.assertEqual(r['limits']['minimum_available_mib'], 2048)
 
     def test_all_component_make_targets_use_guard_even_with_build_jobs_override(self):
         root = GUARD.parents[2]
@@ -93,6 +99,27 @@ class ProofGuardTests(unittest.TestCase):
         self.assertEqual(r['reason'], 'insufficient-memory-before-start', r)
         self.assertIsNone(r['returncode'])
 
+    def test_fixture_budget_still_requires_reserve_plus_its_full_limit(self):
+        available = (guard.RESERVE_MIB + TEST_SESSION_MIB) * guard.MIB - 1
+        with patch.object(guard, 'available_bytes', return_value=available), \
+                patch.object(guard.subprocess, 'Popen') as launch:
+            r = self.run_small('raise SystemExit(0)')
+        self.assertEqual(r['reason'], 'insufficient-memory-before-start', r)
+        self.assertEqual(r['result'], 'not-run', r)
+        launch.assert_not_called()
+
+    def test_default_prover_budget_still_requires_four_gib_before_start(self):
+        self.assertEqual(guard.SESSION_MIB, 2048)
+        self.assertEqual(guard.RESERVE_MIB, 2048)
+        with patch.object(guard, 'available_bytes', return_value=4096 * guard.MIB - 1), \
+                patch.object(guard.subprocess, 'Popen') as launch:
+            r = guard.supervise([sys.executable, '-I', '-c', 'raise SystemExit(0)'])
+        self.assertEqual(r['reason'], 'insufficient-memory-before-start', r)
+        self.assertEqual(r['result'], 'not-run', r)
+        self.assertEqual(r['limits']['sampled_session_rss_mib'], 2048)
+        self.assertEqual(r['limits']['minimum_available_mib'], 2048)
+        launch.assert_not_called()
+
     def test_memory_drop_stops_running_child(self):
         with patch.object(guard, 'available_bytes', side_effect=[8 * 1024 * guard.MIB, 0]):
             r = self.run_small('import time; time.sleep(10)')
@@ -114,7 +141,7 @@ class ProofGuardTests(unittest.TestCase):
         worker = f'import os,time; os.setpgid(0,0); open({str(target)!r},"w").write(str(os.getpid())); time.sleep(10)'
         r = guard.supervise([sys.executable, '-I', '-c',
               f'import subprocess,sys,time; subprocess.Popen([sys.executable,"-I","-c",{worker!r}]); time.sleep(10)'],
-              seconds=0.5, address_mib=128)
+              seconds=0.5, address_mib=128, session_mib=TEST_SESSION_MIB)
         self.assertEqual(r['reason'], 'wall-time-limit', r)
         self.assertEqual(r['result'], 'fail', r)
         self.assert_stopped(int(target.read_text()))
@@ -149,7 +176,8 @@ class ProofGuardTests(unittest.TestCase):
         middle = ('import os,subprocess,sys,time; os.setpgid(0,0); '
                   f'subprocess.Popen([sys.executable,"-I","-c",{worker!r}]); time.sleep(10)')
         outer = f'import subprocess,sys,time; subprocess.Popen([sys.executable,"-I","-c",{middle!r}]); time.sleep(10)'
-        r = guard.supervise([sys.executable, '-I', '-c', outer], seconds=0.5, address_mib=128)
+        r = guard.supervise([sys.executable, '-I', '-c', outer], seconds=0.5, address_mib=128,
+                            session_mib=TEST_SESSION_MIB)
         self.assertEqual(r['reason'], 'wall-time-limit', r)
         self.assert_stopped(int(target.read_text()))
         self.assertEqual(guard.direct_children(), [])
@@ -171,7 +199,7 @@ class ProofGuardTests(unittest.TestCase):
         launcher = ('import importlib.util,sys; '
                     f's=importlib.util.spec_from_file_location("g",{str(GUARD)!r}); '
                     'g=importlib.util.module_from_spec(s); s.loader.exec_module(g); '
-                    f'r=g.supervise([sys.executable,"-I","-c",{worker!r}],seconds=5,address_mib=128); '
+                    f'r=g.supervise([sys.executable,"-I","-c",{worker!r}],seconds=5,address_mib=128,session_mib={TEST_SESSION_MIB}); '
                     'print(r["reason"],flush=True)')
         child = subprocess.Popen([sys.executable, '-I', '-c', launcher], stdout=subprocess.PIPE, text=True)
         try:
@@ -206,7 +234,7 @@ class ProofGuardTests(unittest.TestCase):
         launcher = ('import importlib.util,sys; '
                     f's=importlib.util.spec_from_file_location("g",{str(GUARD)!r}); '
                     'g=importlib.util.module_from_spec(s); s.loader.exec_module(g); '
-                    f'r=g.supervise([sys.executable,"-I","-c",{worker!r}],seconds=5,address_mib=128); '
+                    f'r=g.supervise([sys.executable,"-I","-c",{worker!r}],seconds=5,address_mib=128,session_mib={TEST_SESSION_MIB}); '
                     'print(r["reason"],flush=True)')
         r = runner.run_command([sys.executable, '-I', '-c', launcher], self.directory,
                                self.directory / 'outer.log', runner.clean_env(self.directory),

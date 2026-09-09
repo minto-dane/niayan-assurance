@@ -3000,6 +3000,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-105",
+      "title": "原本dataメンバーの有界stream保存",
+      "shall": "元DEBのdataメンバーを独立に再検査し、展開全量をメモリへ載せず、上流codecの終端・完全消費・展開上限と全hashを検査して既存CASへ保存しなければならない。opaqueな展開結果をtar意味・所有権・導入認可へ昇格してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0064"
+      ],
+      "spec": [
+        "distribution/native/deb-data-stream.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_stream.c",
+        "pkgcore/runtime/pkg_deb_data_stream.ads",
+        "pkgcore/runtime/pkg_deb_data_stream.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_data_stream_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-091"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

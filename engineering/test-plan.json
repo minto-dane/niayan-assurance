@@ -674,6 +674,20 @@
       "prepare_directories": [],
       "execution_owner": "pkgcore-maintainers",
       "note": "bounded binary relationship grammar and exact control binding; no installation"
+    },
+    {
+      "main": "pkgcore/tests/run_deb_data_stream_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/deb-data"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "bounded codec fragments and original-data stream CAS retention; no tar extraction or installation"
     }
   ]
 }

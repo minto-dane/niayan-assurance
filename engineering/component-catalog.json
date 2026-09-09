@@ -9364,6 +9364,83 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_deb_data_stream.adb",
+      "sha256": "5745104089824a33d21ae53b2cc69a10c7e5558cdd5fd8f85eb7e9b09b86d826",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Data_Stream",
+          "line": 4
+        },
+        {
+          "name": "New_Stream",
+          "line": 7
+        },
+        {
+          "name": "Free_Stream",
+          "line": 9
+        },
+        {
+          "name": "Step",
+          "line": 11
+        },
+        {
+          "name": "Translate",
+          "line": 14
+        },
+        {
+          "name": "Stage",
+          "line": 16
+        },
+        {
+          "name": "Cleanup",
+          "line": 22
+        },
+        {
+          "name": "Check_Time",
+          "line": 26
+        },
+        {
+          "name": "Decode_Pass",
+          "line": 31
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "System"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_data_stream.ads",
+      "sha256": "dc2a51a95369927471a688458879e58d329da29e7076638a790cab66edfc55da",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Data_Stream",
+          "line": 4
+        },
+        {
+          "name": "Stage",
+          "line": 9
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Deb_Container"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_deb_decode.c",
       "sha256": "b8eb042f17e585857ec303eee73fa2321d8a376a1e53fe25de1b5cbad08eee8a",
       "repository": "pkgcore",
@@ -9730,6 +9807,29 @@
         "Pkg_Deb_Fields",
         "Pkg_Deb_Semantics"
       ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_stream.c",
+      "sha256": "486e873e51b1069254c8ff271427c50fa026ff29b2e57298b05b48a2ca7d7b42",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "nia_deb_stream_free",
+          "line": 27
+        },
+        {
+          "name": "nia_deb_stream_new",
+          "line": 38
+        },
+        {
+          "name": "nia_deb_stream_step",
+          "line": 71
+        }
+      ],
+      "with_dependencies": [],
       "semantic_analysis": false
     },
     {

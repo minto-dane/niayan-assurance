@@ -1169,6 +1169,17 @@
       "expected": "失敗時に部分式や原本digestを返さず、未知architectureを別の意味へ変換しない。原本経路でもすべての採用binary関係項目の構文を検査する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_relations_tests.adb"
+    },
+    {
+      "id": "FAULT-105",
+      "scenario": "分割位置の違い、空stream、境界の展開上限、CRC不正、切断・連結・後続byte、不一致envelope、期限超過、decoderの完了後・失敗後の再使用",
+      "requirements": [
+        "REQ-105"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "すべての圧縮byteを照合して完全消費し、失敗時に展開digestとサイズを成功として返さない。展開量に比例する入力/出力bufferを確保せず、原本と二回目の出力をCASへ束縛する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_data_stream_tests.adb"
     }
   ]
 }

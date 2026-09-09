@@ -1004,6 +1004,17 @@
         "REQ-104"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-091",
+      "title": "大きなdata展開による資源枯渇・stream取り違え・部分保存の権威化",
+      "severity": "critical",
+      "mitigation": "64 KiBの入出力とcodecメモリ上限を使い、二度の展開で圧縮元と展開結果の全hash・サイズを照合する。期限と外側scopeを維持し、失敗時に部分観測や公開状態を返さない。",
+      "residual_risk": "Opaque decompressed data-member CAS retention only. Tar interpretation, full ownership, effects, catalog/authorization and boot remain unqualified. Legacy LZMA has no integrity checksum. Synchronous I/O and codec calls require an outer deadline.",
+      "requirements": [
+        "REQ-105"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

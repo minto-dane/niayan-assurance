@@ -1235,6 +1235,17 @@
       "expected": "通常更新で保護identityとflagを保持し、正確な差分と前後catalog/endpointを束縛する。拒否は旧計画を消し、入力を変更しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_transition_tests.adb"
+    },
+    {
+      "id": "FAULT-111",
+      "scenario": "再保存/再open、全identity/関係/claim保持、20形式不正、control/payload hash不一致、空payload原本欠落、catalog欠落、期限とUID0",
+      "requirements": [
+        "REQ-111"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "同じfingerprintで正規CAS原本を保存し、完全再観測時だけcatalogとpayloadを返す。失敗は旧成功両出力を消し、Save失敗は入力を保つ。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_catalog_store_tests.adb"
     }
   ]
 }

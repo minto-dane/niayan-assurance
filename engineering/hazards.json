@@ -1070,6 +1070,17 @@
         "REQ-110"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-097",
+      "title": "永続catalogの形式偽装・原本欠落のcache代替・片側だけの成功出力",
+      "severity": "critical",
+      "mitigation": "既存fingerprintとCASのbyte列を同一にし、正規長/版/件数/順序を検査する。全原本を再観測し前後hashを完全照合してから両出力を返す。",
+      "residual_risk": "Candidate persistence only. Supply and accepted-generation authentication, same writer reservation, CAS pin closure, phase/effects, ownership and root/boot remain unqualified.",
+      "requirements": [
+        "REQ-111"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

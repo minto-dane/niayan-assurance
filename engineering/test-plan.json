@@ -759,6 +759,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "ordinary before/after delta, protection retention, endpoint refusal, independent original/control and receipt oracle; no migration or phase authorization"
+    },
+    {
+      "main": "pkgcore/tests/run_catalog_store_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/selected-catalog"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "canonical catalog CAS persistence, native reobservation, retained metadata/claims, malformed framing and missing originals; no current-generation authority"
     }
   ]
 }

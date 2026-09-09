@@ -9038,6 +9038,100 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_catalog_store.adb",
+      "sha256": "74db3593c6fa4df39e8383673e4e9feec44ca510cb703cd0af6e70427db6cfd7",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Catalog_Store",
+          "line": 5
+        },
+        {
+          "name": "C",
+          "line": 6
+        },
+        {
+          "name": "P",
+          "line": 7
+        },
+        {
+          "name": "Free",
+          "line": 11
+        },
+        {
+          "name": "Time_Left",
+          "line": 12
+        },
+        {
+          "name": "Save",
+          "line": 18
+        },
+        {
+          "name": "Check",
+          "line": 23
+        },
+        {
+          "name": "Tick",
+          "line": 25
+        },
+        {
+          "name": "Load",
+          "line": 49
+        },
+        {
+          "name": "Check",
+          "line": 54
+        },
+        {
+          "name": "Tick",
+          "line": 56
+        },
+        {
+          "name": "Fail",
+          "line": 58
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Posix",
+        "Pkg_Deb_Payload"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_catalog_store.ads",
+      "sha256": "3b953b5f4f169b4930a5f256d2d2e47888d6672c9bf95193efcdda52049f6666",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Catalog_Store",
+          "line": 4
+        },
+        {
+          "name": "Save",
+          "line": 8
+        },
+        {
+          "name": "Load",
+          "line": 10
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Payload_Index",
+        "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_configuration_engine.adb",
       "sha256": "cd66ecb0fe16f358a86889c7106da03095caeb1e350563baee7fd36d32c1ed32",
       "repository": "pkgcore",

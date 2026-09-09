@@ -3173,6 +3173,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-111",
+      "title": "既存CASへの正規catalog保存と全原本からの再構築",
+      "shall": "既存catalog fingerprintの正規preimageを同じCASへ保存し、読取時は形式と原本順を検査した上で全原本/control/payloadを再観測しなければならない。失敗ではcatalogとpayloadの両出力を破棄する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0071"
+      ],
+      "spec": [
+        "distribution/native/catalog-store.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_catalog_store.ads",
+        "pkgcore/runtime/pkg_catalog_store.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_catalog_store_tests.adb",
+        "pkgcore/tests/compare_catalog_store.py"
+      ],
+      "hazards": [
+        "HAZ-097"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -48,6 +48,11 @@ def generated():
                               '  cat "$D/transition-native.log"', 'else',
                               '  cat "$D/transition-native.log"', '  exit 1', 'fi',
                               'python3 "$PWD/tests/compare_deb_transition.py" --media "$PWD/tests/fixtures/deb-transition" --native "$D/transition-native.log" --output "$D/transition-native-oracle.json"'])
+            elif repo == 'pkgcore' and name == 'run_catalog_store_tests':
+                lines.extend(['if '+command+' > "$D/catalog-store-native.log" 2>&1; then',
+                              '  cat "$D/catalog-store-native.log"', 'else',
+                              '  cat "$D/catalog-store-native.log"', '  exit 1', 'fi',
+                              'python3 "$PWD/tests/compare_catalog_store.py" --media "$PWD/tests/fixtures/selected-catalog" --native "$D/catalog-store-native.log" --cas "$D/run_catalog_store_tests/store" --output "$D/catalog-store-oracle.json"'])
             else:
                 lines.append(command)
         if repo == 'pkgcore':

@@ -1202,6 +1202,17 @@
       "expected": "全claimと原本内inode identityを保持し、部分候補や最後のownerを確定結果として返さない。原本inventoryの破棄後も索引の内容は変わらず、失敗時はcandidate全体を破棄する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_payload_index_tests.adb"
+    },
+    {
+      "id": "FAULT-108",
+      "scenario": "空payload原本の欠落、同数の原本すり替え、期待control不一致、選択原本重複、同一identityの再梱包/別版、再Sealの入力変更、順序反転、入力破棄、期限とUID0",
+      "requirements": [
+        "REQ-108"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "metadata・選択・payload集合が完全一致する場合だけimmutable候補を公開し、失敗では全体を破棄する。全関係のqualifier/version/代替groupを保持する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_selected_catalog_tests.adb"
     }
   ]
 }

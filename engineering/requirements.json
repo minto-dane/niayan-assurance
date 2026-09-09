@@ -3088,6 +3088,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-108",
+      "title": "選択原本・control・payload集合の完全一致",
+      "shall": "選択した原本と期待control hash、native観測metadata、payload索引の原本集合を重複なく完全照合し、全identityと関係atomを保持しなければならない。失敗候補を部分採用せず、同一name/architectureの混在を拒否する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0068"
+      ],
+      "spec": [
+        "distribution/native/selected-catalog.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_selected_catalog.ads",
+        "pkgcore/runtime/pkg_selected_catalog.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_selected_catalog_tests.adb",
+        "pkgcore/tests/compare_selected_catalog.py"
+      ],
+      "hazards": [
+        "HAZ-094"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

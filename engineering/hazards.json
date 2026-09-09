@@ -1037,6 +1037,17 @@
         "REQ-107"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-094",
+      "title": "選択集合とmetadata/payloadの乖離・期待controlの置換・部分候補の採用",
+      "severity": "critical",
+      "mitigation": "native原本を再観測し、期待controlと原本集合の完全一致を必須にする。同一原本とname/architectureの重複を拒否し、全体seal前と失敗後は候補を公開しない。再Sealでも入力を照合する。",
+      "residual_risk": "Candidate binding only. Caller selection authentication, full relationship and multiarch/phase semantics, effective ownership, CAS pin closure, effects, generation admission and boot remain unqualified.",
+      "requirements": [
+        "REQ-108"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -11759,6 +11759,214 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_selected_catalog.adb",
+      "sha256": "e1a4312d3c55fa7610ddb9393a3bc62ca63bd613a174684ba7739d1b4c97d896",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Selected_Catalog",
+          "line": 6
+        },
+        {
+          "name": "R",
+          "line": 7
+        },
+        {
+          "name": "Atoms",
+          "line": 27
+        },
+        {
+          "name": "Packages",
+          "line": 28
+        },
+        {
+          "name": "Positions",
+          "line": 29
+        },
+        {
+          "name": "Lookup",
+          "line": 30
+        },
+        {
+          "name": "Free",
+          "line": 40
+        },
+        {
+          "name": "Clear",
+          "line": 41
+        },
+        {
+          "name": "Finalize",
+          "line": 43
+        },
+        {
+          "name": "Sealed",
+          "line": 45
+        },
+        {
+          "name": "Package_Count",
+          "line": 47
+        },
+        {
+          "name": "Fingerprint",
+          "line": 49
+        },
+        {
+          "name": "Payload_Hash",
+          "line": 51
+        },
+        {
+          "name": "Matches_Payload",
+          "line": 53
+        },
+        {
+          "name": "Time_Left",
+          "line": 56
+        },
+        {
+          "name": "Add",
+          "line": 62
+        },
+        {
+          "name": "Free",
+          "line": 66
+        },
+        {
+          "name": "Free",
+          "line": 67
+        },
+        {
+          "name": "Fail",
+          "line": 70
+        },
+        {
+          "name": "Save",
+          "line": 72
+        },
+        {
+          "name": "Seal",
+          "line": 138
+        },
+        {
+          "name": "Number",
+          "line": 143
+        },
+        {
+          "name": "Read_Package",
+          "line": 199
+        },
+        {
+          "name": "Copy",
+          "line": 201
+        },
+        {
+          "name": "Atom_Count",
+          "line": 223
+        },
+        {
+          "name": "Group_Count",
+          "line": 226
+        },
+        {
+          "name": "Read_Atom",
+          "line": 229
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Indefinite_Ordered_Maps",
+        "Ada.Containers.Vectors",
+        "Ada.Strings.Unbounded",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Hex",
+        "MC_Posix",
+        "MC_SHA256",
+        "MC_Text",
+        "Pkg_Deb_Metadata",
+        "Pkg_Deb_Semantics"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_selected_catalog.ads",
+      "sha256": "d3a4d19e18220dc5630d22322b04b2c1abec673885dce9ea9fbea4abf4f626ff",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Selected_Catalog",
+          "line": 5
+        },
+        {
+          "name": "Add",
+          "line": 18
+        },
+        {
+          "name": "Seal",
+          "line": 20
+        },
+        {
+          "name": "Clear",
+          "line": 23
+        },
+        {
+          "name": "Sealed",
+          "line": 24
+        },
+        {
+          "name": "Package_Count",
+          "line": 25
+        },
+        {
+          "name": "Fingerprint",
+          "line": 26
+        },
+        {
+          "name": "Payload_Hash",
+          "line": 27
+        },
+        {
+          "name": "Matches_Payload",
+          "line": 28
+        },
+        {
+          "name": "Read_Package",
+          "line": 29
+        },
+        {
+          "name": "Atom_Count",
+          "line": 31
+        },
+        {
+          "name": "Group_Count",
+          "line": 33
+        },
+        {
+          "name": "Read_Atom",
+          "line": 35
+        },
+        {
+          "name": "Finalize",
+          "line": 60
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Deb_Fields",
+        "Pkg_Deb_Relations",
+        "Pkg_Payload_Index",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_source.adb",
       "sha256": "3750f145bea429daa748116af9e9b1fc2a55965f17587b3ba3f327c329b80970",
       "repository": "pkgcore",

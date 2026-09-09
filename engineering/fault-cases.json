@@ -1114,6 +1114,17 @@
       "expected": "原本と既存の完全な索引を保持する。rename後の同期失敗は完了不明として失敗し、署名済みや導入済みと偽らない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/test_media.py"
+    },
+    {
+      "id": "FAULT-100",
+      "scenario": "処理中の同名再発火、noawait追加、待機の連鎖・循環、古いattemptによる応答、処理中checkpointの再読",
+      "requirements": [
+        "REQ-100"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "新しい発火と未解決の待機を保持し、異なるattemptの成功観測を拒否する。復号だけでは処理再実行や完了を起こさない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/tests/test_debian_trigger_state.py"
     }
   ]
 }

@@ -949,6 +949,17 @@
         "REQ-099"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-086",
+      "title": "処理中の再発火の喪失または待機の早期解除",
+      "severity": "critical",
+      "mitigation": "未処理と処理中を分け、scopeと開始revisionからattemptを作る。受信者が他を待つ関係も保持し、解除可能な待機だけを伝播する。",
+      "residual_risk": "Pure reference model only; complete package lifecycle, authenticated success observations, native CAS/WAL and handler execution remain unqualified.",
+      "requirements": [
+        "REQ-100"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

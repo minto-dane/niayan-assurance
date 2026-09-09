@@ -2860,6 +2860,32 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-100",
+      "title": "遅延トリガーの再発火と待機解除",
+      "shall": "処理中batchと新しい発火を分け、受信者の未処理と他への待機がなくなるまで待機者を保持しなければならない。成功観測は正確なattemptへ束縛し、復号で実行を再開してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0059"
+      ],
+      "spec": [
+        "distribution/native/trigger-state.ja.md"
+      ],
+      "code": [
+        "distribution/tools/debian_trigger_state.py"
+      ],
+      "tests": [
+        "distribution/tests/test_debian_trigger_state.py"
+      ],
+      "hazards": [
+        "HAZ-086"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

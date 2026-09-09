@@ -9387,6 +9387,209 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_deb_fields.adb",
+      "sha256": "7f5723a4836b2087d0f1e292f437bee47e83f259c2e464876b1584f83d162519",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Fields",
+          "line": 4
+        },
+        {
+          "name": "Lower",
+          "line": 6
+        },
+        {
+          "name": "Char",
+          "line": 7
+        },
+        {
+          "name": "White",
+          "line": 9
+        },
+        {
+          "name": "Slice",
+          "line": 10
+        },
+        {
+          "name": "Valid_UTF8",
+          "line": 16
+        },
+        {
+          "name": "Find",
+          "line": 45
+        },
+        {
+          "name": "Field_Count",
+          "line": 53
+        },
+        {
+          "name": "Field_Name",
+          "line": 54
+        },
+        {
+          "name": "Content_Hash",
+          "line": 56
+        },
+        {
+          "name": "Has_Field",
+          "line": 57
+        },
+        {
+          "name": "Parse",
+          "line": 58
+        },
+        {
+          "name": "Read_Value",
+          "line": 118
+        },
+        {
+          "name": "Append",
+          "line": 124
+        },
+        {
+          "name": "Package_Name",
+          "line": 169
+        },
+        {
+          "name": "Check_Identity",
+          "line": 177
+        },
+        {
+          "name": "Get",
+          "line": 180
+        },
+        {
+          "name": "Flag",
+          "line": 185
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Characters.Handling",
+        "MC_SHA256",
+        "Pkg_Deb_Versions"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_fields.ads",
+      "sha256": "9d5957611dc902dcd0e273f0b7e7e0984446af247e2efea371e33b4e8d8af29a",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Fields",
+          "line": 4
+        },
+        {
+          "name": "Parse",
+          "line": 16
+        },
+        {
+          "name": "Field_Count",
+          "line": 17
+        },
+        {
+          "name": "Field_Name",
+          "line": 18
+        },
+        {
+          "name": "Content_Hash",
+          "line": 19
+        },
+        {
+          "name": "Has_Field",
+          "line": 20
+        },
+        {
+          "name": "Read_Value",
+          "line": 21
+        },
+        {
+          "name": "Check_Identity",
+          "line": 24
+        }
+      ],
+      "with_dependencies": [
+        "MC_Text",
+        "MC_Types",
+        "Pkg_Deb_Semantics"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_metadata.adb",
+      "sha256": "cd1f038053392aacc02ce9d21ab1f6bb38424fdd685e4db86b1e7c383f3a0d20",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Metadata",
+          "line": 5
+        },
+        {
+          "name": "Inspect",
+          "line": 7
+        },
+        {
+          "name": "Free",
+          "line": 13
+        },
+        {
+          "name": "Free",
+          "line": 14
+        },
+        {
+          "name": "Free",
+          "line": 15
+        },
+        {
+          "name": "Done",
+          "line": 17
+        },
+        {
+          "name": "Check_Time",
+          "line": 19
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Posix",
+        "Pkg_Deb_Container",
+        "Pkg_Deb_Control"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_metadata.ads",
+      "sha256": "eefc0c54f6e6eb26dc7e8409ac33d0741c0065e73d8f67da1cd9aab6a88a7119",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Metadata",
+          "line": 4
+        },
+        {
+          "name": "Inspect",
+          "line": 10
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Deb_Fields"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_file_engine.adb",
       "sha256": "7d856dbc62036d4994ad949320f20d91b7b9104b563bd0e33f6264bc5f33e42b",
       "repository": "pkgcore",

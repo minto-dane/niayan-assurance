@@ -2942,6 +2942,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-103",
+      "title": "元制御項目とnative識別情報の束縛",
+      "shall": "単一binary control stanzaをUTF-8と項目名・空値・重複・改行の規則で検査し、位置情報を原本hashへ束縛しなければならない。名前・版・Source・保護属性の検査を元DEBの読取経路へ接続し、依存や効果の検証完了と取り違えてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0062"
+      ],
+      "spec": [
+        "distribution/native/deb-metadata.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_fields.ads",
+        "pkgcore/runtime/pkg_deb_fields.adb",
+        "pkgcore/runtime/pkg_deb_metadata.ads",
+        "pkgcore/runtime/pkg_deb_metadata.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_metadata_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-089"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -1147,6 +1147,17 @@
       "expected": "不正や未対応入力で全inventoryを空にし、完了したCAS objectを稼働状態としない。保守scriptは正確なbyte列として保持し実行しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_control_tests.adb"
+    },
+    {
+      "id": "FAULT-103",
+      "scenario": "重複・空値・複数stanza、不正UTF-8、原本不一致、切り詰め、必須項目欠落、異常版・保護値、単純項目折返し、資源境界、通し経路のstack不足",
+      "requirements": [
+        "REQ-103"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "無効入力で部分結果を返さず、未知項目を原本に保持する。大きな中間結果の寿命を管理し、制限を増やさずに元DEB経路を実行できる。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_metadata_tests.adb"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Nia OS 本番接続と受け入れ条件
 
-状態: 規範仕様。起動可能製品の完成宣言ではない。対象は固定Debian 14 ForkyのDEBを供給入力とするNia OS、XFS永続領域、amd64。
+状態: 規範仕様。起動可能製品の完成宣言ではない。対象は固定Debian 13 TrixieのDEBを供給入力とするNia OS、XFS永続領域、amd64。
 
 ## 保証の単位
 
@@ -13,7 +13,7 @@
 | 設定 | 汎用schema／merge／priority、NVIDIA契約、段階別証明 | 個別ソフトの全inputとネイティブ検証、生成物、実行中の値、issuerの分離 |
 | ファイル | descriptorベースのcapture、WAL/CAS、原本／終端照合 | Nia full-root/catalog assembler、初期所有権、全副作用と原子的公開境界 |
 | 合成 | Pkg_Managed_Engineの必須callback連鎖 | 実workerへの接続、同じ排他予約、全phaseで抜けのない負の試験 |
-| 管理 | 署名plan、ローカルnia CLI、request/result照合 | 認証済み遠隔transport、receiver識別、manager HA、幂等な受領とreplay拒否 |
+| 管理 | 署名plan、installp等の採用CLI、request/result照合 | 認証済み遠隔transport、receiver識別、manager HA、幂等な受領とreplay拒否 |
 | クラスタ | etcd CAS、quorum/停止予算、barrier、failover判断 | 実トポロジー、独立fencing、書き込み経路の遮断、分断／遅延／二重writer試験 |
 | サービス | systemd/Pacemaker adapter、復旧予算と結果不明 | restart責任者の一元化、実業務health、依存障害、飽和と再参加 |
 | XFS | 観測工具、health状態、非修復unit | 対応kernel/tool/feature、署名event collector、完全性・修復結果・rescueの実接続 |

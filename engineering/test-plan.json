@@ -651,6 +651,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "upstream compression/tar library with private original-control CAS retention; no extraction or execution"
+    },
+    {
+      "main": "pkgcore/tests/run_deb_metadata_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/deb-control"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "raw UTF-8 binary control fields and original DEB identity observation; no execution or installed-state publication"
     }
   ]
 }

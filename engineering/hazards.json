@@ -982,6 +982,17 @@
         "REQ-102"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-089",
+      "title": "制御項目の曖昧な解釈・原本取り違え・部分情報の認可への昇格",
+      "severity": "critical",
+      "mitigation": "重複・不正UTF-8・単純項目の折返しを拒否し、privateな項目位置と値をraw controlのhashへ束縛する。識別情報と全意味・実行認可を分離する。",
+      "residual_risk": "Native identity/field observation only; complete optional-field meaning, relationship parsing and phases, archive semantics, effects, live authority and boot remain unqualified. Large bounded intermediate records require explicit lifetime management.",
+      "requirements": [
+        "REQ-103"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

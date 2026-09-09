@@ -1048,6 +1048,17 @@
         "REQ-108"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-095",
+      "title": "部分依存・仮想提供版/architecture取り違え・競合集合の採用",
+      "severity": "critical",
+      "mitigation": "全代替groupと実名/全Providesを原本catalogから検査し、提供版とphase別negative意味を固定上流へ照合する。同名Multi-Arch共存と版を検査し、候補/policy hashを完全成功時だけ返す。",
+      "residual_risk": "Endpoint relation checks only. Actual scheduling/prior configured state, source retention, weak dependency policy, Essential/Protected removal, authenticity/authorization, ownership/effects, CAS pin closure and root/boot remain unqualified.",
+      "requirements": [
+        "REQ-109"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -3116,6 +3116,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-109",
+      "title": "原本候補の必須関係・architecture・共存版のnative検査",
+      "shall": "sealed candidateの全Depends/Pre-Depends groupとConflicts/Breaks、明示architecture policyおよび同名Multi-Arch共存版を検査しなければならない。提供版とpackage版を分離し、失敗時に成功receiptを保持しない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0069"
+      ],
+      "spec": [
+        "distribution/native/final-set.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_final_set.ads",
+        "pkgcore/runtime/pkg_deb_final_set.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_final_set_tests.adb",
+        "pkgcore/tests/compare_deb_final_set.py",
+        "pkgcore/tests/check_deb_final_set_upstream.py"
+      ],
+      "hazards": [
+        "HAZ-095"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

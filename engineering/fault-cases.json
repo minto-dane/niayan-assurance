@@ -1213,6 +1213,17 @@
       "expected": "metadata・選択・payload集合が完全一致する場合だけimmutable候補を公開し、失敗では全体を破棄する。全関係のqualifier/version/代替groupを保持する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_selected_catalog_tests.adb"
+    },
+    {
+      "id": "FAULT-109",
+      "scenario": "代替候補と欠落group、実/仮想依存の版とarchitecture全組合せ、同名共存と版差、自己Conflicts/Breaksと異architecture、negative virtual、policy順序/集合変更、期限とUID0",
+      "requirements": [
+        "REQ-109"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "全必須関係の成立時だけcandidateとarchitecture policyへ束縛したreceiptを返す。失敗は旧成功hashを消し、原因の原本/field/groupを示す。candidateは変更しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_final_set_tests.adb"
     }
   ]
 }

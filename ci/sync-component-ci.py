@@ -21,6 +21,8 @@ def generated():
                  '[ "$(id -u)" -ne 0 ] || { echo "Use an unprivileged build user" >&2; exit 78; }',
                  'D=$(mktemp -d "${TMPDIR:-/tmp}/nia-tests.XXXXXXXX")',
                  'trap \'rm -rf -- "$D"\' EXIT HUP INT TERM']
+        if repo == 'pkgcore':
+            lines.append('python3 "$PWD/tests/make_deb_final_set_fixtures.py" --check')
         for test in tests:
             if not test['main'].startswith(repo+'/'):
                 continue
@@ -33,8 +35,17 @@ def generated():
             for directory in test['prepare_directories']:
                 lines.append('mkdir -p '+arg(directory))
             lines.append('echo '+shlex.quote('Running '+name))
-            lines.append('timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 '+
-                         '"$PWD/build/test-bin/'+name+'"'+ ''.join(' '+arg(value) for value in test['arguments']))
+            command = ('timeout --kill-after=5s 600s env -i PATH="$PATH" HOME="$D" TMPDIR="$D" LANG=C.UTF-8 LC_ALL=C.UTF-8 '+
+                       '"$PWD/build/test-bin/'+name+'"'+ ''.join(' '+arg(value) for value in test['arguments']))
+            if repo == 'pkgcore' and name == 'run_deb_final_set_tests':
+                lines.extend(['if '+command+' > "$D/final-set-native.log" 2>&1; then',
+                              '  cat "$D/final-set-native.log"', 'else',
+                              '  cat "$D/final-set-native.log"', '  exit 1', 'fi',
+                              'python3 "$PWD/tests/compare_deb_final_set.py" --media "$PWD/tests/fixtures/deb-final-set" --native "$D/final-set-native.log" --output "$D/final-set-native-oracle.json"'])
+            else:
+                lines.append(command)
+        if repo == 'pkgcore':
+            lines.append('timeout --kill-after=5s 600s python3 "$PWD/tests/check_deb_final_set_upstream.py" --media "$PWD/tests/fixtures/deb-final-set" --work "$D/upstream-endpoint"')
         yield ROOT/repo/'ci/test-all.sh', ('\n'.join(lines)+'\n').encode(), 0o755
         for name in ('gnatprove.lock.json','install-gnatprove.py','proof-guard.py'):
             if repo != 'assurance':
@@ -120,7 +131,7 @@ jobs:
 '''
         if repo == 'pkgcore':
             workflow = workflow.replace('  proof:\n',
-                '      - name: Verify generation, payload, index and catalog root refusal\n'
+                '      - name: Verify generation, payload, catalog and endpoint root refusal\n'
                 '        run: sh ci/generation-root-refusal-test.sh\n'
                 '  proof:\n', 1)
         yield ROOT/repo/'.github/workflows/ci.yml',workflow.encode(),0o644

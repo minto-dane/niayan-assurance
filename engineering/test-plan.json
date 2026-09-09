@@ -731,6 +731,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "exact selected-original/control/payload binding, complete compact metadata and relations; no dependency satisfaction or execution permission"
+    },
+    {
+      "main": "pkgcore/tests/run_deb_final_set_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/deb-final-set"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "native endpoint matrix, independent receipt hashes and upstream simulated reference in generated runner; no scripts, actual installed DB or phase execution"
     }
   ]
 }

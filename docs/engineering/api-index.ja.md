@@ -1,7 +1,7 @@
-# Canonical Ada API / 境界索引
+# Canonical Ada/C API / 境界索引
 
 生成元: assurance/engineering/component-catalog.json。字句索引であり、意味解析・証明・完全な各API仕様ではありません。
-src/runtime/appの全canonical Adaファイルを列挙します。vendor重複とtestsは別台帳です。
+src/runtime/appの全canonical Ada/Cファイルを列挙します。vendor重複とtestsは別台帳です。
 SPARK-intentはソース上の意図であり、未指定コードや外部依存まで証明済みとは扱いません。
 
 |ファイル|層 / 検証境界|宣言/定義（行）|
@@ -258,6 +258,9 @@ SPARK-intentはソース上の意図であり、未指定コードや外部依�
 |[pkgcore/runtime/pkg_configuration_engine.ads](../../../pkgcore/runtime/pkg_configuration_engine.ads)|runtime / non-SPARK-or-boundary|Pkg_Configuration_Engine:10<br>Guard:11<br>Engine:13|
 |[pkgcore/runtime/pkg_deb_container.adb](../../../pkgcore/runtime/pkg_deb_container.adb)|runtime / non-SPARK-or-boundary|Pkg_Deb_Container:5<br>Text:8<br>Trim:16<br>Number:18<br>Check_Time:32<br>Read:38<br>Hash_Range:46<br>Inspect_File:63<br>Numeric:70<br>Inspect:177<br>Stage_Member:189<br>Done:195|
 |[pkgcore/runtime/pkg_deb_container.ads](../../../pkgcore/runtime/pkg_deb_container.ads)|runtime / non-SPARK-or-boundary|Pkg_Deb_Container:4<br>Inspect:25<br>Stage_Member:27|
+|[pkgcore/runtime/pkg_deb_control.adb](../../../pkgcore/runtime/pkg_deb_control.adb)|runtime / non-SPARK-or-boundary|Pkg_Deb_Control:5<br>New_Archive:9<br>Free_Archive:10<br>Close_Archive:11<br>Decode:12<br>Open_Memory:16<br>Format_Tar:18<br>Filter_Code:19<br>Filter_Count:20<br>Filter_Bytes:21<br>Archive_Format:22<br>Next_Header:23<br>Read_Data:24<br>Pathname:25<br>Uname:26<br>Gname:27<br>Symlink:28<br>Hardlink:29<br>Flags_Text:30<br>Mode:31<br>Size:32<br>UID:33<br>GID:34<br>Mtime:35<br>Mtime_Nsec:36<br>Sparse_Count:37<br>Xattr_Count:38<br>ACL_Count:39<br>Encrypted:40<br>Strnlen:41<br>Bounded:42<br>Stage:51<br>Release:60<br>Cleanup:65<br>Limits:70|
+|[pkgcore/runtime/pkg_deb_control.ads](../../../pkgcore/runtime/pkg_deb_control.ads)|runtime / non-SPARK-or-boundary|Pkg_Deb_Control:5<br>Stage:26|
+|[pkgcore/runtime/pkg_deb_decode.c](../../../pkgcore/runtime/pkg_deb_decode.c)|runtime / non-SPARK-or-boundary|time_status:15<br>chunk:23<br>nia_deb_decode:28|
 |[pkgcore/runtime/pkg_file_engine.adb](../../../pkgcore/runtime/pkg_file_engine.adb)|runtime / non-SPARK-or-boundary|Pkg_File_Engine:5<br>Free:12<br>Image_Of:13<br>Guard:16<br>Persist_State:23<br>Emit:29<br>Provision:38<br>Open:68<br>Capture:87<br>Check_Objects:151<br>Replay_Binding:164<br>Read_Log:168<br>Prepare:169<br>Read_Log:212<br>Validate_Log:224<br>Load_Plan:227<br>Free_Buffer:229<br>Resume:241<br>Resume_Recorded:260<br>Loaded_Plan:285<br>Inspect:286<br>Safe_Link:301<br>Materialize:319<br>Apply:392<br>Commit:420<br>Restore:448<br>Reconcile_Terminal:481<br>Repair_Torn_Journal:509<br>Generation:529<br>Accepted_Plan:530<br>Has_Active_Change:531<br>Close:532|
 |[pkgcore/runtime/pkg_file_engine.ads](../../../pkgcore/runtime/pkg_file_engine.ads)|runtime / non-SPARK-or-boundary|Pkg_File_Engine:11<br>Provision:14<br>Open:15<br>Prepare:17<br>Resume:19<br>Resume_Recorded:20<br>Loaded_Plan:21<br>Inspect:22<br>Apply:23<br>Commit:24<br>Restore:25<br>Reconcile_Terminal:26<br>Repair_Torn_Journal:27<br>Generation:28<br>Accepted_Plan:29<br>Has_Active_Change:30<br>Close:31|
 |[pkgcore/runtime/pkg_generation_descriptor.adb](../../../pkgcore/runtime/pkg_generation_descriptor.adb)|runtime / non-SPARK-or-boundary|Pkg_Generation_Descriptor:3<br>Valid:7<br>Encode:11<br>Decode:20<br>Load:33<br>Shape:39<br>Compile:44<br>Check:65<br>Stage_Path:86|

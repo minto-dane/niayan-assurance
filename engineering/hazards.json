@@ -971,6 +971,17 @@
         "REQ-101"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-088",
+      "title": "破損した圧縮streamや未解釈の制御効果を正常とする",
+      "severity": "critical",
+      "mitigation": "tarの前に圧縮streamを有界に完全消費し、CRC等を上流codecで検査する。元データと全通常制御ファイルを保持し、構造未対応と未知の実行効果を成功へ昇格しない。",
+      "residual_risk": "Native unprivileged control observation only. Canonical tar termination, complete control semantics, data.tar, effect authorization, target execution, lifecycle/catalog/WAL and boot remain unqualified. C/library calls require outer process limits.",
+      "requirements": [
+        "REQ-102"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -2913,6 +2913,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-102",
+      "title": "圧縮制御アーカイブの全stream検査と元制御ファイル保持",
+      "shall": "制御アーカイブは上流codecで終端と完全消費を検査し、資源上限を課さなければならない。元DEBへ束縛した全制御ファイルを同じCASへ保持し、部分結果を成功や実行許可にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0061"
+      ],
+      "spec": [
+        "distribution/native/deb-control.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_control.ads",
+        "pkgcore/runtime/pkg_deb_control.adb",
+        "pkgcore/runtime/pkg_deb_decode.c"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_control_tests.adb",
+        "pkgcore/tests/make_deb_control_fixtures.py"
+      ],
+      "hazards": [
+        "HAZ-088"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

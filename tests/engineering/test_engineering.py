@@ -39,6 +39,20 @@ class SafeInputTests(unittest.TestCase):
             with self.assertRaises(eng.Invalid):eng.read_regular(p)
     def test_directory_refused(self):
         with self.assertRaises(eng.Invalid):eng.read_regular(self.root)
+    def test_c_runtime_is_inventoried_without_spark_claim(self):
+        for repo in eng.WORKTREES:
+            (self.root / repo).mkdir()
+        runtime = self.root / 'pkgcore/runtime'
+        runtime.mkdir()
+        source = runtime / 'boundary.c'
+        source.write_text('int fixture_boundary(void) { return 0; }\n')
+        first = eng.inventory(self.root)['modules']
+        self.assertEqual(len(first), 1)
+        self.assertEqual(first[0]['path'], 'pkgcore/runtime/boundary.c')
+        self.assertEqual(first[0]['verification_boundary'], 'non-SPARK-or-boundary')
+        self.assertFalse(first[0]['semantic_analysis'])
+        source.write_text('int fixture_boundary(void) { return 1; }\n')
+        self.assertNotEqual(first[0]['sha256'], eng.inventory(self.root)['modules'][0]['sha256'])
     def test_duplicate_json_refused(self):
         p=self.root/'j';p.write_text('{"version":1,"version":2}')
         with self.assertRaises(eng.Invalid):eng.load_json(p)

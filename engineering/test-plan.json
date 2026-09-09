@@ -637,6 +637,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "private original-DEB ar envelope and CAS member staging; no extraction or execution"
+    },
+    {
+      "main": "pkgcore/tests/run_deb_control_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/deb-control"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "upstream compression/tar library with private original-control CAS retention; no extraction or execution"
     }
   ]
 }

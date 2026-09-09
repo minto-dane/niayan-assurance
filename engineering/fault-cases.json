@@ -1136,6 +1136,17 @@
       "expected": "元DEBを再検査し、失敗時に部分的なenvelopeや成功digestを返さない。メンバーの保存は展開や導入許可を発生させない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_container_tests.adb"
+    },
+    {
+      "id": "FAULT-102",
+      "scenario": "gzip CRC不正、xz/zstd切断、圧縮ラベル相違・連結・後続データ、重複・危険名・特殊entry・PAX属性、個別/合計/全展開量の上限、期限と偽envelope",
+      "requirements": [
+        "REQ-102"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不正や未対応入力で全inventoryを空にし、完了したCAS objectを稼働状態としない。保守scriptは正確なbyte列として保持し実行しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_control_tests.adb"
     }
   ]
 }

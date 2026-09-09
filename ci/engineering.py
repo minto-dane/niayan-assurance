@@ -94,27 +94,30 @@ def inventory(root: Path) -> dict[str, Any]:
     modules = []
     for p, raw in regular_tree(root):
         parts = p.relative_to(root).parts
-        if len(parts) != 3 or parts[1] not in ('src', 'runtime', 'app') or p.suffix not in ('.ads', '.adb'):
+        if len(parts) != 3 or parts[1] not in ('src', 'runtime', 'app') or p.suffix not in ('.ads', '.adb', '.c', '.h'):
             continue
         text = raw.decode('utf-8')
         symbols = []
+        c_boundary = p.suffix in ('.c', '.h')
         for n, line in enumerate(text.splitlines(), 1):
-            m = re.match(r'\s*(?:overriding\s+)?(?:procedure|function|package(?:\s+body)?)\s+([A-Za-z][A-Za-z0-9_.]*)', line, re.I)
+            pattern = (r'\s*(?:static\s+)?(?:int|void|size_t|uint64_t)\s+([A-Za-z_][A-Za-z0-9_]*)\s*\('
+                       if c_boundary else r'\s*(?:overriding\s+)?(?:procedure|function|package(?:\s+body)?)\s+([A-Za-z][A-Za-z0-9_.]*)')
+            m = re.match(pattern, line, re.I)
             if m:
                 symbols.append({'name': m.group(1), 'line': n})
-        deps = sorted(set(re.findall(r'\bwith\s+([A-Za-z][A-Za-z0-9_.]*)\s*;', text, re.I)))
+        deps = [] if c_boundary else sorted(set(re.findall(r'\bwith\s+([A-Za-z][A-Za-z0-9_.]*)\s*;', text, re.I)))
         modules.append({'path': p.relative_to(root).as_posix(), 'sha256': hashlib.sha256(raw).hexdigest(),
                         'repository': parts[0], 'layer': parts[1],
-                        'verification_boundary': 'non-SPARK-or-boundary' if re.search(r'SPARK_Mode\s*=>\s*Off', text, re.I) else 'SPARK-intent-not-proof',
+                        'verification_boundary': 'non-SPARK-or-boundary' if c_boundary or re.search(r'SPARK_Mode\s*=>\s*Off', text, re.I) else 'SPARK-intent-not-proof',
                         'symbols': symbols, 'with_dependencies': deps,
                         'semantic_analysis': False})
-    return {'format': 1, 'scope': 'canonical Ada src/runtime/app; vendor copies excluded',
+    return {'format': 1, 'scope': 'canonical Ada and C src/runtime/app; vendor copies excluded',
             'formal_proof': False, 'modules': sorted(modules, key=lambda r: r['path'])}
 
 def api_index(data: dict[str, Any]) -> str:
-    lines = ['# Canonical Ada API / 境界索引', '',
+    lines = ['# Canonical Ada/C API / 境界索引', '',
              '生成元: assurance/engineering/component-catalog.json。字句索引であり、意味解析・証明・完全な各API仕様ではありません。',
-             'src/runtime/appの全canonical Adaファイルを列挙します。vendor重複とtestsは別台帳です。',
+             'src/runtime/appの全canonical Ada/Cファイルを列挙します。vendor重複とtestsは別台帳です。',
              'SPARK-intentはソース上の意図であり、未指定コードや外部依存まで証明済みとは扱いません。', '',
              '|ファイル|層 / 検証境界|宣言/定義（行）|', '|---|---|---|']
     for m in data['modules']:

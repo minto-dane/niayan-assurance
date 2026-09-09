@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "scope": "canonical Ada src/runtime/app; vendor copies excluded",
+  "scope": "canonical Ada and C src/runtime/app; vendor copies excluded",
   "formal_proof": false,
   "modules": [
     {
@@ -9176,6 +9176,214 @@
         "MC_Text",
         "MC_Types"
       ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_control.adb",
+      "sha256": "b105cc511035fe902e1021c5dbc635eec2659462913c37ec06f3f1d37c57277c",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Control",
+          "line": 5
+        },
+        {
+          "name": "New_Archive",
+          "line": 9
+        },
+        {
+          "name": "Free_Archive",
+          "line": 10
+        },
+        {
+          "name": "Close_Archive",
+          "line": 11
+        },
+        {
+          "name": "Decode",
+          "line": 12
+        },
+        {
+          "name": "Open_Memory",
+          "line": 16
+        },
+        {
+          "name": "Format_Tar",
+          "line": 18
+        },
+        {
+          "name": "Filter_Code",
+          "line": 19
+        },
+        {
+          "name": "Filter_Count",
+          "line": 20
+        },
+        {
+          "name": "Filter_Bytes",
+          "line": 21
+        },
+        {
+          "name": "Archive_Format",
+          "line": 22
+        },
+        {
+          "name": "Next_Header",
+          "line": 23
+        },
+        {
+          "name": "Read_Data",
+          "line": 24
+        },
+        {
+          "name": "Pathname",
+          "line": 25
+        },
+        {
+          "name": "Uname",
+          "line": 26
+        },
+        {
+          "name": "Gname",
+          "line": 27
+        },
+        {
+          "name": "Symlink",
+          "line": 28
+        },
+        {
+          "name": "Hardlink",
+          "line": 29
+        },
+        {
+          "name": "Flags_Text",
+          "line": 30
+        },
+        {
+          "name": "Mode",
+          "line": 31
+        },
+        {
+          "name": "Size",
+          "line": 32
+        },
+        {
+          "name": "UID",
+          "line": 33
+        },
+        {
+          "name": "GID",
+          "line": 34
+        },
+        {
+          "name": "Mtime",
+          "line": 35
+        },
+        {
+          "name": "Mtime_Nsec",
+          "line": 36
+        },
+        {
+          "name": "Sparse_Count",
+          "line": 37
+        },
+        {
+          "name": "Xattr_Count",
+          "line": 38
+        },
+        {
+          "name": "ACL_Count",
+          "line": 39
+        },
+        {
+          "name": "Encrypted",
+          "line": 40
+        },
+        {
+          "name": "Strnlen",
+          "line": 41
+        },
+        {
+          "name": "Bounded",
+          "line": 42
+        },
+        {
+          "name": "Stage",
+          "line": 51
+        },
+        {
+          "name": "Release",
+          "line": 60
+        },
+        {
+          "name": "Cleanup",
+          "line": 65
+        },
+        {
+          "name": "Limits",
+          "line": 70
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "Interfaces.C.Strings",
+        "MC_Clock",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "System"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_control.ads",
+      "sha256": "b049f6fd9f6b2b54429b68557aabe001ebb41945c6c3b252b300bd6a52faa671",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Control",
+          "line": 5
+        },
+        {
+          "name": "Stage",
+          "line": 26
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces",
+        "MC_Store",
+        "MC_Text",
+        "MC_Types",
+        "Pkg_Deb_Container"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_decode.c",
+      "sha256": "b8eb042f17e585857ec303eee73fa2321d8a376a1e53fe25de1b5cbad08eee8a",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "time_status",
+          "line": 15
+        },
+        {
+          "name": "chunk",
+          "line": 23
+        },
+        {
+          "name": "nia_deb_decode",
+          "line": 28
+        }
+      ],
+      "with_dependencies": [],
       "semantic_analysis": false
     },
     {

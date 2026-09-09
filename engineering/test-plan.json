@@ -624,6 +624,19 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "fresh private directories; synthetic stages, mandatory composed guard and test-only two-role signatures; no native boot or production authority"
+    },
+    {
+      "main": "pkgcore/tests/run_deb_container_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "private original-DEB ar envelope and CAS member staging; no extraction or execution"
     }
   ]
 }

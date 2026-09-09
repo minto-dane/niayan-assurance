@@ -2886,6 +2886,33 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-101",
+      "title": "元DEBと内部アーカイブのnative CAS束縛",
+      "shall": "元DEBのar構造を有界に再検査し、元データ全体と各メンバーの正確なハッシュを束縛しなければならない。呼出側の位置やハッシュを信用せず、既存CASへ保存する前に全envelopeを照合する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0060"
+      ],
+      "spec": [
+        "distribution/native/deb-container.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_container.ads",
+        "pkgcore/runtime/pkg_deb_container.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_container_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-087"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

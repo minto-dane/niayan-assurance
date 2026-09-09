@@ -9085,6 +9085,100 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_deb_container.adb",
+      "sha256": "5a890e58998c96e83f9f3b9060a7394b4c48c6191fa1cf468ebb3771ad5f4cbd",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Container",
+          "line": 5
+        },
+        {
+          "name": "Text",
+          "line": 8
+        },
+        {
+          "name": "Trim",
+          "line": 16
+        },
+        {
+          "name": "Number",
+          "line": 18
+        },
+        {
+          "name": "Check_Time",
+          "line": 32
+        },
+        {
+          "name": "Read",
+          "line": 38
+        },
+        {
+          "name": "Hash_Range",
+          "line": 46
+        },
+        {
+          "name": "Inspect_File",
+          "line": 63
+        },
+        {
+          "name": "Numeric",
+          "line": 70
+        },
+        {
+          "name": "Inspect",
+          "line": 177
+        },
+        {
+          "name": "Stage_Member",
+          "line": 189
+        },
+        {
+          "name": "Done",
+          "line": 195
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Strings",
+        "Ada.Strings.Fixed",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_container.ads",
+      "sha256": "1ebdc0d6001cba604109ce62d2509bbf1ed7c532bc35a1aa1d42028d3609129e",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Container",
+          "line": 4
+        },
+        {
+          "name": "Inspect",
+          "line": 25
+        },
+        {
+          "name": "Stage_Member",
+          "line": 27
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Text",
+        "MC_Types"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_file_engine.adb",
       "sha256": "7d856dbc62036d4994ad949320f20d91b7b9104b563bd0e33f6264bc5f33e42b",
       "repository": "pkgcore",

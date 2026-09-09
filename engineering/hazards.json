@@ -960,6 +960,17 @@
         "REQ-100"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-087",
+      "title": "DEB内部位置の偽装、原本の取り違え、部分検査の導入許可への昇格",
+      "severity": "critical",
+      "mitigation": "原本とar headerとメンバーをhashに束縛し、位置を独立に再解析する。失敗時は結果を空にし、資源上限とUID 0拒否を維持する。",
+      "residual_risk": "Unprivileged ar envelope/CAS SDK only; compressed tar validation, package semantics, trust, effects, installed catalog and privileged execution remain unqualified. CAS initial hash and synchronous I/O need an outer execution deadline.",
+      "requirements": [
+        "REQ-101"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

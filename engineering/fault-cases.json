@@ -1125,6 +1125,17 @@
       "expected": "新しい発火と未解決の待機を保持し、異なるattemptの成功観測を拒否する。復号だけでは処理再実行や完了を起こさない。",
       "execution": "not-run",
       "reference_tests": "distribution/tests/test_debian_trigger_state.py"
+    },
+    {
+      "id": "FAULT-101",
+      "scenario": "途中切断、偽のoffset/digest、重複・過剰メンバー、不正名・数値・padding、期限切れ、CAS破損、UID 0",
+      "requirements": [
+        "REQ-101"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "元DEBを再検査し、失敗時に部分的なenvelopeや成功digestを返さない。メンバーの保存は展開や導入許可を発生させない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_container_tests.adb"
     }
   ]
 }

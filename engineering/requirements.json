@@ -3145,6 +3145,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-110",
+      "title": "既存世代からの変更集合と保護属性の保持",
+      "shall": "sealed前後catalogを正確なname/architectureで照合し、target最終集合と旧Essential/Protected identity・属性を検査しなければならない。通常変更を決定的に分類し、失敗時は旧計画と部分計画を破棄する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0070"
+      ],
+      "spec": [
+        "distribution/native/transition-plan.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_transition.ads",
+        "pkgcore/runtime/pkg_deb_transition.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_deb_transition_tests.adb",
+        "pkgcore/tests/compare_deb_transition.py"
+      ],
+      "hazards": [
+        "HAZ-096"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -1224,6 +1224,17 @@
       "expected": "全必須関係の成立時だけcandidateとarchitecture policyへ束縛したreceiptを返す。失敗は旧成功hashを消し、原因の原本/field/groupを示す。candidateは変更しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_deb_final_set_tests.adb"
+    },
+    {
+      "id": "FAULT-110",
+      "scenario": "保護flag全組合せ、削除/architecture変更/仮想代替、版比較と再梱包、接頭辞順序、入力順/寿命、壊れた前世代の修復、壊れる候補、途中拒否、期限とUID0",
+      "requirements": [
+        "REQ-110"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "通常更新で保護identityとflagを保持し、正確な差分と前後catalog/endpointを束縛する。拒否は旧計画を消し、入力を変更しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_deb_transition_tests.adb"
     }
   ]
 }

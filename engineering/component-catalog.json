@@ -10352,6 +10352,166 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_deb_transition.adb",
+      "sha256": "c0b8d4ffba7a29d161fd4ce3f7f2888ba77e1e9aea857b4dc8099a7e4b14aa65",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Transition",
+          "line": 5
+        },
+        {
+          "name": "C",
+          "line": 6
+        },
+        {
+          "name": "Changes",
+          "line": 13
+        },
+        {
+          "name": "Pairs",
+          "line": 17
+        },
+        {
+          "name": "Free",
+          "line": 23
+        },
+        {
+          "name": "Clear",
+          "line": 24
+        },
+        {
+          "name": "Finalize",
+          "line": 26
+        },
+        {
+          "name": "Sealed",
+          "line": 28
+        },
+        {
+          "name": "Count",
+          "line": 29
+        },
+        {
+          "name": "Before_Hash",
+          "line": 30
+        },
+        {
+          "name": "After_Hash",
+          "line": 31
+        },
+        {
+          "name": "Endpoint_Hash",
+          "line": 32
+        },
+        {
+          "name": "Fingerprint",
+          "line": 33
+        },
+        {
+          "name": "Build",
+          "line": 34
+        },
+        {
+          "name": "Time_Left",
+          "line": 40
+        },
+        {
+          "name": "Number",
+          "line": 47
+        },
+        {
+          "name": "Text",
+          "line": 50
+        },
+        {
+          "name": "Index_Catalog",
+          "line": 57
+        },
+        {
+          "name": "Read_Change",
+          "line": 141
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Indefinite_Ordered_Maps",
+        "Ada.Containers.Vectors",
+        "Ada.Strings.Unbounded",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Deb_Versions"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_transition.ads",
+      "sha256": "f5f512a56a00c0d9f01456fec0301a327c35f2f88f2b3c3fe5a7d1191ffbcdba",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Transition",
+          "line": 5
+        },
+        {
+          "name": "Build",
+          "line": 21
+        },
+        {
+          "name": "Clear",
+          "line": 25
+        },
+        {
+          "name": "Sealed",
+          "line": 26
+        },
+        {
+          "name": "Count",
+          "line": 27
+        },
+        {
+          "name": "Before_Hash",
+          "line": 28
+        },
+        {
+          "name": "After_Hash",
+          "line": 29
+        },
+        {
+          "name": "Endpoint_Hash",
+          "line": 30
+        },
+        {
+          "name": "Fingerprint",
+          "line": 31
+        },
+        {
+          "name": "Read_Change",
+          "line": 32
+        },
+        {
+          "name": "Finalize",
+          "line": 55
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Text",
+        "MC_Types",
+        "Pkg_Deb_Final_Set",
+        "Pkg_Selected_Catalog",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_file_engine.adb",
       "sha256": "7d856dbc62036d4994ad949320f20d91b7b9104b563bd0e33f6264bc5f33e42b",
       "repository": "pkgcore",

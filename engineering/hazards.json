@@ -1059,6 +1059,17 @@
         "REQ-109"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-096",
+      "title": "保護対象の暗黙削除・属性消失・前世代と変更集合の乖離",
+      "severity": "critical",
+      "mitigation": "前後の正確なidentityと原本を結び、通常更新での保護消失を拒否する。target最終集合も再検査し、全体成功時だけ前後hashと差分を公開する。",
+      "residual_risk": "Ordinary transition SDK only. Accepted baseline authentication, validated protection migration, bootstrap, rollback floor, phase/effects, ownership, retention and root/boot admission remain unqualified.",
+      "requirements": [
+        "REQ-110"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

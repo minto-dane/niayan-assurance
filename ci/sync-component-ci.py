@@ -23,6 +23,7 @@ def generated():
                  'trap \'rm -rf -- "$D"\' EXIT HUP INT TERM']
         if repo == 'pkgcore':
             lines.append('python3 "$PWD/tests/make_deb_final_set_fixtures.py" --check')
+            lines.append('python3 "$PWD/tests/make_deb_transition_fixtures.py" --check')
         for test in tests:
             if not test['main'].startswith(repo+'/'):
                 continue
@@ -42,6 +43,11 @@ def generated():
                               '  cat "$D/final-set-native.log"', 'else',
                               '  cat "$D/final-set-native.log"', '  exit 1', 'fi',
                               'python3 "$PWD/tests/compare_deb_final_set.py" --media "$PWD/tests/fixtures/deb-final-set" --native "$D/final-set-native.log" --output "$D/final-set-native-oracle.json"'])
+            elif repo == 'pkgcore' and name == 'run_deb_transition_tests':
+                lines.extend(['if '+command+' > "$D/transition-native.log" 2>&1; then',
+                              '  cat "$D/transition-native.log"', 'else',
+                              '  cat "$D/transition-native.log"', '  exit 1', 'fi',
+                              'python3 "$PWD/tests/compare_deb_transition.py" --media "$PWD/tests/fixtures/deb-transition" --native "$D/transition-native.log" --output "$D/transition-native-oracle.json"'])
             else:
                 lines.append(command)
         if repo == 'pkgcore':

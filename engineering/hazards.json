@@ -1114,6 +1114,15 @@
         "REQ-114"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-101",
+      "title": "別時点の前世代・候補・policyの合成と旧成功計画の流用",
+      "severity": "critical",
+      "mitigation": "正確なdescriptor hashを必須とし、保持・原本・通常更新を同じ予約で再検査する。前後catalog・候補保持・policyを含むtransitionを一つのBindingへ束縛し、最後の状態/期限照合後だけ出力する。",
+      "residual_risk": "Consistent planning evidence only. Reservations end on return. Production supply/policy authentication and admission, execution phases, effective ownership, full effects, protection migration and physical root/boot remain unqualified.",
+      "requirements": ["REQ-115"],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

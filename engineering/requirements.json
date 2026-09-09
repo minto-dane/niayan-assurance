@@ -3290,6 +3290,18 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-115",
+      "title": "確定済み世代と候補を同一予約へ束縛した通常更新計画",
+      "shall": "正確な受理済みdescriptorを基準に、基準と候補の保持・原本・通常更新を同じpublication/root/CAS予約で検査しなければならない。成功時のみdescriptor、完全な変更集合、architecture policyを含むBindingを返し、旧基準・欠落・依存不成立・期限・予約失敗時は旧成功出力も消す。",
+      "status": "partial-integration",
+      "adr": ["ADR-0075"],
+      "spec": ["distribution/native/current-transition.ja.md"],
+      "code": ["pkgcore/runtime/pkg_generation_publisher.ads", "pkgcore/runtime/pkg_generation_publisher.adb"],
+      "tests": ["pkgcore/tests/run_generation_publication_tests.adb", "pkgcore/tests/compare_current_catalog.py"],
+      "hazards": ["HAZ-101"],
+      "required_evidence": ["independent-design-review", "source-bound-tests", "target-fault-tests"]
     }
   ]
 }

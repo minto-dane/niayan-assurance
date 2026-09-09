@@ -11189,7 +11189,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.adb",
-      "sha256": "1535cf368c3628229ae83947274f00ec77e6c216880178bba0001106be7ce9e1",
+      "sha256": "1c1c889e5e0376c858d04704f672a2dffcfb45916693a4edf724c95292d41f63",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11263,24 +11263,36 @@
           "line": 130
         },
         {
-          "name": "Publish",
+          "name": "Read_Current_Transition",
           "line": 149
         },
         {
+          "name": "Clear_Result",
+          "line": 160
+        },
+        {
+          "name": "Check_Time",
+          "line": 165
+        },
+        {
+          "name": "Publish",
+          "line": 199
+        },
+        {
           "name": "Time_Left",
-          "line": 155
+          "line": 205
         },
         {
           "name": "Guard",
-          "line": 162
+          "line": 212
         },
         {
           "name": "Engine",
-          "line": 175
+          "line": 225
         },
         {
           "name": "Done",
-          "line": 177
+          "line": 227
         }
       ],
       "with_dependencies": [
@@ -11293,6 +11305,7 @@
         "MC_Posix",
         "MC_SHA256",
         "MC_Store",
+        "Pkg_Catalog_Retention",
         "Pkg_Catalog_Store",
         "Pkg_File_Engine",
         "Pkg_File_Plan",
@@ -11306,34 +11319,40 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.ads",
-      "sha256": "ce3651e17f6c31b5844c3de44ec796bc50ccf4296ef2c5920f5cb1edb22590e3",
+      "sha256": "f22d22d6b10d572508417c0e0b8d0f437ba0baadf89cf512ea4d5cc16c4b3c99",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Generation_Publisher",
-          "line": 11
-        },
-        {
-          "name": "Provision",
           "line": 12
         },
         {
+          "name": "Provision",
+          "line": 13
+        },
+        {
           "name": "Publish",
-          "line": 14
+          "line": 15
         },
         {
           "name": "Read_Current",
-          "line": 16
+          "line": 17
         },
         {
           "name": "Read_Current_Catalog",
-          "line": 18
+          "line": 19
+        },
+        {
+          "name": "Read_Current_Transition",
+          "line": 23
         }
       ],
       "with_dependencies": [
         "MC_Types",
+        "Pkg_Deb_Final_Set",
+        "Pkg_Deb_Transition",
         "Pkg_Generation_Descriptor",
         "Pkg_Managed_Engine",
         "Pkg_Payload_Index",

@@ -1279,6 +1279,15 @@
       "expected": "保持欠落を再生成せず失敗し、未組立てrootと確定済み状態を保つ。旧形式は構造検査を維持するがnative公開へ使えず、遅延認可は受け入れない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-115",
+      "scenario": "二世代の変更なし/順方向/逆方向の観測と独立Binding、候補全member/closure欠落、基準保持欠落、誤ったdescriptor/root/closure、依存不成立、architecture policy変更、期限、全予約の競合と復旧行列",
+      "requirements": ["REQ-115"],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "同一予約で検査した前後世代とpolicyだけへ計画を束縛する。失敗では全成功出力を消し、欠落の再生成や確定済み状態の書換えを行わない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

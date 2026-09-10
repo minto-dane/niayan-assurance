@@ -1246,6 +1246,17 @@
         "REQ-126"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-113",
+      "title": "service配備による権限拡大・実mount不一致・欠損状態の自動初期化",
+      "severity": "critical",
+      "mitigation": "専用account名を実UIDへ解決し、明示bootstrapと通常activationを分離する。実mount/device viewとunit資源制限、再起動後の欠損拒否をVMで確認する。",
+      "residual_risk": "Production installer/controller, independent authorization/supply providers, complete effects, physical revalidation/GC and boot remain unqualified.",
+      "requirements": [
+        "REQ-127"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

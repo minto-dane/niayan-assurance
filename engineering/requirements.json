@@ -3648,6 +3648,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-127",
+      "title": "内部root準備の明示的配備と既存状態の保護",
+      "shall": "非root専用accountとroot所有policy・保護mount・socketを配布物で管理しなければならない。通常起動やpackage導入でbank/CASを再初期化せず、限定権限・資源上限と停止の下で実workerへ接続しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0087"
+      ],
+      "spec": [
+        "distribution/native/service-deployment.ja.md"
+      ],
+      "code": [
+        "distribution/native/root_bank.py",
+        "distribution/native/prepare_service_package.py",
+        "distribution/packaging/root-preparation/debian/niaos-root-preparation.service"
+      ],
+      "tests": [
+        "distribution/native/worker/check_service_deployment.py"
+      ],
+      "hazards": [
+        "HAZ-113"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

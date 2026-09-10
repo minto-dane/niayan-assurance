@@ -528,6 +528,12 @@
       "path": "assurance/docs/engineering/adr/ADR-0086.ja.md",
       "status": "proposed-for-review",
       "supersedes": []
+    },
+    {
+      "id": "ADR-0087",
+      "path": "assurance/docs/engineering/adr/ADR-0087.ja.md",
+      "status": "proposed-for-review",
+      "supersedes": []
     }
   ]
 }

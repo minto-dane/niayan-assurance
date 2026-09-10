@@ -1411,6 +1411,17 @@
       "expected": "非認可のroot準備を開始せず、実予約を保持する。展開後拒否では完成した非公開treeが残り得るため不確定とし、公開やboot成功を返さない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_preparation.py"
+    },
+    {
+      "id": "FAULT-127",
+      "scenario": "packageの自動起動/初期化禁止、実account/namespace/資源上限、bootstrap再実行拒否、再起動後のbank lock/CAS lock/設定欠損",
+      "requirements": [
+        "REQ-127"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "実unitで元fixtureから非公開rootを作成し、停止後も履歴を保持する。欠損を空状態として復元せず、extractedを公開やboot成功にしない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_service_deployment.py"
     }
   ]
 }

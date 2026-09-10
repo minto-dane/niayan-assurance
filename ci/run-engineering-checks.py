@@ -221,6 +221,11 @@ def main() -> int:
                     case=Path(tempfile.mkdtemp(prefix=stem+'-',dir=temporary))
                     args=expand_test_args(test,case)
                     invoke(repo+'-'+stem,[str(root/repo/'build/test-bin'/stem),*args],root/repo,'ada-'+test['tier'])
+                if repo == 'pkgcore':
+                    invoke('archive-receipt-native-bridge', [sys.executable, '-B',
+                        str(root/'distribution/native/check_archive_receipt_bridge.py'),
+                        '--driver', str(root/'pkgcore/build/test-bin/run_archive_supply_tests')],
+                        root, 'actual-supply-and-native-cas')
             if available and all(c['result']=='pass' for c in checks): report['ada_execution']='all-registered-tests-pass'
         elif a.mode=='proof':
             if shutil.which('gnatprove',path=env['PATH']) is None:

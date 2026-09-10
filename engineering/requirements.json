@@ -3365,6 +3365,26 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-118",
+      "title": "認証済み供給原本とnative CASの厳格な照合",
+      "shall": "供給記録は実際のTUF/OpenPGP認証後にだけ発行し、独立scope/key/epoch floor/時刻を使って検証しなければならない。全参照CAS原本を先に照合し、元DEBのcontrolをnativeで再観測して一致を要求しなければならない。署名だけで原本の意味を代替せず、失敗は旧成功Bindingを消さなければならない。",
+      "status": "partial-integration",
+      "adr": ["ADR-0078"],
+      "spec": ["distribution/native/archive-receipt.ja.md"],
+      "code": [
+        "distribution/native/archive_receipt.py",
+        "pkgcore/runtime/pkg_archive_supply.ads",
+        "pkgcore/runtime/pkg_archive_supply.adb"
+      ],
+      "tests": [
+        "distribution/native/test_archive_receipt.py",
+        "distribution/native/check_archive_receipt_bridge.py",
+        "pkgcore/tests/run_archive_supply_tests.adb"
+      ],
+      "hazards": ["HAZ-104"],
+      "required_evidence": ["independent-design-review", "source-bound-tests", "target-fault-tests"]
     }
   ]
 }

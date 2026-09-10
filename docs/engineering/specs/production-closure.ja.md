@@ -8,7 +8,7 @@
 
 | 領域 | 現在の実装 | 閉じるべき実行経路・受入試験 |
 |---|---|---|
-| Supply | 署名chain、DEB読み取り、source/rebuild receipt、profile工具 | 公式採用集合の全量検査、鍵失効・時刻・期限、供給遅延、例外承認と緊急修正 |
+| Supply | 署名chain、DEB読み取り、署名付き一原本CAS照合、source/rebuild receipt、profile工具 | 本番observer/key配備、公開計画の変更集合と保持への束縛、公式採用集合の全量検査、鍵失効・時刻・期限、供給遅延、例外承認と緊急修正 |
 | 意味 | neutral solver、DEB比較、独立候補／証明検査 | 元情報から全phase/effectへの変換、元形式での再検査、全closureに対する不正候補試験 |
 | 設定 | 汎用schema／merge／priority、NVIDIA契約、段階別証明 | 個別ソフトの全inputとネイティブ検証、生成物、実行中の値、issuerの分離 |
 | ファイル | descriptorベースのcapture、WAL/CAS、原本／終端照合 | Nia full-root/catalog assembler、初期所有権、全副作用と原子的公開境界 |

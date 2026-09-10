@@ -1310,6 +1310,15 @@
       "expected": "原本供給の信頼入力をすべて検査し、欠落や不一致では返却しない。通常Releaseにも有限期限を要求し、実行許可・第二の導入済みDB・hostでのscript実行を作らない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/test_archive_intake.py"
+    },
+    {
+      "id": "FAULT-118",
+      "scenario": "実TUF/OpenPGP認証不成立時の署名非呼出、別key/domain、provider失敗/遅延/cache変更、全320byte破損、署名済み範囲外/zero/期限/epoch、独立authorityと時刻、全参照欠落、署名済み別control/不正DEB、CAS再open、発行からnativeへの実接続、UID0",
+      "requirements": ["REQ-118"],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "独立authorityと実原本に一致する記録だけを受け入れる。失敗はBindingを消し、欠落原本/controlを再生成して正常化しない。実行許可や第二の導入済みDBを作らない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_archive_supply_tests.adb"
     }
   ]
 }

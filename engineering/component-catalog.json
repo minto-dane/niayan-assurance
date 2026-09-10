@@ -9038,6 +9038,73 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_archive_supply.adb",
+      "sha256": "00cc4295e4545284ca09335a28bddcea972141ddc3c2e516be34ed63293af1ca",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Archive_Supply",
+          "line": 5
+        },
+        {
+          "name": "Free",
+          "line": 10
+        },
+        {
+          "name": "Verify_Original",
+          "line": 11
+        },
+        {
+          "name": "Check",
+          "line": 19
+        },
+        {
+          "name": "Clock",
+          "line": 21
+        },
+        {
+          "name": "Present",
+          "line": 26
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Authentic",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "Pkg_Deb_Metadata"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_archive_supply.ads",
+      "sha256": "da59e8e19de22a1097b38f69de3415c68f499ab89aa9c31167fa3cfa0ae20ad8",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Archive_Supply",
+          "line": 4
+        },
+        {
+          "name": "Verify_Original",
+          "line": 13
+        }
+      ],
+      "with_dependencies": [
+        "MC_Signatures",
+        "MC_Store",
+        "MC_Types"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_catalog_retention.adb",
       "sha256": "81e68e02bd78827d404c941a738ab15a7b740754c4c6f883cab8d8773bf4b7fc",
       "repository": "pkgcore",

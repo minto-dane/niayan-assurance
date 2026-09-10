@@ -3737,6 +3737,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-130",
+      "title": "保護設定と既存cacheを使う供給observerの配布",
+      "shall": "専用非root serviceが実peerと原本FDを確認し、独立保護設定・既存TUF cache・標準HTTPS・credential署名を使わなければならない。通常起動で状態を再初期化/chownせず、返却receiptを実行許可にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0092"
+      ],
+      "spec": [
+        "distribution/native/archive-observer.ja.md"
+      ],
+      "code": [
+        "distribution/native/archive_observer.py",
+        "distribution/native/archive_observer_client.py",
+        "distribution/native/prepare_service_package.py",
+        "distribution/packaging/archive-observer/debian/niaos-archive-observer.service"
+      ],
+      "tests": [
+        "distribution/native/test_archive_observer.py",
+        "distribution/native/worker/check_archive_observer.py"
+      ],
+      "hazards": [
+        "HAZ-116"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

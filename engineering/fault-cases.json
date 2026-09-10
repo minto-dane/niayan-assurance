@@ -1433,6 +1433,17 @@
       "expected": "鍵を保護し、不一致/欠損では供給receiptを返さず、native実行許可を与えない。借用FDを消費せず複製は閉じる。",
       "execution": "not-run",
       "reference_tests": "distribution/native/test_archive_credential.py"
+    },
+    {
+      "id": "FAULT-129",
+      "scenario": "非許可peer、改変原本、未保護config/state、別credential、不信頼TLS、既存bootstrapとlock欠損",
+      "requirements": [
+        "REQ-130"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "有限な実サービスで拒否し、既存stateを再作成/chownせず、receiptと実行許可を混同しない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_archive_observer.py"
     }
   ]
 }

@@ -1279,6 +1279,17 @@
         "REQ-129"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-116",
+      "title": "供給要求とsite信頼の混同・通常起動による信頼状態の再作成",
+      "severity": "critical",
+      "mitigation": "root保護設定と専用UID、peer/SCM credential、原本の私有copy、既存TUF checkpointとHTTPS、明示bootstrap履歴を要求し、通常serviceはstateを作成/chownしない。",
+      "residual_risk": "Production site provisioning and key lifecycle, independent rollback-resistant floor/time, controller authorization and complete effects/boot remain unqualified. Resource exhaustion rejects the request.",
+      "requirements": [
+        "REQ-130"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

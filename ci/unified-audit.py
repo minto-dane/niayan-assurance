@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Cross-repository structural/traceability audit; not semantic proof or release approval."""
 from __future__ import annotations
 import argparse, hashlib, json, re, sys

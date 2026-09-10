@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """BUILD/TEST ONLY. Regenerate publicly known synthetic signature fixtures.
 No input key, trust-store path, deployment target or real report is accepted.
 The deterministic test key material is public, never a production credential.

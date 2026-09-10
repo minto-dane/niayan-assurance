@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Kernel-control readback validation; fixtures do not change live cgroups."""
 import importlib.util
 from pathlib import Path

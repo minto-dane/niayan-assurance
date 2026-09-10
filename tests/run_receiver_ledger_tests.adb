@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 -- Private temporary root, synthetic policy only; no worker is started.
 with Ada.Command_Line;
 with MC_Types;use MC_Types;with MC_Runtime;with MC_FS;with MC_Atomic;

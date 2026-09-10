@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 with MC_Types;use MC_Types;with MC_Log_Format;with MC_Request_Replay;with Test_Support;use Test_Support;
 procedure Run_Request_Replay_Tests with SPARK_Mode=>Off is
    use type MC_Request_Replay.State;

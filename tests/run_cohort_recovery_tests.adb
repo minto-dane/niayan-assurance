@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 with MC_Types; use MC_Types;
 with MC_Recovery_Cohort; use MC_Recovery_Cohort;
 procedure Run_Cohort_Recovery_Tests is

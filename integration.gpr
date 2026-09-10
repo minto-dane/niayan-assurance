@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 project Integration is
    for Languages use ("Ada");
    for Source_Dirs use ("src", "runtime", "tests", "integration", "../pkgcore/src", "../statecore/src");

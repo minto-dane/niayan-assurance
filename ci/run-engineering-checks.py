@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Run source checks or the explicitly registered Ada checks in a private workspace.
 
 This is a development tool, not a production qualification authority. No package

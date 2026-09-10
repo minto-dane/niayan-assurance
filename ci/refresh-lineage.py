@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Preview/record exact source successors without changing imported history."""
 from pathlib import Path
 import argparse

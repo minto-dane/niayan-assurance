@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Independent finite reference model of E-RECOVERY-1, not compiled Ada execution.
 
 These tests validate selected properties of this model, not the production

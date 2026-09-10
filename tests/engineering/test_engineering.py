@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Tests of the development validator itself, NOT of compiled Ada behavior."""
 from __future__ import annotations
 from contextlib import contextmanager

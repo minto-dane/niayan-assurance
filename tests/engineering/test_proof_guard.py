@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Small process tests of development limits; no real prover or host pressure."""
 import importlib.util
 import json

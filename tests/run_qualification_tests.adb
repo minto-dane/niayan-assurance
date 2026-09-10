@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 -- Public synthetic qualification fixtures: never trust these keys in production.
 with Ada.Command_Line; with Ada.Characters.Handling;
 with MC_Types; use MC_Types; with MC_File_IO; with MC_Qualification; with MC_Qualification_Auth;

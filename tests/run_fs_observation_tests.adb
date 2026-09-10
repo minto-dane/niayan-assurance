@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 -- Private harness directory only; never accepts an existing data file.
 with Ada.Command_Line;
 with Interfaces.C;

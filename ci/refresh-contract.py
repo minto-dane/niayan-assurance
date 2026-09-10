@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """BUILD-TIME only: explicit incompatible shared-source lock refresh.
 No deployment, production signing, runtime authorization or proof.
 Use on a trusted unprivileged worktree. An interrupted multi-file publication
@@ -55,7 +55,7 @@ if a.sync_sibling_vendors:
    for f in (d/n).iterdir():regular(f)
   vendors.append(d)
 atomic(A/'contract-profile.source.sha256',manifest);atomic(A/'contract-profile.hex',(profile+'\n').encode())
-generated=('''-- SPDX-License-Identifier: MIT
+generated=('''-- SPDX-License-Identifier: BSD-3-Clause
 -- Generated from contract-profile.source.sha256; not a signature or a proof.
 with MC_Types; use MC_Types;
 package MC_Contract_Profile with SPARK_Mode, Pure is
@@ -67,7 +67,7 @@ meta=json.loads((A/'contract-profile.json').read_text());meta['profile']=profile
 items=sorted((f.relative_to(A).as_posix(),sha(f.read_bytes())) for f in files)
 manifest=''.join(f'{h}  {n}\n' for n,h in items).encode();atomic(A/'contracts.source.sha256',manifest)
 lock=json.loads((A/'contracts.lock.json').read_text());lock.update(bundle_sha256=sha(manifest),runtime_source_profile=profile,files=[dict(path=n,sha256=h) for n,h in items]);atomic(A/'contracts.lock.json',(json.dumps(lock,indent=2)+'\n').encode())
-atomic(A/'app/contract_lock.ads',('''-- SPDX-License-Identifier: MIT
+atomic(A/'app/contract_lock.ads',('''-- SPDX-License-Identifier: BSD-3-Clause
 package Contract_Lock with SPARK_Mode => Off is
    Count : constant := '''+str(len(items))+''';
    subtype Item_Index is Positive range 1 .. Count;
@@ -75,7 +75,7 @@ package Contract_Lock with SPARK_Mode => Off is
    function Expected (Index : Item_Index) return String;
 end Contract_Lock;
 ''').encode())
-s='-- SPDX-License-Identifier: MIT\npackage body Contract_Lock with SPARK_Mode => Off is\n'
+s='-- SPDX-License-Identifier: BSD-3-Clause\npackage body Contract_Lock with SPARK_Mode => Off is\n'
 for fn,pos in [('Name',0),('Expected',1)]:
  s+=f'   function {fn} (Index : Item_Index) return String is\n   begin\n      case Index is\n'
  s+=''.join(f'         when {i} => return "{v[pos]}";\n' for i,v in enumerate(items,1));s+=f'      end case;\n   end {fn};\n'
@@ -86,4 +86,6 @@ for d in vendors:
    if not (A/n/f.name).is_file():f.unlink()
  for f in files:atomic(d/f.relative_to(A),f.read_bytes())
  for name in ('contracts.source.sha256','contracts.lock.json','contract-profile.source.sha256','contract-profile.hex','contract-profile.json'):atomic(d/name,(A/name).read_bytes())
+ for name in ('LICENSE','LICENSING.md','LICENSES/MIT-legacy.txt'):
+  regular(A/name);atomic(d/name,(A/name).read_bytes())
 print('Updated source locks only. Regenerate public test fixtures; independently review and sign any production migration. No proof or production authorization created.')

@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 -- Runs only itself and its freshly forked harmless sleeping children. Never
 -- targets services, pre-existing PIDs or production files. Private test process.
 with Ada.Command_Line; with Ada.Directories; with Ada.Text_IO;

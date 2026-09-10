@@ -1,5 +1,5 @@
 #!/bin/sh
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 # Runtime Ada test, ONLY a private temporary tree. Retain evidence on failure.
 set -eu
 umask 077

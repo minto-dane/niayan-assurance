@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 -- PRIVATE TEST ROOTS ONLY. Synthetic records; no production credentials or services.
 with Ada.Command_Line; with Ada.Directories;
 with MC_Types; use MC_Types;

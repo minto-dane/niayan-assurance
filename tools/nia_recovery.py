@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Authenticated recovery COHORT reconstruction into a separate private candidate.
 Never repairs a live root, resets history, restores trust floors or executes code.
 The pinned anchor/trust policy must arrive through an independent rescue channel.

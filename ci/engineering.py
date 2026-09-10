@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Development-only traceability validator. No installation or production approval.
 
 Requires seven independent checkouts as sibling directories for integration review.

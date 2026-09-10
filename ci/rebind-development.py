@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Explicit development-only regeneration of dependent source locks and PUBLIC test fixtures.
 
 No production keys, signatures, downloads, installation or service operations.

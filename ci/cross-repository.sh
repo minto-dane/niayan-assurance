@@ -1,5 +1,5 @@
 #!/bin/sh
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 # Strict source-lock + independent executable conformance. Not a live cluster test.
 set -eu
 umask 077

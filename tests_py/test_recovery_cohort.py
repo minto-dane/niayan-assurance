@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 import copy,json,os,shutil,sys,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch

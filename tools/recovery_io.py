@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Bounded non-privileged file IO. No live-system changes or implicit initialization.
 Caller supplies a trusted mount namespace and exclusively owned output directory.
 """

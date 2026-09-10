@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """A required native fixture must not turn into a successful skipped suite."""
 import json
 import os

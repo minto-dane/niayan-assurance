@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 package Contract_Lock with SPARK_Mode => Off is
    Count : constant := 153;
    subtype Item_Index is Positive range 1 .. Count;

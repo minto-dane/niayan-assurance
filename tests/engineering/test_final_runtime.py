@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Real isolated Linux/runner probes plus explicitly labelled source regressions.
 These do not execute Ada and are not a substitute for its tests or SPARK proof.
 """

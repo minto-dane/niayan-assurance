@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 with MC_Types; use MC_Types; with MC_Base64; with MC_JSON; with MC_Requests; with MC_Protocol;
 with MC_Witness; with MC_SHA256; with MC_Text; with MC_Numbers; with MC_Properties;
 with MC_Paths; with MC_Dirents; with MC_Numbers;

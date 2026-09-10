@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Tests of developer orchestration only; never writes source fixtures here."""
 import importlib.util
 from pathlib import Path

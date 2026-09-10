@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 with Ada.Command_Line; with Test_Support; use Test_Support; with MC_Types; use MC_Types;
 with MC_Checkpoint; with MC_Checkpoint_Store; with MC_Contract_Profile; with MC_SHA256;
 with MC_Runtime;

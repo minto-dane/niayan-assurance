@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 """Tests of documentation/capability/lineage tooling, NOT Ada execution."""
 import copy, importlib.util, json, shutil, tempfile, unittest, sys
 from pathlib import Path

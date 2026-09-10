@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 with MC_Types; use MC_Types; with MC_Journal_Budget;
 with Test_Support; use Test_Support;
 procedure Run_Journal_Budget_Tests with SPARK_Mode => Off is

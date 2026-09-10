@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 with MC_Types; use MC_Types;
 with MC_Requests; with MC_Protocol; with MC_SHA256;
 with Pkg_Transactions; with State_Changes;

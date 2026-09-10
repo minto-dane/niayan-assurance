@@ -1,4 +1,4 @@
--- SPDX-License-Identifier: MIT
+-- SPDX-License-Identifier: BSD-3-Clause
 with MC_Types; use MC_Types; with MC_Stop_Barrier; use MC_Stop_Barrier;
 with MC_Contract_Profile; with MC_SHA256; with Test_Support; use Test_Support;
 procedure Run_Stop_Barrier_Tests with SPARK_Mode => Off is

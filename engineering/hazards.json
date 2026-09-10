@@ -1191,6 +1191,17 @@
         "REQ-121"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-108",
+      "title": "認可対象世代と実root成果物の分離・復旧時の保持欠損",
+      "severity": "critical",
+      "mitigation": "NIAGEN05でRoot_Archiveを必須とし、catalog/closureと再検証tarを格納planへ照合する。既存pinと同じ公開予約内のcomposed guardを使い、欠損を原本再生成で隠さない。",
+      "residual_risk": "Production ownership/effect and independent supply providers, typed whole-generation GC, privileged extraction and boot remain unqualified. Staging a tar is not a running root.",
+      "requirements": [
+        "REQ-122"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

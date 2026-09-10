@@ -1356,6 +1356,17 @@
       "expected": "失敗したdigestをzeroにし、保持欠損を自動再生成で正常化せず、成功時の全選択spanを元DEBと一致させる。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_root_archive_tests.adb"
+    },
+    {
+      "id": "FAULT-122",
+      "scenario": "enclosing catalog/closure差替え、rootと異なる格納plan、v5の旧tag偽装/参照欠落、供給/intentと世代pin、実staging・公開前・commit拒否後復旧・accepted読取のroot manifest/tar欠損と明示復元、期限・UID0",
+      "requirements": [
+        "REQ-122"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "旧形式のbytesを保持し、rootの採用元と格納tarを公開計画から切り離さない。未commit状態を現在世代とせず、根拠の欠けた公開/復旧/観測は成功しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

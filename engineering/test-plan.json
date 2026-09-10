@@ -624,7 +624,7 @@
         "$TEMP/bank"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "composed generation publication/recovery with mandatory v3 native intent, retained originals and same-reservation update preview; canonical initial/update bindings, missing intent and members, invalid records/policies and fully staged rejected intents; fixture catalogs are real, staged tree and authorities remain synthetic; v4 supply policy admission, expired recorded recovery, independent live policy and retained supply loss"
+      "note": "composed generation publication/recovery with mandatory v3 native intent, retained originals and same-reservation update preview; canonical initial/update bindings, missing intent and members, invalid records/policies and fully staged rejected intents; fixture catalogs are real, staged tree and authorities remain synthetic; v4 supply policy admission, expired recorded recovery, independent live policy and retained supply loss; root-archive variant and independent accepted-state oracle run via check_root_publication.py in both component and integration CI"
     },
     {
       "main": "pkgcore/tests/run_deb_container_tests.adb",
@@ -815,7 +815,7 @@
         "$TEMP/store"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "explicit native root archive assembly; private CAS only, no extraction or installation"
+      "note": "explicit native root archive assembly and actual v5 staging with retained supply/intent, target binding, pin and physical archive hash; private directories, no privileged extraction or boot"
     }
   ]
 }

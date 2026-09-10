@@ -69,6 +69,7 @@ def generated():
             else:
                 lines.append(command)
         if repo == 'pkgcore':
+            lines.append('timeout --kill-after=5s 610s python3 "$PWD/tests/check_root_publication.py" --driver "$PWD/build/test-bin/run_generation_publication_tests"')
             lines.append('timeout --kill-after=5s 600s python3 "$PWD/tests/check_deb_final_set_upstream.py" --media "$PWD/tests/fixtures/deb-final-set" --work "$D/upstream-endpoint"')
         yield ROOT/repo/'ci/test-all.sh', ('\n'.join(lines)+'\n').encode(), 0o755
         for name in ('gnatprove.lock.json','install-gnatprove.py','proof-guard.py'):

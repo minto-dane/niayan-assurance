@@ -229,6 +229,10 @@ def main() -> int:
                             '--cas', args[0], '--output', str(output/'root-archive-oracle.json')],
                             root, 'actual-root-archive-original-spans')
                 if repo == 'pkgcore':
+                    invoke('root-archive-publication', [sys.executable, '-B',
+                        str(root/'pkgcore/tests/check_root_publication.py'),
+                        '--driver', str(root/'pkgcore/build/test-bin/run_generation_publication_tests')],
+                        root, 'actual-root-archive-publication')
                     invoke('archive-receipt-native-bridge', [sys.executable, '-B',
                         str(root/'distribution/native/check_archive_receipt_bridge.py'),
                         '--driver', str(root/'pkgcore/build/test-bin/run_archive_supply_tests')],

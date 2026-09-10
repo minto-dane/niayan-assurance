@@ -11284,7 +11284,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.adb",
-      "sha256": "88f27d0dbedcfc74bd5f8724b240e1da9205b70deb570e2db3b97c677c602ed0",
+      "sha256": "0582f4559dcb9f4009307a2a374e0fc67ca1cbaba46749274925be5e012c4792",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11307,47 +11307,51 @@
         },
         {
           "name": "Encode",
-          "line": 34
+          "line": 36
         },
         {
           "name": "Decode",
-          "line": 53
+          "line": 56
         },
         {
           "name": "Check_Retention",
-          "line": 83
+          "line": 87
+        },
+        {
+          "name": "Free",
+          "line": 90
         },
         {
           "name": "Transaction",
-          "line": 97
+          "line": 119
         },
         {
           "name": "Load_Plan",
-          "line": 104
+          "line": 126
         },
         {
           "name": "Free",
-          "line": 107
-        },
-        {
-          "name": "Earlier",
-          "line": 128
-        },
-        {
-          "name": "Rank",
           "line": 129
         },
         {
+          "name": "Earlier",
+          "line": 150
+        },
+        {
+          "name": "Rank",
+          "line": 151
+        },
+        {
           "name": "Contained_Link",
-          "line": 139
+          "line": 161
         },
         {
           "name": "Check",
-          "line": 164
+          "line": 186
         },
         {
           "name": "Free",
-          "line": 166
+          "line": 188
         }
       ],
       "with_dependencies": [
@@ -11358,13 +11362,14 @@
         "MC_Text",
         "Pkg_Catalog_Retention",
         "Pkg_Generation_Intent",
+        "Pkg_Root_Archive",
         "Pkg_Supply_Policy"
       ],
       "semantic_analysis": false
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.ads",
-      "sha256": "36bbf2a15a1610651799e6117dbf4c3f07c330cd56a6dde39cf66eba4aed5f1d",
+      "sha256": "73c8a9ef33672ee590bb96be7c9325ba8c189dd523aa6d92c72a4493d50f9edc",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11375,35 +11380,35 @@
         },
         {
           "name": "Valid",
-          "line": 27
-        },
-        {
-          "name": "Prefix_Size",
           "line": 28
         },
         {
-          "name": "Encode",
+          "name": "Prefix_Size",
           "line": 29
         },
         {
-          "name": "Decode",
+          "name": "Encode",
           "line": 30
         },
         {
-          "name": "Transaction",
+          "name": "Decode",
           "line": 31
         },
         {
-          "name": "Load_Plan",
+          "name": "Transaction",
           "line": 32
         },
         {
+          "name": "Load_Plan",
+          "line": 33
+        },
+        {
           "name": "Check",
-          "line": 34
+          "line": 35
         },
         {
           "name": "Check_Retention",
-          "line": 35
+          "line": 36
         }
       ],
       "with_dependencies": [
@@ -11415,7 +11420,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.adb",
-      "sha256": "3d33bace5aef134be85ba1188e6a6be87a85939fb23cc8e9ba89a40c70d5861b",
+      "sha256": "c00afb7255e287aeb7f4679dde45e592eeaf104200bf9fff1f7dd2f6d490921f",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11559,7 +11564,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.ads",
-      "sha256": "536a8962c73b8e3769cba09608153a7848dde068d67421647a0eb314b4ebffc1",
+      "sha256": "273a564fd2b1b9dc10ed60276f41cf854e0c0f311b6fd1368d4450eced2d13cc",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12442,7 +12447,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_archive.adb",
-      "sha256": "5c4dec82162dfa7a299920dd30de7f3a6479a949356ec7f0d7ea2c117aaacc30",
+      "sha256": "b5de11d069d67e3d531a8b679c97855287f60a93a76ed19a4502a4f9606c3ebf",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12532,7 +12537,7 @@
           "line": 108
         },
         {
-          "name": "Verify",
+          "name": "Verify_Bound",
           "line": 233
         },
         {
@@ -12542,6 +12547,14 @@
         {
           "name": "Cleanup",
           "line": 240
+        },
+        {
+          "name": "Verify",
+          "line": 283
+        },
+        {
+          "name": "Verify_Target",
+          "line": 286
         }
       ],
       "with_dependencies": [
@@ -12563,7 +12576,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_archive.ads",
-      "sha256": "5439c0d146cbb881a6e14a84384dbeb1f30a4808628e55f8520eeab8d3566f13",
+      "sha256": "2b515e07ec9836012e8785baf62bc8b8f416f024710c54c5cd75b737888072bc",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12579,6 +12592,10 @@
         {
           "name": "Verify",
           "line": 12
+        },
+        {
+          "name": "Verify_Target",
+          "line": 14
         }
       ],
       "with_dependencies": [

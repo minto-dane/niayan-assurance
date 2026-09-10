@@ -3501,6 +3501,39 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-122",
+      "title": "root成果物の世代保持と認可対象公開計画への束縛",
+      "shall": "rootアーカイブと全採用claimを世代manifest・pin・物理公開計画へ束縛し、同一catalog/closureから再検証したtarをstagingしなければならない。公開・記録済み復旧・現世代観測で保持欠損を隠さず拒否し、既存Managed認可と独立した現在供給policyを維持しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0082"
+      ],
+      "spec": [
+        "distribution/native/root-generation.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_root_archive.adb",
+        "pkgcore/runtime/pkg_generation_manifest.ads",
+        "pkgcore/runtime/pkg_generation_manifest.adb",
+        "pkgcore/runtime/pkg_generation_publisher.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_archive_tests.adb",
+        "pkgcore/tests/root_archive_stage_test.adb",
+        "pkgcore/tests/run_generation_stage_tests.adb",
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/compare_root_publication.py"
+      ],
+      "hazards": [
+        "HAZ-108"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -9039,7 +9039,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_archive_supply.adb",
-      "sha256": "00cc4295e4545284ca09335a28bddcea972141ddc3c2e516be34ed63293af1ca",
+      "sha256": "349e3b5feafe6ba897215140bf3366bc1bb666de7c403fb3cc4ba41cd1d1ffc3",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9053,7 +9053,7 @@
           "line": 10
         },
         {
-          "name": "Verify_Original",
+          "name": "Check_Original",
           "line": 11
         },
         {
@@ -9067,6 +9067,14 @@
         {
           "name": "Present",
           "line": 26
+        },
+        {
+          "name": "Verify_Original",
+          "line": 80
+        },
+        {
+          "name": "Recheck_Original",
+          "line": 86
         }
       ],
       "with_dependencies": [
@@ -9083,7 +9091,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_archive_supply.ads",
-      "sha256": "da59e8e19de22a1097b38f69de3415c68f499ab89aa9c31167fa3cfa0ae20ad8",
+      "sha256": "e5721080d8da438ee16d54c0f24cc262d97e6e851443e1a536787edb9e0a5c56",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9095,6 +9103,10 @@
         {
           "name": "Verify_Original",
           "line": 13
+        },
+        {
+          "name": "Recheck_Original",
+          "line": 16
         }
       ],
       "with_dependencies": [
@@ -10801,7 +10813,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_file_engine.adb",
-      "sha256": "7d856dbc62036d4994ad949320f20d91b7b9104b563bd0e33f6264bc5f33e42b",
+      "sha256": "33cb8399dce242e612cfe229c29e87cd7e6e6b5362e2096c97340aa846f33621",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -10839,100 +10851,104 @@
           "line": 68
         },
         {
-          "name": "Capture",
+          "name": "Check_Inputs",
           "line": 87
         },
         {
+          "name": "Capture",
+          "line": 95
+        },
+        {
           "name": "Check_Objects",
-          "line": 151
+          "line": 159
         },
         {
           "name": "Replay_Binding",
-          "line": 164
+          "line": 172
         },
         {
           "name": "Read_Log",
-          "line": 168
+          "line": 176
         },
         {
           "name": "Prepare",
-          "line": 169
+          "line": 177
         },
         {
           "name": "Read_Log",
-          "line": 212
+          "line": 220
         },
         {
           "name": "Validate_Log",
-          "line": 224
+          "line": 232
         },
         {
           "name": "Load_Plan",
-          "line": 227
+          "line": 235
         },
         {
           "name": "Free_Buffer",
-          "line": 229
+          "line": 237
         },
         {
           "name": "Resume",
-          "line": 241
+          "line": 249
         },
         {
           "name": "Resume_Recorded",
-          "line": 260
+          "line": 268
         },
         {
           "name": "Loaded_Plan",
-          "line": 285
+          "line": 293
         },
         {
           "name": "Inspect",
-          "line": 286
+          "line": 294
         },
         {
           "name": "Safe_Link",
-          "line": 301
+          "line": 309
         },
         {
           "name": "Materialize",
-          "line": 319
+          "line": 327
         },
         {
           "name": "Apply",
-          "line": 392
+          "line": 400
         },
         {
           "name": "Commit",
-          "line": 420
+          "line": 428
         },
         {
           "name": "Restore",
-          "line": 448
+          "line": 456
         },
         {
           "name": "Reconcile_Terminal",
-          "line": 481
+          "line": 489
         },
         {
           "name": "Repair_Torn_Journal",
-          "line": 509
+          "line": 517
         },
         {
           "name": "Generation",
-          "line": 529
+          "line": 537
         },
         {
           "name": "Accepted_Plan",
-          "line": 530
+          "line": 538
         },
         {
           "name": "Has_Active_Change",
-          "line": 531
+          "line": 539
         },
         {
           "name": "Close",
-          "line": 532
+          "line": 540
         }
       ],
       "with_dependencies": [
@@ -10950,7 +10966,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_file_engine.ads",
-      "sha256": "7195937d05a807fc3e59abaa128517e768352cb2f19869f9bd207907c7cf0c6b",
+      "sha256": "d2d776ee9ec98ecaa8eb614039ca58d6164f99a9ca5dfed1d665aac06a322794",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -10968,60 +10984,64 @@
           "line": 15
         },
         {
-          "name": "Prepare",
-          "line": 17
-        },
-        {
-          "name": "Resume",
+          "name": "Check_Inputs",
           "line": 19
         },
         {
-          "name": "Resume_Recorded",
-          "line": 20
-        },
-        {
-          "name": "Loaded_Plan",
-          "line": 21
-        },
-        {
-          "name": "Inspect",
-          "line": 22
-        },
-        {
-          "name": "Apply",
-          "line": 23
-        },
-        {
-          "name": "Commit",
+          "name": "Prepare",
           "line": 24
         },
         {
-          "name": "Restore",
-          "line": 25
-        },
-        {
-          "name": "Reconcile_Terminal",
+          "name": "Resume",
           "line": 26
         },
         {
-          "name": "Repair_Torn_Journal",
+          "name": "Resume_Recorded",
           "line": 27
         },
         {
-          "name": "Generation",
+          "name": "Loaded_Plan",
           "line": 28
         },
         {
-          "name": "Accepted_Plan",
+          "name": "Inspect",
           "line": 29
         },
         {
-          "name": "Has_Active_Change",
+          "name": "Apply",
           "line": 30
         },
         {
-          "name": "Close",
+          "name": "Commit",
           "line": 31
+        },
+        {
+          "name": "Restore",
+          "line": 32
+        },
+        {
+          "name": "Reconcile_Terminal",
+          "line": 33
+        },
+        {
+          "name": "Repair_Torn_Journal",
+          "line": 34
+        },
+        {
+          "name": "Generation",
+          "line": 35
+        },
+        {
+          "name": "Accepted_Plan",
+          "line": 36
+        },
+        {
+          "name": "Has_Active_Change",
+          "line": 37
+        },
+        {
+          "name": "Close",
+          "line": 38
         }
       ],
       "with_dependencies": [
@@ -11264,7 +11284,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.adb",
-      "sha256": "2655387fd45f3f5658dd2c107315dd23a18b3a0d1d11f6b5db164db45a42a42e",
+      "sha256": "88f27d0dbedcfc74bd5f8724b240e1da9205b70deb570e2db3b97c677c602ed0",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11287,47 +11307,47 @@
         },
         {
           "name": "Encode",
-          "line": 33
+          "line": 34
         },
         {
           "name": "Decode",
-          "line": 51
+          "line": 53
         },
         {
           "name": "Check_Retention",
-          "line": 79
+          "line": 83
         },
         {
           "name": "Transaction",
-          "line": 90
-        },
-        {
-          "name": "Load_Plan",
           "line": 97
         },
         {
+          "name": "Load_Plan",
+          "line": 104
+        },
+        {
           "name": "Free",
-          "line": 100
+          "line": 107
         },
         {
           "name": "Earlier",
-          "line": 121
+          "line": 128
         },
         {
           "name": "Rank",
-          "line": 122
+          "line": 129
         },
         {
           "name": "Contained_Link",
-          "line": 132
+          "line": 139
         },
         {
           "name": "Check",
-          "line": 157
+          "line": 164
         },
         {
           "name": "Free",
-          "line": 159
+          "line": 166
         }
       ],
       "with_dependencies": [
@@ -11337,13 +11357,14 @@
         "MC_SHA256",
         "MC_Text",
         "Pkg_Catalog_Retention",
-        "Pkg_Generation_Intent"
+        "Pkg_Generation_Intent",
+        "Pkg_Supply_Policy"
       ],
       "semantic_analysis": false
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.ads",
-      "sha256": "dc1c74fb7cbc6a68814a20f2fa14680126ba115594144ad4578963b382d59684",
+      "sha256": "36bbf2a15a1610651799e6117dbf4c3f07c330cd56a6dde39cf66eba4aed5f1d",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11354,35 +11375,35 @@
         },
         {
           "name": "Valid",
-          "line": 26
-        },
-        {
-          "name": "Prefix_Size",
           "line": 27
         },
         {
-          "name": "Encode",
+          "name": "Prefix_Size",
           "line": 28
         },
         {
-          "name": "Decode",
+          "name": "Encode",
           "line": 29
         },
         {
-          "name": "Transaction",
+          "name": "Decode",
           "line": 30
         },
         {
-          "name": "Load_Plan",
+          "name": "Transaction",
           "line": 31
         },
         {
+          "name": "Load_Plan",
+          "line": 32
+        },
+        {
           "name": "Check",
-          "line": 33
+          "line": 34
         },
         {
           "name": "Check_Retention",
-          "line": 34
+          "line": 35
         }
       ],
       "with_dependencies": [
@@ -11394,7 +11415,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.adb",
-      "sha256": "085f92e9cb93aab6e65e55d9c470e0de0a5fe784a312e0f7c971c6182487a796",
+      "sha256": "3d33bace5aef134be85ba1188e6a6be87a85939fb23cc8e9ba89a40c70d5861b",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11417,87 +11438,99 @@
         },
         {
           "name": "Free",
-          "line": 16
-        },
-        {
-          "name": "Free",
           "line": 17
         },
         {
-          "name": "Read_State",
+          "name": "Free",
           "line": 18
         },
         {
+          "name": "Read_State",
+          "line": 19
+        },
+        {
           "name": "Read_Plan",
-          "line": 32
+          "line": 33
         },
         {
           "name": "Read_Manifest",
-          "line": 40
+          "line": 41
         },
         {
           "name": "Provision",
-          "line": 48
+          "line": 49
         },
         {
           "name": "Done",
-          "line": 51
+          "line": 52
         },
         {
           "name": "Close_Observation",
-          "line": 83
+          "line": 84
         },
         {
           "name": "Observe_And_Lock",
-          "line": 88
+          "line": 89
         },
         {
           "name": "Read_Current",
-          "line": 115
+          "line": 116
         },
         {
           "name": "Read_Current_Catalog",
-          "line": 124
+          "line": 125
         },
         {
           "name": "Clear_Result",
-          "line": 129
+          "line": 130
         },
         {
           "name": "Check_Time",
-          "line": 131
+          "line": 132
         },
         {
           "name": "Read_Current_Transition",
-          "line": 150
+          "line": 151
         },
         {
           "name": "Clear_Result",
-          "line": 160
+          "line": 161
         },
         {
           "name": "Check_Time",
-          "line": 165
+          "line": 166
         },
         {
           "name": "Publish",
-          "line": 198
+          "line": 199
         },
         {
           "name": "Time_Left",
-          "line": 205
+          "line": 210
+        },
+        {
+          "name": "Check_Supply_Policy",
+          "line": 217
         },
         {
           "name": "Guard",
-          "line": 212
+          "line": 237
         },
         {
           "name": "Engine",
-          "line": 226
+          "line": 253
+        },
+        {
+          "name": "Validate_Inputs",
+          "line": 255
+        },
+        {
+          "name": "Revalidate",
+          "line": 297
         },
         {
           "name": "Done",
-          "line": 228
+          "line": 298
         }
       ],
       "with_dependencies": [
@@ -11519,40 +11552,41 @@
         "Pkg_Generation_Manifest",
         "Pkg_Generation_Stage",
         "Pkg_Recovery_Audit",
-        "Pkg_Root_State"
+        "Pkg_Root_State",
+        "Pkg_Supply_Map"
       ],
       "semantic_analysis": false
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.ads",
-      "sha256": "7bad6eceefbbf70b88315cf896d5a037e541871060dbdca7d5f1ae7bb43a2e75",
+      "sha256": "536a8962c73b8e3769cba09608153a7848dde068d67421647a0eb314b4ebffc1",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Generation_Publisher",
-          "line": 12
-        },
-        {
-          "name": "Provision",
-          "line": 13
-        },
-        {
-          "name": "Publish",
-          "line": 15
-        },
-        {
-          "name": "Read_Current",
           "line": 17
         },
         {
+          "name": "Provision",
+          "line": 18
+        },
+        {
+          "name": "Publish",
+          "line": 20
+        },
+        {
+          "name": "Read_Current",
+          "line": 22
+        },
+        {
           "name": "Read_Current_Catalog",
-          "line": 19
+          "line": 24
         },
         {
           "name": "Read_Current_Transition",
-          "line": 23
+          "line": 28
         }
       ],
       "with_dependencies": [
@@ -11562,7 +11596,8 @@
         "Pkg_Generation_Descriptor",
         "Pkg_Managed_Engine",
         "Pkg_Payload_Index",
-        "Pkg_Selected_Catalog"
+        "Pkg_Selected_Catalog",
+        "Pkg_Supply_Policy"
       ],
       "semantic_analysis": false
     },
@@ -12833,7 +12868,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_supply_map.adb",
-      "sha256": "84538d7c9b19ac791046ae0ba5f7bf02bf1f6881f4996542b89d3aa8af1f1dae",
+      "sha256": "12d38429310a44cc26bd8e03d4c1f4fa63298738eacfa0ec78dedb954690084e",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12892,23 +12927,35 @@
         },
         {
           "name": "Check",
-          "line": 112
+          "line": 113
         },
         {
           "name": "Clock",
-          "line": 114
+          "line": 115
         },
         {
           "name": "Prepare",
-          "line": 196
+          "line": 204
+        },
+        {
+          "name": "Check_Map",
+          "line": 231
         },
         {
           "name": "Verify",
-          "line": 223
+          "line": 261
+        },
+        {
+          "name": "Verify_Interval",
+          "line": 266
+        },
+        {
+          "name": "Recheck_At",
+          "line": 272
         },
         {
           "name": "Check_Retention",
-          "line": 248
+          "line": 278
         }
       ],
       "with_dependencies": [
@@ -12927,7 +12974,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_supply_map.ads",
-      "sha256": "ce5a2b4b703b76345e50ee2fb3cd5be0060c840ad42d27218538db1ff5492658",
+      "sha256": "6564a3b2999e549592bca921e2f53663c53fd4840d089f52520ed3dfc269b3f3",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12945,8 +12992,16 @@
           "line": 24
         },
         {
-          "name": "Check_Retention",
+          "name": "Verify_Interval",
           "line": 26
+        },
+        {
+          "name": "Recheck_At",
+          "line": 31
+        },
+        {
+          "name": "Check_Retention",
+          "line": 36
         }
       ],
       "with_dependencies": [
@@ -12955,6 +13010,102 @@
         "Pkg_Archive_Supply",
         "Pkg_Generation_Descriptor",
         "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_supply_policy.adb",
+      "sha256": "5a2bb362d75cdbe82358ed4cac34b5e3dc86b1f90597c47b10b3d997208520e0",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Policy",
+          "line": 5
+        },
+        {
+          "name": "Tick",
+          "line": 9
+        },
+        {
+          "name": "Current_Time",
+          "line": 16
+        },
+        {
+          "name": "Canonical",
+          "line": 28
+        },
+        {
+          "name": "Load",
+          "line": 48
+        },
+        {
+          "name": "Prepare",
+          "line": 78
+        },
+        {
+          "name": "Load_Trusted",
+          "line": 106
+        },
+        {
+          "name": "Verify_New",
+          "line": 119
+        },
+        {
+          "name": "Recheck_Recorded",
+          "line": 134
+        },
+        {
+          "name": "Check_Retention",
+          "line": 145
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Posix",
+        "Pkg_Archive_Supply"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_supply_policy.ads",
+      "sha256": "7db5127a335cef828838c5ecd6fb6261b5d9a31a9b37099b733e8e6d8710c9c2",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Policy",
+          "line": 4
+        },
+        {
+          "name": "Prepare",
+          "line": 14
+        },
+        {
+          "name": "Load",
+          "line": 17
+        },
+        {
+          "name": "Verify_New",
+          "line": 19
+        },
+        {
+          "name": "Recheck_Recorded",
+          "line": 22
+        },
+        {
+          "name": "Check_Retention",
+          "line": 28
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Supply_Map"
       ],
       "semantic_analysis": false
     },

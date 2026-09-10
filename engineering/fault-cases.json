@@ -1283,7 +1283,9 @@
     {
       "id": "FAULT-115",
       "scenario": "二世代の変更なし/順方向/逆方向の観測と独立Binding、候補全member/closure欠落、基準保持欠落、誤ったdescriptor/root/closure、依存不成立、architecture policy変更、期限、全予約の競合と復旧行列",
-      "requirements": ["REQ-115"],
+      "requirements": [
+        "REQ-115"
+      ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
       "expected": "同一予約で検査した前後世代とpolicyだけへ計画を束縛する。失敗では全成功出力を消し、欠落の再生成や確定済み状態の書換えを行わない。",
       "execution": "not-run",
@@ -1314,7 +1316,9 @@
     {
       "id": "FAULT-118",
       "scenario": "実TUF/OpenPGP認証不成立時の署名非呼出、別key/domain、provider失敗/遅延/cache変更、全320byte破損、署名済み範囲外/zero/期限/epoch、独立authorityと時刻、全参照欠落、署名済み別control/不正DEB、CAS再open、発行からnativeへの実接続、UID0",
-      "requirements": ["REQ-118"],
+      "requirements": [
+        "REQ-118"
+      ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
       "expected": "独立authorityと実原本に一致する記録だけを受け入れる。失敗はBindingを消し、欠落原本/controlを再生成して正常化しない。実行許可や第二の導入済みDBを作らない。",
       "execution": "not-run",
@@ -1330,6 +1334,17 @@
       "expected": "新規に必要な原本だけを正確に認証し、失敗したAddress/Valid_Untilを消す。保持欠損を正常化せず、期限切れの歴史的保持検査を新規認可にしない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_supply_map_tests.adb"
+    },
+    {
+      "id": "FAULT-120",
+      "scenario": "保持policyの全byte変更と切断/余剰、独立鍵/floor/時刻変更、最大添字、期限切れ新規更新、authority中の期限到達、期限後の記録済み復旧、v4の旧形式偽装と必須供給参照欠損、実公開中のwrite/fsync/rename障害とSIGKILL、UID0",
+      "requirements": [
+        "REQ-120"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "未記録の計画を過去時刻だけで新規認可しない。認可済み計画だけを完全な根拠と独立した現在policyの下で復旧し、故障時に根拠のない成功を返さない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

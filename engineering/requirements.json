@@ -3296,12 +3296,28 @@
       "title": "確定済み世代と候補を同一予約へ束縛した通常更新計画",
       "shall": "正確な受理済みdescriptorを基準に、基準と候補の保持・原本・通常更新を同じpublication/root/CAS予約で検査しなければならない。成功時のみdescriptor、完全な変更集合、architecture policyを含むBindingを返し、旧基準・欠落・依存不成立・期限・予約失敗時は旧成功出力も消す。",
       "status": "partial-integration",
-      "adr": ["ADR-0075"],
-      "spec": ["distribution/native/current-transition.ja.md"],
-      "code": ["pkgcore/runtime/pkg_generation_publisher.ads", "pkgcore/runtime/pkg_generation_publisher.adb"],
-      "tests": ["pkgcore/tests/run_generation_publication_tests.adb", "pkgcore/tests/compare_current_catalog.py"],
-      "hazards": ["HAZ-101"],
-      "required_evidence": ["independent-design-review", "source-bound-tests", "target-fault-tests"]
+      "adr": [
+        "ADR-0075"
+      ],
+      "spec": [
+        "distribution/native/current-transition.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_publisher.ads",
+        "pkgcore/runtime/pkg_generation_publisher.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/compare_current_catalog.py"
+      ],
+      "hazards": [
+        "HAZ-101"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     },
     {
       "id": "REQ-116",
@@ -3371,8 +3387,12 @@
       "title": "認証済み供給原本とnative CASの厳格な照合",
       "shall": "供給記録は実際のTUF/OpenPGP認証後にだけ発行し、独立scope/key/epoch floor/時刻を使って検証しなければならない。全参照CAS原本を先に照合し、元DEBのcontrolをnativeで再観測して一致を要求しなければならない。署名だけで原本の意味を代替せず、失敗は旧成功Bindingを消さなければならない。",
       "status": "partial-integration",
-      "adr": ["ADR-0078"],
-      "spec": ["distribution/native/archive-receipt.ja.md"],
+      "adr": [
+        "ADR-0078"
+      ],
+      "spec": [
+        "distribution/native/archive-receipt.ja.md"
+      ],
       "code": [
         "distribution/native/archive_receipt.py",
         "pkgcore/runtime/pkg_archive_supply.ads",
@@ -3383,8 +3403,14 @@
         "distribution/native/check_archive_receipt_bridge.py",
         "pkgcore/tests/run_archive_supply_tests.adb"
       ],
-      "hazards": ["HAZ-104"],
-      "required_evidence": ["independent-design-review", "source-bound-tests", "target-fault-tests"]
+      "hazards": [
+        "HAZ-104"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     },
     {
       "id": "REQ-119",
@@ -3407,6 +3433,40 @@
       ],
       "hazards": [
         "HAZ-105"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-120",
+      "title": "実公開計画に保持した供給観測の新規認可と記録済み復旧",
+      "shall": "新規公開は独立した現在の供給policyと保持snapshotを完全照合して署名・原本差集合・観測区間を検査しなければならない。歴史的観測による再検査は実root.stateと完全なpin/journalが同じactive/accepted planを証明する場合だけに使用し、現在policyと全Managed guardを維持しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0080"
+      ],
+      "spec": [
+        "distribution/native/publication-supply.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_supply_policy.ads",
+        "pkgcore/runtime/pkg_supply_policy.adb",
+        "pkgcore/runtime/pkg_generation_manifest.adb",
+        "pkgcore/runtime/pkg_generation_publisher.adb",
+        "pkgcore/runtime/pkg_supply_map.adb",
+        "pkgcore/runtime/pkg_archive_supply.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_supply_map_tests.adb",
+        "pkgcore/tests/run_generation_stage_tests.adb",
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/compare_current_catalog.py"
+      ],
+      "hazards": [
+        "HAZ-106"
       ],
       "required_evidence": [
         "independent-design-review",

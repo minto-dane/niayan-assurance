@@ -886,6 +886,22 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "actual configuration bytes and observed metadata retained in existing CAS; raw paths, real absence, edits, modes, deadlines, empty and streamed content; isolated C sanitizer checks cover inode/xattr/link/timestamp changes"
+    },
+    {
+      "main": "pkgcore/tests/run_conffile_choice_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "$TEMP/root",
+        "tests/fixtures/conffiles"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store",
+        "$TEMP/root"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "original DEBs and real private configuration namespace; exact proposal choice, baseline and retained references, edits/backup collisions and lost retained source; no UI authentication or live-root application"
     }
   ]
 }

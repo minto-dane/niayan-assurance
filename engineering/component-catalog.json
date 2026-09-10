@@ -9618,6 +9618,153 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_conffile_choice.adb",
+      "sha256": "b6b6cc29b6a91aa4c336aafd4f02e927c7773aad065a347ab22c34b0ca8809f6",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Choice",
+          "line": 5
+        },
+        {
+          "name": "T",
+          "line": 6
+        },
+        {
+          "name": "D",
+          "line": 7
+        },
+        {
+          "name": "Objects",
+          "line": 8
+        },
+        {
+          "name": "Free",
+          "line": 25
+        },
+        {
+          "name": "Clear",
+          "line": 26
+        },
+        {
+          "name": "Finalize",
+          "line": 35
+        },
+        {
+          "name": "Address",
+          "line": 37
+        },
+        {
+          "name": "Pending",
+          "line": 39
+        },
+        {
+          "name": "Tick",
+          "line": 41
+        },
+        {
+          "name": "Include",
+          "line": 47
+        },
+        {
+          "name": "Verify_Members",
+          "line": 49
+        },
+        {
+          "name": "Prepare",
+          "line": 61
+        },
+        {
+          "name": "Need",
+          "line": 68
+        },
+        {
+          "name": "Source",
+          "line": 70
+        },
+        {
+          "name": "Recheck",
+          "line": 141
+        },
+        {
+          "name": "Resolve",
+          "line": 162
+        },
+        {
+          "name": "Need",
+          "line": 167
+        },
+        {
+          "name": "Overlap",
+          "line": 169
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Ordered_Sets",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "Pkg_Conffile_Snapshot",
+        "Pkg_Deb_Conffiles",
+        "Pkg_Deb_Payload"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_conffile_choice.ads",
+      "sha256": "761bb517717109d858d16b3ce17c597033c8335dbe946ba21474fdc5aa725698",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Choice",
+          "line": 5
+        },
+        {
+          "name": "Prepare",
+          "line": 8
+        },
+        {
+          "name": "Address",
+          "line": 12
+        },
+        {
+          "name": "Pending",
+          "line": 13
+        },
+        {
+          "name": "Resolve",
+          "line": 14
+        },
+        {
+          "name": "Recheck",
+          "line": 18
+        },
+        {
+          "name": "Clear",
+          "line": 20
+        },
+        {
+          "name": "Finalize",
+          "line": 47
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Conffile_Transition",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_conffile_snapshot.adb",
       "sha256": "afc96dea6e1920db4ae806768d5952dca6a59d1fed38280fc27eb064c3a61939",
       "repository": "pkgcore",

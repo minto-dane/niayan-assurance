@@ -1334,6 +1334,17 @@
         "REQ-134"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-121",
+      "title": "別候補への選択転用・退避衝突・vendor原本追跡の喪失",
+      "severity": "critical",
+      "mitigation": "原本とsnapshotから候補を固定し、一回の選択と欠落を観測した退避先を束縛する。原本/内容/metadataと選択を保持し、全参照とlive namespaceを再確認する。",
+      "residual_risk": "Authenticated UI consent, trusted root/context/catalog admission, full attributes and global namespace effects, privileged observation, durable recovery and generation retention/publication remain unqualified. No filesystem freeze or cross-reboot one-shot guarantee is conferred.",
+      "requirements": [
+        "REQ-135"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

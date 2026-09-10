@@ -3883,6 +3883,32 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-135",
+      "title": "実設定候補への選択束縛と退避参照の保持",
+      "shall": "設定の選択は元DEB・現在snapshot・上位context・初期期限を固定した候補へ束縛しなければならない。必要な退避先の欠落と全保持参照を確認し、候補変更・競合・保持物欠損を成功としてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0097"
+      ],
+      "spec": [
+        "distribution/native/conffile-choice.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_conffile_choice.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_conffile_choice_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-121"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

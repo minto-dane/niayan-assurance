@@ -1488,6 +1488,17 @@
       "expected": "古いsnapshotを再利用せず、失敗時の内容/metadata出力を消す。不明をMissingとせず、既に保存した旧内容はCASで保持する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_conffile_snapshot_tests.adb"
+    },
+    {
+      "id": "FAULT-134",
+      "scenario": "選択待ち中の編集、別候補/閉包、未解決選択、再選択、退避先の占有/後発作成、原本欠損、期限切れ",
+      "requirements": [
+        "REQ-135"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "sessionと出力を消し、古い候補で進まない。退避先を上書きせず、欠損した保持原本を再構成しない。選択結果と次vendor原本を正確に保持する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_conffile_choice_tests.adb"
     }
   ]
 }

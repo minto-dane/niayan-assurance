@@ -9765,8 +9765,221 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_conffile_observation.adb",
+      "sha256": "66d489e43e5654b77669cce5b555cee1e9560b1131ef73a766313ef61b5d63aa",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Observation",
+          "line": 4
+        },
+        {
+          "name": "P",
+          "line": 5
+        },
+        {
+          "name": "Free",
+          "line": 8
+        },
+        {
+          "name": "Spans",
+          "line": 13
+        },
+        {
+          "name": "Free",
+          "line": 26
+        },
+        {
+          "name": "Clear",
+          "line": 27
+        },
+        {
+          "name": "Finalize",
+          "line": 29
+        },
+        {
+          "name": "Address",
+          "line": 31
+        },
+        {
+          "name": "Path",
+          "line": 32
+        },
+        {
+          "name": "Image",
+          "line": 33
+        },
+        {
+          "name": "Attributes",
+          "line": 34
+        },
+        {
+          "name": "Observer_UID",
+          "line": 35
+        },
+        {
+          "name": "Observer_GID",
+          "line": 36
+        },
+        {
+          "name": "Directory_Count",
+          "line": 37
+        },
+        {
+          "name": "Missing_Component",
+          "line": 38
+        },
+        {
+          "name": "Xattr_Count",
+          "line": 39
+        },
+        {
+          "name": "Read_Directory",
+          "line": 40
+        },
+        {
+          "name": "Read_Xattr",
+          "line": 46
+        },
+        {
+          "name": "Load",
+          "line": 58
+        },
+        {
+          "name": "Need",
+          "line": 66
+        },
+        {
+          "name": "Invalid",
+          "line": 68
+        },
+        {
+          "name": "Tick",
+          "line": 70
+        },
+        {
+          "name": "Require",
+          "line": 76
+        },
+        {
+          "name": "U64",
+          "line": 78
+        },
+        {
+          "name": "U32",
+          "line": 85
+        },
+        {
+          "name": "Text",
+          "line": 88
+        },
+        {
+          "name": "Node",
+          "line": 95
+        },
+        {
+          "name": "Clock",
+          "line": 103
+        },
+        {
+          "name": "Same_Mount",
+          "line": 112
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Vectors",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_FS",
+        "MC_Posix"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_conffile_observation.ads",
+      "sha256": "5067ae19ce96001f4f5288bfdceb1d4551bea10b033dec2d611b8cea9082f73d",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Observation",
+          "line": 5
+        },
+        {
+          "name": "Load",
+          "line": 19
+        },
+        {
+          "name": "Clear",
+          "line": 21
+        },
+        {
+          "name": "Address",
+          "line": 22
+        },
+        {
+          "name": "Path",
+          "line": 23
+        },
+        {
+          "name": "Image",
+          "line": 24
+        },
+        {
+          "name": "Attributes",
+          "line": 25
+        },
+        {
+          "name": "Observer_UID",
+          "line": 26
+        },
+        {
+          "name": "Observer_GID",
+          "line": 27
+        },
+        {
+          "name": "Directory_Count",
+          "line": 28
+        },
+        {
+          "name": "Read_Directory",
+          "line": 29
+        },
+        {
+          "name": "Missing_Component",
+          "line": 31
+        },
+        {
+          "name": "Xattr_Count",
+          "line": 32
+        },
+        {
+          "name": "Read_Xattr",
+          "line": 33
+        },
+        {
+          "name": "Finalize",
+          "line": 53
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Conffile_Transition",
+        "Pkg_Deb_Payload",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_conffile_snapshot.adb",
-      "sha256": "afc96dea6e1920db4ae806768d5952dca6a59d1fed38280fc27eb064c3a61939",
+      "sha256": "f1a2fd878ebe502e3cea1dcde417fa95781dbfbecb97e63f9157e2960704d5cd",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9821,21 +10034,22 @@
         },
         {
           "name": "Need",
-          "line": 50
+          "line": 51
         },
         {
           "name": "Clock",
-          "line": 52
+          "line": 53
         },
         {
           "name": "Cleanup",
-          "line": 57
+          "line": 58
         }
       ],
       "with_dependencies": [
         "Interfaces.C",
         "MC_Clock",
-        "MC_Posix"
+        "MC_Posix",
+        "Pkg_Conffile_Observation"
       ],
       "semantic_analysis": false
     },

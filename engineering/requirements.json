@@ -3909,6 +3909,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-136",
+      "title": "保持した設定観測の全幅検査と読戻し",
+      "shall": "設定の観測recordと参照内容を既存CASから検査付きで読戻し、raw名・数値幅・時刻符号・可視属性を切り捨ててはならない。破損・欠損・namespace矛盾を成功扱いせず、過去の記録を現在状態や復元許可にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0098"
+      ],
+      "spec": [
+        "distribution/native/conffile-observation.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_conffile_observation.adb",
+        "pkgcore/runtime/pkg_conffile_snapshot.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_conffile_observation_tests.adb",
+        "pkgcore/tests/run_conffile_choice_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-122"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

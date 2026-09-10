@@ -1345,6 +1345,17 @@
         "REQ-135"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-122",
+      "title": "観測属性の桁落ち・欠落誤認・破損recordの採用",
+      "severity": "critical",
+      "mitigation": "完全なfield境界、path/namespace、符号付き時刻、maskと可視xattrを検査し、参照内容のhash/サイズも確認する。snapshot保存後も同じreaderを使い、失敗時の状態を消す。",
+      "residual_risk": "This validates retained observations, not current liveness, observer identity, hidden attributes, metadata restorability or managed execution authority. Full attribute selection, namespace assembly, authenticated UI, root/boot and recovery remain unqualified.",
+      "requirements": [
+        "REQ-136"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

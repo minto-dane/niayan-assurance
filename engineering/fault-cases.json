@@ -1499,6 +1499,17 @@
       "expected": "sessionと出力を消し、古い候補で進まない。退避先を上書きせず、欠損した保持原本を再構成しない。選択結果と次vendor原本を正確に保持する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_conffile_choice_tests.adb"
+    },
+    {
+      "id": "FAULT-135",
+      "scenario": "観測recordの切断/余剰、過大field、別path、属性順序/mask/時刻不整合、内容サイズ相違・欠損、期限切れ",
+      "requirements": [
+        "REQ-136"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "全状態を消してOtherを返し、桁落ちや不明のMissing化をしない。元内容をlive host fileから再作成せず、過去記録の真正性や復元許可を捏造しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_conffile_observation_tests.adb"
     }
   ]
 }

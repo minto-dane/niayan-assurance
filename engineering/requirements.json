@@ -3385,6 +3385,34 @@
       ],
       "hazards": ["HAZ-104"],
       "required_evidence": ["independent-design-review", "source-bound-tests", "target-fault-tests"]
+    },
+    {
+      "id": "REQ-119",
+      "title": "更新で新規に必要となる原本と供給記録の完全一致",
+      "shall": "供給記録集合は元DEB hashによる候補集合と基準集合の差に完全一致し、正確なroot・基準descriptor/closure・候補catalog/closureへ束縛しなければならない。原本と保持閉包を再観測し、独立authorityと全API経過を含む有限期限で検証する。歴史的な保持検査を新規導入の許可にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0079"
+      ],
+      "spec": [
+        "distribution/native/supply-map.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_supply_map.ads",
+        "pkgcore/runtime/pkg_supply_map.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_supply_map_tests.adb",
+        "distribution/native/check_supply_map_bridge.py"
+      ],
+      "hazards": [
+        "HAZ-105"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

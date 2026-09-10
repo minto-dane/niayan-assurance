@@ -1154,6 +1154,17 @@
       "residual_risk": "Per-original SDK only. Production observer/key provisioning and rollback-resistant authority/time, exact new-original coverage under publication reservation, generation retention and managed admission remain unqualified. Full effects and root/boot remain incomplete.",
       "requirements": ["REQ-118"],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-105",
+      "title": "更新原本の認証漏れ・過剰要求・保持検査の新規認可化",
+      "severity": "critical",
+      "mitigation": "元DEB hashの正確な差集合を両catalogから再観測し、全供給記録を独立scope/key/floor/timeで検証する。保持欠損を再生成前に拒否し、contextと正規行列をCAS原本へ束縛する。",
+      "residual_risk": "Internal map SDK. Actual accepted predecessor, manifest/plan linkage, admission versus recorded recovery, typed whole-generation retention/GC and production trust/time remain unqualified. Full DEB effects and root/boot remain incomplete.",
+      "requirements": [
+        "REQ-119"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

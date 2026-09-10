@@ -778,11 +778,30 @@
     {
       "main": "pkgcore/tests/run_archive_supply_tests.adb",
       "tier": "isolated-io",
-      "arguments": ["$TEMP/store", "tests/fixtures/selected-catalog"],
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/selected-catalog"
+      ],
       "result": "not-run",
-      "prepare_directories": ["$TEMP/store"],
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
       "execution_owner": "pkgcore-maintainers",
       "note": "scoped real signatures, all receipt bytes and references, native original/control reobservation; separate integration bridge uses real TUF/OpenPGP issuance"
+    },
+    {
+      "main": "pkgcore/tests/run_supply_map_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/selected-catalog"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "exact newly required original set, independent scoped trust, native catalogs/closures, canonical context, historical retention and fresh deadlines; actual issuance bridge is separate"
     }
   ]
 }

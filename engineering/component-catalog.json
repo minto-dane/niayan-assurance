@@ -12832,6 +12832,133 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_supply_map.adb",
+      "sha256": "84538d7c9b19ac791046ae0ba5f7bf02bf1f6881f4996542b89d3aa8af1f1dae",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Map",
+          "line": 5
+        },
+        {
+          "name": "C",
+          "line": 6
+        },
+        {
+          "name": "GD",
+          "line": 7
+        },
+        {
+          "name": "Supply",
+          "line": 8
+        },
+        {
+          "name": "Free",
+          "line": 14
+        },
+        {
+          "name": "Tick",
+          "line": 15
+        },
+        {
+          "name": "Present",
+          "line": 22
+        },
+        {
+          "name": "Current_Time",
+          "line": 29
+        },
+        {
+          "name": "Valid",
+          "line": 41
+        },
+        {
+          "name": "Header",
+          "line": 46
+        },
+        {
+          "name": "Read",
+          "line": 54
+        },
+        {
+          "name": "Receipt_References",
+          "line": 81
+        },
+        {
+          "name": "Evaluate",
+          "line": 105
+        },
+        {
+          "name": "Check",
+          "line": 112
+        },
+        {
+          "name": "Clock",
+          "line": 114
+        },
+        {
+          "name": "Prepare",
+          "line": 196
+        },
+        {
+          "name": "Verify",
+          "line": 223
+        },
+        {
+          "name": "Check_Retention",
+          "line": 248
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Catalog_Retention",
+        "Pkg_Catalog_Store",
+        "Pkg_Payload_Index"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_supply_map.ads",
+      "sha256": "ce5a2b4b703b76345e50ee2fb3cd5be0060c840ad42d27218538db1ff5492658",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Map",
+          "line": 5
+        },
+        {
+          "name": "Prepare",
+          "line": 21
+        },
+        {
+          "name": "Verify",
+          "line": 24
+        },
+        {
+          "name": "Check_Retention",
+          "line": 26
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Archive_Supply",
+        "Pkg_Generation_Descriptor",
+        "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_tar_framing.adb",
       "sha256": "17725ee0b5637837b1c86ca833c648fafe637f24b820f0df396cf7f21e06f68e",
       "repository": "pkgcore",

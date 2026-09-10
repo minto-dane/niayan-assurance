@@ -226,6 +226,10 @@ def main() -> int:
                         str(root/'distribution/native/check_archive_receipt_bridge.py'),
                         '--driver', str(root/'pkgcore/build/test-bin/run_archive_supply_tests')],
                         root, 'actual-supply-and-native-cas')
+                    invoke('supply-map-native-bridge', [sys.executable, '-B',
+                        str(root/'distribution/native/check_supply_map_bridge.py'),
+                        '--driver', str(root/'pkgcore/build/test-bin/run_supply_map_tests')],
+                        root, 'actual-supply-and-native-map')
             if available and all(c['result']=='pass' for c in checks): report['ada_execution']='all-registered-tests-pass'
         elif a.mode=='proof':
             if shutil.which('gnatprove',path=env['PATH']) is None:

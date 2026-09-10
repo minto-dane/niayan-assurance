@@ -1319,6 +1319,17 @@
       "expected": "独立authorityと実原本に一致する記録だけを受け入れる。失敗はBindingを消し、欠落原本/controlを再生成して正常化しない。実行許可や第二の導入済みDBを作らない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_archive_supply_tests.adb"
+    },
+    {
+      "id": "FAULT-119",
+      "scenario": "初期構築・追加・削除・再導入、過不足と別原本/control、重複/非正規行、全map byte変更、基準/root変更、独立authority欠落/重複、最大添字のsingletonと非1開始配列、期限・CAS書込障害・強制終了と再開、全供給原本と基準descriptor/closure欠損、実署名発行から独立map preimage照合、UID0",
+      "requirements": [
+        "REQ-119"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "新規に必要な原本だけを正確に認証し、失敗したAddress/Valid_Untilを消す。保持欠損を正常化せず、期限切れの歴史的保持検査を新規認可にしない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_supply_map_tests.adb"
     }
   ]
 }

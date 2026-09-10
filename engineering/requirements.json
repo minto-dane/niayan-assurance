@@ -3473,6 +3473,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-121",
+      "title": "明示採用元と原本spanによるrootアーカイブ",
+      "shall": "保持した全payload pathの採用claimを明示し、祖先directoryとhardlinkの同一原本参照を検査して、元tarの属性とbodyを失わずにrootアーカイブへ保存しなければならない。保持欠損を再生成で隠さず、構造検査を本番認可として使用してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0081"
+      ],
+      "spec": [
+        "distribution/native/root-archive.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_root_archive.ads",
+        "pkgcore/runtime/pkg_root_archive.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_archive_tests.adb",
+        "pkgcore/tests/compare_root_archive.py"
+      ],
+      "hazards": [
+        "HAZ-107"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

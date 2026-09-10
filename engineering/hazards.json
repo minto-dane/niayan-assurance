@@ -1180,6 +1180,17 @@
         "REQ-120"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-107",
+      "title": "root組立てでの属性消失と暗黙の所有元変更",
+      "severity": "critical",
+      "mitigation": "保持閉包と元tarを再観測し、全pathの明示選択・祖先・hardlinkの原本を検査する。拡張headerを含む元spanをコピーし、manifest全体を再構築で照合する。",
+      "residual_risk": "Production ownership/effect authorization, privileged extraction, generation pin/GC, actual root/boot and full distribution size remain unqualified.",
+      "requirements": [
+        "REQ-121"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

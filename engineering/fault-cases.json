@@ -1345,6 +1345,17 @@
       "expected": "未記録の計画を過去時刻だけで新規認可しない。認可済み計画だけを完全な根拠と独立した現在policyの下で復旧し、故障時に根拠のない成功を返さない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-121",
+      "scenario": "共有所有元変更、欠落/重複/順序違反、非directory祖先、別原本hardlink target、最大配列添字、期限/容量、manifest不整合、root tarと元DEBの実欠損/明示復元、UID0",
+      "requirements": [
+        "REQ-121"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "失敗したdigestをzeroにし、保持欠損を自動再生成で正常化せず、成功時の全選択spanを元DEBと一致させる。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_root_archive_tests.adb"
     }
   ]
 }

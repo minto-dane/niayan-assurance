@@ -310,6 +310,8 @@ SPARK-intentはソース上の意図であり、未指定コードや外部依�
 |[pkgcore/runtime/pkg_recovery_audit.ads](../../../pkgcore/runtime/pkg_recovery_audit.ads)|runtime / non-SPARK-or-boundary|Pkg_Recovery_Audit:4<br>Inspect:20|
 |[pkgcore/runtime/pkg_resolution_engine.adb](../../../pkgcore/runtime/pkg_resolution_engine.adb)|runtime / non-SPARK-or-boundary|Pkg_Resolution_Engine:4<br>Free_U:10<br>Free_P:11<br>Free_A:12<br>Free_B:13<br>Guard:14<br>Release:21|
 |[pkgcore/runtime/pkg_resolution_engine.ads](../../../pkgcore/runtime/pkg_resolution_engine.ads)|runtime / non-SPARK-or-boundary|Pkg_Resolution_Engine:17<br>Guard:18<br>Engine:20|
+|[pkgcore/runtime/pkg_root_archive.adb](../../../pkgcore/runtime/pkg_root_archive.adb)|runtime / non-SPARK-or-boundary|Pkg_Root_Archive:6<br>X:7<br>T:8<br>Free:12<br>Tick:13<br>Padded:20<br>Build:22<br>Free:32<br>Free:39<br>Positions:40<br>Check:51<br>Clock:53<br>Cleanup:55<br>Path_At:57<br>Selected:63<br>Source_Number:72<br>Less:81<br>Sorting:88<br>Close_Source:89<br>Open_Source:97<br>Emit:108<br>Verify:233<br>Check:238<br>Cleanup:240|
+|[pkgcore/runtime/pkg_root_archive.ads](../../../pkgcore/runtime/pkg_root_archive.ads)|runtime / non-SPARK-or-boundary|Pkg_Root_Archive:4<br>Build:9<br>Verify:12|
 |[pkgcore/runtime/pkg_rpm_auth.adb](../../../pkgcore/runtime/pkg_rpm_auth.adb)|runtime / non-SPARK-or-boundary|Pkg_RPM_Auth:5<br>Verify:6<br>Add:11|
 |[pkgcore/runtime/pkg_rpm_auth.ads](../../../pkgcore/runtime/pkg_rpm_auth.ads)|runtime / non-SPARK-or-boundary|Pkg_RPM_Auth:4<br>Verify:5|
 |[pkgcore/runtime/pkg_rpm_file.adb](../../../pkgcore/runtime/pkg_rpm_file.adb)|runtime / non-SPARK-or-boundary|Pkg_RPM_File:3<br>Release:4<br>Read_Headers:5<br>Free:23|

@@ -25,6 +25,7 @@ def generated():
             lines.append('python3 "$PWD/tests/make_deb_final_set_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_deb_transition_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_selected_catalog_fixtures.py" --check')
+            lines.append('python3 "$PWD/tests/make_root_archive_fixtures.py" --check')
         for test in tests:
             if not test['main'].startswith(repo+'/'):
                 continue
@@ -49,6 +50,11 @@ def generated():
                               '  cat "$D/transition-native.log"', 'else',
                               '  cat "$D/transition-native.log"', '  exit 1', 'fi',
                               'python3 "$PWD/tests/compare_deb_transition.py" --media "$PWD/tests/fixtures/deb-transition" --native "$D/transition-native.log" --output "$D/transition-native-oracle.json"'])
+            elif repo == 'pkgcore' and name == 'run_root_archive_tests':
+                lines.extend(['if '+command+' > "$D/root-archive-native.log" 2>&1; then',
+                              '  cat "$D/root-archive-native.log"', 'else',
+                              '  cat "$D/root-archive-native.log"', '  exit 1', 'fi',
+                              'python3 "$PWD/tests/compare_root_archive.py" --media "$PWD/tests/fixtures/root-archive" --native "$D/root-archive-native.log" --cas "$D/run_root_archive_tests/store" --output "$D/root-archive-oracle.json"'])
             elif repo == 'pkgcore' and name == 'run_catalog_store_tests':
                 lines.extend(['if '+command+' > "$D/catalog-store-native.log" 2>&1; then',
                               '  cat "$D/catalog-store-native.log"', 'else',

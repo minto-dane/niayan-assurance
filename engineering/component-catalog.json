@@ -12441,6 +12441,154 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_root_archive.adb",
+      "sha256": "5c4dec82162dfa7a299920dd30de7f3a6479a949356ec7f0d7ea2c117aaacc30",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Archive",
+          "line": 6
+        },
+        {
+          "name": "X",
+          "line": 7
+        },
+        {
+          "name": "T",
+          "line": 8
+        },
+        {
+          "name": "Free",
+          "line": 12
+        },
+        {
+          "name": "Tick",
+          "line": 13
+        },
+        {
+          "name": "Padded",
+          "line": 20
+        },
+        {
+          "name": "Build",
+          "line": 22
+        },
+        {
+          "name": "Free",
+          "line": 32
+        },
+        {
+          "name": "Free",
+          "line": 39
+        },
+        {
+          "name": "Positions",
+          "line": 40
+        },
+        {
+          "name": "Check",
+          "line": 51
+        },
+        {
+          "name": "Clock",
+          "line": 53
+        },
+        {
+          "name": "Cleanup",
+          "line": 55
+        },
+        {
+          "name": "Path_At",
+          "line": 57
+        },
+        {
+          "name": "Selected",
+          "line": 63
+        },
+        {
+          "name": "Source_Number",
+          "line": 72
+        },
+        {
+          "name": "Less",
+          "line": 81
+        },
+        {
+          "name": "Sorting",
+          "line": 88
+        },
+        {
+          "name": "Close_Source",
+          "line": 89
+        },
+        {
+          "name": "Open_Source",
+          "line": 97
+        },
+        {
+          "name": "Emit",
+          "line": 108
+        },
+        {
+          "name": "Verify",
+          "line": 233
+        },
+        {
+          "name": "Check",
+          "line": 238
+        },
+        {
+          "name": "Cleanup",
+          "line": 240
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Vectors",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Catalog_Retention",
+        "Pkg_Catalog_Store",
+        "Pkg_Deb_Payload",
+        "Pkg_Selected_Catalog",
+        "Pkg_Tar_Framing"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_root_archive.ads",
+      "sha256": "5439c0d146cbb881a6e14a84384dbeb1f30a4808628e55f8520eeab8d3566f13",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Archive",
+          "line": 4
+        },
+        {
+          "name": "Build",
+          "line": 9
+        },
+        {
+          "name": "Verify",
+          "line": 12
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Payload_Index"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_rpm_auth.adb",
       "sha256": "e8ba9d8cc72ecf30bc431ae305d2fe1b5c8e317db77fcf9f396e8ded1f089fa6",
       "repository": "pkgcore",

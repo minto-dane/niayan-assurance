@@ -248,6 +248,7 @@ SPARK-intentはソース上の意図であり、未指定コードや外部依�
 |[controlcore/src/ctl_workflow.ads](../../../controlcore/src/ctl_workflow.ads)|src / SPARK-intent-not-proof|Ctl_Workflow:4<br>Ready:32<br>Complete:33<br>Unresolved:34<br>Completion_Reserve:35<br>Apply:40<br>Supersede:44|
 |[pkgcore/app/pkg_recoveryctl.adb](../../../pkgcore/app/pkg_recoveryctl.adb)|app / non-SPARK-or-boundary|Pkg_Recoveryctl:6|
 |[pkgcore/app/pkg_scrubctl.adb](../../../pkgcore/app/pkg_scrubctl.adb)|app / non-SPARK-or-boundary|Pkg_Scrubctl:6<br>Free:10<br>Free:11|
+|[pkgcore/app/pkg_store_bootstrap.adb](../../../pkgcore/app/pkg_store_bootstrap.adb)|app / non-SPARK-or-boundary|Pkg_Store_Bootstrap:6|
 |[pkgcore/app/pkg_worker.adb](../../../pkgcore/app/pkg_worker.adb)|app / non-SPARK-or-boundary|Pkg_Worker:7<br>Free:15<br>Free_Plan:16<br>Authorize:19<br>Engine:32<br>Finish:34|
 |[pkgcore/app/pkgctl.adb](../../../pkgcore/app/pkgctl.adb)|app / non-SPARK-or-boundary|Pkgctl:7|
 |[pkgcore/runtime/pkg_admin.adb](../../../pkgcore/runtime/pkg_admin.adb)|runtime / non-SPARK-or-boundary|Pkg_Admin:8<br>No_Execution:10<br>Engine:14<br>Handle:15<br>Free:21<br>Free_Plan:22<br>Cmd:23<br>Finish:25<br>Stage:31|

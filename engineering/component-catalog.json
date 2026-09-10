@@ -8744,6 +8744,29 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/app/pkg_store_bootstrap.adb",
+      "sha256": "627dff5804083957d2fa23c5d8cc175a3b26343535c885065ed340518f85617e",
+      "repository": "pkgcore",
+      "layer": "app",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Store_Bootstrap",
+          "line": 6
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Command_Line",
+        "Ada.Text_IO",
+        "Interfaces.C",
+        "MC_Posix",
+        "MC_Runtime",
+        "MC_Store",
+        "MC_Types"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/app/pkg_worker.adb",
       "sha256": "00c91ad60bdf91c381adb1ee7a1a792ecd9e5972ce997a012ebfbc9d8608658d",
       "repository": "pkgcore",

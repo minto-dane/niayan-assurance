@@ -2,7 +2,7 @@
 
 Shared trust, authorization, evidence and verification support for Nia OS. This repository owns the canonical shared Ada sources; other components consume generated, hash-pinned vendor snapshots.
 
-Independent Ada/SPARK repository, MIT licensed. Native compilation, application linking and registered Ada tests now run in Debian 13 amd64. Strict SPARK flow has passed. Full formal proof and production integration remain incomplete; native success does not grant production qualification.
+Independent Ada/SPARK repository, BSD-3-Clause licensed. Native compilation, application linking and registered Ada tests now run in Debian 13 amd64. Strict SPARK flow has passed. Full formal proof and production integration remain incomplete; native success does not grant production qualification.
 
 ```sh
 make compile-all build test

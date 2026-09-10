@@ -3652,10 +3652,11 @@
     {
       "id": "REQ-127",
       "title": "内部root準備の明示的配備と既存状態の保護",
-      "shall": "非root専用accountとroot所有policy・保護mount・socketを配布物で管理しなければならない。通常起動やpackage導入でbank/CASを再初期化せず、限定権限・資源上限と停止の下で実workerへ接続しなければならない。",
+      "shall": "非root専用accountとroot所有policy・保護mount・socketを配布物で管理しなければならない。通常起動やpackage導入でbank/CASを再初期化せず、限定権限・資源上限と停止の下で実workerへ接続しなければならない。 明示bootstrapは初期intentを排他的に永続化し、非rootの正規CAS初期化とbank準備の完了を通常activationや認可から区別しなければならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0087"
+        "ADR-0087",
+        "ADR-0089"
       ],
       "spec": [
         "distribution/native/service-deployment.ja.md"
@@ -3663,10 +3664,13 @@
       "code": [
         "distribution/native/root_bank.py",
         "distribution/native/prepare_service_package.py",
-        "distribution/packaging/root-preparation/debian/niaos-root-preparation.service"
+        "distribution/packaging/root-preparation/debian/niaos-root-preparation.service",
+        "pkgcore/app/pkg_store_bootstrap.adb",
+        "distribution/native/storage_bootstrap.py"
       ],
       "tests": [
-        "distribution/native/worker/check_service_deployment.py"
+        "distribution/native/worker/check_service_deployment.py",
+        "pkgcore/tests/check_store_bootstrap.py"
       ],
       "hazards": [
         "HAZ-113"

@@ -3534,6 +3534,37 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-123",
+      "title": "元DEBに基づくroot世代の論理所有権",
+      "shall": "全pathの採用claimについて共有属性・共有instance・直接Replacesを検査し、同じcatalog/closureに束縛したintentのarchitectureを世代の保持検査へ適用しなければならない。論理所有権をsite/effect認可の代用にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0083"
+      ],
+      "spec": [
+        "distribution/native/payload-ownership.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_payload_ownership.adb",
+        "pkgcore/runtime/pkg_root_archive.adb",
+        "pkgcore/runtime/pkg_generation_intent.adb",
+        "pkgcore/runtime/pkg_generation_manifest.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_payload_ownership_tests.adb",
+        "pkgcore/tests/run_root_archive_tests.adb",
+        "pkgcore/tests/run_generation_publication_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-109"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -1202,6 +1202,17 @@
         "REQ-122"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-109",
+      "title": "根拠のない共有pathの採用と未束縛architectureによる所有権判定",
+      "severity": "critical",
+      "mitigation": "全競合claimを元DEBの直接Replacesまたは厳格な共有条件で検査し、保持intentのnative architectureをv5保持検査で使用する。失敗bindingをzeroにする。",
+      "residual_risk": "Logical selection is not administrator configuration resolution, transition effects, site authorization, privileged extraction or boot. Production providers and service remain incomplete.",
+      "requirements": [
+        "REQ-123"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

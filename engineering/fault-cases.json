@@ -1367,6 +1367,17 @@
       "expected": "旧形式のbytesを保持し、rootの採用元と格納tarを公開計画から切り離さない。未commit状態を現在世代とせず、根拠の欠けた公開/復旧/観測は成功しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-123",
+      "scenario": "逆向き/無指定/仮想名のReplaces、version/architecture不一致、Multi-Arch共有内容/属性不一致、最大添字、重複選択、有限期限、構造candidateだけの所有権未成立、UID0",
+      "requirements": [
+        "REQ-123"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "論理所有権が成立しないroot世代を保持検査で拒否し、失敗digestをzeroにする。全原本と属性を保持し、site効果実行を宣言しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_payload_ownership_tests.adb"
     }
   ]
 }

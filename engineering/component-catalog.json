@@ -11155,7 +11155,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_intent.adb",
-      "sha256": "17e58ee531dd7903161a4c857d9ef1ac78c222af6adeec85db4105500302697c",
+      "sha256": "4dc0fbd86a50eb8bfebedd3b8bca0f5a04c526b1f17645377356f07a40866652",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11225,8 +11225,12 @@
           "line": 189
         },
         {
-          "name": "Verify",
+          "name": "Read_Native_Architecture",
           "line": 198
+        },
+        {
+          "name": "Verify",
+          "line": 207
         }
       ],
       "with_dependencies": [
@@ -11247,7 +11251,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_intent.ads",
-      "sha256": "2ec66f47bf2a47e4430cdbaa1ad4e00bebcb815c5615194d4ce2c0c1483ca35e",
+      "sha256": "f0f583aa38c7d238afe26510f29e1a94b94c9e80c6fc7067c2d9321819096b99",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11269,8 +11273,12 @@
           "line": 16
         },
         {
-          "name": "Update_Binding",
+          "name": "Read_Native_Architecture",
           "line": 18
+        },
+        {
+          "name": "Update_Binding",
+          "line": 21
         }
       ],
       "with_dependencies": [
@@ -11284,7 +11292,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.adb",
-      "sha256": "0582f4559dcb9f4009307a2a374e0fc67ca1cbaba46749274925be5e012c4792",
+      "sha256": "2450f9dc1289f7a41372a63742c9746b1ce6d2736fcf243f7dc4818cf17e0daa",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11323,35 +11331,35 @@
         },
         {
           "name": "Transaction",
-          "line": 119
+          "line": 122
         },
         {
           "name": "Load_Plan",
-          "line": 126
-        },
-        {
-          "name": "Free",
           "line": 129
         },
         {
+          "name": "Free",
+          "line": 132
+        },
+        {
           "name": "Earlier",
-          "line": 150
+          "line": 153
         },
         {
           "name": "Rank",
-          "line": 151
+          "line": 154
         },
         {
           "name": "Contained_Link",
-          "line": 161
+          "line": 164
         },
         {
           "name": "Check",
-          "line": 186
+          "line": 189
         },
         {
           "name": "Free",
-          "line": 188
+          "line": 191
         }
       ],
       "with_dependencies": [
@@ -12174,6 +12182,119 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_payload_ownership.adb",
+      "sha256": "98b5cc915526ae45bf25bc3af5ebc4e959f8a3464a683b36c52f1621a8939792",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Payload_Ownership",
+          "line": 5
+        },
+        {
+          "name": "C",
+          "line": 6
+        },
+        {
+          "name": "P",
+          "line": 7
+        },
+        {
+          "name": "S",
+          "line": 8
+        },
+        {
+          "name": "Security_Equal",
+          "line": 11
+        },
+        {
+          "name": "Check",
+          "line": 14
+        },
+        {
+          "name": "Free",
+          "line": 21
+        },
+        {
+          "name": "Decisions",
+          "line": 23
+        },
+        {
+          "name": "Good",
+          "line": 30
+        },
+        {
+          "name": "Tick",
+          "line": 32
+        },
+        {
+          "name": "Reject",
+          "line": 37
+        },
+        {
+          "name": "Number",
+          "line": 39
+        },
+        {
+          "name": "Package_Position",
+          "line": 41
+        },
+        {
+          "name": "Replaces",
+          "line": 50
+        },
+        {
+          "name": "Effective",
+          "line": 60
+        },
+        {
+          "name": "Same_Instance_Set",
+          "line": 82
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Ordered_Maps",
+        "Ada.Strings.Unbounded",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Posix",
+        "MC_SHA256",
+        "MC_Text",
+        "Pkg_Deb_Payload",
+        "Pkg_Deb_Relations",
+        "Pkg_Deb_Semantics",
+        "Pkg_Deb_Versions"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_payload_ownership.ads",
+      "sha256": "0c939ac9cfb8675b468aa401510e1d10b609f9001ede815258e0685b93e99c84",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Payload_Ownership",
+          "line": 4
+        },
+        {
+          "name": "Check",
+          "line": 11
+        }
+      ],
+      "with_dependencies": [
+        "MC_Types",
+        "Pkg_Payload_Index",
+        "Pkg_Root_Archive",
+        "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_plan_compiler.adb",
       "sha256": "320cfffd923c612f5738fdd399871e3f5f7649b6c8e0af5b5640817df6b44aa1",
       "repository": "pkgcore",
@@ -12447,7 +12568,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_archive.adb",
-      "sha256": "b5de11d069d67e3d531a8b679c97855287f60a93a76ed19a4502a4f9606c3ebf",
+      "sha256": "e92574db4e998ed99198ed6aa3f99d9bf07cf1508a6b713d4304ca04a532bfba",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12477,7 +12598,7 @@
           "line": 20
         },
         {
-          "name": "Build",
+          "name": "Assemble",
           "line": 22
         },
         {
@@ -12494,67 +12615,75 @@
         },
         {
           "name": "Check",
-          "line": 51
+          "line": 52
         },
         {
           "name": "Clock",
-          "line": 53
+          "line": 54
         },
         {
           "name": "Cleanup",
-          "line": 55
+          "line": 56
         },
         {
           "name": "Path_At",
-          "line": 57
+          "line": 58
         },
         {
           "name": "Selected",
-          "line": 63
+          "line": 64
         },
         {
           "name": "Source_Number",
-          "line": 72
+          "line": 73
         },
         {
           "name": "Less",
-          "line": 81
+          "line": 82
         },
         {
           "name": "Sorting",
-          "line": 88
-        },
-        {
-          "name": "Close_Source",
           "line": 89
         },
         {
+          "name": "Close_Source",
+          "line": 90
+        },
+        {
           "name": "Open_Source",
-          "line": 97
+          "line": 98
         },
         {
           "name": "Emit",
-          "line": 108
+          "line": 109
+        },
+        {
+          "name": "Build",
+          "line": 237
         },
         {
           "name": "Verify_Bound",
-          "line": 233
+          "line": 241
         },
         {
           "name": "Check",
-          "line": 238
+          "line": 246
         },
         {
           "name": "Cleanup",
-          "line": 240
+          "line": 248
         },
         {
           "name": "Verify",
-          "line": 283
+          "line": 291
         },
         {
           "name": "Verify_Target",
-          "line": 286
+          "line": 295
+        },
+        {
+          "name": "Verify_Ownership",
+          "line": 303
         }
       ],
       "with_dependencies": [
@@ -12569,6 +12698,7 @@
         "Pkg_Catalog_Retention",
         "Pkg_Catalog_Store",
         "Pkg_Deb_Payload",
+        "Pkg_Payload_Ownership",
         "Pkg_Selected_Catalog",
         "Pkg_Tar_Framing"
       ],
@@ -12576,7 +12706,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_archive.ads",
-      "sha256": "2b515e07ec9836012e8785baf62bc8b8f416f024710c54c5cd75b737888072bc",
+      "sha256": "e1d3a19b7d52f0fb83bc6916a54ed325bb80123f25aa76233310628dc08742a4",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12596,6 +12726,10 @@
         {
           "name": "Verify_Target",
           "line": 14
+        },
+        {
+          "name": "Verify_Ownership",
+          "line": 16
         }
       ],
       "with_dependencies": [

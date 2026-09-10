@@ -26,6 +26,7 @@ def generated():
             lines.append('python3 "$PWD/tests/make_deb_transition_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_selected_catalog_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_root_archive_fixtures.py" --check')
+            lines.append('python3 "$PWD/tests/make_payload_ownership_fixtures.py" --check')
         for test in tests:
             if not test['main'].startswith(repo+'/'):
                 continue

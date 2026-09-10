@@ -816,6 +816,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "explicit native root archive assembly and actual v5 staging with retained supply/intent, target binding, pin and physical archive hash; private directories, no privileged extraction or boot"
+    },
+    {
+      "main": "pkgcore/tests/run_payload_ownership_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/payload-ownership"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "logical ownership: directional real-name version/architecture-qualified Replaces, shared directories and Multi-Arch:same content/security equality; finite deadline, canonical complete choices, native-architecture binding and UID0 refusal; no site effect grant"
     }
   ]
 }

@@ -9619,86 +9619,98 @@
     },
     {
       "path": "pkgcore/runtime/pkg_conffile_choice.adb",
-      "sha256": "b6b6cc29b6a91aa4c336aafd4f02e927c7773aad065a347ab22c34b0ca8809f6",
+      "sha256": "f5973633043e66d26b05a42af3ac2f710f0a7de3a0278d086ee9d469d16e598d",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Conffile_Choice",
-          "line": 5
-        },
-        {
-          "name": "T",
           "line": 6
         },
         {
-          "name": "D",
+          "name": "T",
           "line": 7
         },
         {
-          "name": "Objects",
+          "name": "D",
           "line": 8
         },
         {
+          "name": "Objects",
+          "line": 9
+        },
+        {
           "name": "Free",
-          "line": 25
+          "line": 30
         },
         {
           "name": "Clear",
-          "line": 26
+          "line": 31
         },
         {
           "name": "Finalize",
-          "line": 35
+          "line": 40
         },
         {
           "name": "Address",
-          "line": 37
+          "line": 42
         },
         {
           "name": "Pending",
-          "line": 39
+          "line": 44
         },
         {
           "name": "Tick",
-          "line": 41
+          "line": 46
         },
         {
           "name": "Include",
-          "line": 47
+          "line": 52
         },
         {
           "name": "Verify_Members",
-          "line": 49
+          "line": 54
         },
         {
           "name": "Prepare",
-          "line": 61
+          "line": 66
         },
         {
           "name": "Need",
-          "line": 68
+          "line": 73
         },
         {
           "name": "Source",
-          "line": 70
+          "line": 75
         },
         {
           "name": "Recheck",
-          "line": 141
+          "line": 155
+        },
+        {
+          "name": "Read_Effects",
+          "line": 176
         },
         {
           "name": "Resolve",
-          "line": 162
+          "line": 184
         },
         {
           "name": "Need",
-          "line": 167
+          "line": 189
         },
         {
           "name": "Overlap",
-          "line": 169
+          "line": 191
+        },
+        {
+          "name": "Describe",
+          "line": 196
+        },
+        {
+          "name": "Encode",
+          "line": 259
         }
       ],
       "with_dependencies": [
@@ -9709,6 +9721,7 @@
         "MC_Codec",
         "MC_FS",
         "MC_Posix",
+        "Pkg_Conffile_Observation",
         "Pkg_Conffile_Snapshot",
         "Pkg_Deb_Conffiles",
         "Pkg_Deb_Payload"
@@ -9717,7 +9730,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_conffile_choice.ads",
-      "sha256": "761bb517717109d858d16b3ce17c597033c8335dbe946ba21474fdc5aa725698",
+      "sha256": "3e5d6754daadf5d82ca20787aeb1ec70523bc4ee13ae478a7e87fcb329b3e557",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9728,31 +9741,35 @@
         },
         {
           "name": "Prepare",
-          "line": 8
+          "line": 16
         },
         {
           "name": "Address",
-          "line": 12
-        },
-        {
-          "name": "Pending",
-          "line": 13
-        },
-        {
-          "name": "Resolve",
-          "line": 14
-        },
-        {
-          "name": "Recheck",
-          "line": 18
-        },
-        {
-          "name": "Clear",
           "line": 20
         },
         {
+          "name": "Pending",
+          "line": 21
+        },
+        {
+          "name": "Resolve",
+          "line": 22
+        },
+        {
+          "name": "Recheck",
+          "line": 26
+        },
+        {
+          "name": "Read_Effects",
+          "line": 28
+        },
+        {
+          "name": "Clear",
+          "line": 42
+        },
+        {
           "name": "Finalize",
-          "line": 47
+          "line": 69
         }
       ],
       "with_dependencies": [
@@ -9760,6 +9777,7 @@
         "MC_Store",
         "MC_Types",
         "Pkg_Conffile_Transition",
+        "Pkg_Deb_Payload",
         "private"
       ],
       "semantic_analysis": false

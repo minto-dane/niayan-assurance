@@ -3937,6 +3937,32 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-137",
+      "title": "設定内容と属性の採用元の保持",
+      "shall": "設定の保持・更新・退避について全属性の元recordと数値permissionの採用元を選択へ束縛し、古い観測から適用情報を返してはならない。元属性の保持を全属性適用の認定にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0099"
+      ],
+      "spec": [
+        "distribution/native/conffile-choice.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_conffile_choice.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_conffile_choice_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-123"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -1510,6 +1510,17 @@
       "expected": "全状態を消してOtherを返し、桁落ちや不明のMissing化をしない。元内容をlive host fileから再作成せず、過去記録の真正性や復元許可を捏造しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_conffile_observation_tests.adb"
+    },
+    {
+      "id": "FAULT-136",
+      "scenario": "選択後のmode変更、退避先の後発作成、別閉包、保持/更新の属性元混同、初回導入と欠落の混同",
+      "requirements": [
+        "REQ-137"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "古い属性効果を返さず両出力を消す。元属性と継承元を区別し、欠落へ属性を捏造しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_conffile_choice_tests.adb"
     }
   ]
 }

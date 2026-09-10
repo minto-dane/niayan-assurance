@@ -1356,6 +1356,17 @@
         "REQ-136"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-123",
+      "title": "更新設定の所有者・permission継承と退避属性の喪失",
+      "severity": "critical",
+      "mitigation": "対象と退避の全属性recordとpermission継承元をNIACCH02へ束縛する。全bitと数値ownerを保持し、読戻し前にlive状態と全参照を再確認して失敗出力を消す。",
+      "residual_risk": "Full attribute application, ACL/capability interactions, namespace/link assembly, privileged observation, authenticated admission, root/boot and recovery remain unqualified. Retained sources are not execution grants.",
+      "requirements": [
+        "REQ-137"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

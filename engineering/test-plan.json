@@ -901,7 +901,7 @@
         "$TEMP/root"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "original DEBs and real private configuration namespace; exact proposal choice, baseline and retained references, edits/backup collisions and lost retained source; no UI authentication or live-root application"
+      "note": "original DEBs and real private configuration namespace; exact proposal choice, baseline and retained references, edits/backup collisions and lost retained source; no UI authentication or live-root application; NIACCH02 full attribute source references and numeric permission inheritance, including special bits and stale effect clearing"
     },
     {
       "main": "pkgcore/tests/run_conffile_observation_tests.adb",

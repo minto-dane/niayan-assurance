@@ -1290,6 +1290,17 @@
         "REQ-130"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-117",
+      "title": "通信待ちでのCAS予約喪失と別原本・別observer結果の採用",
+      "severity": "critical",
+      "mitigation": "既存Storeを保持して原本read FDだけを渡し、固定socketとkernel sender、sealed応答、完全hashと独立鍵/原本/時刻を検査する。受信FDを閉じ、拒否時の二出力を消す。",
+      "residual_risk": "Production controller/admission and independent site provisioning remain unqualified. Failure may leave unreferenced CAS objects or an advanced TUF checkpoint. Supply authentication is not execution authority.",
+      "requirements": [
+        "REQ-131"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

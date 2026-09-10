@@ -3767,6 +3767,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-131",
+      "title": "native CAS予約を保持する独立供給observer接続",
+      "shall": "保持した原本を同じStore予約から独立observerへ渡し、実sender・署名・原本hash・現在時刻を検証してから供給receipt/policyを同じCASへ保存しなければならない。失敗出力を消去し、供給認証を実行許可としてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0093"
+      ],
+      "spec": [
+        "distribution/native/native-core-observer.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_archive_observer.adb",
+        "pkgcore/runtime/archive_observer.c"
+      ],
+      "tests": [
+        "pkgcore/tests/run_archive_observer_tests.adb",
+        "pkgcore/tests/observer-transport/check.c",
+        "distribution/native/worker/check_archive_observer.py"
+      ],
+      "hazards": [
+        "HAZ-117"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

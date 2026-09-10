@@ -843,6 +843,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "strict protected site policy/floor parsing, bounded limits, no self-trust, caller-owned path refusal and cleared/poisoned observation; actual root-owned inputs and publisher connection tested separately in disposable VM"
+    },
+    {
+      "main": "pkgcore/tests/run_archive_observer_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/selected-catalog"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "native observer preconditions and same CAS exclusion; real packaged HTTPS/credential/FD response is tested separately in a disposable VM; no public CLI or execution grant"
     }
   ]
 }

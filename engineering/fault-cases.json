@@ -1444,6 +1444,17 @@
       "expected": "有限な実サービスで拒否し、既存stateを再作成/chownせず、receiptと実行許可を混同しない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_archive_observer.py"
+    },
+    {
+      "id": "FAULT-130",
+      "scenario": "閉鎖Store、期限/NUL/UID不正、保持原本欠損、別control/observer UID、実serviceの設定/鍵/TLS拒否と通信中のCAS競合",
+      "requirements": [
+        "REQ-131"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "同じ予約を保持し、他のwriterを排除する。拒否時のreceipt/policyはzero。供給計画が新規原本のreceiptを省略する場合は拒否する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_archive_observer_tests.adb"
     }
   ]
 }

@@ -8874,6 +8874,41 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/archive_observer.c",
+      "sha256": "c93dd637dafb7fd7e691ca10138e4432ecde28403e3b4a4adce33c2150c6e8a0",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "now_ms",
+          "line": 19
+        },
+        {
+          "name": "ready",
+          "line": 24
+        },
+        {
+          "name": "hex_digest",
+          "line": 34
+        },
+        {
+          "name": "path_json",
+          "line": 45
+        },
+        {
+          "name": "read_result",
+          "line": 85
+        },
+        {
+          "name": "nia_archive_observe",
+          "line": 105
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_admin.adb",
       "sha256": "27a2d39aac595dc0e946a4e6540eda6d0da2579662fd6cfa8802e605f838f209",
       "repository": "pkgcore",
@@ -9089,6 +9124,78 @@
         "MC_Store",
         "MC_Types",
         "Pkg_Payload_Map"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_archive_observer.adb",
+      "sha256": "cc44e4c50f7d68f5a954985504e4ddbdd26a507a8e2bb388ef19b64992738bd2",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Archive_Observer",
+          "line": 4
+        },
+        {
+          "name": "Free",
+          "line": 8
+        },
+        {
+          "name": "Observe",
+          "line": 9
+        },
+        {
+          "name": "Request",
+          "line": 14
+        },
+        {
+          "name": "Check",
+          "line": 32
+        },
+        {
+          "name": "Clock",
+          "line": 34
+        },
+        {
+          "name": "Cleanup",
+          "line": 39
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Authentic",
+        "MC_Clock",
+        "MC_FS",
+        "MC_Hex",
+        "MC_Posix",
+        "MC_SHA256",
+        "System"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_archive_observer.ads",
+      "sha256": "7c47966e6993a1d311b199c7e04ad8fd127b5019a65919f113fd7dd1094784af",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Archive_Observer",
+          "line": 4
+        },
+        {
+          "name": "Observe",
+          "line": 6
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Archive_Supply"
       ],
       "semantic_analysis": false
     },

@@ -22,6 +22,8 @@ def generated():
                  'D=$(mktemp -d "${TMPDIR:-/tmp}/nia-tests.XXXXXXXX")',
                  'trap \'rm -rf -- "$D"\' EXIT HUP INT TERM']
         if repo == 'pkgcore':
+            lines.append('cc -std=c11 -Wall -Wextra -Werror -O1 -g -fstack-protector-strong -fsanitize=address,undefined -fno-omit-frame-pointer "$PWD/tests/observer-transport/check.c" -lsodium -o "$D/observer-transport"')
+            lines.append('timeout --kill-after=5s 30s "$D/observer-transport"')
             lines.append('python3 "$PWD/tests/make_deb_final_set_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_deb_transition_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_selected_catalog_fixtures.py" --check')

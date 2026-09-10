@@ -3618,6 +3618,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-126",
+      "title": "native世代の実予約・認可とroot準備サービスの接続",
+      "shall": "世代とrootの予約を保持してCASを再取得し、保持内容と現在認可を再検証した同じ予約から実tar FDを渡さなければならない。応答後にも保持内容と認可を確認し、送信後の拒否を未実行や成功としてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0086"
+      ],
+      "spec": [
+        "distribution/native/root-preparation.ja.md"
+      ],
+      "code": [
+        "assurance/runtime/mc_store.ads",
+        "pkgcore/runtime/pkg_generation_stage.adb",
+        "pkgcore/runtime/pkg_root_preparation.adb",
+        "pkgcore/runtime/root_preparation.c"
+      ],
+      "tests": [
+        "pkgcore/tests/root_archive_stage_test.adb",
+        "distribution/native/worker/check_root_preparation.py"
+      ],
+      "hazards": [
+        "HAZ-112"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

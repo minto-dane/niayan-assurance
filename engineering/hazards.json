@@ -1235,6 +1235,17 @@
         "REQ-125"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-112",
+      "title": "root準備の前後で認可・保持内容・予約が切り離される",
+      "severity": "critical",
+      "mitigation": "同じ世代/root/CAS予約の下で送信前後に保持検査と専用認可phaseを実行し、peerと期待worker hashを検査する。送信後の失敗を不確定として保持する。",
+      "residual_risk": "Production authorization/supply providers, service deployment, physical recovery/GC, complete effects and boot remain unqualified.",
+      "requirements": [
+        "REQ-126"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

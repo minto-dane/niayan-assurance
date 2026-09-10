@@ -1400,6 +1400,17 @@
       "expected": "非許可依頼を拒否し、共有OFDを解錠しない。停止結果を成功と推定せず、履歴観測を物理rootの再検証や公開許可にしない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_bank.py"
+    },
+    {
+      "id": "FAULT-126",
+      "scenario": "prepare-root認可拒否、CAS予約の競合確認、実peer/FD送受信、展開後のroot-prepared認可拒否、非特権SDKの実UID0拒否",
+      "requirements": [
+        "REQ-126"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "非認可のroot準備を開始せず、実予約を保持する。展開後拒否では完成した非公開treeが残り得るため不確定とし、公開やboot成功を返さない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_preparation.py"
     }
   ]
 }

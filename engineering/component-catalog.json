@@ -35,7 +35,7 @@
     },
     {
       "path": "assurance/app/contract_lock.adb",
-      "sha256": "1803afff70ab7504154db64b411c9fccc441d2af5d1a7fcf03e4bf56d68b1c94",
+      "sha256": "e14d754b17ed2a0cd9c0f03a96bcc612a8767b85fc5fccc1e5e369d3a73b7b97",
       "repository": "assurance",
       "layer": "app",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -2569,7 +2569,7 @@
     },
     {
       "path": "assurance/runtime/mc_store.adb",
-      "sha256": "43777e230d1333ad8198b80ebe53a03243239a2b9ccf6417596af65fdf50cab2",
+      "sha256": "8c49960ddde5cd347d02aa9b605fdd9dae00c5bc0b7306284833835f6bdc65c0",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -2579,76 +2579,80 @@
           "line": 3
         },
         {
-          "name": "Random_Bytes",
+          "name": "Native_Reservation",
           "line": 5
         },
         {
-          "name": "Object_Path",
+          "name": "Random_Bytes",
           "line": 7
         },
         {
+          "name": "Object_Path",
+          "line": 9
+        },
+        {
           "name": "Need_Directory",
-          "line": 10
+          "line": 12
         },
         {
           "name": "Initialize",
-          "line": 18
+          "line": 20
         },
         {
           "name": "Open",
-          "line": 40
+          "line": 42
         },
         {
           "name": "Begin_Object",
-          "line": 60
+          "line": 62
         },
         {
           "name": "Publish",
-          "line": 68
+          "line": 70
         },
         {
           "name": "Put",
-          "line": 91
+          "line": 93
         },
         {
           "name": "Import_File",
-          "line": 105
+          "line": 107
         },
         {
           "name": "Open_Object",
-          "line": 131
+          "line": 133
         },
         {
           "name": "Read_Object",
-          "line": 143
+          "line": 145
         },
         {
           "name": "Check_Pin",
-          "line": 159
+          "line": 161
         },
         {
           "name": "Pin",
-          "line": 167
+          "line": 169
         },
         {
           "name": "Begin_Write",
-          "line": 190
+          "line": 192
         },
         {
           "name": "Write_Chunk",
-          "line": 198
+          "line": 200
         },
         {
           "name": "Finish_Write",
-          "line": 205
+          "line": 207
         },
         {
           "name": "Abort_Write",
-          "line": 211
+          "line": 213
         },
         {
           "name": "Close",
-          "line": 213
+          "line": 215
         }
       ],
       "with_dependencies": [
@@ -2663,7 +2667,7 @@
     },
     {
       "path": "assurance/runtime/mc_store.ads",
-      "sha256": "5552026c51edd7459d414a2858913935a128f0b40d189359b5cf3f4ef2122717",
+      "sha256": "1006a51500224c0e5d701e066b5479cc4f7ae1443ef9dd24d3d30540dc58de04",
       "repository": "assurance",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -2721,8 +2725,12 @@
           "line": 26
         },
         {
-          "name": "Close",
+          "name": "Native_Reservation",
           "line": 27
+        },
+        {
+          "name": "Close",
+          "line": 32
         }
       ],
       "with_dependencies": [
@@ -3558,7 +3566,7 @@
     },
     {
       "path": "assurance/src/mc_contract_profile.ads",
-      "sha256": "b17fc276c586f70d47d5b2101bad12706f4e5ee2d65b963c3730065906644834",
+      "sha256": "c0bfb61303ce11e10f7f6d91e9d6e590a2ab4afc32c99989e61ae551b3723c5e",
       "repository": "assurance",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -8506,7 +8514,7 @@
     },
     {
       "path": "controlcore/src/ctl_profile.ads",
-      "sha256": "197d70a59265bbfc2de475acdef90eddaa7740b11ea51b82f78cafcf349a1782",
+      "sha256": "c24b263a116c4e250c1291c10cfba5e2ffcb29fe969fa83bca94f0c0a243b0c6",
       "repository": "controlcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",
@@ -11616,7 +11624,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.adb",
-      "sha256": "6f0ab94d9a85b452f22f6b86600d7b5d7c3d5999e22ae0dc27462e9205bb2331",
+      "sha256": "b7c93072a7ee9c861b7abc2c7d1a0df190e244cccdfedaca563bbef02dd6325f",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11714,8 +11722,16 @@
           "line": 238
         },
         {
-          "name": "Inspect",
+          "name": "Prepare_Root",
           "line": 309
+        },
+        {
+          "name": "Done",
+          "line": 317
+        },
+        {
+          "name": "Inspect",
+          "line": 363
         }
       ],
       "with_dependencies": [
@@ -11723,6 +11739,7 @@
         "Interfaces.C",
         "MC_Atomic",
         "MC_Clock",
+        "MC_Codec",
         "MC_Dirents",
         "MC_FS",
         "MC_Hex",
@@ -11738,6 +11755,8 @@
         "Pkg_Generation_Manifest",
         "Pkg_Image_Inspector",
         "Pkg_Recovery_Audit",
+        "Pkg_Root_Archive",
+        "Pkg_Root_Preparation",
         "Pkg_Root_State",
         "System"
       ],
@@ -11745,7 +11764,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.ads",
-      "sha256": "d549e693e430216ec2ccd7febd28b8c8a6c639c5fc2ccecfa5c433c5a0d7a8fb",
+      "sha256": "0883a2155d8d2d0ee15ee36393b8f2919ac074138418c8cd368481175efc4022",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11779,8 +11798,12 @@
           "line": 22
         },
         {
-          "name": "Inspect",
+          "name": "Prepare_Root",
           "line": 25
+        },
+        {
+          "name": "Inspect",
+          "line": 32
         }
       ],
       "with_dependencies": [
@@ -12740,6 +12763,54 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_root_preparation.adb",
+      "sha256": "04642ead68252e70ddbfa0cdf7b9039d4c13b7afa558b1fdef3a9f12ff7d223d",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Preparation",
+          "line": 3
+        },
+        {
+          "name": "Request",
+          "line": 4
+        },
+        {
+          "name": "Send",
+          "line": 8
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Hex",
+        "System"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_root_preparation.ads",
+      "sha256": "fceea5f1434dc3c89867c6cfd1ec3ef7a31a7c1f464940a63a45bb5d9383c543",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Preparation",
+          "line": 3
+        },
+        {
+          "name": "Request",
+          "line": 4
+        }
+      ],
+      "with_dependencies": [
+        "MC_Types"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_rpm_auth.adb",
       "sha256": "e8ba9d8cc72ecf30bc431ae305d2fe1b5c8e317db77fcf9f396e8ded1f089fa6",
       "repository": "pkgcore",
@@ -13551,6 +13622,33 @@
         "MC_FS",
         "MC_Types"
       ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/root_preparation.c",
+      "sha256": "314f8fbeea9f0a655214ad2a3ac68d2b4974aabd7d2a4ba4bdaa9806b12c7454",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "clock_ms",
+          "line": 15
+        },
+        {
+          "name": "ready",
+          "line": 20
+        },
+        {
+          "name": "hex",
+          "line": 32
+        },
+        {
+          "name": "nia_root_prepare",
+          "line": 41
+        }
+      ],
+      "with_dependencies": [],
       "semantic_analysis": false
     },
     {

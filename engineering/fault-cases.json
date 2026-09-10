@@ -1422,6 +1422,17 @@
       "expected": "実unitで元fixtureから非公開rootを作成し、停止後も履歴を保持する。欠損を空状態として復元せず、extractedを公開やboot成功にしない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_service_deployment.py"
+    },
+    {
+      "id": "FAULT-128",
+      "scenario": "未認証原本、別scope/key、mutable credential、不正mode/ACL、閉鎖/別種FD、service credential欠損・短縮、UID0",
+      "requirements": [
+        "REQ-129"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "鍵を保護し、不一致/欠損では供給receiptを返さず、native実行許可を与えない。借用FDを消費せず複製は閉じる。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/test_archive_credential.py"
     }
   ]
 }

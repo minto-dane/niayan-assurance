@@ -1268,6 +1268,17 @@
         "REQ-128"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-115",
+      "title": "秘密鍵の露出と未認証観測・別scopeへの署名",
+      "severity": "critical",
+      "mitigation": "既存原本認証後の固定domain/独立scope/keyに限定し、read-only credentialまたはsealed memfdと厳格なmode/ACL、非dumpable/有限serviceを使用する。",
+      "residual_risk": "Production job/config provisioning, key lifecycle, independent floor/time, HTTPS service and controller integration remain unqualified. Python key copies are not guaranteed to be erased.",
+      "requirements": [
+        "REQ-129"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

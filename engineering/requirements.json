@@ -3709,6 +3709,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-129",
+      "title": "認証原本に限定するcredential署名provider",
+      "shall": "独立したscope/key/epoch/期限を確認し、既存TUF/OpenPGP原本認証の後だけ保護credentialを読まなければならない。秘密鍵をargv/envへ渡さず、失敗をreceiptや実行許可として返してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0091"
+      ],
+      "spec": [
+        "distribution/native/archive-credential.ja.md"
+      ],
+      "code": [
+        "distribution/native/archive_credential.py"
+      ],
+      "tests": [
+        "distribution/native/test_archive_credential.py",
+        "distribution/native/check_archive_receipt_bridge.py",
+        "distribution/native/worker/check_archive_credential.py"
+      ],
+      "hazards": [
+        "HAZ-115"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

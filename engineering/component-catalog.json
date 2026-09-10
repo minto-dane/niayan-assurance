@@ -8767,6 +8767,30 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/app/pkg_supply_observe.adb",
+      "sha256": "76db49ce9c4d4ad6f735c65eea683558a4a7b9a85fb76ec86d0fc7ec5c230860",
+      "repository": "pkgcore",
+      "layer": "app",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Observe",
+          "line": 7
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Command_Line",
+        "Ada.Text_IO",
+        "MC_Clock",
+        "MC_Hex",
+        "MC_Runtime",
+        "MC_Types",
+        "Pkg_Site_Supply",
+        "Pkg_Supply_Policy"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/app/pkg_worker.adb",
       "sha256": "00c91ad60bdf91c381adb1ee7a1a792ecd9e5972ce997a012ebfbc9d8608658d",
       "repository": "pkgcore",
@@ -13201,6 +13225,113 @@
         "Pkg_Deb_Relations",
         "Pkg_Payload_Index",
         "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_site_supply.adb",
+      "sha256": "78c8a9d81b387f3906236acebbccba9600373eb62e2519a703c28ee680acbc65",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Site_Supply",
+          "line": 5
+        },
+        {
+          "name": "Decode",
+          "line": 11
+        },
+        {
+          "name": "Decode_Floor",
+          "line": 36
+        },
+        {
+          "name": "Tick",
+          "line": 46
+        },
+        {
+          "name": "Protected_Root",
+          "line": 53
+        },
+        {
+          "name": "Read_Protected",
+          "line": 73
+        },
+        {
+          "name": "Close",
+          "line": 91
+        },
+        {
+          "name": "Observe",
+          "line": 93
+        },
+        {
+          "name": "Check",
+          "line": 100
+        },
+        {
+          "name": "Open",
+          "line": 140
+        },
+        {
+          "name": "Observe_Current",
+          "line": 158
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Archive_Supply"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_site_supply.ads",
+      "sha256": "12232513c05ca11eab3f73a3b6a52a0d32af873be3371fc42ece19e3ff9bd9c0",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Site_Supply",
+          "line": 4
+        },
+        {
+          "name": "Decode",
+          "line": 20
+        },
+        {
+          "name": "Decode_Floor",
+          "line": 21
+        },
+        {
+          "name": "Open",
+          "line": 25
+        },
+        {
+          "name": "Observe",
+          "line": 28
+        },
+        {
+          "name": "Close",
+          "line": 30
+        },
+        {
+          "name": "Observe_Current",
+          "line": 33
+        }
+      ],
+      "with_dependencies": [
+        "MC_Text",
+        "MC_Types",
+        "Pkg_Supply_Map",
+        "Pkg_Supply_Policy"
       ],
       "semantic_analysis": false
     },

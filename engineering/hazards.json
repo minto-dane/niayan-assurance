@@ -1257,6 +1257,17 @@
         "REQ-127"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-114",
+      "title": "保持policyの自己承認と処理途中の信頼変更の無視",
+      "severity": "critical",
+      "mitigation": "root所有の保護policyと独立floorを完全hashへ束縛し、context固定/現在時計/毎回の再読み取りと失敗時のsession停止を使う。",
+      "residual_risk": "Site floor rollback resistance, trustworthy time, production signing and managed authorization remain unqualified. Owner checks and hashes are not execution authority.",
+      "requirements": [
+        "REQ-128"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

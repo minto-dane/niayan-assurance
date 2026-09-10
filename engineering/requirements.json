@@ -3680,6 +3680,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-128",
+      "title": "独立した現在site供給policyの読み取り",
+      "shall": "現在の供給鍵・epoch下限・UTCをCASや保持receiptから自己承認せず、独立した保護policy/floorとOS時計から読み、同じ公開予約内で再検査しなければならない。変更・欠損・不一致で全観測を消し、実行許可を与えてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0090"
+      ],
+      "spec": [
+        "distribution/native/site-supply.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_site_supply.adb",
+        "pkgcore/app/pkg_supply_observe.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_site_supply_tests.adb",
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "distribution/native/worker/check_site_supply.py"
+      ],
+      "hazards": [
+        "HAZ-114"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

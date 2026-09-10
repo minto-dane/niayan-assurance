@@ -830,6 +830,19 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "logical ownership: directional real-name version/architecture-qualified Replaces, shared directories and Multi-Arch:same content/security equality; finite deadline, canonical complete choices, native-architecture binding and UID0 refusal; no site effect grant"
+    },
+    {
+      "main": "pkgcore/tests/run_site_supply_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/untrusted"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/untrusted"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "strict protected site policy/floor parsing, bounded limits, no self-trust, caller-owned path refusal and cleared/poisoned observation; actual root-owned inputs and publisher connection tested separately in disposable VM"
     }
   ]
 }

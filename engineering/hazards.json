@@ -1224,6 +1224,17 @@
         "REQ-124"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-111",
+      "title": "特権準備中の予約喪失と停止後の結果誤認",
+      "severity": "critical",
+      "mitigation": "実peer UIDと固定予約inodeを照合し、SCM_RIGHTSのOFDをworkerへ保持する。private bankのintentと結果をfsyncし、再起動後の履歴を物理再検証にしない。",
+      "residual_risk": "Native admission adapter, deployment policy, capacity reservation, physical revalidation/GC, full effects, power loss and boot remain unqualified.",
+      "requirements": [
+        "REQ-125"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

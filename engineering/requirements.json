@@ -3591,6 +3591,33 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-125",
+      "title": "実予約FDと永続intentによる非公開root準備",
+      "shall": "内部coreの実peerと固定CAS予約inodeを確認し、同じopen file descriptionをworkerまで保持しなければならない。展開前にintentを永続化し、欠損や停止を正常な空状態や公開成功としてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0085"
+      ],
+      "spec": [
+        "distribution/native/root-bank.ja.md"
+      ],
+      "code": [
+        "distribution/native/root_bank.py",
+        "distribution/native/worker/root_extract.c"
+      ],
+      "tests": [
+        "distribution/native/worker/check_root_bank.py"
+      ],
+      "hazards": [
+        "HAZ-111"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

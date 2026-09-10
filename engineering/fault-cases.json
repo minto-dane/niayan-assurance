@@ -1389,6 +1389,17 @@
       "expected": "不一致・未対応・環境制限を成功にせず、原本と復元した属性/内容を照合した場合だけ未公開結果を返す。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_extract.py"
+    },
+    {
+      "id": "FAULT-125",
+      "scenario": "非許可peer UID、別CAS予約、既存stage、予約維持、永続結果の再起動観測、intent記録後の実サービスSIGKILL",
+      "requirements": [
+        "REQ-125"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "非許可依頼を拒否し、共有OFDを解錠しない。停止結果を成功と推定せず、履歴観測を物理rootの再検証や公開許可にしない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_bank.py"
     }
   ]
 }

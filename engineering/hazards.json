@@ -1139,7 +1139,7 @@
       "id": "HAZ-103",
       "title": "配布世代・原本・期限の混同と供給認証の実行許可化",
       "severity": "critical",
-      "mitigation": "TUFとDebian archiveの認証を共に要求する。独立policyの正確な原本pin、日付floor、有限期限、scopeとepochを検査し、元DEB/controlのhashだけをnative接続へ返す。",
+      "mitigation": "TUFとDebian archiveの認証を共に要求する。独立policyの正確な原本pin、日付floor、有限期限、scopeとepochを検査する。返却前に保持checkpointを現在時刻で再検証し、使用したroleの期限も適用する。checkpoint/identity/予約変更を拒否し、元DEB/controlのhashだけをnative接続へ返す。",
       "residual_risk": "Supply observation only. Production policy provisioning, rollback-resistant trust floor/time and binding exact authenticated originals to native CAS and the publication plan under the live writer reservation remain unqualified. Full effects and boot remain incomplete.",
       "requirements": [
         "REQ-117"

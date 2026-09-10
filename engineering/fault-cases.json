@@ -1302,7 +1302,7 @@
     },
     {
       "id": "FAULT-117",
-      "scenario": "実TUF/OpenPGP署名の片方欠落、別原本pin・suite・component・architecture、Release期限欠如/期限切れ/日付floor、巨大未使用Contentsと選択index上限、元DEB/control不一致、対応ソース混在、epoch不足、処理中の期限/時計/target変化、UID0",
+      "scenario": "実TUF/OpenPGP署名の片方欠落、別原本pin・suite・component・architecture、Release期限欠如/期限切れ/日付floor、巨大未使用Contentsと選択index上限、元DEB/control不一致、対応ソース混在、epoch不足、処理中の期限/時計/target変化、保持TUF全roleと使用/未使用委譲の期限、鍵交代後の再検証、checkpoint/identity/予約変更、要求枠/session期限、追加取得なし、UID0",
       "requirements": [
         "REQ-117"
       ],

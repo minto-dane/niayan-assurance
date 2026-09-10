@@ -3338,7 +3338,7 @@
     {
       "id": "REQ-117",
       "title": "明示的なDebian 13原本pinと共通供給認証",
-      "shall": "共通TUFで認証した独立policyの原本hash、codename、suite、architecture、component、時刻とepochの境界を検査し、Debian署名・索引・元DEB/controlを照合しなければならない。期限のない通常Releaseにも有限の取り込み期限を要求し、観測結果を実行許可へ変換してはならない。",
+      "shall": "共通TUFで認証した独立policyの原本hash、codename、suite、architecture、component、時刻とepochの境界を検査し、Debian署名・索引・元DEB/controlを照合しなければならない。返却前に正確な保持checkpointを現在時刻で再検証し、使用したTUF roleの期限も観測期限へ反映しなければならない。期限のない通常Releaseにも有限の取り込み期限を要求し、観測結果を実行許可へ変換してはならない。",
       "status": "partial-integration",
       "adr": [
         "ADR-0077"
@@ -3349,11 +3349,13 @@
       "code": [
         "distribution/tools/debian_archive_auth.py",
         "distribution/tools/deb_archive.py",
-        "distribution/native/archive_intake.py"
+        "distribution/native/archive_intake.py",
+        "distribution/native/repository.py#revalidate_target"
       ],
       "tests": [
         "distribution/tests/test_debian_trust.py",
-        "distribution/native/test_archive_intake.py"
+        "distribution/native/test_archive_intake.py",
+        "distribution/native/test_repository_revalidation.py"
       ],
       "hazards": [
         "HAZ-103"

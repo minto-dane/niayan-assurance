@@ -801,7 +801,7 @@
         "$TEMP/store"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "exact newly required original set, independent scoped trust, native catalogs/closures, canonical context, historical retention and fresh deadlines; actual issuance bridge is separate; retained canonical policy, live interval versus recorded recheck, independent current trust and root refusal"
+      "note": "exact newly required original set, independent scoped trust, native catalogs/closures, canonical context, historical retention and fresh deadlines; actual issuance bridge is separate; retained canonical policy, live interval versus recorded recheck, independent current trust and root refusal; bounded per-call shared-reference preflight, multi-role/multi-original aliases and loss after an earlier successful call"
     }
   ]
 }

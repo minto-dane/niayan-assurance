@@ -12868,7 +12868,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_supply_map.adb",
-      "sha256": "12d38429310a44cc26bd8e03d4c1f4fa63298738eacfa0ec78dedb954690084e",
+      "sha256": "d362d782d0141e352a7e7ead8fda27cd481e85691192b675a00c699b1c5e27fa",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12890,75 +12890,88 @@
           "line": 8
         },
         {
-          "name": "Free",
-          "line": 14
+          "name": "Objects",
+          "line": 9
         },
         {
-          "name": "Tick",
+          "name": "Free",
           "line": 15
         },
         {
+          "name": "Tick",
+          "line": 16
+        },
+        {
           "name": "Present",
-          "line": 22
+          "line": 23
         },
         {
           "name": "Current_Time",
-          "line": 29
+          "line": 30
         },
         {
           "name": "Valid",
-          "line": 41
+          "line": 42
         },
         {
           "name": "Header",
-          "line": 46
+          "line": 47
         },
         {
           "name": "Read",
-          "line": 54
+          "line": 55
         },
         {
-          "name": "Receipt_References",
-          "line": 81
+          "name": "Read_Receipt",
+          "line": 82
+        },
+        {
+          "name": "Include_References",
+          "line": 102
+        },
+        {
+          "name": "Check_References",
+          "line": 116
         },
         {
           "name": "Evaluate",
-          "line": 105
+          "line": 127
         },
         {
           "name": "Check",
-          "line": 113
+          "line": 135
         },
         {
           "name": "Clock",
-          "line": 115
+          "line": 137
         },
         {
           "name": "Prepare",
-          "line": 204
+          "line": 229
         },
         {
           "name": "Check_Map",
-          "line": 231
+          "line": 256
         },
         {
           "name": "Verify",
-          "line": 261
+          "line": 286
         },
         {
           "name": "Verify_Interval",
-          "line": 266
+          "line": 291
         },
         {
           "name": "Recheck_At",
-          "line": 272
+          "line": 297
         },
         {
           "name": "Check_Retention",
-          "line": 278
+          "line": 303
         }
       ],
       "with_dependencies": [
+        "Ada.Containers.Ordered_Sets",
         "Ada.Unchecked_Deallocation",
         "Interfaces.C",
         "MC_Clock",

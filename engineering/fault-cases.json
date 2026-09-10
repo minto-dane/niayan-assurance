@@ -1326,7 +1326,7 @@
     },
     {
       "id": "FAULT-119",
-      "scenario": "初期構築・追加・削除・再導入、過不足と別原本/control、重複/非正規行、全map byte変更、基準/root変更、独立authority欠落/重複、最大添字のsingletonと非1開始配列、期限・CAS書込障害・強制終了と再開、全供給原本と基準descriptor/closure欠損、実署名発行から独立map preimage照合、UID0",
+      "scenario": "初期構築・追加・削除・再導入、過不足と別原本/control、重複/非正規行、全map byte変更、基準/root変更、独立authority欠落/重複、最大添字のsingletonと非1開始配列、期限・CAS書込障害・強制終了と再開、全供給原本と基準descriptor/closure欠損、実署名発行から独立map preimage照合、UID0、複数行/役割の共有原本と呼出し間の欠損・明示復元",
       "requirements": [
         "REQ-119"
       ],

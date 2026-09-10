@@ -1163,7 +1163,7 @@
       "id": "HAZ-105",
       "title": "更新原本の認証漏れ・過剰要求・保持検査の新規認可化",
       "severity": "critical",
-      "mitigation": "元DEB hashの正確な差集合を両catalogから再観測し、全供給記録を独立scope/key/floor/timeで検証する。保持欠損を再生成前に拒否し、contextと正規行列をCAS原本へ束縛する。",
+      "mitigation": "元DEB hashの正確な差集合を両catalogから再観測し、全供給記録を独立scope/key/floor/timeで検証する。保持欠損を再生成前に拒否し、contextと正規行列をCAS原本へ束縛する。 共有参照の前段検査は呼出し内の有界集合に限定し、各呼出しで全固有原本を再検査してから再構築する。",
       "residual_risk": "Map is now linked through retained policy and v4 publication. Production independent trust/time, revoked-key recovery, typed whole-generation retention/GC, bulk performance, full DEB effects and root/boot remain unqualified.",
       "requirements": [
         "REQ-119"

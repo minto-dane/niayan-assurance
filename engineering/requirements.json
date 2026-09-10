@@ -3796,6 +3796,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-132",
+      "title": "独立した現在site trustによる供給計画",
+      "shall": "計画前に架空のhashを用いず、保護site policy/floorを固定して原本認証と供給map/保持policyを同じCAS予約で作成しなければならない。計画用sessionを公開callbackとして使わず、設定変更や失敗では出力を消去してsessionを閉じなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0094"
+      ],
+      "spec": [
+        "distribution/native/supply-planner.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_site_supply.adb",
+        "pkgcore/runtime/pkg_supply_planner.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_archive_observer_tests.adb",
+        "pkgcore/tests/run_site_supply_tests.adb",
+        "distribution/native/worker/check_archive_observer.py"
+      ],
+      "hazards": [
+        "HAZ-118"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

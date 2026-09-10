@@ -1455,6 +1455,17 @@
       "expected": "同じ予約を保持し、他のwriterを排除する。拒否時のreceipt/policyはzero。供給計画が新規原本のreceiptを省略する場合は拒否する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_archive_observer_tests.adb"
+    },
+    {
+      "id": "FAULT-131",
+      "scenario": "公開APIへの計画用session流用、zero hash束縛、束縛後の計画状態復帰、実HTTPS中のsite policy/floor変更とfloor欠損",
+      "requirements": [
+        "REQ-132"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "同じCAS予約を保持し、正確な現在trustでのみ供給計画を返す。状態違反/変更/欠損では三出力をzeroにしてsessionを閉じる。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_archive_observer.py"
     }
   ]
 }

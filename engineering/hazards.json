@@ -1301,6 +1301,17 @@
         "REQ-131"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-118",
+      "title": "計画時の自己承認・架空contextと途中trust変更の採用",
+      "severity": "critical",
+      "mitigation": "計画専用sessionと一方向の公開束縛を使い、元の保護policy/floor pin・時計高水位・期限を維持する。原本認証とmap作成の前後に再観測し、拒否時は全出力を消去する。",
+      "residual_risk": "Production command/controller admission, real predecessor validation, independent site provisioning and complete effects/boot remain unqualified. Unreferenced CAS objects and TUF checkpoint advances may remain after refusal.",
+      "requirements": [
+        "REQ-132"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

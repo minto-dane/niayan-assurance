@@ -13337,7 +13337,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_site_supply.adb",
-      "sha256": "78c8a9d81b387f3906236acebbccba9600373eb62e2519a703c28ee680acbc65",
+      "sha256": "36825c4a5337a31fe73ca3cd4518f638200b09e1272121374c4beeee23211a3d",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13371,7 +13371,7 @@
           "line": 91
         },
         {
-          "name": "Observe",
+          "name": "Read_Current",
           "line": 93
         },
         {
@@ -13379,12 +13379,28 @@
           "line": 100
         },
         {
-          "name": "Open",
+          "name": "Observe",
           "line": 140
         },
         {
+          "name": "Observe_Planning",
+          "line": 148
+        },
+        {
+          "name": "Open_Planning",
+          "line": 156
+        },
+        {
+          "name": "Bind_Publication",
+          "line": 172
+        },
+        {
+          "name": "Open",
+          "line": 185
+        },
+        {
           "name": "Observe_Current",
-          "line": 158
+          "line": 203
         }
       ],
       "with_dependencies": [
@@ -13400,7 +13416,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_site_supply.ads",
-      "sha256": "12232513c05ca11eab3f73a3b6a52a0d32af873be3371fc42ece19e3ff9bd9c0",
+      "sha256": "1ca7fe4dc57fbd5a79fecbb38ebc2d48f06018645faab6a42a4c39340c256df7",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13418,20 +13434,32 @@
           "line": 21
         },
         {
-          "name": "Open",
+          "name": "Open_Planning",
           "line": 25
         },
         {
-          "name": "Observe",
+          "name": "Observe_Planning",
           "line": 28
         },
         {
-          "name": "Close",
+          "name": "Bind_Publication",
           "line": 30
         },
         {
+          "name": "Open",
+          "line": 36
+        },
+        {
+          "name": "Observe",
+          "line": 39
+        },
+        {
+          "name": "Close",
+          "line": 41
+        },
+        {
           "name": "Observe_Current",
-          "line": 33
+          "line": 44
         }
       ],
       "with_dependencies": [
@@ -13654,6 +13682,69 @@
         "Pkg_Archive_Supply",
         "Pkg_Generation_Descriptor",
         "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_supply_planner.adb",
+      "sha256": "6bea094ce9a1661380ec815cbd1e7c562d79b01d288c347a1a802319f7a6e901",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Planner",
+          "line": 5
+        },
+        {
+          "name": "Free",
+          "line": 8
+        },
+        {
+          "name": "Prepare",
+          "line": 9
+        },
+        {
+          "name": "Check",
+          "line": 20
+        },
+        {
+          "name": "Observe",
+          "line": 22
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Posix",
+        "Pkg_Archive_Observer",
+        "Pkg_Supply_Policy"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_supply_planner.ads",
+      "sha256": "2a116dd5ba27fe08492ed48df8f20bd699117979a0df42b99b01e7682e5d152d",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Planner",
+          "line": 4
+        },
+        {
+          "name": "Prepare",
+          "line": 10
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Text",
+        "MC_Types",
+        "Pkg_Site_Supply",
+        "Pkg_Supply_Map"
       ],
       "semantic_analysis": false
     },

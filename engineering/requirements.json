@@ -3963,6 +3963,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-138",
+      "title": "元rootと設定選択の全配置の検査",
+      "shall": "検査済み元rootへ設定選択を同じscopeで接続し、incoming宣言の選択欠落やpath/親/link依存矛盾を成功にしてはならない。削除対象を配置から除き、元rootのbindingと全選択の保持参照を失ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0100"
+      ],
+      "spec": [
+        "distribution/native/root-configuration.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_root_configuration.adb",
+        "pkgcore/runtime/pkg_conffile_choice.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_configuration_tests.adb",
+        "pkgcore/tests/run_conffile_choice_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-124"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

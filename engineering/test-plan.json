@@ -917,6 +917,22 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "actual local snapshot readback with raw POSIX ACL and binary/empty xattrs; signed/full-width fields and isolated malformed/lost CAS records; existing choice path exercises capture readback integration"
+    },
+    {
+      "main": "pkgcore/tests/run_root_configuration_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "$TEMP/root",
+        "tests/fixtures/conffiles"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store",
+        "$TEMP/root"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "verified real root archive and live configuration decisions; exact projected namespace, scope and declaration coverage, collisions and hardlink dependencies; no configured tar or publication"
     }
   ]
 }

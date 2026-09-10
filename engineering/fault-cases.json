@@ -1521,6 +1521,17 @@
       "expected": "古い属性効果を返さず両出力を消す。元属性と継承元を区別し、欠落へ属性を捏造しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_conffile_choice_tests.adb"
+    },
+    {
+      "id": "FAULT-137",
+      "scenario": "incoming設定選択欠落、別scope/原本、二重選択、退避先と元payload衝突、親欠落/非directory、変更対象へのhardlink、期限切れと途中の属性変更",
+      "requirements": [
+        "REQ-138"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "配置とbindingを消し、元vendor fileへのfallback・退避上書き・link先の暗黙変更をしない。欠落をentry除外として保持し、全選択hashを残す。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
     }
   ]
 }

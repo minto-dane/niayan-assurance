@@ -1367,6 +1367,17 @@
         "REQ-137"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-124",
+      "title": "設定選択の未反映・別rootへの転用・全配置の衝突",
+      "severity": "critical",
+      "mitigation": "実rootの所有権とscope/原本/宣言網羅を検査する。配置の置換/除外/退避を明示し、重複・親種別・変更対象へのhardlink依存を拒否し、全選択を最後にも再確認する。",
+      "residual_risk": "Configured tar serialization, full attribute and inode effects, complete historical configuration coverage, privileged observation and authenticated managed admission, generation retention, root/boot and recovery remain unqualified. Readback is a snapshot, not a live grant.",
+      "requirements": [
+        "REQ-138"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

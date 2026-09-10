@@ -9619,7 +9619,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_conffile_choice.adb",
-      "sha256": "f5973633043e66d26b05a42af3ac2f710f0a7de3a0278d086ee9d469d16e598d",
+      "sha256": "19660342900a9d33a4a6f3db04cc0f84f967a83e3205ab96be44b9587de10ce5",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9642,75 +9642,79 @@
         },
         {
           "name": "Free",
-          "line": 30
-        },
-        {
-          "name": "Clear",
           "line": 31
         },
         {
+          "name": "Clear",
+          "line": 32
+        },
+        {
           "name": "Finalize",
-          "line": 40
+          "line": 41
         },
         {
           "name": "Address",
-          "line": 42
+          "line": 43
         },
         {
           "name": "Pending",
-          "line": 44
+          "line": 45
         },
         {
           "name": "Tick",
-          "line": 46
+          "line": 47
         },
         {
           "name": "Include",
-          "line": 52
+          "line": 53
         },
         {
           "name": "Verify_Members",
-          "line": 54
+          "line": 55
         },
         {
           "name": "Prepare",
-          "line": 66
+          "line": 67
         },
         {
           "name": "Need",
-          "line": 73
+          "line": 74
         },
         {
           "name": "Source",
-          "line": 75
+          "line": 76
         },
         {
           "name": "Recheck",
-          "line": 155
+          "line": 157
         },
         {
           "name": "Read_Effects",
-          "line": 176
+          "line": 178
+        },
+        {
+          "name": "Read_Scope",
+          "line": 186
         },
         {
           "name": "Resolve",
-          "line": 184
+          "line": 193
         },
         {
           "name": "Need",
-          "line": 189
+          "line": 198
         },
         {
           "name": "Overlap",
-          "line": 191
+          "line": 200
         },
         {
           "name": "Describe",
-          "line": 196
+          "line": 205
         },
         {
           "name": "Encode",
-          "line": 259
+          "line": 268
         }
       ],
       "with_dependencies": [
@@ -9730,7 +9734,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_conffile_choice.ads",
-      "sha256": "3e5d6754daadf5d82ca20787aeb1ec70523bc4ee13ae478a7e87fcb329b3e557",
+      "sha256": "6264b8855b48fc3084b19fb5b51996f7d2ababb21db178340eda359662aba8b5",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9741,35 +9745,39 @@
         },
         {
           "name": "Prepare",
-          "line": 16
-        },
-        {
-          "name": "Address",
           "line": 20
         },
         {
+          "name": "Address",
+          "line": 24
+        },
+        {
           "name": "Pending",
-          "line": 21
+          "line": 25
         },
         {
           "name": "Resolve",
-          "line": 22
-        },
-        {
-          "name": "Recheck",
           "line": 26
         },
         {
+          "name": "Recheck",
+          "line": 30
+        },
+        {
           "name": "Read_Effects",
-          "line": 28
+          "line": 32
+        },
+        {
+          "name": "Read_Scope",
+          "line": 35
         },
         {
           "name": "Clear",
-          "line": 42
+          "line": 50
         },
         {
           "name": "Finalize",
-          "line": 69
+          "line": 77
         }
       ],
       "with_dependencies": [
@@ -13720,6 +13728,192 @@
         "MC_Store",
         "MC_Types",
         "Pkg_Payload_Index"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_root_configuration.adb",
+      "sha256": "68dcd30111dc6a1075e2d7a01417472b400bd6dcef70583d51edf5712b03d411",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Configuration",
+          "line": 7
+        },
+        {
+          "name": "C",
+          "line": 8
+        },
+        {
+          "name": "X",
+          "line": 9
+        },
+        {
+          "name": "D",
+          "line": 10
+        },
+        {
+          "name": "Paths",
+          "line": 13
+        },
+        {
+          "name": "Positions",
+          "line": 14
+        },
+        {
+          "name": "Effects",
+          "line": 19
+        },
+        {
+          "name": "Bindings",
+          "line": 20
+        },
+        {
+          "name": "Free",
+          "line": 28
+        },
+        {
+          "name": "Clear",
+          "line": 29
+        },
+        {
+          "name": "Finalize",
+          "line": 31
+        },
+        {
+          "name": "Count",
+          "line": 33
+        },
+        {
+          "name": "Binding",
+          "line": 35
+        },
+        {
+          "name": "Choice_Count",
+          "line": 37
+        },
+        {
+          "name": "Read_Choice",
+          "line": 39
+        },
+        {
+          "name": "Read_Entry",
+          "line": 45
+        },
+        {
+          "name": "Prepare",
+          "line": 62
+        },
+        {
+          "name": "Free",
+          "line": 66
+        },
+        {
+          "name": "Scope_Maps",
+          "line": 67
+        },
+        {
+          "name": "Need",
+          "line": 74
+        },
+        {
+          "name": "Clock",
+          "line": 76
+        },
+        {
+          "name": "Refuse",
+          "line": 81
+        },
+        {
+          "name": "Name_Budget",
+          "line": 83
+        },
+        {
+          "name": "Relative",
+          "line": 88
+        },
+        {
+          "name": "Has_Source",
+          "line": 94
+        },
+        {
+          "name": "Is_Directory",
+          "line": 105
+        },
+        {
+          "name": "Apply",
+          "line": 112
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Indefinite_Ordered_Maps",
+        "Ada.Containers.Vectors",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Posix",
+        "Pkg_Catalog_Store",
+        "Pkg_Deb_Conffiles",
+        "Pkg_Payload_Index",
+        "Pkg_Root_Archive",
+        "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_root_configuration.ads",
+      "sha256": "5c4e9bfc8276e8d1c9dc1e3c326da08327d91a2aea6b099c466e92971ea19684",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Configuration",
+          "line": 5
+        },
+        {
+          "name": "Prepare",
+          "line": 29
+        },
+        {
+          "name": "Clear",
+          "line": 32
+        },
+        {
+          "name": "Count",
+          "line": 33
+        },
+        {
+          "name": "Binding",
+          "line": 34
+        },
+        {
+          "name": "Read_Entry",
+          "line": 35
+        },
+        {
+          "name": "Choice_Count",
+          "line": 36
+        },
+        {
+          "name": "Read_Choice",
+          "line": 37
+        },
+        {
+          "name": "Finalize",
+          "line": 62
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Conffile_Choice",
+        "Pkg_Deb_Payload",
+        "private"
       ],
       "semantic_analysis": false
     },

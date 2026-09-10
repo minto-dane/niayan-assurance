@@ -1213,6 +1213,17 @@
         "REQ-123"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-110",
+      "title": "展開先の逸脱と属性欠落・部分rootの公開",
+      "severity": "critical",
+      "mitigation": "private親/空root/保護mount、FDと実行権の縮小を維持し、全入力hashと実inode属性・内容を再観測する。成功はextractedまでで、同じ世代認可とcontrollerの責務を省略しない。",
+      "residual_risk": "Standalone worker is not yet connected to production admission or a persistent generation bank. Power loss, controller resume/GC, complete DEB effects and actual boot are unqualified.",
+      "requirements": [
+        "REQ-124"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

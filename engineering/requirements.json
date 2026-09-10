@@ -3565,6 +3565,32 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-124",
+      "title": "非公開rootへの特権分離した実展開と読み戻し",
+      "shall": "保護された呼出し元の明示FDと期待hashから、空の隔離rootへ全採用entryを展開し、復元可能なinode属性と内容を再観測しなければならない。失敗treeを公開・再使用してはならず、展開結果をsite認可や起動成功にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0084"
+      ],
+      "spec": [
+        "distribution/native/root-extraction.ja.md"
+      ],
+      "code": [
+        "distribution/native/worker/root_extract.c"
+      ],
+      "tests": [
+        "distribution/native/worker/check_root_extract.py"
+      ],
+      "hazards": [
+        "HAZ-110"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

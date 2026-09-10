@@ -1378,6 +1378,17 @@
       "expected": "論理所有権が成立しないroot世代を保持検査で拒否し、失敗digestをzeroにする。全原本と属性を保持し、site効果実行を宣言しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_payload_ownership_tests.adb"
+    },
+    {
+      "id": "FAULT-124",
+      "scenario": "入力hash/件数/期限不一致、使用済みroot、書込可能入力FD、非特権、コンテナのmknod拒否、root時刻・日本語/binary名・全inode kind/属性の実読戻し",
+      "requirements": [
+        "REQ-124"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不一致・未対応・環境制限を成功にせず、原本と復元した属性/内容を照合した場合だけ未公開結果を返す。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_extract.py"
     }
   ]
 }

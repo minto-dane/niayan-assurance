@@ -8909,6 +8909,124 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/conffile_snapshot.c",
+      "sha256": "d0333b1f3b5c1b800e92533a87d0edec186df3c833d28b0a6847030daab9db2a",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "error_code",
+          "line": 30
+        },
+        {
+          "name": "clock_check",
+          "line": 40
+        },
+        {
+          "name": "append",
+          "line": 45
+        },
+        {
+          "name": "number",
+          "line": 49
+        },
+        {
+          "name": "stat_fd",
+          "line": 55
+        },
+        {
+          "name": "identity",
+          "line": 62
+        },
+        {
+          "name": "directory",
+          "line": 68
+        },
+        {
+          "name": "timestamp",
+          "line": 74
+        },
+        {
+          "name": "compare_names",
+          "line": 78
+        },
+        {
+          "name": "attributes",
+          "line": 81
+        },
+        {
+          "name": "file_metadata",
+          "line": 109
+        },
+        {
+          "name": "path_valid",
+          "line": 124
+        },
+        {
+          "name": "child",
+          "line": 136
+        },
+        {
+          "name": "hash_file",
+          "line": 141
+        },
+        {
+          "name": "scan",
+          "line": 157
+        },
+        {
+          "name": "nia_conffile_close",
+          "line": 213
+        },
+        {
+          "name": "observe",
+          "line": 220
+        },
+        {
+          "name": "nia_conffile_recheck",
+          "line": 231
+        },
+        {
+          "name": "nia_conffile_capture",
+          "line": 239
+        },
+        {
+          "name": "nia_conffile_data",
+          "line": 249
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/conffile_snapshot.h",
+      "sha256": "d84fe09aa2b543d9b4ccc0716398f78e30eb43586ee7fd7ea589c27db01aaf54",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "nia_conffile_capture",
+          "line": 7
+        },
+        {
+          "name": "nia_conffile_recheck",
+          "line": 9
+        },
+        {
+          "name": "nia_conffile_close",
+          "line": 10
+        },
+        {
+          "name": "nia_conffile_data",
+          "line": 12
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_admin.adb",
       "sha256": "27a2d39aac595dc0e946a4e6540eda6d0da2579662fd6cfa8802e605f838f209",
       "repository": "pkgcore",
@@ -9496,6 +9614,127 @@
         "MC_Types",
         "Pkg_Payload_Index",
         "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_conffile_snapshot.adb",
+      "sha256": "afc96dea6e1920db4ae806768d5952dca6a59d1fed38280fc27eb064c3a61939",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Snapshot",
+          "line": 3
+        },
+        {
+          "name": "Take",
+          "line": 6
+        },
+        {
+          "name": "Check",
+          "line": 9
+        },
+        {
+          "name": "Data",
+          "line": 11
+        },
+        {
+          "name": "Close",
+          "line": 13
+        },
+        {
+          "name": "Result",
+          "line": 15
+        },
+        {
+          "name": "Clear",
+          "line": 19
+        },
+        {
+          "name": "Finalize",
+          "line": 24
+        },
+        {
+          "name": "Current",
+          "line": 26
+        },
+        {
+          "name": "Metadata",
+          "line": 27
+        },
+        {
+          "name": "Recheck",
+          "line": 28
+        },
+        {
+          "name": "Capture",
+          "line": 39
+        },
+        {
+          "name": "Need",
+          "line": 50
+        },
+        {
+          "name": "Clock",
+          "line": 52
+        },
+        {
+          "name": "Cleanup",
+          "line": 57
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Posix"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_conffile_snapshot.ads",
+      "sha256": "2d55677ac3c55abacba8170ee5b714792ff2da9504a96286875a4de9d36a08a9",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Snapshot",
+          "line": 5
+        },
+        {
+          "name": "Capture",
+          "line": 7
+        },
+        {
+          "name": "Recheck",
+          "line": 9
+        },
+        {
+          "name": "Current",
+          "line": 11
+        },
+        {
+          "name": "Metadata",
+          "line": 12
+        },
+        {
+          "name": "Clear",
+          "line": 13
+        },
+        {
+          "name": "Finalize",
+          "line": 38
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Conffile_Transition",
+        "System",
+        "private"
       ],
       "semantic_analysis": false
     },

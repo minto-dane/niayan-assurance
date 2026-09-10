@@ -1323,6 +1323,17 @@
         "REQ-133"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-120",
+      "title": "変更済み設定の古い観測・欠落誤認・属性の切り捨て",
+      "severity": "critical",
+      "mitigation": "root FDを複製し、raw pathの保護祖先と同一mountを観測する。内容と版付き属性/namespace記録をCASへ保持し、再読取で比較する。失敗時にsnapshotを消し、不明はOtherとする。",
+      "residual_risk": "Optimistic observation does not freeze privileged writers. Hidden attribute namespaces, privileged read service, root binding, full restore semantics, consent, retention and managed publication remain unqualified. The caller must keep the same Store alive.",
+      "requirements": [
+        "REQ-134"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

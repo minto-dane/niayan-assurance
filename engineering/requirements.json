@@ -3855,6 +3855,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-134",
+      "title": "実設定の内容・観測属性・欠落の保持と再照合",
+      "shall": "指定されたrootから実設定を観測し、内容と観測属性を既存CASへ保持しなければならない。欠落・読取不能・未対応を区別し、inodeや属性の変更後に古い選択を有効としてはならない。可視属性の観測を全権限の属性証明や実行許可にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0096"
+      ],
+      "spec": [
+        "distribution/native/conffile-snapshot.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_conffile_snapshot.adb",
+        "pkgcore/runtime/conffile_snapshot.c"
+      ],
+      "tests": [
+        "pkgcore/tests/run_conffile_snapshot_tests.adb",
+        "pkgcore/tests/conffile-snapshot/check.c"
+      ],
+      "hazards": [
+        "HAZ-120"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

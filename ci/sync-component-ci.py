@@ -24,6 +24,9 @@ def generated():
         if repo == 'pkgcore':
             lines.append('cc -std=c11 -Wall -Wextra -Werror -O1 -g -fstack-protector-strong -fsanitize=address,undefined -fno-omit-frame-pointer "$PWD/tests/observer-transport/check.c" -lsodium -o "$D/observer-transport"')
             lines.append('timeout --kill-after=5s 30s "$D/observer-transport"')
+            lines.append('cc -std=c11 -Wall -Wextra -Werror -O1 -g -fstack-protector-strong -fsanitize=address,undefined -fno-omit-frame-pointer "$PWD/tests/conffile-snapshot/check.c" -lsodium -o "$D/conffile-snapshot"')
+            lines.append('mkdir -m 700 "$D/conffile-root"')
+            lines.append('timeout --kill-after=5s 45s "$D/conffile-snapshot" "$D/conffile-root"')
             lines.append('python3 "$PWD/tests/make_deb_final_set_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_deb_transition_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_selected_catalog_fixtures.py" --check')

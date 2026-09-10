@@ -9500,6 +9500,50 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_conffile_transition.adb",
+      "sha256": "46975e5bd56ee6e4f9c57018444a67f61118fff53ba9efeb959d7cf0017808c3",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Transition",
+          "line": 2
+        },
+        {
+          "name": "Valid",
+          "line": 3
+        },
+        {
+          "name": "Decide",
+          "line": 6
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_conffile_transition.ads",
+      "sha256": "fbd72d631b2497835a9418f32b8eda25c6d0f1ae0fc67c3950e5af1355047344",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Conffile_Transition",
+          "line": 3
+        },
+        {
+          "name": "Decide",
+          "line": 20
+        }
+      ],
+      "with_dependencies": [
+        "MC_Types"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_configuration_engine.adb",
       "sha256": "91b0a8aaee4b95cdf3f0608593747508b2825f770236aca8012dcf141251fa72",
       "repository": "pkgcore",
@@ -9543,6 +9587,151 @@
         "MC_Config_Receipt",
         "MC_Types",
         "Pkg_File_Engine"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_conffiles.adb",
+      "sha256": "6343da099debbd649efe5d3f2925c1d8a1cb7c968b15baeac08add269e354ce4",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Conffiles",
+          "line": 5
+        },
+        {
+          "name": "Entries",
+          "line": 8
+        },
+        {
+          "name": "Free",
+          "line": 13
+        },
+        {
+          "name": "Clear",
+          "line": 14
+        },
+        {
+          "name": "Finalize",
+          "line": 16
+        },
+        {
+          "name": "Count",
+          "line": 18
+        },
+        {
+          "name": "Original_Hash",
+          "line": 20
+        },
+        {
+          "name": "Declaration_Hash",
+          "line": 22
+        },
+        {
+          "name": "Read_Entry",
+          "line": 24
+        },
+        {
+          "name": "Space",
+          "line": 30
+        },
+        {
+          "name": "Safe_Path",
+          "line": 31
+        },
+        {
+          "name": "Inspect",
+          "line": 44
+        },
+        {
+          "name": "Free",
+          "line": 49
+        },
+        {
+          "name": "Free",
+          "line": 50
+        },
+        {
+          "name": "Check",
+          "line": 56
+        },
+        {
+          "name": "Tick",
+          "line": 58
+        },
+        {
+          "name": "Line",
+          "line": 63
+        },
+        {
+          "name": "Cleanup",
+          "line": 90
+        },
+        {
+          "name": "Read_Line",
+          "line": 114
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Vectors",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Posix",
+        "MC_Text",
+        "Pkg_Deb_Container",
+        "Pkg_Deb_Control"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_deb_conffiles.ads",
+      "sha256": "e56692c8a8287aadbcb0bf70572e1c8f3d0d8ae1eb71019feede4f535d522572",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Deb_Conffiles",
+          "line": 5
+        },
+        {
+          "name": "Inspect",
+          "line": 13
+        },
+        {
+          "name": "Clear",
+          "line": 15
+        },
+        {
+          "name": "Original_Hash",
+          "line": 16
+        },
+        {
+          "name": "Declaration_Hash",
+          "line": 17
+        },
+        {
+          "name": "Count",
+          "line": 18
+        },
+        {
+          "name": "Read_Entry",
+          "line": 19
+        },
+        {
+          "name": "Finalize",
+          "line": 36
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Deb_Payload",
+        "private"
       ],
       "semantic_analysis": false
     },
@@ -13687,7 +13876,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_supply_planner.adb",
-      "sha256": "6bea094ce9a1661380ec815cbd1e7c562d79b01d288c347a1a802319f7a6e901",
+      "sha256": "78f1a25cd291a6c098d74d16d99a70fcd3685b14076bf57b882515c5cf1f0513",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13725,7 +13914,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_supply_planner.ads",
-      "sha256": "2a116dd5ba27fe08492ed48df8f20bd699117979a0df42b99b01e7682e5d152d",
+      "sha256": "9b2775b65c7b827bb90eb5400a265ebf349c5bb66934954d71f7526dcfc2a15a",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13741,8 +13930,8 @@
       ],
       "with_dependencies": [
         "MC_Store",
-        "MC_Text",
         "MC_Types",
+        "Pkg_Deb_Payload",
         "Pkg_Site_Supply",
         "Pkg_Supply_Map"
       ],

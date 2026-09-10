@@ -29,6 +29,7 @@ def generated():
             lines.append('python3 "$PWD/tests/make_selected_catalog_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_root_archive_fixtures.py" --check')
             lines.append('python3 "$PWD/tests/make_payload_ownership_fixtures.py" --check')
+            lines.append('python3 "$PWD/tests/make_conffile_fixtures.py" --check')
         for test in tests:
             if not test['main'].startswith(repo+'/'):
                 continue
@@ -71,6 +72,8 @@ def generated():
                               'python3 "$PWD/tests/compare_current_catalog.py" --root "$D/run_generation_publication_tests/root" --state "$D/run_generation_publication_tests/state" --cas "$D/run_generation_publication_tests/store" --bank "$D/run_generation_publication_tests/bank" --media "$PWD/tests/fixtures/selected-catalog" --native "$D/current-catalog-native.log" --output "$D/current-catalog-oracle.json"'])
             else:
                 lines.append(command)
+            if repo == 'pkgcore' and name == 'run_conffile_tests':
+                lines.append('timeout --kill-after=5s 600s python3 "$PWD/tests/check_conffile_upstream.py" --driver "$PWD/build/test-bin/run_conffile_tests" --work "$D/conffile-upstream"')
         if repo == 'pkgcore':
             lines.append('timeout --kill-after=5s 610s python3 "$PWD/tests/check_root_publication.py" --driver "$PWD/build/test-bin/run_generation_publication_tests"')
             lines.append('timeout --kill-after=5s 600s python3 "$PWD/tests/check_deb_final_set_upstream.py" --media "$PWD/tests/fixtures/deb-final-set" --work "$D/upstream-endpoint"')

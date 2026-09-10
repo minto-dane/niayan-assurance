@@ -1312,6 +1312,17 @@
         "REQ-132"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-119",
+      "title": "設定の利用者変更・削除状態・旧vendor履歴の喪失",
+      "severity": "critical",
+      "mitigation": "原本宣言と全payload属性を観測し、missing/empty/unknownを区別する。三者比較で確認要求と退避義務を返し、元形式に従うbaseline追跡と世代履歴を区別する。raw filenameをASCII型へ切り詰めない。",
+      "residual_risk": "Exact local inode/attribute observation, bound consent, backup namespace collisions, links and generated configuration, retained history and root publication effects remain unqualified. Content decisions are not execution grants.",
+      "requirements": [
+        "REQ-133"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

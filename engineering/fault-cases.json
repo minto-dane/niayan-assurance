@@ -1466,6 +1466,17 @@
       "expected": "同じCAS予約を保持し、正確な現在trustでのみ供給計画を返す。状態違反/変更/欠損では三出力をzeroにしてsessionを閉じる。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_archive_observer.py"
+    },
+    {
+      "id": "FAULT-132",
+      "scenario": "空/不正/重複conffiles、payloadとremove flag不一致、非ASCII filename、両者変更、local削除、読取不能、旧baseline喪失",
+      "requirements": [
+        "REQ-133"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "部分inventoryを返さず、設定を無条件上書きしない。確認未解決・退避義務と元形式に従うbaselineを保持し、不明をMissing扱いしない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/check_conffile_upstream.py"
     }
   ]
 }

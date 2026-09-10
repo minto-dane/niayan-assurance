@@ -857,6 +857,20 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "native observer preconditions and same CAS exclusion; real packaged HTTPS/credential/FD response is tested separately in a disposable VM; no public CLI or execution grant"
+    },
+    {
+      "main": "pkgcore/tests/run_conffile_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "tests/fixtures/conffiles"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "native original conffile declarations, exact missing/byte/link handling and content decisions; independent script-free dpkg comparison uses isolated private roots"
     }
   ]
 }

@@ -3825,6 +3825,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-133",
+      "title": "元conffilesに基づく設定変更と退避の判断",
+      "shall": "元DEBの設定宣言とpayloadを保持し、旧vendor・local・新vendorを区別しなければならない。利用者の編集/削除を無条件上書きせず、未解決の選択を実行許可にしてはならない。通常削除・purge・remove-on-upgradeと退避/履歴を区別しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0095"
+      ],
+      "spec": [
+        "distribution/native/conffiles.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_deb_conffiles.adb",
+        "pkgcore/runtime/pkg_conffile_transition.adb",
+        "pkgcore/runtime/pkg_supply_planner.ads"
+      ],
+      "tests": [
+        "pkgcore/tests/run_conffile_tests.adb",
+        "pkgcore/tests/check_conffile_upstream.py",
+        "pkgcore/tests/run_archive_observer_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-119"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

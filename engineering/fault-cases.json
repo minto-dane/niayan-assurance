@@ -1299,6 +1299,17 @@
       "expected": "基準と候補に束縛されたnative結果だけを認める。構造的に正しい不正候補でも公開前に止め、実root.stateとgeneration.nextを変えず、失敗した検査の旧Bindingを消す。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-117",
+      "scenario": "実TUF/OpenPGP署名の片方欠落、別原本pin・suite・component・architecture、Release期限欠如/期限切れ/日付floor、巨大未使用Contentsと選択index上限、元DEB/control不一致、対応ソース混在、epoch不足、処理中の期限/時計/target変化、UID0",
+      "requirements": [
+        "REQ-117"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "原本供給の信頼入力をすべて検査し、欠落や不一致では返却しない。通常Releaseにも有限期限を要求し、実行許可・第二の導入済みDB・hostでのscript実行を作らない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/test_archive_intake.py"
     }
   ]
 }

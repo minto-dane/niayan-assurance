@@ -3334,6 +3334,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-117",
+      "title": "明示的なDebian 13原本pinと共通供給認証",
+      "shall": "共通TUFで認証した独立policyの原本hash、codename、suite、architecture、component、時刻とepochの境界を検査し、Debian署名・索引・元DEB/controlを照合しなければならない。期限のない通常Releaseにも有限の取り込み期限を要求し、観測結果を実行許可へ変換してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0077"
+      ],
+      "spec": [
+        "distribution/native/archive-supply.ja.md"
+      ],
+      "code": [
+        "distribution/tools/debian_archive_auth.py",
+        "distribution/tools/deb_archive.py",
+        "distribution/native/archive_intake.py"
+      ],
+      "tests": [
+        "distribution/tests/test_debian_trust.py",
+        "distribution/native/test_archive_intake.py"
+      ],
+      "hazards": [
+        "HAZ-103"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

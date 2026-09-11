@@ -815,7 +815,7 @@
         "$TEMP/store"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "explicit native root archive assembly and actual v5 staging with retained supply/intent, target binding, pin and physical archive hash; private directories, no privileged extraction or boot"
+      "note": "explicit native root archive assembly and actual v5 staging with retained supply/intent, target binding, pin and physical archive hash; private directories, no privileged extraction or boot; NIAROOT2 parent-first order across all eight two-source directory-owner combinations; exact legacy v1 readback, suitable legacy acceptance and unsuitable legacy staging refusal"
     },
     {
       "main": "pkgcore/tests/run_payload_ownership_tests.adb",

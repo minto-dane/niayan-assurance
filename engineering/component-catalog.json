@@ -12354,7 +12354,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_manifest.ads",
-      "sha256": "0b149e863ffc11f9e82e46f49692975c188931d4fc7afcbb3543dfc81007835d",
+      "sha256": "8c8de3628ca6c03b26a08a5f747e58487c5b7284769fb18656156ee48d163b64",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -12593,7 +12593,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.adb",
-      "sha256": "d249da5370c6c6d6b287a3eef02f585309fb8cba876957408f9ef00b82deff94",
+      "sha256": "1cbf73b9573fdc0cbbe4de1d061784efaf82eef5d5b55f58b8e40ce72e3cdbe7",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13560,7 +13560,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_archive.adb",
-      "sha256": "be88b9083954fb35a82686d8d6b89be1f8eaa01de9c94269fe9aadc1ce5d1c66",
+      "sha256": "32637ef070d951f776ccbc9d3f28c1d8309e45705b5b567b6a9b9d17967ae883",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13579,103 +13579,103 @@
         },
         {
           "name": "Free",
-          "line": 12
-        },
-        {
-          "name": "Tick",
           "line": 13
         },
         {
+          "name": "Tick",
+          "line": 14
+        },
+        {
           "name": "Padded",
-          "line": 20
+          "line": 21
         },
         {
           "name": "Assemble",
-          "line": 22
+          "line": 23
         },
         {
           "name": "Free",
-          "line": 32
+          "line": 34
         },
         {
           "name": "Free",
-          "line": 39
+          "line": 41
         },
         {
           "name": "Positions",
-          "line": 40
+          "line": 42
         },
         {
           "name": "Check",
-          "line": 52
-        },
-        {
-          "name": "Clock",
           "line": 54
         },
         {
-          "name": "Cleanup",
+          "name": "Clock",
           "line": 56
         },
         {
-          "name": "Path_At",
+          "name": "Cleanup",
           "line": 58
         },
         {
+          "name": "Path_At",
+          "line": 60
+        },
+        {
           "name": "Selected",
-          "line": 64
+          "line": 66
         },
         {
           "name": "Source_Number",
-          "line": 73
+          "line": 75
         },
         {
           "name": "Less",
-          "line": 82
+          "line": 84
         },
         {
           "name": "Sorting",
-          "line": 89
+          "line": 91
         },
         {
           "name": "Close_Source",
-          "line": 90
+          "line": 92
         },
         {
           "name": "Open_Source",
-          "line": 98
+          "line": 100
         },
         {
           "name": "Emit",
-          "line": 109
+          "line": 111
         },
         {
           "name": "Build",
-          "line": 237
+          "line": 268
         },
         {
           "name": "Verify_Bound",
-          "line": 241
+          "line": 272
         },
         {
           "name": "Check",
-          "line": 246
+          "line": 277
         },
         {
           "name": "Cleanup",
-          "line": 248
+          "line": 279
         },
         {
           "name": "Verify",
-          "line": 291
+          "line": 323
         },
         {
           "name": "Verify_Target",
-          "line": 295
+          "line": 327
         },
         {
           "name": "Verify_Ownership",
-          "line": 303
+          "line": 335
         }
       ],
       "with_dependencies": [
@@ -13698,7 +13698,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_archive.ads",
-      "sha256": "16cbd317991d617160e2adbb43b1515ce4839b408c450cd4f5fb97f30c0c321b",
+      "sha256": "f311f76c8427a2af17a13aef252012a208ab28be5a76a81cd2ed0037aacd70c5",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13865,7 +13865,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_configuration.ads",
-      "sha256": "5c4e9bfc8276e8d1c9dc1e3c326da08327d91a2aea6b099c466e92971ea19684",
+      "sha256": "8eae4402846427940d36c15d83099e62ed3f82de1ed08adbe9163f2c83b96a45",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",

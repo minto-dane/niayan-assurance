@@ -61,7 +61,8 @@ def generated():
                 lines.extend(['if '+command+' > "$D/root-archive-native.log" 2>&1; then',
                               '  cat "$D/root-archive-native.log"', 'else',
                               '  cat "$D/root-archive-native.log"', '  exit 1', 'fi',
-                              'python3 "$PWD/tests/compare_root_archive.py" --media "$PWD/tests/fixtures/root-archive" --native "$D/root-archive-native.log" --cas "$D/run_root_archive_tests/store" --output "$D/root-archive-oracle.json"'])
+                              'python3 "$PWD/tests/compare_root_archive.py" --media "$PWD/tests/fixtures/root-archive" --native "$D/root-archive-native.log" --cas "$D/run_root_archive_tests/store" --output "$D/root-archive-oracle.json"',
+                              'python3 "$PWD/tests/compare_root_order.py" --media "$PWD/tests/fixtures/root-archive/order" --native "$D/root-archive-native.log" --cas "$D/run_root_archive_tests/store" --output "$D/root-order-oracle"'])
             elif repo == 'pkgcore' and name == 'run_catalog_store_tests':
                 lines.extend(['if '+command+' > "$D/catalog-store-native.log" 2>&1; then',
                               '  cat "$D/catalog-store-native.log"', 'else',

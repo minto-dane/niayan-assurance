@@ -4050,6 +4050,38 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-141",
+      "title": "複数原本のroot/親先行順と旧記録の非改変",
+      "shall": "実展開用root tarは採用元packageや原本の掲載順に関わらずrootを最初に、親directoryを子より前に出力しなければならない。旧manifestのbyteを暗黙に更新せず、記録照合と実展開可能性を区別しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0103"
+      ],
+      "spec": [
+        "distribution/native/root-archive.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_root_archive.adb",
+        "pkgcore/runtime/pkg_generation_manifest.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/root_archive_order_test.adb",
+        "pkgcore/tests/run_root_archive_tests.adb",
+        "pkgcore/tests/compare_root_order.py",
+        "pkgcore/tests/compare_root_archive.py",
+        "pkgcore/tests/check_root_publication.py",
+        "distribution/native/worker/check_root_order.py"
+      ],
+      "hazards": [
+        "HAZ-127"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

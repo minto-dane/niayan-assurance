@@ -1554,6 +1554,17 @@
       "expected": "不正なframeから成功を返さず、受理した原本のmtime/明示atimeを独立statの整数nanosecondと一致させる。ctime/birthtimeの復元や公開成功を捏造しない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_extract.py"
+    },
+    {
+      "id": "FAULT-140",
+      "scenario": "原本内のdirectory逆順、root/親/子の採用元を跨ぐ8組合せ、forward hardlink chain、旧manifestの適切/不適切な順序",
+      "requirements": [
+        "REQ-141"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "新rootは原本spanを保ちながらroot/親を先行させる。旧記録は元hashを保持し、展開に適さない旧順からは物理準備用digestを返さない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/root_archive_order_test.adb"
     }
   ]
 }

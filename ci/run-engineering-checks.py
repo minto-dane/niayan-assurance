@@ -228,6 +228,12 @@ def main() -> int:
                             '--native', str(output/(repo+'-'+stem+'.log')),
                             '--cas', args[0], '--output', str(output/'root-archive-oracle.json')],
                             root, 'actual-root-archive-original-spans')
+                        invoke('root-directory-order-oracle', [sys.executable, '-B',
+                            str(root/'pkgcore/tests/compare_root_order.py'),
+                            '--media', str(root/'pkgcore/tests/fixtures/root-archive/order'),
+                            '--native', str(output/(repo+'-'+stem+'.log')),
+                            '--cas', args[0], '--output', str(output/'root-order-oracle')],
+                            root, 'actual-root-directory-order')
                 if repo == 'pkgcore':
                     invoke('root-archive-publication', [sys.executable, '-B',
                         str(root/'pkgcore/tests/check_root_publication.py'),

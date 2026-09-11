@@ -1400,6 +1400,17 @@
         "REQ-140"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-127",
+      "title": "親子採用元とtar掲載順に依存するrootの展開不能",
+      "severity": "critical",
+      "mitigation": "NIAROOT2でdirectoryをcanonical path順にする。旧NIAROOT1は元byteで再検証し、実展開へ渡す検査で不適切な親子順を拒否する。元spanを改変せず独立oracleと実VMで確認する。",
+      "residual_risk": "Historical record verification does not imply staging suitability. Migration requires a new bound and authorized plan; configured serialization, complete effects, admission, retention, recovery and boot remain unqualified.",
+      "requirements": [
+        "REQ-141"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

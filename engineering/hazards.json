@@ -1433,6 +1433,17 @@
         "REQ-143"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-130",
+      "title": "保存設定参照の読込による失効した実行許可の復活と欠損の隠蔽",
+      "severity": "critical",
+      "mitigation": "読取専用Viewへ全保持memberと宣言集合の和集合、元/選択bindingを検査して返す。CAS書込やproposal再生成をせず、失敗時はViewを消す。実行には別途live Verifyとadmissionを要求する。",
+      "residual_risk": "Saved-reference integrity does not establish source-derived closure completeness, ownership/layout semantics, live configuration, consent, GC authority or recovery/execution permission. Generation pin/GC and physical preparation/publication/boot integration remain incomplete.",
+      "requirements": [
+        "REQ-144"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

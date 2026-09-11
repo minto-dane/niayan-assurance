@@ -4145,6 +4145,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-144",
+      "title": "設定済みrootの保存参照を実行許可と分離して読む",
+      "shall": "保存された設定rootはlive proposalを捏造せず読み戻せなければならない。参照集合とbindingを検査し、欠損を再構成せず拒否し、保存参照の整合性を実行やGCの許可にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0106"
+      ],
+      "spec": [
+        "distribution/native/configured-root.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_configured_root_record.adb",
+        "pkgcore/runtime/pkg_configured_root.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_configuration_tests.adb",
+        "pkgcore/tests/configured_root_record_test.adb",
+        "pkgcore/tests/check_configured_root_record.py"
+      ],
+      "hazards": [
+        "HAZ-130"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

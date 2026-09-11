@@ -1587,6 +1587,17 @@
       "expected": "原本span・最終内容とnamespace・全参照閉包が一致する。欠落した出力を検証で復元せず、拒否時の全出力を消す。明示再構築は同じ入力から同じ保存hashを得る。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
+    },
+    {
+      "id": "FAULT-143",
+      "scenario": "新プロセスから6種類の設定rootを読み戻す。保存recordの不整合、scope、件数/位置/サイズ、保持memberの過不足/順序、個別CAS欠落と期限を検査する。",
+      "requirements": [
+        "REQ-144"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "全bindingと順序付き選択/設定/保持memberが独立wire読取と一致する。拒否時のViewを消し、すべての読込でCAS objectを変更せず、欠落したobjectを再構成しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
     }
   ]
 }

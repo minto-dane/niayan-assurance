@@ -10379,142 +10379,142 @@
     },
     {
       "path": "pkgcore/runtime/pkg_configured_root.adb",
-      "sha256": "cfa3a8d0106d6a0a67896d19e216604d37ec72375b755a544e0d5825007e6156",
+      "sha256": "36a22125982b2765e74c9a32c03bb2988a60bb20feb98f30c5ba0bcf71ec49e9",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Configured_Root",
-          "line": 7
-        },
-        {
-          "name": "R",
           "line": 8
         },
         {
-          "name": "P",
+          "name": "R",
           "line": 9
         },
         {
-          "name": "Objects",
-          "line": 13
+          "name": "P",
+          "line": 10
         },
         {
-          "name": "Padded",
+          "name": "Objects",
           "line": 14
         },
         {
+          "name": "Padded",
+          "line": 15
+        },
+        {
           "name": "Tick",
-          "line": 16
+          "line": 17
         },
         {
           "name": "Build",
-          "line": 22
+          "line": 23
         },
         {
           "name": "Free",
-          "line": 34
+          "line": 35
         },
         {
           "name": "Free",
-          "line": 38
-        },
-        {
-          "name": "Positions",
           "line": 39
         },
         {
-          "name": "Need",
-          "line": 49
+          "name": "Positions",
+          "line": 40
         },
         {
-          "name": "Clock",
+          "name": "Need",
           "line": 50
         },
         {
-          "name": "Refuse",
+          "name": "Clock",
           "line": 51
         },
         {
-          "name": "Cleanup",
+          "name": "Refuse",
           "line": 52
         },
         {
+          "name": "Cleanup",
+          "line": 53
+        },
+        {
           "name": "Include",
-          "line": 57
+          "line": 58
         },
         {
           "name": "Recheck",
-          "line": 62
+          "line": 63
         },
         {
           "name": "Path_At",
-          "line": 68
+          "line": 69
         },
         {
           "name": "Find",
-          "line": 73
+          "line": 74
         },
         {
           "name": "Source_Number",
-          "line": 82
+          "line": 83
         },
         {
           "name": "Less",
-          "line": 91
+          "line": 92
         },
         {
           "name": "Sorting",
-          "line": 98
-        },
-        {
-          "name": "Close_Source",
           "line": 99
         },
         {
+          "name": "Close_Source",
+          "line": 100
+        },
+        {
           "name": "Open_Source",
-          "line": 107
+          "line": 108
         },
         {
           "name": "Feed",
-          "line": 117
+          "line": 118
         },
         {
           "name": "Copy_Range",
-          "line": 123
+          "line": 124
         },
         {
           "name": "Copy_Object",
-          "line": 133
+          "line": 134
         },
         {
           "name": "Emit_Root",
-          "line": 142
+          "line": 143
         },
         {
           "name": "Collect",
-          "line": 155
+          "line": 156
         },
         {
           "name": "Emit_Manifest",
-          "line": 184
+          "line": 185
         },
         {
           "name": "Emit_Retention",
-          "line": 208
+          "line": 209
         },
         {
           "name": "Verify",
-          "line": 315
+          "line": 316
         },
         {
           "name": "Need",
-          "line": 324
+          "line": 323
         },
         {
           "name": "Cleanup",
-          "line": 325
+          "line": 324
         }
       ],
       "with_dependencies": [
@@ -10527,6 +10527,7 @@
         "MC_FS",
         "MC_Posix",
         "MC_SHA256",
+        "Pkg_Catalog_Retention",
         "Pkg_Catalog_Store",
         "Pkg_Conffile_Choice",
         "Pkg_Configuration_Entry",
@@ -10539,7 +10540,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_configured_root.ads",
-      "sha256": "101da4d699664ddcf059cb1a0b2b012b6c9554a2e10c19f9359c89b0dc3244c2",
+      "sha256": "e7804978e096034bb5a3e103cf84cb850d1d4739b75dfe69f91afe4ea714d3a4",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -10550,19 +10551,221 @@
         },
         {
           "name": "Build",
-          "line": 10
+          "line": 9
         },
         {
           "name": "Verify",
-          "line": 14
+          "line": 13
         }
       ],
       "with_dependencies": [
         "MC_Store",
         "MC_Types",
-        "Pkg_Catalog_Retention",
+        "Pkg_Configured_Root_Record",
         "Pkg_Root_Archive",
         "Pkg_Root_Configuration"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_configured_root_record.adb",
+      "sha256": "da2f5d374e549b279c40faa3cf137f65cf778223baddbc631d5a671eeabdfb86",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Configured_Root_Record",
+          "line": 6
+        },
+        {
+          "name": "Choices",
+          "line": 8
+        },
+        {
+          "name": "Configurations",
+          "line": 9
+        },
+        {
+          "name": "Addresses",
+          "line": 10
+        },
+        {
+          "name": "Objects",
+          "line": 11
+        },
+        {
+          "name": "Free",
+          "line": 18
+        },
+        {
+          "name": "Clear",
+          "line": 19
+        },
+        {
+          "name": "Finalize",
+          "line": 20
+        },
+        {
+          "name": "Binding",
+          "line": 21
+        },
+        {
+          "name": "Choice_Count",
+          "line": 23
+        },
+        {
+          "name": "Configuration_Count",
+          "line": 25
+        },
+        {
+          "name": "Object_Count",
+          "line": 27
+        },
+        {
+          "name": "Read_Choice",
+          "line": 29
+        },
+        {
+          "name": "Read_Configuration",
+          "line": 35
+        },
+        {
+          "name": "Read_Object",
+          "line": 41
+        },
+        {
+          "name": "Load",
+          "line": 46
+        },
+        {
+          "name": "Need",
+          "line": 62
+        },
+        {
+          "name": "Refuse",
+          "line": 63
+        },
+        {
+          "name": "Tick",
+          "line": 64
+        },
+        {
+          "name": "Cleanup",
+          "line": 70
+        },
+        {
+          "name": "Open",
+          "line": 71
+        },
+        {
+          "name": "Read",
+          "line": 78
+        },
+        {
+          "name": "Finish",
+          "line": 85
+        },
+        {
+          "name": "Include",
+          "line": 93
+        },
+        {
+          "name": "Size_Is",
+          "line": 99
+        },
+        {
+          "name": "Collect",
+          "line": 106
+        },
+        {
+          "name": "Check_Choice",
+          "line": 129
+        },
+        {
+          "name": "Required",
+          "line": 133
+        },
+        {
+          "name": "Tail",
+          "line": 135
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Ordered_Sets",
+        "Ada.Containers.Vectors",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Conffile_Transition",
+        "Pkg_Deb_Payload",
+        "Pkg_Root_Archive"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_configured_root_record.ads",
+      "sha256": "e3b68c781f5280566aab8e89d0b7335f56083c094af4a94e93ca940ba0d0cbbc",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Configured_Root_Record",
+          "line": 5
+        },
+        {
+          "name": "Load",
+          "line": 27
+        },
+        {
+          "name": "Clear",
+          "line": 29
+        },
+        {
+          "name": "Binding",
+          "line": 30
+        },
+        {
+          "name": "Choice_Count",
+          "line": 31
+        },
+        {
+          "name": "Configuration_Count",
+          "line": 32
+        },
+        {
+          "name": "Object_Count",
+          "line": 33
+        },
+        {
+          "name": "Read_Choice",
+          "line": 34
+        },
+        {
+          "name": "Read_Configuration",
+          "line": 36
+        },
+        {
+          "name": "Read_Object",
+          "line": 38
+        },
+        {
+          "name": "Finalize",
+          "line": 61
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Catalog_Retention",
+        "Pkg_Root_Configuration",
+        "private"
       ],
       "semantic_analysis": false
     },

@@ -66,7 +66,8 @@ def generated():
                 lines.extend(['if '+command+' > "$D/configured-root-native.log" 2>&1; then',
                               '  cat "$D/configured-root-native.log"', 'else',
                               '  cat "$D/configured-root-native.log"', '  exit 1', 'fi',
-                              'python3 "$PWD/tests/check_configured_root.py" --native "$D/configured-root-native.log" --cas "$D/run_root_configuration_tests/store" --output "$D/configured-root-oracle"'])
+                              'python3 "$PWD/tests/check_configured_root.py" --native "$D/configured-root-native.log" --cas "$D/run_root_configuration_tests/store" --output "$D/configured-root-oracle"',
+                              'python3 "$PWD/tests/check_configured_root_record.py" --native "$D/configured-root-native.log" --cas "$D/run_root_configuration_tests/store" --driver "$PWD/build/test-bin/run_root_configuration_tests" --output "$D/configured-record-oracle"'])
             elif repo == 'pkgcore' and name == 'run_root_archive_tests':
                 lines.extend(['if '+command+' > "$D/root-archive-native.log" 2>&1; then',
                               '  cat "$D/root-archive-native.log"', 'else',

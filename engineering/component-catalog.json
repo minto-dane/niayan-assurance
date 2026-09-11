@@ -13090,7 +13090,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.adb",
-      "sha256": "486dcc4ae821b966e22f941d37372fc39d9bdd4fe1de089f639fb560ee3bcd6f",
+      "sha256": "40b4c7b79cdf063c60fa18a67873cbb294991d16a5315f9bd8431447c248adf9",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13181,31 +13181,35 @@
         },
         {
           "name": "Time_Left",
-          "line": 210
+          "line": 211
         },
         {
           "name": "Check_Supply_Policy",
-          "line": 217
+          "line": 218
+        },
+        {
+          "name": "Stage_Held",
+          "line": 238
         },
         {
           "name": "Guard",
-          "line": 237
+          "line": 242
         },
         {
           "name": "Engine",
-          "line": 253
+          "line": 260
         },
         {
           "name": "Validate_Inputs",
-          "line": 255
+          "line": 262
         },
         {
           "name": "Revalidate",
-          "line": 297
+          "line": 322
         },
         {
           "name": "Done",
-          "line": 298
+          "line": 323
         }
       ],
       "with_dependencies": [
@@ -13234,40 +13238,41 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.ads",
-      "sha256": "0e616ba63a6de5e0be70f810f14abf60e255d048a1b625a77b60dd9c93c80a72",
+      "sha256": "fe160822067abccb665738b8f9fa0117aa3d75b13857dc9e5e628ca6112ea469",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Generation_Publisher",
-          "line": 17
+          "line": 21
         },
         {
           "name": "Provision",
-          "line": 18
-        },
-        {
-          "name": "Publish",
-          "line": 20
-        },
-        {
-          "name": "Read_Current",
           "line": 22
         },
         {
-          "name": "Read_Current_Catalog",
+          "name": "Publish",
           "line": 24
         },
         {
-          "name": "Read_Current_Transition",
+          "name": "Read_Current",
+          "line": 26
+        },
+        {
+          "name": "Read_Current_Catalog",
           "line": 28
+        },
+        {
+          "name": "Read_Current_Transition",
+          "line": 32
         }
       ],
       "with_dependencies": [
         "MC_Types",
         "Pkg_Deb_Final_Set",
         "Pkg_Deb_Transition",
+        "Pkg_Generation_Configuration",
         "Pkg_Generation_Descriptor",
         "Pkg_Managed_Engine",
         "Pkg_Payload_Index",
@@ -13278,7 +13283,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.adb",
-      "sha256": "bec5d74960d8b86d1bddcc9c7176912ec5504b6ced3015e534b035ccfd93ae66",
+      "sha256": "89c8931d9e457c565b679f8b2060235495f86c8ad8c738256ab8ccaed78b5df4",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13376,7 +13381,7 @@
           "line": 246
         },
         {
-          "name": "Verify_And_Hold",
+          "name": "Verify_Stage",
           "line": 247
         },
         {
@@ -13384,16 +13389,36 @@
           "line": 259
         },
         {
-          "name": "Prepare_Root",
+          "name": "Verify_And_Hold",
           "line": 330
         },
         {
+          "name": "Verify_Retained_And_Hold",
+          "line": 336
+        },
+        {
+          "name": "Retained_Held",
+          "line": 342
+        },
+        {
+          "name": "Retained_Manifest",
+          "line": 343
+        },
+        {
+          "name": "Close",
+          "line": 344
+        },
+        {
+          "name": "Prepare_Root",
+          "line": 346
+        },
+        {
           "name": "Done",
-          "line": 340
+          "line": 356
         },
         {
           "name": "Inspect",
-          "line": 394
+          "line": 410
         }
       ],
       "with_dependencies": [
@@ -13428,7 +13453,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.ads",
-      "sha256": "d8bfe9626a1e061bf4c385cc9e456c9fc0735bae913dd5aa705ca2bcc0751d77",
+      "sha256": "981b1ebf0acf5313d053c00aa85d8c18b9fd373a8f0792231dd0d2f6b33f63e5",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13438,36 +13463,52 @@
           "line": 11
         },
         {
-          "name": "Verify_And_Hold",
-          "line": 13
+          "name": "Verify_Retained_And_Hold",
+          "line": 14
         },
         {
-          "name": "Held",
-          "line": 16
-        },
-        {
-          "name": "Manifest",
+          "name": "Retained_Held",
           "line": 17
         },
         {
-          "name": "Close",
+          "name": "Retained_Manifest",
           "line": 18
         },
         {
-          "name": "Provision",
-          "line": 22
+          "name": "Close",
+          "line": 19
         },
         {
-          "name": "Advance",
-          "line": 25
-        },
-        {
-          "name": "Prepare_Root",
+          "name": "Verify_And_Hold",
           "line": 28
         },
         {
+          "name": "Held",
+          "line": 31
+        },
+        {
+          "name": "Manifest",
+          "line": 32
+        },
+        {
+          "name": "Close",
+          "line": 33
+        },
+        {
+          "name": "Provision",
+          "line": 37
+        },
+        {
+          "name": "Advance",
+          "line": 40
+        },
+        {
+          "name": "Prepare_Root",
+          "line": 43
+        },
+        {
           "name": "Inspect",
-          "line": 35
+          "line": 50
         }
       ],
       "with_dependencies": [

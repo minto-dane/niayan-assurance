@@ -1620,6 +1620,17 @@
       "expected": "未検証sourceでは格納を開始せず、保持欠損を再構築しない。元/設定rootを明示的に保持し、実workerへ選択済みtarを渡す。展開後拒否はIndeterminateで非公開rootを残し、旧形式のwire/公開経路を維持する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
+    },
+    {
+      "id": "FAULT-146",
+      "scenario": "設定元の拒否・検査後変更、受理済みsource変更とFD消失、元receipt不一致、accepted commit窓、別プロセス再開、保存記録/閉包/物理tar/journal/pin欠落を検査する。",
+      "requirements": [
+        "REQ-147"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "新規/未受理公開は現在sourceを要求し、不一致時に実stateを維持する。受理済み処理は元source不要でterminal記録のみ修復でき、欠落証拠は再生成しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

@@ -4235,6 +4235,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-147",
+      "title": "設定済み世代の段階別公開と受理済み記録復旧",
+      "shall": "新規公開と未受理再開では実CAS予約下で現在の設定元を照合し、受理済み記録修復では同一の実stateと完全なjournal/物理stage/保存閉包を根拠にterminal処理だけを許可しなければならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0109"
+      ],
+      "spec": [
+        "distribution/native/configured-root.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_publisher.adb",
+        "pkgcore/runtime/pkg_generation_stage.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "pkgcore/tests/check_configured_publication.py",
+        "pkgcore/tests/compare_root_publication.py"
+      ],
+      "hazards": [
+        "HAZ-133"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

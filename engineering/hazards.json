@@ -1466,6 +1466,17 @@
         "REQ-146"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-133",
+      "title": "受理前source確認と受理後記録修復の混同",
+      "severity": "critical",
+      "mitigation": "active記録では現在照合を省かず、実engine予約でも再観測する。別型の保存stage証拠は同一accepted stateと完全なjournalのterminal修復だけに使い、元receiptと全after-imageと現在認可を要求する。",
+      "residual_risk": "Logical archive publication only. Production source/consent/quiescence providers, extracted filesystem qualification, boot identity migration and physical activation recovery remain incomplete.",
+      "requirements": [
+        "REQ-147"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

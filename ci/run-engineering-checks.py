@@ -264,6 +264,10 @@ def main() -> int:
                         str(root/'pkgcore/tests/check_root_publication.py'),
                         '--driver', str(root/'pkgcore/build/test-bin/run_generation_publication_tests')],
                         root, 'actual-root-archive-publication')
+                    invoke('configured-publication', [sys.executable, '-B',
+                        str(root/'pkgcore/tests/check_configured_publication.py'),
+                        '--driver', str(root/'pkgcore/build/test-bin/run_generation_publication_tests')],
+                        root, 'actual-configured-publication')
                     invoke('archive-receipt-native-bridge', [sys.executable, '-B',
                         str(root/'distribution/native/check_archive_receipt_bridge.py'),
                         '--driver', str(root/'pkgcore/build/test-bin/run_archive_supply_tests')],

@@ -1609,6 +1609,17 @@
       "expected": "現在のsource・属性・backupと原本由来の全rootが一致するときだけ保存archiveを返す。過去のCAS memberは変えず、失敗時は新session/出力を消す。保存構造の成功だけでは不一致を受理しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
+    },
+    {
+      "id": "FAULT-145",
+      "scenario": "v6 header切詰め/参照欠落/relabel、source認可拒否、FD欠落・異なるroot、engine CAS取得後の拒否、保持record欠落、実展開後の認可拒否を検査する。",
+      "requirements": [
+        "REQ-146"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "未検証sourceでは格納を開始せず、保持欠損を再構築しない。元/設定rootを明示的に保持し、実workerへ選択済みtarを渡す。展開後拒否はIndeterminateで非公開rootを残し、旧形式のwire/公開経路を維持する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
     }
   ]
 }

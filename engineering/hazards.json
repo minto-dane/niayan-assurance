@@ -1455,6 +1455,17 @@
         "REQ-145"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-132",
+      "title": "世代処理での設定結果の脱落とCAS再予約時の古い設定観測の流用",
+      "severity": "critical",
+      "mitigation": "NIAGEN06で元/設定rootと保持記録・scopeを束縛し、既存pinを使用する。source providerは既定拒否とし、全格納・準備境界と内側engine予約で通常Verify_Currentを必須にする。公開後復旧は別途定義する。",
+      "residual_risk": "Production source admission and quiescence providers, configured publication/accepted recovery, mount identity migration, generation GC, boot and full DEB effects remain incomplete. Preparation is private extraction, not installed-state authority.",
+      "requirements": [
+        "REQ-146"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

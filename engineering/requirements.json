@@ -4204,6 +4204,37 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-146",
+      "title": "設定済みrootの明示的世代保持と現在source照合を伴う準備",
+      "shall": "設定済みrootは元rootと区別した世代形式で全選択と閉包を保持し、独立認可されたsourceを実CAS予約の下で再観測して格納・準備しなければならない。適用前の観測をaccepted復旧許可へ流用してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0108"
+      ],
+      "spec": [
+        "distribution/native/configured-root.ja.md",
+        "distribution/native/root-preparation.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_manifest.adb",
+        "pkgcore/runtime/pkg_generation_configuration.adb",
+        "pkgcore/runtime/pkg_generation_stage.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_configuration_tests.adb",
+        "pkgcore/tests/root_archive_stage_test.adb",
+        "distribution/native/worker/check_root_preparation.py"
+      ],
+      "hazards": [
+        "HAZ-132"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

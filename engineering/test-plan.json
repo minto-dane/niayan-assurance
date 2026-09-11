@@ -908,7 +908,8 @@
       "tier": "isolated-io",
       "arguments": [
         "$TEMP/store",
-        "$TEMP/root"
+        "$TEMP/root",
+        "tests/fixtures/root-archive"
       ],
       "result": "not-run",
       "prepare_directories": [
@@ -916,7 +917,7 @@
         "$TEMP/root"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "actual local snapshot readback with raw POSIX ACL and binary/empty xattrs; signed/full-width fields and isolated malformed/lost CAS records; existing choice path exercises capture readback integration"
+      "note": "actual local snapshot readback with raw POSIX ACL and binary/empty xattrs; signed/full-width fields and isolated malformed/lost CAS records; existing choice path exercises capture readback integration; source-bound regular header conversion, local/vendor/override/backup, ACL mask and full numeric identity bounds, unsupported attributes and link topology; independent source and native payload oracles"
     },
     {
       "main": "pkgcore/tests/run_root_configuration_tests.adb",

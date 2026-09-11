@@ -1565,6 +1565,17 @@
       "expected": "新rootは原本spanを保ちながらroot/親を先行させる。旧記録は元hashを保持し、展開に適さない旧順からは物理準備用digestを返さない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/root_archive_order_test.adb"
+    },
+    {
+      "id": "FAULT-141",
+      "scenario": "raw ACL/xattrと負時刻、vendor/backup/permission override、modeとACL group maskの相違、範囲外ACL ID、未知属性、複数link、誤ったsource/assertion、期限と長すぎるpath component",
+      "requirements": [
+        "REQ-142"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "元の内容/属性と生成entry・native読戻し・実inodeが一致する。不正な変換はprefix/sizeを消し、ACLのnamed権限やgroup ownerをmaskへ切り詰めない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_conffile_observation_tests.adb"
     }
   ]
 }

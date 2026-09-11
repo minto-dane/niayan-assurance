@@ -4082,6 +4082,40 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-142",
+      "title": "設定原本の属性変換とACL実効権限の一致",
+      "shall": "設定entryは元観測またはDEBの内容と属性を照合して生成し、permission overrideとaccess ACLの実効modeを一致させなければならない。表現不能属性や未解決linkを黙って落としてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0104"
+      ],
+      "spec": [
+        "distribution/native/configuration-tar.ja.md",
+        "distribution/native/deb-payload.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_configuration_entry.adb",
+        "pkgcore/runtime/pkg_deb_payload.adb",
+        "pkgcore/runtime/pkg_tar_output.adb",
+        "distribution/native/worker/root_extract.c"
+      ],
+      "tests": [
+        "pkgcore/tests/configuration_entry_test.adb",
+        "pkgcore/tests/run_conffile_observation_tests.adb",
+        "pkgcore/tests/run_tar_output_tests.adb",
+        "pkgcore/tests/check_configuration_entry.py",
+        "distribution/native/worker/check_configuration_entry.py"
+      ],
+      "hazards": [
+        "HAZ-128"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

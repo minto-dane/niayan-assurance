@@ -1411,6 +1411,17 @@
         "REQ-141"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-128",
+      "title": "設定更新時の属性消失・ACL maskとgroup ownerの混同",
+      "severity": "critical",
+      "mitigation": "元観測/DEBと数値assertionを照合してprefixを保存し、ACLのmaskと元group entryを区別する。未知属性/数値範囲/linkを拒否し、独立原本読取と実FSで確認する。",
+      "residual_risk": "Prefix generation is not complete root serialization, live admission or publication. Hidden attributes, all inode effects, historical plan migration, retention, recovery and boot remain unqualified. ctime and birthtime are historical values.",
+      "requirements": [
+        "REQ-142"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

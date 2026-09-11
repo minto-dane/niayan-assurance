@@ -10217,6 +10217,167 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_configuration_entry.adb",
+      "sha256": "66bc021e2e995662ebcda8dee1d8a1b88f05901351053b97ac9b9b41e2ea4b03",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Configuration_Entry",
+          "line": 7
+        },
+        {
+          "name": "C",
+          "line": 8
+        },
+        {
+          "name": "P",
+          "line": 9
+        },
+        {
+          "name": "New_Entry",
+          "line": 13
+        },
+        {
+          "name": "Free_Entry",
+          "line": 14
+        },
+        {
+          "name": "Set_Flags",
+          "line": 15
+        },
+        {
+          "name": "Get_Flags",
+          "line": 17
+        },
+        {
+          "name": "Flag_Text",
+          "line": 19
+        },
+        {
+          "name": "Copy_Flags",
+          "line": 21
+        },
+        {
+          "name": "Strnlen",
+          "line": 23
+        },
+        {
+          "name": "Free",
+          "line": 26
+        },
+        {
+          "name": "Raw",
+          "line": 27
+        },
+        {
+          "name": "Decimal",
+          "line": 33
+        },
+        {
+          "name": "Prepare",
+          "line": 35
+        },
+        {
+          "name": "Need",
+          "line": 42
+        },
+        {
+          "name": "Refuse",
+          "line": 44
+        },
+        {
+          "name": "Tick",
+          "line": 46
+        },
+        {
+          "name": "Cleanup",
+          "line": 52
+        },
+        {
+          "name": "Relative",
+          "line": 58
+        },
+        {
+          "name": "Permissions",
+          "line": 64
+        },
+        {
+          "name": "Check_Local",
+          "line": 68
+        },
+        {
+          "name": "Access_ACL",
+          "line": 73
+        },
+        {
+          "name": "Number",
+          "line": 79
+        },
+        {
+          "name": "Label",
+          "line": 90
+        },
+        {
+          "name": "Permission",
+          "line": 92
+        },
+        {
+          "name": "Xattr",
+          "line": 165
+        },
+        {
+          "name": "Local_Flag_Mask",
+          "line": 174
+        },
+        {
+          "name": "Flags",
+          "line": 197
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Strings.Fixed",
+        "Ada.Strings.Unbounded",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "Interfaces.C.Strings",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "Pkg_Conffile_Observation",
+        "Pkg_Conffile_Transition",
+        "Pkg_Deb_Payload",
+        "Pkg_Tar_Output",
+        "System"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_configuration_entry.ads",
+      "sha256": "d3c2f57a231e5a90acf0a1ffed09b2679b4b96dbe7c6609bfe55b076a2999a4d",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Configuration_Entry",
+          "line": 4
+        },
+        {
+          "name": "Prepare",
+          "line": 5
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Conffile_Choice"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_deb_conffiles.adb",
       "sha256": "6343da099debbd649efe5d3f2925c1d8a1cb7c968b15baeac08add269e354ce4",
       "repository": "pkgcore",
@@ -11100,7 +11261,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_deb_payload.adb",
-      "sha256": "28ca2e6bbac1c6bcb9623def88f0491909a742c7edc54f79aa04c53a18eaa9f7",
+      "sha256": "0af9f56c93606c514ba363fce6171f9809a06ac3d0b952f57e48aa926e820a71",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -11375,15 +11536,15 @@
         },
         {
           "name": "Content_To_CAS",
-          "line": 236
+          "line": 245
         },
         {
           "name": "Resolve_Links",
-          "line": 262
+          "line": 271
         },
         {
           "name": "Free",
-          "line": 265
+          "line": 274
         }
       ],
       "with_dependencies": [
@@ -14995,7 +15156,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_tar_output.adb",
-      "sha256": "540f47c656c6261c0245960f14c0c8f1c4d1f3fd826fff14efb8a48e945845d4",
+      "sha256": "9f621468b9736990d97a7d95b0cbeba53313cb39d88ebed11f49ffe73e2c812c",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",

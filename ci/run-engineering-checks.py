@@ -221,6 +221,13 @@ def main() -> int:
                     case=Path(tempfile.mkdtemp(prefix=stem+'-',dir=temporary))
                     args=expand_test_args(test,case)
                     invoke(repo+'-'+stem,[str(root/repo/'build/test-bin'/stem),*args],root/repo,'ada-'+test['tier'])
+                    if repo == 'pkgcore' and stem == 'run_conffile_observation_tests':
+                        invoke('configuration-retained-attributes-oracle', [sys.executable, '-B',
+                            str(root/'pkgcore/tests/check_configuration_entry.py'),
+                            '--native', str(output/(repo+'-'+stem+'.log')), '--cas', args[0],
+                            '--output', str(output/'configuration-entry-oracle'),
+                            '--driver', str(root/'pkgcore/build/test-bin/run_deb_payload_tests')],
+                            root, 'actual-configuration-retained-attributes')
                     if repo == 'pkgcore' and stem == 'run_root_archive_tests':
                         invoke('root-archive-original-span-oracle', [sys.executable, '-B',
                             str(root/'pkgcore/tests/compare_root_archive.py'),

@@ -4381,6 +4381,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-152",
+      "title": "初回bank準備とRO観測のcontroller寿命",
+      "shall": "controllerは明示root supervisorのscopeと実FDへ束縛した初回bank準備だけを許し、永続attempt、childの権限縮小、RO全再検査、Bank/device保持と受信CASコピーの返却前解放を実行しなければならない。終了や再起動で使用済みbankを自動再利用してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0114"
+      ],
+      "spec": [
+        "distribution/native/root-session.ja.md"
+      ],
+      "code": [
+        "distribution/native/root_session.py",
+        "distribution/native/root_session_worker.py",
+        "distribution/native/root_bank.py"
+      ],
+      "tests": [
+        "distribution/native/worker/check_root_session.py"
+      ],
+      "hazards": [
+        "HAZ-138"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

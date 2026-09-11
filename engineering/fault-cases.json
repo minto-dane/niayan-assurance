@@ -1675,6 +1675,17 @@
       "expected": "不一致は初期化又はservice開始を拒否し、正常再起動は同じ記録とRO mountを維持する。欠損lockを再生成せず、明示復元後だけ再照合できる。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_bank_device.py"
+    },
+    {
+      "id": "FAULT-151",
+      "scenario": "使い捨て実bankでpeer/scope/FD拒否、準備/再検査/予約保持、close/切断/期限切れ、保持中RW drift後のSIGKILLと独立stop hook、再起動と使用済みbank拒否を検査する。",
+      "requirements": [
+        "REQ-152"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不一致を許可せず、readiness後に新CAS予約を取得できてもBankは保持する。終了後ROを確認し、元root/記録を変えず、attemptを消してbankを再利用しない。hook失敗を成功扱いしない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_session.py"
     }
   ]
 }

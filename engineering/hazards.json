@@ -1521,6 +1521,17 @@
         "REQ-151"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-138",
+      "title": "controllerが完成済みbankをRW化する、又は予約/認可/後片付けを誤認する",
+      "severity": "critical",
+      "mitigation": "空bankと永続初回barrierを要求し、実peer/task/scope/FDを検査する。tar childからmount権限を除き、RO再検査とBank/device保持を行い、返却前にCASコピーを閉じる。停止hookと旧writer拒否を維持する。",
+      "residual_risk": "Root control plane and privileged writers remain trusted. Site admission/revocation, native SDK adapter, bank slots, actual boot switching/recovery and power-loss acceptance remain incomplete.",
+      "requirements": [
+        "REQ-152"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -1384,9 +1384,20 @@
       "title": "設定archive生成での負時刻の変化・属性省略・名前変換",
       "severity": "critical",
       "mitigation": "有界なnative PAX codecで標準fieldを明示する。全signed端点をoverflowなしで出力/検査し、BINARY名と元の拡張値を保持する。独立Decimal/byte比較と既存payloadへの読戻しで確認する。",
-      "residual_risk": "The codec emits a header prefix and assumes supplied extension semantics have been checked. Source-attribute adapters, complete root serialization, actual attribute/inode effects, managed admission, retention and boot remain unqualified. Encodable clocks are not a filesystem restoration guarantee. The current root worker directly uses upstream clock decoding; canonical negative fractional clock application must be implemented before qualification.",
+      "residual_risk": "The codec emits a header prefix and assumes supplied extension semantics have been checked. Source-attribute adapters, complete root serialization, actual attribute/inode effects, managed admission, retention and boot remain unqualified. Encodable clocks are not a filesystem restoration guarantee. ADR-0102 adds canonical worker clock correction; filesystem restoration is separately qualified with bounded target tests.",
       "requirements": [
         "REQ-139"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-126",
+      "title": "時刻の自己比較による実inodeの誤った復元",
+      "severity": "critical",
+      "mitigation": "同じ原本FDの独立cursorで全signed時刻を補正し、適用と照合の双方に渡す。種別/size、checksum、拡張、padding/終端と期限を検査し、実FSの値を独立期待値と照合する。",
+      "residual_risk": "Full signed range is a format property, not a filesystem restoration guarantee. ctime and birthtime remain historical attributes. Complete configured root serialization, all inode effects, production admission, retention and boot remain unqualified.",
+      "requirements": [
+        "REQ-140"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }

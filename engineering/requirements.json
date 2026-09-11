@@ -4020,6 +4020,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-140",
+      "title": "原本時刻に基づくroot実展開と独立照合",
+      "shall": "root展開と照合では原本の負の小数時刻を正しくPOSIX timespecへ変換し、同じreaderの誤解釈を成功根拠にしてはならない。entry対応・拡張・終端が不正なら成功を返してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0102"
+      ],
+      "spec": [
+        "distribution/native/root-extraction.ja.md"
+      ],
+      "code": [
+        "distribution/native/worker/tar_clocks.c",
+        "distribution/native/worker/root_extract.c",
+        "distribution/native/prepare_service_package.py"
+      ],
+      "tests": [
+        "distribution/native/worker/check_tar_clocks.c",
+        "distribution/native/worker/check_tar_clocks.py",
+        "distribution/native/worker/check_root_extract.py"
+      ],
+      "hazards": [
+        "HAZ-126"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

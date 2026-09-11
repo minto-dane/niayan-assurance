@@ -1543,6 +1543,17 @@
       "expected": "時刻やraw属性を切り詰めず、独立読取の意味が一致する。不正入力ではbuilderと出力を消し、完成archiveや実属性適用の成功を捏造しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_tar_output_tests.adb"
+    },
+    {
+      "id": "FAULT-139",
+      "scenario": "負zero/負の小数とsigned境界、時刻重複/精度超過、checksum/拡張/padding/終端の不整合、期限切れ、実fileとroot/dir/symlink/hardlinkの時刻",
+      "requirements": [
+        "REQ-140"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不正なframeから成功を返さず、受理した原本のmtime/明示atimeを独立statの整数nanosecondと一致させる。ctime/birthtimeの復元や公開成功を捏造しない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_extract.py"
     }
   ]
 }

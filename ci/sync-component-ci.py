@@ -62,6 +62,11 @@ def generated():
                               '  cat "$D/configuration-entry-native.log"', 'else',
                               '  cat "$D/configuration-entry-native.log"', '  exit 1', 'fi',
                               'python3 "$PWD/tests/check_configuration_entry.py" --native "$D/configuration-entry-native.log" --cas "$D/run_conffile_observation_tests/store" --output "$D/configuration-entry-oracle" --driver "$PWD/build/test-bin/run_deb_payload_tests"'])
+            elif repo == 'pkgcore' and name == 'run_root_configuration_tests':
+                lines.extend(['if '+command+' > "$D/configured-root-native.log" 2>&1; then',
+                              '  cat "$D/configured-root-native.log"', 'else',
+                              '  cat "$D/configured-root-native.log"', '  exit 1', 'fi',
+                              'python3 "$PWD/tests/check_configured_root.py" --native "$D/configured-root-native.log" --cas "$D/run_root_configuration_tests/store" --output "$D/configured-root-oracle"'])
             elif repo == 'pkgcore' and name == 'run_root_archive_tests':
                 lines.extend(['if '+command+' > "$D/root-archive-native.log" 2>&1; then',
                               '  cat "$D/root-archive-native.log"', 'else',

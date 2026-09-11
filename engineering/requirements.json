@@ -4116,6 +4116,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-143",
+      "title": "設定済み全rootのstream生成と全選択原本の保持",
+      "shall": "全rootは検証済み配置を使って原本spanと設定entryを正確に直列化し、削除/退避を含む全選択と必要な原本を同じCASの保持記録へ束縛しなければならない。保存物の欠落を検証中に黙って修復してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0105"
+      ],
+      "spec": [
+        "distribution/native/configured-root.ja.md",
+        "distribution/native/root-configuration.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_configured_root.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_configuration_tests.adb",
+        "pkgcore/tests/check_configured_root.py",
+        "distribution/native/worker/check_configured_root.py"
+      ],
+      "hazards": [
+        "HAZ-129"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

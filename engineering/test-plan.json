@@ -933,7 +933,7 @@
         "$TEMP/root"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "verified real root archive and live configuration decisions; exact projected namespace, scope and declaration coverage, collisions and hardlink dependencies; no configured tar or publication"
+      "note": "verified real root archive and live configuration decisions; exact projected namespace, scope and declaration coverage, collisions and hardlink dependencies; complete configured CAS tar and exact transitive retention, saved-output loss without implicit repair, total-size/deadline/live-change refusal, original spans and independent root/decision/closure oracle; no production publication or recovery loader"
     },
     {
       "main": "pkgcore/tests/run_tar_output_tests.adb",

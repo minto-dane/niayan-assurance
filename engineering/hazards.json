@@ -1422,6 +1422,17 @@
         "REQ-142"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-129",
+      "title": "root生成での削除設定の復活・原本属性変更・必要な履歴の欠落",
+      "severity": "critical",
+      "mitigation": "配置を再検証し元spanと設定prefix/contentを有界streamで保存する。全選択・原本のexactな和集合を保持し、返却前にlive選択を再確認する。検証は保持object欠損を再構築前に拒否する。",
+      "residual_risk": "Live proposals are still required. Durable recovery loading, generation pin/GC, privileged observation, full inode and DEB effects, production admission, physical preparation/publication and boot integration remain unqualified.",
+      "requirements": [
+        "REQ-143"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

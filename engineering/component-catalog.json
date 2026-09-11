@@ -10378,6 +10378,195 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_configured_root.adb",
+      "sha256": "cfa3a8d0106d6a0a67896d19e216604d37ec72375b755a544e0d5825007e6156",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Configured_Root",
+          "line": 7
+        },
+        {
+          "name": "R",
+          "line": 8
+        },
+        {
+          "name": "P",
+          "line": 9
+        },
+        {
+          "name": "Objects",
+          "line": 13
+        },
+        {
+          "name": "Padded",
+          "line": 14
+        },
+        {
+          "name": "Tick",
+          "line": 16
+        },
+        {
+          "name": "Build",
+          "line": 22
+        },
+        {
+          "name": "Free",
+          "line": 34
+        },
+        {
+          "name": "Free",
+          "line": 38
+        },
+        {
+          "name": "Positions",
+          "line": 39
+        },
+        {
+          "name": "Need",
+          "line": 49
+        },
+        {
+          "name": "Clock",
+          "line": 50
+        },
+        {
+          "name": "Refuse",
+          "line": 51
+        },
+        {
+          "name": "Cleanup",
+          "line": 52
+        },
+        {
+          "name": "Include",
+          "line": 57
+        },
+        {
+          "name": "Recheck",
+          "line": 62
+        },
+        {
+          "name": "Path_At",
+          "line": 68
+        },
+        {
+          "name": "Find",
+          "line": 73
+        },
+        {
+          "name": "Source_Number",
+          "line": 82
+        },
+        {
+          "name": "Less",
+          "line": 91
+        },
+        {
+          "name": "Sorting",
+          "line": 98
+        },
+        {
+          "name": "Close_Source",
+          "line": 99
+        },
+        {
+          "name": "Open_Source",
+          "line": 107
+        },
+        {
+          "name": "Feed",
+          "line": 117
+        },
+        {
+          "name": "Copy_Range",
+          "line": 123
+        },
+        {
+          "name": "Copy_Object",
+          "line": 133
+        },
+        {
+          "name": "Emit_Root",
+          "line": 142
+        },
+        {
+          "name": "Collect",
+          "line": 155
+        },
+        {
+          "name": "Emit_Manifest",
+          "line": 184
+        },
+        {
+          "name": "Emit_Retention",
+          "line": 208
+        },
+        {
+          "name": "Verify",
+          "line": 315
+        },
+        {
+          "name": "Need",
+          "line": 324
+        },
+        {
+          "name": "Cleanup",
+          "line": 325
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Ordered_Sets",
+        "Ada.Containers.Vectors",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Catalog_Store",
+        "Pkg_Conffile_Choice",
+        "Pkg_Configuration_Entry",
+        "Pkg_Deb_Payload",
+        "Pkg_Payload_Index",
+        "Pkg_Selected_Catalog",
+        "Pkg_Tar_Framing"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_configured_root.ads",
+      "sha256": "101da4d699664ddcf059cb1a0b2b012b6c9554a2e10c19f9359c89b0dc3244c2",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Configured_Root",
+          "line": 5
+        },
+        {
+          "name": "Build",
+          "line": 10
+        },
+        {
+          "name": "Verify",
+          "line": 14
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Catalog_Retention",
+        "Pkg_Root_Archive",
+        "Pkg_Root_Configuration"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_deb_conffiles.adb",
       "sha256": "6343da099debbd649efe5d3f2925c1d8a1cb7c968b15baeac08add269e354ce4",
       "repository": "pkgcore",

@@ -1576,6 +1576,17 @@
       "expected": "元の内容/属性と生成entry・native読戻し・実inodeが一致する。不正な変換はprefix/sizeを消し、ACLのnamed権限やgroup ownerをmaskへ切り詰めない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_conffile_observation_tests.adb"
+    },
+    {
+      "id": "FAULT-142",
+      "scenario": "local/vendor/backup、削除/復元/空file、原本hardlink chainと64 KiB超本文、保存root欠落、期限切れ、容量超過、live変更とcontext不一致",
+      "requirements": [
+        "REQ-143"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "原本span・最終内容とnamespace・全参照閉包が一致する。欠落した出力を検証で復元せず、拒否時の全出力を消す。明示再構築は同じ入力から同じ保存hashを得る。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
     }
   ]
 }

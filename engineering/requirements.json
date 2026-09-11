@@ -4174,6 +4174,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-145",
+      "title": "新しいCAS予約での設定選択再観測と保存rootの意味照合",
+      "shall": "CAS予約を取り直した場合、保存設定を現在の原本・inode・属性・内容・退避先から再観測し、所有権と配置を含む完全なroot結果に一致させなければならない。旧proposalや期限、保存hashを更新して実行許可を復活させてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0107"
+      ],
+      "spec": [
+        "distribution/native/configured-root.ja.md",
+        "distribution/native/conffile-choice.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_conffile_choice.adb",
+        "pkgcore/runtime/pkg_configured_root.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_conffile_choice_tests.adb",
+        "pkgcore/tests/run_root_configuration_tests.adb",
+        "pkgcore/tests/check_configured_root_current.py"
+      ],
+      "hazards": [
+        "HAZ-131"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

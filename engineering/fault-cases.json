@@ -1598,6 +1598,17 @@
       "expected": "全bindingと順序付き選択/設定/保持memberが独立wire読取と一致する。拒否時のViewを消し、すべての読込でCAS objectを変更せず、欠落したobjectを再構成しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
+    },
+    {
+      "id": "FAULT-144",
+      "scenario": "9種類の設定選択を別期限で再観測し、新プロセスで現在のempty設定と過去の5観測を区別する。参照構造だけは正しいownership/prefix/root byteの不整合、旧期限、期待context不一致と保存root欠損を検査する。",
+      "requirements": [
+        "REQ-145"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "現在のsource・属性・backupと原本由来の全rootが一致するときだけ保存archiveを返す。過去のCAS memberは変えず、失敗時は新session/出力を消す。保存構造の成功だけでは不一致を受理しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
     }
   ]
 }

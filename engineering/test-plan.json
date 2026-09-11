@@ -901,7 +901,7 @@
         "$TEMP/root"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "original DEBs and real private configuration namespace; exact proposal choice, baseline and retained references, edits/backup collisions and lost retained source; no UI authentication or live-root application; NIACCH02 full attribute source references and numeric permission inheritance, including special bits and stale effect clearing"
+      "note": "original DEBs and real private configuration namespace; exact proposal choice, baseline and retained references, edits/backup collisions and lost retained source; no UI authentication or live-root application; NIACCH02 full attribute source references and numeric permission inheritance, including special bits and stale effect clearing; reobserve 9 saved-choice paths through fresh Prepare/Resolve with a distinct observation deadline; canonical source closure and live new-session recheck; original records remain unchanged"
     },
     {
       "main": "pkgcore/tests/run_conffile_observation_tests.adb",
@@ -933,7 +933,7 @@
         "$TEMP/root"
       ],
       "execution_owner": "pkgcore-maintainers",
-      "note": "verified real root archive and live configuration decisions; exact projected namespace, scope and declaration coverage, collisions and hardlink dependencies; complete configured CAS tar and exact transitive retention, saved-output loss without implicit repair, total-size/deadline/live-change refusal, original spans and independent root/decision/closure oracle; no production publication or recovery loader; saved-record mode reopens the CAS in fresh processes without a live proposal; independent binding/choice/configuration/member enumeration, malformed and missing records, finite deadlines and no reconstruction checked by check_configured_root_record.py"
+      "note": "verified real root archive and live configuration decisions; exact projected namespace, scope and declaration coverage, collisions and hardlink dependencies; complete configured CAS tar and exact transitive retention, saved-output loss without implicit repair, total-size/deadline/live-change refusal, original spans and independent root/decision/closure oracle; no production publication or recovery loader; saved-record mode reopens the CAS in fresh processes without a live proposal; independent binding/choice/configuration/member enumeration, malformed and missing records, finite deadlines and no reconstruction checked by check_configured_root_record.py; check_configured_root_current.py must run after this main in the SAME mount namespace: new-process source reobservation, changed historical snapshots, structural-only ownership/prefix/tar acceptance versus semantic refusal, and historical deadline without record mutation"
     },
     {
       "main": "pkgcore/tests/run_tar_output_tests.adb",

@@ -234,6 +234,12 @@ def main() -> int:
                             '--native', str(output/(repo+'-'+stem+'.log')), '--cas', args[0],
                             '--output', str(output/'configured-root-oracle')],
                             root, 'actual-configured-root-and-retention')
+                        invoke('configured-root-current-observation-oracle', [sys.executable, '-B',
+                            str(root/'pkgcore/tests/check_configured_root_current.py'),
+                            '--native', str(output/(repo+'-'+stem+'.log')), '--cas', args[0], '--root', args[1],
+                            '--driver', str(root/'pkgcore/build/test-bin/run_root_configuration_tests'),
+                            '--output', str(output/'configured-current-oracle')],
+                            root, 'actual-configured-root-current-observation')
                         invoke('configured-root-saved-record-oracle', [sys.executable, '-B',
                             str(root/'pkgcore/tests/check_configured_root_record.py'),
                             '--native', str(output/(repo+'-'+stem+'.log')), '--cas', args[0],

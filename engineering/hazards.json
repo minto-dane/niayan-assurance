@@ -1444,6 +1444,17 @@
         "REQ-144"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-131",
+      "title": "CAS予約の取り直しで保存選択の参照整合性を現在のrootの正しさと誤認する",
+      "severity": "critical",
+      "mitigation": "同じ予約を要求する旧契約を保ち、新たなPrepare/Resolveで完全なsourceを再観測する。保存choice閉包を導出して比較し、通常Buildの全rootを照合する。旧記録は変更せず、別の新規観測sessionを使い、認可は上位で再検証する。",
+      "residual_risk": "Fresh observation is not renewed consent, revocation/freshness validation or recovery permission. Expected root FD/scope authentication, generation integration, boot identity migration and accepted-state reconciliation remain incomplete.",
+      "requirements": [
+        "REQ-145"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

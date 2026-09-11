@@ -9619,7 +9619,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_conffile_choice.adb",
-      "sha256": "19660342900a9d33a4a6f3db04cc0f84f967a83e3205ab96be44b9587de10ce5",
+      "sha256": "1ea4d8fa182b2491206a7c754563a0fd6d7fd0d1c0e8ef4ecf97c9e207c69a04",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9670,51 +9670,75 @@
         },
         {
           "name": "Verify_Members",
-          "line": 55
+          "line": 57
         },
         {
           "name": "Prepare",
-          "line": 67
+          "line": 69
         },
         {
           "name": "Need",
-          "line": 74
-        },
-        {
-          "name": "Source",
           "line": 76
         },
         {
+          "name": "Source",
+          "line": 78
+        },
+        {
           "name": "Recheck",
-          "line": 157
+          "line": 159
         },
         {
           "name": "Read_Effects",
-          "line": 178
+          "line": 180
         },
         {
           "name": "Read_Scope",
-          "line": 186
+          "line": 188
         },
         {
           "name": "Resolve",
-          "line": 193
+          "line": 195
         },
         {
           "name": "Need",
-          "line": 198
-        },
-        {
-          "name": "Overlap",
           "line": 200
         },
         {
+          "name": "Overlap",
+          "line": 202
+        },
+        {
           "name": "Describe",
-          "line": 205
+          "line": 207
         },
         {
           "name": "Encode",
-          "line": 268
+          "line": 270
+        },
+        {
+          "name": "Reobserve",
+          "line": 306
+        },
+        {
+          "name": "Need",
+          "line": 318
+        },
+        {
+          "name": "Refuse",
+          "line": 319
+        },
+        {
+          "name": "Read",
+          "line": 320
+        },
+        {
+          "name": "Required",
+          "line": 327
+        },
+        {
+          "name": "Text",
+          "line": 329
         }
       ],
       "with_dependencies": [
@@ -9725,6 +9749,7 @@
         "MC_Codec",
         "MC_FS",
         "MC_Posix",
+        "MC_SHA256",
         "Pkg_Conffile_Observation",
         "Pkg_Conffile_Snapshot",
         "Pkg_Deb_Conffiles",
@@ -9734,7 +9759,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_conffile_choice.ads",
-      "sha256": "6264b8855b48fc3084b19fb5b51996f7d2ababb21db178340eda359662aba8b5",
+      "sha256": "3cb7628ad72f1adc00127ec537e9887324a473d82d59a5152a6ae3d47c1331bf",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -9764,20 +9789,24 @@
           "line": 30
         },
         {
-          "name": "Read_Effects",
+          "name": "Reobserve",
           "line": 32
         },
         {
+          "name": "Read_Effects",
+          "line": 52
+        },
+        {
           "name": "Read_Scope",
-          "line": 35
+          "line": 55
         },
         {
           "name": "Clear",
-          "line": 50
+          "line": 70
         },
         {
           "name": "Finalize",
-          "line": 77
+          "line": 97
         }
       ],
       "with_dependencies": [
@@ -10379,7 +10408,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_configured_root.adb",
-      "sha256": "36a22125982b2765e74c9a32c03bb2988a60bb20feb98f30c5ba0bcf71ec49e9",
+      "sha256": "0f83f457d190da4003bdcfab703dd08f98a5c7038bbb7f105a6eefbde8fe2ccc",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -10515,6 +10544,38 @@
         {
           "name": "Cleanup",
           "line": 324
+        },
+        {
+          "name": "Verify_Current",
+          "line": 340
+        },
+        {
+          "name": "Records",
+          "line": 344
+        },
+        {
+          "name": "Free",
+          "line": 347
+        },
+        {
+          "name": "Free",
+          "line": 348
+        },
+        {
+          "name": "Free",
+          "line": 349
+        },
+        {
+          "name": "Need",
+          "line": 354
+        },
+        {
+          "name": "Refuse",
+          "line": 355
+        },
+        {
+          "name": "Cleanup",
+          "line": 356
         }
       ],
       "with_dependencies": [
@@ -10540,7 +10601,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_configured_root.ads",
-      "sha256": "e7804978e096034bb5a3e103cf84cb850d1d4739b75dfe69f91afe4ea714d3a4",
+      "sha256": "0cb1143ffb3e8e59a9374282fbb1060b7bb79c37e9598b0d43c8c0ae927cd9bf",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -10556,6 +10617,10 @@
         {
           "name": "Verify",
           "line": 13
+        },
+        {
+          "name": "Verify_Current",
+          "line": 17
         }
       ],
       "with_dependencies": [
@@ -10709,7 +10774,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_configured_root_record.ads",
-      "sha256": "e3b68c781f5280566aab8e89d0b7335f56083c094af4a94e93ca940ba0d0cbbc",
+      "sha256": "ba33e33ca145c470044ac8831711deb37cdf0d4355489c48c4d8130f1d38a1ca",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",

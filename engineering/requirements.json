@@ -4325,6 +4325,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-150",
+      "title": "専用bankのfilesystem単位の書込停止",
+      "shall": "controllerの物理root観測は明示選択した専用ext4 bankに限りfilesystem全体をread-onlyへ遷移させ、現在identity/記録/期限/予約を照合しなければならない。共有subtreeやbusyは拒否し、Closeや失敗で暗黙thawしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0112"
+      ],
+      "spec": [
+        "distribution/native/root-freeze.ja.md"
+      ],
+      "code": [
+        "distribution/native/root_freeze.py",
+        "distribution/native/root_bank.py"
+      ],
+      "tests": [
+        "distribution/native/worker/check_root_freeze.py",
+        "distribution/native/worker/check_root_preparation.py"
+      ],
+      "hazards": [
+        "HAZ-136"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

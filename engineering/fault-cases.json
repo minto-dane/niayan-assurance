@@ -1653,6 +1653,17 @@
       "expected": "失敗は成功観測を残さずnative予約を閉じ、成功と期限切れではCloseまで三予約を保持する。元root/記録を変更せず、既存handleを暗黙置換しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/root_archive_stage_test.adb"
+    },
+    {
+      "id": "FAULT-149",
+      "scenario": "使い捨て専用ext4 bankで誤identity/subtree/子mount、開いた書込FD/mmap、別mountのwriter、read-only再起動、Close、特権remount変化とSDK接続を確認する。",
+      "requirements": [
+        "REQ-150"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "共有領域やlive writerを拒否し、成功時は全mount viewで書込不能となる。元root/記録の照合とread-only排他を維持し、Closeでthawせず、privileged drift後に観測を拒否する。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_freeze.py"
     }
   ]
 }

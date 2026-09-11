@@ -1499,6 +1499,17 @@
         "REQ-149"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-136",
+      "title": "bind viewのread-onlyを全writer停止と誤認する、または共有filesystemを停止する",
+      "severity": "critical",
+      "mitigation": "期待bankのmount/device/inode、専用ext4 rootと保護を要求し、MS_BINDなしでsuperblock read-onlyへ変更する。kernelのbusy拒否と全viewの書込停止を検査し、現在観測と非thawのCloseを維持する。",
+      "residual_risk": "Privileged remount/raw block/backing writes require separate controller exclusion. Dedicated-bank installer policy, production controller RPC/lifetime, actual boot/recovery and all DEB effects remain incomplete.",
+      "requirements": [
+        "REQ-150"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

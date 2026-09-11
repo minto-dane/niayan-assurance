@@ -1510,6 +1510,17 @@
         "REQ-150"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-137",
+      "title": "再起動時に別deviceや共有bankを採用し、未完状態を自動初期化する",
+      "severity": "critical",
+      "mitigation": "明示GPT/ext4 UUIDと容量を実probeとmounted FDへ照合し、intent/完了記録とRO mountを要求する。起動前guardが不一致/欠損を拒否し、既存状態を修復しない。",
+      "residual_risk": "UUIDs are not cryptographic authentication. Privileged writer exclusion, clone/hotplug handling, other storage profiles, production controller lifetime, actual boot switch and full replacement ISO remain incomplete.",
+      "requirements": [
+        "REQ-151"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

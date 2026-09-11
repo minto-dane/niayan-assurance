@@ -1664,6 +1664,17 @@
       "expected": "共有領域やlive writerを拒否し、成功時は全mount viewで書込不能となる。元root/記録の照合とread-only排他を維持し、Closeでthawせず、privileged drift後に観測を拒否する。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_freeze.py"
+    },
+    {
+      "id": "FAULT-150",
+      "scenario": "使い捨てVMの実GPT/ext4 bankでplan欠損/UUID/容量不一致、既存/未完状態、再初期化、再起動、plan変更とlock欠損を検査する。",
+      "requirements": [
+        "REQ-151"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不一致は初期化又はservice開始を拒否し、正常再起動は同じ記録とRO mountを維持する。欠損lockを再生成せず、明示復元後だけ再照合できる。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_bank_device.py"
     }
   ]
 }

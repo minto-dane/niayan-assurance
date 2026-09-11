@@ -4353,6 +4353,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-151",
+      "title": "専用bankの明示配備と起動時device照合",
+      "shall": "新規bankは明示GPT/ext4選択と実block deviceを照合して配備し、通常起動はread-onlyとし、準備serviceの前にplan/初期化記録と現在mountを再確認しなければならない。旧bind/既存状態の自動移行や欠損修復を行ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0113"
+      ],
+      "spec": [
+        "distribution/native/bank-device.ja.md"
+      ],
+      "code": [
+        "distribution/native/bank_device.py",
+        "distribution/native/storage_bootstrap.py",
+        "distribution/packaging/root-preparation/debian/niaos-root-bank-check.service"
+      ],
+      "tests": [
+        "distribution/native/worker/check_bank_device.py"
+      ],
+      "hazards": [
+        "HAZ-137"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

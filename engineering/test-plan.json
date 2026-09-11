@@ -933,6 +933,21 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "verified real root archive and live configuration decisions; exact projected namespace, scope and declaration coverage, collisions and hardlink dependencies; no configured tar or publication"
+    },
+    {
+      "main": "pkgcore/tests/run_tar_output_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [
+        "$TEMP/store",
+        "$TEMP/export"
+      ],
+      "result": "not-run",
+      "prepare_directories": [
+        "$TEMP/store",
+        "$TEMP/export"
+      ],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "native PAX regular header emission; exact byte names, numeric owners, signed fractional clocks and full signed bounds, preserved raw extensions and failure clearing; no root application; isolated base64/name/time field refusals; independent check_tar_output.py and real native payload roundtrip are retained separately in source-bound evidence"
     }
   ]
 }

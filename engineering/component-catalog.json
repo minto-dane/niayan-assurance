@@ -14847,7 +14847,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_tar_framing.adb",
-      "sha256": "ce5467a3db8628581dccb269a3578b4c77d65f02c7fd0c62de75c4ec0b569987",
+      "sha256": "138ae7ae6c757d58a2282b6daf12420f410c778e9e267d7e71a0c00b41980a66",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -14922,11 +14922,27 @@
         },
         {
           "name": "Valid_ACL",
-          "line": 133
+          "line": 144
         },
         {
           "name": "Keys",
-          "line": 134
+          "line": 145
+        },
+        {
+          "name": "Encoded_Name",
+          "line": 198
+        },
+        {
+          "name": "Digit",
+          "line": 200
+        },
+        {
+          "name": "Base64_Value",
+          "line": 216
+        },
+        {
+          "name": "Code",
+          "line": 219
         }
       ],
       "with_dependencies": [
@@ -14938,7 +14954,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_tar_framing.ads",
-      "sha256": "e8dfe7e7afc73c953aefadbb0081c0265de7cc50cff547b6d69f04dadfabcced",
+      "sha256": "c28772b11401b8646116fc06848c1b0c585f5a33765740a5f25765b28f8d0a5e",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -14949,23 +14965,23 @@
         },
         {
           "name": "Scan",
-          "line": 26
+          "line": 27
         },
         {
           "name": "Count",
-          "line": 28
-        },
-        {
-          "name": "At_Index",
           "line": 29
         },
         {
-          "name": "Terminator",
+          "name": "At_Index",
           "line": 30
         },
         {
+          "name": "Terminator",
+          "line": 31
+        },
+        {
           "name": "Frame_Vectors",
-          "line": 36
+          "line": 37
         }
       ],
       "with_dependencies": [
@@ -14974,6 +14990,147 @@
         "Interfaces",
         "MC_FS",
         "MC_Types"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_tar_output.adb",
+      "sha256": "540f47c656c6261c0245960f14c0c8f1c4d1f3fd826fff14efb8a48e945845d4",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Tar_Output",
+          "line": 5
+        },
+        {
+          "name": "T",
+          "line": 6
+        },
+        {
+          "name": "Fields",
+          "line": 7
+        },
+        {
+          "name": "Free",
+          "line": 14
+        },
+        {
+          "name": "Clear",
+          "line": 15
+        },
+        {
+          "name": "Finalize",
+          "line": 17
+        },
+        {
+          "name": "Decimal",
+          "line": 19
+        },
+        {
+          "name": "Record_Size",
+          "line": 21
+        },
+        {
+          "name": "Insert",
+          "line": 27
+        },
+        {
+          "name": "Clock_Text",
+          "line": 37
+        },
+        {
+          "name": "Magnitude",
+          "line": 41
+        },
+        {
+          "name": "Start",
+          "line": 53
+        },
+        {
+          "name": "Add",
+          "line": 57
+        },
+        {
+          "name": "Add_Extension",
+          "line": 84
+        },
+        {
+          "name": "Add_Xattr",
+          "line": 100
+        },
+        {
+          "name": "Emit",
+          "line": 119
+        },
+        {
+          "name": "Finish",
+          "line": 138
+        },
+        {
+          "name": "Text",
+          "line": 140
+        },
+        {
+          "name": "Octal",
+          "line": 144
+        },
+        {
+          "name": "Block",
+          "line": 152
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Containers.Indefinite_Ordered_Maps",
+        "Ada.Strings.Fixed",
+        "Ada.Unchecked_Deallocation",
+        "Interfaces",
+        "MC_Store"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_tar_output.ads",
+      "sha256": "28b7e490ca46de2a52545ff7bd5f29cb762c6c17e63f1c59e611c673927075bf",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Tar_Output",
+          "line": 5
+        },
+        {
+          "name": "Start",
+          "line": 8
+        },
+        {
+          "name": "Add_Extension",
+          "line": 10
+        },
+        {
+          "name": "Add_Xattr",
+          "line": 11
+        },
+        {
+          "name": "Finish",
+          "line": 12
+        },
+        {
+          "name": "Clear",
+          "line": 13
+        },
+        {
+          "name": "Finalize",
+          "line": 30
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Types",
+        "Pkg_Tar_Framing",
+        "private"
       ],
       "semantic_analysis": false
     },

@@ -3991,6 +3991,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-139",
+      "title": "設定entry出力でのraw属性と全幅時刻の保持",
+      "shall": "設定のtar entry出力でraw名・数値owner/permission・負の小数を含む全signed時刻と存在する属性を切り詰めてはならない。拡張から標準fieldを上書きせず、部分出力を成功にしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0101"
+      ],
+      "spec": [
+        "distribution/native/configuration-tar.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_tar_output.adb",
+        "pkgcore/runtime/pkg_tar_framing.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/run_tar_output_tests.adb",
+        "pkgcore/tests/check_tar_output.py",
+        "pkgcore/tests/run_deb_payload_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-125"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

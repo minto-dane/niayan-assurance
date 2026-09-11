@@ -1532,6 +1532,17 @@
       "expected": "配置とbindingを消し、元vendor fileへのfallback・退避上書き・link先の暗黙変更をしない。欠落をentry除外として保持し、全選択hashを残す。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_root_configuration_tests.adb"
+    },
+    {
+      "id": "FAULT-138",
+      "scenario": "負の小数/全signed端点、birthtime、raw byte名、長いencoded xattr key、空/バイナリ属性、重複/予約field、消費後の再利用、短いbufferと非正規path",
+      "requirements": [
+        "REQ-139"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "時刻やraw属性を切り詰めず、独立読取の意味が一致する。不正入力ではbuilderと出力を消し、完成archiveや実属性適用の成功を捏造しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_tar_output_tests.adb"
     }
   ]
 }

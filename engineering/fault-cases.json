@@ -1631,6 +1631,17 @@
       "expected": "新規/未受理公開は現在sourceを要求し、不一致時に実stateを維持する。受理済み処理は元source不要でterminal記録のみ修復でき、欠落証拠は再生成しない。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
+    },
+    {
+      "id": "FAULT-147",
+      "scenario": "固定rootの内容・欠落・余分なentry・xattr・mode・外側hardlink・symlink先・子mountを変化させ、書込可能rootと異なるgenerationの拒否、再起動と実FD RPCを検査する。",
+      "requirements": [
+        "REQ-148"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "現在の実物が期待archiveと一致する場合だけmount/device/inode付き観測を返し、readonly treeと元記録を変更しない。呼出し元のleaseを解放せず、過去のinspect結果を現在認定へ変更しない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_reinspection.py"
     }
   ]
 }

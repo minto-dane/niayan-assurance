@@ -4264,6 +4264,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-148",
+      "title": "実rootの非更新再検査と実mountへの束縛",
+      "shall": "展開済みrootの再使用に向けた観測は、独立に固定したread-only mountと現在の予約で全期待inode/namespaceを照合し、実mount/device/inodeへ束縛しなければならない。元intent/resultとrootを変更せず、過去の結果を現在観測と混同してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0110"
+      ],
+      "spec": [
+        "distribution/native/root-bank.ja.md",
+        "distribution/native/root-extraction.ja.md"
+      ],
+      "code": [
+        "distribution/native/root_bank.py",
+        "distribution/native/worker/root_extract.c"
+      ],
+      "tests": [
+        "distribution/native/worker/check_root_reinspection.py",
+        "distribution/native/worker/check_root_extract.py",
+        "distribution/native/worker/check_root_bank.py"
+      ],
+      "hazards": [
+        "HAZ-134"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

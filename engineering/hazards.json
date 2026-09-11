@@ -1477,6 +1477,17 @@
         "REQ-147"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-134",
+      "title": "保存された展開成功を現在の実rootの完全性と誤認する",
+      "severity": "critical",
+      "mitigation": "独立read-only mount、実bank/CAS予約、元intent/current worker束縛を要求し、全tarとinode/namespace/xattr/link groupを再検査する。現在FDのmount/device/inodeと応答後stateを照合し、記録と実rootは更新しない。",
+      "residual_risk": "A read-only view is not global writer quiescence or a continuing boot permit. Production freeze/authority providers, native SDK observation handoff, full DEB effects and physical root/boot recovery remain incomplete.",
+      "requirements": [
+        "REQ-148"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

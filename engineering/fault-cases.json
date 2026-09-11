@@ -1642,6 +1642,17 @@
       "expected": "現在の実物が期待archiveと一致する場合だけmount/device/inode付き観測を返し、readonly treeと元記録を変更しない。呼出し元のleaseを解放せず、過去のinspect結果を現在認定へ変更しない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_reinspection.py"
+    },
+    {
+      "id": "FAULT-148",
+      "scenario": "実SDKとrootサービスで独立観測拒否・誤mount/元期限・応答後観測変更と認可拒否を与え、成功・期限切れ・重複要求・Closeの実予約を検査する。",
+      "requirements": [
+        "REQ-149"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "失敗は成功観測を残さずnative予約を閉じ、成功と期限切れではCloseまで三予約を保持する。元root/記録を変更せず、既存handleを暗黙置換しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/root_archive_stage_test.adb"
     }
   ]
 }

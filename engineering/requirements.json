@@ -4294,6 +4294,37 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-149",
+      "title": "実root再検査とnative予約の継続保持",
+      "shall": "再検査は独立期待identityと元intentを照合し、全保持内容と現在認可を再確認した専用handleに世代/root/CAS排他を維持しなければならない。期限切れは観測を無効にするが明示解放までは排他を維持する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0111"
+      ],
+      "spec": [
+        "distribution/native/root-preparation.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_root_preparation.ads",
+        "pkgcore/runtime/pkg_root_preparation.adb",
+        "pkgcore/runtime/root_preparation.c",
+        "pkgcore/runtime/pkg_generation_stage.ads",
+        "pkgcore/runtime/pkg_generation_stage.adb"
+      ],
+      "tests": [
+        "pkgcore/tests/root_archive_stage_test.adb",
+        "distribution/native/worker/check_root_preparation.py"
+      ],
+      "hazards": [
+        "HAZ-135"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

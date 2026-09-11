@@ -13283,7 +13283,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.adb",
-      "sha256": "89c8931d9e457c565b679f8b2060235495f86c8ad8c738256ab8ccaed78b5df4",
+      "sha256": "8fc30e47727c28c89292e07cab9ab3e4fd92a0821916b61e90421242e848ac04",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13409,16 +13409,36 @@
           "line": 344
         },
         {
-          "name": "Prepare_Root",
+          "name": "Open_Prepared_Archive",
           "line": 346
         },
         {
+          "name": "Prepare_Root",
+          "line": 378
+        },
+        {
           "name": "Done",
-          "line": 356
+          "line": 386
+        },
+        {
+          "name": "Close",
+          "line": 423
+        },
+        {
+          "name": "Held",
+          "line": 428
+        },
+        {
+          "name": "Root_Observation",
+          "line": 434
+        },
+        {
+          "name": "Reinspect_Root_And_Hold",
+          "line": 438
         },
         {
           "name": "Inspect",
-          "line": 410
+          "line": 490
         }
       ],
       "with_dependencies": [
@@ -13453,7 +13473,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.ads",
-      "sha256": "981b1ebf0acf5313d053c00aa85d8c18b9fd373a8f0792231dd0d2f6b33f63e5",
+      "sha256": "9c6189f62f1b49356ebcf318d38de320a42bc5a350b7a8d7166d6bc24f589ea3",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13503,18 +13523,36 @@
           "line": 40
         },
         {
+          "name": "Reinspect_Root_And_Hold",
+          "line": 49
+        },
+        {
+          "name": "Held",
+          "line": 53
+        },
+        {
+          "name": "Root_Observation",
+          "line": 54
+        },
+        {
+          "name": "Close",
+          "line": 55
+        },
+        {
           "name": "Prepare_Root",
-          "line": 43
+          "line": 65
         },
         {
           "name": "Inspect",
-          "line": 50
+          "line": 72
         }
       ],
       "with_dependencies": [
         "MC_FS",
+        "MC_Store",
         "MC_Types",
-        "Pkg_Generation_Configuration"
+        "Pkg_Generation_Configuration",
+        "Pkg_Root_Preparation"
       ],
       "semantic_analysis": false
     },
@@ -14656,7 +14694,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_preparation.adb",
-      "sha256": "204568a21f46a78b24226b5738690dbd1d2ace824a1ea95cc8651459a0c79d23",
+      "sha256": "0122803d0ce8892b6f97ee8e31a763baa1ffd67f3c88617f63adbdb7028fac98",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -14672,6 +14710,14 @@
         {
           "name": "Send",
           "line": 8
+        },
+        {
+          "name": "Reinspect",
+          "line": 37
+        },
+        {
+          "name": "Send",
+          "line": 42
         }
       ],
       "with_dependencies": [
@@ -14683,7 +14729,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_preparation.ads",
-      "sha256": "06b9313d6f33dec72a80d06e97aec6cba92917485ed375e34f7354264711f90b",
+      "sha256": "40f75e01eb7d5440de0115eeb3547e6c0b8168563759b636f63b614a3b130476",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -14693,8 +14739,12 @@
           "line": 3
         },
         {
+          "name": "Reinspect",
+          "line": 8
+        },
+        {
           "name": "Request",
-          "line": 4
+          "line": 17
         }
       ],
       "with_dependencies": [
@@ -15873,7 +15923,7 @@
     },
     {
       "path": "pkgcore/runtime/root_preparation.c",
-      "sha256": "db855ee657c711cc332622697bccc74c756ef4edabb6db178c03fe4a275219af",
+      "sha256": "f768a36dacb46233c3fbf93fff6f5dcac4be20388763fb623e2d8a361683f335",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -15891,8 +15941,16 @@
           "line": 32
         },
         {
-          "name": "nia_root_prepare",
+          "name": "exchange",
           "line": 41
+        },
+        {
+          "name": "nia_root_prepare",
+          "line": 97
+        },
+        {
+          "name": "nia_root_reinspect",
+          "line": 121
         }
       ],
       "with_dependencies": [],

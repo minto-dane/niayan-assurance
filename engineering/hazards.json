@@ -1488,6 +1488,17 @@
         "REQ-148"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-135",
+      "title": "再検査応答と独立期待rootの混同または後続処理前の排他解放",
+      "severity": "critical",
+      "mitigation": "元intentと新期限を分離しcanonical全応答と独立identityを照合する。応答後の保持内容/設定元/認可/providerを検査し、専用limited型に三予約とarchive FDを明示Closeまで保持する。",
+      "residual_risk": "Borrowed production providers must retain bank/all-writer/mount exclusion through handle Close. Held alone does not detect provider revocation or mount changes; physical root/boot effects and recovery remain unimplemented.",
+      "requirements": [
+        "REQ-149"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

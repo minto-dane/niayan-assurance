@@ -4529,6 +4529,34 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-157",
+      "title": "root handoffの終端状態と全所有FDの解放試行",
+      "shall": "root handoffは試行をI/O前に記録し、失敗/閉鎖後に再利用せず、解放エラーでも残る所有資源の解放を試みなければならない。同じFD番号のclose再試行と解放失敗後の成功応答をしてはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0119"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0119.ja.md"
+      ],
+      "code": [
+        "distribution/native/root_handoff.py"
+      ],
+      "tests": [
+        "distribution/native/check_handoff_lifecycle.py",
+        "distribution/native/test_handoff_lifecycle.py",
+        "pkgcore/tests/check_root_handoff.py"
+      ],
+      "hazards": [
+        "HAZ-143"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

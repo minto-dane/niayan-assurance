@@ -1730,6 +1730,17 @@
       "expected": "不正ackを拒否しFDを解放する。送信後の失敗は不確定として保持する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/check_root_handoff.py"
+    },
+    {
+      "id": "FAULT-156",
+      "scenario": "入力FDの実close後EIOとFD番号再利用、pidfd closeエラー、閉鎖/失敗後操作、応答待ち中取消、有限poll予算と状態関係の負の対照を検査する。",
+      "requirements": [
+        "REQ-157"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "残る所有資源を解放し再利用されたFDは維持する。解放失敗後に応答せず、状態再開を許さない。深さ制限のない有限探索と実境界試験の範囲を分ける。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/test_handoff_lifecycle.py"
     }
   ]
 }

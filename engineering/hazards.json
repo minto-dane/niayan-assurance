@@ -1576,6 +1576,17 @@
         "REQ-156"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-143",
+      "title": "handoff解放失敗による資源残留または再利用FDの誤解放",
+      "severity": "critical",
+      "mitigation": "状態を終端化し所有参照を取り外して一度だけ解放する。OSErrorでも残る入力/pidfd/socketを解放し応答を拒否する。有限制御探索、厳格型検査と実FD再利用/エラー検査を行う。",
+      "residual_risk": "Whole Python/OS lifetime proof, arbitrary asynchronous interruption and physical cancellation remain unqualified.",
+      "requirements": [
+        "REQ-157"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -1686,6 +1686,17 @@
       "expected": "不一致を許可せず、readiness後に新CAS予約を取得できてもBankは保持する。終了後ROを確認し、元root/記録を変えず、attemptを消してbankを再利用しない。hook失敗を成功扱いしない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_session.py"
+    },
+    {
+      "id": "FAULT-152",
+      "scenario": "隔離peerでscope/identity/期限/UID/PID変更、過大/非正規/余分FD/control切詰め、forkコピーと観測変更/期限切れを検査し、実bank VMでnative transportとcontrollerの準備/観測/終了を検査する。",
+      "requirements": [
+        "REQ-153"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "異常を成功として受理せず、借用FDを閉じず、受信不要FDを解放する。観測失効後にhandleを再利用せず、Close/Finalizeの寿命を守る。実root/記録とROを維持する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/check_root_session_transport.py"
     }
   ]
 }

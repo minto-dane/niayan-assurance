@@ -1532,6 +1532,17 @@
         "REQ-152"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-139",
+      "title": "root session応答を独立認可と誤認し、再送/期限更新/FD漏洩で予約を壊す",
+      "severity": "critical",
+      "mitigation": "専用limited handle、root peer/message検査、全正規応答照合、借用FDの非解放、不要受信FDの解放、元期限と作成PID、明示Closeと不確定結果を実装する。観測と独立site/世代認可を区別する。",
+      "residual_risk": "Trusted root supervisor and external privileged writers remain outside this transport boundary. Native generation handoff, site consent/supply/revocation, independent physical observer and actual boot integration remain incomplete.",
+      "requirements": [
+        "REQ-153"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -949,6 +949,15 @@
       ],
       "execution_owner": "pkgcore-maintainers",
       "note": "native PAX regular header emission; exact byte names, numeric owners, signed fractional clocks and full signed bounds, preserved raw extensions and failure clearing; no root application; isolated base64/name/time field refusals; independent check_tar_output.py and real native payload roundtrip are retained separately in source-bound evidence"
+    },
+    {
+      "main": "pkgcore/tests/run_root_session_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "Default execution checks empty handles and invalid input. Isolated UID0 protocol peer checks live Ada/C ABI, Open/Observe/Close and controlled finalization separately; root transport is not generation/site admission. Actual controller VM and sanitizer evidence are recorded separately."
     }
   ]
 }

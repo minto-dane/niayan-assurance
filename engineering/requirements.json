@@ -4409,6 +4409,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-153",
+      "title": "root supervisorのnative session transportと観測境界",
+      "shall": "root専用transportは既存非root SDKの権限制約を維持し、独立scope/pinと実FDを一回だけ送信し、全応答とsenderを照合し、元期限と接続/FDの寿命を維持しなければならない。応答のroot identityを独立観測や認可へ変換してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0115"
+      ],
+      "spec": [
+        "distribution/native/root-session-sdk.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_root_session.ads",
+        "pkgcore/runtime/pkg_root_session.adb",
+        "pkgcore/runtime/root_session.c"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_session_tests.adb",
+        "pkgcore/tests/check_root_session_transport.py",
+        "distribution/native/worker/check_root_session_sdk.py"
+      ],
+      "hazards": [
+        "HAZ-139"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

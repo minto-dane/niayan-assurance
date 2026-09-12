@@ -14753,6 +14753,117 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_root_session.adb",
+      "sha256": "f188fabb69e2b29b1316ae54584736b3703d1b58f96f0e1e3a92f4976fdef308",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Session",
+          "line": 3
+        },
+        {
+          "name": "Convert",
+          "line": 6
+        },
+        {
+          "name": "Open",
+          "line": 9
+        },
+        {
+          "name": "Start",
+          "line": 15
+        },
+        {
+          "name": "Observe",
+          "line": 50
+        },
+        {
+          "name": "Sample",
+          "line": 52
+        },
+        {
+          "name": "Held",
+          "line": 59
+        },
+        {
+          "name": "Current",
+          "line": 60
+        },
+        {
+          "name": "Observation",
+          "line": 65
+        },
+        {
+          "name": "Close",
+          "line": 70
+        },
+        {
+          "name": "Finish",
+          "line": 71
+        },
+        {
+          "name": "Finalize",
+          "line": 77
+        },
+        {
+          "name": "Discard",
+          "line": 78
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Hex"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_root_session.ads",
+      "sha256": "9d4a797f48025f8df58f433f5cd490adba6a17dc290e8409e20e94279fedc1be",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Session",
+          "line": 5
+        },
+        {
+          "name": "Open",
+          "line": 7
+        },
+        {
+          "name": "Observe",
+          "line": 13
+        },
+        {
+          "name": "Held",
+          "line": 15
+        },
+        {
+          "name": "Observation",
+          "line": 16
+        },
+        {
+          "name": "Close",
+          "line": 17
+        },
+        {
+          "name": "Finalize",
+          "line": 18
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Types",
+        "Pkg_Root_Preparation",
+        "System",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_rpm_auth.adb",
       "sha256": "5e18caa61f3622e09a175ee33b6be7be601424be6de09f06784ac09f17b49c98",
       "repository": "pkgcore",
@@ -15951,6 +16062,69 @@
         {
           "name": "nia_root_reinspect",
           "line": 121
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/root_session.c",
+      "sha256": "92d848ae7bc020ae6b5918047edaa991160c522b259f9ce8002bbaa8e1b56b5e",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "session_clock",
+          "line": 24
+        },
+        {
+          "name": "wait_for",
+          "line": 29
+        },
+        {
+          "name": "hex_value",
+          "line": 40
+        },
+        {
+          "name": "boot_value",
+          "line": 49
+        },
+        {
+          "name": "owned",
+          "line": 57
+        },
+        {
+          "name": "packet_send",
+          "line": 60
+        },
+        {
+          "name": "packet_receive",
+          "line": 75
+        },
+        {
+          "name": "observation",
+          "line": 107
+        },
+        {
+          "name": "nia_root_session_discard",
+          "line": 131
+        },
+        {
+          "name": "nia_root_session_open",
+          "line": 137
+        },
+        {
+          "name": "nia_root_session_held",
+          "line": 180
+        },
+        {
+          "name": "nia_root_session_observe",
+          "line": 186
+        },
+        {
+          "name": "nia_root_session_close",
+          "line": 198
         }
       ],
       "with_dependencies": [],

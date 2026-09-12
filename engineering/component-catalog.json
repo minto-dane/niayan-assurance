@@ -8667,6 +8667,35 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/app/pkg_operator_guard.adb",
+      "sha256": "56dcce467c0bf4fcd611f350a3ecf80c058009a04aa8e8c69998ced18e33a2e3",
+      "repository": "pkgcore",
+      "layer": "app",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Operator_Guard",
+          "line": 8
+        },
+        {
+          "name": "Nonblocking",
+          "line": 21
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Command_Line",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Hex",
+        "MC_Posix",
+        "MC_Runtime",
+        "MC_Types",
+        "Pkg_Operator_Authorization"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/app/pkg_recoveryctl.adb",
       "sha256": "bd1948a1c27672aa5e0015ed20f11ff947f6a40ee1c600c4ee775195c9bb7895",
       "repository": "pkgcore",

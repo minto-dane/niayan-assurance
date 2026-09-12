@@ -1642,6 +1642,17 @@
         "REQ-161"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-149",
+      "title": "認証待ちによる取消監視停止と滞留した認可返答の再利用",
+      "severity": "critical",
+      "mitigation": "native SDKを専用子へ隔離し、親はpeer/子pidfd/pipeと有限期限を非同期監視する。一件ずつ順序/現在時刻/鮮度を検査し、失敗を終端にする。終了は未回収leaderに束縛したgroup停止とFD解放を行う。",
+      "residual_risk": "Caller event-loop scheduling, exact-plan consent, native generation admission, actual effect cancellation and whole Ada/Python/FFI assurance remain unqualified.",
+      "requirements": [
+        "REQ-162"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

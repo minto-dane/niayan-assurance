@@ -1796,6 +1796,17 @@
       "expected": "独立scopeとoperationに一致しない要求/応答を拒否し、送信試行後は不確定または消費済みとして再送しない。借用FDを変更せず受信コピーを応答前に解放する。",
       "execution": "not-run",
       "reference_tests": "pkgcore/tests/check_root_handoff.py"
+    },
+    {
+      "id": "FAULT-162",
+      "scenario": "実DEB/実polkitの既定拒否、誤plan、rule変更/authority再起動、peer取消/終了、helper SIGSTOP、最初の返答の滞留、重複要求/誤番号、FD解放時番号再利用",
+      "requirements": [
+        "REQ-162"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "古い/不正/無応答の結果で効果を許可せずobjectを失効する。後続要求/再読取を拒否し、終了時に専用子と所有FDを解放する。controller効果を自動的にrollbackしたとはしない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_operator_guard.py"
     }
   ]
 }

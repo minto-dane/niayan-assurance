@@ -4686,6 +4686,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-162",
+      "title": "native管理者認証の非同期で新鮮な点観測",
+      "shall": "root supervisorは同期polkit待ちで他の取消監視を停止してはならない。既存native SDKを専用子processで確認し、同じplan/request、元期限、順序と終了後1000 ms以内の応答を要求する。失効/取消/無応答後の再利用、保存grantや自動再認証を禁止する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0125"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0125.ja.md",
+        "distribution/native/operator-authorization.ja.md"
+      ],
+      "code": [
+        "pkgcore/app/pkg_operator_guard.adb",
+        "distribution/native/operator_guard.py"
+      ],
+      "tests": [
+        "distribution/native/test_operator_guard.py",
+        "distribution/native/worker/check_operator_guard.py"
+      ],
+      "hazards": [
+        "HAZ-149"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

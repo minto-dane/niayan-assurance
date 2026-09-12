@@ -245,6 +245,7 @@ SPARK-intentはソース上の意図であり、未指定コードや外部依�
 |[controlcore/src/ctl_wire.ads](../../../controlcore/src/ctl_wire.ads)|src / SPARK-intent-not-proof|Ctl_Wire:4<br>Encode:8<br>Decode:9<br>Encode:10<br>Decode:11|
 |[controlcore/src/ctl_workflow.adb](../../../controlcore/src/ctl_workflow.adb)|src / SPARK-intent-not-proof|Ctl_Workflow:2<br>Unresolved:3<br>Complete:10<br>Ready:18<br>Completion_Reserve:28<br>Apply:43<br>Supersede:97|
 |[controlcore/src/ctl_workflow.ads](../../../controlcore/src/ctl_workflow.ads)|src / SPARK-intent-not-proof|Ctl_Workflow:4<br>Ready:32<br>Complete:33<br>Unresolved:34<br>Completion_Reserve:35<br>Apply:40<br>Supersede:44|
+|[pkgcore/app/pkg_operator_guard.adb](../../../pkgcore/app/pkg_operator_guard.adb)|app / non-SPARK-or-boundary|Pkg_Operator_Guard:8<br>Nonblocking:21|
 |[pkgcore/app/pkg_recoveryctl.adb](../../../pkgcore/app/pkg_recoveryctl.adb)|app / non-SPARK-or-boundary|Pkg_Recoveryctl:6|
 |[pkgcore/app/pkg_scrubctl.adb](../../../pkgcore/app/pkg_scrubctl.adb)|app / non-SPARK-or-boundary|Pkg_Scrubctl:6<br>Free:10<br>Free:11|
 |[pkgcore/app/pkg_store_bootstrap.adb](../../../pkgcore/app/pkg_store_bootstrap.adb)|app / non-SPARK-or-boundary|Pkg_Store_Bootstrap:6|

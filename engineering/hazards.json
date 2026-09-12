@@ -1609,6 +1609,17 @@
         "REQ-158"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-146",
+      "title": "worker待機中の取消遅延と子孫残留またはreap後のPID再利用",
+      "severity": "critical",
+      "mitigation": "元期限と依頼元を非blocking pipeと並行監視し、容量/event予算を制限する。未回収leaderを保持してgroupへ停止signalを送り、その後だけ有限waitを行う。取消後もRO化とfirst-use記録を維持する。",
+      "residual_risk": "Kernel I/O stalls, arbitrary privileged writers, escaped process groups, full Python/OS proof and production admission remain unqualified.",
+      "requirements": [
+        "REQ-159"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

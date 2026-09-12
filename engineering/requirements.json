@@ -4596,6 +4596,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-159",
+      "title": "root worker実行中の取消と有限資源寿命",
+      "shall": "controllerは展開/再検査中も依頼元socket/pidfdと元期限を監視し、取消/容量超過/異常時は専用処理群を停止してからleaderを回収しなければならない。不確定な効果を成功や再実行許可に変換せず、first-use記録と読み取り専用化を維持する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0122"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0122.ja.md"
+      ],
+      "code": [
+        "distribution/native/root_worker_monitor.py",
+        "distribution/native/root_session.py",
+        "distribution/packaging/root-preparation/debian/niaos-root-preparation.install"
+      ],
+      "tests": [
+        "distribution/native/test_root_worker_monitor.py",
+        "distribution/native/worker/check_root_session_cancel.py"
+      ],
+      "hazards": [
+        "HAZ-146"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

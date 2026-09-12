@@ -1763,6 +1763,17 @@
       "expected": "稼働unit/PIDや既存保存物を変更せずlive更新を拒否し、オフライン対象だけで旧package所有ファイルを除去する。chrootでのunpackを完全なconfigure受入とは数えない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_service_upgrade.py"
+    },
+    {
+      "id": "FAULT-159",
+      "scenario": "実workerと子孫のSIGSTOP中に接続断/取消packet/依頼元終了。stdout/stderr上限超過と元期限終了。専用VMでnative worker実行中の接続断、RO化、attempt保持と再要求拒否。",
+      "requirements": [
+        "REQ-159"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "未回収leaderのgroupを停止してから回収する。不確定を成功に変換せずROとfirst-use barrierを維持する。有限制御の検査を全runtime証明と数えない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_session_cancel.py"
     }
   ]
 }

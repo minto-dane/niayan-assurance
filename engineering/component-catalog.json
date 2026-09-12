@@ -7772,23 +7772,6 @@
       "semantic_analysis": false
     },
     {
-      "path": "controlcore/app/nia.adb",
-      "sha256": "170043e4facd836c5ddefe2b1cf354baaae6aa8b35eaa3d30d186f6e4911067d",
-      "repository": "controlcore",
-      "layer": "app",
-      "verification_boundary": "non-SPARK-or-boundary",
-      "symbols": [
-        {
-          "name": "Nia",
-          "line": 4
-        }
-      ],
-      "with_dependencies": [
-        "Missionctl"
-      ],
-      "semantic_analysis": false
-    },
-    {
       "path": "controlcore/runtime/ctl_capsule.adb",
       "sha256": "7eb6a06cb644ae535df4f3acbfaf74d56cd15561eea725940a6673300ff1532f",
       "repository": "controlcore",
@@ -8514,7 +8497,7 @@
     },
     {
       "path": "controlcore/src/ctl_profile.ads",
-      "sha256": "a344f882949983f957562369bb7f1dc222c1da1ab5ff44a485c3211089a1971b",
+      "sha256": "c483da282a0e6bc9d1853959f55644741dee97a74510881842f7729ff1faf084",
       "repository": "controlcore",
       "layer": "src",
       "verification_boundary": "SPARK-intent-not-proof",

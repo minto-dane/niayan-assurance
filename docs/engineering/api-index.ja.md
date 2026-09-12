@@ -222,7 +222,6 @@ SPARK-intentはソース上の意図であり、未指定コードや外部依�
 |[configcore/src/config_values.ads](../../../configcore/src/config_values.ads)|src / SPARK-intent-not-proof|Config_Values:3<br>Length:7<br>Image:9<br>Set:11<br>Name:13<br>Boolean_Of:23<br>Number_Of:24<br>Text_Of:25<br>Canonical:26<br>Same:27<br>Parse:28|
 |[controlcore/app/mission_sign.adb](../../../controlcore/app/mission_sign.adb)|app / non-SPARK-or-boundary|Mission_Sign:6<br>Done:14|
 |[controlcore/app/missionctl.adb](../../../controlcore/app/missionctl.adb)|app / non-SPARK-or-boundary|Missionctl:8<br>Help:17<br>Read_File:37<br>Print_Item:44<br>Done:56|
-|[controlcore/app/nia.adb](../../../controlcore/app/nia.adb)|app / non-SPARK-or-boundary|Nia:4|
 |[controlcore/runtime/ctl_capsule.adb](../../../controlcore/runtime/ctl_capsule.adb)|runtime / non-SPARK-or-boundary|Ctl_Capsule:3<br>Inspect:4|
 |[controlcore/runtime/ctl_capsule.ads](../../../controlcore/runtime/ctl_capsule.ads)|runtime / non-SPARK-or-boundary|Ctl_Capsule:3<br>Inspect:4|
 |[controlcore/runtime/ctl_closure.adb](../../../controlcore/runtime/ctl_closure.adb)|runtime / non-SPARK-or-boundary|Ctl_Closure:3<br>Encode:5<br>Decode:16<br>Verify:35|

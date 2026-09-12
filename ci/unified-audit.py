@@ -91,7 +91,7 @@ def packaging(root:Path):
         for row in manifest['executables']:
             eng.fields(row,{'source','destination','mode'},'executable')
             name=row['source'].removeprefix('build/bin/')
-            target='usr/bin/nia' if repo=='controlcore' and name=='nia' else 'usr/libexec/nia/'+name
+            target='usr/libexec/nia/'+name
             if (name in declared or row['source']!='build/bin/'+name or row['destination']!=target
                 or target in destinations or row['mode']!='0755'):raise eng.Invalid('artifact executable scope')
             declared.add(name);destinations.add(target);checks.append(repo+'/'+name)

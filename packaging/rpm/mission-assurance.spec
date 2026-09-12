@@ -5,7 +5,7 @@ Name: mission-assurance
 Version: 0.1.0
 Release: 0.20260906.unified%{?dist}
 Summary: Mission Core assurance independent tools and integration interfaces
-License: MIT
+License: BSD-3-Clause
 Source0: %{name}-%{version}.tar.gz
 ExclusiveArch: x86_64
 %if 0%{?suse_version}
@@ -42,8 +42,8 @@ install -p -m0755 build/bin/controlctl %{buildroot}%{_libexecdir}/mission-core/a
 install -p -m0755 build/bin/platformctl %{buildroot}%{_libexecdir}/mission-core/assurance/platformctl
 
 %files
-%license LICENSE
-%doc README.md SECURITY.md docs/
+%license LICENSE LICENSES/MIT-legacy.txt
+%doc LICENSING.md README.md SECURITY.md docs/
 %{_libexecdir}/mission-core/assurance/
 
 # Deliberately no %post, %preun, service presets, daemon reload or state removal.

@@ -4469,6 +4469,66 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-155",
+      "title": "言語と影響に応じた厳格な基準と形式検証",
+      "shall": "C等の実ソースを形式検証し、他言語も影響に応じた厳格な基準を適用する。部分証明を全実装の保証へ拡大してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0117"
+      ],
+      "spec": [
+        "assurance/docs/engineering/specs/implementation-assurance.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/root_handoff_wire.c",
+        "pkgcore/runtime/root_handoff_wire.h"
+      ],
+      "tests": [
+        "pkgcore/tests/proof/root_handoff_wire.c"
+      ],
+      "hazards": [
+        "HAZ-141"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-156",
+      "title": "認可と予約を保持するroot handoff",
+      "shall": "世代処理は前後の独立認可と全予約を保持し、実資格情報と独立scopeへ一度限りの準備要求を束縛しなければならない。送信後の失敗を未実行と扱ってはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0118"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0118.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_stage.ads",
+        "pkgcore/runtime/pkg_generation_stage.adb",
+        "pkgcore/runtime/pkg_root_handoff.ads",
+        "pkgcore/runtime/pkg_root_handoff.adb",
+        "pkgcore/runtime/root_handoff.c",
+        "distribution/native/root_handoff.py"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_handoff_tests.adb",
+        "pkgcore/tests/check_root_handoff.py",
+        "pkgcore/tests/root_archive_stage_test.adb"
+      ],
+      "hazards": [
+        "HAZ-142"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

@@ -1708,6 +1708,28 @@
       "expected": "不一致と失効を許可せず、decisionを毒化して元contextへ戻せない。借用FDは維持し、自身のFDを解放する。fixture ruleは削除し、認証を実効果/起動成功扱いしない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_operator_authorization.py"
+    },
+    {
+      "id": "FAULT-154",
+      "scenario": "任意wire入力の証明と反復上限不足の負の対照を実行する。",
+      "requirements": [
+        "REQ-155"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "要求一致と安全性を検証し、上限不足/未証明/警告を成功としない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/proof/root_handoff_wire.c"
+    },
+    {
+      "id": "FAULT-155",
+      "scenario": "別scope/子孫/過多FD/切詰め/誤応答/取消/期限とnative transport前後の拒否を検査する。",
+      "requirements": [
+        "REQ-156"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不正ackを拒否しFDを解放する。送信後の失敗は不確定として保持する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/check_root_handoff.py"
     }
   ]
 }

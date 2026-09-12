@@ -967,6 +967,15 @@
       "prepare_directories": [],
       "execution_owner": "pkgcore-maintainers",
       "note": "Default empty-handle and invalid-input checks; live root Ada/C ABI is exercised against real polkit in a disposable VM, with exact fixture actor/plan/request and no authentication dialog. Private bus protocol and sanitizer evidence are separate."
+    },
+    {
+      "main": "pkgcore/tests/run_root_handoff_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "Default invalid-handle checks; live private root handoff and scoped pure wire proof are recorded separately. Complete transport proof and production admission remain unestablished."
     }
   ]
 }

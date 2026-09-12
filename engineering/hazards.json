@@ -1554,6 +1554,28 @@
         "REQ-154"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-141",
+      "title": "部分証明による全特権実装の誤認定",
+      "severity": "critical",
+      "mitigation": "証明範囲/仮定/入力hash/全property/反復上限を記録し未達を本番未完とする。",
+      "residual_risk": "Complete C/FFI/privileged-runtime proof and coding-rule compliance remain unestablished.",
+      "requirements": [
+        "REQ-155"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-142",
+      "title": "別senderやscopeのFDによるroot準備",
+      "severity": "critical",
+      "mitigation": "実direct childのpidfdとmessage UID/PID、独立scope、2 FD、期限を照合しnative認可/予約を保持する。",
+      "residual_risk": "Production admission/consent/launcher, reinspection handoff and complete C proof remain unqualified.",
+      "requirements": [
+        "REQ-156"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

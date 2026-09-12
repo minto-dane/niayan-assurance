@@ -13346,7 +13346,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.adb",
-      "sha256": "8fc30e47727c28c89292e07cab9ab3e4fd92a0821916b61e90421242e848ac04",
+      "sha256": "c347a06379456673b50d37850b8e8ec233c6b70cdfff79f5341dbf742c14b1e4",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13476,7 +13476,7 @@
           "line": 346
         },
         {
-          "name": "Prepare_Root",
+          "name": "Prepare_Root_Using",
           "line": 378
         },
         {
@@ -13484,24 +13484,36 @@
           "line": 386
         },
         {
-          "name": "Close",
+          "name": "Prepare_Root",
           "line": 423
         },
         {
-          "name": "Held",
-          "line": 428
+          "name": "Request_Root",
+          "line": 426
         },
         {
-          "name": "Root_Observation",
+          "name": "Prepare",
           "line": 434
         },
         {
-          "name": "Reinspect_Root_And_Hold",
+          "name": "Close",
           "line": 438
         },
         {
+          "name": "Held",
+          "line": 443
+        },
+        {
+          "name": "Root_Observation",
+          "line": 449
+        },
+        {
+          "name": "Reinspect_Root_And_Hold",
+          "line": 453
+        },
+        {
           "name": "Inspect",
-          "line": 490
+          "line": 505
         }
       ],
       "with_dependencies": [
@@ -13536,7 +13548,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.ads",
-      "sha256": "9c6189f62f1b49356ebcf318d38de320a42bc5a350b7a8d7166d6bc24f589ea3",
+      "sha256": "34a2d28316e125b2b80b7c47b7abf3322124b58145e0ade41e0686d2287f4058",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13602,12 +13614,16 @@
           "line": 55
         },
         {
+          "name": "Prepare_Root_Using",
+          "line": 70
+        },
+        {
           "name": "Prepare_Root",
-          "line": 65
+          "line": 79
         },
         {
           "name": "Inspect",
-          "line": 72
+          "line": 86
         }
       ],
       "with_dependencies": [
@@ -14837,6 +14853,92 @@
         "MC_Types",
         "Pkg_Conffile_Choice",
         "Pkg_Deb_Payload",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_root_handoff.adb",
+      "sha256": "86c3eeaae0f9bbee64820ffc0acf7741645f3d26a53410b4099e996e98fea885",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Handoff",
+          "line": 3
+        },
+        {
+          "name": "Result",
+          "line": 4
+        },
+        {
+          "name": "Open",
+          "line": 6
+        },
+        {
+          "name": "Start",
+          "line": 7
+        },
+        {
+          "name": "Prepare",
+          "line": 14
+        },
+        {
+          "name": "Send",
+          "line": 17
+        },
+        {
+          "name": "Close",
+          "line": 29
+        },
+        {
+          "name": "Finish",
+          "line": 30
+        },
+        {
+          "name": "Finalize",
+          "line": 33
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Codec"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_root_handoff.ads",
+      "sha256": "f0e13138c4f0c46d01991aedf6f0886e9fa95be485aa1fb3046f749b57af32a1",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Root_Handoff",
+          "line": 4
+        },
+        {
+          "name": "Open",
+          "line": 6
+        },
+        {
+          "name": "Prepare",
+          "line": 7
+        },
+        {
+          "name": "Close",
+          "line": 10
+        },
+        {
+          "name": "Finalize",
+          "line": 11
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Types",
+        "System",
         "private"
       ],
       "semantic_analysis": false
@@ -16179,6 +16281,79 @@
         "Pkg_Tar_Framing",
         "private"
       ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/root_handoff.c",
+      "sha256": "69f2f51c2bfde7787b387395c38846113d500315ce6f0cb6fc7c0f985d37b688",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "clock_ms",
+          "line": 27
+        },
+        {
+          "name": "owned",
+          "line": 32
+        },
+        {
+          "name": "wait_for",
+          "line": 35
+        },
+        {
+          "name": "nia_root_handoff_close",
+          "line": 50
+        },
+        {
+          "name": "nia_root_handoff_open",
+          "line": 57
+        },
+        {
+          "name": "nia_root_handoff_prepare",
+          "line": 86
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/root_handoff_wire.c",
+      "sha256": "a1429178ea9011bb65891121a93c568cbc730f739df0bd59a8fd7e2ac8e0a084",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "read_u64",
+          "line": 4
+        },
+        {
+          "name": "identity_present",
+          "line": 13
+        },
+        {
+          "name": "nia_handoff_wire_valid",
+          "line": 27
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/root_handoff_wire.h",
+      "sha256": "024286eda26479f8aaecba11af4c8e2b693df3b9515a42c273f9d8aee57c4f54",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "nia_handoff_wire_valid",
+          "line": 11
+        }
+      ],
+      "with_dependencies": [],
       "semantic_analysis": false
     },
     {

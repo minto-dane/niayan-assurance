@@ -1392,7 +1392,7 @@
     },
     {
       "id": "FAULT-125",
-      "scenario": "非許可peer UID、別CAS予約、既存stage、予約維持、永続結果の再起動観測、intent記録後の実サービスSIGKILL",
+      "scenario": "別CAS予約、並行Bank、既存stage、予約維持、永続結果の再観測、共有Bankのintent永続化後のprocess SIGKILL（peer/FD通信はroot-session試験）",
       "requirements": [
         "REQ-125"
       ],
@@ -1403,25 +1403,25 @@
     },
     {
       "id": "FAULT-126",
-      "scenario": "prepare-root認可拒否、CAS予約の競合確認、実peer/FD送受信、展開後のroot-prepared認可拒否、非特権SDKの実UID0拒否",
+      "scenario": "prepare-root認可拒否、CAS予約競合、実FDを必須transportへ貸与、応答後の認可拒否、非特権SDKの実UID0拒否。本番sessionとの接続は未完。",
       "requirements": [
         "REQ-126"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
       "expected": "非認可のroot準備を開始せず、実予約を保持する。展開後拒否では完成した非公開treeが残り得るため不確定とし、公開やboot成功を返さない。",
       "execution": "not-run",
-      "reference_tests": "distribution/native/worker/check_root_preparation.py"
+      "reference_tests": "pkgcore/tests/root_archive_stage_test.adb"
     },
     {
       "id": "FAULT-127",
-      "scenario": "packageの自動起動/初期化禁止、実account/namespace/資源上限、bootstrap再実行拒否、再起動後のbank lock/CAS lock/設定欠損",
+      "scenario": "packageの自動起動/初期化禁止、bootstrap再実行拒否、後継sessionの再起動後bank lock/CAS lock/設定欠損、旧unit不在",
       "requirements": [
         "REQ-127"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
-      "expected": "実unitで元fixtureから非公開rootを作成し、停止後も履歴を保持する。欠損を空状態として復元せず、extractedを公開やboot成功にしない。",
+      "expected": "後継unitでstorageを保持し、欠損を空状態として復元しない。起動を実展開やboot成功と数えない。",
       "execution": "not-run",
-      "reference_tests": "distribution/native/worker/check_service_deployment.py"
+      "reference_tests": "distribution/native/worker/check_bank_device.py"
     },
     {
       "id": "FAULT-128",
@@ -1741,6 +1741,28 @@
       "expected": "残る所有資源を解放し再利用されたFDは維持する。解放失敗後に応答せず、状態再開を許さない。深さ制限のない有限探索と実境界試験の範囲を分ける。",
       "execution": "not-run",
       "reference_tests": "distribution/native/test_handoff_lifecycle.py"
+    },
+    {
+      "id": "FAULT-157",
+      "scenario": "v5/v6で認可/独立観測/transport拒否、例外、応答後identity/元期限/認可/設定元の変化、busy handleとCloseを検査する。UID0ではどちらのcallbackも呼ばれないことを確認する。",
+      "requirements": [
+        "REQ-158"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "独立観測を応答で代替せず、実FDと三予約を保持する。呼出し後の失敗は不確定で観測を公開せず、既存handleを置換しない。失敗/Closeはnative所有予約を解放する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/root_archive_stage_test.adb"
+    },
+    {
+      "id": "FAULT-158",
+      "scenario": "旧0.7.0の実packageからオフラインunpack更新、旧unit/devの除去、既存記録保持、旧版および稼働後継controllerに対するlive更新拒否",
+      "requirements": [
+        "REQ-158"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "稼働unit/PIDや既存保存物を変更せずlive更新を拒否し、オフライン対象だけで旧package所有ファイルを除去する。chrootでのunpackを完全なconfigure受入とは数えない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_service_upgrade.py"
     }
   ]
 }

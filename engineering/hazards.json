@@ -1587,6 +1587,28 @@
         "REQ-157"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-144",
+      "title": "旧直結経路や応答由来identityによる再検査認可の迂回",
+      "severity": "critical",
+      "mitigation": "transportと独立observerを両方必須にし、前後のnative認可/予約/保持内容/設定と元期限/物理identityを照合する。旧SDK wrapperを廃止し、呼出し後の失敗を不確定として解放する。 旧service/socket/C RPCと専用device viewを撤去する。",
+      "residual_risk": "Production cross-UID retained-session protocol, full admission/consent and complete boundary proof remain unfinished.",
+      "requirements": [
+        "REQ-158"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-145",
+      "title": "制御面の稼働中更新によるwriterと予約の喪失",
+      "severity": "critical",
+      "mitigation": "旧制御面の稼働中移行を設けず、preinstの生成helperより前でlive更新を拒否する。対象OS停止後のオフライン更新だけを許可し、元intent/lockを削除しない。実packageで稼働unit/PIDと保存物の不変、旧所有ファイルの除去を検査する。",
+      "residual_risk": "Offline target isolation is an installer/operator precondition. Administrator-supplied units, arbitrary privileged writers, full configuration migration and end-to-end power-loss recovery remain outside this package-unpack acceptance.",
+      "requirements": [
+        "REQ-158"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

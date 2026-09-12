@@ -3625,7 +3625,8 @@
       "shall": "世代とrootの予約を保持してCASを再取得し、保持内容と現在認可を再検証した同じ予約から実tar FDを渡さなければならない。応答後にも保持内容と認可を確認し、送信後の拒否を未実行や成功としてはならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0086"
+        "ADR-0086",
+        "ADR-0120"
       ],
       "spec": [
         "distribution/native/root-preparation.ja.md"
@@ -3633,12 +3634,11 @@
       "code": [
         "assurance/runtime/mc_store.ads",
         "pkgcore/runtime/pkg_generation_stage.adb",
-        "pkgcore/runtime/pkg_root_preparation.adb",
-        "pkgcore/runtime/root_preparation.c"
+        "pkgcore/runtime/pkg_root_session.adb",
+        "pkgcore/runtime/root_session.c"
       ],
       "tests": [
-        "pkgcore/tests/root_archive_stage_test.adb",
-        "distribution/native/worker/check_root_preparation.py"
+        "pkgcore/tests/root_archive_stage_test.adb"
       ],
       "hazards": [
         "HAZ-112"
@@ -3656,7 +3656,8 @@
       "status": "partial-integration",
       "adr": [
         "ADR-0087",
-        "ADR-0089"
+        "ADR-0089",
+        "ADR-0120"
       ],
       "spec": [
         "distribution/native/service-deployment.ja.md"
@@ -3664,13 +3665,14 @@
       "code": [
         "distribution/native/root_bank.py",
         "distribution/native/prepare_service_package.py",
-        "distribution/packaging/root-preparation/debian/niaos-root-preparation.service",
+        "distribution/packaging/root-preparation/debian/niaos-root-session.service",
         "pkgcore/app/pkg_store_bootstrap.adb",
         "distribution/native/storage_bootstrap.py"
       ],
       "tests": [
-        "distribution/native/worker/check_service_deployment.py",
-        "pkgcore/tests/check_store_bootstrap.py"
+        "distribution/native/worker/check_bank_device.py",
+        "pkgcore/tests/check_store_bootstrap.py",
+        "distribution/native/worker/check_root_session.py"
       ],
       "hazards": [
         "HAZ-113"
@@ -4211,7 +4213,8 @@
       "shall": "設定済みrootは元rootと区別した世代形式で全選択と閉包を保持し、独立認可されたsourceを実CAS予約の下で再観測して格納・準備しなければならない。適用前の観測をaccepted復旧許可へ流用してはならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0108"
+        "ADR-0108",
+        "ADR-0120"
       ],
       "spec": [
         "distribution/native/configured-root.ja.md",
@@ -4224,8 +4227,7 @@
       ],
       "tests": [
         "pkgcore/tests/run_root_configuration_tests.adb",
-        "pkgcore/tests/root_archive_stage_test.adb",
-        "distribution/native/worker/check_root_preparation.py"
+        "pkgcore/tests/root_archive_stage_test.adb"
       ],
       "hazards": [
         "HAZ-132"
@@ -4301,21 +4303,21 @@
       "shall": "再検査は独立期待identityと元intentを照合し、全保持内容と現在認可を再確認した専用handleに世代/root/CAS排他を維持しなければならない。期限切れは観測を無効にするが明示解放までは排他を維持する。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0111"
+        "ADR-0111",
+        "ADR-0120"
       ],
       "spec": [
         "distribution/native/root-preparation.ja.md"
       ],
       "code": [
-        "pkgcore/runtime/pkg_root_preparation.ads",
-        "pkgcore/runtime/pkg_root_preparation.adb",
-        "pkgcore/runtime/root_preparation.c",
+        "pkgcore/runtime/pkg_root_identity.ads",
+        "pkgcore/runtime/pkg_root_session.adb",
+        "pkgcore/runtime/root_session.c",
         "pkgcore/runtime/pkg_generation_stage.ads",
         "pkgcore/runtime/pkg_generation_stage.adb"
       ],
       "tests": [
-        "pkgcore/tests/root_archive_stage_test.adb",
-        "distribution/native/worker/check_root_preparation.py"
+        "pkgcore/tests/root_archive_stage_test.adb"
       ],
       "hazards": [
         "HAZ-135"
@@ -4332,7 +4334,8 @@
       "shall": "controllerの物理root観測は明示選択した専用ext4 bankに限りfilesystem全体をread-onlyへ遷移させ、現在identity/記録/期限/予約を照合しなければならない。共有subtreeやbusyは拒否し、Closeや失敗で暗黙thawしてはならない。",
       "status": "partial-integration",
       "adr": [
-        "ADR-0112"
+        "ADR-0112",
+        "ADR-0120"
       ],
       "spec": [
         "distribution/native/root-freeze.ja.md"
@@ -4343,7 +4346,7 @@
       ],
       "tests": [
         "distribution/native/worker/check_root_freeze.py",
-        "distribution/native/worker/check_root_preparation.py"
+        "pkgcore/tests/root_archive_stage_test.adb"
       ],
       "hazards": [
         "HAZ-136"
@@ -4551,6 +4554,42 @@
       ],
       "hazards": [
         "HAZ-143"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-158",
+      "title": "明示的な単一の世代準備/再検査transport",
+      "shall": "世代準備と再検査は各一つの内部APIで明示的なtransportを要求し、全認可/予約と独立観測を保持しなければならない。旧直結wrapperや失敗時fallbackを残してはならない。 旧特権service/socket/RPCは配布・実行経路から撤去し、共有Bankと永続記録を維持する。制御面の更新はオフライン対象に限定する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0120"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0120.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_stage.ads",
+        "pkgcore/runtime/pkg_generation_stage.adb",
+        "distribution/native/root_bank.py",
+        "distribution/packaging/root-preparation/debian/niaos-root-preparation.preinst"
+      ],
+      "tests": [
+        "pkgcore/tests/root_archive_stage_test.adb",
+        "pkgcore/tests/run_generation_stage_tests.adb",
+        "distribution/native/worker/check_root_bank.py",
+        "distribution/native/worker/check_bank_device.py",
+        "distribution/native/worker/check_root_session.py",
+        "distribution/native/worker/check_root_service_upgrade.py",
+        "pkgcore/tests/run_root_configuration_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-144",
+        "HAZ-145"
       ],
       "required_evidence": [
         "independent-design-review",

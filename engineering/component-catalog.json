@@ -13346,7 +13346,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.adb",
-      "sha256": "c347a06379456673b50d37850b8e8ec233c6b70cdfff79f5341dbf742c14b1e4",
+      "sha256": "d6f3cef6afe308306a6634f6a88e24af16d00c92ff21836c5f3041af6e450840",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13476,7 +13476,7 @@
           "line": 346
         },
         {
-          "name": "Prepare_Root_Using",
+          "name": "Prepare_Root",
           "line": 378
         },
         {
@@ -13484,36 +13484,24 @@
           "line": 386
         },
         {
-          "name": "Prepare_Root",
+          "name": "Close",
           "line": 423
         },
         {
-          "name": "Request_Root",
-          "line": 426
-        },
-        {
-          "name": "Prepare",
-          "line": 434
-        },
-        {
-          "name": "Close",
-          "line": 438
-        },
-        {
           "name": "Held",
-          "line": 443
+          "line": 428
         },
         {
           "name": "Root_Observation",
-          "line": 449
+          "line": 434
         },
         {
           "name": "Reinspect_Root_And_Hold",
-          "line": 453
+          "line": 438
         },
         {
           "name": "Inspect",
-          "line": 505
+          "line": 490
         }
       ],
       "with_dependencies": [
@@ -13540,7 +13528,7 @@
         "Pkg_Image_Inspector",
         "Pkg_Recovery_Audit",
         "Pkg_Root_Archive",
-        "Pkg_Root_Preparation",
+        "Pkg_Root_Identity",
         "Pkg_Root_State",
         "System"
       ],
@@ -13548,7 +13536,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_stage.ads",
-      "sha256": "34a2d28316e125b2b80b7c47b7abf3322124b58145e0ade41e0686d2287f4058",
+      "sha256": "30208980714116e77d211f1ff55627fc692f87ab1cde1ac2b3f3feebd285c3ac",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -13599,31 +13587,27 @@
         },
         {
           "name": "Reinspect_Root_And_Hold",
-          "line": 49
-        },
-        {
-          "name": "Held",
-          "line": 53
-        },
-        {
-          "name": "Root_Observation",
           "line": 54
         },
         {
-          "name": "Close",
-          "line": 55
+          "name": "Held",
+          "line": 63
         },
         {
-          "name": "Prepare_Root_Using",
-          "line": 70
+          "name": "Root_Observation",
+          "line": 64
+        },
+        {
+          "name": "Close",
+          "line": 65
         },
         {
           "name": "Prepare_Root",
-          "line": 79
+          "line": 80
         },
         {
           "name": "Inspect",
-          "line": 86
+          "line": 93
         }
       ],
       "with_dependencies": [
@@ -13631,7 +13615,7 @@
         "MC_Store",
         "MC_Types",
         "Pkg_Generation_Configuration",
-        "Pkg_Root_Preparation"
+        "Pkg_Root_Identity"
       ],
       "semantic_analysis": false
     },
@@ -14909,7 +14893,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_handoff.ads",
-      "sha256": "f0e13138c4f0c46d01991aedf6f0886e9fa95be485aa1fb3046f749b57af32a1",
+      "sha256": "e61c50bc6a91ef976781d1f2585da43df7c81ab47287f4a91e4ae968012ff5a4",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -14944,58 +14928,15 @@
       "semantic_analysis": false
     },
     {
-      "path": "pkgcore/runtime/pkg_root_preparation.adb",
-      "sha256": "0122803d0ce8892b6f97ee8e31a763baa1ffd67f3c88617f63adbdb7028fac98",
+      "path": "pkgcore/runtime/pkg_root_identity.ads",
+      "sha256": "b8ad946705ada8e316e0c549072e42df9fd3cb10319e2cd46ec0c90676dba714",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
-          "name": "Pkg_Root_Preparation",
+          "name": "Pkg_Root_Identity",
           "line": 3
-        },
-        {
-          "name": "Request",
-          "line": 4
-        },
-        {
-          "name": "Send",
-          "line": 8
-        },
-        {
-          "name": "Reinspect",
-          "line": 37
-        },
-        {
-          "name": "Send",
-          "line": 42
-        }
-      ],
-      "with_dependencies": [
-        "Interfaces.C",
-        "MC_Hex",
-        "System"
-      ],
-      "semantic_analysis": false
-    },
-    {
-      "path": "pkgcore/runtime/pkg_root_preparation.ads",
-      "sha256": "40f75e01eb7d5440de0115eeb3547e6c0b8168563759b636f63b614a3b130476",
-      "repository": "pkgcore",
-      "layer": "runtime",
-      "verification_boundary": "non-SPARK-or-boundary",
-      "symbols": [
-        {
-          "name": "Pkg_Root_Preparation",
-          "line": 3
-        },
-        {
-          "name": "Reinspect",
-          "line": 8
-        },
-        {
-          "name": "Request",
-          "line": 17
         }
       ],
       "with_dependencies": [
@@ -15005,7 +14946,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_session.adb",
-      "sha256": "f188fabb69e2b29b1316ae54584736b3703d1b58f96f0e1e3a92f4976fdef308",
+      "sha256": "597df5fad2529d8cf8c35d6a296bcaca1af0958e8820a2ec34fa811316bd19fa",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -15071,7 +15012,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_session.ads",
-      "sha256": "9d4a797f48025f8df58f433f5cd490adba6a17dc290e8409e20e94279fedc1be",
+      "sha256": "c23f5cd09bf63478d4e0bf7d8784fac344a9d02e9993d2769812c361fb7ff492",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -15108,7 +15049,7 @@
       "with_dependencies": [
         "Ada.Finalization",
         "MC_Types",
-        "Pkg_Root_Preparation",
+        "Pkg_Root_Identity",
         "System",
         "private"
       ],
@@ -16351,41 +16292,6 @@
         {
           "name": "nia_handoff_wire_valid",
           "line": 11
-        }
-      ],
-      "with_dependencies": [],
-      "semantic_analysis": false
-    },
-    {
-      "path": "pkgcore/runtime/root_preparation.c",
-      "sha256": "f768a36dacb46233c3fbf93fff6f5dcac4be20388763fb623e2d8a361683f335",
-      "repository": "pkgcore",
-      "layer": "runtime",
-      "verification_boundary": "non-SPARK-or-boundary",
-      "symbols": [
-        {
-          "name": "clock_ms",
-          "line": 15
-        },
-        {
-          "name": "ready",
-          "line": 20
-        },
-        {
-          "name": "hex",
-          "line": 32
-        },
-        {
-          "name": "exchange",
-          "line": 41
-        },
-        {
-          "name": "nia_root_prepare",
-          "line": 97
-        },
-        {
-          "name": "nia_root_reinspect",
-          "line": 121
         }
       ],
       "with_dependencies": [],

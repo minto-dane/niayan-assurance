@@ -4654,6 +4654,38 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-161",
+      "title": "独立root identityと元期限に束縛した再検査handoff",
+      "shall": "再検査transportは新規準備と異なる要求/応答を使い、独立期待root identity、元展開期限と現在交換期限を固定しなければならない。同じSessionの操作変更再利用、準備ACKの受理、失敗後の自動展開や期限更新を禁止する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0124"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0124.ja.md",
+        "distribution/native/root-handoff.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_root_handoff.adb",
+        "pkgcore/runtime/root_handoff.c",
+        "pkgcore/runtime/root_handoff_wire.c",
+        "distribution/native/root_handoff.py"
+      ],
+      "tests": [
+        "pkgcore/tests/run_root_handoff_tests.adb",
+        "pkgcore/tests/check_root_handoff.py",
+        "pkgcore/tests/proof/root_handoff_wire.c"
+      ],
+      "hazards": [
+        "HAZ-148"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

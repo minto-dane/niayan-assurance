@@ -1785,6 +1785,17 @@
       "expected": "不完全な方針組を拒否し、既に読める完全な組と応答喪失を区別する。attempt/pendingを保持して上書き/再初期化せず、所有FDの解放を試みて再利用された番号を閉じない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_supply_initialize.py"
+    },
+    {
+      "id": "FAULT-161",
+      "scenario": "実再検査handoffに対する元期限/inode不一致、準備用ACK、過大/余分なFDとcontrol、切断/取消/期限、descendant/fork、同じSessionの再送または準備への変更",
+      "requirements": [
+        "REQ-161"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "独立scopeとoperationに一致しない要求/応答を拒否し、送信試行後は不確定または消費済みとして再送しない。借用FDを変更せず受信コピーを応答前に解放する。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/check_root_handoff.py"
     }
   ]
 }

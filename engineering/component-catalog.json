@@ -14826,7 +14826,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_handoff.adb",
-      "sha256": "86c3eeaae0f9bbee64820ffc0acf7741645f3d26a53410b4099e996e98fea885",
+      "sha256": "3fe6e25b09805572f30b29fc9f2c21f7e74e215a43b15a2c52cfa1b7024da914",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -14856,16 +14856,24 @@
           "line": 17
         },
         {
-          "name": "Close",
+          "name": "Reinspect",
           "line": 29
         },
         {
+          "name": "Send",
+          "line": 33
+        },
+        {
+          "name": "Close",
+          "line": 47
+        },
+        {
           "name": "Finish",
-          "line": 30
+          "line": 48
         },
         {
           "name": "Finalize",
-          "line": 33
+          "line": 51
         }
       ],
       "with_dependencies": [
@@ -14876,35 +14884,40 @@
     },
     {
       "path": "pkgcore/runtime/pkg_root_handoff.ads",
-      "sha256": "e61c50bc6a91ef976781d1f2585da43df7c81ab47287f4a91e4ae968012ff5a4",
+      "sha256": "2e78f582252b2c25d61a25c4463e0c19d6b335d656e3762492ebabf547e22f31",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Root_Handoff",
-          "line": 4
+          "line": 5
         },
         {
           "name": "Open",
-          "line": 6
-        },
-        {
-          "name": "Prepare",
           "line": 7
         },
         {
+          "name": "Prepare",
+          "line": 8
+        },
+        {
+          "name": "Reinspect",
+          "line": 11
+        },
+        {
           "name": "Close",
-          "line": 10
+          "line": 22
         },
         {
           "name": "Finalize",
-          "line": 11
+          "line": 23
         }
       ],
       "with_dependencies": [
         "Ada.Finalization",
         "MC_Types",
+        "Pkg_Root_Identity",
         "System",
         "private"
       ],
@@ -16209,7 +16222,7 @@
     },
     {
       "path": "pkgcore/runtime/root_handoff.c",
-      "sha256": "69f2f51c2bfde7787b387395c38846113d500315ce6f0cb6fc7c0f985d37b688",
+      "sha256": "aeb7c51a37e448c51f90a41f5e31716740ba3ab74567d30eacd7097358df9352",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -16235,8 +16248,16 @@
           "line": 57
         },
         {
-          "name": "nia_root_handoff_prepare",
+          "name": "exchange",
           "line": 86
+        },
+        {
+          "name": "nia_root_handoff_prepare",
+          "line": 126
+        },
+        {
+          "name": "nia_root_handoff_reinspect",
+          "line": 133
         }
       ],
       "with_dependencies": [],
@@ -16244,7 +16265,7 @@
     },
     {
       "path": "pkgcore/runtime/root_handoff_wire.c",
-      "sha256": "a1429178ea9011bb65891121a93c568cbc730f739df0bd59a8fd7e2ac8e0a084",
+      "sha256": "cf36c588bb0c25f4bf6f78fdff93ce1fc4cb1c9603e57b0d09fba1ba98a7fb39",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -16260,6 +16281,10 @@
         {
           "name": "nia_handoff_wire_valid",
           "line": 27
+        },
+        {
+          "name": "nia_handoff_reinspection_valid",
+          "line": 57
         }
       ],
       "with_dependencies": [],
@@ -16267,7 +16292,7 @@
     },
     {
       "path": "pkgcore/runtime/root_handoff_wire.h",
-      "sha256": "024286eda26479f8aaecba11af4c8e2b693df3b9515a42c273f9d8aee57c4f54",
+      "sha256": "7beca8cb2a7c2fc5a9239b84aa2b5f53bde590e9015f5551ff8f577bfa7f8e95",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -16275,6 +16300,10 @@
         {
           "name": "nia_handoff_wire_valid",
           "line": 11
+        },
+        {
+          "name": "nia_handoff_reinspection_valid",
+          "line": 14
         }
       ],
       "with_dependencies": [],

@@ -1631,6 +1631,17 @@
         "REQ-160"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-148",
+      "title": "準備ACKの再検査への流用または応答由来root identityの自己承認",
+      "severity": "critical",
+      "mitigation": "operation別の固定wire/opcodeと完全hashを照合する。root側が独立scopeを選択し、元期限/物理identityを固定した別private channelで同じ実子processからのみFDを受理する。保持controllerと独立観測を維持する。",
+      "residual_risk": "Whole transport/FFI assurance, current admission/consent and responsive supervisor integration with physical observation and global exclusion remain unqualified.",
+      "requirements": [
+        "REQ-161"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

@@ -4625,6 +4625,35 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-160",
+      "title": "native検査による独立供給方針の初回配備",
+      "shall": "初回installerは管理者が独立に指定した方針/floorとroot/requestを使い、非rootのnative readerでstageと公開後を検査しなければならない。既存状態の上書き、floorの自己生成、失敗後の自動再初期化を禁止し、公開後の応答喪失を不確定として保持する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0123"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0123.ja.md",
+        "distribution/native/site-supply.ja.md"
+      ],
+      "code": [
+        "distribution/native/supply_initialize.py",
+        "pkgcore/app/pkg_supply_observe.adb"
+      ],
+      "tests": [
+        "distribution/native/test_supply_initialize.py",
+        "distribution/native/worker/check_supply_initialize.py"
+      ],
+      "hazards": [
+        "HAZ-147"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

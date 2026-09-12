@@ -1774,6 +1774,17 @@
       "expected": "未回収leaderのgroupを停止してから回収する。不確定を成功に変換せずROとfirst-use barrierを維持する。有限制御の検査を全runtime証明と数えない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_session_cancel.py"
+    },
+    {
+      "id": "FAULT-160",
+      "scenario": "実DEBの初回配備に対する誤ったfloor/失効/非root入力、policy公開後・floor二重link中・floor完全公開後のSIGKILL、同じ要求の再実行、FD close後の番号再利用",
+      "requirements": [
+        "REQ-160"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不完全な方針組を拒否し、既に読める完全な組と応答喪失を区別する。attempt/pendingを保持して上書き/再初期化せず、所有FDの解放を試みて再利用された番号を閉じない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_supply_initialize.py"
     }
   ]
 }

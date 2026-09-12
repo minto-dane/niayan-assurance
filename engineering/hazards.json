@@ -1620,6 +1620,17 @@
         "REQ-159"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-147",
+      "title": "独立floorの自己生成、不完全な方針組の採用、応答喪失後の再配備",
+      "severity": "critical",
+      "mitigation": "保護された独立原本をnative planning readerで検査し、no-replaceと耐久記録、policy→floorの公開順を使う。二重linkはreaderが拒否し、完全公開後でも完了不明なら再初期化しない。",
+      "residual_risk": "Administrator authorization/provenance, hardware or external rollback protection, managed policy update/recovery and whole privileged runtime proof remain unqualified.",
+      "requirements": [
+        "REQ-160"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

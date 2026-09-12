@@ -8751,7 +8751,7 @@
     },
     {
       "path": "pkgcore/app/pkg_supply_observe.adb",
-      "sha256": "76db49ce9c4d4ad6f735c65eea683558a4a7b9a85fb76ec86d0fc7ec5c230860",
+      "sha256": "0b6afed0b40157759014a960babc6d828e80363d990d53b3fc042f16dd9bdbbb",
       "repository": "pkgcore",
       "layer": "app",
       "verification_boundary": "non-SPARK-or-boundary",

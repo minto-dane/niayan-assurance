@@ -4439,6 +4439,36 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-154",
+      "title": "実polkitと接続元taskに束縛した管理操作認証",
+      "shall": "root supervisorは実接続元UID/pidfdと独立計画/requestを固定polkitへ照合し、有限期限、Changed/owner/peer変更、取消でdecisionを無効にしなければならない。その許可を計画同意やnative供給/効果admissionへ自動変換してはならない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0116"
+      ],
+      "spec": [
+        "distribution/native/operator-authorization.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_operator_authorization.ads",
+        "pkgcore/runtime/pkg_operator_authorization.adb",
+        "pkgcore/runtime/operator_authorization.c"
+      ],
+      "tests": [
+        "pkgcore/tests/run_operator_authorization_tests.adb",
+        "pkgcore/tests/check_operator_transport.py",
+        "distribution/native/worker/check_operator_authorization.py"
+      ],
+      "hazards": [
+        "HAZ-140"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

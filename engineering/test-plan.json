@@ -958,6 +958,15 @@
       "prepare_directories": [],
       "execution_owner": "pkgcore-maintainers",
       "note": "Default execution checks empty handles and invalid input. Isolated UID0 protocol peer checks live Ada/C ABI, Open/Observe/Close and controlled finalization separately; root transport is not generation/site admission. Actual controller VM and sanitizer evidence are recorded separately."
+    },
+    {
+      "main": "pkgcore/tests/run_operator_authorization_tests.adb",
+      "tier": "isolated-io",
+      "arguments": [],
+      "result": "not-run",
+      "prepare_directories": [],
+      "execution_owner": "pkgcore-maintainers",
+      "note": "Default empty-handle and invalid-input checks; live root Ada/C ABI is exercised against real polkit in a disposable VM, with exact fixture actor/plan/request and no authentication dialog. Private bus protocol and sanitizer evidence are separate."
     }
   ]
 }

@@ -9027,6 +9027,69 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/operator_authorization.c",
+      "sha256": "d938686aa7ce9b85082b28a499bed989eada1eb0b4d07ecb5e108a3853e622ea",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "now_ms",
+          "line": 35
+        },
+        {
+          "name": "digest",
+          "line": 40
+        },
+        {
+          "name": "live",
+          "line": 49
+        },
+        {
+          "name": "changed",
+          "line": 56
+        },
+        {
+          "name": "drain",
+          "line": 62
+        },
+        {
+          "name": "call",
+          "line": 70
+        },
+        {
+          "name": "current_owner",
+          "line": 75
+        },
+        {
+          "name": "barrier",
+          "line": 88
+        },
+        {
+          "name": "protected_bus",
+          "line": 97
+        },
+        {
+          "name": "authenticate",
+          "line": 103
+        },
+        {
+          "name": "nia_operator_close",
+          "line": 131
+        },
+        {
+          "name": "nia_operator_open",
+          "line": 140
+        },
+        {
+          "name": "nia_operator_check",
+          "line": 172
+        }
+      ],
+      "with_dependencies": [],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_admin.adb",
       "sha256": "27a2d39aac595dc0e946a4e6540eda6d0da2579662fd6cfa8802e605f838f209",
       "repository": "pkgcore",
@@ -13722,6 +13785,92 @@
         "Pkg_File_Engine",
         "Resolver_Admission",
         "Resolver_Model"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_operator_authorization.adb",
+      "sha256": "71a83bd90b7dfdb537a554d782c575ce0f5e59d20d7e6367e667113faf93a30e",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Operator_Authorization",
+          "line": 3
+        },
+        {
+          "name": "Convert",
+          "line": 5
+        },
+        {
+          "name": "Open",
+          "line": 7
+        },
+        {
+          "name": "Start",
+          "line": 9
+        },
+        {
+          "name": "Check",
+          "line": 23
+        },
+        {
+          "name": "Current",
+          "line": 24
+        },
+        {
+          "name": "Close",
+          "line": 32
+        },
+        {
+          "name": "Finish",
+          "line": 33
+        },
+        {
+          "name": "Finalize",
+          "line": 36
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Hex"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_operator_authorization.ads",
+      "sha256": "c18f22d7d9f5980a7a5d14b0b4b76ab40b77fa0aad1e13a5c9d98660c82b1f49",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Operator_Authorization",
+          "line": 4
+        },
+        {
+          "name": "Open",
+          "line": 6
+        },
+        {
+          "name": "Check",
+          "line": 8
+        },
+        {
+          "name": "Close",
+          "line": 9
+        },
+        {
+          "name": "Finalize",
+          "line": 10
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "MC_Types",
+        "System",
+        "private"
       ],
       "semantic_analysis": false
     },

@@ -1543,6 +1543,17 @@
         "REQ-153"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-140",
+      "title": "誤った管理主体や失効済み認証をnative効果の許可へ流用する",
+      "severity": "critical",
+      "mitigation": "kernel UID/pidfd、固定保護bus/owner、plan/request、元期限、非retained応答、Changed/peer/owner照合を実装する。認証・同意・供給・native admissionを分離し、暗黙更新とUID fallbackを拒否する。",
+      "residual_risk": "Exact-plan consent UI, full native admission/handoff, effect cancellation and external privileged writers remain outside this operator decision. Custom policy conditions without Changed signals and strict I/O deadlines are not guaranteed.",
+      "requirements": [
+        "REQ-154"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

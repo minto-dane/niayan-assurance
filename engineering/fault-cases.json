@@ -1807,6 +1807,17 @@
       "expected": "古い/不正/無応答の結果で効果を許可せずobjectを失効する。後続要求/再読取を拒否し、終了時に専用子と所有FDを解放する。controller効果を自動的にrollbackしたとはしない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_operator_guard.py"
+    },
+    {
+      "id": "FAULT-163",
+      "scenario": "全batchと二つのnative handoff、原本/観測/期限の変更、停止中workerへのpolkit失効、終了時FD失敗、試験省略buildの出荷拒否",
+      "requirements": [
+        "REQ-163"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "誤scopeや失効を成功にしない。取消はcontroller切断を先行し、RO/記録保持を独立観測する。Ada再起動/暗黙retryを拒否し、出荷前に同一sourceの全必須検証を要求する。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_supervisor.py"
     }
   ]
 }

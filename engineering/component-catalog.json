@@ -12878,6 +12878,145 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/runtime/pkg_generation_execution.adb",
+      "sha256": "67b1d926b6e99f972c958a545fb38e6cd2e3d53b0104d39ad8c046aef5d46001",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Generation_Execution",
+          "line": 4
+        },
+        {
+          "name": "GM",
+          "line": 5
+        },
+        {
+          "name": "Process_ID",
+          "line": 8
+        },
+        {
+          "name": "Current",
+          "line": 11
+        },
+        {
+          "name": "Boundary",
+          "line": 22
+        },
+        {
+          "name": "Poison",
+          "line": 29
+        },
+        {
+          "name": "Start",
+          "line": 35
+        },
+        {
+          "name": "Prepare",
+          "line": 42
+        },
+        {
+          "name": "Reinspect",
+          "line": 56
+        },
+        {
+          "name": "Prepare_Physical",
+          "line": 73
+        },
+        {
+          "name": "Reinspect_Physical",
+          "line": 74
+        },
+        {
+          "name": "Held",
+          "line": 126
+        },
+        {
+          "name": "Observation",
+          "line": 134
+        },
+        {
+          "name": "Completed_Batches",
+          "line": 140
+        },
+        {
+          "name": "Check",
+          "line": 142
+        },
+        {
+          "name": "Close",
+          "line": 163
+        },
+        {
+          "name": "Finalize",
+          "line": 175
+        }
+      ],
+      "with_dependencies": [
+        "MC_Clock",
+        "MC_Posix",
+        "MC_SHA256",
+        "Pkg_Generation_Manifest"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_generation_execution.ads",
+      "sha256": "0446f239bb28d8742d61e311065bb8dda887a1147f702b00ffcb0babc944c9e8",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Generation_Execution",
+          "line": 19
+        },
+        {
+          "name": "Start",
+          "line": 21
+        },
+        {
+          "name": "Check",
+          "line": 26
+        },
+        {
+          "name": "Held",
+          "line": 27
+        },
+        {
+          "name": "Observation",
+          "line": 28
+        },
+        {
+          "name": "Completed_Batches",
+          "line": 29
+        },
+        {
+          "name": "Close",
+          "line": 30
+        },
+        {
+          "name": "Finalize",
+          "line": 31
+        },
+        {
+          "name": "Staging",
+          "line": 55
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Finalization",
+        "Interfaces.C",
+        "MC_Types",
+        "Pkg_Generation_Stage",
+        "Pkg_Root_Handoff",
+        "Pkg_Root_Identity",
+        "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/runtime/pkg_generation_intent.adb",
       "sha256": "1eb10e7911778b1e66d558d215edeb4cf2aa67d6b5c14f3a44327df7fb689da7",
       "repository": "pkgcore",

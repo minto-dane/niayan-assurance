@@ -1653,6 +1653,17 @@
         "REQ-162"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-150",
+      "title": "世代と特権効果の寿命不一致、取消後の継続、未検証ビルドの出荷",
+      "severity": "critical",
+      "mitigation": "一度限りのAda実行とnative予約、root監視loop、独立FD/記録照合、現在認可と元期限、controller先行切断、build modeの記録と出荷前検証を要求する。",
+      "residual_risk": "Production providers/launcher, full DEB effects, all-writer exclusion, boot/recovery and whole Ada/Python/FFI assurance remain incomplete. Cancellation harness acceptance is pending.",
+      "requirements": [
+        "REQ-163"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

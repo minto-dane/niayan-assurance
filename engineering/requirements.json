@@ -4715,6 +4715,37 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-163",
+      "title": "Ada世代処理・root寿命監視・配布の一貫した接続",
+      "shall": "同じ認可/供給/同意と元期限を保持して初期化、全batch、native準備/再検査、独立root観測と予約保持を接続する。失効時はcontrollerへの停止通知を先行し、開始済み変更を未実行や成功へ読み替えない。開発時の試験省略を出荷検証済みとしない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0126"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0126.ja.md",
+        "distribution/native/root-supervisor.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_execution.adb",
+        "distribution/native/root_supervisor.py",
+        "distribution/native/root_session_client.py",
+        "distribution/image/build-packages.sh"
+      ],
+      "tests": [
+        "distribution/native/test_root_supervisor.py",
+        "distribution/native/worker/check_root_supervisor.py"
+      ],
+      "hazards": [
+        "HAZ-150"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

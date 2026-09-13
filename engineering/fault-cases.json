@@ -1818,6 +1818,28 @@
       "expected": "誤scopeや失効を成功にしない。取消はcontroller切断を先行し、RO/記録保持を独立観測する。Ada再起動/暗黙retryを拒否し、出荷前に同一sourceの全必須検証を要求する。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_supervisor.py"
+    },
+    {
+      "id": "FAULT-164",
+      "scenario": "要求/同意の別actor、表示FD/元scope変更、期限切れ、接続断、準備ACKを確定応答として送る",
+      "requirements": [
+        "REQ-164"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "不一致/取消を拒否し、現在同意のない変更を成功扱いしない。全効果の終端再照合がない準備応答を確定にしない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_supervisor.py"
+    },
+    {
+      "id": "FAULT-165",
+      "scenario": "外部健康依存の妨害、切替中停止/anchor巻戻し、旧認可での起動権再作成、失効rescue、MOK拒否/用途混同、未知供給と出典のない悪用報告",
+      "requirements": [
+        "REQ-165"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "自動旧版復帰や下限リセットを行わず、明示的な再計画または限定rescueを要求する。欠落した供給情報や外部報告を安全/端末侵害の証拠にしない。Secure Bootを無効化しない。",
+      "execution": "not-run",
+      "reference_tests": "statecore/tests/run_state_tests.adb"
     }
   ]
 }

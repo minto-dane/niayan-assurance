@@ -46,7 +46,7 @@ RPM を入力形式とし、外部ディストリビューションの既存 bin
 - `Pkg_Acceptance`: installp 型 APPLY/VERIFY/ACCEPT/COMMIT/REJECT。
 - `Pkg_Incorporation`: Solaris IPS incorporation 型の exact tested composition。
 - `Pkg_Repository_Trust`: repository epoch/snapshot/timestamp の rollback/freeze 防止用 anchor。
-- `Pkg_Exposure_Policy`: exploited/critical fix の最大露出時間を policy 化。
+- `Pkg_Exposure_Policy`: 信頼機関の実環境悪用確認報告/critical fix の最大露出時間を policy 化。
 - `Pkg_Rollback_Contract`: config/data migration の reversible/restore semantics。
 - `Pkg_Maintenance_Bundle`: cumulative maintenance set / group maintenance level。
 

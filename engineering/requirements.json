@@ -4746,6 +4746,76 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-164",
+      "title": "元の採用要求とsealed表示を結び付けた全寿命の計画同意",
+      "shall": "rootは要求を副作用なしgrammarで独立に解析し、確認済み表示、plan/generation/request/boot/元期限を同じ認証peerへ固定する。通信不確定を自動再試行せず、準備ACKを取引確定としない。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0127"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0127.ja.md",
+        "distribution/native/plan-consent.ja.md"
+      ],
+      "code": [
+        "pkgcore/src/pkg_plan_consent.adb",
+        "distribution/native/management_grammar.py",
+        "distribution/native/management_receiver.py",
+        "distribution/native/management_client.py",
+        "distribution/native/plan_consent.py",
+        "distribution/native/root_supervisor.py"
+      ],
+      "tests": [
+        "distribution/native/worker/check_root_supervisor.py"
+      ],
+      "hazards": [
+        "HAZ-151"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
+    },
+    {
+      "id": "REQ-165",
+      "title": "明示的な検証世代切替と機関報告の意味保持",
+      "shall": "健康失敗だけで旧版へ自動復帰せず、現在anchorと禁止下限、明示的な切替/確定認可を必要とする。勧告不在を安全とせず、機関の実環境悪用報告と端末侵害を分離する。導入開始から更新/復旧までMicrosoft署名shimによるSecure Bootと使用前の全検証を維持し、module-only MOKを用いる。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0128"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0128.ja.md",
+        "distribution/boot/README.ja.md",
+        "distribution/native/threat-reporting.ja.md"
+      ],
+      "code": [
+        "statecore/src/state_boot.adb",
+        "statecore/src/state_boot_assessment.adb",
+        "statecore/src/state_kernel_supply.adb",
+        "statecore/src/state_kernel_maintenance.adb",
+        "statecore/src/state_kernel_health.adb",
+        "pkgcore/src/pkg_advisory.adb",
+        "pkgcore/src/pkg_exposure_policy.adb",
+        "distribution/boot/module_identity.py"
+      ],
+      "tests": [
+        "statecore/tests/run_state_tests.adb",
+        "statecore/tests/run_platform_tests.adb",
+        "statecore/tests/run_ras_platform_tests.adb",
+        "pkgcore/tests/run_enterprise_pkg_tests.adb"
+      ],
+      "hazards": [
+        "HAZ-152"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

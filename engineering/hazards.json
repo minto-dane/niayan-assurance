@@ -1664,6 +1664,28 @@
         "REQ-163"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-151",
+      "title": "確認内容と実効果の不一致、別actorの同意、準備応答の確定扱い",
+      "severity": "critical",
+      "mitigation": "sealed表示/全offer hash/元peer/pidfd/期限を固定し、同じoperator接続と継続確認を必要とする。終端応答と不確定性を明確にする。",
+      "residual_risk": "Production planner, full native authorization and final effect reconciliation, transport behavior and formal assurance remain unqualified.",
+      "requirements": [
+        "REQ-164"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-152",
+      "title": "健康妨害による旧版復帰、信頼台帳巻戻し、鍵の用途混同と報告の過剰解釈",
+      "severity": "critical",
+      "mitigation": "自動旧版復帰を撤去し、独立anchor/既知の禁止下限/明示的切替と限定rescueを要求する。完全な検証起動とmodule-only鍵を分離し、stable修正観測と機関報告の出典を必須にする。",
+      "residual_risk": "Unknown defects cannot be excluded. Actual boot/anchor/signing/enrollment and NVIDIA providers, availability controls and whole runtime assurance remain incomplete.",
+      "requirements": [
+        "REQ-165"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

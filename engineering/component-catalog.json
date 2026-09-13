@@ -8779,6 +8779,40 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/app/pkg_supply_guard.adb",
+      "sha256": "615e24a5aabe80a5844987c8018504c6f33a70bf7cfd70ff8939dfaaf902cae8",
+      "repository": "pkgcore",
+      "layer": "app",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Supply_Guard",
+          "line": 8
+        },
+        {
+          "name": "Nonblocking",
+          "line": 22
+        },
+        {
+          "name": "Observe",
+          "line": 29
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Command_Line",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Hex",
+        "MC_Posix",
+        "MC_Runtime",
+        "MC_SHA256",
+        "MC_Types",
+        "Pkg_Site_Supply"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/app/pkg_supply_observe.adb",
       "sha256": "0b6afed0b40157759014a960babc6d828e80363d990d53b3fc042f16dd9bdbbb",
       "repository": "pkgcore",
@@ -15592,7 +15626,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_site_supply.adb",
-      "sha256": "36825c4a5337a31fe73ca3cd4518f638200b09e1272121374c4beeee23211a3d",
+      "sha256": "57fb82b85bd07d6755e5727540c7a59244d3f48c100ed9e197935cc830a340ba",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -15634,28 +15668,32 @@
           "line": 100
         },
         {
-          "name": "Observe",
+          "name": "Observe_Inputs",
           "line": 140
         },
         {
+          "name": "Observe",
+          "line": 155
+        },
+        {
           "name": "Observe_Planning",
-          "line": 148
+          "line": 163
         },
         {
           "name": "Open_Planning",
-          "line": 156
+          "line": 171
         },
         {
           "name": "Bind_Publication",
-          "line": 172
+          "line": 187
         },
         {
           "name": "Open",
-          "line": 185
+          "line": 200
         },
         {
           "name": "Observe_Current",
-          "line": 203
+          "line": 218
         }
       ],
       "with_dependencies": [
@@ -15671,7 +15709,7 @@
     },
     {
       "path": "pkgcore/runtime/pkg_site_supply.ads",
-      "sha256": "1ca7fe4dc57fbd5a79fecbb38ebc2d48f06018645faab6a42a4c39340c256df7",
+      "sha256": "7c4fd2ec13b7dd2c8d2c4e5f9885c3b59479ed21d3a978990af66f948193f74a",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
@@ -15713,8 +15751,12 @@
           "line": 41
         },
         {
+          "name": "Observe_Inputs",
+          "line": 42
+        },
+        {
           "name": "Observe_Current",
-          "line": 44
+          "line": 50
         }
       ],
       "with_dependencies": [

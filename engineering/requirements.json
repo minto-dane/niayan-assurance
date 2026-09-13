@@ -4816,6 +4816,37 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-166",
+      "title": "計画時の供給設定に固定した保持中観測",
+      "shall": "計画時の独立policy/floor hashとUTC、元の世代/transaction/plan/map/期限を固定し、保持root効果中も専用非root native observerを監督する。各効果境界では新しいoperator/供給観測と同一bindingのnative Admissionを必要とし、設定変更や子停止時に効果を遮断する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0129"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0129.ja.md",
+        "distribution/native/supply-guard.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_site_supply.adb",
+        "pkgcore/app/pkg_supply_guard.adb",
+        "distribution/native/native_helper.py",
+        "distribution/native/supply_guard.py",
+        "distribution/native/root_supervisor.py"
+      ],
+      "tests": [
+        "distribution/native/worker/check_root_supervisor.py"
+      ],
+      "hazards": [
+        "HAZ-153"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

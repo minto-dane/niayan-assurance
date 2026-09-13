@@ -1840,6 +1840,17 @@
       "expected": "自動旧版復帰や下限リセットを行わず、明示的な再計画または限定rescueを要求する。欠落した供給情報や外部報告を安全/端末侵害の証拠にしない。Secure Bootを無効化しない。",
       "execution": "not-run",
       "reference_tests": "statecore/tests/run_state_tests.adb"
+    },
+    {
+      "id": "FAULT-166",
+      "scenario": "計画後のpolicy/floor変更、異なるbinding、観測子の停止/遅延、UTC後退、応答の過剰/順序違反、保持root中の取消",
+      "requirements": [
+        "REQ-166"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "設定の読み替え/observer再生成/元期限の更新で継続せず、controller切断によって効果を遮断する。完了不確定な記録を保持し、点観測を世代公開の許可にしない。",
+      "execution": "not-run",
+      "reference_tests": "distribution/native/worker/check_root_supervisor.py"
     }
   ]
 }

@@ -1686,6 +1686,17 @@
         "REQ-165"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-153",
+      "title": "計画後の供給方針差替えと停止したobserverの許可再利用",
+      "severity": "critical",
+      "mitigation": "計画時のhash/UTCと元文脈を固定し、順序/期限/応答鮮度/専用identityを検査する。現在観測とnative Admissionを必須にし、controller切断をobserver回収より先に行う。",
+      "residual_risk": "Integration is uncompiled and untested. Production planner, managed generation provider, independent floor anchor and scheduling/whole-runtime assurance remain incomplete. Point observations do not guarantee instantaneous revocation.",
+      "requirements": [
+        "REQ-166"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

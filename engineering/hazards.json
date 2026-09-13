@@ -1697,6 +1697,17 @@
         "REQ-166"
       ],
       "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
+    },
+    {
+      "id": "HAZ-154",
+      "title": "仮の現行catalogによる更新準備と途中照会結果の成功扱い",
+      "severity": "critical",
+      "mitigation": "実確定状態とretentionを同じ三予約で検査し、最終再観測まで更新準備を保持する。照会は子の完全結果/成功終了/EOFとroot sealed FDの照合を必要とし、未接続の変更は拒否する。",
+      "residual_risk": "Source is uncompiled and untested. Full managed mutation dispatch, all DEB effects, physical boot binding, complete output semantics and whole-runtime assurance remain incomplete. Accepted catalog is not running-root attestation.",
+      "requirements": [
+        "REQ-167"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md"
     }
   ]
 }

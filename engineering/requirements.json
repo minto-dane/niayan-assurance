@@ -4847,6 +4847,42 @@
         "source-bound-tests",
         "target-fault-tests"
       ]
+    },
+    {
+      "id": "REQ-167",
+      "title": "確定catalogの具体的照会と実予約下の更新準備",
+      "shall": "書込認可の仮callbackを作らず確定状態のnative readerを提供し、実publication/root/CAS予約の下でnative更新intentと供給認証を作る。採用一覧コマンドは完全なnative結果と成功EOFを確認してsealed応答を返し、未接続の変更要求は拒否する。",
+      "status": "partial-integration",
+      "adr": [
+        "ADR-0130"
+      ],
+      "spec": [
+        "assurance/docs/engineering/adr/ADR-0130.ja.md",
+        "distribution/native/accepted-catalog.ja.md"
+      ],
+      "code": [
+        "pkgcore/runtime/pkg_generation_reader.adb",
+        "pkgcore/runtime/pkg_generation_storage.adb",
+        "pkgcore/runtime/pkg_generation_publisher.adb",
+        "pkgcore/runtime/pkg_update_planner.adb",
+        "pkgcore/app/pkg_catalog_query.adb",
+        "distribution/native/catalog_query.py",
+        "distribution/native/management_service.py",
+        "distribution/native/management_result.py",
+        "distribution/native/management_client.py"
+      ],
+      "tests": [
+        "pkgcore/tests/run_generation_publication_tests.adb",
+        "distribution/native/test_package_cli.py"
+      ],
+      "hazards": [
+        "HAZ-154"
+      ],
+      "required_evidence": [
+        "independent-design-review",
+        "source-bound-tests",
+        "target-fault-tests"
+      ]
     }
   ]
 }

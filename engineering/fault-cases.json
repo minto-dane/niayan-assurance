@@ -1851,6 +1851,17 @@
       "expected": "設定の読み替え/observer再生成/元期限の更新で継続せず、controller切断によって効果を遮断する。完了不確定な記録を保持し、点観測を世代公開の許可にしない。",
       "execution": "not-run",
       "reference_tests": "distribution/native/worker/check_root_supervisor.py"
+    },
+    {
+      "id": "FAULT-167",
+      "scenario": "確定状態の欠損/active/予約競合、期待predecessor相違、計画中の供給変更、native queryの停止/途中出力、結果FDの欠落/非seal、照会中のpeer終了、read-only結果の変更成功への転用",
+      "requirements": [
+        "REQ-167"
+      ],
+      "runbook": "assurance/docs/engineering/runbooks/RB-011.ja.md",
+      "expected": "空のinstalled stateや更新許可に置き換えず失敗する。途中結果を公開しない。計画失敗時に成功出力を消去し、CAS/復旧記録を自動削除しない。未接続の変更要求を別PM/旧workerへ委譲しない。",
+      "execution": "not-run",
+      "reference_tests": "pkgcore/tests/run_generation_publication_tests.adb"
     }
   ]
 }

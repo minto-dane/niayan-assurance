@@ -8667,6 +8667,47 @@
       "semantic_analysis": false
     },
     {
+      "path": "pkgcore/app/pkg_catalog_query.adb",
+      "sha256": "7afe764bc3ea0d530b94ac24295ba7d2751126863f6343800500839277e0f50d",
+      "repository": "pkgcore",
+      "layer": "app",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Catalog_Query",
+          "line": 8
+        },
+        {
+          "name": "Emit",
+          "line": 20
+        },
+        {
+          "name": "Emit_Text",
+          "line": 38
+        },
+        {
+          "name": "Close",
+          "line": 46
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Command_Line",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Codec",
+        "MC_Hex",
+        "MC_Posix",
+        "MC_Runtime",
+        "MC_Text",
+        "MC_Types",
+        "Pkg_Generation_Descriptor",
+        "Pkg_Generation_Reader",
+        "Pkg_Payload_Index",
+        "Pkg_Selected_Catalog"
+      ],
+      "semantic_analysis": false
+    },
+    {
       "path": "pkgcore/app/pkg_operator_guard.adb",
       "sha256": "56dcce467c0bf4fcd611f350a3ecf80c058009a04aa8e8c69998ced18e33a2e3",
       "repository": "pkgcore",
@@ -13338,146 +13379,110 @@
     },
     {
       "path": "pkgcore/runtime/pkg_generation_publisher.adb",
-      "sha256": "40b4c7b79cdf063c60fa18a67873cbb294991d16a5315f9bd8431447c248adf9",
+      "sha256": "d75da1e20d9941b817300c15dc64035532e06f50ab8158a9a08f1d8ff6293831",
       "repository": "pkgcore",
       "layer": "runtime",
       "verification_boundary": "non-SPARK-or-boundary",
       "symbols": [
         {
           "name": "Pkg_Generation_Publisher",
-          "line": 7
-        },
-        {
-          "name": "GD",
           "line": 8
         },
         {
-          "name": "GM",
-          "line": 9
-        },
-        {
-          "name": "Staging",
+          "name": "GD",
           "line": 10
         },
         {
-          "name": "Free",
-          "line": 17
+          "name": "GM",
+          "line": 11
+        },
+        {
+          "name": "Staging",
+          "line": 12
         },
         {
           "name": "Free",
-          "line": 18
-        },
-        {
-          "name": "Read_State",
           "line": 19
         },
         {
-          "name": "Read_Plan",
-          "line": 33
-        },
-        {
-          "name": "Read_Manifest",
-          "line": 41
+          "name": "Free",
+          "line": 20
         },
         {
           "name": "Provision",
-          "line": 49
+          "line": 21
         },
         {
           "name": "Done",
-          "line": 52
-        },
-        {
-          "name": "Close_Observation",
-          "line": 84
-        },
-        {
-          "name": "Observe_And_Lock",
-          "line": 89
+          "line": 24
         },
         {
           "name": "Read_Current",
-          "line": 116
+          "line": 48
         },
         {
           "name": "Read_Current_Catalog",
-          "line": 125
-        },
-        {
-          "name": "Clear_Result",
-          "line": 130
-        },
-        {
-          "name": "Check_Time",
-          "line": 132
+          "line": 51
         },
         {
           "name": "Read_Current_Transition",
-          "line": 151
-        },
-        {
-          "name": "Clear_Result",
-          "line": 161
-        },
-        {
-          "name": "Check_Time",
-          "line": 166
+          "line": 55
         },
         {
           "name": "Publish",
-          "line": 199
+          "line": 63
         },
         {
           "name": "Time_Left",
-          "line": 211
+          "line": 75
         },
         {
           "name": "Check_Supply_Policy",
-          "line": 218
+          "line": 82
         },
         {
           "name": "Stage_Held",
-          "line": 238
+          "line": 102
         },
         {
           "name": "Guard",
-          "line": 242
+          "line": 106
         },
         {
           "name": "Engine",
-          "line": 260
+          "line": 124
         },
         {
           "name": "Validate_Inputs",
-          "line": 262
+          "line": 126
         },
         {
           "name": "Revalidate",
-          "line": 322
+          "line": 186
         },
         {
           "name": "Done",
-          "line": 323
+          "line": 187
         }
       ],
       "with_dependencies": [
         "Ada.Unchecked_Deallocation",
         "Interfaces.C",
-        "MC_Atomic",
         "MC_Clock",
         "MC_Dirents",
         "MC_FS",
         "MC_Posix",
         "MC_SHA256",
         "MC_Store",
-        "Pkg_Catalog_Retention",
         "Pkg_Catalog_Store",
         "Pkg_File_Engine",
         "Pkg_File_Plan",
         "Pkg_File_Replay",
         "Pkg_Generation_Intent",
         "Pkg_Generation_Manifest",
+        "Pkg_Generation_Reader",
         "Pkg_Generation_Stage",
+        "Pkg_Generation_Storage",
         "Pkg_Recovery_Audit",
         "Pkg_Root_State",
         "Pkg_Supply_Map"
@@ -13526,6 +13531,134 @@
         "Pkg_Payload_Index",
         "Pkg_Selected_Catalog",
         "Pkg_Supply_Policy"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_generation_reader.adb",
+      "sha256": "a72abb8c72d0f8987fb2565d31df83266353d812eb63f2324e607644cd6f0fde",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Generation_Reader",
+          "line": 7
+        },
+        {
+          "name": "GD",
+          "line": 8
+        },
+        {
+          "name": "GM",
+          "line": 9
+        },
+        {
+          "name": "Free",
+          "line": 14
+        },
+        {
+          "name": "Close_Observation",
+          "line": 23
+        },
+        {
+          "name": "Observe_And_Lock",
+          "line": 28
+        },
+        {
+          "name": "Read_Current",
+          "line": 55
+        },
+        {
+          "name": "Read_Current_Catalog",
+          "line": 64
+        },
+        {
+          "name": "Clear_Result",
+          "line": 69
+        },
+        {
+          "name": "Check_Time",
+          "line": 71
+        },
+        {
+          "name": "Read_Current_Transition",
+          "line": 90
+        },
+        {
+          "name": "Clear_Result",
+          "line": 100
+        },
+        {
+          "name": "Check_Time",
+          "line": 105
+        },
+        {
+          "name": "With_Current",
+          "line": 138
+        },
+        {
+          "name": "Check_Time",
+          "line": 141
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_FS",
+        "MC_Posix",
+        "MC_SHA256",
+        "MC_Store",
+        "Pkg_Catalog_Retention",
+        "Pkg_Catalog_Store",
+        "Pkg_File_Plan",
+        "Pkg_File_Replay",
+        "Pkg_Generation_Intent",
+        "Pkg_Generation_Manifest",
+        "Pkg_Generation_Storage",
+        "Pkg_Recovery_Audit",
+        "Pkg_Root_State"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_generation_reader.ads",
+      "sha256": "1600f51db5a5fb76003145c2fbc96a67abdf8169bb97442f263ce8c31e65e372",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Generation_Reader",
+          "line": 6
+        },
+        {
+          "name": "Read_Current",
+          "line": 7
+        },
+        {
+          "name": "Read_Current_Catalog",
+          "line": 9
+        },
+        {
+          "name": "Read_Current_Transition",
+          "line": 13
+        },
+        {
+          "name": "With_Current",
+          "line": 24
+        }
+      ],
+      "with_dependencies": [
+        "MC_Store",
+        "MC_Types",
+        "Pkg_Deb_Final_Set",
+        "Pkg_Deb_Transition",
+        "Pkg_Generation_Descriptor",
+        "Pkg_Generation_Manifest",
+        "Pkg_Payload_Index",
+        "Pkg_Selected_Catalog"
       ],
       "semantic_analysis": false
     },
@@ -13801,6 +13934,83 @@
         "MC_Types",
         "Pkg_Generation_Configuration",
         "Pkg_Root_Identity"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_generation_storage.adb",
+      "sha256": "952689ac8f97eae0d0af2877272c409e29967c55232557169e482dcbaa5daa58",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Generation_Storage",
+          "line": 3
+        },
+        {
+          "name": "GD",
+          "line": 4
+        },
+        {
+          "name": "GM",
+          "line": 5
+        },
+        {
+          "name": "Free",
+          "line": 7
+        },
+        {
+          "name": "Read_State",
+          "line": 8
+        },
+        {
+          "name": "Read_Plan",
+          "line": 22
+        },
+        {
+          "name": "Read_Manifest",
+          "line": 30
+        }
+      ],
+      "with_dependencies": [
+        "Ada.Unchecked_Deallocation",
+        "MC_Atomic"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_generation_storage.ads",
+      "sha256": "954a09e07d8269f7dbaa53b183e9da294144d932ae00a784f882330000795768",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Generation_Storage",
+          "line": 5
+        },
+        {
+          "name": "Read_State",
+          "line": 6
+        },
+        {
+          "name": "Read_Plan",
+          "line": 8
+        },
+        {
+          "name": "Read_Manifest",
+          "line": 10
+        }
+      ],
+      "with_dependencies": [
+        "MC_FS",
+        "MC_Store",
+        "MC_Types",
+        "Pkg_File_Plan",
+        "Pkg_Generation_Descriptor",
+        "Pkg_Generation_Manifest",
+        "Pkg_Root_State"
       ],
       "semantic_analysis": false
     },
@@ -16427,6 +16637,68 @@
         "MC_Types",
         "Pkg_Tar_Framing",
         "private"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_update_planner.adb",
+      "sha256": "50cd2b56db825a65350bc7bbf842a808510d600997a4fd278e1fc9d48e17b86d",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Update_Planner",
+          "line": 5
+        },
+        {
+          "name": "Prepare",
+          "line": 7
+        },
+        {
+          "name": "Plan",
+          "line": 14
+        },
+        {
+          "name": "On_Current",
+          "line": 36
+        }
+      ],
+      "with_dependencies": [
+        "Interfaces.C",
+        "MC_Clock",
+        "MC_Posix",
+        "MC_SHA256",
+        "MC_Store",
+        "Pkg_Generation_Intent",
+        "Pkg_Generation_Manifest",
+        "Pkg_Generation_Reader",
+        "Pkg_Supply_Map"
+      ],
+      "semantic_analysis": false
+    },
+    {
+      "path": "pkgcore/runtime/pkg_update_planner.ads",
+      "sha256": "2c5edd65935b6d08f4dbac040337b10191679705e115c83dba7250b4357255fa",
+      "repository": "pkgcore",
+      "layer": "runtime",
+      "verification_boundary": "non-SPARK-or-boundary",
+      "symbols": [
+        {
+          "name": "Pkg_Update_Planner",
+          "line": 5
+        },
+        {
+          "name": "Prepare",
+          "line": 13
+        }
+      ],
+      "with_dependencies": [
+        "MC_Types",
+        "Pkg_Deb_Final_Set",
+        "Pkg_Generation_Descriptor",
+        "Pkg_Site_Supply",
+        "Pkg_Supply_Planner"
       ],
       "semantic_analysis": false
     },
